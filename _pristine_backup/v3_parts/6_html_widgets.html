@@ -1,0 +1,199 @@
+              <!-- ========================================== -->
+              <!-- HTML5 STUDIOS: ALL 26 HTML TAGS DEDICATED    -->
+              <!-- ========================================== -->
+
+              <!-- 1. HTML Dialog Studio (نافذة الحوار الأصلية) -->
+              <div v-if="selectedTerm.previewType === 'html_dialog'" class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-gray-300">عنصر الحوار الأصلي المدمج في HTML5:</span>
+                  <button
+                    @click="htmlDialogOpen = true"
+                    class="px-4 py-2 rounded-xl bg-[#00DC82] text-slate-950 font-bold text-xs hover:bg-[#00b86b] transition-all shadow-md"
+                  >
+                    فتح النافذة (dialog.showModal())
+                  </button>
+                </div>
+
+                <div v-if="htmlDialogOpen" class="p-4 rounded-2xl bg-[#020420] border-2 border-[#00DC82] shadow-2xl space-y-3">
+                  <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                    <span class="font-bold text-white text-xs">&lt;dialog open&gt; نافذة حوار أصلية</span>
+                    <button @click="htmlDialogOpen = false" class="text-gray-400 hover:text-white text-xs">✕ إغلاق</button>
+                  </div>
+                  <p class="text-xs text-gray-300">
+                    هذا عنصر HTML5 أصيل دون الحاجة لمكتبات خارجية، يدعم زر الهروب Esc والتركيز التلقائي!
+                  </p>
+                  <button @click="htmlDialogOpen = false" class="px-3 py-1 rounded bg-slate-800 text-xs text-gray-200">
+                    dialog.close()
+                  </button>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: تنبثق نافذة نظامية مركزية تدعم إغلاق النافذة بزر Escape تلقائياً.</p>
+              </div>
+
+              <!-- 2. HTML Details & Summary Studio (الأكورديون الأصيل) -->
+              <div v-else-if="selectedTerm.previewType === 'html_details'" class="space-y-3">
+                <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800">
+                  <details open class="space-y-2">
+                    <summary class="cursor-pointer font-bold text-sm text-[#00DC82] hover:text-emerald-300 transition-colors select-none">
+                      انقر هنا لعرض / إخفاء تفاصيل المكون (details & summary)
+                    </summary>
+                    <div class="p-3 rounded-xl bg-slate-950 text-xs text-gray-300 leading-relaxed border border-slate-800">
+                      عنصر أصيل في HTML5 يُنشئ قائمة قابلة للطي والفتح (Accordion) بدون كتابة سطر واحد من كود JavaScript!
+                    </div>
+                  </details>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: سهم صغير يلتف ويفتح المحتوى المخفي بنقرة واحدة بسلاسة تامة.</p>
+              </div>
+
+              <!-- 3. HTML Table Studio (الجدول التفاعلي) -->
+              <div v-else-if="selectedTerm.previewType === 'html_table'" class="space-y-3">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-xs text-gray-400">جدول HTML5 حي مع تصفية فورية:</span>
+                  <input
+                    type="text"
+                    v-model="htmlTableSearch"
+                    placeholder="بحث في الجدول..."
+                    class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs text-white outline-none focus:border-[#00DC82]"
+                  />
+                </div>
+
+                <div class="rounded-xl border border-slate-800 overflow-hidden">
+                  <table class="w-full text-xs text-right divide-y divide-slate-800">
+                    <thead class="bg-[#020420] text-gray-400 font-mono text-[11px]">
+                      <tr>
+                        <th class="p-2.5">المعرف</th>
+                        <th class="p-2.5">اسم التقنية</th>
+                        <th class="p-2.5">النوع</th>
+                        <th class="p-2.5">الحالة</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/60 bg-slate-900/50">
+                      <tr
+                        v-for="row in filteredHtmlTableRows"
+                        :key="row.id"
+                        class="hover:bg-slate-800/70 transition-colors"
+                      >
+                        <td class="p-2.5 font-mono text-gray-400">#{{ row.id }}</td>
+                        <td class="p-2.5 font-bold text-white">{{ row.name }}</td>
+                        <td class="p-2.5 font-mono text-[#00DC82]">{{ row.cat }}</td>
+                        <td class="p-2.5 text-xs text-emerald-400">نشط ✓</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: جدول بيانات منظم يتيح مقارنة السجلات والصفوف بسهولة.</p>
+              </div>
+
+              <!-- 4. HTML Canvas Studio (لوحة الرسم الأصلية) -->
+              <div v-else-if="selectedTerm.previewType === 'html_canvas'" class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-gray-300">لوحة الرسم التفاعلية &lt;canvas&gt;:</span>
+                  <div class="flex gap-2">
+                    <button @click="drawOnHtmlCanvas" class="px-3 py-1 rounded-lg bg-[#00DC82] text-slate-950 font-bold text-xs">
+                      🎨 رسم أشكال هندسية
+                    </button>
+                    <button @click="clearHtmlCanvas" class="px-3 py-1 rounded-lg bg-slate-800 text-gray-300 text-xs">
+                      مسح
+                    </button>
+                  </div>
+                </div>
+
+                <div class="flex justify-center p-3 bg-[#020420] rounded-2xl border border-slate-800">
+                  <canvas ref="htmlCanvasRef" width="380" height="130" class="rounded-xl bg-slate-950 border border-slate-800 shadow-inner"></canvas>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: رسم رسومي نقطي ثنائي وثلاثي الأبعاد ومخططات بيانية معالجة بالبكسل.</p>
+              </div>
+
+              <!-- 5. HTML Input & Label Studio -->
+              <div v-else-if="selectedTerm.previewType === 'html_input' || selectedTerm.previewType === 'html_label' || selectedTerm.previewType === 'html_form'" class="space-y-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="text-[11px] text-gray-400 block mb-1">حقل نصي (type="text"):</label>
+                    <input
+                      type="text"
+                      v-model="htmlInputText"
+                      class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-[#00DC82]"
+                    />
+                  </div>
+
+                  <div>
+                    <div class="flex items-center justify-between mb-1">
+                      <label class="text-[11px] text-gray-400">حقل كلمة المرور (type="password"):</label>
+                      <button @click="htmlShowPassword = !htmlShowPassword" class="text-[10px] text-[#00DC82]">
+                        {{ htmlShowPassword ? 'إخفاء' : 'إظهار' }}
+                      </button>
+                    </div>
+                    <input
+                      :type="htmlShowPassword ? 'text' : 'password'"
+                      v-model="htmlInputPassword"
+                      class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-[#00DC82]"
+                    />
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                  <span>القيمة المدخلة حالياً: <strong class="text-[#00DC82]">{{ htmlInputText }}</strong></span>
+                  <span class="font-mono text-gray-400">&lt;input :value="val" /&gt;</span>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: حقول إدخال متنوعة تستقبل بيانات الزوار وتتجاوب مع لوحة المفاتيح.</p>
+              </div>
+
+              <!-- 6. HTML Progress & Meter Studio -->
+              <div v-else-if="selectedTerm.previewType === 'html_progress'" class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-gray-300">شريط التقدم الأصلي: <strong class="text-[#00DC82] font-mono">{{ htmlProgressVal }}%</strong></span>
+                  <div class="flex gap-2">
+                    <button @click="decreaseProgress" class="px-2.5 py-1 rounded bg-slate-800 text-white text-xs">-10%</button>
+                    <button @click="increaseProgress" class="px-2.5 py-1 rounded bg-[#00DC82] text-slate-950 font-bold text-xs">+10%</button>
+                  </div>
+                </div>
+
+                <div class="space-y-2">
+                  <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
+                    <div
+                      :style="{ width: htmlProgressVal + '%' }"
+                      class="bg-[#00DC82] h-full transition-all duration-300 rounded-full shadow-md"
+                    ></div>
+                  </div>
+                  <div class="flex justify-between text-[10px] font-mono text-gray-500">
+                    <span>0%</span>
+                    <span>50%</span>
+                    <span>100%</span>
+                  </div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: مؤشر يوضح حالة إنجاز المهام أو تحميل الملفات بصرياً.</p>
+              </div>
+
+              <!-- 7. HTML Select & Option Studio -->
+              <div v-else-if="selectedTerm.previewType === 'html_select'" class="space-y-3">
+                <label class="text-xs text-gray-300 block">قائمة منسدلة أصلية &lt;select&gt;:</label>
+                <select
+                  v-model="htmlSelectVal"
+                  class="w-full p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-xs outline-none focus:border-[#00DC82] font-semibold"
+                >
+                  <optgroup label="مكتبات الواجهات">
+                    <option value="vue">Vue.js 3 Composition API</option>
+                    <option value="nuxt">Nuxt UI v3 Framework</option>
+                  </optgroup>
+                  <optgroup label="أدوات التنسيق">
+                    <option value="tailwind">Tailwind CSS CDN</option>
+                    <option value="css3">Native Modern CSS</option>
+                  </optgroup>
+                </select>
+
+                <div class="p-3 bg-slate-950 rounded-xl text-xs font-mono text-[#00DC82] flex items-center justify-between">
+                  <span>الخيار المحدد حالياً:</span>
+                  <strong>{{ htmlSelectVal }}</strong>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: قائمة أنيقة تتيح اختيار خيار واحد من بين خيارات متعددة مجمعة في مجموعات.</p>
+              </div>
+
+              <!-- 8. Fallback HTML Living Studio -->
+              <div v-else-if="selectedTerm.previewType.startsWith('html_')" class="space-y-3">
+                <div class="p-5 rounded-2xl bg-slate-900 border-2 border-emerald-500/40 text-center space-y-2">
+                  <span class="text-xs font-mono font-bold text-[#00DC82] block">&lt;{{ selectedTerm.term }}&gt; تاق HTML5 قياسي</span>
+                  <p class="text-xs text-gray-300">عنصر هيكلي مدمج في متصفحات الويب الحديثة لبناء وتنسيق المحتوى الرقمي.</p>
+                  <button @click="sendTermToScratchpad(selectedTerm)" class="px-3.5 py-1.5 rounded-xl bg-[#00DC82]/20 text-[#00DC82] hover:bg-[#00DC82]/30 text-xs font-bold transition-all">
+                    ⚡ تجربة التاق في المحرر الحي
+                  </button>
+                </div>
+              </div>

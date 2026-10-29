@@ -1,0 +1,180 @@
+$ node --check app.js
+
+exit=0
+$ node --check lexicon-data.js
+
+exit=0
+$ node --check practice-curriculum.js
+
+exit=0
+$ node --check preview-runner.js
+
+exit=0
+$ node --check progress-data.js
+
+exit=0
+$ node --check run_content_integrity_test.js
+
+exit=0
+$ node --check run_curriculum_tests.js
+
+exit=0
+$ node --check run_data_safety_tests.js
+
+exit=0
+$ node --check run_hands_on_verification.js
+
+exit=0
+$ node --check run_json_import_test.js
+
+exit=0
+$ node --check run_phase0a_browser_tests.js
+
+exit=0
+$ node --check run_preview_protocol_tests.js
+
+exit=0
+$ node --check /tmp/vuelexicon-inline-0.js
+
+exit=0
+$ node --check /tmp/vuelexicon-inline-1.js
+
+exit=0
+$ node --check /tmp/vuelexicon-inline-2.js
+
+exit=0
+$ node run_data_safety_tests.js
+PASS Starter unlock/default normalization backs up a valid older record before writing
+PASS JSON null startup preserves exact raw recovery then initializes safely
+PASS Malformed local JSON, array, null item and draft object do not crash startup
+PASS Invalid import rejected before changing storage or any existing progress
+PASS Legacy, 3.5.0, 3.6.0 and 4.0.0 valid shapes import; empty draft retained
+PASS Status-only legacy import merges without erasing current draft
+PASS Failure to back up local data preserves original and blocks later writes
+PASS Partial storage write failure restores preceding keys and keeps reactive state
+PASS Oversized local draft is retained whole in recovery, valid sibling kept
+PASS UTF8 bytes measured consistently and JSON file max enforced
+PASS Quota warnings survive bookmark and mastery actions
+PASS Merged imported data cannot cross aggregate byte boundary; rejection is atomic
+PASS Normal export roundtrips; oversized current draft exports intact as warned raw recovery
+Data safety: 13/13 tests passed.
+
+exit=0
+$ node run_preview_protocol_tests.js
+PASS: valid ready/log/error/snapshot messages accepted
+PASS: null origin alone never grants sender identity
+PASS: old run/foreign lesson/source ignored
+PASS: non-record ready payloads are rejected
+PASS: bootstrap precedes all user scripts without matching literal head strings
+PASS: stopped/missing frame ignores every message
+PASS: null/arrays/scalars/unknown or missing envelope fields rejected
+PASS: malformed payloads rejected without throwing
+PASS: oversized text/snapshots/counts rejected at protocol boundary
+PASS: payload is copied rather than retained
+PASS: malicious getter is ignored without exception
+PASS: instrumented child console accepts circular, BigInt, deep and throwing objects
+PASS: child error reporter survives circular unhandled rejection
+
+Preview protocol and child console: 13/13 passed.
+
+exit=0
+$ node run_json_import_test.js
+Running Strict JSON Import Unit Tests:
+✓ PASS [Valid payload with real IDs]: success -> تم استيراد البيانات المدعومة ودمجها بنجاح؛ النسخة السابقة محفوظة للاسترجاع ✓
+✓ PASS [Corrupted JSON syntax]: error -> تعذر الاستيراد: صيغة JSON غير صالحة
+✓ PASS [Root is array instead of object]: error -> تعذر الاستيراد: النسخة الاحتياطية: يجب أن يكون كائناً غير null
+✓ PASS [Unknown term ID in bookmarks]: error -> تعذر الاستيراد: معرف مصطلح غير معروف
+✓ PASS [Invalid mastery level value]: error -> تعذر الاستيراد: مستوى إتقان غير صالح
+✓ PASS [Unknown term in mastery]: error -> تعذر الاستيراد: معرف مصطلح غير معروف
+✓ PASS [Unknown lesson ID in practiceProgress]: error -> تعذر الاستيراد: معرف درس غير معروف
+✓ PASS [Invalid status in practiceProgress]: error -> تعذر الاستيراد: حالة درس غير صالحة
+✓ PASS [File size > 1MB]: error -> تعذر الاستيراد: حجم الملف يتجاوز 1 MiB. لم يتم تعديل أي بيانات.
+
+Result: 9/9 unit tests passed.
+
+exit=0
+$ node run_curriculum_tests.js
+Testing each lesson against its reference solution:
+[✓ PASS] JS-101 (js): أحسنت! نجح التمرين وتعرّفت على المتغيرات والقوالب النصية.
+[✓ PASS] JS-102 (js): رائع! نجحت في تطبيق التفرع الشرطي if/else عملياً.
+[✓ PASS] JS-103 (js): إنجاز ممتاز! تم توليد البطاقات عبر دالة map() بنجاح.
+[✓ PASS] HTML-101 (html): أحسنت! أتقنت صياغة الهيكل الدلالي في HTML5.
+[✓ PASS] HTML-102 (html): عمل رائع! تم إتقان الروابط والصور وإمكانية الوصول.
+[✓ PASS] HTML-103 (html): تهانينا! أتقنت إنشاء النماذج وحقول الإدخال والتحقق.
+[✓ PASS] CSS-101 (css): رائع جداً! تم تطبيق مبادئ نموذج الصندوق (Box Model) بدقة.
+[✓ PASS] CSS-102 (css): ممتاز! أتقنت محاذاة العناصر بنظام Flexbox المرن.
+[✓ PASS] CSS-103 (css): أداء رائع! أصبحت شبكة CSS Grid جاهزة ومتجاوبة مع كافة الشاشات.
+[✓ PASS] TS-101 (ts): أحسنت! أكملت تمرين الأنواع الأساسية في TypeScript.
+[✓ PASS] TS-102 (ts): ممتاز! فهمت دور Interfaces في توثيق وضمان بنية البيانات.
+[✓ PASS] TS-103 (ts): رائع جداً! أتقنت تضييق الأنواع Type Narrowing في TypeScript.
+[✓ PASS] VUE-101 (vue): أحسنت! أتقنت أساسيات التفاعلية مع ref() في Vue 3.
+[✓ PASS] VUE-102 (vue): رائع جداً! أتقنت توجيهات الشروط والتكرار في Vue 3.
+[✓ PASS] VUE-103 (vue): إنجاز رائع! أتقنت بناء المكونات وتمرير الخصائص Props في Vue 3.
+
+Curriculum Solutions Verification: 15/15 lessons PASSED.
+
+exit=0
+$ node run_content_integrity_test.js
+PASS: original content SHA-256 hashes; 180 unique terms; 15 unique lessons across 5 tracks, 3 each.
+
+exit=0
+$ node run_phase0a_browser_tests.js
+PASS JSON null local progress starts safely and keeps recoverable raw backup
+PASS codeDraft object import is rejected before any stored/user state changes
+PASS random JSON file rejected
+PASS supported legacy and versioned valid exports import
+PASS manual mode typing changes neither submitted code nor iframe document
+PASS auto mode debounces rapid edits and submits only latest source
+PASS circular object and BigInt console output does not stop user script
+PASS new run and stop discard snapshot and validation result
+PASS editing invalidates previous solution verification
+PASS foreign window messages and stale run IDs are ignored
+PASS late DOM readiness cannot turn thrown error into success
+PASS real interval stops after iframe reset; previous timer cannot contaminate new run
+PASS lesson change clears old verification and creates new lesson session
+PASS no application page errors during integration checks
+14/14 browser integration checks passed
+
+exit=0
+$ node run_hands_on_verification.js
+Test server running at http://localhost:8089
+Launching headless Chrome for verification...
+Connected to Chrome CDP: ws://127.0.0.1:9223/devtools/page/DDEB25D88587E9B925D42881290A5A84
+Navigating to http://localhost:8089/index.html...
+[PASS ✓] TEST-01: Page loads without fatal JS errors & Vue mounts (Found 180 entries)
+[PASS ✓] TEST-02: Lexicon category counts preserved (180 total, 25 Nuxt) ({"js":54,"vue":30,"nuxt":25,"html":26,"css":25,"ts":20})
+[PASS ✓] TEST-03: No mentions of "مترجم" (Translator) in UI or meta tags (0 occurrences)
+[PASS ✓] TEST-04: Standalone Nuxt Lab & Scratchpad removed from header/mobile nav (Nav buttons clean)
+Saved screenshot: 01_lexicon_baseline_1440.png (1440x900)
+[PASS ✓] TEST-05: Open Hands-on Practice Mode ("وش تحب تتدرّب اليوم؟") (Selection view rendered)
+Saved screenshot: 02_practice_track_selection_1440.png (1440x900)
+[PASS ✓] TEST-06: 5 Interactive Tracks rendered with correct names & badges (JavaScript, HTML5, CSS3, TypeScript, Vue 3)
+[PASS ✓] TEST-07: Select JavaScript Track opens JS-101 sequentially (JS-101 active)
+Saved screenshot: 03_lesson_workspace_js101_1440.png (1440x900)
+[PASS ✓] TEST-08: Desktop Layout: Editor/Preview Left (LTR) & Instructions Right (RTL) ({"ok":true,"display":"grid","editorDir":"ltr","instructionsDir":"rtl"})
+[PASS ✓] TEST-09: Live Autocomplete / IntelliSense overlay shows map() (map() suggestion visible)
+[PASS ✓] TEST-10: Tab setting toggle switch is present and interactive (Initial: true)
+[PASS ✓] TEST-11: JS-101 Greeting Card: Check Solution passes with green verification (All criteria met)
+Saved screenshot: 04_js101_passed_solution_1440.png (1440x900)
+[PASS ✓] TEST-12: Sequential unlock: JS-101 unlocks JS-102 (if/else) (JS-102 loaded)
+[PASS ✓] TEST-13: JS-102 if/else Authentication Toggle passes verification (Condition checked)
+[PASS ✓] TEST-14: Sequential unlock: JS-102 unlocks JS-103 (Arrays & map) (JS-103 loaded)
+[PASS ✓] TEST-15: JS-103 Arrays & map() passes with 3 generated cards (3 cards rendered in preview)
+Saved screenshot: 05_js103_map_cards_passed_1440.png (1440x900)
+[PASS ✓] TEST-16: Educational Timeline Simulation modal launches with step trace & memory table (Modal visible)
+Saved screenshot: 06_timeline_simulation_modal_1440.png (1440x900)
+[PASS ✓] TEST-17: Stop Execution button resets sandbox iframe & sets status to متوقف (State stopped)
+Saved screenshot: 07_stopped_execution_sandbox_1440.png (1440x900)
+[PASS ✓] TEST-18: Progressive hint 1 appears on demand (Hint 1 displayed)
+Saved screenshot: 08_responsive_mobile_360.png (360x740)
+[PASS ✓] TEST-19: Responsive Mobile 360px has zero unintended horizontal overflow (scrollWidth: 360px)
+Saved screenshot: 09_responsive_mobile_390.png (390x844)
+Saved screenshot: 10_responsive_tablet_768.png (768x1024)
+Saved screenshot: 11_responsive_desktop_1024.png (1024x768)
+[PASS ✓] TEST-20: Lexicon Search & Relevance filtering regression test (Results returned for map: 6)
+==============================================
+Automated Test Suite Completed: 20/20 PASSED
+Report saved to /workspace/VueLexicon-Pro-4.0/phase0a-artifacts/legacy/hands_on_verification_report.json
+==============================================
+
+exit=0

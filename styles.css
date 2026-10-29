@@ -1,0 +1,250 @@
+/* ========================================================
+   VueLexicon Pro - iOS Glassmorphism & 3D Flip Card Styles
+   ======================================================== */
+
+[v-cloak] {
+  display: none !important;
+}
+
+body {
+  font-family: 'Alexandria', sans-serif;
+  background-color: #020420;
+  color: #f1f5f9;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Accessible Focus Ring for Keyboard Users */
+:focus-visible {
+  outline: 2px solid #00DC82 !important;
+  outline-offset: 2px !important;
+}
+
+/* Reduced Motion Preference Respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Modern Emerald Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #020420;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e332c;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00DC82;
+}
+
+/* iOS Segmented Control & Glassmorphism Surfaces */
+.ios-glass-panel {
+  background: rgba(8, 16, 34, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.ios-segmented-control {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 0.25rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ios-segment-btn {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.ios-segment-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.ios-segment-btn.active {
+  background: rgba(0, 220, 130, 0.18);
+  border: 1px solid rgba(0, 220, 130, 0.35);
+  color: #00DC82;
+  font-weight: 700;
+  box-shadow: 0 0 20px -3px rgba(0, 220, 130, 0.25);
+}
+
+/* Highlight.js VS Code Atom One Dark Customization & Code LTR */
+code, pre, .hljs {
+  font-family: 'JetBrains Mono', 'Alexandria', monospace !important;
+  direction: ltr !important;
+  text-align: left !important;
+  letter-spacing: normal !important;
+  font-feature-settings: "calt" 1, "liga" 1;
+}
+
+/* Arabic comments inside code */
+.hljs-comment {
+  font-family: 'Alexandria', 'JetBrains Mono', sans-serif !important;
+  letter-spacing: normal !important;
+  direction: rtl;
+  unicode-bidi: plaintext;
+  font-style: italic;
+  color: #64748b !important;
+}
+
+/* Checkered Background for Transparency Testing */
+.bg-checkered {
+  background-image: linear-gradient(45deg, #1e293b 25%, transparent 25%),
+                    linear-gradient(-45deg, #1e293b 25%, transparent 25%),
+                    linear-gradient(45deg, transparent 75%, #1e293b 75%),
+                    linear-gradient(-45deg, transparent 75%, #1e293b 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  background-color: #0f172a;
+}
+
+/* Code Timeline Line Highlighting */
+.timeline-code-line {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-code-line.active {
+  background-color: rgba(0, 220, 130, 0.15) !important;
+  border-right: 3px solid #00DC82 !important;
+}
+
+/* Pulse animation for variable change */
+@keyframes varPulse {
+  0% { transform: scale(1); background-color: rgba(0, 220, 130, 0.35); }
+  50% { transform: scale(1.03); background-color: rgba(0, 220, 130, 0.2); }
+  100% { transform: scale(1); background-color: transparent; }
+}
+
+.var-changed-pulse {
+  animation: varPulse 0.8s ease-out;
+}
+
+/* ========================================================
+   Hands-on Practice Tracks & Lesson Workspace Layout
+   ======================================================== */
+
+.lesson-workspace-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.lesson-area-instructions {
+  order: 1;
+}
+
+.lesson-area-editor {
+  order: 2;
+}
+
+.lesson-area-preview {
+  order: 3;
+}
+
+@media (min-width: 1024px) {
+  .lesson-workspace-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(360px, 1fr);
+    grid-template-areas: 
+      "editor instructions"
+      "preview instructions";
+    align-items: start;
+    gap: 24px;
+  }
+
+  .lesson-area-editor {
+    grid-area: editor;
+    order: unset;
+  }
+
+  .lesson-area-preview {
+    grid-area: preview;
+    order: unset;
+  }
+
+  .lesson-area-instructions {
+    grid-area: instructions;
+    order: unset;
+    position: sticky;
+    top: 88px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+  }
+}
+
+/* Autocomplete Popover */
+.practice-autocomplete-popover {
+  position: absolute;
+  z-index: 50;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #0b152d;
+  border: 1px solid rgba(0, 220, 130, 0.35);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  direction: ltr;
+}
+
+.practice-autocomplete-item {
+  padding: 6px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: background 0.15s ease;
+  color: #cbd5e1;
+}
+
+.practice-autocomplete-item:hover,
+.practice-autocomplete-item.active {
+  background: rgba(0, 220, 130, 0.15);
+  color: #00DC82;
+}
+
+/* Editor Line Numbers Gutter */
+.editor-gutter {
+  user-select: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.5rem;
+  color: #475569;
+  text-align: right;
+  padding: 12px 10px;
+  background: #04091a;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.editor-textarea {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.5rem;
+  tab-size: 2;
+  white-space: pre;
+  word-break: normal;
+  overflow-x: auto;
+  resize: vertical;
+}
+

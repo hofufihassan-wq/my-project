@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueLexicon Pro — المترجم، القاموس، ومستشار Nuxt UI v3 الشامل</title>
+  <meta name="description" content="تطبيق ويب متكامل وتفاعلي يعمل كقاموس، مترجم، ومساعد ذكي شامل لمطوري الويب ومستشار لمكتبة Nuxt UI v3 و Vue 3">
+  <meta name="theme-color" content="#020420">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300DC82'><path d='M12 2L2 19.5h5l5-9 5 9h5z'/></svg>">
+
+  <!-- Google Fonts: Alexandria (Modern Clean Arabic) + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#00DC82',
+              600: '#00b86b',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            nuxt: {
+              DEFAULT: '#00DC82',
+              hover: '#00b86b',
+              dark: '#064E3B',
+              border: '#1e332c',
+              bg: '#020420',
+              surface: '#081022',
+              card: '#0F172A',
+              cardHover: '#131F37',
+            }
+          },
+          fontFamily: {
+            arabic: ['"Alexandria"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            'nuxt-glow': '0 0 30px -5px rgba(0, 220, 130, 0.25)',
+            'nuxt-glow-lg': '0 0 50px -5px rgba(0, 220, 130, 0.35)',
+            'card-glow': '0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 15px -3px rgba(0, 220, 130, 0.15)',
+          },
+          animation: {
+            'nuxt-pulse': 'nuxtPulse 4s ease-in-out infinite',
+            'bounce-soft': 'bounceSoft 2s ease-in-out infinite',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            nuxtPulse: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+            },
+            bounceSoft: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-6px)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-4px)' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Vue 3 CDN (Triple Fallback for 100% Resilience) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+  <script>
+    if (typeof Vue === 'undefined') {
+      document.write('<scr' + 'ipt src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></scr' + 'ipt>');
+    }
+  </script>
+  <script>
+    if (typeof Vue === 'undefined') {
+      document.write('<scr' + 'ipt src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></scr' + 'ipt>');
+    }
+  </script>
+
+  <style>
+    [v-cloak] { display: none !important; }
+    
+    body {
+      font-family: 'Alexandria', sans-serif;
+      background-color: #020420;
+      color: #e2e8f0;
+      overflow-x: hidden;
+      letter-spacing: -0.01em;
+    }
+
+    /* Custom Modern Emerald Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020420;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e332c;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00DC82;
+    }
+
+    /* Code Block Typography */
+    code, pre, .font-mono {
+      font-family: 'JetBrains Mono', monospace !important;
+    }
+
+    /* Checkered background for opacity/transparency demos */
+    .bg-checkered {
+      background-image: linear-gradient(45deg, #1e293b 25%, transparent 25%),
+                        linear-gradient(-45deg, #1e293b 25%, transparent 25%),
+                        linear-gradient(45deg, transparent 75%, #1e293b 75%),
+                        linear-gradient(-45deg, transparent 75%, #1e293b 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+      background-color: #0f172a;
+    }
+  </style>
+</head>
+<body class="bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased">

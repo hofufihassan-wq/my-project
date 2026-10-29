@@ -1,0 +1,499 @@
+              <!-- ========================================== -->
+              <!-- JAVASCRIPT & VUE / NUXT STUDIOS              -->
+              <!-- ========================================== -->
+
+              <!-- JS WIDGET 1: JS Find & Includes Demo -->
+              <div v-if="selectedTerm.previewType === 'js_find'" class="space-y-3">
+                <div class="flex items-center gap-2">
+                  <label class="text-xs text-gray-400">ابحث عن مطور بالاسم:</label>
+                  <input
+                    type="text"
+                    v-model="jsFindQuery"
+                    placeholder="اكتب: سارة، أحمد، خالد..."
+                    class="flex-1 px-3 py-1.5 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-[#00DC82]"
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                  <div
+                    v-for="u in jsFilterUsersList"
+                    :key="u.id"
+                    :class="jsFoundUser && jsFoundUser.id === u.id ? 'border-2 border-[#00DC82] bg-emerald-950/40 scale-105 shadow-lg shadow-[#00DC82]/20' : 'border border-slate-800 bg-slate-900 opacity-70'"
+                    class="p-3 rounded-xl transition-all space-y-1"
+                  >
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-white text-xs">{{ u.name }}</span>
+                      <span v-if="jsFoundUser && jsFoundUser.id === u.id" class="text-[10px] text-[#00DC82] font-bold">عثر عليه ✓</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400">{{ u.role }}</p>
+                  </div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: تضيء بطاقة المستخدم المطابق بالأخضر فور العثور عليه بواسطة find() أو includes()!</p>
+              </div>
+
+              <!-- JS WIDGET 2: JS Filter Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_filter'" class="space-y-3">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-xs text-gray-400">تصفية:</span>
+                    <button
+                      v-for="role in ['الكل', 'مطور واجهات', 'مصمم UI', 'مدير تقني']"
+                      :key="role"
+                      @click="jsFilterRole = role"
+                      :class="jsFilterRole === role ? 'bg-[#00DC82] text-slate-950 font-bold' : 'bg-slate-800 text-gray-300 hover:text-white'"
+                      class="px-2.5 py-1 rounded-lg text-xs transition-all"
+                    >
+                      {{ role }}
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    v-model="jsFilterSearch"
+                    placeholder="بحث بالاسم..."
+                    class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-lg text-xs text-white outline-none focus:border-[#00DC82]"
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+                  <div
+                    v-for="user in filteredJsUsers"
+                    :key="user.id"
+                    class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1 transition-all hover:border-[#00DC82]/50"
+                  >
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-white">{{ user.name }}</span>
+                      <span class="px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">{{ user.role }}</span>
+                    </div>
+                    <p class="text-gray-400 text-[11px]">خبرة: {{ user.exp }} سنوات</p>
+                  </div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: تختفي الكروت غير المطابقة وتظهر فقط الكروت الناتجة عن مصفوفة filter() فوراً في الصفحة!</p>
+              </div>
+
+              <!-- JS WIDGET 3: JS Map Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_map'" class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-gray-300 font-bold">قائمة المنتجات (تحويل الأسعار بدالة map):</span>
+                  <button
+                    @click="jsMapCurrency = jsMapCurrency === 'USD' ? 'SAR' : 'USD'"
+                    class="px-3 py-1.5 rounded-xl bg-[#00DC82] text-slate-950 text-xs font-bold hover:bg-[#00b86b] transition-all flex items-center gap-1.5"
+                  >
+                    <span>تبديل العملة: {{ jsMapCurrency === 'USD' ? 'إلى ريال سعودي (SAR)' : 'إلى دولار (USD)' }}</span>
+                    <span>🔄</span>
+                  </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div
+                    v-for="prod in mappedProducts"
+                    :key="prod.name"
+                    class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5"
+                  >
+                    <span class="font-bold text-white block">{{ prod.name }}</span>
+                    <div class="flex items-center justify-between pt-1">
+                      <span class="text-gray-400 text-[11px]">السعر النهائي:</span>
+                      <span class="font-mono font-bold text-emerald-400 text-sm">{{ prod.formattedPrice }}</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: تطبيق دالة map() يقوم بإعادة حساب السعر وتعديل النصوص الظاهرة داخل كافة البطاقات بلمح البصر!</p>
+              </div>
+
+              <!-- JS WIDGET 4: JS Reduce Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_reduce'" class="space-y-3">
+                <div class="space-y-2">
+                  <div
+                    v-for="item in jsCartItems"
+                    :key="item.id"
+                    class="flex items-center justify-between p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-white">{{ item.title }}</span>
+                      <span class="text-gray-400 font-mono">({{ item.price }}$)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <button @click="decreaseCartQty(item)" class="w-6 h-6 rounded bg-slate-800 text-white font-bold hover:bg-slate-700">-</button>
+                      <span class="font-mono font-bold text-white w-4 text-center">{{ item.qty }}</span>
+                      <button @click="item.qty++" class="w-6 h-6 rounded bg-emerald-500 text-slate-950 font-bold hover:bg-emerald-400">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/40 text-xs sm:text-sm">
+                  <span class="font-bold text-white">إجمالي الفاتورة المحسوب بواسطة reduce():</span>
+                  <span class="text-lg font-mono font-black text-[#00DC82]">${{ jsCartTotal }}</span>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: دالة reduce() تجمع الكميات والأسعار وتُخرج رقماً نهائياً يُعرض داخل صندوق الإجمالي لحظة النقر!</p>
+              </div>
+
+              <!-- JS WIDGET 5: JS Event Listener Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_event_listener'" class="space-y-3">
+                <div class="flex flex-wrap items-center gap-3">
+                  <button
+                    @click="handleJsButtonClick($event)"
+                    class="px-5 py-2.5 rounded-xl bg-[#00DC82] hover:bg-[#00b86b] text-slate-950 font-bold text-sm shadow-lg shadow-[#00DC82]/20 active:scale-95 transition-all flex items-center gap-2"
+                  >
+                    <span>⚡ انقر لتجربة addEventListener</span>
+                  </button>
+                  <span class="text-xs text-gray-400">إجمالي النقرات المسجلة: <strong class="text-white font-mono">{{ jsClickCount }}</strong></span>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 font-mono text-[11px] space-y-1 text-gray-300">
+                  <div class="text-[#00DC82] font-bold">سجل الحدث الحي (Event Object Inspector):</div>
+                  <div>النوع (type): <span class="text-yellow-400">{{ jsEventLog.type || 'لم يتم النقر بعد' }}</span></div>
+                  <div>إحداثيات الفأرة: <span class="text-sky-400">X: {{ jsEventLog.x }}, Y: {{ jsEventLog.y }}</span></div>
+                  <div>الوقت: <span class="text-emerald-300">{{ jsEventLog.time || '--:--:--' }}</span></div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: عند النقر، يلتقط المتصفح الحدث وينفذ الدالة ويرسم الاستجابة ويزيد العداد فوراً!</p>
+              </div>
+
+              <!-- JS WIDGET 6: JS Fetch & API Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_fetch' || selectedTerm.previewType === 'js_promise'" class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <button
+                    @click="triggerJsFetch"
+                    :disabled="jsFetchLoading"
+                    class="px-4 py-2 rounded-xl bg-[#00DC82] text-slate-950 font-bold text-xs flex items-center gap-2 hover:bg-[#00b86b] disabled:opacity-50"
+                  >
+                    <svg v-if="jsFetchLoading" class="animate-spin w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle><path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" class="opacity-75"></path></svg>
+                    <span>{{ jsFetchLoading ? 'جاري الاتصال بالسيرفر...' : 'طلب بيانات مستخدم جديد (Fetch)' }}</span>
+                  </button>
+                  <span class="text-xs text-gray-400">محاكاة استجابة حقيقية</span>
+                </div>
+
+                <div v-if="jsFetchedUser" class="p-4 rounded-xl bg-slate-900 border border-emerald-500/40 flex items-center gap-4">
+                  <img :src="jsFetchedUser.avatar" class="w-12 h-12 rounded-full border-2 border-[#00DC82]" alt="User Avatar" />
+                  <div class="text-xs space-y-1">
+                    <span class="font-bold text-white text-sm block">{{ jsFetchedUser.name }}</span>
+                    <span class="text-gray-400 block font-mono">{{ jsFetchedUser.email }}</span>
+                    <span class="text-[#00DC82] font-mono text-[10px]">الحالة: مسجل وموثق ✓</span>
+                  </div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: يظهر مؤشر تحميل دوار، ثم تتبدل الواجهة فجأة لتظهر بيانات المستخدم القادمة من السيرفر!</p>
+              </div>
+
+              <!-- JS WIDGET 7: JS Task List (Push / Splice) -->
+              <div v-else-if="selectedTerm.previewType === 'js_array_push' || selectedTerm.previewType === 'js_array_methods'" class="space-y-3">
+                <div class="flex items-center gap-2">
+                  <input
+                    type="text"
+                    v-model="jsNewTaskText"
+                    @keyup.enter="jsAddTask"
+                    placeholder="اكتب مهمة جديدة ثم اضغط Enter..."
+                    class="flex-1 px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-[#00DC82]"
+                  />
+                  <button @click="jsAddTask" class="px-4 py-2 bg-[#00DC82] text-slate-950 font-bold text-xs rounded-xl hover:bg-[#00b86b]">
+                    إضافة (push) +
+                  </button>
+                </div>
+
+                <ul class="space-y-1.5 max-h-36 overflow-y-auto">
+                  <li
+                    v-for="(task, idx) in jsTaskList"
+                    :key="task"
+                    class="flex items-center justify-between p-2 rounded-lg bg-slate-900 border border-slate-800 text-xs"
+                  >
+                    <span class="text-gray-300">#{{ idx + 1 }} {{ task }}</span>
+                    <button @click="removeJsTask(idx)" class="text-red-400 hover:text-red-300 text-xs px-2 py-0.5 rounded bg-red-500/10">
+                      حذف (splice) ✕
+                    </button>
+                  </li>
+                </ul>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: استخدام push() يضيف صفاً جديداً للقائمة أمام عينه، واستخدام splice() يحذف الصف المحدد فوراً!</p>
+              </div>
+
+              <!-- JS WIDGET 8: JS LocalStorage Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_localstorage'" class="space-y-3">
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-300 font-bold">تفضيل سمة التطبيق المحفوظة محلياً:</span>
+                    <div class="flex gap-2">
+                      <button
+                        @click="saveThemePref('emerald')"
+                        :class="jsThemePref === 'emerald' ? 'bg-[#00DC82] text-slate-950 font-bold' : 'bg-slate-800 text-gray-300'"
+                        class="px-3 py-1 rounded-lg text-xs"
+                      >
+                        زمردي Nuxt
+                      </button>
+                      <button
+                        @click="saveThemePref('midnight')"
+                        :class="jsThemePref === 'midnight' ? 'bg-sky-500 text-slate-950 font-bold' : 'bg-slate-800 text-gray-300'"
+                        class="px-3 py-1 rounded-lg text-xs"
+                      >
+                        ليلي أزرق
+                      </button>
+                    </div>
+                  </div>
+                  <div class="text-[11px] text-[#00DC82] font-mono bg-slate-950 p-2.5 rounded-lg border border-slate-800 flex items-center justify-between">
+                    <span>القيمة المخزنة في المتصفح: <strong>{{ jsThemePref }}</strong></span>
+                    <span>localStorage.getItem('app_theme')</span>
+                  </div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: حتى لو أغلقت الصفحة وأعدت فتحها، سيتذكر المتصفح اختيارك المخزن في localStorage!</p>
+              </div>
+
+              <!-- JS WIDGET 9: JS SetTimeout Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_settimeout'" class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <button
+                    @click="startJsTimer"
+                    :disabled="jsTimerRunning"
+                    class="px-4 py-2 rounded-xl bg-[#00DC82] text-slate-950 font-bold text-xs hover:bg-[#00b86b] disabled:opacity-50"
+                  >
+                    {{ jsTimerRunning ? 'المؤقت قيد التشغيل (انتظر 2 ثانية)...' : 'تشغيل setTimeout (تأخير 2 ثانية)' }}
+                  </button>
+                  <span class="text-xs font-mono text-gray-400">{{ jsTimerFinished ? 'اكتمل بنجاح ✓' : 'في الانتظار' }}</span>
+                </div>
+
+                <div v-if="jsTimerRunning" class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-[#00DC82] h-full transition-all duration-[2000ms] w-full"></div>
+                </div>
+
+                <div v-if="jsTimerFinished" class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold flex items-center justify-between animate-bounce">
+                  <span>🎉 ظهرت هذه الرسالة للمستخدم بعد مرور 2000ms تماماً عبر setTimeout!</span>
+                  <button @click="jsTimerFinished = false" class="text-gray-400">✕</button>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: لا يتجمد المتصفح، وبعد انقضاء الوقت المحدد بدقة، ينبثق التنبيه أو تكتمل العملية!</p>
+              </div>
+
+              <!-- JS WIDGET 10: JS Regex Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_regex'" class="space-y-3">
+                <label class="text-xs text-gray-300 block">اكتب كلمة مرور لتجربة فحص RegExp.test():</label>
+                <input
+                  type="text"
+                  v-model="jsRegexInput"
+                  placeholder="اكتب كلمة مرور (مثال: VuePro2026)..."
+                  class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-[#00DC82]"
+                />
+                
+                <div class="grid grid-cols-3 gap-2 pt-1 text-[11px]">
+                  <span :class="jsRegexInput.length >= 8 ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' : 'bg-slate-800 text-gray-500 border-slate-700'" class="p-2 rounded-lg border text-center">
+                    {{ jsRegexInput.length >= 8 ? '✓' : '○' }} 8 خانات على الأقل
+                  </span>
+                  <span :class="/[A-Z]/.test(jsRegexInput) ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' : 'bg-slate-800 text-gray-500 border-slate-700'" class="p-2 rounded-lg border text-center">
+                    {{ /[A-Z]/.test(jsRegexInput) ? '✓' : '○' }} حرف كبير (A-Z)
+                  </span>
+                  <span :class="/[0-9]/.test(jsRegexInput) ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' : 'bg-slate-800 text-gray-500 border-slate-700'" class="p-2 rounded-lg border text-center">
+                    {{ /[0-9]/.test(jsRegexInput) ? '✓' : '○' }} رقم واحد على الأقل
+                  </span>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: تضيء الشارات باللون الأخضر فور تطابق النص مع التعبير النمطي RegExp!</p>
+              </div>
+
+              <!-- JS WIDGET 11: JS Math.random Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_math_random'" class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <button
+                    @click="rollRandomNumber"
+                    class="px-4 py-2 rounded-xl bg-[#00DC82] text-slate-950 font-bold text-xs hover:bg-[#00b86b] transition-all"
+                  >
+                    🎲 رمي النرد وتوليد رقم عشوائي
+                  </button>
+                  <span class="text-xs text-gray-400">المدى: من 1 إلى 100</span>
+                </div>
+
+                <div
+                  :style="{ backgroundColor: jsRandomBgColor }"
+                  class="h-24 rounded-2xl flex flex-col items-center justify-center transition-all duration-300 shadow-inner"
+                >
+                  <span class="text-4xl font-mono font-black text-white drop-shadow-md">{{ jsRandomNumber }}</span>
+                  <span class="text-[10px] text-white/80 font-mono mt-1">كود اللون: {{ jsRandomBgColor }}</span>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: كل نقرة تولد قيمة جديدة تتغير معها أرقام وألوان الواجهة فوراً!</p>
+              </div>
+
+              <!-- JS WIDGET 12: JS Date & Intl Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_date_intl'" class="space-y-3">
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-2">
+                  <span class="text-xs text-gray-400 block">التاريخ والوقت بتنسيق عربي عبر Intl.DateTimeFormat:</span>
+                  <div class="text-lg sm:text-xl font-bold text-emerald-400">{{ jsFormattedDate }}</div>
+                  <div class="text-xs font-mono text-gray-400">{{ jsCurrentTime }}</div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: تاريخ عربي فصيح منسق محلياً مع تحديث الثواني بدقة!</p>
+              </div>
+
+              <!-- JS WIDGET 13: JS String Split / Join / Replace Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_string_split' || selectedTerm.previewType === 'js_string_replace'" class="space-y-3">
+                <label class="text-xs text-gray-300 block">اكتب كلمات مفصولة بفاصلة لتجربة split():</label>
+                <input
+                  type="text"
+                  v-model="jsTagsInput"
+                  placeholder="Vue, Nuxt, Tailwind, JavaScript..."
+                  class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-[#00DC82]"
+                />
+                
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span
+                    v-for="tag in jsTagsArray"
+                    :key="tag"
+                    class="px-2.5 py-1 rounded-lg bg-[#00DC82]/15 border border-[#00DC82]/40 text-[#00DC82] text-xs font-mono font-bold"
+                  >
+                    🏷️ {{ tag.trim() }}
+                  </span>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: يتحول النص المكتوب تلقائياً إلى شارات ووسوم ملونة مصفوفة في الصفحة!</p>
+              </div>
+
+              <!-- JS WIDGET 14: JS JSON & Object.keys Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_json' || selectedTerm.previewType === 'js_object_keys'" class="space-y-3">
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label class="text-[11px] text-gray-400 block mb-1">اسم المطور:</label>
+                    <input type="text" v-model="jsUserData.name" class="w-full p-2 bg-slate-800 rounded-lg text-xs text-white border border-slate-700 outline-none" />
+                  </div>
+                  <div>
+                    <label class="text-[11px] text-gray-400 block mb-1">المكتبة المفضلة:</label>
+                    <input type="text" v-model="jsUserData.role" class="w-full p-2 bg-slate-800 rounded-lg text-xs text-white border border-slate-700 outline-none" />
+                  </div>
+                </div>
+
+                <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs font-mono text-emerald-400 overflow-x-auto" dir="ltr">
+                  {{ JSON.stringify(jsUserData, null, 2) }}
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: مدخلات الحقول تتحول مباشرة إلى كائن JSON وتُرسل أو تُستعاد دون تأخير!</p>
+              </div>
+
+              <!-- JS WIDGET 15: JS Debounce Demo -->
+              <div v-else-if="selectedTerm.previewType === 'js_debounce'" class="space-y-3">
+                <label class="text-xs text-gray-300 block">اكتب بسرعة لملاحظة الفرق بين النبضات والاستدعاء الفعلي:</label>
+                <input
+                  type="text"
+                  @input="handleDebounceInput"
+                  placeholder="اكتب أي نص بسرعة..."
+                  class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-[#00DC82]"
+                />
+                <div class="grid grid-cols-2 gap-3 pt-1">
+                  <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                    <span class="text-xs text-gray-400 block">ضربات المفاتيح (Keystrokes):</span>
+                    <span class="text-xl font-mono font-bold text-amber-400">{{ jsKeystrokeCount }}</span>
+                  </div>
+                  <div class="p-3 rounded-xl bg-slate-900 border border-emerald-500/40 text-center">
+                    <span class="text-xs text-gray-400 block">طلبات البحث الفعلية (Debounced):</span>
+                    <span class="text-xl font-mono font-bold text-[#00DC82]">{{ jsDebounceTriggerCount }}</span>
+                  </div>
+                </div>
+                <p class="text-[11px] text-gray-400 italic">💡 ما يراه المستخدم: رغم كتابة 20 حرفاً، ينتظر المتصفح حتى تتوقف ثم يرسل طلباً واحداً موفراً الموارد!</p>
+              </div>
+
+              <!-- VUE WIDGET 1: Counter -->
+              <div v-else-if="selectedTerm.previewType === 'vue_counter' || selectedTerm.previewType === 'counter'" class="flex flex-wrap items-center gap-4 bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                <button @click="demoCounter--" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-lg">-</button>
+                <div class="text-center px-4">
+                  <span class="text-2xl font-mono font-black text-[#00DC82]">{{ demoCounter }}</span>
+                  <span class="block text-[11px] text-gray-400">القيمة التفاعلية (Ref)</span>
+                </div>
+                <button @click="demoCounter++" class="w-10 h-10 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-lg">+</button>
+                <div class="mr-auto text-xs font-mono text-gray-300">
+                  الحالة: <span class="text-[#00DC82] font-bold">{{ demoCounter % 2 === 0 ? 'العدد زوجي ✓' : 'العدد فردي ✗' }}</span>
+                </div>
+              </div>
+
+              <!-- VUE WIDGET 2: Model / Two-way Binding -->
+              <div v-else-if="selectedTerm.previewType === 'vue_model' || selectedTerm.previewType === 'input'" class="space-y-3 bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                <input
+                  type="text"
+                  v-model="demoInputText"
+                  placeholder="اكتب لتجربة الربط التفاعلي v-model..."
+                  class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm focus:border-[#00DC82] outline-none"
+                />
+                <div class="p-3 bg-slate-950 rounded-lg text-xs font-mono flex items-center justify-between text-gray-300">
+                  <span>المعكوس: <strong class="text-emerald-400" dir="ltr">{{ demoInputText.split('').reverse().join('') }}</strong></span>
+                  <span>طول النص: <strong class="text-[#00DC82]">{{ demoInputText.length }}</strong></span>
+                </div>
+              </div>
+
+              <!-- VUE WIDGET 3: Alert -->
+              <div v-else-if="selectedTerm.previewType === 'vue_alert' || selectedTerm.previewType === 'alert'" class="space-y-3 bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-gray-400">حالة التنبيه المشروط:</span>
+                  <button @click="demoAlertVisible = !demoAlertVisible" class="text-xs px-3 py-1 rounded bg-[#00DC82]/20 text-[#00DC82]">
+                    {{ demoAlertVisible ? 'إخفاء التنبيه' : 'إظهار التنبيه' }}
+                  </button>
+                </div>
+                <div v-if="demoAlertVisible" class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-between text-emerald-300 text-xs sm:text-sm">
+                  <div class="flex items-center gap-2">
+                    <span>✓</span>
+                    <span>تنبيه شرطي تفاعلي ظاهر في DOM بنجاح!</span>
+                  </div>
+                  <button @click="demoAlertVisible = false" class="text-gray-400 hover:text-white">✕</button>
+                </div>
+              </div>
+
+              <!-- VUE WIDGET 4: Switch -->
+              <div v-else-if="selectedTerm.previewType === 'vue_switch' || selectedTerm.previewType === 'switch'" class="flex items-center justify-between bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                <div>
+                  <span class="text-sm font-bold text-white block">مفتاح التبديل التفاعلي</span>
+                  <span class="text-xs text-gray-400">الحالة: {{ demoSwitchVal ? 'مفعل (True)' : 'معطل (False)' }}</span>
+                </div>
+                <button
+                  @click="demoSwitchVal = !demoSwitchVal"
+                  :class="demoSwitchVal ? 'bg-[#00DC82]' : 'bg-slate-700'"
+                  class="w-14 h-8 rounded-full p-1 transition-colors relative"
+                >
+                  <div
+                    :class="demoSwitchVal ? '-translate-x-6' : 'translate-x-0'"
+                    class="w-6 h-6 rounded-full bg-slate-950 transition-transform shadow-md"
+                  ></div>
+                </button>
+              </div>
+
+              <!-- VUE WIDGET 5: Modal -->
+              <div v-else-if="selectedTerm.previewType === 'vue_modal' || selectedTerm.previewType === 'modal'" class="space-y-3 bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                <button @click="demoModalOpen = true" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-[#00DC82] text-white hover:text-slate-950 text-xs font-bold transition-all">
+                  فتح النافذة المنبثقة (UModal / Dialog)
+                </button>
+                <div v-if="demoModalOpen" class="p-4 rounded-xl bg-[#020420] border-2 border-[#00DC82] shadow-2xl space-y-2">
+                  <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                    <span class="font-bold text-white text-xs">معاينة النافذة المنبثقة</span>
+                    <button @click="demoModalOpen = false" class="text-gray-400 hover:text-white">✕</button>
+                  </div>
+                  <p class="text-xs text-gray-300">محتوى يظهر فوق الصفحة مع تعتيم ضبابي خلفي.</p>
+                </div>
+              </div>
+
+              <!-- General Universal Studio (Default) -->
+              <div v-else class="flex items-center justify-between bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-xs text-gray-300">
+                <span>مخرجات قياسية عالية التوافق تعمل بسلاسة في متصفحات الويب الحديثة.</span>
+                <button @click="sendTermToScratchpad(selectedTerm)" class="px-3 py-1.5 rounded-lg bg-[#00DC82]/10 text-[#00DC82] font-semibold hover:bg-[#00DC82]/20">
+                  ⚡ تشغيل في المحرر الحي ↗
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB 2: COMPARISON (Vanilla JS vs Vue 3 / Nuxt UI) -->
+        <div v-if="detailTab === 'compare'" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <div class="p-4 rounded-2xl bg-[#0F172A] border border-amber-500/30 space-y-3">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+              <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
+                <span>⏳</span>
+                <span>الأسلوب التقليدي (Vanilla JS & DOM)</span>
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Imperative</span>
+            </div>
+            <pre class="p-3 bg-[#020420] rounded-xl text-xs font-mono text-amber-200/90 overflow-x-auto leading-relaxed" dir="ltr"><code>{{ selectedTerm.compareJs }}</code></pre>
+            <p class="text-xs text-gray-400">يتطلب استهداف عناصر DOM يدوياً، كتابة مستمعات أحداث متفرقة، وتحديث الحالة يدوياً مما يزيد الأخطاء.</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#0F172A] border border-[#00DC82]/40 space-y-3 shadow-lg shadow-[#00DC82]/5">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+              <span class="text-xs font-bold text-[#00DC82] flex items-center gap-1.5">
+                <span>⚡</span>
+                <span>أسلوب Vue 3 الحديث (Composition API & Nuxt UI)</span>
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-[#00DC82]/10 text-[#00DC82] border border-[#00DC82]/30">Declarative</span>
+            </div>
+            <pre class="p-3 bg-[#020420] rounded-xl text-xs font-mono text-emerald-300 overflow-x-auto leading-relaxed" dir="ltr"><code>{{ selectedTerm.compareVue }}</code></pre>
+            <p class="text-xs text-gray-300">يستخدم الحالة التفاعلية ومكونات Nuxt UI v3، حيث يتحدث DOM تلقائياً وبأقل كود ممكن وبكفاءة قصوى.</p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  </main>

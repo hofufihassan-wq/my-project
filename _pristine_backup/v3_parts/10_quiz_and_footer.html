@@ -1,0 +1,153 @@
+  <!-- ==================================================== -->
+  <!-- 6. DEVELOPER QUIZ & CHALLENGE MODE                    -->
+  <!-- ==================================================== -->
+  <main v-if="appMode === 'quiz'" class="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full space-y-6">
+    
+    <div class="p-6 rounded-3xl bg-[#081022] border-2 border-[#1e332c] shadow-2xl space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <div>
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span>🎯</span>
+            <span>تحدي واختبار مهارات مطوري الويب</span>
+          </h2>
+          <p class="text-xs text-gray-400">اختبر معلوماتك في HTML5 و CSS3 و JavaScript و Vue 3 و Nuxt UI</p>
+        </div>
+
+        <div class="text-xs font-mono text-[#00DC82] bg-[#00DC82]/10 px-3 py-1 rounded-full border border-[#00DC82]/30 font-bold">
+          النتيجة: {{ quizScore }} / {{ quizQuestions.length }}
+        </div>
+      </div>
+
+      <!-- Quiz Ongoing State -->
+      <div v-if="!quizCompleted" class="space-y-5">
+        <!-- Progress Bar -->
+        <div class="space-y-1">
+          <div class="flex justify-between text-xs text-gray-400 font-mono">
+            <span>السؤال رقم {{ quizIndex + 1 }} من {{ quizQuestions.length }}</span>
+            <span>{{ Math.round(((quizIndex + 1) / quizQuestions.length) * 100) }}%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+            <div
+              :style="{ width: ((quizIndex + 1) / quizQuestions.length) * 100 + '%' }"
+              class="bg-[#00DC82] h-full transition-all duration-300"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="p-5 rounded-2xl bg-[#020420] border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-[#00DC82]/20 text-[#00DC82] font-bold">
+              {{ currentQuizQuestion.category }}
+            </span>
+            <span class="text-xs text-gray-400">اختر الإجابة الصحيحة:</span>
+          </div>
+
+          <h3 class="text-base sm:text-lg font-bold text-white leading-relaxed">
+            {{ currentQuizQuestion.question }}
+          </h3>
+
+          <!-- Options Grid -->
+          <div class="space-y-2.5">
+            <button
+              v-for="(opt, optIdx) in currentQuizQuestion.options"
+              :key="optIdx"
+              @click="answerQuiz(optIdx)"
+              :disabled="quizAnswered"
+              :class="getQuizOptionClass(optIdx)"
+              class="w-full p-3.5 rounded-xl border text-right text-xs sm:text-sm font-semibold transition-all flex items-center justify-between"
+            >
+              <span>{{ opt }}</span>
+              <span v-if="quizAnswered && optIdx === currentQuizQuestion.correct" class="text-emerald-400">✓ إجابة صحيحة</span>
+              <span v-else-if="quizAnswered && quizSelectedIdx === optIdx && optIdx !== currentQuizQuestion.correct" class="text-rose-400">✗ إجابة خاطئة</span>
+            </button>
+          </div>
+
+          <!-- Explanation Card on Answer -->
+          <div v-if="quizAnswered" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs text-gray-300 space-y-3">
+            <p class="leading-relaxed"><strong class="text-[#00DC82]">الشرح التوضيحي:</strong> {{ currentQuizQuestion.explanation }}</p>
+            <button
+              @click="nextQuizQuestion"
+              class="px-5 py-2 rounded-xl bg-[#00DC82] hover:bg-[#00b86b] text-slate-950 font-bold text-xs shadow-md transition-all flex items-center gap-1 mr-auto"
+            >
+              <span>{{ quizIndex + 1 < quizQuestions.length ? 'السؤال التالي ←' : 'عرض النتيجة النهائية 🏆' }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz Completed State -->
+      <div v-else class="p-8 text-center space-y-4 bg-[#020420] rounded-2xl border border-[#00DC82]/40">
+        <div class="text-5xl">🏆</div>
+        <h3 class="text-2xl font-black text-white">اكتمل التحدي بنجاح!</h3>
+        <p class="text-sm text-gray-300">
+          لقد حققت <strong class="text-[#00DC82] text-lg font-mono">{{ quizScore }}</strong> من أصل <strong class="text-white text-lg font-mono">{{ quizQuestions.length }}</strong> نقاط.
+        </p>
+        <button
+          @click="restartQuiz"
+          class="px-6 py-2.5 rounded-xl bg-[#00DC82] hover:bg-[#00b86b] text-slate-950 font-black text-xs shadow-lg shadow-[#00DC82]/20 transition-all inline-flex items-center gap-2"
+        >
+          <span>إعادة الاختبار ↺</span>
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ==================================================== -->
+  <!-- 7. KEYBOARD SHORTCUTS MODAL (? أو Ctrl + /)           -->
+  <!-- ==================================================== -->
+  <div v-if="showShortcutsModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md" @click.self="showShortcutsModal = false">
+    <div class="bg-[#081022] border-2 border-[#1e332c] rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <h3 class="font-bold text-white text-base flex items-center gap-2">
+          <span>⌨</span>
+          <span>اختصارات لوحة المفاتيح</span>
+        </h3>
+        <button @click="showShortcutsModal = false" class="text-gray-400 hover:text-white text-lg">✕</button>
+      </div>
+
+      <ul class="space-y-2.5 text-xs">
+        <li class="flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800">
+          <span class="text-gray-300">التركيز على شريط البحث</span>
+          <span class="font-mono text-[#00DC82] bg-slate-950 px-2 py-0.5 rounded border border-slate-700">Ctrl + K</span>
+        </li>
+        <li class="flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800">
+          <span class="text-gray-300">إغلاق القوائم والنوافذ</span>
+          <span class="font-mono text-[#00DC82] bg-slate-950 px-2 py-0.5 rounded border border-slate-700">Esc</span>
+        </li>
+        <li class="flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800">
+          <span class="text-gray-300">التنقل بين اقتراحات البحث</span>
+          <span class="font-mono text-[#00DC82] bg-slate-950 px-2 py-0.5 rounded border border-slate-700">↑ / ↓</span>
+        </li>
+        <li class="flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800">
+          <span class="text-gray-300">اختيار العنصر من القائمة</span>
+          <span class="font-mono text-[#00DC82] bg-slate-950 px-2 py-0.5 rounded border border-slate-700">Enter</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================================================== -->
+  <!-- 8. FOOTER (التذييل)                                  -->
+  <!-- ==================================================== -->
+  <footer class="mt-auto border-t border-[#1e332c]/80 bg-[#020420] py-6 relative z-10 text-xs text-gray-500 text-center">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="text-white font-bold">VueLexicon Pro</span>
+        <span>— معجم ومترجم ومستشار ومختبر ويب تفاعلي شامل</span>
+      </div>
+      <div class="flex items-center gap-3 font-mono text-[11px]">
+        <span>Nuxt UI v3</span>
+        <span>•</span>
+        <span>Vue 3.4</span>
+        <span>•</span>
+        <span>Tailwind CSS</span>
+        <span>•</span>
+        <span class="text-[#00DC82] font-bold">160 عنصر تفاعلي</span>
+      </div>
+    </div>
+  </footer>
+
+</div>

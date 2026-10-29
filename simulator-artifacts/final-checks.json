@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-10-29T07:45:41.075971+00:00",
+  "results": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "app.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "lexicon-data.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "practice-curriculum.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "preview-runner.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "progress-data.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_content_integrity_test.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_curriculum_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_data_safety_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_hands_on_verification.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_json_import_test.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_phase0a_browser_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_preview_protocol_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_simulator_browser_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "simulator-guides.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-inline-0.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-inline-1.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-inline-2.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "run_data_safety_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "run_preview_protocol_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "run_json_import_test.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "run_curriculum_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "run_content_integrity_test.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "run_phase0a_browser_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "run_simulator_browser_tests.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "run_hands_on_verification.js"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "all_passed": true
+}

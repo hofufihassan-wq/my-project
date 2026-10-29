@@ -1,0 +1,38 @@
+# Local credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+.aws/
+.codex/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies, caches, editor and OS temporary files
+node_modules/
+__pycache__/
+*.py[cod]
+.cache/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.temp
+*~
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated test screenshots; preserve original screenshots and backup folders
+/phase0a-artifacts/legacy/screenshots/
+/simulator-artifacts/legacy/screenshots/
+
+# Local packages and browser-exported user data
+*.zip
+vuelexicon-progress-*.json
+vuelexicon-raw-recovery-*.json
+vuelexicon-recovery-*.json

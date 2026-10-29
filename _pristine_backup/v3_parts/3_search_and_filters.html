@@ -1,0 +1,127 @@
+  <!-- ==================================================== -->
+  <!-- 2. SEARCH & DIRECTORY TOOLBAR (البحث والفهرس الأبجدي) -->
+  <!-- ==================================================== -->
+  <section v-if="appMode === 'lexicon'" class="relative z-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 w-full">
+    
+    <!-- Central Search Box Container -->
+    <div class="relative max-w-3xl mx-auto">
+      <div class="relative flex items-center">
+        <!-- Emerald Magnifying Glass (Right Icon) -->
+        <span class="absolute right-4 text-[#00DC82] text-lg pointer-events-none select-none">
+          🔍
+        </span>
+
+        <!-- Input Field with Strict RTL Alignment -->
+        <input
+          ref="searchInputRef"
+          type="text"
+          v-model="searchQuery"
+          @focus="searchFocused = true"
+          @blur="handleSearchBlur"
+          @keydown="navigateDropdown"
+          placeholder="ابحث عن أي تاق، دالة، خاصية، أو مفهوم (مثل: filter, v-model, flex, dialog)..."
+          class="w-full pr-12 pl-24 py-3.5 rounded-2xl bg-[#081022] border-2 border-[#1e332c] focus:border-[#00DC82] text-white placeholder-gray-500 text-sm shadow-xl focus:shadow-[#00DC82]/15 outline-none transition-all font-medium"
+          style="direction: ltr; text-align: right; unicode-bidi: plaintext;"
+        />
+
+        <!-- Left Actions (Clear button + Shortcut pill) -->
+        <div class="absolute left-3.5 flex items-center gap-2">
+          <button
+            v-if="searchQuery"
+            @click="clearSearch"
+            class="text-xs text-gray-400 hover:text-white bg-slate-800 hover:bg-slate-700 w-6 h-6 rounded-full flex items-center justify-center transition-all"
+            title="مسح البحث"
+          >
+            ✕
+          </button>
+          <kbd class="hidden sm:inline-block text-[10px] font-mono px-2 py-1 rounded bg-[#020420] text-gray-400 border border-slate-800 select-none">
+            Ctrl + K
+          </kbd>
+        </div>
+      </div>
+
+      <!-- Instant Dropdown Autocomplete Menu -->
+      <div
+        v-if="showDropdown"
+        class="absolute top-full left-0 right-0 mt-2 rounded-2xl bg-[#081022] border-2 border-[#00DC82]/50 shadow-2xl overflow-hidden z-50 max-h-80 overflow-y-auto backdrop-blur-2xl"
+      >
+        <div class="p-2 border-b border-slate-800 text-[11px] text-gray-400 flex items-center justify-between px-3">
+          <span>نتائج الإكمال التلقائي الفوري ({{ dropdownSuggestions.length }} اقتراح):</span>
+          <span class="font-mono text-[10px] text-[#00DC82]">استخدم ↑ / ↓ للتنقل ثم Enter</span>
+        </div>
+
+        <ul class="divide-y divide-slate-800/60">
+          <li
+            v-for="(sug, sIdx) in dropdownSuggestions"
+            :key="sug.id"
+            @mousedown.prevent="selectDropdownItem(sug)"
+            :class="sIdx === highlightedDropdownIndex ? 'bg-[#0F172A] border-r-4 border-[#00DC82]' : 'hover:bg-slate-900'"
+            class="p-3 cursor-pointer transition-colors flex items-center justify-between gap-3 text-xs"
+          >
+            <div class="flex items-center gap-2.5">
+              <span class="font-mono font-bold text-white text-sm" dir="ltr">{{ sug.term }}</span>
+              <span class="text-gray-400 font-medium">{{ sug.arabicTitle }}</span>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <span
+                :class="sug.catBadgeColor.bg + ' ' + sug.catBadgeColor.text + ' ' + sug.catBadgeColor.border"
+                class="px-2 py-0.5 rounded text-[10px] font-mono border"
+              >
+                {{ sug.categoryLabel }}
+              </span>
+              <span class="text-gray-500 text-xs">↵</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-2 relative z-10">
+      <button
+        v-for="cat in categoriesList"
+        :key="cat.id"
+        @click="setCategory(cat.id)"
+        :class="activeCategory === cat.id ? 'bg-[#00DC82] text-slate-950 font-bold shadow-lg shadow-[#00DC82]/20 scale-105' : 'bg-[#081022] text-gray-300 hover:text-white border border-[#1e332c] hover:border-[#00DC82]/50'"
+        class="px-4 py-2 rounded-xl text-xs transition-all flex items-center gap-2 cursor-pointer font-semibold"
+      >
+        <span>{{ cat.icon }}</span>
+        <span>{{ cat.label }}</span>
+        <span
+          :class="activeCategory === cat.id ? 'bg-slate-950/20 text-slate-950' : 'bg-slate-800 text-gray-400'"
+          class="text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold"
+        >
+          {{ getCategoryCount(cat.id) }}
+        </span>
+      </button>
+    </div>
+
+    <!-- A-Z Alphabetical Directory Bar -->
+    <div class="mt-4 p-2 rounded-2xl bg-[#081022] border border-[#1e332c] max-w-4xl mx-auto shadow-inner relative z-10">
+      <div class="flex items-center justify-center gap-1 overflow-x-auto py-1" dir="ltr">
+        <button
+          @click="setLetter('ALL')"
+          :class="selectedLetter === 'ALL' ? 'bg-[#00DC82] text-slate-950 font-black' : 'text-gray-400 hover:text-white hover:bg-slate-800'"
+          class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold transition-all"
+        >
+          ALL
+        </button>
+
+        <button
+          v-for="lettr in alphabetLetters"
+          :key="lettr"
+          @click="setLetter(lettr)"
+          :class="selectedLetter === lettr ? 'bg-[#00DC82] text-slate-950 font-black scale-110 shadow-md' : 'text-gray-400 hover:text-white hover:bg-slate-800'"
+          class="w-7 h-7 rounded-lg text-xs font-mono font-bold transition-all flex flex-col items-center justify-center relative"
+        >
+          <span>{{ lettr }}</span>
+          <span
+            v-if="hasTermsForLetter(lettr)"
+            class="w-1 h-1 rounded-full bg-[#00DC82] absolute bottom-0.5"
+          ></span>
+        </button>
+      </div>
+    </div>
+
+  </section>

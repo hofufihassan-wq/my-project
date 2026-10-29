@@ -1,0 +1,361 @@
+{
+  "original_archive": "VueLexicon_Pro_v3.6_HandsOn.zip",
+  "original_archive_sha256": "ca51fcd6817c6fe955d89e45b790585e817c5ee372cadc012042dd7137e31bf7",
+  "original_files": [
+    {
+      "path": "hands_on_screenshots/01_lexicon_baseline_1440.png",
+      "unchanged": true,
+      "original_sha256": "8db8712e822b5a70b9998ca1b219fb02ec451903d7eab8ca644160e8e9004586",
+      "current_sha256": "8db8712e822b5a70b9998ca1b219fb02ec451903d7eab8ca644160e8e9004586"
+    },
+    {
+      "path": "hands_on_screenshots/02_practice_track_selection_1440.png",
+      "unchanged": true,
+      "original_sha256": "95a78e73de585e87540f7e9df093a82203501b51d564db6636ef4f7f607da03b",
+      "current_sha256": "95a78e73de585e87540f7e9df093a82203501b51d564db6636ef4f7f607da03b"
+    },
+    {
+      "path": "hands_on_screenshots/03_lesson_workspace_js101_1440.png",
+      "unchanged": true,
+      "original_sha256": "1c495921094f57aa7839ad31f45d900ccb09dbfa72ae6dc9d7bfd46bc4d67406",
+      "current_sha256": "1c495921094f57aa7839ad31f45d900ccb09dbfa72ae6dc9d7bfd46bc4d67406"
+    },
+    {
+      "path": "hands_on_screenshots/04_js101_passed_solution_1440.png",
+      "unchanged": true,
+      "original_sha256": "0ba3b48d843bf3742cf6f4611872b5df672762fe958d620f7b32d4daba850b40",
+      "current_sha256": "0ba3b48d843bf3742cf6f4611872b5df672762fe958d620f7b32d4daba850b40"
+    },
+    {
+      "path": "hands_on_screenshots/05_js103_map_cards_passed_1440.png",
+      "unchanged": true,
+      "original_sha256": "a115a67a16126e45f86452a7353f83f34097f6f90df1f5350d7066dacc24359a",
+      "current_sha256": "a115a67a16126e45f86452a7353f83f34097f6f90df1f5350d7066dacc24359a"
+    },
+    {
+      "path": "hands_on_screenshots/06_timeline_simulation_modal_1440.png",
+      "unchanged": true,
+      "original_sha256": "f7224cf0e06ed2456679acb0235673861f4c0568077c0c3ed3f274da1249fa96",
+      "current_sha256": "f7224cf0e06ed2456679acb0235673861f4c0568077c0c3ed3f274da1249fa96"
+    },
+    {
+      "path": "hands_on_screenshots/07_stopped_execution_sandbox_1440.png",
+      "unchanged": true,
+      "original_sha256": "97505a2bb14a1a3473f08229174f483f45a1310f5dc1a2978b6001945ac593a1",
+      "current_sha256": "97505a2bb14a1a3473f08229174f483f45a1310f5dc1a2978b6001945ac593a1"
+    },
+    {
+      "path": "hands_on_screenshots/08_responsive_mobile_360.png",
+      "unchanged": true,
+      "original_sha256": "b394e402b2789d294cd8e16cdf61bf32e4b60121eef8cf12646cd862ec05bbe4",
+      "current_sha256": "b394e402b2789d294cd8e16cdf61bf32e4b60121eef8cf12646cd862ec05bbe4"
+    },
+    {
+      "path": "hands_on_screenshots/09_responsive_mobile_390.png",
+      "unchanged": true,
+      "original_sha256": "573e9f819c5722f7996c81b6afcd9b99eaff3702bea6a3e80eede6e7e918d8a9",
+      "current_sha256": "573e9f819c5722f7996c81b6afcd9b99eaff3702bea6a3e80eede6e7e918d8a9"
+    },
+    {
+      "path": "hands_on_screenshots/10_responsive_tablet_768.png",
+      "unchanged": true,
+      "original_sha256": "8590473e4c38945684eca52301bd5191e31af23343933fdfbc9084afe4f548e1",
+      "current_sha256": "8590473e4c38945684eca52301bd5191e31af23343933fdfbc9084afe4f548e1"
+    },
+    {
+      "path": "hands_on_screenshots/11_responsive_desktop_1024.png",
+      "unchanged": true,
+      "original_sha256": "5b12c5ba722aaa31d0d67e6721853fd384983793de8df9778557d307a5608f18",
+      "current_sha256": "5b12c5ba722aaa31d0d67e6721853fd384983793de8df9778557d307a5608f18"
+    },
+    {
+      "path": "_pristine_backup/app.js",
+      "unchanged": true,
+      "original_sha256": "dfdb234804cf580e812d74f1ab444a81c2340bae1c9fdf832a91a2814a58ff26",
+      "current_sha256": "dfdb234804cf580e812d74f1ab444a81c2340bae1c9fdf832a91a2814a58ff26"
+    },
+    {
+      "path": "_pristine_backup/build_full_spa.py",
+      "unchanged": true,
+      "original_sha256": "3ad2f1518652ff42206237c5c86874b1d3dce588efd54b8091bc5cdb49c8e838",
+      "current_sha256": "3ad2f1518652ff42206237c5c86874b1d3dce588efd54b8091bc5cdb49c8e838"
+    },
+    {
+      "path": "_pristine_backup/build_full_spa_v2.py",
+      "unchanged": true,
+      "original_sha256": "a1e22943e67a93778c57730419aa1c982f9b3529c63645bda09bb056982f04b4",
+      "current_sha256": "a1e22943e67a93778c57730419aa1c982f9b3529c63645bda09bb056982f04b4"
+    },
+    {
+      "path": "_pristine_backup/build_full_spa_v3.py",
+      "unchanged": true,
+      "original_sha256": "52908fd4080dfcc0b2b4ceffeb76d1b9c524d0ae877dda49064fd5ea9b57607a",
+      "current_sha256": "52908fd4080dfcc0b2b4ceffeb76d1b9c524d0ae877dda49064fd5ea9b57607a"
+    },
+    {
+      "path": "_pristine_backup/compile_index_v3.py",
+      "unchanged": true,
+      "original_sha256": "7f270de1d93142fba9e165a6c0896f661f06a40311cbb95985b00b2cae0f1186",
+      "current_sha256": "7f270de1d93142fba9e165a6c0896f661f06a40311cbb95985b00b2cae0f1186"
+    },
+    {
+      "path": "_pristine_backup/index.html",
+      "unchanged": true,
+      "original_sha256": "e8f7e5983c8e5e60ee586e4e5cc331dd1883222eb50daf00246a26c299a5b83e",
+      "current_sha256": "e8f7e5983c8e5e60ee586e4e5cc331dd1883222eb50daf00246a26c299a5b83e"
+    },
+    {
+      "path": "_pristine_backup/lexicon-data.js",
+      "unchanged": true,
+      "original_sha256": "853d9ad301b03c6bddcdddbcf7a9de4ab80015527fdfbb82fc814b8f46cb856a",
+      "current_sha256": "853d9ad301b03c6bddcdddbcf7a9de4ab80015527fdfbb82fc814b8f46cb856a"
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_css.py",
+      "unchanged": true,
+      "original_sha256": "ef84af16197aca24f305e36cf0e84ef3f3dd9d7cbffd01f1b8ee797a8182a7ad",
+      "current_sha256": "ef84af16197aca24f305e36cf0e84ef3f3dd9d7cbffd01f1b8ee797a8182a7ad"
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_html.py",
+      "unchanged": true,
+      "original_sha256": "103f5652b7b97ca81f06670efec98c81a16f6c446ba12cc4e0e12aac3e76ca9e",
+      "current_sha256": "103f5652b7b97ca81f06670efec98c81a16f6c446ba12cc4e0e12aac3e76ca9e"
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_js.py",
+      "unchanged": true,
+      "original_sha256": "a0e238be90ec8bb4dc4fbe64db320423cf761d77685e2b6393ed5125afb02655",
+      "current_sha256": "a0e238be90ec8bb4dc4fbe64db320423cf761d77685e2b6393ed5125afb02655"
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_nuxt.py",
+      "unchanged": true,
+      "original_sha256": "542535fcfe11d235c995c0b2353ec1b962343fa39c030dc5b76905889045161f",
+      "current_sha256": "542535fcfe11d235c995c0b2353ec1b962343fa39c030dc5b76905889045161f"
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_vue.py",
+      "unchanged": true,
+      "original_sha256": "b39b22581651b6166562ea972f1a696d75f586de992dc9154363b781233cfec3",
+      "current_sha256": "b39b22581651b6166562ea972f1a696d75f586de992dc9154363b781233cfec3"
+    },
+    {
+      "path": "_pristine_backup/make_lexicon_data_js.py",
+      "unchanged": true,
+      "original_sha256": "5f0d09018dde2d664f7f7d9a378c47358686a5c93fb64d86683d228c8c186947",
+      "current_sha256": "5f0d09018dde2d664f7f7d9a378c47358686a5c93fb64d86683d228c8c186947"
+    },
+    {
+      "path": "_pristine_backup/styles.css",
+      "unchanged": true,
+      "original_sha256": "8760ace0d2d10a20b9d1aa7a56e6e5d255525e2b3bfa0be783d8dbbe1cd61397",
+      "current_sha256": "8760ace0d2d10a20b9d1aa7a56e6e5d255525e2b3bfa0be783d8dbbe1cd61397"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/10_quiz_and_footer.html",
+      "unchanged": true,
+      "original_sha256": "32acb320ace2a21e590420232aafbe8390cfee77b842e4e5135da0d3d16282e0",
+      "current_sha256": "32acb320ace2a21e590420232aafbe8390cfee77b842e4e5135da0d3d16282e0"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/11_app_script.js",
+      "unchanged": true,
+      "original_sha256": "90e1342fe36355d51b3200446dc644de2822ea6fb41fdc450fbfcb47f9c921f1",
+      "current_sha256": "90e1342fe36355d51b3200446dc644de2822ea6fb41fdc450fbfcb47f9c921f1"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/1_head_and_styles.html",
+      "unchanged": true,
+      "original_sha256": "40cfa43e3c777fccfea8ff480d41f4711b8a8dad6ab59b5c2f580e1ff94735e0",
+      "current_sha256": "40cfa43e3c777fccfea8ff480d41f4711b8a8dad6ab59b5c2f580e1ff94735e0"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/2_header_and_nav.html",
+      "unchanged": true,
+      "original_sha256": "1505ce5e6d26e8490a3ce40aab709b60e9d5729e00c60a582eb88bed8bc2d440",
+      "current_sha256": "1505ce5e6d26e8490a3ce40aab709b60e9d5729e00c60a582eb88bed8bc2d440"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/3_search_and_filters.html",
+      "unchanged": true,
+      "original_sha256": "070d989395a54300b65c9d1d2cc018f1a839fc78277478717e1a2446642e6376",
+      "current_sha256": "070d989395a54300b65c9d1d2cc018f1a839fc78277478717e1a2446642e6376"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/4_master_detail_head.html",
+      "unchanged": true,
+      "original_sha256": "f458584a8d11846760e003187fd84ce71f3dfec295ed87ed505ea4eaa3818be3",
+      "current_sha256": "f458584a8d11846760e003187fd84ce71f3dfec295ed87ed505ea4eaa3818be3"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/5_css_widgets.html",
+      "unchanged": true,
+      "original_sha256": "ea6954cb215872da0e36b492f0e121e8d3d039b85685356b2c0cbc2ad7eb545d",
+      "current_sha256": "ea6954cb215872da0e36b492f0e121e8d3d039b85685356b2c0cbc2ad7eb545d"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/6_html_widgets.html",
+      "unchanged": true,
+      "original_sha256": "ba458dfe3f253a57dec676d90871cb864e620ed772f21d697fdd48d664d1a439",
+      "current_sha256": "ba458dfe3f253a57dec676d90871cb864e620ed772f21d697fdd48d664d1a439"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/7_js_vue_nuxt_widgets.html",
+      "unchanged": true,
+      "original_sha256": "2a51a2d37d35c35a2ae134a43a54cb331ec662c96cb56195d41add7c010fedca",
+      "current_sha256": "2a51a2d37d35c35a2ae134a43a54cb331ec662c96cb56195d41add7c010fedca"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/8_nuxt_lab.html",
+      "unchanged": true,
+      "original_sha256": "13e383b472bbe95b361c2f5719706d3dae8d708718c338472a10a28bd9e21219",
+      "current_sha256": "13e383b472bbe95b361c2f5719706d3dae8d708718c338472a10a28bd9e21219"
+    },
+    {
+      "path": "_pristine_backup/v3_parts/9_scratchpad_studio.html",
+      "unchanged": true,
+      "original_sha256": "55862643472a411e2d46184ad8aad70e695f23131cdd59ea53cf1bd34f481f54",
+      "current_sha256": "55862643472a411e2d46184ad8aad70e695f23131cdd59ea53cf1bd34f481f54"
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/app.js",
+      "unchanged": true,
+      "original_sha256": "e2db26f464c9e7b6634aea3dcc028ee6570dc8edaf704cfa8f355ad97e74aca7",
+      "current_sha256": "e2db26f464c9e7b6634aea3dcc028ee6570dc8edaf704cfa8f355ad97e74aca7"
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/CHANGELOG.md",
+      "unchanged": true,
+      "original_sha256": "0e4393482fba97c809a2463f85e966150546dda9925c6bb71d9de544a2dd7b27",
+      "current_sha256": "0e4393482fba97c809a2463f85e966150546dda9925c6bb71d9de544a2dd7b27"
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/index.html",
+      "unchanged": true,
+      "original_sha256": "45d8e5cf26698a5df2669886fcff4897d6e40622cd70fec9be3e5b7a77760e75",
+      "current_sha256": "45d8e5cf26698a5df2669886fcff4897d6e40622cd70fec9be3e5b7a77760e75"
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/lexicon-data.js",
+      "unchanged": true,
+      "original_sha256": "4779ccd3a89075a03d40f96d2f30a0818995973e080a454e43bb2d43bce75971",
+      "current_sha256": "4779ccd3a89075a03d40f96d2f30a0818995973e080a454e43bb2d43bce75971"
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/README.md",
+      "unchanged": true,
+      "original_sha256": "8cd8e50014ce435d63acb73855d830d8af5cdb3b7d6157ec6c97cd0c3d4860da",
+      "current_sha256": "8cd8e50014ce435d63acb73855d830d8af5cdb3b7d6157ec6c97cd0c3d4860da"
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/styles.css",
+      "unchanged": true,
+      "original_sha256": "172b56e8d3e0ddcf59f4b0c727e148d3f26976945732e08893254abed75fef87",
+      "current_sha256": "172b56e8d3e0ddcf59f4b0c727e148d3f26976945732e08893254abed75fef87"
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/TEST_REPORT.md",
+      "unchanged": true,
+      "original_sha256": "a72b2d951122c3e0da1ec635a1a60d50673e7552c8077c33a59bfc929adcabd8",
+      "current_sha256": "a72b2d951122c3e0da1ec635a1a60d50673e7552c8077c33a59bfc929adcabd8"
+    },
+    {
+      "path": "index.html",
+      "unchanged": false,
+      "original_sha256": "62773e63272b4d257ec7207952d3e5de51e6bc2d65a351274a9881647ba9dbc4",
+      "current_sha256": "14679a3d404323751243c334f6578021f7c1bb1d0b6a9fa5e1290216fae92649"
+    },
+    {
+      "path": "app.js",
+      "unchanged": false,
+      "original_sha256": "68eb33c0c45bb526a304989d5c4bbcbb75a5af388e1c443e348a2f74e5402b2e",
+      "current_sha256": "3601bc54410b0a2dac6d88b25f79254c6ab12947b1b3c125dbb64bf986b904d6"
+    },
+    {
+      "path": "lexicon-data.js",
+      "unchanged": true,
+      "original_sha256": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+      "current_sha256": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba"
+    },
+    {
+      "path": "practice-curriculum.js",
+      "unchanged": true,
+      "original_sha256": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+      "current_sha256": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab"
+    },
+    {
+      "path": "styles.css",
+      "unchanged": true,
+      "original_sha256": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+      "current_sha256": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce"
+    },
+    {
+      "path": "README.md",
+      "unchanged": false,
+      "original_sha256": "dd9e3d400a49f30304b52001a95a92ce6b4791e1cb026ebf2b17815d345da290",
+      "current_sha256": "cf0524a667830b797516adb57c2688834d2351b1b6e5d69de2263345977ed3ca"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "unchanged": false,
+      "original_sha256": "e0c5561d7b643e021f19d5c454a3837491bb6597473ba7fd4832768349d1b717",
+      "current_sha256": "3beeb6d9f0145e8b94f94594cabbf7e2682d7f4d1c78d21af08894ba2a6ba1ba"
+    },
+    {
+      "path": "TEST_REPORT.md",
+      "unchanged": false,
+      "original_sha256": "6370dc525548a869d47261b474b1d0b734afd06b1ff7e9d43d4984f191507c96",
+      "current_sha256": "6f74fcb66797ae0e2d61777cb6b81d60464c25f5097f70331e4779e171fcbd67"
+    },
+    {
+      "path": "hands_on_verification_report.json",
+      "unchanged": true,
+      "original_sha256": "b7b05ce82915a08766b8348cb65058d71377fa7224da9d7e53ea096ef34366f2",
+      "current_sha256": "b7b05ce82915a08766b8348cb65058d71377fa7224da9d7e53ea096ef34366f2"
+    },
+    {
+      "path": "run_hands_on_verification.js",
+      "unchanged": false,
+      "original_sha256": "fe4e650051a0e177476a65e68e05e405238540924228c6f4ab4d6bf4bb2cbd98",
+      "current_sha256": "bfe1509bcbf5cc9bbed889d2a255245724b47c3e5146ef91b85607bb7bef0851"
+    },
+    {
+      "path": "run_curriculum_tests.js",
+      "unchanged": true,
+      "original_sha256": "2d4b286686b27b00fc94abc8a83d86470150471d9fd7e0203816f09abe4a0028",
+      "current_sha256": "2d4b286686b27b00fc94abc8a83d86470150471d9fd7e0203816f09abe4a0028"
+    },
+    {
+      "path": "run_json_import_test.js",
+      "unchanged": false,
+      "original_sha256": "efba24b169558a182c40468d20b584f74350bec6af661e9b842eab5d7ab1c4d6",
+      "current_sha256": "6a3d404076e3510fc6bb9f7bf98151d4ef8a4fdcd755d9df54fe7981f959db82"
+    }
+  ],
+  "new_files": [
+    "PHASE0A_REPORT.md",
+    "PHASE0B_VALIDATOR_NOTES.md",
+    "phase0a-artifacts/final-checks.json",
+    "phase0a-artifacts/final-checks.log",
+    "phase0a-artifacts/legacy/hands_on_verification_report.json",
+    "phase0a-artifacts/legacy/screenshots/01_lexicon_baseline_1440.png",
+    "phase0a-artifacts/legacy/screenshots/02_practice_track_selection_1440.png",
+    "phase0a-artifacts/legacy/screenshots/03_lesson_workspace_js101_1440.png",
+    "phase0a-artifacts/legacy/screenshots/04_js101_passed_solution_1440.png",
+    "phase0a-artifacts/legacy/screenshots/05_js103_map_cards_passed_1440.png",
+    "phase0a-artifacts/legacy/screenshots/06_timeline_simulation_modal_1440.png",
+    "phase0a-artifacts/legacy/screenshots/07_stopped_execution_sandbox_1440.png",
+    "phase0a-artifacts/legacy/screenshots/08_responsive_mobile_360.png",
+    "phase0a-artifacts/legacy/screenshots/09_responsive_mobile_390.png",
+    "phase0a-artifacts/legacy/screenshots/10_responsive_tablet_768.png",
+    "phase0a-artifacts/legacy/screenshots/11_responsive_desktop_1024.png",
+    "phase0a_browser_report.json",
+    "preview-runner.js",
+    "progress-data.js",
+    "run_content_integrity_test.js",
+    "run_data_safety_tests.js",
+    "run_phase0a_browser_tests.js",
+    "run_preview_protocol_tests.js"
+  ]
+}
