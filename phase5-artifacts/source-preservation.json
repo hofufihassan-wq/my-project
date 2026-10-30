@@ -1,0 +1,503 @@
+{
+  "timestamp_utc": "2026-10-30T08:19:41.674346+00:00",
+  "base_commit": "abffc939853d57061b800271822d153a67883bfc",
+  "main_commit_at_fetch": "ba5b9fd5b4c397d31f43f57f7d230b364215f44a",
+  "protected_file_count": 82,
+  "backup_file_count": 32,
+  "all_protected_bytes_unchanged": true,
+  "checks": [
+    {
+      "path": "_pristine_backup/app.js",
+      "sha256": "dfdb234804cf580e812d74f1ab444a81c2340bae1c9fdf832a91a2814a58ff26",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/build_full_spa.py",
+      "sha256": "3ad2f1518652ff42206237c5c86874b1d3dce588efd54b8091bc5cdb49c8e838",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/build_full_spa_v2.py",
+      "sha256": "a1e22943e67a93778c57730419aa1c982f9b3529c63645bda09bb056982f04b4",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/build_full_spa_v3.py",
+      "sha256": "52908fd4080dfcc0b2b4ceffeb76d1b9c524d0ae877dda49064fd5ea9b57607a",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/compile_index_v3.py",
+      "sha256": "7f270de1d93142fba9e165a6c0896f661f06a40311cbb95985b00b2cae0f1186",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/index.html",
+      "sha256": "e8f7e5983c8e5e60ee586e4e5cc331dd1883222eb50daf00246a26c299a5b83e",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/lexicon-data.js",
+      "sha256": "853d9ad301b03c6bddcdddbcf7a9de4ab80015527fdfbb82fc814b8f46cb856a",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_css.py",
+      "sha256": "ef84af16197aca24f305e36cf0e84ef3f3dd9d7cbffd01f1b8ee797a8182a7ad",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_html.py",
+      "sha256": "103f5652b7b97ca81f06670efec98c81a16f6c446ba12cc4e0e12aac3e76ca9e",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_js.py",
+      "sha256": "a0e238be90ec8bb4dc4fbe64db320423cf761d77685e2b6393ed5125afb02655",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_nuxt.py",
+      "sha256": "542535fcfe11d235c995c0b2353ec1b962343fa39c030dc5b76905889045161f",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/lexicon_data_vue.py",
+      "sha256": "b39b22581651b6166562ea972f1a696d75f586de992dc9154363b781233cfec3",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/make_lexicon_data_js.py",
+      "sha256": "5f0d09018dde2d664f7f7d9a378c47358686a5c93fb64d86683d228c8c186947",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/styles.css",
+      "sha256": "8760ace0d2d10a20b9d1aa7a56e6e5d255525e2b3bfa0be783d8dbbe1cd61397",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/10_quiz_and_footer.html",
+      "sha256": "32acb320ace2a21e590420232aafbe8390cfee77b842e4e5135da0d3d16282e0",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/11_app_script.js",
+      "sha256": "90e1342fe36355d51b3200446dc644de2822ea6fb41fdc450fbfcb47f9c921f1",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/1_head_and_styles.html",
+      "sha256": "40cfa43e3c777fccfea8ff480d41f4711b8a8dad6ab59b5c2f580e1ff94735e0",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/2_header_and_nav.html",
+      "sha256": "1505ce5e6d26e8490a3ce40aab709b60e9d5729e00c60a582eb88bed8bc2d440",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/3_search_and_filters.html",
+      "sha256": "070d989395a54300b65c9d1d2cc018f1a839fc78277478717e1a2446642e6376",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/4_master_detail_head.html",
+      "sha256": "f458584a8d11846760e003187fd84ce71f3dfec295ed87ed505ea4eaa3818be3",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/5_css_widgets.html",
+      "sha256": "ea6954cb215872da0e36b492f0e121e8d3d039b85685356b2c0cbc2ad7eb545d",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/6_html_widgets.html",
+      "sha256": "ba458dfe3f253a57dec676d90871cb864e620ed772f21d697fdd48d664d1a439",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/7_js_vue_nuxt_widgets.html",
+      "sha256": "2a51a2d37d35c35a2ae134a43a54cb331ec662c96cb56195d41add7c010fedca",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/8_nuxt_lab.html",
+      "sha256": "13e383b472bbe95b361c2f5719706d3dae8d708718c338472a10a28bd9e21219",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_pristine_backup/v3_parts/9_scratchpad_studio.html",
+      "sha256": "55862643472a411e2d46184ad8aad70e695f23131cdd59ea53cf1bd34f481f54",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/CHANGELOG.md",
+      "sha256": "0e4393482fba97c809a2463f85e966150546dda9925c6bb71d9de544a2dd7b27",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/README.md",
+      "sha256": "8cd8e50014ce435d63acb73855d830d8af5cdb3b7d6157ec6c97cd0c3d4860da",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/TEST_REPORT.md",
+      "sha256": "a72b2d951122c3e0da1ec635a1a60d50673e7552c8077c33a59bfc929adcabd8",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/app.js",
+      "sha256": "e2db26f464c9e7b6634aea3dcc028ee6570dc8edaf704cfa8f355ad97e74aca7",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/index.html",
+      "sha256": "45d8e5cf26698a5df2669886fcff4897d6e40622cd70fec9be3e5b7a77760e75",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/lexicon-data.js",
+      "sha256": "4779ccd3a89075a03d40f96d2f30a0818995973e080a454e43bb2d43bce75971",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "_v3.5_pre_hands_on_backup/styles.css",
+      "sha256": "172b56e8d3e0ddcf59f4b0c727e148d3f26976945732e08893254abed75fef87",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "app.js",
+      "sha256": "9e83c0b01d42b9a884f6c3a8b9b287b96309b21495f5f6a442ffdfd26c1e0467",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/alexandria/files/alexandria-arabic-wght-normal.woff2",
+      "sha256": "e8d8ca61d4da1a1a38b9454dbae92be589185efc7af0af6046f6a11c60476e99",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/alexandria/files/alexandria-latin-ext-wght-normal.woff2",
+      "sha256": "e6bf8237f75aba690223ac20ab6a35bd37677aff57da6af9aad58c2d0f918e40",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/alexandria/files/alexandria-latin-wght-normal.woff2",
+      "sha256": "98ccec0bc3c456332f8fd0fcaf81d26a4e010b7fc093f9781938f976df9ffbc4",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/alexandria/files/alexandria-vietnamese-wght-normal.woff2",
+      "sha256": "ad5f96f2ed804f3a3ee0e4b41d5cb56eb52777adec0d9f838cd72fcabe78112a",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/alexandria/index.css",
+      "sha256": "eeb5f3219512085794a5ae501b78fc8dccd05e78849f284af18817677d2f42bb",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-cyrillic-ext-wght-normal.woff2",
+      "sha256": "593ccd6fe36e299e151aeae4521be9bfe83ac487d96d7cdb44f50be4a04041c7",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-cyrillic-wght-normal.woff2",
+      "sha256": "d274604c40757f98f07df623a8b8fb5194508a6fa4f5413a7a107f09e3b7452a",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-greek-wght-normal.woff2",
+      "sha256": "ee863198077f3093ffa81c072581cc4bd608a04e60a8a9c0b846396ce4f14109",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-latin-ext-wght-normal.woff2",
+      "sha256": "79bfdab9ba467e26eea4122e6f2567e188dd8a09a8c730d501fc487c4ab99c6e",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2",
+      "sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-vietnamese-wght-normal.woff2",
+      "sha256": "2288795da89dd97e648954b96e22b4501bd85dfc453264460b252f888b582ca2",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/fonts/jetbrains-mono/index.css",
+      "sha256": "273f27b590784ce54baaac5975e287e9ccbb0ae7c74ebed1cdb06e3e78104580",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/tailwind-3.4.17.min.css",
+      "sha256": "abb8fe2e8d082bb8d9acca8e32568b74c45a0778a786c4b661d31051b24ec516",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/tailwind.input.css",
+      "sha256": "cc1a7ad0d019ddb1d32d0ecb588ba0ac26ce41d8625dd6c366348b25f83a28ec",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/atom-one-dark-11.9.0.min.css",
+      "sha256": "4237ffca7ce6aadb438c457e0a675b125c534bbdda5b87f41f3a1495603bcc9b",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/compiler-sfc-3.4.21.esm-browser.js",
+      "sha256": "ab1922d5ebe7c4a83a9931ac3f9fc5326ba55bd094ecdf44157b6d439cc307f9",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/compiler-sfc-3.4.21.global.min.js",
+      "sha256": "60044559e86abc88e634728759b8d8704ffbfb50e936f2e127c0f03d79b5a28b",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/highlight-11.9.0.min.js",
+      "sha256": "837a6fa5b0c736b52bbde2b2b6190f305da3fc9ed41681db5321507057b5c846",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/highlight-css-11.9.0.min.js",
+      "sha256": "90b54d3bef2a9cc8c02f3a8d512fd317ab61fd3c4d9e80081a94c3021d2403e7",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/highlight-javascript-11.9.0.min.js",
+      "sha256": "8f675eb100c79498bd35f422f9b5d7c36a4b89c729d7e47715506190792bf9f0",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/highlight-xml-11.9.0.min.js",
+      "sha256": "e6fb27c375179ecea98c78d374aaded766b431c07d5aa0657918879bb658eef3",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/manifest.json",
+      "sha256": "578dfdd789c451976cc85d714badd0298ce484d4c23e05b56e66e2645e3c3371",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "assets/vendor/vue-3.4.21.global.prod.js",
+      "sha256": "4963101441ded7e420c05665e7c616b2f2e3851c99e1cf8af84d29d6f10e77da",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "dictionary-preview.js",
+      "sha256": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "index.html",
+      "sha256": "864d2ba7357271b5747b9ea240f2d787243079dbe12c48d6d5c88691073d05d1",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "legacy-validator-guards.js",
+      "sha256": "21a821036bcda8170f3294476d4417aa532cb1ef9c53c695a81928143e85b89c",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "lexicon-data.js",
+      "sha256": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "c4343acf5d610b3e906a2477c4e416951a97f0e1af735f36355004da3f826388",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "ea39c5a39c5817724f44b77d8f283f15f1ecfa79f40679af9ea534c0dc0dbe70",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "practice-curriculum.js",
+      "sha256": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "preview-runner.js",
+      "sha256": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "progress-data.js",
+      "sha256": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_content_integrity_test.js",
+      "sha256": "f70b3bdb24a7479d4657ad8681830bb0c8fc23dce78b5f9dfb9a45d9bc36ce6d",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_curriculum_tests.js",
+      "sha256": "c4ee9daa4316cf3a71c15d57bbcd10f4b689f49fcfedf702ba21296bf96df7e6",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_data_safety_tests.js",
+      "sha256": "f1a2ea6f25e331cc34eed172ccb14c9b2a03f71180aabba73359d17587f4f87b",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_dictionary_inventory.js",
+      "sha256": "38d740f6ecba4b8960d675fe128f589c86c6a53870850a0355812a1fc24eaaed",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_dictionary_preview_tests.js",
+      "sha256": "ca7e74826a279a7e40b030fca22aff3f3dff0c4e206ca15a869c44c591e8224e",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_hands_on_verification.js",
+      "sha256": "bfe1509bcbf5cc9bbed889d2a255245724b47c3e5146ef91b85607bb7bef0851",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_json_import_test.js",
+      "sha256": "6a3d404076e3510fc6bb9f7bf98151d4ef8a4fdcd755d9df54fe7981f959db82",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_legacy_validator_tests.js",
+      "sha256": "990cacbe3702f069a8ee979ed2d4fd33942afd6e659e79303eaa0c2872f97585",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_phase0a_browser_tests.js",
+      "sha256": "c8acf6a237a195cffdc875b5738a7891c7a261a28f59b24dec8c6cb8d3889692",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_preview_protocol_tests.js",
+      "sha256": "1455fa02de5dd04de0eb86bdc4bf0dd04e73a0d538da8eefdaa78d036298805b",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_runtime_assets_tests.js",
+      "sha256": "69938c9dbbf76f89c7c979a2b4fe0e2709b0e80dc04febdb61ebf6bb24dec8fe",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_simulator_browser_tests.js",
+      "sha256": "aca6f723a6cb048194e95d84e74da48ac6bfa3cac3b6ea8975b6cc9b232a6396",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "run_stability_browser_tests.js",
+      "sha256": "b5228bf779fd3770eab7ed7a2ea9dc866163bfc639790d0034b1dd64f066c5e3",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "scripts/build-sfc-compiler.cjs",
+      "sha256": "2b5b268d8049273d15b3e3ad228cb444b8d68c9f51cd44d17bb690800c3afa7d",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "simulator-guides.js",
+      "sha256": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "styles.css",
+      "sha256": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    },
+    {
+      "path": "tailwind.config.cjs",
+      "sha256": "6c5365fef0960884dbd840353071e09d8d555cda81d771485e72e200eb561b8f",
+      "planning_copy_matches_base": true,
+      "tested_copy_matches_base": true
+    }
+  ],
+  "note": "All tracked JS/CJS/HTML/CSS/fonts, package/lock/asset manifest and original backup files match both the reviewed phase-four commit and isolated test copy after builds. Test outputs remain separate from previous evidence."
+}

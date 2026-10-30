@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-10-30T08:19:41.674954+00:00",
+  "command": "gh pr list --repo hofufihassan-wq/my-progect --state open --head fix/phase4-stability-review --json number,title,url,baseRefName,headRefName",
+  "exit_code": 1,
+  "output": "Post \"https://api.github.com/graphql\": Forbidden",
+  "configured_network_policy": "restricted",
+  "api_github_allowed": false,
+  "pull_request_created": false,
+  "note": "Git transport is available separately. No alternative endpoint or policy bypass attempted. Branch can be uploaded; PR creation requires access to the GitHub API or the GitHub website by the owner."
+}
