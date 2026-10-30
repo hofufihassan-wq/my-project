@@ -1,0 +1,8 @@
+{
+  "sha256": {
+    "assets/vendor/compiler-sfc-3.4.21.global.min.js": "60044559e86abc88e634728759b8d8704ffbfb50e936f2e127c0f03d79b5a28b",
+    "assets/tailwind-3.4.17.min.css": "4294d050466e99a9a0253a6485835b33b3d925b08b2653c519ecb10bd9954565",
+    "assets/vendor/manifest.json": "24b4e14881fae5f3a9342b05aa74b01c2c8e9e96046406a02d879f53bd208cba"
+  },
+  "second_build_byte_identical": true
+}

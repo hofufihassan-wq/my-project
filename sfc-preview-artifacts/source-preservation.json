@@ -1,0 +1,15 @@
+{
+  "base": "0cc50edd1c754b7fbafacfa5d1c82ef7928669d4",
+  "unchanged_sha256": {
+    "index.html": "4f402e71f818d928375af7db36e31598b7104d1d0802e7ef643f948db4ea52bf",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "lexicon-data.js": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+    "practice-curriculum.js": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+    "progress-data.js": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+    "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+    "assets/tailwind-3.4.17.min.css": "4294d050466e99a9a0253a6485835b33b3d925b08b2653c519ecb10bd9954565"
+  },
+  "original_backup_files_unchanged": 32,
+  "compiler_min_bytes": 736961,
+  "compiler_gzip_bytes": 232274
+}

@@ -1330,13 +1330,13 @@ const app = createApp({
     }
 
     // Navigation methods
-    function selectTrack(trackId) {
+    function selectTrack(trackId, referenceOnly = false) {
       selectedTrack.value = trackId;
       const tLessons = practiceLessons.value.filter(l => l.track === trackId);
       if (tLessons.length > 0) {
         // Every experiment is accessible; historical grades never gate navigation.
         const target = tLessons.find(l => typeof practiceProgress.value[l.id]?.codeDraft === 'string') || tLessons[0];
-        selectLesson(target.id);
+        selectLesson(target.id, referenceOnly);
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -1347,7 +1347,7 @@ const app = createApp({
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function selectLesson(lessonId) {
+    function selectLesson(lessonId, referenceOnly = false) {
       const lesson = practiceLessons.value.find(l => l.id === lessonId);
       if (!lesson) return;
       stopPracticeExecution();
@@ -1362,9 +1362,14 @@ const app = createApp({
 
       // Load saved code draft or initial starter code
       const draft = practiceProgress.value[lessonId]?.codeDraft;
-      practiceCode.value = draft ?? lesson.initialCode;
+      // Dictionary navigation loads the editor without saving a fallback over
+      // a null/absent draft or briefly submitting an imported user draft.
+      const wasRestoring = applyingImportedDraft;
+      if (referenceOnly) applyingImportedDraft = true;
+      try { practiceCode.value = draft ?? lesson.initialCode; }
+      finally { applyingImportedDraft = wasRestoring; }
 
-      runPracticeCode();
+      if (!referenceOnly) runPracticeCode();
     }
 
     function goToNextLesson() {
@@ -1527,7 +1532,7 @@ const app = createApp({
       submitSimulatorCode(practiceCode.value, 'draft');
     }
 
-    function submitSimulatorCode(code, kind) {
+    function submitSimulatorCode(code, kind, example = null) {
       cancelAutoRun();
       clearRunEvidence();
       activeRun.value = null; // Invalidate the old session before replacing its frame.
@@ -1549,10 +1554,16 @@ const app = createApp({
       };
       submittedPracticeCode.value = code;
       activeRun.value = session;
-      practiceIframeDoc.value = window.VueLexiconRunner.buildDocument(code, session, {
-        vueRuntimeUrl: typeof document.baseURI === 'string'
-          ? new URL('assets/vendor/vue-3.4.21.global.prod.js', document.baseURI).href : undefined
-      });
+      const localAsset = path => typeof document.baseURI === 'string' ? new URL(path, document.baseURI).href : undefined;
+      const assets = {
+        vueRuntimeUrl: localAsset('assets/vendor/vue-3.4.21.global.prod.js'),
+        vueCompilerUrl: localAsset('assets/vendor/compiler-sfc-3.4.21.global.min.js'),
+        previewCssUrl: localAsset('assets/tailwind-3.4.17.min.css'),
+        dictionaryAdapterUrl: localAsset('dictionary-preview.js')
+      };
+      practiceIframeDoc.value = example
+        ? window.VueLexiconRunner.buildDictionaryDocument(example, session, assets)
+        : window.VueLexiconRunner.buildDocument(code, session, assets);
       practiceIframeKey.value++;
       executionState.value = 'running';
       addPracticeLog('info', kind === 'reference' ? 'تعمل معاينة المثال المرجعي؛ مسودتك لم تتغير.' : 'أُرسلت نسخة مسودتك الحالية إلى إطار معزول جديد.');
@@ -1717,26 +1728,14 @@ const app = createApp({
       practiceLogs.value = [];
     }
 
-    // Lexicon integration: open term code in practice editor
+    // Lexicon integration: a separate reference, never a replacement draft.
     function sendTermToScratchpad(term) {
       if (!term) return;
-      const codeToLoad = term.vueSfcCode || term.vanillaCode || '';
-      let template = `<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>${term.term}</title>
-  <style>
-    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; min-height: 100vh; margin: 0; }
-  </style>
-</head>
-<body>
-  ${codeToLoad}
-</body>
-</html>`;
+      const example = window.VueLexiconRunner.selectDictionaryExample(term, activeCodeFormat.value);
+      if (!example) return;
       openSimulator();
-      selectTrack(['js', 'html', 'css', 'ts', 'vue'].includes(term.category) ? term.category : 'js');
-      simulatorExternalExample.value = { title: 'مثال المعجم: ' + term.term, code: template };
+      selectTrack(['js', 'html', 'css', 'ts', 'vue'].includes(term.category) ? term.category : 'js', true);
+      simulatorExternalExample.value = { title: 'مثال المعجم: ' + term.term, ...example };
       runSimulatorReference();
       triggerToast(`فُتحت معاينة «${term.term}» دون استبدال مسودتك.`, 'info');
     }
@@ -1783,7 +1782,7 @@ const app = createApp({
     function runSimulatorReference() {
       if (!currentLesson.value) return;
       simulatorReferenceVisible.value = true;
-      submitSimulatorCode(simulatorReferenceCode.value, 'reference');
+      submitSimulatorCode(simulatorReferenceCode.value, 'reference', simulatorExternalExample.value);
     }
     watch(appMode, (mode, previous) => {
       if (previous === 'practice' && mode !== 'practice') stopPracticeExecution();

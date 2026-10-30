@@ -132,4 +132,25 @@ test('local dependency resolution preserves scripts, comments and quoted content
   const html = runner.buildDocument(code, session, {vueRuntimeUrl:'http://localhost/local-vue.js'});
   assert.ok(html.endsWith(code));
 });
+test('dictionary selection respects the active tab and its declared language', () => {
+  const term = {category:'css',vueSfcCode:'<template>Vue</template>',vanillaCode:'p{color:red}'};
+  assert.equal(runner.selectDictionaryExample(term,'vue').type,'vue');
+  assert.equal(runner.selectDictionaryExample(term,'vanilla').code,term.vanillaCode);
+  assert.equal(runner.selectDictionaryExample(term,'vanilla').type,'css');
+  assert.equal(runner.selectDictionaryExample({...term,category:'html'},'vanilla').type,'html');
+  assert.equal(runner.selectDictionaryExample({...term,category:'js'},'vanilla').type,'javascript');
+  assert.equal(runner.selectDictionaryExample({...term,vanillaCode:''},'vanilla').code,'');
+  assert.equal(runner.selectDictionaryExample(null,'vue'),null);
+});
+test('dictionary source is JSON encoded instead of interpolated into a script or markup', () => {
+  const code = `console.log('</script><script>throw new Error("injected")</script>')`;
+  const html = runner.buildDictionaryDocument({code,type:'javascript'},session,{
+    dictionaryAdapterUrl:'https://example.test/nested/dictionary-preview.js',
+    vueRuntimeUrl:'https://example.test/nested/vue.js',vueCompilerUrl:'https://example.test/nested/compiler.js'
+  });
+  assert(!html.includes(code));
+  assert(html.includes('\\u003c/script>'));
+  assert(html.includes('"deferReady":true'));
+  assert(!html.includes('allow-same-origin'));
+});
 console.log(`\nPreview protocol and child console: ${passed}/${passed} passed.`);

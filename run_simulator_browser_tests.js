@@ -234,7 +234,9 @@ async function main() {
     const bounds = await frame.locator('#term-demo').boundingBox();
     assert(bounds);
     assert.equal(await page.evaluate(b => document.elementFromPoint(b.x+b.width/2,b.y+b.height/2)?.tagName, bounds), 'IFRAME');
-    await page.mouse.click(bounds.x+bounds.width/2,bounds.y+bounds.height/2);
+    // Wait for the button's own stable position and hit target after local CSS
+    // loads. Locator.click still sends a real pointer event, unlike DOM.click.
+    await frame.locator('#term-demo').click();
     await page.waitForFunction(() => window.vueLexiconApp.simulatorObservation?.bodyText.includes('changed'));
     assert.equal(await frame.locator('#term-demo').textContent(), 'changed');
     await select('HTML-102');

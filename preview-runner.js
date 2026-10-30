@@ -7,7 +7,7 @@
   const exactKeys = (value, keys) => isRecord(value) && Object.keys(value).every(key => keys.includes(key));
 
   // Runs only in the child iframe. No eval/Function is used in the parent.
-  function childBootstrap(session) {
+  function childBootstrap(session, options = {}) {
     const stringify = value => {
       const seen = new WeakSet();
       let budget = 80;
@@ -45,12 +45,35 @@
         try { original.apply(console, args); } catch (_) {}
       };
     }
+    let failed = false;
+    let failureText = '';
+    function showFailure() {
+      if (!options.dictionary || !document.body || !failureText) return;
+      let note = document.getElementById('vuelexicon-preview-error');
+      if (!note) {
+        note = document.createElement('p');
+        note.id = 'vuelexicon-preview-error';
+        note.setAttribute('role', 'alert');
+        note.setAttribute('dir', 'rtl');
+        note.style.cssText = 'font:14px/1.8 system-ui;color:#fda4af;white-space:pre-wrap;padding:16px';
+        document.body.prepend(note);
+      }
+      note.textContent = 'تعذر تشغيل المثال: ' + failureText;
+    }
+    function fail(message, lineno = 0) {
+      failed = true;
+      const msg = stringify(message);
+      send('EXECUTION_ERROR', { msg, lineno });
+      failureText = msg;
+      showFailure();
+    }
     addEventListener('error', event => {
-      send('EXECUTION_ERROR', { msg: stringify(event.message || 'Resource error'),
-        lineno: Number.isInteger(event.lineno) ? event.lineno : 0 });
-    });
+      if (!event.message && !options.dictionary) return;
+      fail(event.message || 'تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا.',
+        Number.isInteger(event.lineno) ? event.lineno : 0);
+    }, options.dictionary ? true : false);
     addEventListener('unhandledrejection', event => {
-      send('EXECUTION_ERROR', { msg: stringify(event.reason), lineno: 0 });
+      fail(event.reason);
     });
     function snapshot() {
       try {
@@ -63,7 +86,10 @@
         });
       } catch (_) {}
     }
-    addEventListener('DOMContentLoaded', () => {
+    let observing = false;
+    function ready() {
+      if (failed || observing) return;
+      observing = true;
       send('PREVIEW_READY', {});
       snapshot();
       // Observe async DOM updates; readiness never claims all timers/events completed.
@@ -72,7 +98,13 @@
         clearTimeout(timer);
         timer = setTimeout(snapshot, 80);
       }).observe(document.documentElement, { subtree: true, childList: true, characterData: true, attributes: true });
-    }, { once: true });
+    }
+    if (options.dictionary) {
+      // This object exists only in the opaque child, never in the app context.
+      window.VueLexiconPreviewHost = Object.freeze({ ready, fail });
+      addEventListener('DOMContentLoaded', showFailure, { once: true });
+    }
+    if (!options.deferReady) addEventListener('DOMContentLoaded', ready, { once: true });
   }
 
   function buildDocument(code, session, assets = {}) {
@@ -94,11 +126,45 @@
       });
     }
     const data = JSON.stringify({ runId: session.runId, lessonId: session.lessonId }).replace(/</g, '\\u003c');
-    const interceptor = '<script>(' + childBootstrap.toString() + ')(' + data + ');<\/script>';
+    const interceptor = '<script>(' + childBootstrap.toString() + ')(' + data + ',' +
+      JSON.stringify({ dictionary: assets.dictionary === true }) + ');<\/script>';
     // Prefix before ALL user scripts; never match a literal <head> inside JS text.
     const doctype = /^\s*<!doctype[^>]*>/i;
     if (doctype.test(code)) return code.replace(doctype, match => match + interceptor);
     return interceptor + code;
+  }
+
+  // Selection is data only. Compilation and execution belong to the child frame.
+  function selectDictionaryExample(term, format) {
+    if (!term || typeof term !== 'object') return null;
+    if (format !== 'vanilla' && typeof term.vueSfcCode === 'string' && term.vueSfcCode.trim()) {
+      return { code: term.vueSfcCode, type: 'vue', legacyClosers: true };
+    }
+    const code = typeof term.vanillaCode === 'string' ? term.vanillaCode : '';
+    const type = term.category === 'html' ? 'html' : term.category === 'css' ? 'css' : 'javascript';
+    return { code, type, legacyClosers: false };
+  }
+
+  function buildDictionaryDocument(example, session, assets) {
+    const json = value => JSON.stringify(value).replace(/</g, '\\u003c');
+    const attr = value => String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+    const style = '<style>body{font-family:system-ui,sans-serif;background:#070d1e;color:#f8fafc;padding:24px;min-height:100vh;margin:0}</style>';
+    const css = typeof assets.previewCssUrl === 'string' ? '<link rel="stylesheet" href="' + attr(assets.previewCssUrl) + '">' : '';
+    if (example.type === 'html' && example.code.trim()) {
+      // Preserve complete HTML documents and their native script semantics.
+      let code = example.code;
+      if (!/^\s*<!doctype|^\s*<html\b/i.test(code)) code = '<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">' + css + style + '</head><body>' + code + '</body></html>';
+      return buildDocument(code, session, { ...assets, dictionary: true });
+    }
+    const interceptor = '<script>(' + childBootstrap.toString() + ')(' +
+      json({ runId: session.runId, lessonId: session.lessonId }) + ',{"dictionary":true,"deferReady":true});<\/script>';
+    const script = url => typeof url === 'string' ? '<script src="' + attr(url) + '"><\/script>' : '';
+    // Classic local scripts work in an opaque sandbox without CORS or same-origin.
+    return '<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">' + interceptor + css + style +
+      '</head><body><div id="vuelexicon-example"></div>' +
+      (example.type === 'vue' || example.type === 'javascript' ? script(assets.vueRuntimeUrl) + script(assets.vueCompilerUrl) : '') +
+      script(assets.dictionaryAdapterUrl) + '<script>if(window.VueLexiconDictionaryPreview){window.VueLexiconDictionaryPreview.run(' + json(example) +
+      ')}else{window.VueLexiconPreviewHost.fail("تعذر تحميل مشغل الأمثلة المحلي. تحقق من ملفات النسخة.")}<\/script></body></html>';
   }
 
   function validateMessage(event, frameWindow, session) {
@@ -130,5 +196,5 @@
       return { type: data.type, payload: { ...p } };
     } catch (_) { return null; }
   }
-  root.VueLexiconRunner = Object.freeze({ buildDocument, validateMessage });
+  root.VueLexiconRunner = Object.freeze({ buildDocument, buildDictionaryDocument, selectDictionaryExample, validateMessage });
 })(window);
