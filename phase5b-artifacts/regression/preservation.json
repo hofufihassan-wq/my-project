@@ -1,0 +1,241 @@
+{
+  "baseline": "3e9abe7b02f384ed86dd3855cca1ddb633e1e46a",
+  "total": 39,
+  "unchanged": 39,
+  "files": [
+    {
+      "file": "_pristine_backup/app.js",
+      "baselineSha256": "dfdb234804cf580e812d74f1ab444a81c2340bae1c9fdf832a91a2814a58ff26",
+      "currentSha256": "dfdb234804cf580e812d74f1ab444a81c2340bae1c9fdf832a91a2814a58ff26",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/build_full_spa.py",
+      "baselineSha256": "3ad2f1518652ff42206237c5c86874b1d3dce588efd54b8091bc5cdb49c8e838",
+      "currentSha256": "3ad2f1518652ff42206237c5c86874b1d3dce588efd54b8091bc5cdb49c8e838",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/build_full_spa_v2.py",
+      "baselineSha256": "a1e22943e67a93778c57730419aa1c982f9b3529c63645bda09bb056982f04b4",
+      "currentSha256": "a1e22943e67a93778c57730419aa1c982f9b3529c63645bda09bb056982f04b4",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/build_full_spa_v3.py",
+      "baselineSha256": "52908fd4080dfcc0b2b4ceffeb76d1b9c524d0ae877dda49064fd5ea9b57607a",
+      "currentSha256": "52908fd4080dfcc0b2b4ceffeb76d1b9c524d0ae877dda49064fd5ea9b57607a",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/compile_index_v3.py",
+      "baselineSha256": "7f270de1d93142fba9e165a6c0896f661f06a40311cbb95985b00b2cae0f1186",
+      "currentSha256": "7f270de1d93142fba9e165a6c0896f661f06a40311cbb95985b00b2cae0f1186",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/index.html",
+      "baselineSha256": "e8f7e5983c8e5e60ee586e4e5cc331dd1883222eb50daf00246a26c299a5b83e",
+      "currentSha256": "e8f7e5983c8e5e60ee586e4e5cc331dd1883222eb50daf00246a26c299a5b83e",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/lexicon-data.js",
+      "baselineSha256": "853d9ad301b03c6bddcdddbcf7a9de4ab80015527fdfbb82fc814b8f46cb856a",
+      "currentSha256": "853d9ad301b03c6bddcdddbcf7a9de4ab80015527fdfbb82fc814b8f46cb856a",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_css.py",
+      "baselineSha256": "ef84af16197aca24f305e36cf0e84ef3f3dd9d7cbffd01f1b8ee797a8182a7ad",
+      "currentSha256": "ef84af16197aca24f305e36cf0e84ef3f3dd9d7cbffd01f1b8ee797a8182a7ad",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_html.py",
+      "baselineSha256": "103f5652b7b97ca81f06670efec98c81a16f6c446ba12cc4e0e12aac3e76ca9e",
+      "currentSha256": "103f5652b7b97ca81f06670efec98c81a16f6c446ba12cc4e0e12aac3e76ca9e",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_js.py",
+      "baselineSha256": "a0e238be90ec8bb4dc4fbe64db320423cf761d77685e2b6393ed5125afb02655",
+      "currentSha256": "a0e238be90ec8bb4dc4fbe64db320423cf761d77685e2b6393ed5125afb02655",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_nuxt.py",
+      "baselineSha256": "542535fcfe11d235c995c0b2353ec1b962343fa39c030dc5b76905889045161f",
+      "currentSha256": "542535fcfe11d235c995c0b2353ec1b962343fa39c030dc5b76905889045161f",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_vue.py",
+      "baselineSha256": "b39b22581651b6166562ea972f1a696d75f586de992dc9154363b781233cfec3",
+      "currentSha256": "b39b22581651b6166562ea972f1a696d75f586de992dc9154363b781233cfec3",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/make_lexicon_data_js.py",
+      "baselineSha256": "5f0d09018dde2d664f7f7d9a378c47358686a5c93fb64d86683d228c8c186947",
+      "currentSha256": "5f0d09018dde2d664f7f7d9a378c47358686a5c93fb64d86683d228c8c186947",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/styles.css",
+      "baselineSha256": "8760ace0d2d10a20b9d1aa7a56e6e5d255525e2b3bfa0be783d8dbbe1cd61397",
+      "currentSha256": "8760ace0d2d10a20b9d1aa7a56e6e5d255525e2b3bfa0be783d8dbbe1cd61397",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/10_quiz_and_footer.html",
+      "baselineSha256": "32acb320ace2a21e590420232aafbe8390cfee77b842e4e5135da0d3d16282e0",
+      "currentSha256": "32acb320ace2a21e590420232aafbe8390cfee77b842e4e5135da0d3d16282e0",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/11_app_script.js",
+      "baselineSha256": "90e1342fe36355d51b3200446dc644de2822ea6fb41fdc450fbfcb47f9c921f1",
+      "currentSha256": "90e1342fe36355d51b3200446dc644de2822ea6fb41fdc450fbfcb47f9c921f1",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/1_head_and_styles.html",
+      "baselineSha256": "40cfa43e3c777fccfea8ff480d41f4711b8a8dad6ab59b5c2f580e1ff94735e0",
+      "currentSha256": "40cfa43e3c777fccfea8ff480d41f4711b8a8dad6ab59b5c2f580e1ff94735e0",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/2_header_and_nav.html",
+      "baselineSha256": "1505ce5e6d26e8490a3ce40aab709b60e9d5729e00c60a582eb88bed8bc2d440",
+      "currentSha256": "1505ce5e6d26e8490a3ce40aab709b60e9d5729e00c60a582eb88bed8bc2d440",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/3_search_and_filters.html",
+      "baselineSha256": "070d989395a54300b65c9d1d2cc018f1a839fc78277478717e1a2446642e6376",
+      "currentSha256": "070d989395a54300b65c9d1d2cc018f1a839fc78277478717e1a2446642e6376",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/4_master_detail_head.html",
+      "baselineSha256": "f458584a8d11846760e003187fd84ce71f3dfec295ed87ed505ea4eaa3818be3",
+      "currentSha256": "f458584a8d11846760e003187fd84ce71f3dfec295ed87ed505ea4eaa3818be3",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/5_css_widgets.html",
+      "baselineSha256": "ea6954cb215872da0e36b492f0e121e8d3d039b85685356b2c0cbc2ad7eb545d",
+      "currentSha256": "ea6954cb215872da0e36b492f0e121e8d3d039b85685356b2c0cbc2ad7eb545d",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/6_html_widgets.html",
+      "baselineSha256": "ba458dfe3f253a57dec676d90871cb864e620ed772f21d697fdd48d664d1a439",
+      "currentSha256": "ba458dfe3f253a57dec676d90871cb864e620ed772f21d697fdd48d664d1a439",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/7_js_vue_nuxt_widgets.html",
+      "baselineSha256": "2a51a2d37d35c35a2ae134a43a54cb331ec662c96cb56195d41add7c010fedca",
+      "currentSha256": "2a51a2d37d35c35a2ae134a43a54cb331ec662c96cb56195d41add7c010fedca",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/8_nuxt_lab.html",
+      "baselineSha256": "13e383b472bbe95b361c2f5719706d3dae8d708718c338472a10a28bd9e21219",
+      "currentSha256": "13e383b472bbe95b361c2f5719706d3dae8d708718c338472a10a28bd9e21219",
+      "unchanged": true
+    },
+    {
+      "file": "_pristine_backup/v3_parts/9_scratchpad_studio.html",
+      "baselineSha256": "55862643472a411e2d46184ad8aad70e695f23131cdd59ea53cf1bd34f481f54",
+      "currentSha256": "55862643472a411e2d46184ad8aad70e695f23131cdd59ea53cf1bd34f481f54",
+      "unchanged": true
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/CHANGELOG.md",
+      "baselineSha256": "0e4393482fba97c809a2463f85e966150546dda9925c6bb71d9de544a2dd7b27",
+      "currentSha256": "0e4393482fba97c809a2463f85e966150546dda9925c6bb71d9de544a2dd7b27",
+      "unchanged": true
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/README.md",
+      "baselineSha256": "8cd8e50014ce435d63acb73855d830d8af5cdb3b7d6157ec6c97cd0c3d4860da",
+      "currentSha256": "8cd8e50014ce435d63acb73855d830d8af5cdb3b7d6157ec6c97cd0c3d4860da",
+      "unchanged": true
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/TEST_REPORT.md",
+      "baselineSha256": "a72b2d951122c3e0da1ec635a1a60d50673e7552c8077c33a59bfc929adcabd8",
+      "currentSha256": "a72b2d951122c3e0da1ec635a1a60d50673e7552c8077c33a59bfc929adcabd8",
+      "unchanged": true
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/app.js",
+      "baselineSha256": "e2db26f464c9e7b6634aea3dcc028ee6570dc8edaf704cfa8f355ad97e74aca7",
+      "currentSha256": "e2db26f464c9e7b6634aea3dcc028ee6570dc8edaf704cfa8f355ad97e74aca7",
+      "unchanged": true
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/index.html",
+      "baselineSha256": "45d8e5cf26698a5df2669886fcff4897d6e40622cd70fec9be3e5b7a77760e75",
+      "currentSha256": "45d8e5cf26698a5df2669886fcff4897d6e40622cd70fec9be3e5b7a77760e75",
+      "unchanged": true
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/lexicon-data.js",
+      "baselineSha256": "4779ccd3a89075a03d40f96d2f30a0818995973e080a454e43bb2d43bce75971",
+      "currentSha256": "4779ccd3a89075a03d40f96d2f30a0818995973e080a454e43bb2d43bce75971",
+      "unchanged": true
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/styles.css",
+      "baselineSha256": "172b56e8d3e0ddcf59f4b0c727e148d3f26976945732e08893254abed75fef87",
+      "currentSha256": "172b56e8d3e0ddcf59f4b0c727e148d3f26976945732e08893254abed75fef87",
+      "unchanged": true
+    },
+    {
+      "file": "dictionary-preview.js",
+      "baselineSha256": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+      "currentSha256": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+      "unchanged": true
+    },
+    {
+      "file": "lexicon-data.js",
+      "baselineSha256": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+      "currentSha256": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+      "unchanged": true
+    },
+    {
+      "file": "practice-curriculum.js",
+      "baselineSha256": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+      "currentSha256": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+      "unchanged": true
+    },
+    {
+      "file": "preview-runner.js",
+      "baselineSha256": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+      "currentSha256": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+      "unchanged": true
+    },
+    {
+      "file": "progress-data.js",
+      "baselineSha256": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+      "currentSha256": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+      "unchanged": true
+    },
+    {
+      "file": "simulator-guides.js",
+      "baselineSha256": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+      "currentSha256": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+      "unchanged": true
+    },
+    {
+      "file": "styles.css",
+      "baselineSha256": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+      "currentSha256": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+      "unchanged": true
+    }
+  ]
+}

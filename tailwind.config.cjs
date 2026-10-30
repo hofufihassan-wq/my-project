@@ -37,4 +37,52 @@ const config = {
       }
     };
 config.content = ["./index.html", "./app.js", "./lexicon-data.js", "./practice-curriculum.js", "./simulator-guides.js"];
+// Keep the existing preview utility surface available to previously saved drafts.
+// These classes left application chrome in 5B but remain supported inside previews.
+config.safelist = [
+  "-bottom-1",
+  "-bottom-40",
+  "-left-40",
+  "-right-1",
+  "-right-40",
+  "-top-40",
+  "-translate-x-1/2",
+  "-z-10",
+  "bg-[#020420]/75",
+  "bg-[#064E3B]/25",
+  "bg-[#081022]/90",
+  "bg-emerald-950",
+  "bg-gradient-to-b",
+  "blur-3xl",
+  "blur-[120px]",
+  "blur-[130px]",
+  "border-[#00DC82]/70",
+  "border-[#020420]",
+  "border-amber-400/30",
+  "flex-shrink-0",
+  "from-[#00DC82]/15",
+  "from-[#064E3B]",
+  "gap-3.5",
+  "h-11",
+  "h-[360px]",
+  "hover:border-amber-400",
+  "hover:scale-105",
+  "left-1/2",
+  "lg:flex",
+  "lg:hidden",
+  "min-h-20",
+  "opacity-80",
+  "sm:block",
+  "sm:flex-nowrap",
+  "sm:h-20",
+  "sm:inline",
+  "sm:py-0",
+  "sm:text-2xl",
+  "to-[#020420]",
+  "to-transparent",
+  "via-[#00DC82]/5",
+  "w-11",
+  "w-96",
+  "w-[1100px]"
+];
 module.exports = config;

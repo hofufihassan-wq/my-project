@@ -376,7 +376,7 @@ async function main() {
   });
   await test('no application page errors in simulator checks', async () => assert.deepEqual(pageErrors, []));
   const passed = results.filter(r => r.passed).length;
-  const out = path.join(__dirname, 'simulator-artifacts');
+  const out = process.env.VLP_TEST_OUTPUT || path.join(__dirname, 'simulator-artifacts');
   fs.mkdirSync(out, { recursive: true });
   fs.writeFileSync(path.join(out, 'simulator-browser-report.json'), JSON.stringify({ runtime: 'Chromium + actual Vue 3.4.21 test-only CDN fixture', timestamp: new Date().toISOString(), passed, total: results.length, results }, null, 2) + '\n');
   console.log(`${passed}/${results.length} simulator browser checks passed`);

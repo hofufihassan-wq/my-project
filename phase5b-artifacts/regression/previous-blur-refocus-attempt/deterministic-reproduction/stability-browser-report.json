@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-10-30T10:52:19.971Z",
+  "availability": [
+    {
+      "engine": "chromium",
+      "available": true,
+      "version": "154.0.8037.57"
+    },
+    {
+      "engine": "firefox",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/firefox-1497/firefox/firefox\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "engine": "webkit",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    }
+  ],
+  "filter": "changing query resets",
+  "passed": 0,
+  "total": 4,
+  "networkEvidence": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    }
+  ],
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "changing query resets stale keyboard suggestion selection",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n'WeakMap' !== ''\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "changing query resets stale keyboard suggestion selection",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n'WeakMap' !== ''\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "changing query resets stale keyboard suggestion selection",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n'WeakMap' !== ''\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "changing query resets stale keyboard suggestion selection",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n'WeakMap' !== ''\n"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const http = require('node:http');
 const assert = require('node:assert/strict');
 const engines = require(process.env.PLAYWRIGHT_PATH || '/opt/codex/cua_node/lib/node_modules/playwright-core');
-const output = 'phase4-artifacts';
+const output = process.env.VLP_TEST_OUTPUT || 'phase4-artifacts';
 const ctx={window:{}};
 vm.runInNewContext(fs.readFileSync('practice-curriculum.js','utf8'),ctx);
 const lessons=ctx.window.PRACTICE_CURRICULUM.lessons;
@@ -49,6 +49,9 @@ async function main(){
       const base=origin+(width===768?'/nested/app/':'/');
       await page.goto(base,{waitUntil:'networkidle'});
       await page.waitForFunction(()=>window.vueLexiconApp?.rawLexiconData.length===180);
+        // 5B opens the dashboard. Enter the dictionary explicitly for these legacy scenarios.
+        await page.evaluate(() => window.vueLexiconApp.setAppMode('lexicon'));
+        await page.waitForTimeout(100);
       const app=(fn,arg)=>page.evaluate(({s,arg})=>(new Function('a','arg',`return (${s})(a,arg)`))(window.vueLexiconApp,arg),{s:fn.toString(),arg});
       const stored=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('vuelexicon_practice_progress')));
       async function test(title,fn){if(process.env.PHASE4_FILTER&&!title.includes(process.env.PHASE4_FILTER))return;try{await fn();results.push({engine:name,width,title,passed:true});console.log('PASS',name,width,title);}catch(error){results.push({engine:name,width,title,passed:false,error:error.message});console.error('FAIL',name,width,title,error.message);}}
@@ -103,9 +106,14 @@ async function main(){
         assert(await app(a=>a.filteredTermsList.some(t=>t.id===a.selectedTerm?.id)));
       });
       await test('changing query resets stale keyboard suggestion selection',async()=>{
-        await app(a=>a.resetFilters());await search.evaluate(e=>e.blur());await search.fill('a');await search.press('ArrowUp');
+        await app(a=>a.resetFilters());await search.focus();await search.evaluate(e=>e.blur());await search.fill('a');await search.press('ArrowUp');
         assert((await app(a=>a.highlightedDropdownIndex))>0);
-        await search.fill('WeakMap');await search.press('Enter');
+        await search.fill('WeakMap');
+        // A delayed blur callback must not close suggestions after the input regains focus.
+        await page.waitForTimeout(300);
+        assert.equal(await search.evaluate(e=>document.activeElement===e),true);
+        assert.equal(await app(a=>a.searchFocused),true);
+        await search.press('Enter');
         assert.equal(await app(a=>a.searchQuery),'');
         assert.equal(await app(a=>a.selectedTerm.term),'WeakMap / WeakSet');
       });
@@ -155,7 +163,7 @@ async function main(){
         await page.evaluate(()=>document.fonts.ready);
         assert.equal(await page.locator('html').getAttribute('dir'),'rtl');
         assert(await page.evaluate(()=>document.fonts.check('400 14px Alexandria','مرحبا')));
-        assert.equal(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(2, 4, 32)');
+        assert.equal(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(3, 12, 14)');
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
         await app(a=>{a.openSimulator();a.backToTracks();});assert.equal(await page.locator('[data-track]').count(),5);
         await page.locator('[data-track="vue"]').click();await ready();

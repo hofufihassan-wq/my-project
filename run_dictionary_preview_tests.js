@@ -6,6 +6,7 @@ const vm = require('node:vm');
 const http = require('node:http');
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || '/opt/codex/cua_node/lib/node_modules/playwright-core');
 const results = [];
+const output = process.env.VLP_TEST_OUTPUT || 'sfc-preview-artifacts';
 const data = {window:{}};
 vm.runInNewContext(fs.readFileSync('practice-curriculum.js', 'utf8'), data);
 const seed = Object.fromEntries(data.window.PRACTICE_CURRICULUM.lessons.map(l => [l.id, {
@@ -226,8 +227,8 @@ async function main() {
     await context.close();
   }
   const passed=results.filter(r=>r.passed).length;
-  fs.mkdirSync('sfc-preview-artifacts',{recursive:true});
-  fs.writeFileSync('sfc-preview-artifacts/browser-report.json',JSON.stringify({timestamp:new Date().toISOString(),runtime:'Real Chromium, local Vue 3.4.21 and official compiler-sfc; root and nested/app; external requests blocked; no library substitutes',passed,total:results.length,results},null,2)+'\n');
+  fs.mkdirSync(output,{recursive:true});
+  fs.writeFileSync(path.join(output, 'browser-report.json'),JSON.stringify({timestamp:new Date().toISOString(),runtime:'Real Chromium, local Vue 3.4.21 and official compiler-sfc; root and nested/app; external requests blocked; no library substitutes',passed,total:results.length,results},null,2)+'\n');
   console.log(`${passed}/${results.length} dictionary preview checks passed`);
   if(passed!==results.length)process.exitCode=1;
 }
