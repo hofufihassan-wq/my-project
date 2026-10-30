@@ -221,7 +221,41 @@ const app = createApp({
     // 2. Navigation & View State
     // ==========================================
     // Visible workspaces: 'lexicon' | 'practice' (the practical simulator)
-    const appMode = ref('lexicon');
+    const appMode = ref('home');
+    const practiceSurface = ref('simulator');
+    // Theme selection is session-only in 5B; existing persisted records are untouched.
+    const theme = ref('petroleum');
+    // Vue compiles the mount element's contents; sync attributes on the mount itself.
+    watch([theme, appMode, practiceSurface], ([appearance, mode, surface]) => {
+      const root = document.getElementById('app');
+      root?.setAttribute('data-theme', appearance);
+      root?.setAttribute('data-workspace', mode === 'practice' && surface === 'training' ? 'training' : mode);
+    }, { immediate: true, flush: 'sync' });
+    const foundationSection = ref('projects');
+    const foundationSections = [
+      { id: 'projects', title: 'المشاريع', icon: 'folder', description: 'مساحة مشاريعك وروابطها. إدارة المشاريع وحفظها ضمن دفعة التنظيم القادمة.' },
+      { id: 'kanban', title: 'لوحة المهام', icon: 'grid', description: 'أساس بصري للوحة Kanban. إنشاء المهام وربطها بالمشاريع لم يُنفذ بعد.' },
+      { id: 'notes', title: 'الملاحظات', icon: 'note', description: 'مساحة الملاحظات المخططة. المحرر والحفظ والاسترجاع ضمن دفعة التنظيم القادمة.' },
+      { id: 'calendar', title: 'التقويم', icon: 'calendar', description: 'تنظيم أنشطة التعلم في الدفعة القادمة. لا توجد أحداث أو مواعيد محفوظة حاليًا.' },
+      { id: 'explain', title: 'شرح الأكواد', icon: 'code', description: 'الشرح العام سطرًا بسطر لم يُنفذ بعد. شروح المصطلحات ومسرح التنفيذ التعليمي متاحان داخل القاموس.' }
+    ];
+    const activeFoundation = computed(() => foundationSections.find(s => s.id === foundationSection.value));
+    function openFoundation(id) {
+      if (!foundationSections.some(s => s.id === id)) return;
+      foundationSection.value = id;
+      setAppMode('foundation');
+    }
+    function setTheme(value) {
+      if (['petroleum', 'light', 'purple'].includes(value)) theme.value = value;
+    }
+    function openVisualSimulator() {
+      setAppMode('practice');
+      if (selectedTrack.value === null) selectLesson(selectedLessonId.value, true);
+    }
+    function openTraining() {
+      setAppMode('training');
+      backToTracks();
+    }
     const activeCategory = ref('all');
     const selectedLetter = ref('ALL');
     const selectedTerm = ref(rawLexiconData.value[0] || null);
@@ -610,7 +644,8 @@ const app = createApp({
 
     function handleSearchBlur() {
       setTimeout(() => {
-        searchFocused.value = false;
+        // A delayed blur must not close suggestions after the field is refocused.
+        if (document.activeElement !== searchInputRef.value) searchFocused.value = false;
       }, 250);
     }
 
@@ -677,7 +712,13 @@ const app = createApp({
     }
 
     function setAppMode(mode) {
-      appMode.value = mode === 'quiz' ? 'practice' : mode;
+      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation'].includes(mode)) return;
+      if (mode === 'training' || mode === 'practice' || mode === 'quiz') {
+        const surface = mode === 'training' ? 'training' : 'simulator';
+        if (practiceSurface.value !== surface) stopPracticeExecution();
+        practiceSurface.value = surface;
+      }
+      appMode.value = ['quiz', 'training'].includes(mode) ? 'practice' : mode;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -1803,6 +1844,21 @@ const app = createApp({
       if (previous === 'practice' && mode !== 'practice') stopPracticeExecution();
     }, { flush: 'sync' });
 
+    // Dashboard values are derived from actual local records, never concept-art stats.
+    const dashboardStats = computed(() => ({
+      mastered: rawLexiconData.value.filter(t => termMastery.value[t.id] === 'mastered').length,
+      learning: rawLexiconData.value.filter(t => termMastery.value[t.id] === 'learning').length,
+      drafts: practiceLessons.value.filter(l => typeof practiceProgress.value[l.id]?.codeDraft === 'string').length,
+      totalLessons: practiceLessons.value.length
+    }));
+    const dashboardMasteryPercent = computed(() => rawLexiconData.value.length ? Math.round(dashboardStats.value.mastered / rawLexiconData.value.length * 100) : 0);
+    const dictionaryRelated = computed(() => {
+      if (!selectedTerm.value) return [];
+      return rawLexiconData.value.filter(t => t.id !== selectedTerm.value.id &&
+        selectedTerm.value.relatedTerms.some(name => t.term.toLowerCase() === String(name).toLowerCase())).slice(0, 5);
+    });
+    function openDashboardTerm(term) { setAppMode('lexicon'); selectTerm(term); }
+
     // ==========================================
     // 17. Lifecycle & Listeners Cleanup (P0 Safe)
     // ==========================================
@@ -1851,6 +1907,9 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
+      theme, setTheme, practiceSurface, openVisualSimulator, openTraining,
+      foundationSections, activeFoundation, openFoundation,
+      dashboardStats, dashboardMasteryPercent, dictionaryRelated, openDashboardTerm,
       // Core Lexicon State
       rawLexiconData,
       appMode,

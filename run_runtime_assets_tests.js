@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const http = require('node:http');
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || '/opt/codex/cua_node/lib/node_modules/playwright-core');
+const output = process.env.VLP_TEST_OUTPUT || 'runtime-assets-artifacts';
 const results = [];
 let browser;
 const server = http.createServer((req, res) => {
@@ -52,6 +53,9 @@ async function main() {
       await test(`cold context ${round+1}, load ${load+1}: local assets mount with matching fonts/styles and no network`, async () => {
         if(load===0) await page.goto(base,{waitUntil:'networkidle'}); else await page.reload({waitUntil:'networkidle'});
         await page.waitForFunction(() => window.vueLexiconApp?.rawLexiconData.length===180);
+        // 5B opens the dashboard. Enter the dictionary explicitly for these legacy scenarios.
+        await page.evaluate(() => window.vueLexiconApp.setAppMode('lexicon'));
+        await page.waitForTimeout(100);
         await page.evaluate(() => document.fonts.ready);
         assert.equal(await page.evaluate(() => Vue.version),'3.4.21');
         assert.equal(await page.evaluate(() => hljs.versionString),'11.9.0');
@@ -64,7 +68,7 @@ async function main() {
           arabic:document.fonts.check('400 14px Alexandria','مرحبا'),
           mono:document.fonts.check('400 14px "JetBrains Mono"','const a = 1;')
         }));
-        assert.equal(style.body,'rgb(2, 4, 32)');assert.match(style.family,/Alexandria/);
+        assert.equal(style.body,'rgb(3, 12, 14)');assert.match(style.family,/Alexandria/);
         assert(style.logo>0 && style.logo<100);assert.equal(style.overflow,false);
         assert(style.arabic && style.mono);assert(fontRequests.length>=2);
         if(round===0 && load===0) coldStyles=style;
@@ -116,15 +120,15 @@ async function main() {
       });
     }
     if(round<2) {
-      fs.mkdirSync('runtime-assets-artifacts/screenshots',{recursive:true});
+      fs.mkdirSync(path.join(output, 'screenshots'),{recursive:true});
       await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
-      await page.screenshot({path:`runtime-assets-artifacts/screenshots/${round===0?'desktop':'mobile'}.png`});
+      await page.screenshot({path:path.join(output, 'screenshots', `${round===0?'desktop':'mobile'}.png`)});
     }
     await context.close();
   }
   const passed=results.filter(r=>r.passed).length;
-  fs.mkdirSync('runtime-assets-artifacts',{recursive:true});
-  fs.writeFileSync('runtime-assets-artifacts/browser-report.json',JSON.stringify({timestamp:new Date().toISOString(),runtime:'Real Chromium, actual local Vue/CSS/fonts/highlight; external requests blocked; no substitutes',passed,total:results.length,results},null,2)+'\n');
+  fs.mkdirSync(output,{recursive:true});
+  fs.writeFileSync(path.join(output, 'browser-report.json'),JSON.stringify({timestamp:new Date().toISOString(),runtime:'Real Chromium, actual local Vue/CSS/fonts/highlight; external requests blocked; no substitutes',passed,total:results.length,results},null,2)+'\n');
   console.log(`${passed}/${results.length} actual runtime checks passed`);
   if(passed!==results.length) process.exitCode=1;
 }
