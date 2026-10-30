@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="identity.css">
   <link rel="stylesheet" href="dictionary-correction.css">
   <link rel="stylesheet" href="simulator-correction.css">
+  <link rel="stylesheet" href="simulator-reference.css">
 </head>
 <body class="bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased">
 
@@ -1703,7 +1704,147 @@
   <!-- ==================================================== -->
   <!-- 4. HANDS-ON PRACTICE WORKSPACE (وضع التدريب العملي)   -->
   <!-- ==================================================== -->
-  <main v-if="appMode === 'practice'" class="simulator-workspace flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full space-y-6">
+  <main v-if="appMode === 'practice' && practiceSurface === 'simulator'" class="tech-simulator" :data-motion="techMotion ? 'on' : 'off'" :data-focus="techFocusPanel">
+    <header class="tech-topbar" dir="ltr">
+      <button class="tech-logo" @click="setAppMode('home')" aria-label="VueLexicon — الرئيسية"><span>V</span><strong>VueLexicon</strong></button>
+      <nav aria-label="مساحات الموقع"><button @click="setAppMode('home')">الرئيسية</button><button @click="setAppMode('lexicon')">القاموس</button><button @click="openTraining">التدريب العملي</button><button class="is-active" aria-current="page">المحاكي</button><button @click="openFoundation('projects')">المشاريع</button></nav>
+      <button class="tech-search" @click="setAppMode('lexicon')"><svg><use href="#i-book"/></svg><span>ابحث عن مفهوم في القاموس...</span><kbd>⌘ K</kbd></button>
+      <div class="tech-top-tools"><button @click="techMotion = !techMotion" :aria-pressed="techMotion" title="تفعيل أو إيقاف الحركة الزخرفية">✧</button><button @click="showProgressModal = true" title="بياناتي والنسخ الاحتياطي"><svg><use href="#i-note"/></svg></button><button @click="setAppMode('settings')" title="الإعدادات"><svg><use href="#i-settings"/></svg></button><span class="tech-avatar" aria-label="مساحة تعلم محلية">V</span></div>
+    </header>
+    <div class="tech-page-layout" dir="ltr">
+      <aside class="tech-sidebar" dir="rtl">
+        <section class="tech-panel tech-track-card"><div class="tech-track-title"><span class="tech-language-mark">{{ currentLesson.track === 'js' ? 'JS' : currentLesson.track.toUpperCase() }}</span><strong>{{ currentLesson.trackName }}</strong><span class="tech-mini-orbit">✧</span></div><p>تجارب مفتوحة · بلا درجات</p><div class="tech-track-light" aria-hidden="true"><i></i></div>
+          <ol class="tech-lesson-list"><li v-for="(lesson, index) in practiceLessons.filter(l => l.track === currentLesson.track)" :key="lesson.id"><button @click="selectLesson(lesson.id, true); techEditorView = 'draft'" :class="{ 'is-active': currentLesson.id === lesson.id }"><span class="tech-lesson-index">{{ index + 1 }}</span><span><strong>{{ lesson.title }}</strong><small>{{ lesson.code }}</small></span><span class="tech-lesson-dot">{{ typeof practiceProgress[lesson.id]?.codeDraft === 'string' ? '✎' : '○' }}</span></button></li></ol>
+          <div class="tech-sidebar-label">مسارات التجربة</div><button v-for="track in practiceTracks" :key="track.id" class="tech-track-link" :class="{ 'is-active': currentLesson.track === track.id }" @click="selectTrack(track.id, true); techEditorView = 'draft'"><span :style="{ color: track.color }">{{ track.id.toUpperCase() }}</span><strong>{{ track.name }}</strong><small>{{ practiceLessons.filter(l => l.track === track.id).length }}</small></button>
+        </section>
+        <section class="tech-panel tech-resources"><h3><svg><use href="#i-folder"/></svg>أدوات التجربة</h3><button @click="simulatorReferenceVisible = !simulatorReferenceVisible">▧ <span>المثال المرجعي</span><span>›</span></button><button @click="showProgressModal = true">▤ <span>بياناتي ومسوداتي</span><span>›</span></button><button @click="showShortcutsModal = true">⌘ <span>اختصارات المحرر</span><span>›</span></button><button v-if="currentLesson.hasTimeline" @click="openLessonTimeline">◇ <span>المحاكاة التعليمية للدرس</span><span>›</span></button></section>
+        <details class="tech-panel tech-guide"><summary>دليل التجربة <span>⌄</span></summary><h4>{{ currentLesson.title }}</h4><p>{{ currentLesson.goal }}</p><p>{{ currentLesson.brief }}</p><template v-if="simulatorGuide"><h4>غيّر، شغّل، لاحظ</h4><p>{{ simulatorGuide.change }}</p><p>{{ simulatorGuide.observe }}</p><p>{{ simulatorGuide.why }}</p></template><button @click="revealHint">طلب تلميح</button><p v-if="revealedHintsCount > 0">{{ currentLesson.hints[0] }}</p><p v-if="revealedHintsCount > 1">{{ currentLesson.hints[1] }}</p></details>
+      </aside>
+      <div class="tech-workspace">
+        <div class="tech-breadcrumb" dir="rtl"><span>التدريب العملي</span><b>‹</b><span>{{ currentLesson.trackName }}</span><b>‹</b><span>{{ currentLesson.level }}</span><b>‹</b><strong>{{ currentLesson.title }}</strong></div>
+        <div class="tech-actionbar" dir="rtl"><button data-testid="tech-run" class="tech-primary" @click="techRunDraft"><svg viewBox="0 0 20 20"><path d="m5 3 12 7-12 7Z"/></svg>تشغيل الكود</button><button data-testid="tech-stop" class="tech-stop" @click="stopPracticeExecution" title="إيقاف المعاينة وإبطال الجلسة">■</button><button @click="resetLessonCode">↻ <span>إعادة تعيين</span></button><button @click="techToggleFocus('editor')" :aria-pressed="techFocusPanel === 'editor'">⛶ <span>وضع التركيز</span></button><label class="tech-auto"><input type="checkbox" v-model="practiceAutoRun">تشغيل تلقائي</label><div class="tech-action-spacer"></div><button data-testid="tech-reference-run" class="tech-reference-action" @click="techRunReference">▷ تشغيل المثال المرجعي</button><button @click="techMotion = !techMotion" :aria-pressed="techMotion" class="tech-effects">✧ <span>{{ techMotion ? 'حركة الإضاءات' : 'إضاءات ثابتة' }}</span></button></div>
+        <div class="tech-main-grid">
+          <section class="tech-panel tech-editor-panel" data-testid="tech-editor-panel">
+            <div class="tech-panel-bar tech-editor-bar"><div class="tech-file-tab"><span>◇</span><strong>index.html</strong><i></i></div><div class="tech-editor-tools"><button @click="copyCode(techEditorCode)" title="نسخ الكود المعروض"><svg><use href="#i-note"/></svg></button><button @click="techJumpToScript" title="انتقل إلى كتلة JavaScript">&lt;/&gt;</button><button @click="techToggleFocus('editor')" title="توسيع المحرر">⛶</button></div></div>
+            <div class="tech-source-switch" dir="rtl"><button @click="techEditorView = 'draft'" :class="{ active: techEditorView === 'draft' }">مسودتي</button><button @click="techEditorView = 'submitted'" :class="{ active: techEditorView === 'submitted' }">مصدر آخر تشغيل</button><span>{{ techEditorView === 'draft' ? 'تحرير مباشر' : 'للقراءة فقط' }}</span></div>
+            <div class="tech-code-surface" dir="ltr">
+              <div class="tech-line-numbers" aria-hidden="true"><span v-for="n in techEditorCode.split('\n').length" :key="n">{{ n }}</span></div>
+              <div class="tech-code-layer"><pre v-show="techEditorView === 'draft'" data-testid="tech-highlight" class="tech-highlight" aria-hidden="true"><code v-html="techHighlightedCode + '\n'"></code></pre><textarea v-show="techEditorView === 'draft'" data-testid="tech-editor" v-model="practiceCode" @input="handleEditorInput" @keydown="handleEditorKeydown" @scroll="techSyncEditorScroll" class="editor-textarea tech-input" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="محرر كود التجربة"></textarea><pre v-show="techEditorView === 'submitted'" class="tech-reference-code" @scroll="techSyncEditorScroll" tabindex="0" aria-label="مصدر آخر تشغيل للقراءة فقط"><code v-html="techHighlightedCode"></code></pre>
+                <div v-if="autocompleteVisible && autocompleteSuggestions.length && techEditorView === 'draft'" class="practice-autocomplete-popover tech-autocomplete"><button v-for="(suggestion, index) in autocompleteSuggestions" :key="suggestion.label" @click="acceptAutocompleteSuggestion(suggestion)" class="practice-autocomplete-item" :class="{active:selectedAutocompleteIndex === index}">{{ suggestion.label }} <small>{{ suggestion.kind }}</small></button></div>
+              </div>
+            </div>
+            <div class="tech-editor-status"><span><i></i>{{ techEditorView === 'draft' ? 'مسودة الدرس' : activeRun?.kind === 'reference' ? 'المثال المرجعي · المسودة محفوظة' : 'نسخة مرسلة · المسودة محفوظة' }}</span><span>{{ techEditorView === 'draft' ? 'Ln ' + cursorLine : 'Read only' }} · UTF-8</span></div>
+          </section>
+          <section class="tech-panel tech-console-panel" data-testid="tech-console" dir="ltr"><div class="tech-panel-bar"><h3><svg><use href="#i-monitor"/></svg>Console <small>{{ practiceLogs.length }}</small></h3><div><button @click="clearPracticeLogs">مسح</button><button @click="copyCode(practiceLogs.map(l => l.msg).join('\n'))" title="نسخ السجل">▢</button></div></div><div class="tech-console-lines" tabindex="0" aria-label="سجل التشغيل الفعلي"><p v-for="(log, index) in practiceLogs" :key="index" :data-level="log.type"><span class="tech-console-prompt">›</span><span>{{ log.msg }}</span><time>{{ log.time }}</time></p><p v-if="!practiceLogs.length" class="tech-empty-log">بانتظار مخرجات التشغيل...</p></div></section>
+          <section class="tech-panel tech-flow-panel" data-testid="tech-flow-canvas" dir="rtl"><h3 class="tech-section-title"><span>♧</span>من المصدر إلى المعاينة</h3><div class="tech-flow-badge">حالة عامة للمشغّل · ليست تتبعًا للأسطر</div>
+            <!-- Place inside a position:relative .tech-flow-panel, behind its real status cards.
+     Every path and pulse below is decorative: it is not bound to execution data. -->
+<div class="tech-flow-art" aria-hidden="true">
+  <svg viewBox="0 0 340 560" preserveAspectRatio="none" focusable="false">
+    <defs>
+      <pattern id="tech-flow-grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#166490" stroke-opacity=".24" stroke-width=".65"/></pattern>
+      <radialGradient id="tech-flow-halo"><stop stop-color="#087fc6" stop-opacity=".24"/><stop offset="1" stop-color="#03131f" stop-opacity="0"/></radialGradient>
+      <linearGradient id="tech-flow-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123977"/><stop offset=".45" stop-color="#1399f0"/><stop offset=".7" stop-color="#79f1ff"/><stop offset="1" stop-color="#1374c4"/></linearGradient>
+      <linearGradient id="tech-flow-mint" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b86c2"/><stop offset="1" stop-color="#4cffe0"/></linearGradient>
+      <linearGradient id="tech-flow-coral" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#268bd3"/><stop offset="1" stop-color="#ff456f"/></linearGradient>
+      <filter id="tech-flow-glow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="3"/></filter>
+    </defs>
+    <rect width="340" height="560" fill="url(#tech-flow-grid)"/>
+    <ellipse cx="172" cy="280" rx="210" ry="270" fill="url(#tech-flow-halo)"/>
+    <g class="tech-flow-shadow" fill="none" stroke="url(#tech-flow-blue)" stroke-width="3.8" filter="url(#tech-flow-glow)" opacity=".7">
+      <path d="M-10 120C86 120 60 221 126 221S289 215 296 116 319 62 340 0"/>
+      <path d="M-20 234C96 234 64 330 134 330S252 312 280 240 337 229 356 254"/>
+      <path d="M-10 410C80 410 52 359 123 359S228 440 303 434 342 494 356 509"/>
+      <path d="M170 26V480"/>
+    </g>
+    <g class="tech-flow-wires" fill="none" stroke="url(#tech-flow-blue)" stroke-width="1.1">
+      <path d="M-10 105C104 105 51 198 132 198S267 186 281 105 313 45 345 0"/>
+      <path d="M-10 113C96 113 61 210 135 210S278 205 289 112 317 56 345 0"/>
+      <path d="M-10 120C86 120 60 221 126 221S289 215 296 116 319 62 340 0"/>
+      <path d="M-10 128C78 128 46 232 121 232S302 225 307 125 328 80 349 65"/>
+      <path d="M-10 207C65 207 33 297 126 297S242 275 270 218 324 179 350 164"/>
+      <path d="M-20 222C81 222 54 311 130 311S249 298 275 230 330 215 355 236"/>
+      <path d="M-20 234C96 234 64 330 134 330S252 312 280 240 337 229 356 254"/>
+      <path d="M-10 246C100 246 72 342 138 342S262 329 294 256 338 247 353 275"/>
+      <path d="M-10 384C72 384 58 336 126 336S246 410 302 403 344 452 350 475"/>
+      <path d="M-10 397C78 397 54 348 127 348S240 424 304 419 344 473 350 494"/>
+      <path d="M-10 410C80 410 52 359 123 359S228 440 303 434 342 494 356 509"/>
+      <path d="M-10 424C82 424 46 373 123 373S219 454 294 451 332 513 350 532"/>
+    </g>
+    <g class="tech-flow-travel" fill="none" stroke="#92f4ff" stroke-width="1.6" stroke-dasharray="2 84 8 170" opacity=".85">
+      <path d="M-10 120C86 120 60 221 126 221S289 215 296 116 319 62 340 0"/>
+      <path d="M-20 234C96 234 64 330 134 330S252 312 280 240 337 229 356 254"/>
+      <path d="M-10 410C80 410 52 359 123 359S228 440 303 434 342 494 356 509"/>
+    </g>
+    <g fill="none" stroke="#1ea6ee" stroke-width="1" opacity=".68"><path d="M170 21V491"/><path d="M163 21V491"/><path d="M177 21V491"/></g>
+    <path class="tech-flow-spine" d="M170 21V491" fill="none" stroke="#7aefff" stroke-width="2" stroke-dasharray="14 91"/>
+    <g class="tech-flow-forks" fill="none" stroke-width="1.6">
+      <path d="M170 430V456Q170 475 145 475H114Q88 475 88 503V541" stroke="url(#tech-flow-mint)"/>
+      <path d="M170 430V456Q170 475 195 475H226Q252 475 252 503V541" stroke="url(#tech-flow-coral)"/>
+      <path d="M170 430V456Q170 475 145 475H114Q88 475 88 503V541" stroke="#42ffda" opacity=".5" filter="url(#tech-flow-glow)" stroke-width="4"/>
+      <path d="M170 430V456Q170 475 195 475H226Q252 475 252 503V541" stroke="#ff5078" opacity=".5" filter="url(#tech-flow-glow)" stroke-width="4"/>
+    </g>
+    <g class="tech-flow-stars" fill="#54dfff">
+      <circle cx="18" cy="122" r="2"/><circle cx="48" cy="145" r="2.7"/><circle cx="72" cy="190" r="2"/><circle cx="286" cy="157" r="2.6"/><circle cx="298" cy="104" r="2"/>
+      <circle cx="309" cy="63" r="2.5"/><circle cx="322" cy="33" r="1.6"/><circle cx="17" cy="226" r="1.7"/><circle cx="49" cy="261" r="1.8"/><circle cx="73" cy="301" r="2.4"/>
+      <circle cx="287" cy="235" r="2"/><circle cx="311" cy="220" r="2.4"/><circle cx="329" cy="243" r="1.7"/><circle cx="20" cy="400" r="2.2"/><circle cx="60" cy="378" r="1.6"/>
+      <circle cx="247" cy="424" r="1.8"/><circle cx="307" cy="437" r="2.2"/><circle cx="325" cy="463" r="1.9"/><circle cx="37" cy="78" r=".9"/><circle cx="271" cy="389" r="1"/>
+      <circle cx="114" cy="148" r=".9"/><circle cx="224" cy="45" r="1"/><circle cx="319" cy="343" r="1"/><circle cx="60" cy="462" r="1"/><circle cx="210" cy="530" r=".9"/>
+    </g>
+    <g class="tech-flow-sparks" fill="#c7ffff" filter="url(#tech-flow-glow)"><circle cx="48" cy="145" r="4"/><circle cx="286" cy="157" r="4"/><circle cx="73" cy="301" r="4"/><circle cx="311" cy="220" r="3.5"/><circle cx="325" cy="463" r="4"/></g>
+    <g opacity=".75"><circle cx="88" cy="541" r="3" fill="#59ffe3"/><circle cx="252" cy="541" r="3" fill="#ff6b90"/><path d="m83 533 5 7 5-7" fill="none" stroke="#8bffe5" stroke-width="1.4"/><path d="m247 533 5 7 5-7" fill="none" stroke="#ff92a9" stroke-width="1.4"/></g>
+  </svg>
+</div>
+<span class="tech-decoration-note">زخارف اتصال مستقلة عن التنفيذ</span>
+
+<!-- Independent wide lower-strip decoration. Keep actual state labels outside it. -->
+
+            <div class="tech-flow-nodes"><article v-for="(stage,index) in simulatorStages" :key="stage.id" class="tech-flow-node" :data-state="stage.state"><span class="tech-node-symbol"><svg><use :href="index === 0 ? '#i-note' : index === 1 ? '#i-code' : index === 2 ? '#i-settings' : '#i-grid'"/></svg></span><div><strong>{{ stage.label }}</strong><small>{{ stage.detail }}</small></div><i>{{ stage.state === 'received' ? '●' : stage.state === 'error' ? '!' : '○' }}</i></article></div>
+            <div class="tech-flow-endpoints"><div :data-received="!!activeRun?.previewReady"><span>◉</span><strong>إشعار الإطار</strong><small>{{ activeRun?.previewReady ? 'وصل إشعار الجاهزية' : 'لم يصل إشعار بعد' }}</small></div><div :data-received="!!simulatorObservation"><span>◇</span><strong>لقطة الصفحة</strong><small>{{ simulatorObservation ? 'مطابقة لآخر مصدر' : 'لا توجد لقطة مطابقة' }}</small></div></div>
+          </section>
+          <section class="tech-panel tech-explain-card" dir="rtl"><h3><span>✧</span>عن هذه التجربة</h3><p>{{ currentLesson.brief }}</p><div><span>{{ currentLesson.code }} · {{ currentLesson.trackName }}</span><button @click="revealHint">عرض تلميح ⟵</button></div><p v-if="revealedHintsCount > 0" class="tech-inline-hint">{{ currentLesson.hints[0] }}</p></section>
+          <div class="tech-preview-stack">
+            <section class="tech-panel tech-preview-panel"><div class="tech-panel-bar"><h3><svg><use href="#i-monitor"/></svg>المعاينة الحية</h3><div class="tech-preview-tools"><button @click="techToggleFocus('preview')" :aria-pressed="techFocusPanel === 'preview'" title="توسيع المعاينة">▣</button><button @click="techToggleFocus('preview')" title="وضع التركيز للمعاينة">⛶</button></div></div>
+              <div class="tech-preview-tabs" role="tablist" aria-label="أدوات المعاينة"><button v-for="tab in [{id:'result',label:'النتيجة'},{id:'html',label:'HTML'},{id:'css',label:'CSS'},{id:'console',label:'Console'}]" :key="tab.id" :data-testid="'tech-preview-tab-' + tab.id" role="tab" :aria-selected="techPreviewTab === tab.id" @click="techPreviewTab = tab.id">{{ tab.label }}</button></div>
+              <div class="tech-preview-body"><div v-show="techPreviewTab === 'result'" class="tech-live-surface"><div class="tech-preview-ribbons" aria-hidden="true"></div><div class="tech-iframe-mount"><iframe data-testid="tech-live-preview" ref="practiceIframeRef" :key="practiceIframeKey" :srcdoc="practiceIframeDoc" sandbox="allow-scripts" title="معاينة كود التمرين"></iframe></div></div><section v-show="techPreviewTab === 'html'" class="tech-source-inspector"><h4>مصدر آخر نسخة أُرسلت</h4><p>عرض المصدر، وليس شجرة DOM الحية.</p><pre>{{ submittedPracticeCode ?? 'لم يُرسل كود بعد.' }}</pre></section><section v-show="techPreviewTab === 'css'" class="tech-source-inspector"><h4>كتل CSS داخل المصدر المرسل</h4><p>قراءة فقط، دون تعديل تنسيق الموقع.</p><pre>{{ submittedPracticeCode === null ? 'شغّل الكود لعرض CSS المرسل.' : techSourceCSS || 'لا توجد كتلة style مستقلة في المصدر.' }}</pre></section><section v-show="techPreviewTab === 'console'" class="tech-source-inspector tech-inspector-console"><h4>Console · السجل الفعلي</h4><p v-for="(log,index) in practiceLogs" :key="index" :data-level="log.type">{{ log.msg }}</p></section></div>
+              <div class="tech-preview-status" :data-state="executionState"><i></i><strong>{{ techStatusLabel }}</strong><span v-if="submittedPracticeCode !== null && practiceCode !== submittedPracticeCode">يعرض آخر مصدر شُغّل</span></div>
+            </section>
+            <section class="tech-panel tech-observation-card"><h3><span>⌁</span>ملاحظة الصفحة <small>من الإطار الفعلي</small></h3><template v-if="simulatorObservation"><p>وصلت لقطة من إطار المعاينة لهذه النسخة.</p><details class="tech-raw-observation"><summary>عرض النص الخام المستلم ⌄</summary><pre>{{ simulatorObservation.bodyText || 'لا تعرض الصفحة نصًا حاليًا.' }}</pre></details></template><p v-else>شغّل الكود وتفاعل مع النتيجة لاستقبال ملاحظة من الصفحة.</p><span class="tech-data-note">لا يوجد تحليل عام للمتغيرات أو مسارات التنفيذ.</span></section>
+          </div>
+          <section class="tech-panel tech-wave-panel"><h3><span>✧</span>شبكة الاتصال الضوئية <small>رسم زخرفي مستقل عن التنفيذ</small></h3><div class="tech-wave-art" aria-hidden="true">
+  <svg viewBox="0 0 920 142" preserveAspectRatio="none" focusable="false">
+    <defs>
+      <linearGradient id="tech-wave-light" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#86eeff"/><stop offset=".4" stop-color="#099eff"/><stop offset=".76" stop-color="#41d4ff"/><stop offset="1" stop-color="#65ffe2"/></linearGradient>
+      <filter id="tech-wave-glow" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="3.5"/></filter>
+      <pattern id="tech-wave-grid" width="28" height="24" patternUnits="userSpaceOnUse"><path d="M28 0H0V24" fill="none" stroke="#17496b" stroke-width=".55"/></pattern>
+    </defs>
+    <rect width="920" height="142" fill="url(#tech-wave-grid)" opacity=".6"/>
+    <g fill="none" stroke="url(#tech-wave-light)" stroke-width=".7" opacity=".45">
+      <path d="M0 121C90 121 119 8 216 30S322 122 418 85 528 4 628 42 752 141 920 67"/>
+      <path d="M0 124C87 124 126 19 221 38S322 126 423 93 531 12 632 49 754 145 920 77"/>
+      <path d="M0 127C88 126 132 30 226 46S326 128 426 99 538 21 640 58 757 141 920 85"/>
+      <path d="M0 131C90 128 139 42 233 54S328 130 430 106 547 31 648 67 761 141 920 93"/>
+      <path d="M0 133C90 130 145 53 239 63S335 131 438 111 555 42 655 74 766 141 920 100"/>
+      <path d="M0 134C92 132 150 63 247 71S341 133 446 118 563 53 665 82 773 142 920 108"/>
+      <path d="M0 135C96 134 160 73 255 80S348 135 454 124 575 65 678 91 786 142 920 116"/>
+      <path d="M0 135C100 134 164 85 262 90S354 135 465 128 582 76 690 101 795 143 920 124"/>
+    </g>
+    <g class="tech-wave-travel" fill="none" stroke="#7eefff" stroke-width="1.5" stroke-dasharray="2 36 3 51" opacity=".85"><path d="M0 124C87 124 126 19 221 38S322 126 423 93 531 12 632 49 754 145 920 77"/><path d="M0 133C90 130 145 53 239 63S335 131 438 111 555 42 655 74 766 141 920 100"/><path d="M0 135C100 134 164 85 262 90S354 135 465 128 582 76 690 101 795 143 920 124"/></g>
+    <path d="M18 126H902" stroke="url(#tech-wave-light)" stroke-width="4" filter="url(#tech-wave-glow)" opacity=".7"/>
+    <path d="M18 126H902" stroke="url(#tech-wave-light)" stroke-width="1.7"/>
+    <g fill="#59dcff" stroke="#93efff" stroke-width="1.2"><circle cx="18" cy="126" r="10"/><circle cx="198" cy="126" r="6"/><circle cx="376" cy="126" r="6"/><circle cx="554" cy="126" r="6"/><circle cx="732" cy="126" r="6"/><circle cx="902" cy="126" r="9" fill="#17caa5"/></g>
+    <g class="tech-wave-sparks" fill="#e0ffff"><circle cx="198" cy="34" r="2"/><circle cx="243" cy="65" r="2"/><circle cx="421" cy="94" r="2"/><circle cx="532" cy="37" r="2"/><circle cx="653" cy="77" r="2"/><circle cx="762" cy="121" r="2"/></g>
+  </svg>
+</div>
+<div class="tech-wave-caption"><span>تحرير المصدر</span><span>إطار معزول</span><span>تفاعل مباشر</span><span>ملاحظة الصفحة</span></div></section>
+          <section class="tech-panel tech-session-card" dir="rtl"><div class="tech-session-orbit" :data-state="executionState"><span>{{ executionState === 'preview_ready' ? '✓' : executionState === 'error' ? '!' : '◇' }}</span></div><div><h3>حالة الجلسة</h3><strong>{{ techStatusLabel }}</strong><p>{{ activeRun?.kind === 'reference' ? 'المثال المرجعي يعمل دون استبدال المسودة.' : activeRun ? 'تعمل نسخة المصدر التي أرسلتها للتشغيل.' : 'لم تبدأ جلسة تشغيل حاليًا.' }}</p></div></section>
+        </div>
+        <details v-if="simulatorReferenceVisible" class="tech-panel tech-reference-drawer"><summary>المثال المرجعي للدرس — قراءة دون استبدال المسودة</summary><pre dir="ltr">{{ simulatorReferenceCode }}</pre></details>
+      </div>
+    </div>
+  </main>
+
+  <main v-if="appMode === 'practice' && practiceSurface === 'training'" class="simulator-workspace flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full space-y-6">
 
     <!-- VIEW A: Track Selection Screen ("وش تحب تتدرّب اليوم؟") -->
     <div v-if="selectedTrack === null" class="space-y-8 animate-fadeIn">

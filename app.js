@@ -1965,6 +1965,42 @@ const app = createApp({
       if (previous === 'practice' && mode !== 'practice') stopPracticeExecution();
     }, { flush: 'sync' });
 
+    // Presentation state only. All execution still uses the unchanged simulator.
+    const techPreviewTab = ref('result');
+    const techEditorView = ref('draft');
+    const techFocusPanel = ref('');
+    const techMotion = ref(true);
+    const techSource = computed(() => submittedPracticeCode.value ?? practiceCode.value);
+    const techEditorCode = computed(() => techEditorView.value === 'submitted' ? techSource.value : practiceCode.value);
+    const techHighlightedCode = computed(() => highlightCode(techEditorCode.value, 'xml'));
+    const techSourceCSS = computed(() => [...techSource.value.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style\s*>/gi)].map(m => m[1]).join('\n\n'));
+    const techStatusLabel = computed(() => ({ ready: 'بانتظار التشغيل', running: 'جارٍ التشغيل', preview_ready: 'المعاينة جاهزة', error: 'خطأ في التشغيل', stopped: 'متوقفة' }[executionState.value] || 'بانتظار التشغيل'));
+    function techRunReference() {
+      techEditorView.value = 'submitted';
+      techPreviewTab.value = 'result';
+      runSimulatorReference();
+    }
+    function techRunDraft() { techEditorView.value = 'draft'; techPreviewTab.value = 'result'; runPracticeCode(); }
+    function techSyncEditorScroll(event) {
+      const surface = event.target.closest('.tech-code-surface');
+      const mirror = surface?.querySelector('.tech-highlight');
+      if (mirror && mirror !== event.target) { mirror.scrollTop = event.target.scrollTop; mirror.scrollLeft = event.target.scrollLeft; }
+      const gutter = surface?.querySelector('.tech-line-numbers');
+      if (gutter) gutter.scrollTop = event.target.scrollTop;
+    }
+    function techJumpToScript() {
+      const code = techEditorCode.value;
+      const start = code.search(/<script\b/i);
+      if (start < 0) return;
+      const line = code.slice(0, start).split('\n').length - 1;
+      nextTick(() => {
+        const surface = document.querySelector('.tech-code-surface');
+        const editor = surface?.querySelector(techEditorView.value === 'draft' ? 'textarea' : '.tech-reference-code');
+        if (editor) { editor.scrollTop = Math.max(0, line * 22 - 12); techSyncEditorScroll({ target: editor }); }
+      });
+    }
+    function techToggleFocus(panel) { techFocusPanel.value = techFocusPanel.value === panel ? '' : panel; }
+
     // Dashboard values are derived from actual local records, never concept-art stats.
     const dashboardStats = computed(() => ({
       mastered: rawLexiconData.value.filter(t => termMastery.value[t.id] === 'mastered').length,
@@ -2029,6 +2065,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
+      techPreviewTab, techEditorView, techFocusPanel, techMotion, techSource, techEditorCode, techHighlightedCode, techSourceCSS, techStatusLabel, techRunReference, techRunDraft, techSyncEditorScroll, techJumpToScript, techToggleFocus,
       simulatorReferenceReading, simulatorExpandedPanel, simulatorEditorShare, toggleSimulatorPanel, simulatorStages,
       theme, setTheme, practiceSurface, openVisualSimulator, openTraining,
       foundationSections, activeFoundation, openFoundation,
