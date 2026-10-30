@@ -115,4 +115,21 @@ test('child error reporter survives circular unhandled rejection', () => {
   assert.equal(output[0].type, 'EXECUTION_ERROR');
   assert.match(output[0].payload.msg, /Circular/);
 });
+test('local Vue resolver changes only actual known script src attributes', () => {
+  const cdn = 'https://unpkg.com/vue@3/dist/vue.global.prod.js';
+  const local = 'http://localhost/nested/assets/vendor/vue-3.4.21.global.prod.js';
+  for (const src of [`src="${cdn}"`, `src='${cdn}'`, `SRC=${cdn}`]) {
+    const code = `<script ${src}></script><p>unchanged</p>`;
+    const html = runner.buildDocument(code, session, {vueRuntimeUrl:local});
+    assert.ok(html.includes(local));
+    assert.ok(!html.includes(cdn));
+    assert.ok(html.includes('<p>unchanged</p>'));
+  }
+});
+test('local dependency resolution preserves scripts, comments and quoted content', () => {
+  const cdn = 'https://unpkg.com/vue@3/dist/vue.global.prod.js';
+  const code = `<!-- <script src="${cdn}"></script> --><div data-example='<script src="${cdn}"></script>'></div><textarea><script src="${cdn}"></script></textarea><script>const example = '<script src="${cdn}">';</script><script data-example=' src="${cdn}"'></script>`;
+  const html = runner.buildDocument(code, session, {vueRuntimeUrl:'http://localhost/local-vue.js'});
+  assert.ok(html.endsWith(code));
+});
 console.log(`\nPreview protocol and child console: ${passed}/${passed} passed.`);

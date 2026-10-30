@@ -36,3 +36,6 @@ yarn-error.log*
 vuelexicon-progress-*.json
 vuelexicon-raw-recovery-*.json
 vuelexicon-recovery-*.json
+
+# Generated browser screenshots from dependency-loading checks
+/runtime-assets-artifacts/screenshots/

@@ -1549,7 +1549,10 @@ const app = createApp({
       };
       submittedPracticeCode.value = code;
       activeRun.value = session;
-      practiceIframeDoc.value = window.VueLexiconRunner.buildDocument(code, session);
+      practiceIframeDoc.value = window.VueLexiconRunner.buildDocument(code, session, {
+        vueRuntimeUrl: typeof document.baseURI === 'string'
+          ? new URL('assets/vendor/vue-3.4.21.global.prod.js', document.baseURI).href : undefined
+      });
       practiceIframeKey.value++;
       executionState.value = 'running';
       addPracticeLog('info', kind === 'reference' ? 'تعمل معاينة المثال المرجعي؛ مسودتك لم تتغير.' : 'أُرسلت نسخة مسودتك الحالية إلى إطار معزول جديد.');

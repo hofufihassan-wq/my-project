@@ -1,0 +1,183 @@
+{
+  "packages": [
+    {
+      "name": "vue",
+      "version": "3.4.21",
+      "tarball": "https://registry.npmjs.org/vue/-/vue-3.4.21.tgz",
+      "integrity": "sha512-5hjyV/jLEIKD/jYl4cavMcnzKwjMKohureP8ejn3hhEjwhWIhWeuzL2kJAjzl/WyVsgPY56Sy4Z40C3lVshxXA==",
+      "license": "MIT",
+      "font_family": null,
+      "files": [
+        {
+          "source": "dist/vue.global.prod.js",
+          "path": "assets/vendor/vue-3.4.21.global.prod.js",
+          "sha256": "4963101441ded7e420c05665e7c616b2f2e3851c99e1cf8af84d29d6f10e77da"
+        },
+        {
+          "source": "LICENSE",
+          "path": "assets/vendor/licenses/vue-LICENSE",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175"
+        }
+      ]
+    },
+    {
+      "name": "@highlightjs/cdn-assets",
+      "version": "11.9.0",
+      "tarball": "https://registry.npmjs.org/@highlightjs/cdn-assets/-/cdn-assets-11.9.0.tgz",
+      "integrity": "sha512-F1vJKVAkLwj2Uz2ik1PDc+mDbkrecLI6gcBlAxSRUjyDpMPJjeDBanT9Y2B+xpNe1MT6zSG204Ohm/+nUMCApQ==",
+      "license": "BSD-3-Clause",
+      "font_family": null,
+      "files": [
+        {
+          "source": "highlight.min.js",
+          "path": "assets/vendor/highlight-11.9.0.min.js",
+          "sha256": "837a6fa5b0c736b52bbde2b2b6190f305da3fc9ed41681db5321507057b5c846"
+        },
+        {
+          "source": "styles/atom-one-dark.min.css",
+          "path": "assets/vendor/atom-one-dark-11.9.0.min.css",
+          "sha256": "4237ffca7ce6aadb438c457e0a675b125c534bbdda5b87f41f3a1495603bcc9b"
+        },
+        {
+          "source": "languages/xml.min.js",
+          "path": "assets/vendor/highlight-xml-11.9.0.min.js",
+          "sha256": "e6fb27c375179ecea98c78d374aaded766b431c07d5aa0657918879bb658eef3"
+        },
+        {
+          "source": "languages/javascript.min.js",
+          "path": "assets/vendor/highlight-javascript-11.9.0.min.js",
+          "sha256": "8f675eb100c79498bd35f422f9b5d7c36a4b89c729d7e47715506190792bf9f0"
+        },
+        {
+          "source": "languages/css.min.js",
+          "path": "assets/vendor/highlight-css-11.9.0.min.js",
+          "sha256": "90b54d3bef2a9cc8c02f3a8d512fd317ab61fd3c4d9e80081a94c3021d2403e7"
+        },
+        {
+          "source": "LICENSE",
+          "path": "assets/vendor/licenses/highlight-LICENSE",
+          "sha256": "6c081431591d9df696c82dc598fe1423765b8a299b200ed00b281afd0f64c490"
+        }
+      ]
+    },
+    {
+      "name": "@fontsource-variable/alexandria",
+      "version": "5.3.0",
+      "tarball": "https://registry.npmjs.org/@fontsource-variable/alexandria/-/alexandria-5.3.0.tgz",
+      "integrity": "sha512-SIMkP0elELBKNl58Ak7IhTeLQqclV9ziwC/BAAF7n26cBIuz5kNFQdCUmbaHxLJW1WZlGbfK6WE3rdFmuJHC5A==",
+      "license": "OFL-1.1",
+      "font_family": "Alexandria",
+      "files": [
+        {
+          "source": "index.css",
+          "path": "assets/fonts/alexandria/index.css",
+          "sha256": "eeb5f3219512085794a5ae501b78fc8dccd05e78849f284af18817677d2f42bb"
+        },
+        {
+          "source": "files/alexandria-arabic-wght-normal.woff2",
+          "path": "assets/fonts/alexandria/files/alexandria-arabic-wght-normal.woff2",
+          "sha256": "e8d8ca61d4da1a1a38b9454dbae92be589185efc7af0af6046f6a11c60476e99"
+        },
+        {
+          "source": "files/alexandria-vietnamese-wght-normal.woff2",
+          "path": "assets/fonts/alexandria/files/alexandria-vietnamese-wght-normal.woff2",
+          "sha256": "ad5f96f2ed804f3a3ee0e4b41d5cb56eb52777adec0d9f838cd72fcabe78112a"
+        },
+        {
+          "source": "files/alexandria-latin-ext-wght-normal.woff2",
+          "path": "assets/fonts/alexandria/files/alexandria-latin-ext-wght-normal.woff2",
+          "sha256": "e6bf8237f75aba690223ac20ab6a35bd37677aff57da6af9aad58c2d0f918e40"
+        },
+        {
+          "source": "files/alexandria-latin-wght-normal.woff2",
+          "path": "assets/fonts/alexandria/files/alexandria-latin-wght-normal.woff2",
+          "sha256": "98ccec0bc3c456332f8fd0fcaf81d26a4e010b7fc093f9781938f976df9ffbc4"
+        },
+        {
+          "source": "LICENSE",
+          "path": "assets/vendor/licenses/alexandria-OFL.txt",
+          "sha256": "491200f67c5d48f10cf090b6a86a61abc1e3ab9c496e43e6787ffb5601a43e34"
+        }
+      ],
+      "font_weight": "300 800"
+    },
+    {
+      "name": "@fontsource-variable/jetbrains-mono",
+      "version": "5.3.0",
+      "tarball": "https://registry.npmjs.org/@fontsource-variable/jetbrains-mono/-/jetbrains-mono-5.3.0.tgz",
+      "integrity": "sha512-F32xpS2NsGYoQi2ADSkKTgpJj7ozajsGgDJ8woTnqjmIB+dxDIqImjl4pXZVEExu8UFZ2ndhmX18EBS/hdz3Lw==",
+      "license": "OFL-1.1",
+      "font_family": "JetBrains Mono",
+      "files": [
+        {
+          "source": "index.css",
+          "path": "assets/fonts/jetbrains-mono/index.css",
+          "sha256": "273f27b590784ce54baaac5975e287e9ccbb0ae7c74ebed1cdb06e3e78104580"
+        },
+        {
+          "source": "files/jetbrains-mono-cyrillic-ext-wght-normal.woff2",
+          "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-cyrillic-ext-wght-normal.woff2",
+          "sha256": "593ccd6fe36e299e151aeae4521be9bfe83ac487d96d7cdb44f50be4a04041c7"
+        },
+        {
+          "source": "files/jetbrains-mono-cyrillic-wght-normal.woff2",
+          "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-cyrillic-wght-normal.woff2",
+          "sha256": "d274604c40757f98f07df623a8b8fb5194508a6fa4f5413a7a107f09e3b7452a"
+        },
+        {
+          "source": "files/jetbrains-mono-greek-wght-normal.woff2",
+          "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-greek-wght-normal.woff2",
+          "sha256": "ee863198077f3093ffa81c072581cc4bd608a04e60a8a9c0b846396ce4f14109"
+        },
+        {
+          "source": "files/jetbrains-mono-vietnamese-wght-normal.woff2",
+          "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-vietnamese-wght-normal.woff2",
+          "sha256": "2288795da89dd97e648954b96e22b4501bd85dfc453264460b252f888b582ca2"
+        },
+        {
+          "source": "files/jetbrains-mono-latin-ext-wght-normal.woff2",
+          "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-latin-ext-wght-normal.woff2",
+          "sha256": "79bfdab9ba467e26eea4122e6f2567e188dd8a09a8c730d501fc487c4ab99c6e"
+        },
+        {
+          "source": "files/jetbrains-mono-latin-wght-normal.woff2",
+          "path": "assets/fonts/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2",
+          "sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e"
+        },
+        {
+          "source": "LICENSE",
+          "path": "assets/vendor/licenses/jetbrains-mono-OFL.txt",
+          "sha256": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b"
+        }
+      ],
+      "font_weight": "400 700"
+    },
+    {
+      "name": "tailwindcss",
+      "version": "3.4.17",
+      "tarball": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.17.tgz",
+      "integrity": "sha512-w33E2aCvSDP0tW9RZuNXadXlkHXqFzSkQew/aIa2i/Sj8fThxwovwlXHSPXTbAHwEIhBFXAedUhP2tueAKP8Og==",
+      "license": "MIT",
+      "files": [
+        {
+          "source": "LICENSE",
+          "path": "assets/vendor/licenses/tailwind-LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ]
+    }
+  ],
+  "generated_css": {
+    "path": "assets/tailwind-3.4.17.min.css",
+    "sha256": "4294d050466e99a9a0253a6485835b33b3d925b08b2653c519ecb10bd9954565",
+    "tool": "tailwindcss@3.4.17",
+    "config_sha256": "6c5365fef0960884dbd840353071e09d8d555cda81d771485e72e200eb561b8f",
+    "inputs_sha256": {
+      "index.html": "4f402e71f818d928375af7db36e31598b7104d1d0802e7ef643f948db4ea52bf",
+      "app.js": "a0c410d2e3a5dbe82ca61c8bd26cbd9d5bbd45f361baa45fab813fd08ff49b3a",
+      "lexicon-data.js": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+      "practice-curriculum.js": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+      "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"
+    }
+  }
+}

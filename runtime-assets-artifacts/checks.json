@@ -1,0 +1,288 @@
+{
+  "timestamp": "2026-10-30T02:08:00.998518+00:00",
+  "base_commit": "f1db1a9698541d0035567c1f1d86706d9e6a468b",
+  "branch": "fix/local-runtime-assets",
+  "all_passed": true,
+  "results": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "app.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "lexicon-data.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "practice-curriculum.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "preview-runner.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "progress-data.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_content_integrity_test.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_curriculum_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_data_safety_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_hands_on_verification.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_json_import_test.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_phase0a_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_preview_protocol_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_runtime_assets_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_simulator_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "simulator-guides.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "tailwind.config.cjs"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "run_data_safety_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS Normal export roundtrips; oversized current draft exports intact as warned raw recovery",
+        "Data safety: 13/13 tests passed."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_preview_protocol_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "",
+        "Preview protocol and child console: 15/15 passed."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_json_import_test.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "",
+        "Result: 9/9 unit tests passed."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_curriculum_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "",
+        "Curriculum Solutions Verification: 15/15 lessons PASSED."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_content_integrity_test.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS: original content SHA-256 hashes; 180 unique terms; 15 unique lessons across 5 tracks, 3 each."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_phase0a_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS no application page errors during integration checks",
+        "14/14 browser integration checks passed"
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_simulator_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS no application page errors in simulator checks",
+        "19/19 simulator browser checks passed"
+      ],
+      "previous_attempt": {
+        "command": [
+          "node",
+          "run_simulator_browser_tests.js"
+        ],
+        "exit_code": 1,
+        "summary": [
+          "PASS no application page errors in simulator checks",
+          "18/19 simulator browser checks passed"
+        ]
+      },
+      "rerun_reason": "Final harness uses correct iframe target; all existing data and event assertions retained."
+    },
+    {
+      "command": [
+        "node",
+        "run_hands_on_verification.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "Report saved to /tmp/vuelexicon-assets-legacy/hands_on_verification_report.json",
+        "=============================================="
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_runtime_assets_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS context 3: VUE-103 loads local Vue and behaves correctly with Internet blocked",
+        "18/18 actual runtime checks passed"
+      ],
+      "previous_attempt": {
+        "command": [
+          "node",
+          "run_runtime_assets_tests.js"
+        ],
+        "exit_code": 0,
+        "summary": [
+          "PASS context 3: VUE-103 loads local Vue and behaves correctly with Internet blocked",
+          "18/18 actual runtime checks passed"
+        ]
+      },
+      "rerun_reason": "Final harness uses correct iframe target; all existing data and event assertions retained."
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/assets.py",
+        "verify"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS: 24 local runtime/license assets match their locked SHA-256 hashes."
+      ]
+    }
+  ],
+  "reproducibility": "npm ci --ignore-scripts succeeded; official tarballs passed fixed npm integrity; repeated CSS builds byte-identical; runtime test uses actual local assets, no substitutions",
+  "main_commit_at_final_review": "7889340a960306c39e26b7359c7b2be2ad280c16",
+  "main_tree_identical_to_tested_base": true
+}
