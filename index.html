@@ -22,6 +22,8 @@
   <!-- Custom iOS Glassmorphic & 3D Flip Styles -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="identity.css">
+  <link rel="stylesheet" href="dictionary-correction.css">
+  <link rel="stylesheet" href="simulator-correction.css">
 </head>
 <body class="bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased">
 
@@ -280,7 +282,8 @@
     </div>
 
     <!-- A-Z Alphabetical Directory Bar -->
-    <div class="mt-4 p-2 rounded-2xl bg-white/[0.03] border border-white/10 max-w-4xl mx-auto shadow-inner relative z-10 backdrop-blur-xl">
+    <details class="dictionary-alphabet"><summary>الفهرس الأبجدي <span>{{ selectedLetter }}</span></summary>
+    <div class="p-2">
       <div class="flex items-center justify-center gap-1 overflow-x-auto py-1" dir="ltr">
         <button
           @click="setLetter('ALL')"
@@ -305,6 +308,7 @@
         </button>
       </div>
     </div>
+    </details>
 
     <!-- Recently Viewed Terms Bar -->
     <div v-if="recentlyViewedTerms.length > 0" class="mt-3 max-w-4xl mx-auto flex items-center gap-2 overflow-x-auto py-1 text-xs relative z-10">
@@ -343,6 +347,9 @@
 
       <!-- LEFT / RIGHT SIDEBAR: TERM DIRECTORY (4 Columns) -->
       <aside class="term-directory lg:col-span-4 ios-glass-panel rounded-3xl p-4 shadow-xl space-y-3 lg:sticky lg:top-24 max-h-[calc(100vh-120px)] flex flex-col">
+        <div class="dictionary-category-heading"><svg><use href="#i-grid"/></svg><h3>التصنيفات</h3></div>
+        <nav class="dictionary-category-stack" aria-label="تصنيفات القاموس"><button v-for="cat in categoriesList" :key="cat.id" @click="setCategory(cat.id)" :aria-current="activeCategory === cat.id ? 'true' : undefined"><span>{{ cat.icon }}</span><strong>{{ cat.id === 'all' ? 'كل المصطلحات' : cat.label }}</strong><small>{{ getCategoryCount(cat.id) }}</small></button></nav>
+        <details class="dictionary-term-list" open><summary>فهرس المصطلحات <span>{{ filteredTermsList.length }}</span></summary>
         <div class="flex items-center justify-between pb-2 border-b border-white/10 text-xs">
           <span class="font-bold text-white flex items-center gap-1.5">
             <span>📑</span>
@@ -369,14 +376,14 @@
             v-for="item in filteredTermsList"
             :key="item.id"
             @click="selectTerm(item)"
-            :class="selectedTerm.id === item.id ? 'bg-[#00DC82]/15 border-[#00DC82] shadow-lg shadow-[#00DC82]/10' : 'bg-white/[0.02] border-white/5 hover:border-white/20'"
+            :class="selectedTerm?.id === item.id ? 'bg-[#00DC82]/15 border-[#00DC82] shadow-lg shadow-[#00DC82]/10' : 'bg-white/[0.02] border-white/5 hover:border-white/20'"
             class="p-3 rounded-2xl border cursor-pointer transition-all flex items-center justify-between group"
           >
             <div class="space-y-1">
               <div class="flex items-center gap-2">
                 <span
                   class="font-mono font-bold text-sm group-hover:text-[#00DC82] transition-colors"
-                  :class="selectedTerm.id === item.id ? 'text-[#00DC82]' : 'text-white'"
+                  :class="selectedTerm?.id === item.id ? 'text-[#00DC82]' : 'text-white'"
                   dir="ltr"
                 >
                   {{ item.term }}
@@ -403,241 +410,54 @@
             </div>
           </div>
         </div>
+        </details>
       </aside>
 
       <!-- RIGHT / MAIN: DETAILED TERM VIEW (8 Columns) -->
-      <section id="detailed-term-view" class="lg:col-span-8">
-        <div v-if="selectedTerm" class="ios-glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
-
-        <!-- Term Header Info -->
-        <div class="space-y-3 pb-6 border-b border-white/10">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center gap-3">
-              <h2 class="font-mono font-black text-2xl sm:text-3xl text-white tracking-wide flex items-center gap-2" dir="ltr">
-                <span>{{ selectedTerm.term }}</span>
-              </h2>
-              <span
-                :class="selectedTerm.catBadgeColor.bg + ' ' + selectedTerm.catBadgeColor.text + ' ' + selectedTerm.catBadgeColor.border"
-                class="px-2.5 py-1 rounded-xl text-xs font-mono font-bold border"
-              >
-                {{ selectedTerm.categoryLabel }}
-              </span>
-            </div>
-
-            <!-- Actions: Bookmark & Official Docs & Scratchpad -->
-            <div class="flex flex-wrap items-center gap-2">
-              <!-- Mastery Level Selector -->
-              <div class="flex items-center gap-1 bg-white/5 p-1 rounded-xl border border-white/10 text-xs">
-                <span class="text-[10px] text-gray-400 px-1">الإتقان:</span>
-                <button
-                  @click="setTermMastery(selectedTerm.id, 'new')"
-                  :class="getTermMastery(selectedTerm.id) === 'new' ? 'bg-slate-700 text-white font-bold' : 'text-gray-400 hover:text-white'"
-                  class="px-2 py-0.5 rounded-lg text-[10px] transition-all cursor-pointer"
-                >
-                  جديد
-                </button>
-                <button
-                  @click="setTermMastery(selectedTerm.id, 'learning')"
-                  :class="getTermMastery(selectedTerm.id) === 'learning' ? 'bg-amber-400 text-slate-950 font-bold' : 'text-gray-400 hover:text-amber-300'"
-                  class="px-2 py-0.5 rounded-lg text-[10px] transition-all cursor-pointer"
-                >
-                  أتعلم 🟡
-                </button>
-                <button
-                  @click="setTermMastery(selectedTerm.id, 'mastered')"
-                  :class="getTermMastery(selectedTerm.id) === 'mastered' ? 'bg-[#00DC82] text-slate-950 font-bold' : 'text-gray-400 hover:text-emerald-300'"
-                  class="px-2 py-0.5 rounded-lg text-[10px] transition-all cursor-pointer"
-                >
-                  أتقنته 🟢
-                </button>
-              </div>
-
-              <!-- Launch in Code Timeline Button -->
-              <button
-                @click="launchTermInTimeline(selectedTerm)"
-                class="px-3 py-1.5 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
-                title="مشاهدة تتبع تنفيذ المفهوم في مسرح الكود"
-              >
-                <span>⏱️</span>
-                <span>مسرح التنفيذ</span>
-              </button>
-
-              <button
-                @click="sendTermToScratchpad(selectedTerm)"
-                class="px-3.5 py-1.5 rounded-xl bg-[#00DC82]/10 hover:bg-[#00DC82]/20 text-[#00DC82] border border-[#00DC82]/40 text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
-                title="معاينة كود المصطلح دون تغيير مسودة الدرس"
-              >
-                <span>⚡</span>
-                <span>معاينة المصطلح</span>
-              </button>
-
-              <button
-                @click="toggleBookmark(selectedTerm)"
-                :class="isBookmarked(selectedTerm.id) ? 'bg-amber-400/20 text-amber-400 border-amber-400/40' : 'bg-white/5 text-gray-300 border-white/10'"
-                class="px-3 py-1.5 rounded-xl border text-xs font-bold transition-all flex items-center gap-1.5"
-              >
-                <span>★</span>
-                <span>{{ isBookmarked(selectedTerm.id) ? 'محفوظ' : 'حفظ' }}</span>
-              </button>
-
-              <a
-                v-if="selectedTerm.docUrl"
-                :href="selectedTerm.docUrl"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 text-xs font-medium transition-all flex items-center gap-1"
-              >
-                <span>التوثيق الرسمي</span>
-                <span class="text-xs">↗</span>
-              </a>
+      <section id="detailed-term-view" class="dictionary-detail">
+        <article v-if="selectedTerm" class="dictionary-term-card ios-glass-panel">
+          <div class="dictionary-term-heading">
+            <div class="dictionary-breadcrumb"><span>القاموس</span><span>‹</span><span>{{ selectedTerm.categoryLabel }}</span><span>‹</span><span dir="ltr">{{ selectedTerm.term }}</span></div>
+            <div class="dictionary-title-row"><div><h2 dir="ltr">{{ selectedTerm.term }} <span class="dictionary-term-dot">●</span></h2><p>{{ selectedTerm.arabicTitle }}</p></div><span class="dictionary-tech-mark" aria-hidden="true">{{ selectedTerm.category === 'vue' ? 'V' : selectedTerm.category === 'js' ? 'JS' : selectedTerm.category.toUpperCase() }}</span></div>
+            <div class="dictionary-title-actions">
+              <button @click="toggleBookmark(selectedTerm)" :aria-pressed="isBookmarked(selectedTerm)" :title="isBookmarked(selectedTerm) ? 'إزالة من المفضلة' : 'إضافة للمفضلة'">{{ isBookmarked(selectedTerm) ? '★ محفوظ' : '☆ حفظ' }}</button>
+              <a v-if="selectedTerm.docUrl" :href="selectedTerm.docUrl" target="_blank" rel="noopener noreferrer">التوثيق الرسمي ↗</a>
+              <button @click="launchTermInTimeline(selectedTerm)" title="مسرح التنفيذ التعليمي للمفهوم">مسرح التنفيذ التعليمي</button>
+              <span class="dictionary-mastery"><span>إتقاني</span><button @click="setTermMastery(selectedTerm.id, 'new')" :aria-pressed="getTermMastery(selectedTerm.id) === 'new'">جديد</button><button @click="setTermMastery(selectedTerm.id, 'learning')" :aria-pressed="getTermMastery(selectedTerm.id) === 'learning'">أتعلم</button><button @click="setTermMastery(selectedTerm.id, 'mastered')" :aria-pressed="getTermMastery(selectedTerm.id) === 'mastered'">أتقنته</button></span>
             </div>
           </div>
-
-          <p class="text-lg font-bold text-[#00DC82]">{{ selectedTerm.arabicTitle }}</p>
-          <p class="text-sm text-slate-300 leading-relaxed">{{ selectedTerm.description }}</p>
-        </div>
-
-        <!-- Cheat Sheet 3-Stat Badges (إزالة truncate لتظهر النصوص كاملة بدون نقاط) -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1">
-            <span class="text-[10px] text-slate-400 font-mono block">الصيغة / التصريح:</span>
-            <span class="text-xs font-mono text-emerald-400 font-bold block leading-relaxed" dir="ltr">{{ selectedTerm.syntaxInfo }}</span>
+          <nav class="dictionary-content-tabs" aria-label="أقسام شرح المصطلح" role="tablist">
+            <button v-for="tab in [{id:'meaning',label:'المعنى',icon:'book'},{id:'example',label:'مثال',icon:'code'},{id:'usage',label:'متى أستخدمه',icon:'note'},{id:'compare',label:'مقارنة',icon:'grid'},{id:'pitfalls',label:'أخطاء شائعة',icon:'note'}]" :key="tab.id" role="tab" :id="'dictionary-tab-' + tab.id" :aria-selected="dictionaryTab === tab.id" :aria-controls="'dictionary-panel-' + tab.id" :data-testid="'dictionary-tab-' + tab.id" :tabindex="dictionaryTab === tab.id ? 0 : -1" @keydown="handleDictionaryTabKeydown($event, tab.id)" @click="dictionaryTab = tab.id"><svg><use :href="'#i-' + tab.icon"/></svg>{{ tab.label }}</button>
+          </nav>
+          <section v-show="dictionaryTab === 'meaning'" id="dictionary-panel-meaning" role="tabpanel" aria-labelledby="dictionary-tab-meaning" class="dictionary-copy-panel">
+            <h3>شرح المصطلح</h3><p class="dictionary-summary">{{ selectedTerm.description }}</p><details><summary>اقرأ الشرح كاملًا</summary><p>{{ selectedTerm.description }}</p></details>
+            <details class="dictionary-meta-details"><summary>الصيغة، القيمة المرجعة وبيئة العمل</summary><dl class="dictionary-facts"><div><dt>الصيغة / التصريح</dt><dd dir="ltr">{{ selectedTerm.syntaxInfo }}</dd></div><div><dt>القيمة المرجعة / Props</dt><dd dir="ltr">{{ selectedTerm.returnProps }}</dd></div><div><dt>بيئة العمل</dt><dd>{{ selectedTerm.env }}</dd></div></dl></details>
+          </section>
+          <section v-show="dictionaryTab === 'example'" id="dictionary-panel-example" role="tabpanel" aria-labelledby="dictionary-tab-example" class="dictionary-copy-panel">
+            <h3>اقرأ المثال، ثم جرّب تغييره</h3><p>الكود الأصلي معروض في المحرر أدناه. التعديلات هنا مؤقتة لهذه الجلسة ولا تغيّر المثال أو مسودات التدريب.</p>
+            <details v-if="selectedTerm.codeBreakdown.length"><summary>تشريح وفهم الكود خطوة بخطوة</summary><ul><li v-for="(line, index) in selectedTerm.codeBreakdown" :key="index">{{ line }}</li></ul></details>
+          </section>
+          <section v-show="dictionaryTab === 'usage'" id="dictionary-panel-usage" role="tabpanel" aria-labelledby="dictionary-tab-usage" class="dictionary-copy-panel"><h3>متى نستخدمها في المشاريع؟</h3><ul><li v-for="(uc, index) in selectedTerm.useCases" :key="index">{{ uc }}</li></ul></section>
+          <section v-show="dictionaryTab === 'compare'" id="dictionary-panel-compare" role="tabpanel" aria-labelledby="dictionary-tab-compare" class="dictionary-copy-panel"><h3>ملاحظات المقارنة</h3><p>{{ selectedTerm.compareNotes || 'لا توجد ملاحظات مقارنة إضافية مرفقة بهذا المصطلح.' }}</p></section>
+          <section v-show="dictionaryTab === 'pitfalls'" id="dictionary-panel-pitfalls" role="tabpanel" aria-labelledby="dictionary-tab-pitfalls" class="dictionary-copy-panel"><h3>أخطاء شائعة وتنبيهات برمجية</h3><p>{{ selectedTerm.pitfall || 'لا توجد ملاحظات إضافية مرفقة بهذا المصطلح.' }}</p></section>
+          <div class="dictionary-example-grid">
+            <section class="dictionary-editor-panel" aria-label="محرر مثال القاموس">
+              <div class="dictionary-panel-title"><strong><svg><use href="#i-code"/></svg>محرر المثال</strong><button @click="copyCode(dictionaryEditorCode)" title="نسخ كود المثال">نسخ الكود</button></div>
+              <div class="dictionary-editor-formats"><div class="ios-segmented-control"><button @click="setCodeFormat('vue')" :class="{ active: activeCodeFormat === 'vue' }" class="ios-segment-btn">Vue 3 SFC</button><button @click="setCodeFormat('vanilla')" :class="{ active: activeCodeFormat === 'vanilla' }" class="ios-segment-btn">Vanilla JS</button></div><span dir="ltr">{{ activeCodeFormat === 'vue' ? 'Example.vue' : selectedTerm.category === 'css' ? 'styles.css' : selectedTerm.category === 'html' ? 'index.html' : 'script.js' }}</span></div>
+              <div class="dictionary-editor-surface" dir="ltr"><pre class="dictionary-line-gutter" aria-hidden="true"><span v-for="(_, index) in dictionaryEditorCode.split('\n')" :key="index">{{ index + 1 }}</span></pre><textarea data-testid="dictionary-editor" class="dictionary-code-editor" :value="dictionaryEditorCode" @input="updateDictionaryEditor" @scroll="$event.target.previousElementSibling.scrollTop = $event.target.scrollTop" aria-label="كود مثال المصطلح — تعديل مؤقت" spellcheck="false" dir="ltr"></textarea></div>
+              <div class="dictionary-editor-footer"><span>{{ dictionaryEditorChanged ? 'نسخة معدلة مؤقتة' : 'المثال الأصلي' }}</span><button v-if="dictionaryEditorChanged" @click="resetDictionaryEditor" data-testid="dictionary-reset">استعادة الأصل</button><button @click="sendTermToScratchpad(selectedTerm)">الأصل في المحاكي ↗</button></div>
+            </section>
+            <section class="dictionary-live-panel" aria-label="المعاينة المباشرة للمثال">
+              <div class="dictionary-panel-title"><strong><svg><use href="#i-monitor"/></svg>معاينة مباشرة</strong><button @click="runDictionaryPreview" data-testid="dictionary-run" class="dictionary-run-example">▷ تشغيل المثال</button></div>
+              <div class="dictionary-preview-status" role="status"><span :data-state="dictionaryPreviewState">{{ dictionaryPreviewState === 'running' ? 'جارٍ التشغيل' : dictionaryPreviewState === 'preview_ready' ? 'المعاينة جاهزة · قد يستمر الكود' : dictionaryPreviewState === 'error' ? 'تعذر تشغيل هذا المثال' : dictionaryPreviewState === 'stopped' ? 'متوقف' : 'اضغط تشغيل لرؤية المثال' }}</span><button @click="stopDictionaryPreview" aria-label="إيقاف معاينة القاموس">□ إيقاف</button></div>
+              <p v-if="dictionaryPreviewStale" class="dictionary-stale-notice" role="status">المعاينة لآخر نسخة شغّلتها؛ اضغط تشغيل لرؤية تعديلات المحرر الحالية.</p>
+              <iframe ref="dictionaryPreviewRef" :key="dictionaryPreviewKey" :srcdoc="dictionaryPreviewDoc" sandbox="allow-scripts" title="المعاينة المباشرة للمصطلح"></iframe>
+              <div v-if="dictionaryPreviewLogs.length" class="dictionary-preview-messages" aria-label="رسائل معاينة القاموس"><p v-for="(log,index) in dictionaryPreviewLogs" :key="index" :data-level="log.type">{{ log.msg }}</p></div>
+              <p class="dictionary-preview-help">المثال الناقص أو غير المدعوم قد يعرض خطأً أو يحتاج سياقًا إضافيًا؛ لا نُكمل الكود تلقائيًا.</p>
+            </section>
           </div>
-
-          <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1">
-            <span class="text-[10px] text-slate-400 font-mono block">القيمة المرجعة / Props:</span>
-            <span class="text-xs font-mono text-amber-300 font-bold block leading-relaxed" dir="ltr">{{ selectedTerm.returnProps }}</span>
-          </div>
-
-          <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1">
-            <span class="text-[10px] text-slate-400 font-mono block">بيئة العمل:</span>
-            <span class="text-xs text-sky-300 font-semibold block leading-relaxed">{{ selectedTerm.env }}</span>
-          </div>
-        </div>
-
-        <!-- Real-world Use Cases -->
-        <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10 space-y-2">
-          <span class="text-xs font-bold text-white flex items-center gap-1.5">
-            <span>💡</span>
-            <span>متى نستخدمها في المشاريع؟ (Use Cases):</span>
-          </span>
-          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 text-xs text-slate-300">
-            <li v-for="(uc, uIdx) in selectedTerm.useCases" :key="uIdx" class="flex items-start gap-1.5">
-              <span class="text-[#00DC82] mt-0.5">•</span>
-              <span>{{ uc }}</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- CODE & PRACTICAL EDUCATIONAL CARD -->
-        <div class="space-y-6">
-          
-          <!-- 1. FLAT SLEEK CODE BOX WITH IOS SEGMENTED TOGGLE (Vue 3 SFC vs Vanilla JS) -->
-          <div class="space-y-2.5">
-            <div class="flex flex-wrap items-center justify-between gap-3 text-xs">
-              
-              <!-- iOS Segmented Toggle for Instant Switching -->
-              <div class="flex items-center gap-2">
-                <span class="text-gray-400 font-medium">عرض الكود:</span>
-                <div class="ios-segmented-control flex items-center gap-1">
-                  <button
-                    @click="setCodeFormat('vue')"
-                    :class="{ active: activeCodeFormat === 'vue' }"
-                    class="ios-segment-btn px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
-                  >
-                    <span>Vue 3 SFC 💚</span>
-                  </button>
-                  <button
-                    @click="setCodeFormat('vanilla')"
-                    :class="{ active: activeCodeFormat === 'vanilla' }"
-                    class="ios-segment-btn px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
-                  >
-                    <span>Vanilla JS ⚡</span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Copy Code Button -->
-              <button
-                @click="copyCode(currentCode)"
-                class="flex items-center gap-1.5 text-xs font-mono px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-[#00DC82] text-gray-300 hover:text-slate-950 transition-all font-semibold border border-white/10 shadow-sm active:scale-95 cursor-pointer"
-              >
-                <span>نسخ الكود</span>
-                <span>📋</span>
-              </button>
-            </div>
-
-            <!-- Flat High-Performance Code Container -->
-            <div class="rounded-2xl bg-[#020420] border-2 border-emerald-500/30 overflow-hidden shadow-2xl">
-              <div class="px-4 py-2.5 bg-[#081022] border-b border-white/10 flex items-center justify-between text-xs">
-                <div class="flex items-center gap-2">
-                  <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
-                  <span class="font-mono text-emerald-400 mr-2 font-bold" dir="ltr">
-                    {{ activeCodeFormat === 'vue' ? 'Component.vue' : (selectedTerm.category === 'css' ? 'styles.css' : (selectedTerm.category === 'html' ? 'index.html' : 'script.js')) }}
-                  </span>
-                </div>
-                <span class="text-[10px] font-mono text-slate-400">
-                  {{ activeCodeFormat === 'vue' ? 'Vue 3 Single File Component' : 'Vanilla JS & DOM Standard' }}
-                </span>
-              </div>
-
-              <pre class="hljs p-4 text-xs sm:text-sm font-mono leading-relaxed overflow-x-auto"><code v-html="highlightedCurrentCode"></code></pre>
-            </div>
-          </div>
-
-          <!-- 2. CODE BREAKDOWN STEP-BY-STEP (تشريح الكود 🔍) -->
-          <div v-if="selectedTerm.codeBreakdown && selectedTerm.codeBreakdown.length" class="p-4 rounded-2xl bg-white/[0.03] border border-white/10 space-y-2.5">
-            <div class="flex items-center gap-2 text-xs font-bold text-[#00DC82]">
-              <span>🔍</span>
-              <span>تشريح وفهم الكود خطوة بخطوة (Code Breakdown):</span>
-            </div>
-            <ul class="space-y-1.5 text-xs text-gray-300">
-              <li v-for="(line, lIdx) in selectedTerm.codeBreakdown" :key="lIdx" class="flex items-start gap-2">
-                <span class="text-[#00DC82] mt-0.5 font-bold">✓</span>
-                <span class="leading-relaxed">{{ line }}</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- 3. COMMON PITFALLS & BEST PRACTICES (أخطاء شائعة وتنبيهات مهمة ⚠️) -->
-          <div v-if="selectedTerm.pitfall" class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200 space-y-1.5">
-            <div class="flex items-center gap-2 text-xs font-bold text-amber-400">
-              <span>⚠️</span>
-              <span>أخطاء شائعة وتنبيهات برمجية مهمة (Common Pitfalls & Best Practices):</span>
-            </div>
-            <p class="text-xs text-amber-200/90 leading-relaxed font-medium">
-              {{ selectedTerm.pitfall }}
-            </p>
-          </div>
-
-          <!-- 4. KEY ATTRIBUTES / PROPS TABLE (الخصائص والمدخلات الأساسية ⚙️) -->
-          <div v-if="selectedTerm.keyProps && selectedTerm.keyProps.length" class="p-4 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
-            <div class="flex items-center gap-2 text-xs font-bold text-white">
-              <span>⚙️</span>
-              <span>الخصائص والمدخلات الأساسية (Key Attributes / Props / Parameters):</span>
-            </div>
-            <div class="overflow-x-auto">
-              <table class="w-full text-right text-xs">
-                <thead>
-                  <tr class="border-b border-white/10 text-gray-400 font-mono text-[11px]">
-                    <th class="pb-2 pr-2 font-semibold">الخاصية / المدخل</th>
-                    <th class="pb-2 px-2 font-semibold">النوع (Type)</th>
-                    <th class="pb-2 pl-2 font-semibold">الوظيفة والشرح</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-white/5 font-mono">
-                  <tr v-for="(prop, pIdx) in selectedTerm.keyProps" :key="pIdx" class="hover:bg-white/[0.02]">
-                    <td class="py-2 pr-2 text-[#00DC82] font-bold" dir="ltr">{{ prop.name }}</td>
-                    <td class="py-2 px-2 text-amber-400 text-[11px]" dir="ltr">{{ prop.type }}</td>
-                    <td class="py-2 pl-2 text-gray-300 font-arabic text-xs">{{ prop.desc }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
+          <details v-if="selectedTerm.keyProps.length" class="dictionary-properties"><summary>الخصائص والمدخلات الأساسية</summary><div class="dictionary-table-scroll"><table><thead><tr><th>الخاصية / المدخل</th><th>النوع</th><th>الشرح</th></tr></thead><tbody><tr v-for="(prop,index) in selectedTerm.keyProps" :key="index"><td dir="ltr">{{ prop.name }}</td><td dir="ltr">{{ prop.type }}</td><td>{{ prop.desc }}</td></tr></tbody></table></div></details>
+          <details class="dictionary-studio"><summary>استوديو المفهوم والأدوات التعليمية الحالية</summary>
           <!-- BOX 2: THE LIVING FRONTEND VISUAL STUDIO (Zero Fallback) -->
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs">
@@ -1860,54 +1680,18 @@
             </div>
           </div>
 
-          <!-- 6. RELATED TERMS (تاقات ودوال ذات صلة 🔗) -->
-          <div v-if="selectedTerm.relatedTerms && selectedTerm.relatedTerms.length" class="p-5 rounded-3xl ios-glass-panel border border-white/10 shadow-xl space-y-3">
-            <div class="flex items-center justify-between pb-2 border-b border-white/10">
-              <span class="font-bold text-white text-xs flex items-center gap-2">
-                <span>🔗</span>
-                <span>مصطلحات وتوابع ذات صلة (Related Terms):</span>
-              </span>
-              <span class="text-[11px] text-[#00DC82] font-mono">انقر للانتقال الفوري</span>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <button
-                v-for="rel in selectedTerm.relatedTerms"
-                :key="rel"
-                @click="selectRelatedTerm(rel)"
-                class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-[#00DC82]/20 border border-white/10 hover:border-[#00DC82]/50 text-gray-200 hover:text-[#00DC82] font-mono text-xs transition-all flex items-center gap-2 cursor-pointer shadow-sm active:scale-95 group"
-              >
-                <span class="text-[#00DC82] group-hover:scale-125 transition-transform">⚡</span>
-                <span dir="ltr">{{ rel }}</span>
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-        <!-- Elegant Empty State when no term matches search/filter (P0/P1 Safe) -->
-        <div v-else class="p-12 text-center ios-glass-panel rounded-3xl space-y-4">
-          <div class="w-16 h-16 mx-auto rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl">🔍</div>
-          <h3 class="text-lg font-bold text-white">لا توجد نتائج مطابقة لمعايير البحث</h3>
-          <p class="text-xs text-gray-400 max-w-sm mx-auto leading-relaxed">
-            لم نجد أي مصطلح يطابق بحثك الحالي <span v-if="searchQuery" class="text-[#00DC82] font-bold">"{{ searchQuery }}"</span>. يرجى تجربة كلمات بحث أخرى أو إعادة ضبط الفلاتر.
-          </p>
-          <button
-            @click="resetFilters"
-            class="px-5 py-2.5 rounded-xl bg-[#00DC82] text-slate-950 font-bold text-xs shadow-lg hover:bg-[#00b86b] transition-all cursor-pointer"
-          >
-            إعادة تعيين البحث والفلاتر ↺
-          </button>
-        </div>
+          </details>
+          <section v-if="selectedTerm.relatedTerms.length" class="dictionary-related-inline"><strong>مصطلحات وتوابع ذات صلة</strong><div><button v-for="rel in selectedTerm.relatedTerms" :key="rel" @click="selectRelatedTerm(rel)" dir="ltr">{{ rel }}</button></div></section>
+        </article>
+        <div v-else class="dictionary-empty ios-glass-panel"><h2>لا توجد نتائج مطابقة لمعايير البحث</h2><p>جرّب مصطلحًا آخر أو أعد ضبط الفلاتر.</p><button @click="resetFilters">إعادة تعيين البحث والفلاتر ↺</button></div>
       </section>
 
-      <aside class="dictionary-related">
+      <aside v-if="selectedTerm" class="dictionary-related">
         <section class="dashboard-panel"><div class="panel-heading"><h3><svg><use href="#i-book"/></svg>مصطلحات ذات صلة</h3></div>
           <button v-for="term in dictionaryRelated" :key="term.id" @click="selectTerm(term)" class="recent-row"><strong dir="ltr">{{ term.term }}</strong><span>{{ term.arabicTitle }}</span></button>
           <p v-if="!dictionaryRelated.length" class="muted">استكشف المصطلحات من القائمة أو البحث.</p>
         </section>
-        <section class="dashboard-panel"><div class="panel-heading"><h3>وصول سريع</h3></div><button class="subtle-button" @click="toggleBookmark(selectedTerm)">{{ isBookmarked(selectedTerm) ? '★ إزالة من المفضلة' : '☆ إضافة للمفضلة' }}</button><button class="subtle-button" @click="sendTermToScratchpad(selectedTerm)">فتح في المحاكي ←</button><button class="subtle-button" @click="showProgressModal = true">بياناتي والنسخ الاحتياطي</button></section>
+        <section class="dashboard-panel"><div class="panel-heading"><h3>وصول سريع</h3></div><button class="subtle-button" @click="toggleBookmark(selectedTerm)">{{ isBookmarked(selectedTerm) ? '★ إزالة من المفضلة' : '☆ إضافة للمفضلة' }}</button><button class="subtle-button" @click="sendTermToScratchpad(selectedTerm)">فتح في المحاكي ←</button><button class="subtle-button" @click="launchTermInTimeline(selectedTerm)">مسرح التنفيذ التعليمي</button><button class="subtle-button" @click="showProgressModal = true">بياناتي والنسخ الاحتياطي</button></section>
         <section class="dashboard-panel daily-panel"><span class="eyebrow">✧ خطوة صغيرة</span><p>اقرأ المفهوم، ثم غيّر شيئًا في المثال ولاحظ النتيجة.</p></section>
       </aside>
     </div>
@@ -2030,17 +1814,51 @@
         </div>
       </div>
 
+      <div class="sim-workbench-controls flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl ios-glass-panel border border-white/10" dir="rtl">
+        <div class="sim-workbench-title"><span>⌘</span><div><strong>{{ currentLesson.title }}</strong><small>{{ currentLesson.trackName }} / {{ currentLesson.code }} · مساحة التجربة</small></div></div>
+            <!-- Runner & Stop Controls -->
+            <div class="flex items-center gap-2">
+              <label class="hidden sm:flex items-center gap-1.5 text-[11px] text-slate-300 cursor-pointer select-none">
+                <input type="checkbox" v-model="practiceAutoRun" class="accent-[#00DC82] rounded" />
+                <span class="font-sans">تحديث تلقائي</span>
+              </label>
+
+              <!-- REAL Stop Execution Button -->
+              <button
+                @click="stopPracticeExecution"
+                class="px-3 py-1.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-sans font-semibold transition-all flex items-center gap-1.5 cursor-pointer"
+                title="إعادة ضبط الإطار وإبطال جلسة التشغيل؛ لا نضمن مقاطعة الحلقات اللانهائية"
+              >
+                <span>⏹️</span>
+                <span>إيقاف / إعادة ضبط</span>
+              </button>
+
+              <!-- Run Button -->
+              <button
+                @click="runPracticeCode"
+                class="px-3.5 py-1.5 rounded-xl bg-[#00DC82] hover:bg-emerald-400 text-slate-950 text-xs font-sans font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-lg shadow-emerald-500/20"
+              >
+                <span>⚡</span>
+                <span>تشغيل مسودتي</span>
+              </button>
+            </div>
+        <div v-if="practiceSurface === 'simulator'" class="sim-layout-tools" aria-label="تخطيط لوحات المحاكي">
+          <label class="sim-width-control"><span>عرض المحرر</span><input type="range" v-model.number="simulatorEditorShare" min="35" max="60" step="5" aria-label="حصة عرض محرر المحاكي"></label>
+          <button type="button" @click="toggleSimulatorPanel('editor')" :aria-pressed="simulatorExpandedPanel === 'editor'" data-testid="sim-expand-editor">{{ simulatorExpandedPanel === 'editor' ? 'استعادة اللوحات' : 'توسيع المحرر' }} ⛶</button>
+          <button type="button" @click="toggleSimulatorPanel('preview')" :aria-pressed="simulatorExpandedPanel === 'preview'" data-testid="sim-expand-preview">{{ simulatorExpandedPanel === 'preview' ? 'استعادة اللوحات' : 'توسيع المعاينة' }} ⛶</button>
+        </div>
+      </div>
       <!-- WORKSPACE TWO-COLUMN / STACKED GRID -->
       <!-- Desktop: Left = Editor & Preview (LTR), Right = Instructions (RTL) -->
       <!-- Mobile: Top = Instructions, Middle = Editor, Bottom = Preview -->
-      <div class="lesson-workspace-grid">
+      <div class="lesson-workspace-grid" :data-expanded="simulatorExpandedPanel" :style="practiceSurface === 'simulator' ? { '--sim-editor-track': simulatorEditorShare + 'fr', '--sim-preview-track': (100 - simulatorEditorShare) + 'fr' } : undefined">
 
         <!-- ============================================== -->
         <!-- LEFT COLUMN: CODE EDITOR & SANDBOX PREVIEW     -->
         <!-- ============================================== -->
 
         <!-- Area 1: Code Editor (Top-Left) -->
-        <div class="lesson-area-editor flex flex-col rounded-2xl bg-[#081022] border border-white/10 overflow-hidden shadow-2xl relative" dir="ltr">
+        <div data-testid="sim-editor-panel" class="lesson-area-editor flex flex-col rounded-2xl bg-[#081022] border border-white/10 overflow-hidden shadow-2xl relative" dir="ltr">
           <!-- Editor Toolbar -->
           <div class="flex flex-wrap items-center justify-between px-4 py-2.5 bg-[#050b18] border-b border-white/10 gap-2 text-xs">
             <div class="flex items-center gap-2">
@@ -2069,13 +1887,16 @@
               </label>
 
               <button
-                @click="toggleSimulatorReference"
-                class="px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-all text-[11px] flex items-center gap-1 cursor-pointer font-sans"
-                title="عرض المثال المرجعي بجانب مسودتك دون استبدالها"
+                @click="simulatorReferenceReading = !simulatorReferenceVisible || !simulatorReferenceReading; simulatorReferenceVisible = simulatorReferenceReading"
+                data-testid="simulator-reference-toggle"
+                class="py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-amber-300 transition-all cursor-pointer font-semibold"
+                title="قراءة المثال دون تعديل المسودة أو التقدم السابق"
               >
-                <span>↺</span>
-                <span>عرض مثال</span>
+                {{ simulatorReferenceReading ? 'إخفاء كود المثال' : 'قراءة مثال مرجعي' }} 👁️
               </button>
+            <button @click="runSimulatorReference" data-testid="simulator-reference-run" class="sim-reference-run py-2 px-3 rounded-xl bg-[#00DC82] hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all cursor-pointer">
+              جرّب المثال في المعاينة
+            </button>
 
               <button
                 @click="copyCode(practiceCode)"
@@ -2089,7 +1910,7 @@
           </div>
 
           <!-- Editor Body with Line Numbers & Textarea -->
-          <div class="flex relative bg-[#020510] min-h-[340px]">
+          <div class="sim-editor-body flex relative bg-[#020510] min-h-[340px]">
             <!-- Line Numbers Gutter -->
             <div class="editor-gutter w-12 text-slate-600 font-mono text-xs select-none py-3 pr-2 text-right border-r border-white/5 bg-[#030714]">
               <div v-for="n in editorLineCount" :key="n" class="leading-6">{{ n }}</div>
@@ -2106,6 +1927,7 @@
                 autocomplete="off"
                 autocapitalize="off"
                 placeholder="اكتب كودك هنا..."
+                aria-label="محرر كود التجربة"
               ></textarea>
 
               <!-- Live Autocomplete / IntelliSense Popover -->
@@ -2133,10 +1955,71 @@
               </div>
             </div>
           </div>
+            <div v-if="simulatorReferenceVisible" class="sim-reference-tray space-y-3" data-testid="simulator-reference-panel">
+
+              <details :open="simulatorReferenceReading" @toggle="simulatorReferenceReading = $event.target.open"><summary>قراءة كود المثال المرجعي <span>⌄</span></summary>
+              <p class="text-xs text-slate-400">{{ simulatorReferenceTitle }} للقراءة والتجربة. تشغيله لا يستبدل نصك ولا يسجل اجتيازًا.</p>
+              <pre class="p-3 rounded-xl bg-slate-950 text-[11px] max-h-64 overflow-auto whitespace-pre text-slate-200" dir="ltr"><code>{{ simulatorReferenceCode }}</code></pre>
+              <button @click="copyCode(simulatorReferenceCode)" class="p-2 underline text-xs">نسخ المثال</button>
+              </details>
+            </div>
+
         </div>
 
-        <!-- Area 2: Sandboxed Live Preview & Console Output (Bottom-Left) -->
-        <div class="lesson-area-preview flex flex-col rounded-2xl bg-[#081022] border border-white/10 overflow-hidden shadow-2xl" dir="ltr">
+          <!-- Compact Console & Error Drawer -->
+          <section data-testid="sim-console" class="lesson-area-console border-t border-white/10 bg-[#030714] text-xs" aria-label="Console — سجل التشغيل الفعلي" dir="ltr">
+            <div class="flex items-center justify-between px-4 py-1.5 bg-[#050b18] border-b border-white/5 text-[11px]">
+              <div class="flex items-center gap-2 font-mono text-slate-400">
+                <span>Console · سجل التشغيل الفعلي</span>
+                <span class="px-1.5 py-0.2 rounded bg-white/5 text-slate-300 font-mono text-[10px]">
+                  {{ practiceLogs.length }}
+                </span>
+              </div>
+              <button
+                @click="clearPracticeLogs"
+                class="text-slate-400 hover:text-white transition-colors cursor-pointer text-[10px] font-sans"
+              >
+                مسح السجل
+              </button>
+            </div>
+
+            <div class="sim-console-body max-h-28 overflow-y-auto p-2 font-mono text-xs space-y-1" tabindex="0" aria-label="مخرجات Console">
+              <div v-if="practiceLogs.length === 0" class="text-slate-600 text-[11px] p-1 font-sans italic">
+                لا توجد مخرجات كونسول حتى الآن.
+              </div>
+              <div
+                v-for="(log, lIdx) in practiceLogs"
+                :key="lIdx"
+                :class="{
+                  'text-red-400 bg-red-500/5': log.type === 'error',
+                  'text-amber-400 bg-amber-500/5': log.type === 'warn',
+                  'text-[#00DC82]': log.type === 'info',
+                  'text-slate-300': log.type === 'log'
+                }"
+                class="px-2 py-0.5 rounded flex items-start gap-2 text-[11px]"
+              >
+                <span class="text-slate-600 text-[10px] select-none">{{ log.time }}</span>
+                <span class="font-bold uppercase text-[9px] px-1 rounded select-none" :class="log.type === 'error' ? 'bg-red-500/20' : 'bg-white/5'">
+                  {{ log.type }}
+                </span>
+                <span class="flex-1 break-all">{{ log.msg }}</span>
+              </div>
+            </div>
+          </section>
+
+        <section v-if="practiceSurface === 'simulator'" class="lesson-area-flow sim-tech-panel" data-testid="sim-stages" dir="rtl" aria-label="حالة المشغل العامة">
+          <div class="sim-panel-title"><span>◈</span><h3>من الكود إلى المعاينة</h3><span class="sim-live-dot" :class="{ 'is-live': executionState === 'running' || executionState === 'preview_ready' }"></span></div>
+          <p class="sim-trace-disclaimer">مراحل عامة للمشغّل · ليست تتبّعًا للأسطر</p>
+          <div class="sim-flow-track">
+            <article v-for="(stage, index) in simulatorStages" :key="stage.id" class="sim-flow-node" :data-state="stage.state">
+              <span class="sim-flow-symbol" aria-hidden="true">{{ stage.icon }}</span><div><strong>{{ stage.label }}</strong><small>{{ stage.detail }}</small></div><span class="sim-stage-status">{{ stage.state === 'received' ? '✓' : stage.state === 'error' ? '!' : '○' }}</span>
+            </article>
+          </div>
+          <div class="sim-session-note" role="status"><span>{{ executionState === 'error' ? 'يوجد خطأ في التشغيل' : executionState === 'preview_ready' ? 'المعاينة جاهزة للتفاعل' : executionState === 'running' ? 'جارٍ تجهيز المعاينة' : executionState === 'stopped' ? 'جلسة التشغيل متوقفة' : 'بانتظار تشغيل الكود' }}</span><small>لا تتوفر بيانات تتبّع عامة للأسطر أو أزمنة تنفيذ.</small></div>
+          <div class="sim-circuit" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </section>
+        <!-- Sandboxed live preview; Console is a sibling under the editor. -->
+        <div data-testid="sim-preview-panel" class="lesson-area-preview flex flex-col rounded-2xl bg-[#081022] border border-white/10 overflow-hidden shadow-2xl" dir="ltr">
           <!-- Preview Action Bar -->
           <div class="flex flex-wrap items-center justify-between px-4 py-2.5 bg-[#050b18] border-b border-white/10 gap-2 text-xs">
             <!-- Execution Status Indicator -->
@@ -2161,32 +2044,7 @@
               </span>
             </div>
 
-            <!-- Runner & Stop Controls -->
-            <div class="flex items-center gap-2">
-              <label class="hidden sm:flex items-center gap-1.5 text-[11px] text-slate-300 cursor-pointer select-none">
-                <input type="checkbox" v-model="practiceAutoRun" class="accent-[#00DC82] rounded" />
-                <span class="font-sans">تحديث تلقائي</span>
-              </label>
 
-              <!-- REAL Stop Execution Button -->
-              <button
-                @click="stopPracticeExecution"
-                class="px-3 py-1.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-sans font-semibold transition-all flex items-center gap-1.5 cursor-pointer"
-                title="إعادة ضبط الإطار وإبطال جلسة التشغيل؛ لا نضمن مقاطعة الحلقات اللانهائية"
-              >
-                <span>⏹️</span>
-                <span>إيقاف / إعادة ضبط</span>
-              </button>
-
-              <!-- Run Button -->
-              <button
-                @click="runPracticeCode"
-                class="px-3.5 py-1.5 rounded-xl bg-[#00DC82] hover:bg-emerald-400 text-slate-950 text-xs font-sans font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-lg shadow-emerald-500/20"
-              >
-                <span>⚡</span>
-                <span>تشغيل مسودتي</span>
-              </button>
-            </div>
           </div>
 
           <p v-if="submittedPracticeCode !== null && practiceCode !== submittedPracticeCode" class="px-4 py-2 text-xs text-amber-300" dir="rtl">
@@ -2196,7 +2054,7 @@
             أنت تتفاعل مع {{ simulatorReferenceTitle }}. نص مسودتك لم يتغير.
           </p>
           <!-- Sandboxed Iframe (P0 Isolation: NO allow-same-origin) -->
-          <div class="w-full h-80 bg-slate-950 relative">
+          <div class="sim-preview-viewport w-full h-80 bg-slate-950 relative">
             <iframe
               ref="practiceIframeRef"
               :key="practiceIframeKey"
@@ -2207,52 +2065,16 @@
             ></iframe>
           </div>
 
-          <!-- Compact Console & Error Drawer -->
-          <div class="border-t border-white/10 bg-[#030714] text-xs">
-            <div class="flex items-center justify-between px-4 py-1.5 bg-[#050b18] border-b border-white/5 text-[11px]">
-              <div class="flex items-center gap-2 font-mono text-slate-400">
-                <span>Console</span>
-                <span class="px-1.5 py-0.2 rounded bg-white/5 text-slate-300 font-mono text-[10px]">
-                  {{ practiceLogs.length }}
-                </span>
-              </div>
-              <button
-                @click="clearPracticeLogs"
-                class="text-slate-400 hover:text-white transition-colors cursor-pointer text-[10px] font-sans"
-              >
-                مسح السجل
-              </button>
-            </div>
-
-            <div class="max-h-28 overflow-y-auto p-2 font-mono text-xs space-y-1">
-              <div v-if="practiceLogs.length === 0" class="text-slate-600 text-[11px] p-1 font-sans italic">
-                لا توجد مخرجات كونسول حتى الآن.
-              </div>
-              <div
-                v-for="(log, lIdx) in practiceLogs"
-                :key="lIdx"
-                :class="{
-                  'text-red-400 bg-red-500/5': log.type === 'error',
-                  'text-amber-400 bg-amber-500/5': log.type === 'warn',
-                  'text-[#00DC82]': log.type === 'info',
-                  'text-slate-300': log.type === 'log'
-                }"
-                class="px-2 py-0.5 rounded flex items-start gap-2 text-[11px]"
-              >
-                <span class="text-slate-600 text-[10px] select-none">{{ log.time }}</span>
-                <span class="font-bold uppercase text-[9px] px-1 rounded select-none" :class="log.type === 'error' ? 'bg-red-500/20' : 'bg-white/5'">
-                  {{ log.type }}
-                </span>
-                <span class="flex-1 break-all">{{ log.msg }}</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- ============================================== -->
         <!-- RIGHT COLUMN: LESSON INSTRUCTIONS (Arabic RTL) -->
         <!-- ============================================== -->
-        <div class="lesson-area-instructions flex flex-col gap-4 rounded-2xl ios-glass-panel border border-white/10 p-6 shadow-2xl" dir="rtl">
+        <section class="lesson-area-instructions sim-lesson-details" dir="rtl">
+          <details :open="practiceSurface === 'training' || revealedHintsCount > 0">
+            <summary><span>◧</span><strong>دليل التجربة والمثال المرجعي</strong><span>{{ currentLesson.title }}</span><span class="sim-disclosure-hint">عرض / إخفاء</span></summary>
+            <div class="sim-lesson-body flex flex-col gap-4 rounded-2xl ios-glass-panel border border-white/10 p-6">
+
           <!-- Lesson Badge & Code -->
           <div class="flex items-center justify-between">
             <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[#00DC82]">
@@ -2344,24 +2166,10 @@
                 {{ revealedHintsCount === 0 ? 'طلب تلميح 💡' : 'تلميح إضافي 💡' }}
               </button>
 
-              <button
-                @click="toggleSimulatorReference"
-                data-testid="simulator-reference-toggle"
-                class="py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-amber-300 transition-all cursor-pointer font-semibold"
-                title="قراءة المثال دون تعديل المسودة أو التقدم السابق"
-              >
-                {{ simulatorReferenceVisible ? 'إخفاء المثال' : 'قراءة مثال مرجعي' }} 👁️
-              </button>
+
             </div>
 
-            <div v-if="simulatorReferenceVisible" class="space-y-3" data-testid="simulator-reference-panel">
-              <p class="text-xs text-slate-400">{{ simulatorReferenceTitle }} للقراءة والتجربة. تشغيله لا يستبدل نصك ولا يسجل اجتيازًا.</p>
-              <pre class="p-3 rounded-xl bg-slate-950 text-[11px] max-h-64 overflow-auto whitespace-pre text-slate-200" dir="ltr"><code>{{ simulatorReferenceCode }}</code></pre>
-              <button @click="copyCode(simulatorReferenceCode)" class="p-2 underline text-xs">نسخ المثال</button>
-            </div>
-            <button @click="runSimulatorReference" data-testid="simulator-reference-run" class="w-full py-3 px-4 rounded-xl bg-[#00DC82] hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all cursor-pointer">
-              جرّب المثال في المعاينة
-            </button>
+
           </div>
 
           <!-- Lesson Navigation Footer & Official Reference Link -->
@@ -2394,7 +2202,9 @@
               <span>→</span>
             </button>
           </div>
-        </div>
+            </div>
+          </details>
+        </section>
 
       </div>
     </div>

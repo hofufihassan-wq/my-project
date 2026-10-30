@@ -1,0 +1,173 @@
+/* 5B.1 dictionary correction, scoped to the dictionary workspace only. */
+#app[data-workspace="lexicon"] .lexicon-hero { min-height: 125px; padding: 20px 22px 14px; border-bottom: 1px solid var(--line); background: radial-gradient(ellipse at 85% 20%,var(--accent-soft),transparent 45%); }
+#app[data-workspace="lexicon"] .lexicon-hero h2 { font-size: 34px; gap: 13px; }
+#app[data-workspace="lexicon"] .lexicon-hero p { margin-top: 8px; font-size: 12px; }
+#app[data-workspace="lexicon"] .lexicon-hero .eyebrow { font-family: 'Alexandria',sans-serif; font-size: 8px; margin-bottom: 8px; }
+#app[data-workspace="lexicon"] .lexicon-hero::before { width: 320px; height: 120px; transform: rotate(-13deg); border-radius: 45%; inset-inline-start: -75px; top: 38px; background: linear-gradient(35deg,transparent,var(--accent-soft)); }
+#app[data-workspace="lexicon"] .lexicon-hero::after { content: 'V'; z-index: 0; width: 83px; height: 83px; inset-inline-end: 10%; top: 18px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 16px; color: var(--accent); background: linear-gradient(135deg,var(--accent-soft),transparent); font: 700 63px Arial,sans-serif; transform: perspective(250px) rotateY(-17deg) rotate(-12deg); box-shadow: inset 0 0 22px var(--accent-soft),0 0 38px var(--accent-soft); }
+#app[data-workspace="lexicon"] .hero-caption { top: 34px; font-size: 10px; padding: 13px 16px; max-width: 155px; }
+#app[data-workspace="lexicon"] .dictionary-toolbar { padding-block: 12px 0; }
+#app[data-workspace="lexicon"] .dictionary-toolbar input[type="text"] { padding-block: 12px; font-size: 12px; }
+#app[data-workspace="lexicon"] .dictionary-toolbar > .mt-6 { margin-top: 12px; }
+#app[data-workspace="lexicon"] .dictionary-toolbar > .mt-6 .ios-segment-btn { padding: 7px 12px; font-size: 10px; }
+#app[data-workspace="lexicon"] .dictionary-alphabet { max-width: 870px; margin: 9px auto 0; font-size: 9px; color: var(--muted); }
+#app[data-workspace="lexicon"] .dictionary-alphabet summary { cursor: pointer; text-align: center; padding: 4px 8px; }
+#app[data-workspace="lexicon"] .dictionary-alphabet summary span { font-family: 'JetBrains Mono',monospace; border: 1px solid var(--line); border-radius: 4px; padding: 1px 4px; margin-inline-start: 5px; color: var(--accent); }
+#app[data-workspace="lexicon"] .dictionary-toolbar > .mt-3 { margin-top: 5px; padding-block: 0; font-size: 9px; }
+#app[data-workspace="lexicon"] .dictionary-workspace { max-width: 1440px; padding: 14px 24px 36px; }
+#app[data-workspace="lexicon"] .dictionary-workspace > .grid { direction: ltr; grid-template-columns: 205px minmax(0,1fr) 215px; gap: 18px; display: grid; align-items: start; }
+#app[data-workspace="lexicon"] .dictionary-workspace > .grid > * { direction: rtl; min-width: 0; }
+#app[data-workspace="lexicon"] .term-directory { position: static; max-height: none; padding: 14px 11px; gap: 0; display: block; }
+.dictionary-category-heading { display: flex; align-items: center; gap: 8px; padding: 5px 4px 15px; color: var(--gold); font-size: 12px; font-weight: 600; border-bottom: 1px solid var(--line); }
+.dictionary-category-stack { display: grid; gap: 4px; margin-top: 9px; }
+.dictionary-category-stack button { display: flex; align-items: center; width: 100%; text-align: start; gap: 9px; border: 1px solid transparent; border-radius: 9px; color: var(--muted); padding: 9px 7px; font-size: 10px; }
+.dictionary-category-stack button[aria-current="true"] { background: linear-gradient(100deg,var(--accent-soft),var(--gold-soft)); color: var(--gold); border-color: var(--line-strong); box-shadow: inset 0 0 16px var(--accent-soft); }
+.dictionary-category-stack button > span { width: 24px; font-size: 17px; }
+.dictionary-category-stack button > strong { flex: 1; font-weight: 500; }
+.dictionary-category-stack button > small { min-width: 23px; border-radius: 15px; padding: 3px 5px; background: var(--accent-soft); color: var(--muted); font-family: 'JetBrains Mono',monospace; font-size: 8px; text-align: center; }
+.dictionary-term-list { margin-top: 13px; border-top: 1px solid var(--line); padding-top: 9px; }
+.dictionary-term-list > summary { cursor: pointer; font-size: 10px; color: var(--ink); padding: 9px 2px; }
+.dictionary-term-list > summary span { font-family: 'JetBrains Mono',monospace; color: var(--accent); margin-inline-start: 10px; }
+.dictionary-term-list > .flex:first-of-type { display: none; }
+.dictionary-term-list > .overflow-y-auto { max-height: 220px; margin-top: 6px; }
+#app[data-workspace="lexicon"] .dictionary-term-list .group { padding: 9px; }
+#app[data-workspace="lexicon"] .dictionary-term-list .group [dir="ltr"] { font-size: 10px; }
+#app[data-workspace="lexicon"] .dictionary-term-list .group [class*="catBadgeColor"] { font-size: 8px; }
+#app[data-workspace="lexicon"] .dictionary-detail { width: 100%; min-width: 0; }
+#app[data-workspace="lexicon"] .dictionary-term-card { padding: 18px; border-radius: 16px; background: linear-gradient(140deg,var(--surface-raised),var(--glass) 48%); }
+.dictionary-breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: 8px; margin-bottom: 11px; }
+.dictionary-breadcrumb span:last-child { color: var(--ink); }
+.dictionary-title-row { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+.dictionary-title-row h2 { color: var(--ink); font-family: 'JetBrains Mono',monospace; font-size: clamp(24px,2.3vw,34px); font-weight: 700; line-height: 1.3; display: inline-flex; align-items: center; gap: 12px; overflow-wrap: anywhere; }
+.dictionary-term-dot { color: var(--accent); font-size: 14px; }
+.dictionary-title-row p { color: var(--muted); font-size: 11px; line-height: 1.8; margin-top: 5px; }
+.dictionary-tech-mark { width: 43px; height: 43px; display: grid; place-items: center; color: var(--accent); font: 800 30px Arial,sans-serif; filter: drop-shadow(0 0 12px var(--accent-soft)); }
+.dictionary-title-actions { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; padding-block: 11px 14px; }
+.dictionary-title-actions > button,.dictionary-title-actions > a { border: 1px solid var(--line); background: var(--accent-soft); color: var(--gold); font-size: 9px; padding: 6px 9px; border-radius: 7px; }
+.dictionary-title-actions > a { color: var(--muted); }
+.dictionary-mastery { margin-inline-start: auto; display: flex; gap: 4px; align-items: center; font-size: 8px; color: var(--muted); }
+.dictionary-mastery button { color: var(--muted); padding: 4px 7px; border: 1px solid transparent; border-radius: 6px; }
+.dictionary-mastery button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border-color: var(--line); }
+.dictionary-content-tabs { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: var(--accent-soft); }
+.dictionary-content-tabs button { display: flex; align-items: center; justify-content: center; flex: 1; min-width: 0; gap: 6px; padding: 9px 5px; font-size: 10px; color: var(--muted); border-radius: 8px; border: 1px solid transparent; white-space: nowrap; }
+.dictionary-content-tabs button[aria-selected="true"] { border-color: var(--line-strong); color: var(--gold); background: linear-gradient(110deg,var(--accent-soft),var(--gold-soft)); box-shadow: inset 0 0 15px var(--accent-soft); }
+#app[data-workspace="lexicon"] .dictionary-content-tabs svg { width: 15px; height: 15px; }
+.dictionary-copy-panel { margin-top: 10px; padding: 13px 15px; border: 1px solid var(--line); border-radius: 11px; background: var(--glass); font-size: 11px; line-height: 1.95; color: var(--muted); }
+.dictionary-copy-panel h3 { color: var(--ink); font-weight: 600; font-size: 11px; margin-bottom: 4px; }
+.dictionary-summary { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dictionary-copy-panel li { padding-block: 3px; }
+.dictionary-copy-panel ul { list-style: disc; padding-inline-start: 18px; }
+.dictionary-copy-panel details { font-size: 10px; border-top: 1px solid var(--line); margin-top: 9px; padding-top: 7px; }
+.dictionary-copy-panel summary { color: var(--accent); cursor: pointer; }
+.dictionary-facts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; padding-top: 9px; }
+.dictionary-facts div { min-width: 0; }
+.dictionary-facts dt { color: var(--muted); font-size: 8px; }
+.dictionary-facts dd { color: var(--gold); font-size: 9px; overflow-wrap: anywhere; margin-top: 5px; }
+.dictionary-example-grid { display: grid; direction: ltr; grid-template-columns: minmax(0,1.12fr) minmax(0,1fr); gap: 11px; margin-top: 12px; align-items: stretch; }
+.dictionary-editor-panel,.dictionary-live-panel { min-width: 0; border: 1px solid var(--line-strong); border-radius: 12px; overflow: hidden; background: var(--glass); direction: rtl; display: flex; flex-direction: column; }
+.dictionary-panel-title { display: flex; justify-content: space-between; align-items: center; gap: 5px; padding: 10px 11px; border-bottom: 1px solid var(--line); }
+.dictionary-panel-title strong { display: flex; gap: 6px; align-items: center; font-size: 10px; font-weight: 500; color: var(--ink); }
+.dictionary-panel-title strong svg { color: var(--accent); }
+.dictionary-panel-title button { color: var(--gold); font-size: 8px; padding: 5px 7px; border-radius: 6px; border: 1px solid var(--line); }
+.dictionary-panel-title .dictionary-run-example { background: var(--accent-soft); border-color: var(--line-strong); }
+.dictionary-editor-formats { display: flex; gap: 5px; align-items: center; justify-content: space-between; padding: 7px 9px; font-size: 8px; color: var(--muted); border-bottom: 1px solid var(--line); }
+.dictionary-editor-formats .ios-segmented-control { display: flex; padding: 2px; border-radius: 6px; gap: 1px; }
+.dictionary-editor-formats .ios-segment-btn { padding: 4px 5px; font-size: 8px; border-radius: 4px; }
+#app[data-workspace="lexicon"] textarea.dictionary-code-editor { width: 100%; min-height: 310px; height: 310px; resize: vertical; padding: 14px 11px; border: 0; border-radius: 0; background: #041017; color: #d1e8e8; font: 10px/1.8 'JetBrains Mono',monospace; tab-size: 2; white-space: pre; direction: ltr; text-align: left; overflow: auto; outline: 0; }
+.dictionary-editor-footer { min-height: 35px; display: flex; gap: 6px; padding: 9px; justify-content: space-between; color: var(--muted); font-size: 8px; border-top: 1px solid var(--line); }
+.dictionary-editor-footer button { color: var(--accent); }
+.dictionary-preview-status { min-height: 32px; display: flex; align-items: center; justify-content: space-between; gap: 5px; padding: 8px 9px; font-size: 8px; color: var(--muted); border-bottom: 1px solid var(--line); }
+.dictionary-preview-status [data-state="error"] { color: #fda4af; }
+.dictionary-preview-status [data-state="preview_ready"] { color: var(--accent); }
+.dictionary-preview-status button { color: var(--muted); }
+.dictionary-live-panel iframe { width: 100%; height: 310px; flex: 1; min-height: 260px; border: 0; background: #070d1e; }
+.dictionary-preview-messages { max-height: 100px; overflow: auto; padding: 9px 11px; font-size: 9px; border-top: 1px solid var(--line); color: var(--muted); }
+.dictionary-preview-messages p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.dictionary-preview-messages [data-level="error"] { color: #fda4af; }
+.dictionary-preview-help { font-size: 8px; line-height: 1.9; color: var(--muted); padding: 9px 11px; border-top: 1px solid var(--line); }
+.dictionary-properties,.dictionary-studio { margin-top: 13px; border: 1px solid var(--line); border-radius: 9px; color: var(--muted); font-size: 10px; }
+.dictionary-properties > summary,.dictionary-studio > summary { cursor: pointer; padding: 12px; color: var(--ink); }
+.dictionary-properties > div,.dictionary-studio > div { margin: 10px; }
+.dictionary-table-scroll { overflow-x: auto; }
+.dictionary-properties table { width: 100%; text-align: start; font-size: 10px; line-height: 1.8; }
+.dictionary-properties th,.dictionary-properties td { padding: 8px; border-bottom: 1px solid var(--line); }
+.dictionary-properties th { color: var(--gold); }
+.dictionary-related-inline { margin-top: 12px; font-size: 10px; color: var(--muted); }
+.dictionary-related-inline > div { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 7px; }
+.dictionary-related-inline button { border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; color: var(--accent); font-size: 9px; }
+.dictionary-empty { padding: 35px 20px; text-align: center; color: var(--muted); font-size: 11px; border-radius: 14px; }
+.dictionary-empty h2 { color: var(--ink); font-size: 15px; margin-bottom: 10px; }
+.dictionary-empty button { color: var(--accent); margin-top: 15px; }
+#app[data-workspace="lexicon"] .dictionary-related { display: block; }
+#app[data-workspace="lexicon"] .dictionary-related .recent-row { padding: 10px; margin-top: 7px; }
+#app[data-workspace="lexicon"] .dictionary-related .recent-row > span { font-size: 9px; line-height: 1.7; }
+#app[data-workspace="lexicon"] .dictionary-related > section { padding: 13px 10px; }
+#app[data-workspace="lexicon"] .dictionary-related .panel-heading { padding-bottom: 8px; margin-bottom: 8px; }
+#app[data-workspace="lexicon"] .dictionary-related h3 { font-size: 10px; margin-bottom: 0; }
+#app[data-workspace="lexicon"] .dictionary-related .subtle-button { font-size: 9px; }
+@media (max-width: 1199px) {
+  #app[data-workspace="lexicon"] .dictionary-workspace > .grid { grid-template-columns: 185px minmax(0,1fr); gap: 14px; }
+  #app[data-workspace="lexicon"] .dictionary-related { display: none; }
+}
+@media (max-width: 850px) {
+  #app[data-workspace="lexicon"] .dictionary-workspace { padding-inline: 16px; }
+  #app[data-workspace="lexicon"] .dictionary-workspace > .grid { grid-template-columns: 170px minmax(0,1fr); gap: 12px; }
+  #app[data-workspace="lexicon"] .dictionary-workspace .term-directory { width: auto; max-height: none; }
+  #app[data-workspace="lexicon"] .dictionary-term-card { padding: 13px; }
+  .dictionary-example-grid { grid-template-columns: minmax(0,1fr); }
+  .dictionary-content-tabs { gap: 1px; }
+  .dictionary-content-tabs button { gap: 4px; padding: 8px 4px; font-size: 9px; }
+  .dictionary-content-tabs button svg { display: none; }
+  .dictionary-mastery { margin-inline-start: 0; }
+  .dictionary-title-row h2 { font-size: 27px; }
+  #app[data-workspace="lexicon"] .lexicon-hero::after { inset-inline-end: 5%; }
+  #app[data-workspace="lexicon"] .hero-caption { max-width: 125px; font-size: 8px; }
+}
+@media (max-width: 600px) {
+  #app[data-workspace="lexicon"] .lexicon-hero { min-height: 112px; padding: 18px 12px 12px; }
+  #app[data-workspace="lexicon"] .lexicon-hero h2 { font-size: 29px; }
+  #app[data-workspace="lexicon"] .lexicon-hero p { font-size: 10px; }
+  #app[data-workspace="lexicon"] .lexicon-hero::after { display: none; }
+  #app[data-workspace="lexicon"] .hero-caption { display: none; }
+  #app[data-workspace="lexicon"] .dictionary-toolbar { padding-inline: 14px; }
+  #app[data-workspace="lexicon"] .dictionary-toolbar > .mt-6 .ios-segmented-control { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; justify-content: start; }
+  #app[data-workspace="lexicon"] .dictionary-toolbar > .mt-6 { justify-content: start; }
+  #app[data-workspace="lexicon"] .dictionary-toolbar > .mt-6 .ios-segment-btn { white-space: nowrap; flex-shrink: 0; padding: 7px 9px; }
+  #app[data-workspace="lexicon"] .dictionary-workspace { padding: 12px 14px 28px; }
+  #app[data-workspace="lexicon"] .dictionary-workspace > .grid { display: flex; flex-direction: column; gap: 12px; }
+  #app[data-workspace="lexicon"] .dictionary-workspace .term-directory { width: 100%; padding: 10px; }
+  .dictionary-category-heading,.dictionary-category-stack { display: none; }
+  .dictionary-term-list { border: 0; padding: 0; margin: 0; }
+  .dictionary-term-list > summary { padding: 5px 4px; }
+  .dictionary-term-list > .overflow-y-auto { display: flex; gap: 7px; max-height: 90px; overflow-x: auto; padding-bottom: 3px; }
+  #app[data-workspace="lexicon"] .dictionary-term-list .group { min-width: 146px; margin-top: 0; min-height: 66px; }
+  #app[data-workspace="lexicon"] .dictionary-term-list .group .line-clamp-1 { font-size: 8px; }
+  #app[data-workspace="lexicon"] .dictionary-term-list .group > .space-y-1 > .flex { gap: 4px; }
+  #app[data-workspace="lexicon"] .dictionary-term-card { padding: 12px; }
+  .dictionary-title-row h2 { font-size: 27px; }
+  .dictionary-title-row p { font-size: 10px; }
+  .dictionary-tech-mark { font-size: 25px; width: 33px; }
+  .dictionary-title-actions { gap: 5px; }
+  .dictionary-content-tabs { overflow-x: auto; }
+  .dictionary-content-tabs button { flex: 0 0 auto; min-width: 62px; font-size: 9px; padding: 9px 7px; }
+  .dictionary-copy-panel { font-size: 10px; padding: 11px; }
+  .dictionary-facts { grid-template-columns: minmax(0,1fr); }
+  #app[data-workspace="lexicon"] textarea.dictionary-code-editor { font-size: 10px; min-height: 280px; }
+}
+
+/* Scroll-synchronized line gutter; no source parsing or source mutation. */
+.dictionary-editor-surface { display: flex; min-width: 0; direction: ltr; background: #041017; }
+#app[data-workspace="lexicon"] .dictionary-line-gutter { flex: 0 0 34px; width: 34px; height: 310px; margin: 0; padding: 14px 7px 14px 0; overflow: hidden; user-select: none; border-radius: 0; border-inline-end: 1px solid var(--line); background: #06171e; color: #607f82; font: 10px/18px 'JetBrains Mono',monospace; text-align: right !important; }
+.dictionary-line-gutter > span { display: block; height: 18px; }
+#app[data-workspace="lexicon"] .dictionary-editor-surface textarea.dictionary-code-editor { min-width: 0; flex: 1; width: calc(100% - 34px); resize: vertical; }
+#app[data-workspace="lexicon"] .lexicon-hero::after { inset-inline-end: auto; right: 7%; left: auto; }
+@media (max-width: 850px) { #app[data-workspace="lexicon"] .lexicon-hero::after { inset-inline-end: auto; right: 4%; left: auto; } }
+/* Keep the editable example and live result close to the first viewport. */
+#app[data-workspace="lexicon"] .dictionary-stale-notice { color: var(--gold); font-size: 10px; line-height: 1.8; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+@media (min-width: 901px) {
+  #app[data-workspace="lexicon"] .lexicon-hero { min-height: 98px; padding-block: 13px 9px; }
+  #app[data-workspace="lexicon"] .lexicon-hero h2 { font-size: 32px; }
+  #app[data-workspace="lexicon"] .lexicon-hero .eyebrow { margin-bottom: 3px; }
+  #app[data-workspace="lexicon"] .hero-caption { top: 20px; }
+  #app[data-workspace="lexicon"] .lexicon-hero::after { top: 10px; width: 72px; height: 72px; font-size: 53px; }
+}

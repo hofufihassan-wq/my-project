@@ -1,0 +1,136 @@
+/* 5B.1 simulator composition. Scope intentionally excludes home and training. */
+#app[data-workspace="practice"] .simulator-workspace { max-width: 1600px; padding: 16px 22px 36px; gap: 14px; }
+#app[data-workspace="practice"] .simulator-workspace > div.space-y-5 > .ios-glass-panel { padding: 12px 16px; border-radius: 12px; background: linear-gradient(120deg,#071b2b,#04111f); box-shadow: 0 0 20px #0b83c412; }
+#app[data-workspace="practice"] .sim-workbench-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; padding: 12px 14px; border: 1px solid #227ca4; border-radius: 12px; background: linear-gradient(110deg,#081d30,#051320); box-shadow: inset 0 0 30px #089bce0c; }
+#app[data-workspace="practice"] .sim-workbench-title { display: flex; gap: 10px; align-items: center; min-width: 0; }
+#app[data-workspace="practice"] .sim-workbench-title > span { width: 33px; height: 33px; border: 1px solid #205975; border-radius: 9px; display: grid; place-items: center; color: #6ce4fc; font-size: 23px; }
+#app[data-workspace="practice"] .sim-workbench-title strong { display: block; font-size: 12px; line-height: 1.9; color: #dceeff; }
+#app[data-workspace="practice"] .sim-workbench-title small { color: #82a9bf; font-size: 9px; }
+#app[data-workspace="practice"] .sim-layout-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
+#app[data-workspace="practice"] .sim-layout-tools button { min-height: 32px; padding: 7px 9px; border-radius: 7px; font-size: 9px; color: #add4ec; border: 1px solid #25516c; background: #071b2d; }
+#app[data-workspace="practice"] .sim-layout-tools button[aria-pressed="true"] { border-color: #55daff; color: #91eaff; background: #12374a; }
+#app[data-workspace="practice"] .sim-width-control { display: flex; align-items: center; gap: 7px; color: #89b7d0; font-size: 9px; }
+#app[data-workspace="practice"] .sim-width-control input { width: 75px; accent-color: #34c6f3; direction: ltr; }
+#app[data-workspace="practice"] .lesson-workspace-grid { display: grid; direction: ltr; grid-template-columns: minmax(0,var(--sim-editor-track,55fr)) minmax(180px,230px) minmax(0,var(--sim-preview-track,45fr)); grid-template-areas: "editor flow preview" "console flow preview" "instructions instructions instructions"; gap: 14px; align-items: start; }
+#app[data-workspace="practice"] .lesson-area-editor { grid-area: editor; width: 100%; min-width: 0; border: 1px solid #176389; border-radius: 12px; background: #03121f; box-shadow: 0 0 0 3px #0a304329, 0 0 28px #098fce0c; }
+#app[data-workspace="practice"] .lesson-area-editor > div:first-child { padding: 10px 12px; min-height: 69px; gap: 8px; background: linear-gradient(90deg,#092237,#061624); }
+#app[data-workspace="practice"] .lesson-area-editor > div:first-child > div:last-child { gap: 7px; }
+#app[data-workspace="practice"] .lesson-area-editor > div:first-child label { font-size: 9px; }
+#app[data-workspace="practice"] .sim-editor-body { min-height: 445px; height: 445px; resize: vertical; overflow: auto; max-height: 76vh; }
+#app[data-workspace="practice"] .sim-editor-body .editor-gutter { flex: 0 0 42px; padding-inline: 4px 8px; background: #04101d; color: #4b718c; overflow: hidden; }
+#app[data-workspace="practice"] .lesson-area-editor textarea.editor-textarea { display: block; min-height: 100%; height: 100%; font-size: 12px; line-height: 24px; color: #d5e4f2; background: #03111d; padding: 12px; resize: none; overflow: auto; }
+#app[data-workspace="practice"] .lesson-area-console { grid-area: console; min-width: 0; border: 1px solid #185775; border-radius: 12px; overflow: hidden; background: #03111e; box-shadow: 0 0 18px #0676bb0a; }
+#app[data-workspace="practice"] .lesson-area-console > div:first-child { background: linear-gradient(90deg,#082137,#041524); padding: 10px 12px; font-size: 11px; }
+#app[data-workspace="practice"] .lesson-area-console .sim-console-body { min-height: 145px; max-height: 260px; height: 145px; resize: vertical; overflow: auto; padding: 10px 12px; line-height: 1.9; }
+#app[data-workspace="practice"] .lesson-area-console .sim-console-body > div { padding-block: 5px; }
+#app[data-workspace="practice"] .lesson-area-flow { grid-area: flow; min-width: 0; align-self: stretch; padding: 15px 13px; border-radius: 12px; border: 1px solid #174d6c; position: relative; overflow: hidden; background: radial-gradient(ellipse at 45% 30%,#0b41603b,transparent 70%),#041320; }
+#app[data-workspace="practice"] .lesson-area-flow::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg,transparent 0 30px,#158ac00a 31px 32px),repeating-linear-gradient(90deg,transparent 0 30px,#158ac00a 31px 32px); }
+#app[data-workspace="practice"] .sim-panel-title { display: flex; gap: 8px; align-items: center; color: #b6e5fa; position: relative; font-size: 11px; }
+#app[data-workspace="practice"] .sim-panel-title > span:first-child { color: #64d6f8; font-size: 19px; }
+#app[data-workspace="practice"] .sim-panel-title h3 { font-size: 11px; font-weight: 600; }
+#app[data-workspace="practice"] .sim-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #456377; margin-inline-start: auto; }
+#app[data-workspace="practice"] .sim-live-dot.is-live { background: #52dcc9; box-shadow: 0 0 10px #38e6e477; }
+#app[data-workspace="practice"] .sim-trace-disclaimer { position: relative; color: #83aabd; font-size: 8px; line-height: 1.9; padding: 8px 0 12px; border-bottom: 1px solid #163c52; }
+#app[data-workspace="practice"] .sim-flow-track { display: flex; flex-direction: column; gap: 29px; margin: 24px 0 25px; position: relative; }
+#app[data-workspace="practice"] .sim-flow-track::before { content: ''; position: absolute; top: 20px; bottom: 20px; width: 1px; left: 50%; background: linear-gradient(#2672a7,#3dcbea,#1156a4); box-shadow: 0 0 9px #2ebee788; }
+#app[data-workspace="practice"] .sim-flow-node { position: relative; display: flex; gap: 9px; align-items: center; min-height: 85px; padding: 12px 10px; border-radius: 11px; border: 1px solid #1e4966; background: linear-gradient(120deg,#0a263a,#061725); box-shadow: 0 0 0 4px #071a27; }
+#app[data-workspace="practice"] .sim-flow-node:not(:last-child)::after { content: '↓'; position: absolute; left: calc(50% - 7px); bottom: -24px; color: #3fb3e0; font-size: 19px; }
+#app[data-workspace="practice"] .sim-flow-node[data-state="received"] { border-color: #23769c; box-shadow: inset 0 0 18px #0d8cb314,0 0 0 4px #071a27; }
+#app[data-workspace="practice"] .sim-flow-node[data-state="error"] { border-color: #a6536c; background: linear-gradient(120deg,#291a31,#111829); }
+#app[data-workspace="practice"] .sim-flow-symbol { display: grid; place-items: center; flex: 0 0 31px; width: 31px; height: 34px; color: #6ad4ff; font-size: 22px; font-family: 'JetBrains Mono',monospace; }
+#app[data-workspace="practice"] .sim-flow-node strong { display: block; font-size: 10px; color: #d8eefd; font-weight: 600; }
+#app[data-workspace="practice"] .sim-flow-node small { display: block; font-size: 8px; line-height: 1.8; color: #88a9bd; margin-top: 6px; }
+#app[data-workspace="practice"] .sim-stage-status { margin-inline-start: auto; color: #6acdbd; font-size: 13px; }
+#app[data-workspace="practice"] .sim-flow-node[data-state="error"] .sim-stage-status { color: #ee829e; }
+#app[data-workspace="practice"] .sim-session-note { position: relative; padding: 12px; border: 1px solid #194a5e; background: #061c26; border-radius: 10px; text-align: center; }
+#app[data-workspace="practice"] .sim-session-note > span { color: #8fdfd1; font-size: 10px; }
+#app[data-workspace="practice"] .sim-session-note small { display: block; color: #789eaf; font-size: 8px; line-height: 1.9; margin-top: 7px; }
+#app[data-workspace="practice"] .sim-circuit { display: flex; align-items: center; justify-content: space-around; position: relative; height: 48px; gap: 8px; margin: 18px 10px 0; }
+#app[data-workspace="practice"] .sim-circuit::before { content: ''; width: 100%; height: 1px; background: linear-gradient(90deg,transparent,#2a97d0,transparent); position: absolute; }
+#app[data-workspace="practice"] .sim-circuit i { width: 4px; height: 4px; border-radius: 50%; background: #4ec4f3; box-shadow: 0 0 8px #33c6f6a3; }
+#app[data-workspace="practice"] .lesson-area-preview { grid-area: preview; width: 100%; align-self: stretch; min-width: 0; border: 1px solid #1e81a6; border-radius: 12px; background: #03121e; box-shadow: 0 0 0 3px #0a304329,0 0 28px #0e9fe30e; }
+#app[data-workspace="practice"] .lesson-area-preview > div:first-child { min-height: 50px; padding: 10px 14px; background: linear-gradient(90deg,#09273b,#051727); }
+#app[data-workspace="practice"] .lesson-area-preview > p { font-size: 9px; line-height: 1.8; padding: 8px 12px; }
+#app[data-workspace="practice"] .lesson-area-preview .sim-preview-viewport { flex: 1; min-height: 590px; height: auto; background: #03101c; }
+#app[data-workspace="practice"] .lesson-area-preview iframe { display: block; min-height: 590px; height: 100%; }
+#app[data-workspace="practice"] .sim-lesson-details { grid-area: instructions; position: static; max-height: none; overflow: visible; border: 1px solid #194e6b; border-radius: 12px; background: #061726; padding: 0; }
+#app[data-workspace="practice"] .sim-lesson-details summary { display: flex; gap: 10px; align-items: center; padding: 14px 16px; color: #b9ddf0; list-style: none; cursor: pointer; }
+#app[data-workspace="practice"] .sim-lesson-details summary::-webkit-details-marker { display: none; }
+#app[data-workspace="practice"] .sim-lesson-details summary::before { content: '+'; color: #5bd2f2; font-size: 18px; }
+#app[data-workspace="practice"] .sim-lesson-details details[open] > summary::before { content: '−'; }
+#app[data-workspace="practice"] .sim-lesson-details summary strong { font-size: 11px; }
+#app[data-workspace="practice"] .sim-lesson-details summary > span:nth-last-child(2) { color: #7197af; font-size: 10px; }
+#app[data-workspace="practice"] .sim-disclosure-hint { margin-inline-start: auto; font-size: 9px; color: #76afc6; }
+#app[data-workspace="practice"] .sim-lesson-body { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; border: 0; border-top: 1px solid #194e6b; border-radius: 0 0 12px 12px; padding: 18px; }
+#app[data-workspace="practice"] .sim-lesson-body > h2 { grid-column: 1 / -1; font-size: 18px; }
+#app[data-workspace="practice"] .sim-lesson-body > div:first-child { grid-column: 1 / -1; }
+#app[data-workspace="practice"] .sim-lesson-body > div:last-child { grid-column: 1 / -1; }
+/* Expanded panels retain the same iframe and model; only grid geometry changes. */
+#app[data-workspace="practice"] .lesson-workspace-grid[data-expanded="editor"] { grid-template-columns: minmax(0,1fr); grid-template-areas: "editor" "console" "instructions"; }
+#app[data-workspace="practice"] .lesson-workspace-grid[data-expanded="editor"] > :is(.lesson-area-flow,.lesson-area-preview) { display: none; }
+#app[data-workspace="practice"] .lesson-workspace-grid[data-expanded="preview"] { grid-template-columns: minmax(0,1fr); grid-template-areas: "preview" "instructions"; }
+#app[data-workspace="practice"] .lesson-workspace-grid[data-expanded="preview"] > :is(.lesson-area-flow,.lesson-area-editor,.lesson-area-console) { display: none; }
+#app[data-workspace="practice"] .lesson-workspace-grid[data-expanded="preview"] .lesson-area-preview .sim-preview-viewport,
+#app[data-workspace="practice"] .lesson-workspace-grid[data-expanded="preview"] .lesson-area-preview iframe { min-height: 680px; }
+@media (max-width: 1099px) {
+  #app[data-workspace="practice"] .lesson-workspace-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); grid-template-areas: "editor preview" "console preview" "flow flow" "instructions instructions"; }
+  #app[data-workspace="practice"] .lesson-area-flow { padding: 14px; }
+  #app[data-workspace="practice"] .sim-flow-track { flex-direction: row; gap: 13px; margin: 15px 0; }
+  #app[data-workspace="practice"] .sim-flow-track::before { top: 50%; left: 0; right: 0; height: 1px; width: 100%; bottom: auto; }
+  #app[data-workspace="practice"] .sim-flow-node { flex: 1; min-width: 0; min-height: 98px; gap: 6px; padding: 10px 8px; flex-direction: column; text-align: center; }
+  #app[data-workspace="practice"] .sim-flow-node:not(:last-child)::after { display: none; }
+  #app[data-workspace="practice"] .sim-flow-symbol { font-size: 20px; height: 23px; width: 25px; flex-basis: 23px; }
+  #app[data-workspace="practice"] .sim-flow-node small { font-size: 8px; }
+  #app[data-workspace="practice"] .sim-stage-status { position: absolute; top: 8px; right: 8px; }
+  #app[data-workspace="practice"] .sim-session-note { padding: 9px 12px; }
+  #app[data-workspace="practice"] .sim-circuit { display: none; }
+  #app[data-workspace="practice"] .sim-editor-body { height: 410px; min-height: 410px; }
+  #app[data-workspace="practice"] .lesson-area-preview .sim-preview-viewport,
+  #app[data-workspace="practice"] .lesson-area-preview iframe { min-height: 600px; }
+  #app[data-workspace="practice"] .sim-lesson-body { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #app[data-workspace="practice"] .sim-width-control { display: none; }
+}
+@media (max-width: 639px) {
+  #app[data-workspace="practice"] .simulator-workspace { padding: 12px 12px 30px; }
+  #app[data-workspace="practice"] .sim-workbench-controls { gap: 12px; padding: 12px; }
+  #app[data-workspace="practice"] .sim-workbench-title { flex-basis: 100%; }
+  #app[data-workspace="practice"] .sim-workbench-controls > .flex { flex-wrap: wrap; gap: 7px; }
+  #app[data-workspace="practice"] .sim-workbench-controls button { font-size: 10px; padding: 8px; }
+  #app[data-workspace="practice"] .sim-layout-tools { width: 100%; }
+  #app[data-workspace="practice"] .sim-layout-tools button { flex: 1; font-size: 9px; }
+  #app[data-workspace="practice"] .lesson-workspace-grid { display: flex; flex-direction: column; gap: 13px; }
+  #app[data-workspace="practice"] .lesson-area-editor { order: 1; }
+  #app[data-workspace="practice"] .lesson-area-console { order: 2; width: 100%; }
+  #app[data-workspace="practice"] .lesson-area-flow { order: 3; width: 100%; }
+  #app[data-workspace="practice"] .lesson-area-preview { order: 4; width: 100%; }
+  #app[data-workspace="practice"] .sim-lesson-details { order: 5; width: 100%; }
+  #app[data-workspace="practice"] .sim-editor-body { height: 360px; min-height: 360px; }
+  #app[data-workspace="practice"] .lesson-area-editor > div:first-child { min-height: 86px; }
+  #app[data-workspace="practice"] .lesson-area-console .sim-console-body { min-height: 120px; height: 120px; }
+  #app[data-workspace="practice"] .sim-flow-track { gap: 7px; flex-wrap: wrap; }
+  #app[data-workspace="practice"] .sim-flow-node { flex: 0 0 calc(50% - 4px); min-height: 108px; }
+  #app[data-workspace="practice"] .lesson-area-preview .sim-preview-viewport,
+  #app[data-workspace="practice"] .lesson-area-preview iframe { min-height: 380px; height: 380px; }
+  #app[data-workspace="practice"] .sim-lesson-details summary { flex-wrap: wrap; gap: 8px; padding: 13px; }
+  #app[data-workspace="practice"] .sim-lesson-details summary > span:nth-last-child(2) { flex-basis: 100%; }
+  #app[data-workspace="practice"] .sim-lesson-body { display: flex; padding: 12px; }
+}
+#app[data-workspace="practice"] .lesson-area-editor [data-testid="simulator-reference-toggle"] { font-size: 9px; padding: 6px 8px; }
+#app[data-workspace="practice"] .lesson-area-editor .sim-reference-run { font-size: 9px; padding: 6px 8px; min-height: 28px; }
+#app[data-workspace="practice"] .sim-reference-tray { border-top: 1px solid #285975; background: #081b2a; padding: 14px; direction: rtl; }
+#app[data-workspace="practice"] .sim-reference-tray p { font-size: 10px; color: #9bb8cd; line-height: 1.9; }
+#app[data-workspace="practice"] .sim-reference-tray pre { background: #03111c; border: 1px solid #164966; color: #c2e0f3; max-height: 210px; }
+#app[data-workspace="practice"] .sim-reference-tray { padding: 10px 12px; }
+#app[data-workspace="practice"] .sim-reference-tray > p { font-size: 9px; }
+#app[data-workspace="practice"] .sim-reference-tray details { margin-top: 6px; }
+#app[data-workspace="practice"] .sim-reference-tray summary { color: #91d8ef; font-size: 10px; cursor: pointer; }
+@media (min-width: 1100px) {
+  #app[data-workspace="practice"] .simulator-workspace > div.space-y-5 > .ios-glass-panel:first-child { padding-block: 7px; }
+  #app[data-workspace="practice"] .simulator-workspace .sim-workbench-controls { padding-block: 9px; }
+}
+/* The shared training markup keeps its existing instructions/editor/preview flow. */
+#app[data-workspace="training"] .lesson-area-console { order: 4; min-width: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+@media (min-width: 1024px) {
+  #app[data-workspace="training"] .lesson-workspace-grid { grid-template-areas: "editor instructions" "preview instructions" "console instructions"; }
+  #app[data-workspace="training"] .lesson-area-console { grid-area: console; }
+}

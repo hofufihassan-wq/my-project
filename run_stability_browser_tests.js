@@ -168,7 +168,8 @@ async function main(){
         await app(a=>{a.openSimulator();a.backToTracks();});assert.equal(await page.locator('[data-track]').count(),5);
         await page.locator('[data-track="vue"]').click();await ready();
         await app(a=>a.selectLesson('VUE-101'));await ready();
-        assert.equal(await page.locator('textarea.editor-textarea').evaluate(e=>getComputedStyle(e.closest('.lesson-workspace-grid')).display),width<1024?'flex':'grid');
+        // 5B.1 intentionally keeps editor and preview in two grid columns on tablets (>=640px).
+        assert.equal(await page.locator('textarea.editor-textarea').evaluate(e=>getComputedStyle(e.closest('.lesson-workspace-grid')).display),width<640?'flex':'grid');
         assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
         await page.getByTestId('simulator-reference-run').click();await ready();
         const frame=page.locator('iframe').contentFrame();await frame.locator('.count-display').waitFor();

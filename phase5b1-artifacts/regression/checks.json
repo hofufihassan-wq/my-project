@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-10-30T13:38:32Z",
+  "baseline": "a49a7c7",
+  "sourceHashes": {
+    "app.js": "077425cdd976592342dd137aea2c4d6f30b88cef38097943ba02f73f3f3f2230",
+    "index.html": "01ccc7842102eadda5e2932cff8ccb4ff840d2311a52ee80dfc0be6af7128de9",
+    "identity.css": "467d75013e077e3044adda6eed83e1cb5af50f03f975b4ddae789aef081a2175",
+    "tailwind.config.cjs": "7403886f28e77ad6be0b8e874413a2708e4aa179ae2fb413c7118534ab04871f",
+    "assets/tailwind-3.4.17.min.css": "8685dc13ad7f371dc9d53b05f8ebf82cd832a928e21e16e86b1bdf325d3423c7",
+    "assets/vendor/manifest.json": "c8b803db7073d986481c95dae63fec440c474b0b6a33634d684c3781823d280a",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "simulator-correction.css": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681",
+    "dictionary-correction.css": "dd797342dae2da394ebc09e7bd44ae747a72d1a8cfc5dc4d4dda91cc4a61cd54",
+    "run_stability_browser_tests.js": "28e9aebbb341153e033404366da9a3b9f7f065c1d533fb7d7a865786ccc978e0"
+  },
+  "results": [
+    {
+      "command": [
+        "node",
+        "run_preview_protocol_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "run_preview_protocol_tests.log",
+      "outputTail": "PASS: valid ready/log/error/snapshot messages accepted\nPASS: null origin alone never grants sender identity\nPASS: old run/foreign lesson/source ignored\nPASS: non-record ready payloads are rejected\nPASS: bootstrap precedes all user scripts without matching literal head strings\nPASS: stopped/missing frame ignores every message\nPASS: null/arrays/scalars/unknown or missing envelope fields rejected\nPASS: malformed payloads rejected without throwing\nPASS: oversized text/snapshots/counts rejected at protocol boundary\nPASS: payload is copied rather than retained\nPASS: malicious getter is ignored without exception\nPASS: instrumented child console accepts circular, BigInt, deep and throwing objects\nPASS: child error reporter survives circular unhandled rejection\nPASS: local Vue resolver changes only actual known script src attributes\nPASS: local dependency resolution preserves scripts, comments and quoted content\nPASS: dictionary selection respects the active tab and its declared language\nPASS: dictionary source is JSON encoded instead of interpolated into a script or markup\nPASS: output target evidence is optional for compatibility, bounded and typed\nPASS: initial DOM snapshot arrives before readiness and captures the output target\n\nPreview protocol and child console: 19/19 passed.\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_data_safety_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.26,
+      "log": "run_data_safety_tests.log",
+      "outputTail": "PASS Starter unlock/default normalization backs up a valid older record before writing\nPASS JSON null startup preserves exact raw recovery then initializes safely\nPASS Malformed local JSON, array, null item and draft object do not crash startup\nPASS Invalid import rejected before changing storage or any existing progress\nPASS Legacy, 3.5.0, 3.6.0 and 4.0.0 valid shapes import; empty draft retained\nPASS Status-only legacy import merges without erasing current draft\nPASS Failure to back up local data preserves original and blocks later writes\nPASS Partial storage write failure restores preceding keys and keeps reactive state\nPASS Oversized local draft is retained whole in recovery, valid sibling kept\nPASS UTF8 bytes measured consistently and JSON file max enforced\nPASS Quota warnings survive bookmark and mastery actions\nPASS Merged imported data cannot cross aggregate byte boundary; rejection is atomic\nPASS Normal export roundtrips; oversized current draft exports intact as warned raw recovery\nPASS Bookmark IDs, objects and legacy IDs resolve to one valid canonical record\nPASS Earlier null bookmark corruption retains valid siblings and an exact raw recovery copy\nData safety: 15/15 tests passed.\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_json_import_test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 2.88,
+      "log": "run_json_import_test.log",
+      "outputTail": "Running Strict JSON Import Unit Tests:\n✓ PASS [Valid payload with real IDs]: success -> تم استيراد البيانات المدعومة ودمجها بنجاح؛ النسخة السابقة محفوظة للاسترجاع ✓\n✓ PASS [Corrupted JSON syntax]: error -> تعذر الاستيراد: صيغة JSON غير صالحة\n✓ PASS [Root is array instead of object]: error -> تعذر الاستيراد: النسخة الاحتياطية: يجب أن يكون كائناً غير null\n✓ PASS [Unknown term ID in bookmarks]: error -> تعذر الاستيراد: معرف مصطلح غير معروف\n✓ PASS [Invalid mastery level value]: error -> تعذر الاستيراد: مستوى إتقان غير صالح\n✓ PASS [Unknown term in mastery]: error -> تعذر الاستيراد: معرف مصطلح غير معروف\n✓ PASS [Unknown lesson ID in practiceProgress]: error -> تعذر الاستيراد: معرف درس غير معروف\n✓ PASS [Invalid status in practiceProgress]: error -> تعذر الاستيراد: حالة درس غير صالحة\n✓ PASS [File size > 1MB]: error -> تعذر الاستيراد: حجم الملف يتجاوز 1 MiB. لم يتم تعديل أي بيانات.\n\nResult: 9/9 unit tests passed.\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_curriculum_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.03,
+      "log": "run_curriculum_tests.log",
+      "outputTail": "Source-only legacy checks: JS-101/TS-101 must reject missing DOM; other reference expectations remain historical.\n[✓ PASS] JS-101 (js): requires actual rendered target evidence\n[✓ PASS] JS-102 (js): رائع! نجحت في تطبيق التفرع الشرطي if/else عملياً.\n[✓ PASS] JS-103 (js): إنجاز ممتاز! تم توليد البطاقات عبر دالة map() بنجاح.\n[✓ PASS] HTML-101 (html): أحسنت! أتقنت صياغة الهيكل الدلالي في HTML5.\n[✓ PASS] HTML-102 (html): عمل رائع! تم إتقان الروابط والصور وإمكانية الوصول.\n[✓ PASS] HTML-103 (html): تهانينا! أتقنت إنشاء النماذج وحقول الإدخال والتحقق.\n[✓ PASS] CSS-101 (css): رائع جداً! تم تطبيق مبادئ نموذج الصندوق (Box Model) بدقة.\n[✓ PASS] CSS-102 (css): ممتاز! أتقنت محاذاة العناصر بنظام Flexbox المرن.\n[✓ PASS] CSS-103 (css): أداء رائع! أصبحت شبكة CSS Grid جاهزة ومتجاوبة مع كافة الشاشات.\n[✓ PASS] TS-101 (ts): requires actual rendered target evidence\n[✓ PASS] TS-102 (ts): ممتاز! فهمت دور Interfaces في توثيق وضمان بنية البيانات.\n[✓ PASS] TS-103 (ts): رائع جداً! أتقنت تضييق الأنواع Type Narrowing في TypeScript.\n[✓ PASS] VUE-101 (vue): أحسنت! أتقنت أساسيات التفاعلية مع ref() في Vue 3.\n[✓ PASS] VUE-102 (vue): رائع جداً! أتقنت توجيهات الشروط والتكرار في Vue 3.\n[✓ PASS] VUE-103 (vue): إنجاز رائع! أتقنت بناء المكونات وتمرير الخصائص Props في Vue 3.\n\nCurriculum source-only expectations: 15/15 passed. Real reference execution is covered by run_stability_browser_tests.js.\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_content_integrity_test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "run_content_integrity_test.log",
+      "outputTail": "PASS: original content SHA-256 hashes; 180 unique terms; 15 unique lessons across 5 tracks, 3 each.\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_legacy_validator_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "run_legacy_validator_tests.log",
+      "outputTail": "PASS JS-101 rejects the documented false positive without DOM\nPASS JS-101 reference source alone cannot claim a rendered result\nPASS JS-101 ignores unrelated body text and wrong target text\nPASS JS-101 null/absent evidence is rejected without throwing\nPASS JS-101 valid isolated target text still accepts the reference fixture\nPASS TS-101 rejects the documented false positive without DOM\nPASS TS-101 reference source alone cannot claim a rendered result\nPASS TS-101 ignores unrelated body text and wrong target text\nPASS TS-101 null/absent evidence is rejected without throwing\nPASS TS-101 valid isolated target text still accepts the reference fixture\n10/10 legacy validator checks passed\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/assets.py",
+        "verify"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "verify.log",
+      "outputTail": "PASS: 27 local runtime/license assets match their locked SHA-256 hashes.\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_dictionary_preview_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 19.62,
+      "log": "run_dictionary_preview_tests.log",
+      "outputTail": " block shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ custom block shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ CSS Modules shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ empty CSS Modules attribute shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ CSS preprocessor shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ top-level await shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ Options API async setup shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ setup returning a Promise shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ unknown Nuxt component shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ missing template data shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ malformed script shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ external CSS import shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ case-insensitive external CSS import shows an Arabic diagnostic without running unsupported code\nPASS /nested/app/ escaped closer inside a JS string preserves the string when fixing only the real legacy closer\nPASS /nested/app/ runtime error stays an error after DOM readiness\nPASS /nested/app/ new reference clears evidence; stop destroys timers and rejects stale messages\nPASS /nested/app/ imported drafts never auto-run when opening a dictionary reference; export and saved nulls survive\nPASS /nested/app/ real core files work offline in this path, without request failures or uncaught exceptions\n58/58 dictionary preview checks passed\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_phase0a_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 5.38,
+      "log": "run_phase0a_browser_tests.log",
+      "outputTail": "PASS JSON null local progress starts safely and keeps recoverable raw backup\nPASS codeDraft object import is rejected before any stored/user state changes\nPASS random JSON file rejected\nPASS supported legacy and versioned valid exports import\nPASS manual mode typing changes neither submitted code nor iframe document\nPASS auto mode debounces rapid edits and submits only latest source\nPASS circular object and BigInt console output does not stop user script\nPASS new run and stop discard snapshot and validation result\nPASS editing invalidates previous solution verification\nPASS foreign window messages and stale run IDs are ignored\nPASS late DOM readiness cannot turn thrown error into success\nPASS real interval stops after iframe reset; previous timer cannot contaminate new run\nPASS lesson change clears old verification and creates new lesson session\nPASS no application page errors during integration checks\n14/14 browser integration checks passed\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_simulator_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 9.42,
+      "log": "run_simulator_browser_tests.log",
+      "outputTail": "PASS simulator entry exists and preserves 180 terms and 15 examples\nPASS all 15 examples open even with locked historical status; navigation changes no historical records\nPASS previous and next example navigation needs no success grade\nPASS reference display is read-only and does not replace editor or saved draft\nPASS running reference submits a separate session while retaining original draft and historical status\nPASS manual editing keeps reference preview unchanged until draft run; empty draft survives navigation\nPASS sandbox, debounce and old-session message rejection remain active in simulator\nPASS reference and snapshot evidence resets on changing example\nPASS Vue reference is interactive and observations follow real button events without replacing draft\nPASS lexicon example runs separately and cannot overwrite any lesson draft or historical status\nPASS export includes original historical statuses and independently edited drafts\nPASS reload preserves drafts and changing sections cannot fire pending automatic run\nPASS imported active draft replaces editor only after commit; edit save reopen and reload preserve every other draft\nPASS empty and null imported drafts synchronize without rewriting their stored representation\nPASS status-only and other-lesson imports leave the active editor and preview untouched\nPASS rejected import and failed persistence cannot alter editor or current session\nPASS import invalidates reference and pending auto run without executing imported source\nPASS async file completion respects lesson selected at completion time\nPASS no application page errors in simulator checks\n19/19 simulator browser checks passed\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_runtime_assets_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 10.74,
+      "log": "run_runtime_assets_tests.log",
+      "outputTail": "PASS cold context 1, load 1: local assets mount with matching fonts/styles and no network\nPASS cold context 1, load 2: local assets mount with matching fonts/styles and no network\nPASS context 1: dictionary filtering and simulator layout retain CSS\nPASS context 1: VUE-101 loads local Vue and behaves correctly with Internet blocked\nPASS context 1: VUE-102 loads local Vue and behaves correctly with Internet blocked\nPASS context 1: VUE-103 loads local Vue and behaves correctly with Internet blocked\nPASS cold context 2, load 1: local assets mount with matching fonts/styles and no network\nPASS cold context 2, load 2: local assets mount with matching fonts/styles and no network\nPASS context 2: dictionary filtering and simulator layout retain CSS\nPASS context 2: VUE-101 loads local Vue and behaves correctly with Internet blocked\nPASS context 2: VUE-102 loads local Vue and behaves correctly with Internet blocked\nPASS context 2: VUE-103 loads local Vue and behaves correctly with Internet blocked\nPASS cold context 3, load 1: local assets mount with matching fonts/styles and no network\nPASS cold context 3, load 2: local assets mount with matching fonts/styles and no network\nPASS context 3: dictionary filtering and simulator layout retain CSS\nPASS context 3: VUE-101 loads local Vue and behaves correctly with Internet blocked\nPASS context 3: VUE-102 loads local Vue and behaves correctly with Internet blocked\nPASS context 3: VUE-103 loads local Vue and behaves correctly with Internet blocked\n18/18 actual runtime checks passed\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_stability_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 25.85,
+      "log": "run_stability_browser_tests.log",
+      "outputTail": "port and reload preserve data\nPASS chromium 1440 RTL Arabic fonts dark theme and layouts remain usable at this width\nPASS chromium 1440 no core external requests, failed resources or uncaught errors\nPASS chromium 1440 real reference execution and internal validator: JS-101\nPASS chromium 1440 real reference execution and internal validator: JS-102\nPASS chromium 1440 real reference execution and internal validator: JS-103\nPASS chromium 1440 real reference execution and internal validator: HTML-101\nPASS chromium 1440 real reference execution and internal validator: HTML-102\nPASS chromium 1440 real reference execution and internal validator: HTML-103\nPASS chromium 1440 real reference execution and internal validator: CSS-101\nPASS chromium 1440 real reference execution and internal validator: CSS-102\nPASS chromium 1440 real reference execution and internal validator: CSS-103\nPASS chromium 1440 real reference execution and internal validator: TS-101\nPASS chromium 1440 real reference execution and internal validator: TS-102\nPASS chromium 1440 real reference execution and internal validator: TS-103\nPASS chromium 1440 real reference execution and internal validator: VUE-101\nPASS chromium 1440 real reference execution and internal validator: VUE-102\nPASS chromium 1440 real reference execution and internal validator: VUE-103\nPASS chromium 1440 known false positives fail after actual isolated runs without output\nPASS chromium 1440 no uncaught exceptions after all fifteen real reference executions\nUNAVAILABLE firefox browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/firefox-1497/firefox/firefox\nUNAVAILABLE webkit browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh\n65/65 stability browser checks passed\n"
+    },
+    {
+      "command": [
+        "node",
+        "run_hands_on_verification.js"
+      ],
+      "exitCode": 0,
+      "seconds": 20.43,
+      "log": "run_hands_on_verification.log",
+      "outputTail": "ST-10: Tab setting toggle switch is present and interactive (Initial: true)\n[PASS ✓] TEST-11: JS-101 Greeting Card: Check Solution passes with green verification (All criteria met)\nSaved screenshot: 04_js101_passed_solution_1440.png (1440x900)\n[PASS ✓] TEST-12: Sequential unlock: JS-101 unlocks JS-102 (if/else) (JS-102 loaded)\n[PASS ✓] TEST-13: JS-102 if/else Authentication Toggle passes verification (Condition checked)\n[PASS ✓] TEST-14: Sequential unlock: JS-102 unlocks JS-103 (Arrays & map) (JS-103 loaded)\n[PASS ✓] TEST-15: JS-103 Arrays & map() passes with 3 generated cards (3 cards rendered in preview)\nSaved screenshot: 05_js103_map_cards_passed_1440.png (1440x900)\n[PASS ✓] TEST-16: Educational Timeline Simulation modal launches with step trace & memory table (Modal visible)\nSaved screenshot: 06_timeline_simulation_modal_1440.png (1440x900)\n[PASS ✓] TEST-17: Stop Execution button resets sandbox iframe & sets status to متوقف (State stopped)\nSaved screenshot: 07_stopped_execution_sandbox_1440.png (1440x900)\n[PASS ✓] TEST-18: Progressive hint 1 appears on demand (Hint 1 displayed)\nSaved screenshot: 08_responsive_mobile_360.png (360x740)\n[PASS ✓] TEST-19: Responsive Mobile 360px has zero unintended horizontal overflow (scrollWidth: 360px)\nSaved screenshot: 09_responsive_mobile_390.png (390x844)\nSaved screenshot: 10_responsive_tablet_768.png (768x1024)\nSaved screenshot: 11_responsive_desktop_1024.png (1024x768)\n[PASS ✓] TEST-20: Lexicon Search & Relevance filtering regression test (Results returned for map: 6)\n==============================================\nAutomated Test Suite Completed: 20/20 PASSED\nReport saved to /workspace/work/phase5b1-regression-results/final/run_hands_on_verification/hands_on_verification_report.json\n==============================================\n"
+    }
+  ],
+  "layoutExpectationRetest": "Previous 64/65 retained in previous-tablet-layout-expectation. The sole failure was obsolete flex expectation at 768px; updated exact expected breakpoint to approved >=640px grid. No runtime code or functional assertions changed."
+}
