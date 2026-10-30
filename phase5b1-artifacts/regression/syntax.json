@@ -1,0 +1,131 @@
+{
+  "passed": 25,
+  "total": 25,
+  "results": [
+    {
+      "file": "app.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "dictionary-preview.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "legacy-validator-guards.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "lexicon-data.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "practice-curriculum.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "preview-runner.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "progress-data.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_content_integrity_test.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_curriculum_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_data_safety_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_dictionary_inventory.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_dictionary_preview_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_hands_on_verification.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_json_import_test.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_legacy_validator_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_phase0a_browser_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_phase5b1_browser_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_phase5b_browser_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_preview_protocol_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_runtime_assets_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_simulator_browser_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "run_stability_browser_tests.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "simulator-guides.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "scripts/build-sfc-compiler.cjs",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "file": "tailwind.config.cjs",
+      "exitCode": 0,
+      "output": ""
+    }
+  ]
+}

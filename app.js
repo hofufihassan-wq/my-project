@@ -307,6 +307,35 @@ const app = createApp({
       return 'javascript';
     });
 
+    // Dictionary exploration copies are session-only and never enter lesson storage.
+    const dictionaryTab = ref('meaning');
+    const dictionaryEdits = ref({});
+    const dictionaryEditorKey = computed(() => (selectedTerm.value?.id || '') + ':' + activeCodeFormat.value);
+    const dictionaryEditorCode = computed(() => Object.hasOwn(dictionaryEdits.value, dictionaryEditorKey.value)
+      ? dictionaryEdits.value[dictionaryEditorKey.value] : currentCode.value);
+    const dictionaryEditorChanged = computed(() => dictionaryEditorCode.value !== currentCode.value);
+    function updateDictionaryEditor(event) {
+      dictionaryEdits.value = { ...dictionaryEdits.value, [dictionaryEditorKey.value]: event.target.value };
+    }
+    function handleDictionaryTabKeydown(event, id) {
+      const tabs = ['meaning', 'example', 'usage', 'compare', 'pitfalls'];
+      let index = tabs.indexOf(id);
+      if (event.key === 'ArrowLeft') index = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowRight') index = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') index = 0;
+      else if (event.key === 'End') index = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      dictionaryTab.value = tabs[index];
+      nextTick(() => document.getElementById('dictionary-tab-' + tabs[index])?.focus());
+    }
+    function resetDictionaryEditor() {
+      const next = { ...dictionaryEdits.value };
+      delete next[dictionaryEditorKey.value];
+      dictionaryEdits.value = next;
+    }
+    watch(() => selectedTerm.value?.id, () => { dictionaryTab.value = 'meaning'; });
+
     const highlightedCurrentCode = computed(() => {
       return highlightCode(currentCode.value, currentLang.value);
     });
@@ -1796,8 +1825,83 @@ const app = createApp({
       triggerToast(`فُتحت معاينة «${term.term}» دون استبدال مسودتك.`, 'info');
     }
 
+    // An independent dictionary session uses the same opaque-frame protocol.
+    // It cannot write into a practice draft or borrow a simulator run's identity.
+    const dictionaryPreviewRef = ref(null);
+    const dictionaryPreviewKey = ref(0);
+    const dictionaryPreviewState = ref('ready');
+    const dictionaryPreviewLogs = ref([]);
+    const dictionaryPreviewDoc = ref('<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><body style="background:#071416;color:#cbd5e1;font-family:system-ui;padding:24px">شغّل المثال لعرضه هنا. الكود الناقص أو غير المدعوم سيظهر بتشخيصه الأصلي.</body></html>');
+    const dictionaryPreviewSession = ref(null);
+    const dictionaryPreviewStale = computed(() => !!dictionaryPreviewSession.value && dictionaryPreviewSession.value.code !== dictionaryEditorCode.value);
+    let dictionaryRunSequence = 0;
+    function addDictionaryLog(type, msg) {
+      dictionaryPreviewLogs.value.unshift({ type, msg });
+      dictionaryPreviewLogs.value = dictionaryPreviewLogs.value.slice(0, 30);
+    }
+    function stopDictionaryPreview() {
+      dictionaryPreviewSession.value = null;
+      dictionaryPreviewState.value = 'stopped';
+      dictionaryPreviewLogs.value = [];
+      dictionaryPreviewDoc.value = '<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><body style="background:#071416;color:#cbd5e1;font-family:system-ui;padding:24px">المعاينة متوقفة. اضغط تشغيل المثال لفتح جلسة معزولة جديدة.</body></html>';
+      dictionaryPreviewKey.value++;
+    }
+    function runDictionaryPreview() {
+      if (!selectedTerm.value || appMode.value !== 'lexicon') return;
+      stopDictionaryPreview();
+      const code = dictionaryEditorCode.value;
+      if (window.VueLexiconData.bytes(code) > window.VueLexiconData.MAX_DRAFT_BYTES) {
+        dictionaryPreviewState.value = 'error';
+        addDictionaryLog('error', 'النص أكبر من حد التشغيل 128 KiB؛ بقي كاملًا في المحرر ولم يُقص.');
+        return;
+      }
+      const selected = window.VueLexiconRunner.selectDictionaryExample(selectedTerm.value, activeCodeFormat.value);
+      if (!selected) { dictionaryPreviewState.value = 'error'; addDictionaryLog('error', 'لا يوجد مثال مدعوم في هذا التبويب.'); return; }
+      const session = {
+        runId: 'dictionary-' + Date.now() + '-' + (++dictionaryRunSequence) + '-' + Math.random().toString(36).slice(2),
+        lessonId: selectedTerm.value.id, code, received: 0, previewReady: false
+      };
+      dictionaryPreviewSession.value = session;
+      const localAsset = path => new URL(path, document.baseURI).href;
+      try {
+        dictionaryPreviewDoc.value = window.VueLexiconRunner.buildDictionaryDocument({ ...selected, code }, session, {
+          vueRuntimeUrl: localAsset('assets/vendor/vue-3.4.21.global.prod.js'),
+          vueCompilerUrl: localAsset('assets/vendor/compiler-sfc-3.4.21.global.min.js'),
+          previewCssUrl: localAsset('assets/tailwind-3.4.17.min.css'),
+          dictionaryAdapterUrl: localAsset('dictionary-preview.js')
+        });
+        dictionaryPreviewKey.value++;
+        dictionaryPreviewState.value = 'running';
+      } catch (error) {
+        dictionaryPreviewSession.value = null;
+        dictionaryPreviewState.value = 'error';
+        addDictionaryLog('error', String(error.message || error));
+      }
+    }
+    function handleDictionaryMessage(event) {
+      const session = dictionaryPreviewSession.value;
+      const message = window.VueLexiconRunner.validateMessage(event, dictionaryPreviewRef.value?.contentWindow, session);
+      if (!message || appMode.value !== 'lexicon' || session.lessonId !== selectedTerm.value?.id || session.received >= 2000) return;
+      session.received++;
+      if (message.type === 'CONSOLE_LOG') addDictionaryLog(message.payload.level, message.payload.msg);
+      else if (message.type === 'EXECUTION_ERROR') {
+        dictionaryPreviewState.value = 'error';
+        addDictionaryLog('error', message.payload.msg);
+      } else if (message.type === 'PREVIEW_READY') {
+        session.previewReady = true;
+        if (dictionaryPreviewState.value === 'running') dictionaryPreviewState.value = 'preview_ready';
+      }
+    }
+    watch([selectedTerm, activeCodeFormat], () => {
+      if (dictionaryPreviewSession.value) stopDictionaryPreview();
+    }, { flush: 'sync' });
+    watch(appMode, (mode, previous) => {
+      if (previous === 'lexicon' && mode !== 'lexicon') stopDictionaryPreview();
+    }, { flush: 'sync' });
+
     // A sandbox origin of "null" is not identity. Match WindowProxy AND session.
     function handleWindowMessage(e) {
+      handleDictionaryMessage(e);
       const session = activeRun.value;
       const message = window.VueLexiconRunner.validateMessage(e, practiceIframeRef.value?.contentWindow, session);
       if (!message || session.lessonId !== currentLesson.value?.id || session.received >= 2000) return;
@@ -1826,6 +1930,23 @@ const app = createApp({
       if (!session || !session.previewReady || session.lessonId !== currentLesson.value?.id ||
           session.sourceRevision !== sourceRevision || !Object.hasOwn(lastDomSnapshot.value, 'bodyText')) return null;
       return lastDomSnapshot.value;
+    });
+    // Visual workbench controls are session-only and never touch drafts or sessions.
+    const simulatorReferenceReading = ref(false);
+    const simulatorExpandedPanel = ref('');
+    const simulatorEditorShare = ref(55);
+    function toggleSimulatorPanel(panel) {
+      if (!['editor', 'preview'].includes(panel)) return;
+      simulatorExpandedPanel.value = simulatorExpandedPanel.value === panel ? '' : panel;
+    }
+    const simulatorStages = computed(() => {
+      const session = activeRun.value;
+      return [
+        { id: 'source', icon: '</>', label: 'مصدر الكود', detail: session?.kind === 'reference' ? 'نسخة المثال المرجعي' : 'مسودة المحرر', state: 'received' },
+        { id: 'sent', icon: '↗', label: 'إرسال نسخة معزولة', detail: session ? 'أُرسلت نسخة إلى إطار المعاينة' : 'لم تبدأ جلسة تشغيل', state: session ? 'received' : 'pending' },
+        { id: 'ready', icon: '◇', label: 'جاهزية المعاينة', detail: executionState.value === 'error' ? 'راجع الخطأ الفعلي في Console' : session?.previewReady ? 'استُقبل إشعار الجاهزية من الإطار' : 'بانتظار إشعار الإطار', state: executionState.value === 'error' ? 'error' : session?.previewReady ? 'received' : 'pending' },
+        { id: 'observation', icon: '◉', label: 'ملاحظة الصفحة', detail: simulatorObservation.value ? 'وصلت لقطة DOM لهذه النسخة' : 'لا توجد لقطة مطابقة للمصدر الحالي', state: simulatorObservation.value ? 'received' : 'pending' }
+      ];
     });
     function getSimulatorDraftCount(trackId) {
       return practiceLessons.value.filter(lesson => lesson.track === trackId &&
@@ -1900,6 +2021,7 @@ const app = createApp({
         if (toastTimer) clearTimeout(toastTimer);
         cancelAutoRun();
         activeRun.value = null;
+        dictionaryPreviewSession.value = null;
       });
     });
 
@@ -1907,6 +2029,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
+      simulatorReferenceReading, simulatorExpandedPanel, simulatorEditorShare, toggleSimulatorPanel, simulatorStages,
       theme, setTheme, practiceSurface, openVisualSimulator, openTraining,
       foundationSections, activeFoundation, openFoundation,
       dashboardStats, dashboardMasteryPercent, dictionaryRelated, openDashboardTerm,
@@ -1959,6 +2082,9 @@ const app = createApp({
       exportRecoveryData,
       storageWarnings,
 
+      dictionaryPreviewRef, dictionaryPreviewKey, dictionaryPreviewState, dictionaryPreviewLogs, dictionaryPreviewDoc,
+      dictionaryPreviewSession, dictionaryPreviewStale, runDictionaryPreview, stopDictionaryPreview,
+      handleDictionaryTabKeydown, dictionaryTab, dictionaryEditorCode, dictionaryEditorChanged, updateDictionaryEditor, resetDictionaryEditor,
       // Code Formatting & Highlight
       activeCodeFormat,
       setCodeFormat,
