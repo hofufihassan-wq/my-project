@@ -223,6 +223,10 @@ async function main() {
     assert.equal(await app(a => a.practiceCode.includes('term-demo')), false);
     assert.deepEqual(await persisted(), before);
     const frame = page.locator('iframe[title="معاينة كود التمرين"]').contentFrame();
+    await frame.locator('#term-demo').evaluate(button => new Promise(resolve => {
+      if (button.ownerDocument.readyState === 'complete') resolve();
+      else button.ownerDocument.defaultView.addEventListener('load', resolve, { once:true });
+    }));
     await frame.locator('#term-demo').click();
     await page.waitForFunction(() => window.vueLexiconApp.simulatorObservation?.bodyText.includes('changed'));
     assert.equal(await frame.locator('#term-demo').textContent(), 'changed');
@@ -255,6 +259,105 @@ async function main() {
     await pause(500);
     assert.equal(await app(a => a.appMode), 'lexicon');
     assert.equal(await app(a => a.activeRun), null);
+  });
+  async function importProgress(payload) {
+    await app((a, payload) => {
+      a.toastMessage = ''; a.toastType = '';
+      a.importUserData({ target: { files: [new File([JSON.stringify(payload)], 'drafts.json')], value: 'drafts.json' } });
+    }, payload);
+    await page.waitForFunction(() => /استيراد|الاستيراد/.test(window.vueLexiconApp.toastMessage));
+    return app(a => a.toastType);
+  }
+  await test('imported active draft replaces editor only after commit; edit save reopen and reload preserve every other draft', async () => {
+    await app(a => { a.openSimulator(); a.practiceAutoRun = false; });
+    await select('JS-101');
+    const before = await persisted();
+    const imported = '<p id="card">new imported draft</p>';
+    assert.equal(await importProgress({ practiceProgress: { 'JS-101': { status: before['JS-101'].status, codeDraft: imported } } }), 'success');
+    assert.equal(await app(a => a.practiceCode), imported);
+    assert.equal(await app(a => a.activeRun), null);
+    assert.deepEqual(await app(a => a.lastDomSnapshot), {});
+    assert.equal(await app(a => a.validationFeedback), null);
+    const backups = await page.evaluate(() => Object.keys(localStorage).filter(k => k.startsWith('vuelexicon_recovery_import_')).map(k => JSON.parse(localStorage.getItem(k))));
+    assert(backups.some(b => b.vuelexicon_practice_progress && JSON.stringify(JSON.parse(b.vuelexicon_practice_progress)) === JSON.stringify(before)));
+    const edited = imported + '<p>edited after import</p>';
+    await page.locator('.editor-textarea').fill(edited);
+    assert.equal((await persisted())['JS-101'].codeDraft, edited);
+    for (const id of Object.keys(before).filter(id => id !== 'JS-101')) assert.deepEqual((await persisted())[id], before[id]);
+    await select('CSS-101'); await select('JS-101');
+    assert.equal(await app(a => a.practiceCode), edited);
+    await page.reload({ waitUntil: 'load' });
+    await page.waitForFunction(() => window.vueLexiconApp?.practiceLessons?.length === 15);
+    await app(a => a.openSimulator()); await select('JS-101');
+    assert.equal(await app(a => a.practiceCode), edited);
+    const downloadPromise = page.waitForEvent('download');
+    await app(a => a.exportUserData());
+    const download = await downloadPromise;
+    const exported = JSON.parse(fs.readFileSync(await download.path(), 'utf8'));
+    assert.deepEqual(exported.practiceProgress, await persisted());
+    assert.equal(exported.practiceProgress['JS-101'].codeDraft, edited);
+  });
+  await test('empty and null imported drafts synchronize without rewriting their stored representation', async () => {
+    for (const codeDraft of ['', null]) {
+      assert.equal(await importProgress({ practiceProgress: { 'JS-101': { status: 'unlocked', codeDraft } } }), 'success');
+      assert.equal(await app(a => a.practiceCode), codeDraft === null ? await app(a => a.currentLesson.initialCode) : '');
+      assert.equal((await persisted())['JS-101'].codeDraft, codeDraft);
+      assert.equal(await app(a => a.activeRun), null);
+    }
+  });
+  await test('status-only and other-lesson imports leave the active editor and preview untouched', async () => {
+    await run('<p id="card">keep active text</p>');
+    const before = await app(a => ({ code:a.practiceCode, key:a.practiceIframeKey, doc:a.practiceIframeDoc, run:a.activeRun.runId }));
+    assert.equal(await importProgress({ practiceProgress: { 'JS-101': { status: 'passed' }, 'CSS-101': { status: 'unlocked', codeDraft:'<p>other imported draft</p>' } } }), 'success');
+    assert.deepEqual(await app(a => ({ code:a.practiceCode, key:a.practiceIframeKey, doc:a.practiceIframeDoc, run:a.activeRun.runId })), before);
+    await select('CSS-101'); assert.equal(await app(a => a.practiceCode), '<p>other imported draft</p>');
+    await select('JS-101'); assert.equal(await app(a => a.practiceCode), before.code);
+  });
+  await test('rejected import and failed persistence cannot alter editor or current session', async () => {
+    const before = await app(a => ({ code:a.practiceCode, run:a.activeRun.runId, progress:JSON.stringify(a.practiceProgress) }));
+    assert.equal(await importProgress({ practiceProgress: { 'JS-101': { status:'passed', codeDraft:{} } } }), 'error');
+    await page.evaluate(() => {
+      window.originalSetItem = Storage.prototype.setItem;
+      Storage.prototype.setItem = function(key,value) {
+        if (key === 'vuelexicon_practice_progress' && value.includes('quota-import-probe')) throw new Error('quota test');
+        return window.originalSetItem.call(this,key,value);
+      };
+    });
+    try { assert.equal(await importProgress({ practiceProgress: { 'JS-101': { status:'passed', codeDraft:'quota-import-probe' } } }), 'error'); }
+    finally { await page.evaluate(() => { Storage.prototype.setItem = window.originalSetItem; delete window.originalSetItem; }); }
+    assert.deepEqual(await app(a => ({ code:a.practiceCode, run:a.activeRun.runId, progress:JSON.stringify(a.practiceProgress) })), before);
+  });
+  await test('import invalidates reference and pending auto run without executing imported source', async () => {
+    await app(a => { a.practiceAutoRun = true; a.runSimulatorReference(); a.practiceCode = '<p>pending before import</p>'; });
+    assert.equal(await importProgress({ practiceProgress: { 'JS-101': { status:'unlocked', codeDraft:'<script>parent.postMessage("should-not-run", "*")<\/script><p>auto import</p>' } } }), 'success');
+    const key = await app(a => a.practiceIframeKey);
+    await pause(500);
+    assert.equal(await app(a => a.practiceIframeKey), key);
+    assert.equal(await app(a => a.activeRun), null);
+    assert.equal(await app(a => a.simulatorReferenceVisible), false);
+    await page.locator('.editor-textarea').fill('<p id="card">user edit after auto import</p>');
+    await page.waitForFunction(() => window.vueLexiconApp.activeRun?.code.includes('user edit after auto import'));
+    await waitReady();
+    assert.equal(await app(a => a.activeRun.kind), 'draft');
+    await app(a => { a.practiceAutoRun = false; });
+  });
+  await test('async file completion respects lesson selected at completion time', async () => {
+    await select('JS-101');
+    await page.evaluate(() => {
+      window.savedReader = window.FileReader;
+      window.FileReader = class { readAsText() { window.pendingDraftReader = this; } };
+      window.vueLexiconApp.importUserData({ target: { files:[{size:100}], value:'pending.json' } });
+    });
+    await select('CSS-101');
+    const before = await app(a => a.practiceCode);
+    await page.evaluate(() => {
+      window.FileReader = window.savedReader;
+      window.pendingDraftReader.onload({ target: { result:JSON.stringify({practiceProgress:{'JS-101':{status:'unlocked',codeDraft:'<p>late JS import</p>'}}}) } });
+      delete window.savedReader; delete window.pendingDraftReader;
+    });
+    assert.equal(await app(a => a.practiceCode), before);
+    assert.equal(await app(a => a.currentLesson.id), 'CSS-101');
+    await select('JS-101'); assert.equal(await app(a => a.practiceCode), '<p>late JS import</p>');
   });
   await test('no application page errors in simulator checks', async () => assert.deepEqual(pageErrors, []));
   const passed = results.filter(r => r.passed).length;

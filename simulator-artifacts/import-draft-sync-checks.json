@@ -1,0 +1,238 @@
+{
+  "timestamp": "2026-10-30T01:14:42.353737+00:00",
+  "branch": "fix/imported-draft-editor-sync",
+  "all_passed": true,
+  "results": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "app.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "lexicon-data.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "practice-curriculum.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "preview-runner.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "progress-data.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_content_integrity_test.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_curriculum_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_data_safety_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_hands_on_verification.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_json_import_test.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_phase0a_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_preview_protocol_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "run_simulator_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "simulator-guides.js"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "--check"
+      ],
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "node",
+        "run_data_safety_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "Data safety: 13/13 tests passed."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_preview_protocol_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "Preview protocol and child console: 13/13 passed."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_json_import_test.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "Result: 9/9 unit tests passed."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_curriculum_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "Curriculum Solutions Verification: 15/15 lessons PASSED."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_content_integrity_test.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS: original content SHA-256 hashes; 180 unique terms; 15 unique lessons across 5 tracks, 3 each."
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_phase0a_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "14/14 browser integration checks passed"
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_simulator_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "19/19 simulator browser checks passed"
+      ]
+    },
+    {
+      "command": [
+        "node",
+        "run_hands_on_verification.js"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "=============================================="
+      ]
+    }
+  ],
+  "browser_fixture": "Vue 3.4.21 actual local test fixture; no CDN/style uptime claim; inherited test details in PHASE0A_REPORT.md"
+}

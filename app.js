@@ -461,7 +461,24 @@ const app = createApp({
           if (next.bookmarks) bookmarkedIds.value = new Set(next.bookmarks);
           if (next.mastery) termMastery.value = next.mastery;
           if (next.recent) recentViewedIds.value = next.recent;
-          if (next.practiceProgress) practiceProgress.value = next.practiceProgress;
+          if (next.practiceProgress) {
+            practiceProgress.value = next.practiceProgress;
+            const imported = data.practiceProgress[currentLesson.value?.id];
+            // Hydrate only an explicitly imported draft, after durable commit succeeds.
+            // Do not run imported code or let the editor watcher rewrite null as starter text.
+            if (imported && Object.hasOwn(imported, 'codeDraft')) {
+              stopPracticeExecution();
+              simulatorReferenceVisible.value = false;
+              simulatorExternalExample.value = null;
+              autocompleteVisible.value = false;
+              applyingImportedDraft = true;
+              try {
+                practiceCode.value = imported.codeDraft ?? currentLesson.value.initialCode;
+              } finally {
+                applyingImportedDraft = false;
+              }
+            }
+          }
           triggerToast('تم استيراد البيانات المدعومة ودمجها بنجاح؛ النسخة السابقة محفوظة للاسترجاع ✓', 'success');
         } catch (err) {
           triggerToast('تعذر الاستيراد: ' + err.message, 'error');
@@ -1233,6 +1250,7 @@ const app = createApp({
     const simulatorReferenceCode = computed(() => simulatorExternalExample.value?.code ?? currentLesson.value?.solution ?? '');
     const simulatorReferenceTitle = computed(() => simulatorExternalExample.value?.title ?? 'المثال المرجعي للدرس');
     let sourceRevision = 0;
+    let applyingImportedDraft = false;
 
     // Readiness is not completion: timers and event handlers may still run.
     const executionState = ref('ready');
@@ -1484,6 +1502,7 @@ const app = createApp({
       sourceRevision++;
       clearRunEvidence();
       cancelAutoRun();
+      if (applyingImportedDraft) return;
       if (currentLesson.value) {
         const id = currentLesson.value.id;
         if (!practiceProgress.value[id]) practiceProgress.value[id] = { status: 'unlocked' };
