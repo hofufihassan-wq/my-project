@@ -9,5 +9,7 @@
     "progress-data.js": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
     "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"
   },
-  "asset_integrity": "fixed npm SHA512 before extraction; locked SHA256 per file; deterministic Tailwind build checked"
+  "asset_integrity": "fixed npm SHA512 before extraction; locked SHA256 per file; deterministic Tailwind build checked",
+  "main_commit_at_final_review": "7889340a960306c39e26b7359c7b2be2ad280c16",
+  "main_tree_identical_to_tested_base": true
 }

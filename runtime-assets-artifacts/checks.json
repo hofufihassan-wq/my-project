@@ -282,5 +282,7 @@
       ]
     }
   ],
-  "reproducibility": "npm ci --ignore-scripts succeeded; official tarballs passed fixed npm integrity; repeated CSS builds byte-identical; runtime test uses actual local assets, no substitutions"
+  "reproducibility": "npm ci --ignore-scripts succeeded; official tarballs passed fixed npm integrity; repeated CSS builds byte-identical; runtime test uses actual local assets, no substitutions",
+  "main_commit_at_final_review": "7889340a960306c39e26b7359c7b2be2ad280c16",
+  "main_tree_identical_to_tested_base": true
 }
