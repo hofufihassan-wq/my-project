@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 2,
+      "output": "assets/vendor/compiler-sfc-3.4.21.esm-browser.js:320: trailing whitespace.\n+  `resolveDynamicComponent` \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:716: trailing whitespace.\n+const fromCodePoint = \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:808: trailing whitespace.\n+    decodeTree, \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:818: trailing whitespace.\n+    emitCodePoint, \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:1131: trailing whitespace.\n+            const len = decoder.write(str, \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:19197: trailing whitespace.\n+\texports.computeSourceURL = computeSourceURL; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:19951: trailing whitespace.\n+\t}; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:21184: trailing whitespace.\n+ *     line number is 1-based. \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:24662: trailing whitespace.\n+    DOMErrorMessages \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:25213: trailing whitespace.\n+  ...[transformTransition] \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:29668: trailing whitespace.\n+  URLSearchParams,  \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:36749: trailing whitespace.\n+\t * \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:36750: trailing whitespace.\n+\t * @param {string} str \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:36816: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:36840: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:36863: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:36890: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37098: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37251: trailing whitespace.\n+\t   * \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37439: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37487: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37514: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37679: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37706: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37737: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37824: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37849: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37876: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:37908: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:38368: trailing whitespace.\n+\t} \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:38394: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:38421: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:38449: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:38465: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:38779: trailing whitespace.\n+\t} \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:39791: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:39965: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:40117: trailing whitespace.\n+\t}); \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:40136: trailing whitespace.\n+\tmodule.exports = exports.default; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:41006: trailing whitespace.\n+\texports.computeSourceURL = computeSourceURL; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:41760: trailing whitespace.\n+\t}; \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:42937: trailing whitespace.\n+ *     line number is 1-based. \nassets/vendor/compiler-sfc-3.4.21.esm-browser.js:44066: trailing whitespace.\n+\t\t\t//   \u2716\ufe0f edit    -> 'test' + '' \n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check",
+        "--",
+        ".",
+        ":!assets/vendor/compiler-sfc-3.4.21.esm-browser.js"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/assets.py",
+        "verify"
+      ],
+      "exit_code": 0,
+      "output": "PASS: 27 local runtime/license assets match their locked SHA-256 hashes.\n"
+    }
+  ],
+  "note": "The original official compiler browser source includes upstream trailing whitespace. Kept byte-for-byte to preserve its verified npm extraction hash; first-party changed files pass whitespace checks. No tests were disabled.",
+  "staged_filenames_screened": [
+    "PROJECT_STATUS_AR.md",
+    "README.md",
+    "SFC_PREVIEW_REPORT_AR.md",
+    "app.js",
+    "assets/vendor/LICENSE-vue-compiler-sfc.txt",
+    "assets/vendor/compiler-sfc-3.4.21.esm-browser.js",
+    "assets/vendor/compiler-sfc-3.4.21.global.min.js",
+    "assets/vendor/manifest.json",
+    "dictionary-preview.js",
+    "package-lock.json",
+    "package.json",
+    "preview-runner.js",
+    "run_dictionary_preview_tests.js",
+    "run_preview_protocol_tests.js",
+    "run_simulator_browser_tests.js",
+    "scripts/assets.py",
+    "scripts/build-sfc-compiler.cjs",
+    "sfc-preview-artifacts/browser-report.json",
+    "sfc-preview-artifacts/checks.json",
+    "sfc-preview-artifacts/hands-on-verification-report.json",
+    "sfc-preview-artifacts/phase0a-browser-report.json",
+    "sfc-preview-artifacts/reproducible-build.json",
+    "sfc-preview-artifacts/runtime-assets-browser-report.json",
+    "sfc-preview-artifacts/simulator-browser-report.json",
+    "sfc-preview-artifacts/source-preservation.json"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "runtime": "Chromium + Vue 3.4.21 test-only CDN fixture",
+  "date": "2026-10-30T02:55:08.558Z",
+  "passed": 14,
+  "total": 14,
+  "results": [
+    {
+      "name": "JSON null local progress starts safely and keeps recoverable raw backup",
+      "passed": true
+    },
+    {
+      "name": "codeDraft object import is rejected before any stored/user state changes",
+      "passed": true
+    },
+    {
+      "name": "random JSON file rejected",
+      "passed": true
+    },
+    {
+      "name": "supported legacy and versioned valid exports import",
+      "passed": true
+    },
+    {
+      "name": "manual mode typing changes neither submitted code nor iframe document",
+      "passed": true
+    },
+    {
+      "name": "auto mode debounces rapid edits and submits only latest source",
+      "passed": true
+    },
+    {
+      "name": "circular object and BigInt console output does not stop user script",
+      "passed": true
+    },
+    {
+      "name": "new run and stop discard snapshot and validation result",
+      "passed": true
+    },
+    {
+      "name": "editing invalidates previous solution verification",
+      "passed": true
+    },
+    {
+      "name": "foreign window messages and stale run IDs are ignored",
+      "passed": true
+    },
+    {
+      "name": "late DOM readiness cannot turn thrown error into success",
+      "passed": true
+    },
+    {
+      "name": "real interval stops after iframe reset; previous timer cannot contaminate new run",
+      "passed": true
+    },
+    {
+      "name": "lesson change clears old verification and creates new lesson session",
+      "passed": true
+    },
+    {
+      "name": "no application page errors during integration checks",
+      "passed": true
+    }
+  ]
+}

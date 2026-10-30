@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "build:css": "tailwindcss -c tailwind.config.cjs -i assets/tailwind.input.css -o assets/tailwind-3.4.17.min.css --minify && python3 scripts/assets.py lock-css",
-    "verify:assets": "python3 scripts/assets.py verify"
+    "verify:assets": "python3 scripts/assets.py verify",
+    "build:compiler": "node scripts/build-sfc-compiler.cjs"
   },
   "devDependencies": {
+    "esbuild": "0.25.12",
     "tailwindcss": "3.4.17"
   }
 }

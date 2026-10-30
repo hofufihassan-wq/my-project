@@ -165,6 +165,25 @@
           "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
         }
       ]
+    },
+    {
+      "name": "@vue/compiler-sfc",
+      "version": "3.4.21",
+      "tarball": "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.4.21.tgz",
+      "integrity": "sha512-me7epoTxYlY+2CUM7hy9PCDdpMPfIwrOvAXud2Upk10g4YLv9UBW7kL798TvMeDhPthkZ0CONNrK2GoeI1ODiQ==",
+      "license": "MIT",
+      "files": [
+        {
+          "source": "dist/compiler-sfc.esm-browser.js",
+          "path": "assets/vendor/compiler-sfc-3.4.21.esm-browser.js",
+          "sha256": "ab1922d5ebe7c4a83a9931ac3f9fc5326ba55bd094ecdf44157b6d439cc307f9"
+        },
+        {
+          "source": "LICENSE",
+          "path": "assets/vendor/LICENSE-vue-compiler-sfc.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175"
+        }
+      ]
     }
   ],
   "generated_css": {
@@ -174,10 +193,19 @@
     "config_sha256": "6c5365fef0960884dbd840353071e09d8d555cda81d771485e72e200eb561b8f",
     "inputs_sha256": {
       "index.html": "4f402e71f818d928375af7db36e31598b7104d1d0802e7ef643f948db4ea52bf",
-      "app.js": "a0c410d2e3a5dbe82ca61c8bd26cbd9d5bbd45f361baa45fab813fd08ff49b3a",
+      "app.js": "b8414f0c5741472dc8cbd56be33412cd17ca21b47d16035df3d0b0b89468b3e8",
       "lexicon-data.js": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
       "practice-curriculum.js": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
       "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"
+    }
+  },
+  "generated_compiler": {
+    "path": "assets/vendor/compiler-sfc-3.4.21.global.min.js",
+    "sha256": "60044559e86abc88e634728759b8d8704ffbfb50e936f2e127c0f03d79b5a28b",
+    "tool": "esbuild@0.25.12",
+    "inputs_sha256": {
+      "assets/vendor/compiler-sfc-3.4.21.esm-browser.js": "ab1922d5ebe7c4a83a9931ac3f9fc5326ba55bd094ecdf44157b6d439cc307f9",
+      "scripts/build-sfc-compiler.cjs": "2b5b268d8049273d15b3e3ad228cb444b8d68c9f51cd44d17bb690800c3afa7d"
     }
   }
 }

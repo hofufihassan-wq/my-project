@@ -54,6 +54,11 @@ elif mode == 'lock-css':
 elif mode == 'verify':
     files = [file for package in manifest['packages'] for file in package['files']]
     files.append(manifest['generated_css'])
+    if 'generated_compiler' in manifest:
+        files.append(manifest['generated_compiler'])
+        for name, expected in manifest['generated_compiler']['inputs_sha256'].items():
+            if digest((ROOT / name).read_bytes()) != expected:
+                raise ValueError('Compiler input changed; run npm run build:compiler: ' + name)
     for file in files:
         if digest((ROOT / file['path']).read_bytes()) != file['sha256']:
             raise ValueError('Asset checksum mismatch: ' + file['path'])
