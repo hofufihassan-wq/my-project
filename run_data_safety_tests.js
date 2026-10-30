@@ -152,4 +152,24 @@ test('Normal export roundtrips; oversized current draft exports intact as warned
   assert(x.downloads.at(-1).filename.includes('raw-recovery'));
   assert.equal(JSON.parse(x.downloads.at(-1).text).practiceProgress['JS-101'].codeDraft, code);
 });
+test('Bookmark IDs, objects and legacy IDs resolve to one valid canonical record', () => {
+  const x=start(),term=x.scope.rawLexiconData.value[0];
+  x.scope.toggleBookmark(term.id);
+  assert.deepEqual(JSON.parse(x.storage.vuelexicon_bookmarks_v3),[term.id]);
+  x.scope.toggleBookmark(term);
+  assert.deepEqual(JSON.parse(x.storage.vuelexicon_bookmarks_v3),[]);
+  x.scope.toggleBookmark(term.legacyId);
+  assert.deepEqual(JSON.parse(x.storage.vuelexicon_bookmarks_v3),[term.id]);
+  const before=JSON.stringify(x.storage);
+  for(const invalid of [null,undefined,{},'unknown-id']) x.scope.toggleBookmark(invalid);
+  assert.equal(JSON.stringify(x.storage),before);
+  assert.equal(x.scope.toastType.value,'error');
+});
+test('Earlier null bookmark corruption retains valid siblings and an exact raw recovery copy', () => {
+  const id=start().scope.rawLexiconData.value[0].id;
+  const raw=JSON.stringify([id,null]);
+  const x=start({vuelexicon_bookmarks_v3:raw});
+  assert.deepEqual(JSON.parse(x.storage.vuelexicon_bookmarks_v3),[id]);
+  assert(Object.entries(x.storage).some(([k,v])=>k.startsWith('vuelexicon_recovery_')&&v===raw));
+});
 console.log(`Data safety: ${count}/${count} tests passed.`);

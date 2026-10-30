@@ -188,12 +188,12 @@
   ],
   "generated_css": {
     "path": "assets/tailwind-3.4.17.min.css",
-    "sha256": "4294d050466e99a9a0253a6485835b33b3d925b08b2653c519ecb10bd9954565",
+    "sha256": "abb8fe2e8d082bb8d9acca8e32568b74c45a0778a786c4b661d31051b24ec516",
     "tool": "tailwindcss@3.4.17",
     "config_sha256": "6c5365fef0960884dbd840353071e09d8d555cda81d771485e72e200eb561b8f",
     "inputs_sha256": {
-      "index.html": "4f402e71f818d928375af7db36e31598b7104d1d0802e7ef643f948db4ea52bf",
-      "app.js": "b8414f0c5741472dc8cbd56be33412cd17ca21b47d16035df3d0b0b89468b3e8",
+      "index.html": "864d2ba7357271b5747b9ea240f2d787243079dbe12c48d6d5c88691073d05d1",
+      "app.js": "9e83c0b01d42b9a884f6c3a8b9b287b96309b21495f5f6a442ffdfd26c1e0467",
       "lexicon-data.js": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
       "practice-curriculum.js": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
       "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"

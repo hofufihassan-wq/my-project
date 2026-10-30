@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-10-30T04:00:22.492Z",
+  "availability": [
+    {
+      "engine": "chromium",
+      "available": true,
+      "version": "154.0.8037.57"
+    },
+    {
+      "engine": "firefox",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/firefox-1497/firefox/firefox\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "engine": "webkit",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    }
+  ],
+  "filter": "header geometry",
+  "passed": 1,
+  "total": 4,
+  "networkEvidence": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    }
+  ],
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "header geometry keeps every quick action fully inside the viewport",
+      "passed": false,
+      "error": "{\"width\":360,\"brand\":{\"x\":82.171875,\"y\":18,\"width\":261.828125,\"height\":44,\"top\":18,\"right\":344,\"bottom\":62,\"left\":82.171875},\"buttons\":[{\"title\":\"عرض المفضلة\",\"x\":16.515625,\"y\":25,\"width\":49.65625,\"height\":30,\"top\":25,\"right\":66.171875,\"bottom\":55,\"left\":16.515625},{\"title\":\"سجل التعلّم، التقدم والنسخ الاحتياطي\",\"x\":-28.296875,\"y\":25,\"width\":36.8125,\"height\":30,\"top\":25,\"right\":8.515625,\"bottom\":55,\"left\":-28.296875},{\"title\":\"اختصارات لوحة المفاتيح\",\"x\":-69.109375,\"y\":23,\"width\":32.8125,\"height\":34,\"top\":23,\"right\":-36.296875,\"bottom\":57,\"left\":-69.109375}]}"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "header geometry keeps every quick action fully inside the viewport",
+      "passed": false,
+      "error": "{\"width\":390,\"brand\":{\"x\":112.171875,\"y\":18,\"width\":261.828125,\"height\":44,\"top\":18,\"right\":374,\"bottom\":62,\"left\":112.171875},\"buttons\":[{\"title\":\"عرض المفضلة\",\"x\":46.515625,\"y\":25,\"width\":49.65625,\"height\":30,\"top\":25,\"right\":96.171875,\"bottom\":55,\"left\":46.515625},{\"title\":\"سجل التعلّم، التقدم والنسخ الاحتياطي\",\"x\":1.703125,\"y\":25,\"width\":36.8125,\"height\":30,\"top\":25,\"right\":38.515625,\"bottom\":55,\"left\":1.703125},{\"title\":\"اختصارات لوحة المفاتيح\",\"x\":-39.109375,\"y\":23,\"width\":32.8125,\"height\":34,\"top\":23,\"right\":-6.296875,\"bottom\":57,\"left\":-39.109375}]}"
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "header geometry keeps every quick action fully inside the viewport",
+      "passed": false,
+      "error": "{\"width\":768,\"brand\":{\"x\":452.484375,\"y\":7.5,\"width\":291.515625,\"height\":65,\"top\":7.5,\"right\":744,\"bottom\":72.5,\"left\":452.484375},\"buttons\":[{\"title\":\"عرض المفضلة\",\"x\":73.78125,\"y\":25,\"width\":49.65625,\"height\":30,\"top\":25,\"right\":123.4375,\"bottom\":55,\"left\":73.78125},{\"title\":\"سجل التعلّم، التقدم والنسخ الاحتياطي\",\"x\":-12.078125,\"y\":25,\"width\":77.859375,\"height\":30,\"top\":25,\"right\":65.78125,\"bottom\":55,\"left\":-12.078125},{\"title\":\"اختصارات لوحة المفاتيح\",\"x\":-52.890625,\"y\":23,\"width\":32.8125,\"height\":34,\"top\":23,\"right\":-20.078125,\"bottom\":57,\"left\":-52.890625}]}"
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "header geometry keeps every quick action fully inside the viewport",
+      "passed": true
+    }
+  ]
+}

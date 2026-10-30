@@ -153,4 +153,23 @@ test('dictionary source is JSON encoded instead of interpolated into a script or
   assert(html.includes('"deferReady":true'));
   assert(!html.includes('allow-same-origin'));
 });
+test('output target evidence is optional for compatibility, bounded and typed', () => {
+  assert.ok(validate(message('DOM_SNAPSHOT', snapshot)));
+  assert.ok(validate(message('DOM_SNAPSHOT', {...snapshot,outputText:'VueLexicon Pro 3.6'})));
+  for (const outputText of [null, {}, 7, 'x'.repeat(16001)]) {
+    assert.equal(validate(message('DOM_SNAPSHOT', {...snapshot,outputText})),null);
+  }
+  assert.equal(validate(message('DOM_SNAPSHOT', {...snapshot,outputText:'x',unknown:'no'})),null);
+});
+test('initial DOM snapshot arrives before readiness and captures the output target', () => {
+  const output=[],listeners={};
+  const html=runner.buildDocument('<p>test</p>',session);
+  const script=/<script>([\s\S]*?)<\/script>/.exec(html)[1];
+  const child={parent:{postMessage:data=>output.push(data)},console:Object.fromEntries(['log','info','warn','error','debug'].map(l=>[l,()=>{}])),
+    addEventListener:(name,fn)=>{listeners[name]=fn;},MutationObserver:class{observe(){}},
+    document:{body:{innerText:'page'},documentElement:{},getElementById:id=>id==='output'?{innerText:'target result'}:null,querySelectorAll:()=>[]}};
+  vm.runInNewContext(script,child);listeners.DOMContentLoaded();
+  assert.deepEqual(output.map(x=>x.type),['DOM_SNAPSHOT','PREVIEW_READY']);
+  assert.equal(output[0].payload.outputText,'target result');
+});
 console.log(`\nPreview protocol and child console: ${passed}/${passed} passed.`);

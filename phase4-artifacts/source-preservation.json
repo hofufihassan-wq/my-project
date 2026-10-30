@@ -1,0 +1,23 @@
+{
+  "base": "ba5b9fd5b4c397d31f43f57f7d230b364215f44a",
+  "unchanged_sha256": {
+    "lexicon-data.js": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+    "practice-curriculum.js": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "progress-data.js": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+    "dictionary-preview.js": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+    "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+    "tailwind.config.cjs": "6c5365fef0960884dbd840353071e09d8d555cda81d771485e72e200eb561b8f",
+    "package.json": "ea39c5a39c5817724f44b77d8f283f15f1ecfa79f40679af9ea534c0dc0dbe70",
+    "package-lock.json": "c4343acf5d610b3e906a2477c4e416951a97f0e1af735f36355004da3f826388"
+  },
+  "original_backup_files_unchanged": 32,
+  "unchanged_vendor_files": 26,
+  "index_only_changes": [
+    "header responsive wrapping and navigation breakpoint",
+    "header favorites click handler",
+    "legacy validator guard script tag"
+  ],
+  "compiled_css_sha256": "abb8fe2e8d082bb8d9acca8e32568b74c45a0778a786c4b661d31051b24ec516",
+  "original_learning_content_hashes_unchanged": true
+}

@@ -229,6 +229,7 @@ const app = createApp({
     const searchFocused = ref(false);
     const searchInputRef = ref(null);
     const highlightedDropdownIndex = ref(0);
+    watch(searchQuery, () => { highlightedDropdownIndex.value = 0; }, { flush: 'sync' });
     const showShortcutsModal = ref(false);
     const showProgressModal = ref(false);
     const activeCodeFormat = ref('vue'); // 'vue' | 'vanilla'
@@ -322,8 +323,13 @@ const app = createApp({
       return bookmarkedIds.value.has(id) || (legacyId && bookmarkedIds.value.has(legacyId));
     }
 
-    function toggleBookmark(term) {
-      if (!term) return;
+    function toggleBookmark(termOrId) {
+      const inputId = typeof termOrId === 'string' ? termOrId : termOrId?.id;
+      const term = rawLexiconData.value.find(item => item.id === inputId || item.legacyId === inputId);
+      if (!term) {
+        triggerToast('تعذر تحديث المفضلة: معرف المصطلح غير صالح؛ لم تتغير البيانات.', 'error');
+        return;
+      }
       const id = term.id;
       const removing = isBookmarked(term);
       if (removing) {
@@ -420,17 +426,23 @@ const app = createApp({
         : 'تم تصدير نسخة احتياطية قابلة للاستيراد من تقدمك بنجاح ✓', recovery ? 'warning' : 'success');
     }
 
+    let importRequestSequence = 0;
     function importUserData(event) {
       const file = event.target?.files?.[0];
       if (!file) return;
+      const requestId = ++importRequestSequence;
       if (file.size > window.VueLexiconData.MAX_FILE_BYTES) {
         triggerToast('تعذر الاستيراد: حجم الملف يتجاوز 1 MiB. لم يتم تعديل أي بيانات.', 'error');
         event.target.value = '';
         return;
       }
       const reader = new FileReader();
-      reader.onerror = () => triggerToast('تعذر قراءة الملف. لم يتم تعديل بياناتك.', 'error');
+      reader.onerror = () => {
+        if (requestId === importRequestSequence) triggerToast('تعذر قراءة الملف. لم يتم تعديل بياناتك.', 'error');
+      };
       reader.onload = (e) => {
+        // Selection order defines intent, not the order asynchronous reads finish.
+        if (requestId !== importRequestSequence) return;
         try {
           // Validate the entire payload BEFORE touching reactive state or storage.
           const data = dataSchema.parseImport(e.target.result);
@@ -471,12 +483,7 @@ const app = createApp({
               simulatorReferenceVisible.value = false;
               simulatorExternalExample.value = null;
               autocompleteVisible.value = false;
-              applyingImportedDraft = true;
-              try {
-                practiceCode.value = imported.codeDraft ?? currentLesson.value.initialCode;
-              } finally {
-                applyingImportedDraft = false;
-              }
+              restoreEditorDraft(imported.codeDraft ?? currentLesson.value.initialCode);
             }
           }
           triggerToast('تم استيراد البيانات المدعومة ودمجها بنجاح؛ النسخة السابقة محفوظة للاسترجاع ✓', 'success');
@@ -633,6 +640,11 @@ const app = createApp({
     }
 
     function selectDropdownItem(item) {
+      // Suggestions search the whole dictionary. Release only filters that would
+      // immediately hide the explicitly selected result when the query clears.
+      if (activeCategory.value === 'bookmarks' ? !isBookmarked(item) :
+          activeCategory.value !== 'all' && activeCategory.value !== item.category) activeCategory.value = 'all';
+      if (selectedLetter.value !== 'ALL' && selectedLetter.value !== item.letter) selectedLetter.value = 'ALL';
       selectTerm(item);
       searchQuery.value = '';
       searchFocused.value = false;
@@ -1251,6 +1263,12 @@ const app = createApp({
     const simulatorReferenceTitle = computed(() => simulatorExternalExample.value?.title ?? 'المثال المرجعي للدرس');
     let sourceRevision = 0;
     let applyingImportedDraft = false;
+    function restoreEditorDraft(code) {
+      const wasRestoring = applyingImportedDraft;
+      applyingImportedDraft = true;
+      try { practiceCode.value = code; }
+      finally { applyingImportedDraft = wasRestoring; }
+    }
 
     // Readiness is not completion: timers and event handlers may still run.
     const executionState = ref('ready');
@@ -1362,12 +1380,9 @@ const app = createApp({
 
       // Load saved code draft or initial starter code
       const draft = practiceProgress.value[lessonId]?.codeDraft;
-      // Dictionary navigation loads the editor without saving a fallback over
-      // a null/absent draft or briefly submitting an imported user draft.
-      const wasRestoring = applyingImportedDraft;
-      if (referenceOnly) applyingImportedDraft = true;
-      try { practiceCode.value = draft ?? lesson.initialCode; }
-      finally { applyingImportedDraft = wasRestoring; }
+      // Loading a draft is a read: never save the starter over null/absence.
+      // Dictionary navigation also avoids submitting an imported user draft.
+      restoreEditorDraft(draft ?? lesson.initialCode);
 
       if (!referenceOnly) runPracticeCode();
     }
@@ -1793,16 +1808,18 @@ const app = createApp({
     // ==========================================
     onMounted(() => {
       const handleGlobalKeys = (e) => {
+        const editing = e.target?.isContentEditable || e.target?.closest?.('input, textarea, select');
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
           e.preventDefault();
           if (appMode.value !== 'lexicon') appMode.value = 'lexicon';
           nextTick(() => {
             if (searchInputRef.value) searchInputRef.value.focus();
           });
-        } else if (e.key === '?') {
+        } else if (e.key === '?' && !editing && !e.ctrlKey && !e.metaKey && !e.altKey) {
           showShortcutsModal.value = !showShortcutsModal.value;
         } else if (e.key === 'Escape') {
           showShortcutsModal.value = false;
+          showProgressModal.value = false;
           showLessonTimelineModal.value = false;
           autocompleteVisible.value = false;
           inspectedNuxtComp.value = null;
@@ -1816,7 +1833,7 @@ const app = createApp({
 
       // Auto initialize practice code for first lesson
       if (currentLesson.value) {
-        practiceCode.value = practiceProgress.value[currentLesson.value.id]?.codeDraft ?? currentLesson.value.initialCode;
+        restoreEditorDraft(practiceProgress.value[currentLesson.value.id]?.codeDraft ?? currentLesson.value.initialCode);
       }
 
       onUnmounted(() => {

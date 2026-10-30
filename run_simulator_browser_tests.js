@@ -201,7 +201,13 @@ async function main() {
     await frame.locator('.count-display').waitFor();
     assert.equal(await frame.locator('.count-display').textContent(), '0');
     await frame.getByRole('button', { name: 'انقر للزيادة ⚡' }).click();
+    // Vue rendering and the debounced observation cross two event loops. Require
+    // the first real pointer event's result before sending the second; no retries
+    // or synthetic DOM clicks are used to manufacture the expected count.
+    await frame.locator('.count-display').filter({ hasText: /^1$/ }).waitFor();
+    await page.waitForFunction(() => window.vueLexiconApp.simulatorObservation?.bodyText.includes('1'));
     await frame.getByRole('button', { name: 'انقر للزيادة ⚡' }).click();
+    await frame.locator('.count-display').filter({ hasText: /^2$/ }).waitFor();
     assert.equal(await frame.locator('.count-display').textContent(), '2');
     await page.waitForFunction(() => window.vueLexiconApp.simulatorObservation?.bodyText.includes('2'));
     assert.equal(await app(a => a.practiceCode), draft);

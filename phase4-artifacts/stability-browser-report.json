@@ -1,0 +1,445 @@
+{
+  "timestamp": "2026-10-30T04:05:25.798Z",
+  "availability": [
+    {
+      "engine": "chromium",
+      "available": true,
+      "version": "154.0.8037.57"
+    },
+    {
+      "engine": "firefox",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/firefox-1497/firefox/firefox\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "engine": "webkit",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    }
+  ],
+  "filter": null,
+  "passed": 65,
+  "total": 65,
+  "networkEvidence": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    }
+  ],
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "header geometry keeps every quick action fully inside the viewport",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "bookmark UI list click stores a real ID without losing other favorites",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "bookmark UI header returns from simulator on mobile and desktop navigation",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "startup and navigation preserve saved null/missing drafts exactly",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "search suggestions remain selectable across category and alphabet filters",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "changing query resets stale keyboard suggestion selection",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "typing ? in the code editor does not invoke global shortcuts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "global ? still works and Escape closes progress and shortcut dialogs",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "late completion of an older import cannot replace the newest selected file",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "bookmark mastery code explanation export reject-import and reload preserve data",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "RTL Arabic fonts dark theme and layouts remain usable at this width",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "no core external requests, failed resources or uncaught errors",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "header geometry keeps every quick action fully inside the viewport",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "bookmark UI list click stores a real ID without losing other favorites",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "bookmark UI header returns from simulator on mobile and desktop navigation",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "startup and navigation preserve saved null/missing drafts exactly",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "search suggestions remain selectable across category and alphabet filters",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "changing query resets stale keyboard suggestion selection",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "typing ? in the code editor does not invoke global shortcuts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "global ? still works and Escape closes progress and shortcut dialogs",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "late completion of an older import cannot replace the newest selected file",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "bookmark mastery code explanation export reject-import and reload preserve data",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "RTL Arabic fonts dark theme and layouts remain usable at this width",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "no core external requests, failed resources or uncaught errors",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "header geometry keeps every quick action fully inside the viewport",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "bookmark UI list click stores a real ID without losing other favorites",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "bookmark UI header returns from simulator on mobile and desktop navigation",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "startup and navigation preserve saved null/missing drafts exactly",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "search suggestions remain selectable across category and alphabet filters",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "changing query resets stale keyboard suggestion selection",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "typing ? in the code editor does not invoke global shortcuts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "global ? still works and Escape closes progress and shortcut dialogs",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "late completion of an older import cannot replace the newest selected file",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "bookmark mastery code explanation export reject-import and reload preserve data",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "RTL Arabic fonts dark theme and layouts remain usable at this width",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "no core external requests, failed resources or uncaught errors",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "header geometry keeps every quick action fully inside the viewport",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "bookmark UI list click stores a real ID without losing other favorites",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "bookmark UI header returns from simulator on mobile and desktop navigation",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "startup and navigation preserve saved null/missing drafts exactly",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "search suggestions remain selectable across category and alphabet filters",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "changing query resets stale keyboard suggestion selection",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "typing ? in the code editor does not invoke global shortcuts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "global ? still works and Escape closes progress and shortcut dialogs",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "late completion of an older import cannot replace the newest selected file",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "bookmark mastery code explanation export reject-import and reload preserve data",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "RTL Arabic fonts dark theme and layouts remain usable at this width",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "no core external requests, failed resources or uncaught errors",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: JS-101",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: JS-102",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: JS-103",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: HTML-101",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: HTML-102",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: HTML-103",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: CSS-101",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: CSS-102",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: CSS-103",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: TS-101",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: TS-102",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: TS-103",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: VUE-101",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: VUE-102",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "real reference execution and internal validator: VUE-103",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "known false positives fail after actual isolated runs without output",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "no uncaught exceptions after all fifteen real reference executions",
+      "passed": true
+    }
+  ]
+}

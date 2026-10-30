@@ -80,7 +80,7 @@
         const text = id => (document.getElementById(id)?.innerText || '').slice(0, 16000);
         send('DOM_SNAPSHOT', {
           bodyText: (document.body?.innerText || '').slice(0, 16000),
-          cardText: text('card'), appViewText: text('app-view'),
+          cardText: text('card'), appViewText: text('app-view'), outputText: text('output'),
           cardsContainerCount: Math.min(document.getElementById('cards-container')?.children.length || 0, 10000),
           cardElementsCount: Math.min(document.querySelectorAll('.card').length, 10000)
         });
@@ -90,8 +90,8 @@
     function ready() {
       if (failed || observing) return;
       observing = true;
-      send('PREVIEW_READY', {});
       snapshot();
+      send('PREVIEW_READY', {});
       // Observe async DOM updates; readiness never claims all timers/events completed.
       let timer;
       new MutationObserver(() => {
@@ -184,10 +184,11 @@
         if (!exactKeys(p, ['msg', 'lineno']) || typeof p.msg !== 'string' || p.msg.length > MAX_TEXT ||
             !Number.isInteger(p.lineno) || p.lineno < 0 || p.lineno > 10000000) return null;
       } else if (data.type === 'DOM_SNAPSHOT') {
-        if (!exactKeys(p, ['bodyText', 'cardText', 'appViewText', 'cardsContainerCount', 'cardElementsCount'])) return null;
+        if (!exactKeys(p, ['bodyText', 'cardText', 'appViewText', 'outputText', 'cardsContainerCount', 'cardElementsCount'])) return null;
         for (const key of ['bodyText', 'cardText', 'appViewText']) {
           if (typeof p[key] !== 'string' || p[key].length > 16000) return null;
         }
+        if (Object.hasOwn(p, 'outputText') && (typeof p.outputText !== 'string' || p.outputText.length > 16000)) return null;
         for (const key of ['cardsContainerCount', 'cardElementsCount']) {
           if (!Number.isInteger(p[key]) || p[key] < 0 || p[key] > 10000) return null;
         }

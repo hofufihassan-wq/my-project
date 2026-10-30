@@ -86,7 +86,7 @@
   <!-- 1. HEADER (الترويسة الزجاجية وشعار VueLexicon Pro الكامل) -->
   <!-- ==================================================== -->
   <header class="sticky top-0 z-40 w-full border-b border-white/10 bg-[#020420]/75 backdrop-blur-2xl transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-20 py-3 sm:h-20 sm:py-0 flex flex-wrap sm:flex-nowrap items-center justify-between gap-4">
       
       <!-- Brand & Integrated SVG Logo (كامل دون اختصاص) -->
       <div class="flex items-center gap-3.5 cursor-pointer select-none" @click="setAppMode('lexicon')">
@@ -117,7 +117,7 @@
       </div>
 
       <!-- App Mode Switcher: iOS Segmented Control -->
-      <nav class="hidden md:flex items-center ios-segmented-control text-xs font-semibold">
+      <nav class="hidden lg:flex items-center ios-segmented-control text-xs font-semibold">
         <button
           @click="setAppMode('lexicon')"
           :class="{ active: appMode === 'lexicon' }"
@@ -142,7 +142,7 @@
       <!-- Quick Action Controls -->
       <div class="flex items-center gap-2">
         <button
-          @click="setCategory('bookmarks')"
+          @click="setCategory('bookmarks'); setAppMode('lexicon')"
           :class="activeCategory === 'bookmarks' && appMode === 'lexicon' ? 'bg-amber-400 text-slate-950 font-bold' : 'bg-white/5 text-amber-400 border border-amber-400/30 hover:border-amber-400'"
           class="px-3 py-1.5 rounded-xl text-xs flex items-center gap-1.5 transition-all shadow-sm"
           title="عرض المفضلة"
@@ -172,7 +172,7 @@
     </div>
 
     <!-- Mobile Navigation Bar -->
-    <div class="md:hidden flex items-center justify-around px-2 py-2 border-t border-white/10 bg-[#081022]/90 backdrop-blur-xl text-xs">
+    <div class="lg:hidden flex items-center justify-around px-2 py-2 border-t border-white/10 bg-[#081022]/90 backdrop-blur-xl text-xs">
       <button @click="setAppMode('lexicon')" :class="appMode === 'lexicon' ? 'text-[#00DC82] font-bold' : 'text-gray-400'" class="p-1 flex flex-col items-center">
         <span>📖</span>
         <span class="text-[10px]">المعجم</span>
@@ -2547,6 +2547,7 @@
 <!-- Application Data & Logic Scripts -->
 <script src="lexicon-data.js"></script>
   <script src="practice-curriculum.js"></script>
+<script src="legacy-validator-guards.js"></script>
 <script src="simulator-guides.js"></script>
 <script src="progress-data.js"></script>
 <script src="preview-runner.js"></script>
