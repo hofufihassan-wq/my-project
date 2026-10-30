@@ -75,8 +75,24 @@
     }, { once: true });
   }
 
-  function buildDocument(code, session) {
+  function buildDocument(code, session, assets = {}) {
     if (typeof code !== 'string') throw new TypeError('Code must be text');
+    if (typeof assets.vueRuntimeUrl === 'string') {
+      // Match real script blocks, skipping comments and raw-text elements. Do not
+      // rewrite a CDN URL merely mentioned inside user JS, CSS, or a textarea.
+      code = code.replace(/<!--[\s\S]*?(?:-->|$)|<(script|style|textarea|title)\b(?:"[^"]*"|'[^']*'|[^'">])*>(?:[\s\S]*?<\/\1\s*>|[\s\S]*$)|<\/?[a-z][a-z0-9:-]*\b(?:"[^"]*"|'[^']*'|[^'">])*>/gi, block => {
+        if (!/^<script\b/i.test(block)) return block;
+        const opening = /^<script\b(?:"[^"]*"|'[^']*'|[^'">])*>/i.exec(block)[0];
+        const localized = opening.replace(/(\s+)([\w:-]+)(\s*=\s*)(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g,
+          (attribute, space, name, equals, double, single, bare) => {
+            if (name.toLowerCase() !== 'src' || (double ?? single ?? bare) !== 'https://unpkg.com/vue@3/dist/vue.global.prod.js') return attribute;
+            const quote = single !== undefined ? "'" : '"';
+            const url = assets.vueRuntimeUrl.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+            return space + name + equals + quote + url + quote;
+          });
+        return localized + block.slice(opening.length);
+      });
+    }
     const data = JSON.stringify({ runId: session.runId, lessonId: session.lessonId }).replace(/</g, '\\u003c');
     const interceptor = '<script>(' + childBootstrap.toString() + ')(' + data + ');<\/script>';
     // Prefix before ALL user scripts; never match a literal <head> inside JS text.

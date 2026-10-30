@@ -227,7 +227,14 @@ async function main() {
       if (button.ownerDocument.readyState === 'complete') resolve();
       else button.ownerDocument.defaultView.addEventListener('load', resolve, { once:true });
     }));
-    await frame.locator('#term-demo').click();
+    // The small button can be clipped at the frame edge after a lesson switch.
+    // Position it before sending a real pointer event; do not click a parent notice.
+    await page.locator('iframe').evaluate(frame => frame.scrollIntoView({block:'center',behavior:'instant'}));
+    await frame.locator('#term-demo').evaluate(button => button.scrollIntoView({block:'center',behavior:'instant'}));
+    const bounds = await frame.locator('#term-demo').boundingBox();
+    assert(bounds);
+    assert.equal(await page.evaluate(b => document.elementFromPoint(b.x+b.width/2,b.y+b.height/2)?.tagName, bounds), 'IFRAME');
+    await page.mouse.click(bounds.x+bounds.width/2,bounds.y+bounds.height/2);
     await page.waitForFunction(() => window.vueLexiconApp.simulatorObservation?.bodyText.includes('changed'));
     assert.equal(await frame.locator('#term-demo').textContent(), 'changed');
     await select('HTML-102');
