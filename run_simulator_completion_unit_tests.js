@@ -19,8 +19,13 @@ class Param {
   exponentialRampToValueAtTime(value) { this.value = value; }
 }
 class Audio {
-  constructor() { this.state = 'suspended'; this.currentTime = 0; this.destination = {}; this.nodes = []; }
+  constructor() { this.state = 'suspended'; this.currentTime = 0; this.sampleRate = 48000; this.destination = {}; this.nodes = []; }
   node(props = {}) { const node = { connect() {}, disconnect() { this.disconnected = true; }, ...props }; this.nodes.push(node); return node; }
+  createBuffer(channels, length, sampleRate) {
+    const data = Array.from({ length: channels }, () => new Float32Array(length));
+    return { sampleRate, length, numberOfChannels: channels, getChannelData: channel => data[channel] };
+  }
+  createBufferSource() { return this.node({ playbackRate: new Param(), start() { this.started = true; }, stop() { this.stopped = true; } }); }
   createGain() { return this.node({ gain: new Param() }); }
   createBiquadFilter() { return this.node({ frequency: new Param(), Q: new Param() }); }
   createOscillator() { return this.node({ frequency: new Param(), start() { this.started = true; }, stop() { this.stopped = true; } }); }

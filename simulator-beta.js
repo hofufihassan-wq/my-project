@@ -76,6 +76,36 @@
     return { enabled, volume, status, recoveryKey, snapshot, persist };
   }
 
+  // Soft procedural surf buffer. No audible pitched oscillators or network media.
+  function createWaveBuffer(context) {
+    const rate = context.sampleRate, length = Math.round(rate * 16), overlap = Math.round(rate);
+    const buffer = context.createBuffer(2, length, rate);
+    for (let channel = 0; channel < 2; channel++) {
+      const raw = new Float32Array(length + overlap);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < raw.length; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.969 * b2 + white * 0.153852;
+        b3 = 0.8665 * b3 + white * 0.3104856;
+        b4 = 0.55 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.016898;
+        raw[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.1;
+        b6 = white * 0.115926;
+      }
+      const data = buffer.getChannelData(channel);
+      data.set(raw.subarray(0, length));
+      // The tail continues into the beginning, then fades into its original head.
+      // This removes the discontinuity at every loop without an audible click.
+      for (let i = 0; i < overlap; i++) {
+        const blend = i / (overlap - 1);
+        data[i] = raw[length + i] * (1 - blend) + raw[i] * blend;
+      }
+    }
+    return buffer;
+  }
+
   function createController(options) {
     if (!options?.Vue?.ref) throw new TypeError('Vue.ref is required');
     const { ref } = options.Vue;
@@ -142,6 +172,7 @@
     let context = null;
     let masterGain = null;
     let ambientGraph = null;
+    let ambientBuffer = null;
     let disposed = false;
     let scheduledCues = 0;
     const tones = new Set();
@@ -194,22 +225,29 @@
       if (ambientGraph) { updateAmbientGain(); ambientStatus.value = 'playing'; return true; }
       const sources = [], nodes = [];
       try {
-        const gain = context.createGain(), filter = context.createBiquadFilter();
-        nodes.push(gain, filter);
-        filter.type = 'lowpass'; filter.frequency.value = 650; filter.Q.value = 0.3;
-        gain.gain.value = 0; filter.connect(gain); gain.connect(context.destination);
-        // Three quiet consonant sine tones, gently breathed by one slow LFO.
-        // Fixed-size native graph: no timers, loops, external files or worklets.
-        for (const frequency of [130.8128, 196, 261.6256]) {
-          const oscillator = context.createOscillator(), voiceGain = context.createGain();
-          sources.push(oscillator); nodes.push(voiceGain);
-          oscillator.type = 'sine'; oscillator.frequency.value = frequency; voiceGain.gain.value = 0.025;
-          oscillator.connect(voiceGain); voiceGain.connect(filter); oscillator.start();
+        if (!ambientBuffer) ambientBuffer = createWaveBuffer(context);
+        const gain = context.createGain(), filter = context.createBiquadFilter(), highpass = context.createBiquadFilter();
+        nodes.push(gain, filter, highpass);
+        filter.type = 'lowpass'; filter.frequency.value = 1000; filter.Q.value = 0.25;
+        highpass.type = 'highpass'; highpass.frequency.value = 80; highpass.Q.value = 0.3;
+        gain.gain.value = 0; highpass.connect(filter); filter.connect(gain); gain.connect(context.destination);
+        // Two broad, quiet stereo textures; the cache is built once and reused.
+        for (const [offset, speed, level] of [[0, 1, 0.07], [7.3, 0.97, 0.045]]) {
+          const source = context.createBufferSource(), voiceGain = context.createGain();
+          sources.push(source); nodes.push(voiceGain);
+          source.buffer = ambientBuffer; source.loop = true; source.playbackRate.value = speed; voiceGain.gain.value = level;
+          source.connect(voiceGain); voiceGain.connect(highpass); source.start(0, offset);
         }
         const breath = context.createOscillator(), depth = context.createGain();
         sources.push(breath); nodes.push(depth);
-        breath.frequency.value = 0.07; depth.gain.value = ambient.volume.value * 0.12;
+        // Sub-audible control signals: one gentle wave every26 seconds, with lulls.
+        // These oscillators never connect to the audio output as pitched voices.
+        breath.frequency.value = 1 / 26; depth.gain.value = 0;
         breath.connect(depth); depth.connect(gain.gain); breath.start();
+        const tide = context.createOscillator(), color = context.createGain();
+        sources.push(tide); nodes.push(color);
+        tide.frequency.value = 1 / 71; color.gain.value = 120;
+        tide.connect(color); color.connect(filter.frequency); tide.start();
         ambientGraph = { gain, depth, sources, nodes };
         updateAmbientGain(); ambientStatus.value = 'playing'; return true;
       } catch (_) {
@@ -222,8 +260,8 @@
     function updateAmbientGain() {
       if (!ambientGraph || !context) return;
       try {
-        ambientGraph.gain.gain.setTargetAtTime(ambient.volume.value, context.currentTime, 0.35);
-        ambientGraph.depth.gain.setTargetAtTime(ambient.volume.value * 0.12, context.currentTime, 0.35);
+        ambientGraph.gain.gain.setTargetAtTime(ambient.volume.value * 0.5, context.currentTime, 0.8);
+        ambientGraph.depth.gain.setTargetAtTime(ambient.volume.value * 0.48, context.currentTime, 0.8);
       } catch (_) {}
     }
     function updateGain() {
@@ -342,6 +380,7 @@
       ambientPlaying: !!ambientGraph, ambientSources: ambientGraph?.sources.length || 0 }; }
     function dispose() {
       silence(); disposed = true;
+      ambientBuffer = null;
       if (context) { context.onstatechange = null; try { void context.close(); } catch (_) {} }
       audioStatus.value = 'closed';
       ambientStatus.value = 'closed';
