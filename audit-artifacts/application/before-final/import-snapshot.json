@@ -1,0 +1,6 @@
+{
+  "actual": "{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>IMPORTED REPLACEMENT</p>\"},\"HTML-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"CSS-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"TS-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null}}",
+  "expected": "{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>IMPORT ORIGINAL</p>\"},\"HTML-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"CSS-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"TS-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null}}",
+  "toast": "تم استيراد البيانات المدعومة ودمجها بنجاح؛ النسخة السابقة محفوظة للاسترجاع ✓",
+  "type": "success"
+}

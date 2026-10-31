@@ -1,0 +1,26 @@
+[
+  {
+    "data": {
+      "key": "Enter",
+      "ctrlKey": true,
+      "keyCode": 229
+    },
+    "actual": {
+      "mode": "practice",
+      "run": true
+    },
+    "passed": false
+  },
+  {
+    "data": {
+      "key": "k",
+      "ctrlKey": true,
+      "isComposing": true
+    },
+    "actual": {
+      "mode": "lexicon",
+      "run": false
+    },
+    "passed": false
+  }
+]

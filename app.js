@@ -38,7 +38,7 @@ const app = createApp({
       },
       setItem(key, val) {
         if (protectedStorageKeys.has(key)) {
-          triggerToast('تعذر الحفظ: احتفظنا بالسجل الأصلي. صدّر بيانات الاسترجاع أولاً؛ النسخة الحالية في الذاكرة فقط.', 'warning');
+          triggerToast('تعذر الحفظ: احتفظنا بالسجل الأصلي دون استبدال. صدّر بيانات الجلسة قبل الإغلاق؛ التعديلات الحالية في الذاكرة فقط.', 'warning');
           return false;
         }
         if (this.writeDurably(key, val)) return true;
@@ -54,6 +54,7 @@ const app = createApp({
       commitBatch(entries) {
         if (entries.some(([key]) => protectedStorageKeys.has(key))) throw new Error('سجل محلي يحتاج إلى استرجاع؛ لم يُستبدل');
         const before = Object.fromEntries(entries.map(([key]) => [key, this.getItem(key)]));
+        if (entries.some(([key]) => protectedStorageKeys.has(key))) throw new Error('تعذرت قراءة سجل محلي قبل الاستيراد؛ لم يُستبدل الأصل');
         const backupKey = unusedRecoveryKey('vuelexicon_recovery_import_');
         if (!this.writeDurably(backupKey, JSON.stringify(before))) throw new Error('تعذر حفظ نسخة استرجاع قبل الاستيراد؛ تحقق من مساحة التخزين');
         for (const [key, value] of entries) {
@@ -2367,6 +2368,7 @@ const app = createApp({
     // ==========================================
     onMounted(() => {
       const handleGlobalKeys = (e) => {
+        if (e.isComposing || e.keyCode === 229) return;
         if (appMode.value === 'practice' && practiceSurface.value === 'simulator') {
           const action = window.VueLexiconSimulatorBeta.actionForShortcut(e);
           if (action) { e.preventDefault(); if (action === 'run') techRunDraft(e); else techStopManual(); return; }

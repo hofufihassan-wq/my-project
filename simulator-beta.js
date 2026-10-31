@@ -462,7 +462,7 @@
     return { ok: true, source: source.slice(0, view.start) + replacement + source.slice(view.end), changed: view.code !== replacement, reason: '' };
   }
   function actionForShortcut(event) {
-    if (!event || event.isComposing || event.altKey) return null;
+    if (!event || event.isComposing || event.keyCode === 229 || event.altKey) return null;
     if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') return 'run';
     if (!event.ctrlKey && !event.metaKey && event.key === 'F8') return 'run';
     if (!event.ctrlKey && !event.metaKey && event.key === 'F9') return 'stop';
