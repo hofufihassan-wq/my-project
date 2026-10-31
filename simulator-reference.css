@@ -474,3 +474,22 @@
 @media (max-width:850px) { .tech-actionbar { height:auto; flex-wrap:wrap; align-content:flex-start; position:relative; z-index:2; padding-block:6px; } }
 @media (max-width:560px) { .tech-actionbar { min-height:0; } .tech-actionbar > .tech-action-spacer { display:none; } .tech-actionbar .tech-reference-action { margin-bottom:3px; } .tech-run-summary { min-height:23px; } }
 @media (max-width:850px) { .tech-page-layout { grid-template-columns:minmax(0,1fr); padding:10px; gap:10px; } .tech-sidebar { min-width:0; } .tech-track-card { min-width:0; overflow:hidden; } .tech-lesson-list li { flex:0 0 auto; } }
+/* S2: validated receipts and bounded observations, separate from code analysis. */
+.tech-simulator .beta-error-banner { margin:8px 0 12px;padding:12px 15px;border:1px solid #ac4862;background:#351624;border-radius:10px;color:#ffd8df;direction:rtl; }
+.tech-simulator .beta-error-banner strong { font-size:12px; }
+.tech-simulator .beta-error-banner pre { white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;margin:8px 0;max-height:110px;overflow:auto; }
+.tech-simulator .beta-error-banner p,.tech-simulator .beta-error-banner small { font-size:10px;line-height:1.8;color:#ebb3bf; }
+.tech-simulator .beta-dom-fields { margin-top:8px;max-height:108px;overflow:auto; }
+.tech-simulator .beta-dom-fields summary { cursor:pointer;color:#a1c5d9;font-size:10px;padding:4px 0; }
+.tech-simulator .beta-dom-fields strong { color:#52ddce;padding-inline:8px; }
+.tech-simulator .beta-dom-fields pre { white-space:pre-wrap;overflow-wrap:anywhere;color:#8db0c7;font-size:10px;padding:7px;max-height:100px;overflow:auto; }
+.tech-simulator .beta-trace-limits { margin-top:7px;font-size:9px;color:#75b9cf;line-height:1.8; }
+.tech-simulator .beta-trace-limits summary { cursor:pointer; }
+.tech-simulator .beta-event-journal { margin-top:12px;padding:12px 14px;direction:rtl; }
+.tech-simulator .beta-event-journal summary { cursor:pointer;color:#9dd4e6;font-size:11px; }
+.tech-simulator .beta-event-journal > p { color:#6c99b0;font-size:10px;margin-top:10px;line-height:1.8; }
+.tech-simulator .beta-event-journal ol { max-height:230px;overflow:auto;margin:10px 0; }
+.tech-simulator .beta-event-journal li { display:grid;grid-template-columns:180px minmax(0,1fr);gap:5px 15px;padding:8px;border-bottom:1px solid #143e57;font-size:10px; }
+.tech-simulator .beta-event-journal time { direction:ltr;color:#6690a7;font:9px 'JetBrains Mono',monospace; }
+.tech-simulator .beta-event-journal li span { grid-column:2;color:#709bb2; }
+@media(max-width:600px) { .tech-simulator .beta-event-journal li { display:flex;flex-direction:column; } }

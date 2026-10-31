@@ -1332,6 +1332,39 @@ const app = createApp({
     const simulatorReferenceCode = computed(() => simulatorExternalExample.value?.code ?? currentLesson.value?.solution ?? '');
     const simulatorReferenceTitle = computed(() => simulatorExternalExample.value?.title ?? 'المثال المرجعي للدرس');
     let sourceRevision = 0;
+    // Receipt history in the parent: these events are not a line/variable trace.
+    const techRunEvents = ref([]);
+    const techSignalFacts = ref({ runId: null });
+    const techLatestError = ref(null);
+    const techEvidenceRevision = ref(sourceRevision);
+    let techEventSequence = 0;
+    function recordTechRunEvent(type, session, detail = '') {
+      // Keep current-session facts even when the bounded history evicts old entries.
+      if (type === 'submitted' && session) techSignalFacts.value = { runId: session.runId, submitted: true };
+      else if (session && techSignalFacts.value.runId === session.runId &&
+          ['preview_ready', 'dom_snapshot', 'execution_error'].includes(type)) {
+        techSignalFacts.value = { ...techSignalFacts.value, [type]: true };
+      }
+      const labels = {
+        submitted: 'إرسال المصدر إلى إطار جديد',
+        preview_ready: 'وصول إشعار جاهزية الإطار',
+        dom_snapshot: 'وصول لقطة DOM مطابقة',
+        execution_error: 'وصول خطأ من الإطار',
+        invalidated: 'إبطال جلسة سابقة',
+        source_changed: 'تغير المصدر بعد التشغيل',
+        stopped: 'إيقاف وإعادة ضبط الإطار',
+        rejected: 'رفض المصدر قبل التشغيل'
+      };
+      techRunEvents.value = [...techRunEvents.value, {
+        sequence: ++techEventSequence, type, label: labels[type] || type,
+        // Wall-clock receipt time, never presented as execution duration.
+        recordedAt: new Date().toISOString(),
+        runId: session?.runId ?? null,
+        lessonId: session?.lessonId ?? currentLesson.value?.id ?? null,
+        sourceRevision: session?.sourceRevision ?? sourceRevision,
+        detail
+      }].slice(-120);
+    }
     let applyingImportedDraft = false;
     function restoreEditorDraft(code) {
       const wasRestoring = applyingImportedDraft;
@@ -1590,6 +1623,8 @@ const app = createApp({
 
     function sourceChanged() {
       sourceRevision++;
+      techEvidenceRevision.value = sourceRevision;
+      if (activeRun.value) recordTechRunEvent('source_changed', activeRun.value, 'المعاينة الحالية تخص النسخة المرسلة سابقًا؛ التعديل لا يعيد التشغيل وحده.');
       clearRunEvidence();
       cancelAutoRun();
       if (applyingImportedDraft) return;
@@ -1620,11 +1655,14 @@ const app = createApp({
     function submitSimulatorCode(code, kind, example = null) {
       cancelAutoRun();
       clearRunEvidence();
+      if (activeRun.value) recordTechRunEvent('invalidated', activeRun.value, 'بدأ طلب تشغيل جديد؛ لن تُقبل رسائل الجلسة السابقة.');
+      techLatestError.value = null;
       activeRun.value = null; // Invalidate the old session before replacing its frame.
       practiceLogs.value = [];
       if (!currentLesson.value || typeof code !== 'string') return;
       if (window.VueLexiconData.bytes(code) > window.VueLexiconData.MAX_DRAFT_BYTES) {
         stopPracticeExecution();
+        recordTechRunEvent('rejected', null, 'تجاوز النص حد التشغيل؛ لم يُرسل ولم يُقص.');
         triggerToast('المسودة أكبر من حد التشغيل. لم تُقص؛ احتفظ بنسخة منها.', 'error');
         return;
       }
@@ -1651,11 +1689,15 @@ const app = createApp({
         : window.VueLexiconRunner.buildDocument(code, session, assets);
       practiceIframeKey.value++;
       executionState.value = 'running';
+      recordTechRunEvent('submitted', session, kind === 'reference' ? 'أُرسل المثال المرجعي دون استبدال المسودة.' : 'أُرسلت نسخة المسودة الحالية؛ تشغيلها داخل الإطار فقط.');
       addPracticeLog('info', kind === 'reference' ? 'تعمل معاينة المثال المرجعي؛ مسودتك لم تتغير.' : 'أُرسلت نسخة مسودتك الحالية إلى إطار معزول جديد.');
     }
 
     function stopPracticeExecution() {
       cancelAutoRun();
+      recordTechRunEvent('stopped', activeRun.value, 'أُعيد تركيب إطار فارغ وأُبطلت هوية الجلسة؛ لا ضمان لمقاطعة حلقة تحجب المتصفح.');
+      techSignalFacts.value = { runId: null };
+      techLatestError.value = null;
       activeRun.value = null;
       submittedPracticeCode.value = null;
       clearRunEvidence();
@@ -1910,13 +1952,23 @@ const app = createApp({
       if (type === 'CONSOLE_LOG') {
         addPracticeLog(payload.level, payload.msg);
       } else if (type === 'PREVIEW_READY') {
+        recordTechRunEvent('preview_ready', session, 'أرسل الإطار إشعار الجاهزية؛ قد تستمر الأحداث والمؤقتات.');
         session.previewReady = true;
         // A late load notification can never erase a runtime error.
         if (executionState.value === 'running') executionState.value = 'preview_ready';
       } else if (type === 'DOM_SNAPSHOT') {
         if (session.sourceRevision === sourceRevision &&
-            (session.kind === 'reference' || session.code === practiceCode.value)) lastDomSnapshot.value = payload;
+            (session.kind === 'reference' || session.code === practiceCode.value)) {
+          lastDomSnapshot.value = payload;
+          recordTechRunEvent('dom_snapshot', session, 'نصوص الصفحة والعدادات المحدودة أُرسلت من الإطار المعزول لهذه النسخة.');
+        }
       } else if (type === 'EXECUTION_ERROR') {
+        techLatestError.value = {
+          runId: session.runId, lessonId: session.lessonId, sourceRevision: session.sourceRevision,
+          message: payload.msg, documentLine: payload.lineno > 0 ? payload.lineno : null,
+          locationNote: payload.lineno > 0 ? 'السطر داخل مستند المعاينة المولّد، وقد يشمل تمهيد المشغّل؛ ليس موضعًا مؤكدًا في المحرر.' : 'لم يوفّر المتصفح موضعًا صالحًا للخطأ.'
+        };
+        recordTechRunEvent('execution_error', session, payload.msg);
         executionState.value = 'error';
         validationFeedback.value = null;
         addPracticeLog('error', payload.msg, payload.lineno);
@@ -1931,6 +1983,36 @@ const app = createApp({
           session.sourceRevision !== sourceRevision || !Object.hasOwn(lastDomSnapshot.value, 'bodyText')) return null;
       return lastDomSnapshot.value;
     });
+    const techCurrentRunEvents = computed(() => activeRun.value
+      ? techRunEvents.value.filter(event => event.runId === activeRun.value.runId) : []);
+    const techErrorIsCurrent = computed(() => !!techLatestError.value &&
+      techLatestError.value.runId === activeRun.value?.runId &&
+      techLatestError.value.lessonId === currentLesson.value?.id &&
+      techLatestError.value.sourceRevision === techEvidenceRevision.value);
+    const techDOMFields = computed(() => {
+      const snapshot = simulatorObservation.value;
+      if (!snapshot) return [];
+      return [
+        { key: 'bodyText', label: 'النص الظاهر في body', kind: 'text', value: snapshot.bodyText },
+        { key: 'cardText', label: 'نص العنصر #card', kind: 'text', value: snapshot.cardText },
+        { key: 'appViewText', label: 'نص العنصر #app-view', kind: 'text', value: snapshot.appViewText },
+        { key: 'outputText', label: 'نص العنصر #output', kind: 'text', value: snapshot.outputText ?? '' },
+        { key: 'cardsContainerCount', label: 'أبناء #cards-container', kind: 'count', value: snapshot.cardsContainerCount },
+        { key: 'cardElementsCount', label: 'العناصر ذات الصنف .card', kind: 'count', value: snapshot.cardElementsCount }
+      ];
+    });
+    const techStageSignals = computed(() => {
+      const session = activeRun.value;
+      const has = type => !!session && techSignalFacts.value.runId === session.runId && techSignalFacts.value[type] === true;
+      return [
+        { id: 'source', icon: '</>', label: 'نسخة المصدر', state: has('submitted') ? 'received' : 'pending', detail: session ? (session.kind === 'reference' ? 'مثال مرجعي مرسل' : 'نسخة المسودة المرسلة') : 'لم تُرسل نسخة بعد' },
+        { id: 'sent', icon: '↗', label: 'إرسال إلى الإطار', state: has('submitted') ? 'received' : 'pending', detail: has('submitted') ? 'سجل التطبيق إرسال مستند جديد' : 'بانتظار تشغيل يدوي أو تلقائي مفعّل' },
+        { id: 'ready', icon: '◇', label: 'إشعار الجاهزية', state: has('execution_error') ? 'error' : has('preview_ready') ? 'received' : 'pending', detail: has('execution_error') ? 'وصل خطأ؛ راجع الرسالة الفعلية' : has('preview_ready') ? 'وصل PREVIEW_READY من الإطار' : 'لم يصل إشعار جاهزية' },
+        { id: 'observation', icon: '◉', label: 'لقطة DOM', state: simulatorObservation.value && has('dom_snapshot') ? 'received' : 'pending', detail: simulatorObservation.value ? 'بيانات محدودة من الصفحة لهذه النسخة' : 'لا توجد لقطة مطابقة للمصدر الحالي' }
+      ];
+    });
+    const techTraceLimitation = 'لا يدعم المشغّل الحالي تتبعًا عامًا لقيم المتغيرات أو تنفيذ الأسطر. المراحل إشارات جلسة حقيقية، وليست تحليلًا لمسارات الكود أو قياسًا لمدته.';
+
     // Visual workbench controls are session-only and never touch drafts or sessions.
     const simulatorReferenceReading = ref(false);
     const simulatorExpandedPanel = ref('');
@@ -2065,6 +2147,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
+      techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation,
       techPreviewTab, techEditorView, techFocusPanel, techMotion, techSource, techEditorCode, techHighlightedCode, techSourceCSS, techStatusLabel, techRunReference, techRunDraft, techSyncEditorScroll, techJumpToScript, techToggleFocus,
       simulatorReferenceReading, simulatorExpandedPanel, simulatorEditorShare, toggleSimulatorPanel, simulatorStages,
       theme, setTheme, practiceSurface, openVisualSimulator, openTraining,
