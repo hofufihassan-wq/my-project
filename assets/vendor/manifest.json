@@ -193,7 +193,7 @@
     "config_sha256": "7403886f28e77ad6be0b8e874413a2708e4aa179ae2fb413c7118534ab04871f",
     "inputs_sha256": {
       "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
-      "app.js": "84559adad9e31a188dde948e7f807b89efb24066f55cf5dc90a7739413a994c5",
+      "app.js": "5c5bc86889844feaf2f2c03d5718b44cd1b07c3b91dfbf41f85798f11d546e3a",
       "lexicon-data.js": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
       "practice-curriculum.js": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
       "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"

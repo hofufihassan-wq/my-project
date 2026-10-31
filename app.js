@@ -2160,11 +2160,16 @@ const app = createApp({
     }
     function techZoomPreview(delta) {
       if (!Number.isFinite(delta)) return;
-      techCaptureViewport(); techPreviewZoom.value = Math.min(1.5, Math.max(0.1, Math.round((techPreviewZoom.value + delta) * 10) / 10));
+      techPreviewTab.value = 'result';
+      nextTick(() => {
+        techCaptureViewport();
+        techPreviewZoom.value = Math.min(1.5, Math.max(0.1, Math.round((techPreviewZoom.value + delta) * 10) / 10));
+      });
     }
     function techFitPreview() {
-      techPreviewTab.value = 'result'; techCaptureViewport();
+      techPreviewTab.value = 'result';
       nextTick(() => {
+        techCaptureViewport();
         const holder = document.querySelector('.beta-device-scroll');
         if (!holder) return;
         techPreviewZoom.value = Math.min(1.5, Math.max(0.1, Math.floor(Math.min(holder.clientWidth / techCustomWidth.value,
