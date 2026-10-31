@@ -74,7 +74,7 @@
 .tech-simulator .beta-language-tabs button[aria-selected="true"] { color:#d9f8ff;background:#0b45628c; }
 .tech-simulator .tech-code-surface { flex:1;min-height:0;background:#051626bf; }
 .tech-simulator .tech-line-numbers { font-size:11px;color:#7298b6;background:#071c30a8;border-color:#5488a42e; }
-.tech-simulator .tech-highlight,.tech-simulator .tech-input,.tech-simulator .tech-reference-code { font-size:13px!important;line-height:23px!important; }
+.tech-simulator .tech-highlight,.tech-simulator .tech-input,.tech-simulator .tech-reference-code { font-size:13px!important;line-height:22px!important; }
 .tech-simulator .hljs-comment { color:#7fc68e!important; }
 .tech-simulator .hljs-string { color:#ff9f9e; }
 .tech-simulator .hljs-keyword { color:#e5a4fb; }
