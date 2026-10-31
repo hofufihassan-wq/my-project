@@ -1,0 +1,68 @@
+PASS native navigation opens an independent page and the homepage marks the link available
+PASS paste keeps exact BOM CRLF Unicode empty lines and does not execute
+PASS download returns the original UTF8 bytes
+PASS every physical line is selectable and detailed explanation stays tied to that line
+PASS dictionary links use actual IDs and return keeps the explanation source
+PASS HTML scripts image handlers imports and URLs are inert in Worker analysis
+PASS wrong syntax unsupported source and missing context show real classifications
+PASS CSS and all three SFC sections are explained without runtime values
+PASS large source is retained and rejected without blocking the app
+PASS rapid edits cancel stale results and eventually explain only the last snapshot
+PASS worker deadline is enforced and analysis recovers afterwards
+PASS three existing themes apply to the new page without modifying other page styles
+FAIL transfer is an exact pending reference preserving current draft storage and stopped state locator.click: Error: strict mode violation: locator('header button').filter({ hasText: /^المحاكي$/ }) resolved to 2 elements:
+    1) <button data-testid="nav-simulator">المحاكي</button> aka getByRole('button', { name: 'المحاكي', exact: true })
+    2) <button data-testid="nav-simulator">…</button> aka getByLabel('التنقل للجوال').getByTestId('nav-simulator')
+
+Call log:
+[2m  - waiting for locator('header button').filter({ hasText: /^المحاكي$/ })[22m
+
+FAIL 768px practical source line and details tabs work without horizontal page overflow locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('header button').filter({ hasText: /^المشاريع$/ }).first()[22m
+[2m    - locator resolved to <button>المشاريع</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+FAIL 390px practical source line and details tabs work without horizontal page overflow locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('header button').filter({ hasText: /^المشاريع$/ }).first()[22m
+[2m    - locator resolved to <button>المشاريع</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+FAIL no unexpected exceptions external requests dialogs or source mutations Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
++   'app.js': 'b114e76a08580617b9c985e1bf82badb2671505904348fcf0587147aa111e1ec',
+-   'app.js': '1d7c967ae02a182b1526bada0af76072f60fc3a7a87286558602221337611852',
+    'assets/vendor/manifest.json': 'becb4980d9a464077da580c5b758a585b872e072ba83e5211141d45b09765e41',
+    'code-explainer-rules-ar.js': '1d8706f6eb40b725d8e114313c2c503ed9d213f78d46aa08bd1d1400c3a0ac00',
+    'code-explainer.css': 'ae275582916ee2fd7d34ca528bd8b104ad521ea2e76b47586e2ee4e76b5b4b6d',
+    'code-explainer.js': '39e4dfa54d0c6ac32b706fafabd6b092bbf3bd1564214a8181fe7bc684247b4b',
+    'code-explainer.worker.js': '59b6a31addbcdf7473c1904dbda14d10291892c1a7ea2e396a951445a861d00b',
+
+12/16

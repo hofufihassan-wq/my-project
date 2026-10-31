@@ -1,0 +1,130 @@
+{
+  "timestamp": "2026-10-31T13:25:13.427Z",
+  "baselineRef": "ab3a676",
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "passed": 13,
+  "total": 15,
+  "protectedFileCount": 44,
+  "runtimeHashes": {
+    "app.js": "b114e76a08580617b9c985e1bf82badb2671505904348fcf0587147aa111e1ec",
+    "index.html": "c9ba61d72fe247080d52a41af99c3d149163aa5fc26b767b0e19427db42947ff",
+    "assets/tailwind-3.4.17.min.css": "8685dc13ad7f371dc9d53b05f8ebf82cd832a928e21e16e86b1bdf325d3423c7",
+    "assets/vendor/manifest.json": "500d67f336316b80bea0eebea4b059cee8b5206566e0f23fdaeacc96f496c25b",
+    "assets/fonts/alexandria/index.css": "eeb5f3219512085794a5ae501b78fc8dccd05e78849f284af18817677d2f42bb",
+    "assets/fonts/jetbrains-mono/index.css": "273f27b590784ce54baaac5975e287e9ccbb0ae7c74ebed1cdb06e3e78104580",
+    "assets/vendor/atom-one-dark-11.9.0.min.css": "4237ffca7ce6aadb438c457e0a675b125c534bbdda5b87f41f3a1495603bcc9b",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "identity.css": "467d75013e077e3044adda6eed83e1cb5af50f03f975b4ddae789aef081a2175",
+    "dictionary-correction.css": "dd797342dae2da394ebc09e7bd44ae747a72d1a8cfc5dc4d4dda91cc4a61cd54",
+    "simulator-correction.css": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "code-explainer.css": "20543e8ff07a6157494333f2c6ab948da50aedb229482e1a96778a50c10c13d6"
+  },
+  "homepageComparisons": [
+    {
+      "width": 1440,
+      "height": 960,
+      "baselineRef": "ab3a676",
+      "changedPixels": 104,
+      "beforeSha256": "378efd1dcc383b23c6608e775b9cb4a10a1e7db16ff285671d9764d79780e9a6",
+      "afterSha256": "7bce1c83f57dec6b5dd6150fe17310127e1c4669700d460f1c9cf3d9fdd9e364"
+    }
+  ],
+  "screenshots": [
+    "screenshots/simulator-1440.png"
+  ],
+  "networkEvidence": [
+    {
+      "origin": "http://127.0.0.1:46705",
+      "seeded": true,
+      "reducedMotion": "reduce",
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:46705",
+      "seeded": false,
+      "reducedMotion": "no-preference",
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:44057",
+      "seeded": false,
+      "reducedMotion": "reduce",
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    }
+  ],
+  "results": [
+    {
+      "title": "educational sources, engine modules, dictionary styles and all original backups match baseline",
+      "passed": true
+    },
+    {
+      "title": "accepted homepage stays unchanged and submission/message handlers match reviewed S2 telemetry baseline",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n... Skipped lines\n\n  `  <main v-if=\"appMode === 'home'\" class=\"dashboard-shell\">\\n` +\n    '    <aside class=\"dashboard-sidebar\" aria-label=\"مساحات التعلم\">\\n' +\n    '      <p class=\"eyebrow\">مساحتك الشخصية</p>\\n' +\n    `      <button class=\"active\" @click=\"setAppMode('home')\"><svg><use href=\"#i-home\"/></svg>الرئيسية</button>\\n` +\n    `      <button @click=\"setAppMode('lexicon')\"><svg><use href=\"#i-book\"/></svg>القاموس <span>{{ rawLexiconData.length }}</span></button>\\n` +\n...\n    '      <div class=\"sidebar-divider\"></div>\\n' +\n+   `      <button v-for=\"section in foundationSections\" :key=\"section.id\" @click=\"openFoundation(section.id)\"><svg><use :href=\"'#i-' + section.icon\"/></svg>{{ section.title }}<small>{{ section.id === 'explain' ? 'متاح' : 'لاحقًا' }}</small></button>\\n` +\n-   `      <button v-for=\"section in foundationSections\" :key=\"section.id\" @click=\"openFoundation(section.id)\"><svg><use :href=\"'#i-' + section.icon\"/></svg>{{ section.title }}<small>لاحقًا</small></button>\\n` +\n    `      <button @click=\"setAppMode('settings')\"><svg><use href=\"#i-settings\"/></svg>الإعدادات</button>\\n` +\n    '      <div class=\"sidebar-note\"><span>✧</span><p>خطوة صغيرة كل يوم</p><small>تعلّم مفهومًا، جرّب كودًا، وابنِ فهمك على مهل.</small></div>\\n' +\n    '    </aside>\\n' +\n    '    <div class=\"dashboard-content\">\\n' +\n    '      <section class=\"dashboard-welcome\">\\n' +\n\n    at /workspace/work/phase5c1/regression-source/run_simulator_reference_review.js:106:12\n    at test (/workspace/work/phase5c1/regression-source/run_simulator_reference_review.js:69:41)\n    at main (/workspace/work/phase5c1/regression-source/run_simulator_reference_review.js:103:9)"
+    },
+    {
+      "title": "manual simulator entry preserves null, absent and stored drafts without running them",
+      "passed": true
+    },
+    {
+      "title": "original reference actually runs in an opaque iframe while all drafts remain unchanged",
+      "passed": true
+    },
+    {
+      "title": "preview HTML CSS and Console tools switch without recreating or rerunning the live frame",
+      "passed": true
+    },
+    {
+      "title": "editor, organized Console, central decoration and live preview have the requested desktop geometry",
+      "passed": true
+    },
+    {
+      "title": "syntax overlay preserves complete editor text and scroll alignment",
+      "passed": true
+    },
+    {
+      "title": "manual edit saves only its selected lesson and does not silently execute the draft",
+      "passed": true
+    },
+    {
+      "title": "forged and stale-source messages cannot change actual simulator evidence",
+      "passed": true
+    },
+    {
+      "title": "stop invalidates the session and replaces its frame while retaining the saved draft",
+      "passed": true
+    },
+    {
+      "title": "all seeded runtime checks use only local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "title": "approved homepage remains pixel-identical at 1440px",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n104 !== 0\n\n    at /workspace/work/phase5c1/regression-source/run_simulator_reference_review.js:206:136\n    at async test (/workspace/work/phase5c1/regression-source/run_simulator_reference_review.js:69:35)\n    at async main (/workspace/work/phase5c1/regression-source/run_simulator_reference_review.js:201:3)"
+    },
+    {
+      "title": "delivery screenshot is an actual 1440px browser page with a real running original reference and empty user storage",
+      "passed": true
+    },
+    {
+      "title": "reduced-motion mode suppresses decorative animation without changing the running session",
+      "passed": true
+    },
+    {
+      "title": "verification leaves source and protected files unchanged",
+      "passed": true
+    }
+  ]
+}

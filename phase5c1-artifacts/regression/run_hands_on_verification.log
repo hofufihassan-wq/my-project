@@ -1,0 +1,39 @@
+Test server running at http://localhost:8089
+Launching headless Chrome for verification...
+Connected to Chrome CDP: ws://127.0.0.1:9223/devtools/page/3E3F410F85C2163D712D44300C51A132
+Navigating to http://localhost:8089/index.html...
+[PASS ✓] TEST-01: Page loads without fatal JS errors & Vue mounts (Found 180 entries)
+[PASS ✓] TEST-02: Lexicon category counts preserved (180 total, 25 Nuxt) ({"js":54,"vue":30,"nuxt":25,"html":26,"css":25,"ts":20})
+[PASS ✓] TEST-03: No mentions of "مترجم" (Translator) in UI or meta tags (0 occurrences)
+[PASS ✓] TEST-04: Standalone Nuxt Lab & Scratchpad removed from header/mobile nav (Nav buttons clean)
+Saved screenshot: 01_lexicon_baseline_1440.png (1440x900)
+[PASS ✓] TEST-05: Open Hands-on Practice Mode ("وش تحب تتدرّب اليوم؟") (Selection view rendered)
+Saved screenshot: 02_practice_track_selection_1440.png (1440x900)
+[PASS ✓] TEST-06: 5 Interactive Tracks rendered with correct names & badges (JavaScript, HTML5, CSS3, TypeScript, Vue 3)
+[PASS ✓] TEST-07: Select JavaScript Track opens JS-101 sequentially (JS-101 active)
+Saved screenshot: 03_lesson_workspace_js101_1440.png (1440x900)
+[PASS ✓] TEST-08: Desktop beta grid keeps code LTR and Arabic guidance RTL ({"ok":true,"display":"grid","editorDir":"ltr","instructionsDir":"rtl"})
+[PASS ✓] TEST-09: Live Autocomplete / IntelliSense overlay shows map() (map() suggestion visible)
+[PASS ✓] TEST-10: Tab setting toggle switch is present and interactive (Initial: true)
+[PASS ✓] TEST-11: JS-101 Greeting Card: Check Solution passes with green verification (All criteria met)
+Saved screenshot: 04_js101_passed_solution_1440.png (1440x900)
+[PASS ✓] TEST-12: Sequential unlock: JS-101 unlocks JS-102 (if/else) (JS-102 loaded)
+[PASS ✓] TEST-13: JS-102 if/else Authentication Toggle passes verification (Condition checked)
+[PASS ✓] TEST-14: Sequential unlock: JS-102 unlocks JS-103 (Arrays & map) (JS-103 loaded)
+[PASS ✓] TEST-15: JS-103 Arrays & map() passes with 3 generated cards (3 cards rendered in preview)
+Saved screenshot: 05_js103_map_cards_passed_1440.png (1440x900)
+[PASS ✓] TEST-16: Educational Timeline Simulation modal launches with step trace & memory table (Modal visible)
+Saved screenshot: 06_timeline_simulation_modal_1440.png (1440x900)
+[PASS ✓] TEST-17: Stop Execution button resets sandbox iframe & sets status to متوقف (State stopped)
+Saved screenshot: 07_stopped_execution_sandbox_1440.png (1440x900)
+[PASS ✓] TEST-18: Progressive hint 1 appears on demand (Hint 1 displayed)
+Saved screenshot: 08_responsive_mobile_360.png (360x740)
+[PASS ✓] TEST-19: Responsive Mobile 360px has zero unintended horizontal overflow (scrollWidth: 360px)
+Saved screenshot: 09_responsive_mobile_390.png (390x844)
+Saved screenshot: 10_responsive_tablet_768.png (768x1024)
+Saved screenshot: 11_responsive_desktop_1024.png (1024x768)
+[PASS ✓] TEST-20: Lexicon Search & Relevance filtering regression test (Results returned for map: 6)
+==============================================
+Automated Test Suite Completed: 20/20 PASSED
+Report saved to /workspace/work/phase5c1/regression/run_hands_on_verification/hands_on_verification_report.json
+==============================================

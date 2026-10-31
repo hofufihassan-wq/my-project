@@ -1,0 +1,48 @@
+{
+  "steps": [
+    {
+      "name": "paste exact JavaScript source and analyze in Worker",
+      "second": 2.336
+    },
+    {
+      "name": "select a physical line",
+      "second": 3.266
+    },
+    {
+      "name": "show detailed Arabic explanation and actual dictionary links",
+      "second": 4.195
+    },
+    {
+      "name": "show missing external context without fabricated values",
+      "second": 7.109
+    },
+    {
+      "name": "explain Vue template script and style",
+      "second": 9
+    },
+    {
+      "name": "send exact pending reference without running or replacing the draft",
+      "second": 10.78
+    },
+    {
+      "name": "explicitly run the reference in the existing isolated simulator",
+      "second": 13.084
+    },
+    {
+      "name": "real preview interaction increments the Vue counter",
+      "second": 13.609
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "recording": "Actual browser; silent video; native line selection, clipboard paste event, explicit reference run and iframe interaction.",
+  "runtimeHashes": {
+    "app.js": "b114e76a08580617b9c985e1bf82badb2671505904348fcf0587147aa111e1ec",
+    "index.html": "c9ba61d72fe247080d52a41af99c3d149163aa5fc26b767b0e19427db42947ff",
+    "code-explainer.js": "39e4dfa54d0c6ac32b706fafabd6b092bbf3bd1564214a8181fe7bc684247b4b",
+    "code-explainer.worker.js": "59b6a31addbcdf7473c1904dbda14d10291892c1a7ea2e396a951445a861d00b",
+    "code-explainer-rules-ar.js": "f61ad7eee269246489b27e5745e5369ee24a1750544595f89bfee947edae6f0e",
+    "code-explainer.css": "20543e8ff07a6157494333f2c6ab948da50aedb229482e1a96778a50c10c13d6",
+    "assets/vendor/manifest.json": "500d67f336316b80bea0eebea4b059cee8b5206566e0f23fdaeacc96f496c25b"
+  }
+}

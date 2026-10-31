@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-10-31T13:34:11.846360+00:00",
+  "runtimeHashes": {
+    "app.js": "b114e76a08580617b9c985e1bf82badb2671505904348fcf0587147aa111e1ec",
+    "index.html": "c9ba61d72fe247080d52a41af99c3d149163aa5fc26b767b0e19427db42947ff",
+    "code-explainer.js": "39e4dfa54d0c6ac32b706fafabd6b092bbf3bd1564214a8181fe7bc684247b4b",
+    "code-explainer.worker.js": "59b6a31addbcdf7473c1904dbda14d10291892c1a7ea2e396a951445a861d00b",
+    "code-explainer-rules-ar.js": "f61ad7eee269246489b27e5745e5369ee24a1750544595f89bfee947edae6f0e",
+    "code-explainer.css": "20543e8ff07a6157494333f2c6ab948da50aedb229482e1a96778a50c10c13d6",
+    "assets/vendor/manifest.json": "500d67f336316b80bea0eebea4b059cee8b5206566e0f23fdaeacc96f496c25b"
+  },
+  "hashAgreement": true,
+  "results": {
+    "unit": 30,
+    "browser": 20,
+    "priorCommands": 25,
+    "simulatorUI": 43
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "format": {
+      "duration": "16.000000"
+    }
+  },
+  "worker": "Local Babel,Vue SFC/template,CSS parsers in dedicated terminable Worker; no execution",
+  "noMergeOrPublish": true,
+  "reviewerBranchUntouched": true,
+  "implementationCommits": [
+    "27283e947b0bf4e67436a48ff75af69f9cf6f207",
+    "85a2b407b2a5f41a0f1f77597d08516266173b59"
+  ]
+}

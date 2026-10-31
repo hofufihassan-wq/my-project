@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-10-31T13:30:18.982Z",
+  "runtimeHashes": {
+    "app.js": "b114e76a08580617b9c985e1bf82badb2671505904348fcf0587147aa111e1ec",
+    "index.html": "c9ba61d72fe247080d52a41af99c3d149163aa5fc26b767b0e19427db42947ff",
+    "code-explainer.js": "39e4dfa54d0c6ac32b706fafabd6b092bbf3bd1564214a8181fe7bc684247b4b",
+    "code-explainer.worker.js": "59b6a31addbcdf7473c1904dbda14d10291892c1a7ea2e396a951445a861d00b",
+    "code-explainer-rules-ar.js": "3a52ce28d3fe7c3671507b3ca4d09f008c1766c338082b9baecb0407b89f6acf",
+    "code-explainer.css": "20543e8ff07a6157494333f2c6ab948da50aedb229482e1a96778a50c10c13d6",
+    "assets/vendor/manifest.json": "500d67f336316b80bea0eebea4b059cee8b5206566e0f23fdaeacc96f496c25b"
+  },
+  "passed": 20,
+  "total": 20,
+  "rows": [
+    {
+      "name": "native navigation opens an independent page and the homepage marks the link available",
+      "passed": true
+    },
+    {
+      "name": "paste keeps exact BOM CRLF Unicode empty lines and does not execute",
+      "passed": true
+    },
+    {
+      "name": "download returns the original UTF8 bytes",
+      "passed": true
+    },
+    {
+      "name": "every physical line is selectable and detailed explanation stays tied to that line",
+      "passed": true
+    },
+    {
+      "name": "dictionary links use actual IDs and return keeps the explanation source",
+      "passed": true
+    },
+    {
+      "name": "HTML scripts image handlers imports and URLs are inert in Worker analysis",
+      "passed": true
+    },
+    {
+      "name": "wrong syntax unsupported source and missing context show real classifications",
+      "passed": true
+    },
+    {
+      "name": "CSS and all three SFC sections are explained without runtime values",
+      "passed": true
+    },
+    {
+      "name": "large source is retained and rejected without blocking the app",
+      "passed": true
+    },
+    {
+      "name": "rapid edits cancel stale results and eventually explain only the last snapshot",
+      "passed": true
+    },
+    {
+      "name": "worker deadline is enforced and analysis recovers afterwards",
+      "passed": true
+    },
+    {
+      "name": "three existing themes apply to the new page without modifying other page styles",
+      "passed": true
+    },
+    {
+      "name": "transfer is an exact pending reference preserving current draft storage and stopped state",
+      "passed": true
+    },
+    {
+      "name": "javascript exact reference transfer runs only after explicit click",
+      "passed": true
+    },
+    {
+      "name": "html exact reference transfer runs only after explicit click",
+      "passed": true
+    },
+    {
+      "name": "css exact reference transfer runs only after explicit click",
+      "passed": true
+    },
+    {
+      "name": "direct page URL opens independently after reload without running a draft",
+      "passed": true
+    },
+    {
+      "name": "768px practical source line and details tabs work without horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "390px practical source line and details tabs work without horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "no unexpected exceptions external requests dialogs or source mutations",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "dialogs": []
+}

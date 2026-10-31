@@ -1,0 +1,71 @@
+{
+  "passed": 13,
+  "total": 13,
+  "results": [
+    {
+      "file": "app.js",
+      "passed": true,
+      "sha256": "b114e76a08580617b9c985e1bf82badb2671505904348fcf0587147aa111e1ec"
+    },
+    {
+      "file": "code-explainer.js",
+      "passed": true,
+      "sha256": "39e4dfa54d0c6ac32b706fafabd6b092bbf3bd1564214a8181fe7bc684247b4b"
+    },
+    {
+      "file": "code-explainer.worker.js",
+      "passed": true,
+      "sha256": "59b6a31addbcdf7473c1904dbda14d10291892c1a7ea2e396a951445a861d00b"
+    },
+    {
+      "file": "code-explainer-rules-ar.js",
+      "passed": true,
+      "sha256": "f61ad7eee269246489b27e5745e5369ee24a1750544595f89bfee947edae6f0e"
+    },
+    {
+      "file": "run_code_explainer_unit_tests.js",
+      "passed": true,
+      "sha256": "e77f83791b3393b3c6af102283d14e780fb61a44ea95df4d3e519595ba2c3094"
+    },
+    {
+      "file": "run_code_explainer_browser_tests.js",
+      "passed": true,
+      "sha256": "822e09991d3baec252d875189a789080eec0d75900f7a7e32d8e18f6ae25fe00"
+    },
+    {
+      "file": "scripts/capture-code-explainer.cjs",
+      "passed": true,
+      "sha256": "f636d2d450f7caa61c4cad00f1175e57345019e6c2559143688bac5487da084c"
+    },
+    {
+      "file": "scripts/explainer-homepage-fixture.cjs",
+      "passed": true,
+      "sha256": "1e6055dc6c90bc86e023472cc8e458a2a0e78512681b4e8fce8a9261b634012b"
+    },
+    {
+      "file": "run_data_safety_tests.js",
+      "passed": true,
+      "sha256": "625054f7dee54d36810c78f92fdbf7a777b291b0910d1c3d42dc8a1a79ff91e1"
+    },
+    {
+      "file": "run_json_import_test.js",
+      "passed": true,
+      "sha256": "a81d33e84d11b22fa365531b572708ae7537a4a3de6ccbe73326320a81b3bd49"
+    },
+    {
+      "file": "run_phase5b1_browser_tests.js",
+      "passed": true,
+      "sha256": "dffa9c1f80135c4868e188f829487a3689adcc347341e84f7a1faa7d57a924b5"
+    },
+    {
+      "file": "run_simulator_beta_browser_tests.js",
+      "passed": true,
+      "sha256": "5da299a9cc1c43bfdce7685a4fd060805a2730ca12bd5943cc3d8ce204f201ba"
+    },
+    {
+      "file": "run_simulator_reference_review.js",
+      "passed": true,
+      "sha256": "898ff3066c98cd6b5b0202479dc979e9b9516950715c3670f4b5e5e8e41f8dbf"
+    }
+  ]
+}

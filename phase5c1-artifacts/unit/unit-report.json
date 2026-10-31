@@ -1,0 +1,126 @@
+{
+  "passed": 30,
+  "total": 30,
+  "rows": [
+    {
+      "name": "lexical declarations parameters destructuring and object properties resolve without false missing names",
+      "passed": true
+    },
+    {
+      "name": "block-local declarations do not leak out of their scope",
+      "passed": true
+    },
+    {
+      "name": "var follows function scope while loop let stays local",
+      "passed": true
+    },
+    {
+      "name": "catch params and recursive functions have known bindings",
+      "passed": true
+    },
+    {
+      "name": "shorthand values require definitions but property keys do not",
+      "passed": true
+    },
+    {
+      "name": "imports become bindings and external modules stay visible as context",
+      "passed": true
+    },
+    {
+      "name": "dynamic imports are described without fetching",
+      "passed": true
+    },
+    {
+      "name": "syntax errors retain a source line instead of fabricated successful explanation",
+      "passed": true
+    },
+    {
+      "name": "TypeScript and JSX remain unsupported JavaScript syntax",
+      "passed": true
+    },
+    {
+      "name": "BOM CRLF Arabic and empty trailing lines have original offsets",
+      "passed": true
+    },
+    {
+      "name": "multiline expressions attach to their original physical lines",
+      "passed": true
+    },
+    {
+      "name": "HTML parser reads tags attributes comments and inline JS/CSS inertly",
+      "passed": true
+    },
+    {
+      "name": "HTML optional closing diagnostics are context not a false HTML5 validity verdict",
+      "passed": true
+    },
+    {
+      "name": "external HTML scripts and unsupported languages are not loaded or silently translated",
+      "passed": true
+    },
+    {
+      "name": "CSS rules declarations media keyframes and variable fallbacks are represented",
+      "passed": true
+    },
+    {
+      "name": "CSS custom properties declared in the same block are not reported missing",
+      "passed": true
+    },
+    {
+      "name": "malformed CSS is diagnosed and imports stay external",
+      "passed": true
+    },
+    {
+      "name": "SFC template script and style share correct offsets and v-for destructuring scopes",
+      "passed": true
+    },
+    {
+      "name": "SFC unknown template expressions are context warnings",
+      "passed": true
+    },
+    {
+      "name": "Vue props macros and slot bindings are not false globals",
+      "passed": true
+    },
+    {
+      "name": "Options API bindings use existing compiler metadata",
+      "passed": true
+    },
+    {
+      "name": "unsupported SFC languages external components and directives stay explicit",
+      "passed": true
+    },
+    {
+      "name": "limits reject oversized and overly many-line sources without truncating inputs",
+      "passed": true
+    },
+    {
+      "name": "source is never evaluated even for loops fetch alerts or worker calls",
+      "passed": true
+    },
+    {
+      "name": "private class keys are not reported as unbound variables",
+      "passed": true
+    },
+    {
+      "name": "literal DOM references report absent context without inventing elements",
+      "passed": true
+    },
+    {
+      "name": "Vue v-if priority over v-for is described correctly",
+      "passed": true
+    },
+    {
+      "name": "prototype-like tag attribute directive and CSS names remain inert plain explanations",
+      "passed": true
+    },
+    {
+      "name": "known Vue imports and aliases explain real ref and computed contracts",
+      "passed": true
+    },
+    {
+      "name": "shadowed ref names do not get invented Vue meanings",
+      "passed": true
+    }
+  ]
+}

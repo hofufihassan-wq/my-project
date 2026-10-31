@@ -1,0 +1,21 @@
+PASS native navigation opens an independent page and the homepage marks the link available
+PASS paste keeps exact BOM CRLF Unicode empty lines and does not execute
+PASS download returns the original UTF8 bytes
+PASS every physical line is selectable and detailed explanation stays tied to that line
+PASS dictionary links use actual IDs and return keeps the explanation source
+PASS HTML scripts image handlers imports and URLs are inert in Worker analysis
+PASS wrong syntax unsupported source and missing context show real classifications
+PASS CSS and all three SFC sections are explained without runtime values
+PASS large source is retained and rejected without blocking the app
+PASS rapid edits cancel stale results and eventually explain only the last snapshot
+PASS worker deadline is enforced and analysis recovers afterwards
+PASS three existing themes apply to the new page without modifying other page styles
+PASS transfer is an exact pending reference preserving current draft storage and stopped state
+PASS javascript exact reference transfer runs only after explicit click
+PASS html exact reference transfer runs only after explicit click
+PASS css exact reference transfer runs only after explicit click
+PASS direct page URL opens independently after reload without running a draft
+PASS 768px practical source line and details tabs work without horizontal page overflow
+PASS 390px practical source line and details tabs work without horizontal page overflow
+PASS no unexpected exceptions external requests dialogs or source mutations
+20/20

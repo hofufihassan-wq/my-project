@@ -1,0 +1,17 @@
+
+> vuelexicon-pro@4.0.0 build:css
+> tailwindcss -c tailwind.config.cjs -i assets/tailwind.input.css -o assets/tailwind-3.4.17.min.css --minify && python3 scripts/assets.py lock-css
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Rebuilding...
+
+Done in 822ms.
+Recorded CSS build hash.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
