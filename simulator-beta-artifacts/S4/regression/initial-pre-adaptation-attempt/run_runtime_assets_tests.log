@@ -1,0 +1,28 @@
+PASS cold context 1, load 1: local assets mount with matching fonts/styles and no network
+PASS cold context 1, load 2: local assets mount with matching fonts/styles and no network
+FAIL context 1: dictionary filtering and simulator layout retain CSS locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.lesson-workspace-grid')[22m
+
+FAIL context 1: VUE-101 loads local Vue and behaves correctly with Internet blocked locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('simulator-reference-run')[22m
+
+FAIL context 1: VUE-102 loads local Vue and behaves correctly with Internet blocked locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('simulator-reference-run')[22m
+
+FAIL context 1: VUE-103 loads local Vue and behaves correctly with Internet blocked locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('simulator-reference-run')[22m
+
+PASS cold context 2, load 1: local assets mount with matching fonts/styles and no network
+PASS cold context 2, load 2: local assets mount with matching fonts/styles and no network
+FAIL context 2: dictionary filtering and simulator layout retain CSS Expected values to be strictly equal:
+
+'none' !== 'flex'
+
+FAIL context 2: VUE-101 loads local Vue and behaves correctly with Internet blocked locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('simulator-reference-run')[22m
+

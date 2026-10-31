@@ -87,7 +87,9 @@ async function main(){
       await test('bookmark UI header returns from simulator on mobile and desktop navigation',async()=>{
         await page.locator('header button:visible').filter({hasText:'المحاكي'}).first().click();
         assert.equal(await app(a=>a.appMode),'practice');
-        await page.getByTitle('عرض المفضلة',{exact:true}).click();
+        // Beta mobile header groups account actions; return via its visible dictionary link first.
+        await page.locator('.tech-topbar nav button:visible').filter({hasText:'المعجم'}).click();
+        await page.locator('button[title="عرض المفضلة"]:visible').click();
         assert.equal(await app(a=>a.appMode),'lexicon');assert.equal(await app(a=>a.activeCategory),'bookmarks');
         await page.locator('header button:visible').filter({hasText:'المعجم'}).first().click();
         assert.equal(await app(a=>a.appMode),'lexicon');
@@ -166,12 +168,15 @@ async function main(){
         assert.equal(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(3, 12, 14)');
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
         await app(a=>{a.openSimulator();a.backToTracks();});assert.equal(await page.locator('[data-track]').count(),5);
-        await page.locator('[data-track="vue"]').click();await ready();
+        if(width<=850) await page.locator('.beta-mobile-tracks').selectOption('vue');
+        else await page.locator('[data-track="vue"]').click();
+        assert.equal(await app(a=>a.activeRun),null,'track navigation stays manual');
+        await page.getByTestId('tech-run').click();await ready();
         await app(a=>a.selectLesson('VUE-101'));await ready();
-        // 5B.1 intentionally keeps editor and preview in two grid columns on tablets (>=640px).
-        assert.equal(await page.locator('textarea.editor-textarea').evaluate(e=>getComputedStyle(e.closest('.lesson-workspace-grid')).display),width<640?'flex':'grid');
+        // The beta uses its tech grid at tablet/desktop widths and stacks it at <=560px.
+        assert.equal(await page.locator('textarea.editor-textarea').evaluate(e=>getComputedStyle(e.closest('.tech-main-grid')).display),width<=560?'flex':'grid');
         assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
-        await page.getByTestId('simulator-reference-run').click();await ready();
+        await page.getByTestId('tech-reference-run').click();await ready();
         const frame=page.locator('iframe').contentFrame();await frame.locator('.count-display').waitFor();
         await frame.getByRole('button',{name:'انقر للزيادة ⚡'}).click();assert.equal(await frame.locator('.count-display').textContent(),'1');
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);

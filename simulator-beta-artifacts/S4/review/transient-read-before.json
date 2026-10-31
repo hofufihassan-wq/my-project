@@ -1,0 +1,33 @@
+{
+  "initialStatus": "memory",
+  "finalStatus": "ready",
+  "rawIntact": false,
+  "writes": [
+    {
+      "key": "vuelexicon_simulator_preferences_v1",
+      "value": "{\"version\":1,\"muted\":true,\"volume\":0.25,\"animations\":false}"
+    },
+    {
+      "key": "vuelexicon_simulator_preferences_v1",
+      "value": "{\"version\":1,\"muted\":true,\"volume\":0.5,\"animations\":false}"
+    },
+    {
+      "key": "vuelexicon_simulator_preferences_v1",
+      "value": "{\"version\":1,\"muted\":false,\"volume\":0.5,\"animations\":false}"
+    }
+  ],
+  "persistedResults": [
+    true,
+    true,
+    true
+  ],
+  "warnings": [
+    "تعذر قراءة إعدادات المحاكي؛ الصوت مكتوم افتراضيًا والتفضيلات لهذه الجلسة فقط."
+  ],
+  "sessionPreferences": {
+    "version": 1,
+    "muted": false,
+    "volume": 0.5,
+    "animations": false
+  }
+}

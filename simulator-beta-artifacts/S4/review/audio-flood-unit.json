@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "burstAttempts": 1000,
+  "sameKindAccepted": 1,
+  "afterMixedBurst": {
+    "contextState": "running",
+    "scheduledCues": 4,
+    "activeTones": 4
+  },
+  "volumeZeroMuteAndCleanup": true,
+  "limit": "Injected AudioContext graph unit validates scheduling bounds, not audible quality or execution duration."
+}

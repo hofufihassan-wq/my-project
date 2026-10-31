@@ -45,6 +45,8 @@
       if (!storage) throw new Error('storage unavailable');
       raw = storage.getItem(PREFERENCE_KEY);
     } catch (_) {
+      // An unreadable existing record must never be replaced without a recovery copy.
+      protectedOriginal = true;
       storageStatus.value = 'memory';
       warn('تعذر قراءة إعدادات المحاكي؛ الصوت مكتوم افتراضيًا والتفضيلات لهذه الجلسة فقط.');
     }
@@ -82,6 +84,11 @@
     let disposed = false;
     let scheduledCues = 0;
     const tones = new Set();
+    // Bound parent audio work when a valid child emits a burst of error events.
+    // This cooldown concerns feedback cues only, never execution timing.
+    const lastCueAt = new Map();
+    const maxActiveCues = 4;
+    const cueCooldownSeconds = 0.12;
     const active = () => {
       try { return !disposed && (typeof options.isActive !== 'function' || options.isActive() === true); }
       catch (_) { return false; }
@@ -101,6 +108,7 @@
       }
       for (const oscillator of tones) { try { oscillator.stop(); } catch (_) {} }
       tones.clear();
+      lastCueAt.clear();
     }
     function updateGain() {
       if (masterGain && context) {
@@ -145,8 +153,10 @@
       const cue = ({ start: [440, 660, 0.09], ready: [660, 880, 0.13], error: [220, 140, 0.16], stop: [330, 220, 0.09], enabled: [520, 740, 0.09] })[kind];
       if (!cue) return false;
       try {
-        updateGain();
         const now = context.currentTime;
+        if (tones.size >= maxActiveCues ||
+            (lastCueAt.has(kind) && now - lastCueAt.get(kind) < cueCooldownSeconds)) return false;
+        updateGain();
         const oscillator = context.createOscillator();
         const envelope = context.createGain();
         oscillator.type = 'sine'; oscillator.frequency.setValueAtTime(cue[0], now);
@@ -155,7 +165,8 @@
         envelope.gain.exponentialRampToValueAtTime(0.0001, now + cue[2]);
         oscillator.connect(envelope); envelope.connect(masterGain); tones.add(oscillator);
         oscillator.onended = () => { tones.delete(oscillator); try { oscillator.disconnect(); envelope.disconnect(); } catch (_) {} };
-        oscillator.start(now); oscillator.stop(now + cue[2] + 0.02); scheduledCues++; return true;
+        oscillator.start(now); oscillator.stop(now + cue[2] + 0.02);
+        lastCueAt.set(kind, now); scheduledCues++; return true;
       } catch (_) { audioStatus.value = 'error'; return false; }
     }
     function setMuted(value, event) {

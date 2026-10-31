@@ -1,0 +1,30 @@
+{
+  "runtimeHashes": {
+    "app.js": "b1d42f0720b435e3779668e85d36790bd37c8fe8409036f2d3165e2f69ecba00",
+    "index.html": "8683b721a0349b23bea6adaee2db1d0bbf43c2c0659a0727a2e961c039f32864",
+    "simulator-beta.js": "0b6a0302efb4ad94ea45fbfb992f5d7a311b3684644f20738261431d7ba8ab1e",
+    "assets/vendor/manifest.json": "f26e6a14bda58625e00f0c08b043188bb2ffc1d59b21c9d771736f639f497421",
+    "assets/fonts/alexandria/index.css": "eeb5f3219512085794a5ae501b78fc8dccd05e78849f284af18817677d2f42bb",
+    "assets/fonts/jetbrains-mono/index.css": "273f27b590784ce54baaac5975e287e9ccbb0ae7c74ebed1cdb06e3e78104580",
+    "assets/vendor/atom-one-dark-11.9.0.min.css": "4237ffca7ce6aadb438c457e0a675b125c534bbdda5b87f41f3a1495603bcc9b",
+    "assets/tailwind-3.4.17.min.css": "8685dc13ad7f371dc9d53b05f8ebf82cd832a928e21e16e86b1bdf325d3423c7",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "identity.css": "467d75013e077e3044adda6eed83e1cb5af50f03f975b4ddae789aef081a2175",
+    "dictionary-correction.css": "dd797342dae2da394ebc09e7bd44ae747a72d1a8cfc5dc4d4dda91cc4a61cd54",
+    "simulator-correction.css": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681",
+    "simulator-reference.css": "0d7c111ab21566d7cbd2507fa221fe6a617bab049be01ab3cf14f60b1ba043ee"
+  },
+  "timestamp": "2026-10-31T05:11:13.995Z",
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "audioCapture": "actual simulator master output routed to MediaStreamDestination in recording instrumentation",
+  "errors": [],
+  "failed": [],
+  "rawVideo": "/workspace/work/sim-beta-validation/demo-final-hashed/raw-video/9dba828d000535b37b513101ceee3db8.webm",
+  "audioOffsetSeconds": 8.414,
+  "audioPeak": 0.03495720773935318,
+  "output": "/workspace/work/sim-beta-validation/demo-final-hashed/simulator-beta-demo.mp4",
+  "note": "Video shows real UI; audio is captured from the actual optional simulator sound output after a trusted user click, never a synthetic post-production replacement."
+}

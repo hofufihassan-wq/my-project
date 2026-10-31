@@ -537,3 +537,5 @@
 @media(max-width:560px) { .tech-simulator .tech-main-grid > * { width:100%;align-self:stretch; } .tech-simulator .tech-editor-panel { min-width:0; } }
 .tech-simulator .beta-sound-controls button { display:flex;align-items:center;justify-content:center;gap:7px; }
 .tech-simulator .beta-sound-controls button svg { width:15px;height:15px; }
+.tech-simulator .tech-flow-badge { line-height:1.5; }
+.tech-simulator .tech-flow-nodes { margin-top:12px; }

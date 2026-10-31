@@ -29,7 +29,7 @@ function start(seed = {}, failWrite = () => false) {
     }
   };
   vm.createContext(context);
-  for (const file of ['lexicon-data.js', 'practice-curriculum.js', 'progress-data.js', 'preview-runner.js', 'app.js']) vm.runInContext(fs.readFileSync(file, 'utf8'), context, { filename: file });
+  for (const file of ['lexicon-data.js', 'practice-curriculum.js', 'progress-data.js', 'preview-runner.js', 'simulator-beta.js', 'app.js']) vm.runInContext(fs.readFileSync(file, 'utf8'), context, { filename: file });
   return { storage, scope: w.scope, w, mounted, downloads, import(value) {
     const text = typeof value === 'string' ? value : JSON.stringify(value);
     w.scope.importUserData({ target: { files: [{ size: Buffer.byteLength(text), _text: text }], value: 'input.json' } });

@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-10-31T00:23:44.606334+00:00",
+  "case": "Transient read failure followed by setters after storage recovers",
+  "scope": "Deterministic controller unit using a storage adapter that throws once on initial getItem and supports subsequent reads/writes. No real user records.",
+  "before": {
+    "initialStatus": "memory",
+    "finalStatus": "ready",
+    "rawIntact": false,
+    "writes": [
+      {
+        "key": "vuelexicon_simulator_preferences_v1",
+        "value": "{\"version\":1,\"muted\":true,\"volume\":0.25,\"animations\":false}"
+      },
+      {
+        "key": "vuelexicon_simulator_preferences_v1",
+        "value": "{\"version\":1,\"muted\":true,\"volume\":0.5,\"animations\":false}"
+      },
+      {
+        "key": "vuelexicon_simulator_preferences_v1",
+        "value": "{\"version\":1,\"muted\":false,\"volume\":0.5,\"animations\":false}"
+      }
+    ],
+    "persistedResults": [
+      true,
+      true,
+      true
+    ],
+    "warnings": [
+      "تعذر قراءة إعدادات المحاكي؛ الصوت مكتوم افتراضيًا والتفضيلات لهذه الجلسة فقط."
+    ],
+    "sessionPreferences": {
+      "version": 1,
+      "muted": false,
+      "volume": 0.5,
+      "animations": false
+    }
+  },
+  "after": {
+    "initialStatus": "memory",
+    "finalStatus": "protected",
+    "rawIntact": true,
+    "writes": [],
+    "persistedResults": [
+      false,
+      false,
+      false
+    ],
+    "warnings": [
+      "تعذر قراءة إعدادات المحاكي؛ الصوت مكتوم افتراضيًا والتفضيلات لهذه الجلسة فقط.",
+      "لم تُستبدل إعدادات المحاكي الأصلية غير القابلة للاسترجاع؛ التفضيل مؤقت."
+    ],
+    "sessionPreferences": {
+      "version": 1,
+      "muted": false,
+      "volume": 0.5,
+      "animations": false
+    }
+  },
+  "passed": true,
+  "fix": "Protect the unreadable original from all writes for this controller lifetime. Session preferences still change; successful reload can re-read or recover normally.",
+  "moduleSha256": "94a4e001086362b996b744659d955776490d9152ef92911e380c89ecd01c556e"
+}

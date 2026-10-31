@@ -2082,7 +2082,11 @@ const app = createApp({
         if (editor) { editor.scrollTop = Math.max(0, line * 22 - 12); techSyncEditorScroll({ target: editor }); }
       });
     }
-    function techToggleFocus(panel) { techFocusPanel.value = techFocusPanel.value === panel ? '' : panel; }
+    function techToggleFocus(panel) {
+      if (!['editor', 'preview'].includes(panel)) return;
+      techBeta.setPanelVisible(panel, true);
+      techFocusPanel.value = techFocusPanel.value === panel ? '' : panel;
+    }
 
     // S3: session layout and strict, separate simulator preferences.
     const techBeta = window.VueLexiconSimulatorBeta.createController({

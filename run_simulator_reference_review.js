@@ -100,11 +100,13 @@ async function main(){
   await test('educational sources, engine modules, dictionary styles and all original backups match baseline',async()=>{
     for(const file of protectedFiles)assert.equal(sha(fs.readFileSync(path.join(root,file))),sha(old(file)),file);
   });
-  await test('accepted homepage section and simulator submission/message handling remain unchanged',async()=>{
+  await test('accepted homepage stays unchanged and submission/message handlers match reviewed S2 telemetry baseline',async()=>{
     const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),baseHtml=old('index.html').toString();
     const begin='  <main v-if="appMode === \'home\'"',end='  <main v-if="appMode === \'settings\'"';
     assert.equal(section(html,begin,end),section(baseHtml,begin,end));
-    const current=fs.readFileSync(path.join(root,'app.js'),'utf8'),base=old('app.js').toString();
+    // S2 intentionally instruments these parent handlers; pin their exact accepted S2 source.
+    // The execution modules remain protected against the original baseline above.
+    const current=fs.readFileSync(path.join(root,'app.js'),'utf8'),base=git(['show','3f4dfdd:app.js']).toString();
     for(const [start,end] of [['    function submitSimulatorCode(','    function stopPracticeExecution('],['    function handleWindowMessage(','    // Practical exploration:']])assert.equal(section(current,start,end),section(base,start,end),start);
   });
   const {context,page,evidence}=await contextFor(origin,true);
@@ -176,13 +178,13 @@ async function main(){
     assert.deepEqual(await stored(page),expected);
   });
   await test('forged and stale-source messages cannot change actual simulator evidence',async()=>{
-    const before=await app(page,a=>({state:a.executionState,logs:a.practiceLogs,snapshot:a.lastDomSnapshot}));
+    const before=await app(page,a=>({state:a.executionState,logs:a.practiceLogs,snapshot:a.lastDomSnapshot,events:a.techRunEvents,error:a.techLatestError}));
     await app(page,a=>{
       const s=a.activeRun,data={source:'VUELEXICON_SANDBOX',runId:s.runId,lessonId:s.lessonId,type:'EXECUTION_ERROR',payload:{msg:'UNTRUSTED_TECH_ERROR',lineno:0}};
       window.dispatchEvent(new MessageEvent('message',{source:window,origin:'null',data}));
       for(const bad of [{...data,source:'UNKNOWN_SOURCE'},{...data,runId:'old-run'},{...data,payload:null}])window.dispatchEvent(new MessageEvent('message',{source:a.practiceIframeRef.contentWindow,origin:'null',data:bad}));
     });await settle(page);
-    assert.deepEqual(await app(page,a=>({state:a.executionState,logs:a.practiceLogs,snapshot:a.lastDomSnapshot})),before);
+    assert.deepEqual(await app(page,a=>({state:a.executionState,logs:a.practiceLogs,snapshot:a.lastDomSnapshot,events:a.techRunEvents,error:a.techLatestError})),before);
   });
   await test('stop invalidates the session and replaces its frame while retaining the saved draft',async()=>{
     const draft=await app(page,a=>a.practiceCode),before=await stored(page),key=await app(page,a=>a.practiceIframeKey);

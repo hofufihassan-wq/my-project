@@ -82,16 +82,17 @@ async function main() {
       await app(a => {a.searchQuery='';a.setCategory('css');});assert.equal(await app(a => a.filteredTermsList.length),25);
       await app(a => {a.openSimulator();a.backToTracks();});
       assert.equal(await page.locator('[data-track]').count(),5);
-      assert.equal(await page.locator('[data-track]').first().evaluate(el=>getComputedStyle(el).display),'flex');
+      if(round===1) { assert.equal(await page.locator('.beta-mobile-tracks option').count(),5); assert(await page.locator('.beta-mobile-tracks').isVisible()); }
+      else assert.equal(await page.locator('[data-track]').first().evaluate(el=>getComputedStyle(el).display),'flex');
       await app(a => a.selectTrack('js'));
       assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
-      assert.equal(await page.locator('.lesson-workspace-grid').evaluate(el=>getComputedStyle(el).display),round===1?'flex':'grid');
+      assert.equal(await page.locator('.tech-main-grid').evaluate(el=>getComputedStyle(el).display),round===1?'flex':'grid');
     });
     for (const id of ['VUE-101','VUE-102','VUE-103']) {
       await test(`context ${round+1}: ${id} loads local Vue and behaves correctly with Internet blocked`, async () => {
         await app((a,id)=>a.selectLesson(id),id);
         const draft=await app(a=>a.practiceCode);
-        await page.getByTestId('simulator-reference-run').click();
+        await page.getByTestId('tech-reference-run').click();
         await page.waitForFunction(id=>window.vueLexiconApp.activeRun?.lessonId===id && window.vueLexiconApp.activeRun?.kind==='reference' && window.vueLexiconApp.executionState==='preview_ready',id);
         const frame=page.locator('iframe').contentFrame();
         await frame.locator('#app').waitFor();

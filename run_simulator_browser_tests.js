@@ -83,6 +83,13 @@ async function main() {
     await app((a, id) => { a.selectedTrack = a.practiceLessons.find(l => l.id === id).track; a.selectLesson(id); }, id);
     await waitReady();
   }
+  async function editDraft(code) {
+    // Beta reference runs show a read-only submitted source. Use the actual draft-view control before typing.
+    if (await app(a => a.techEditorView) !== 'draft') {
+      await page.locator('.tech-source-switch').getByRole('button', { name: 'مسودتي', exact: true }).click();
+    }
+    await page.locator('.editor-textarea').fill(code);
+  }
   async function run(code) {
     await app((a, code) => { a.practiceCode = code; a.runPracticeCode(); }, code);
     await waitReady();
@@ -132,7 +139,7 @@ async function main() {
   await test('running reference submits a separate session while retaining original draft and historical status', async () => {
     const before = await persisted();
     const draft = await app(a => a.practiceCode);
-    await page.getByTestId('simulator-reference-run').click();
+    await page.getByTestId('tech-reference-run').click();
     await waitReady();
     assert.equal(await app(a => a.activeRun.kind), 'reference');
     assert.equal(await app(a => a.submittedPracticeCode === a.currentLesson.solution), true);
@@ -147,7 +154,7 @@ async function main() {
     await app(a => { a.practiceAutoRun = false; a.runSimulatorReference(); });
     await waitReady();
     const before = await app(a => ({ key: a.practiceIframeKey, doc: a.practiceIframeDoc }));
-    await page.locator('.editor-textarea').fill('');
+    await editDraft('');
     await pause(500);
     assert.deepEqual(await app(a => ({ key: a.practiceIframeKey, doc: a.practiceIframeDoc })), before);
     assert.equal((await persisted())['JS-101'].codeDraft, '');
@@ -162,8 +169,8 @@ async function main() {
     await app(a => { a.practiceAutoRun = true; });
     await pause(450);
     const key = await app(a => a.practiceIframeKey);
-    await page.locator('.editor-textarea').fill('<p id="card">latest 1</p>');
-    await page.locator('.editor-textarea').fill('<p id="card">latest 2</p>');
+    await editDraft('<p id="card">latest 1</p>');
+    await editDraft('<p id="card">latest 2</p>');
     await pause(550);
     assert.equal(await app(a => a.practiceIframeKey), key + 1);
     assert.equal(await app(a => a.submittedPracticeCode), '<p id="card">latest 2</p>');
@@ -195,7 +202,7 @@ async function main() {
     await select('VUE-101');
     const before = await persisted();
     const draft = await app(a => a.practiceCode);
-    await page.getByTestId('simulator-reference-run').click();
+    await page.getByTestId('tech-reference-run').click();
     await waitReady();
     const frame = page.locator('iframe[title="معاينة كود التمرين"]').contentFrame();
     await frame.locator('.count-display').waitFor();
@@ -264,7 +271,7 @@ async function main() {
   await test('reload preserves drafts and changing sections cannot fire pending automatic run', async () => {
     await select('JS-101');
     const draft = '<p id="card">persistent simulator draft</p>';
-    await page.locator('.editor-textarea').fill(draft);
+    await editDraft(draft);
     await page.reload({ waitUntil: 'load' });
     await page.waitForFunction(() => window.vueLexiconApp?.practiceLessons?.length === 15);
     await app(a => { a.openSimulator(); a.selectTrack('js'); a.selectLesson('JS-101'); });
@@ -296,7 +303,7 @@ async function main() {
     const backups = await page.evaluate(() => Object.keys(localStorage).filter(k => k.startsWith('vuelexicon_recovery_import_')).map(k => JSON.parse(localStorage.getItem(k))));
     assert(backups.some(b => b.vuelexicon_practice_progress && JSON.stringify(JSON.parse(b.vuelexicon_practice_progress)) === JSON.stringify(before)));
     const edited = imported + '<p>edited after import</p>';
-    await page.locator('.editor-textarea').fill(edited);
+    await editDraft(edited);
     assert.equal((await persisted())['JS-101'].codeDraft, edited);
     for (const id of Object.keys(before).filter(id => id !== 'JS-101')) assert.deepEqual((await persisted())[id], before[id]);
     await select('CSS-101'); await select('JS-101');
@@ -350,7 +357,7 @@ async function main() {
     assert.equal(await app(a => a.practiceIframeKey), key);
     assert.equal(await app(a => a.activeRun), null);
     assert.equal(await app(a => a.simulatorReferenceVisible), false);
-    await page.locator('.editor-textarea').fill('<p id="card">user edit after auto import</p>');
+    await editDraft('<p id="card">user edit after auto import</p>');
     await page.waitForFunction(() => window.vueLexiconApp.activeRun?.code.includes('user edit after auto import'));
     await waitReady();
     assert.equal(await app(a => a.activeRun.kind), 'draft');

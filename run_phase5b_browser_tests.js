@@ -78,7 +78,14 @@ async function geometry(page) {
 }
 async function navigate(page, mode) {
   const testId = { home: 'nav-home', lexicon: 'nav-lexicon', practice: 'nav-simulator', training: 'nav-training', settings: 'nav-settings' }[mode];
-  const control = page.locator(`[data-testid="${testId}"]:visible`).first();
+  let control = page.locator(`[data-testid="${testId}"]:visible`).first();
+  if (!await control.count()) {
+    // The beta has its own header. Use its actual home logo, then the site's visible navigation.
+    const home = page.locator('main.tech-simulator .tech-logo:visible');
+    assert.equal(await home.count(), 1, 'a visible beta home navigation control must exist');
+    await home.click(); await settle(page);
+    control = page.locator(`[data-testid="${testId}"]:visible`).first();
+  }
   assert.equal(await control.count(), 1, `visible UI navigation must exist: ${testId}`);
   await control.click();
   await settle(page);

@@ -55,13 +55,13 @@ const selectors = {
   dictionaryRun: '[data-testid="dictionary-run"]',
   dictionaryReset: '[data-testid="dictionary-reset"]',
   dictionaryFrame: 'iframe[title="المعاينة المباشرة للمصطلح"]',
-  editorPanel: '[data-testid="sim-editor-panel"]',
-  console: '[data-testid="sim-console"]',
-  stages: '[data-testid="sim-stages"]',
-  previewPanel: '[data-testid="sim-preview-panel"]',
-  expandEditor: '[data-testid="sim-expand-editor"]',
-  expandPreview: '[data-testid="sim-expand-preview"]',
-  resize: 'input[type="range"][aria-label="حصة عرض محرر المحاكي"]'
+  editorPanel: '[data-testid="tech-editor-panel"]',
+  console: '[data-testid="tech-console"]',
+  stages: '[data-testid="tech-flow-canvas"]',
+  previewPanel: '.tech-preview-panel',
+  expandEditor: 'button[title="توسيع المحرر"]',
+  expandPreview: 'button[title="توسيع المعاينة"]',
+  resize: '[data-testid="beta-resize-width"]'
 };
 const tabs = ['meaning', 'example', 'usage', 'compare', 'pitfalls'];
 const results = [], networkEvidence = [], screenshots = [], homepageComparisons = [];
@@ -121,7 +121,14 @@ async function load(page, origin, nested = false) {
 }
 async function navigate(page, mode) {
   const testId = { home: 'nav-home', lexicon: 'nav-lexicon', practice: 'nav-simulator', training: 'nav-training', settings: 'nav-settings' }[mode];
-  const control = page.locator(`[data-testid="${testId}"]:visible`).first();
+  let control = page.locator(`[data-testid="${testId}"]:visible`).first();
+  if (!await control.count()) {
+    // The beta has its own header. Use its actual home logo, then the site's visible navigation.
+    const home = page.locator('main.tech-simulator .tech-logo:visible');
+    assert.equal(await home.count(), 1, 'a visible beta home navigation control must exist');
+    await home.click(); await settle(page);
+    control = page.locator(`[data-testid="${testId}"]:visible`).first();
+  }
   assert.equal(await control.count(), 1, `visible navigation button required: ${testId}`);
   await control.click(); await settle(page);
   assert.equal(await app(page, a => a.appMode), mode === 'training' ? 'practice' : mode);
@@ -292,7 +299,7 @@ async function main() {
     await test(width, 'simulator retains manual reference execution with editor left console below stages center and preview right', async () => {
       await navigate(page, 'practice');
       await app(page, a => a.selectLesson('JS-101', true));
-      await page.getByTestId('simulator-reference-run').click();
+      await page.getByTestId('tech-reference-run').click();
       await page.waitForFunction(() => window.vueLexiconApp.executionState === 'preview_ready');
       await page.locator('iframe[title="معاينة كود التمرين"]').contentFrame().locator('#card').waitFor();
       for (const key of ['editorPanel', 'console', 'stages', 'previewPanel']) assert.equal(await page.locator(selectors[key]).count(), 1, key);
@@ -315,12 +322,13 @@ async function main() {
       for (const key of ['expandEditor', 'expandPreview']) {
         const control = page.locator(selectors[key]);
         await control.focus(); await page.keyboard.press('Enter'); await settle(page);
-        assert.equal(await app(page, a => a.simulatorExpandedPanel), key === 'expandEditor' ? 'editor' : 'preview');
+        assert.equal(await app(page, a => a.techFocusPanel), key === 'expandEditor' ? 'editor' : 'preview');
         assert.deepEqual(await simulatorSession(page), before);
         await control.focus(); await page.keyboard.press('Enter'); await settle(page);
-        assert.equal(await app(page, a => a.simulatorExpandedPanel), '');
+        assert.equal(await app(page, a => a.techFocusPanel), '');
         assert.deepEqual(await simulatorSession(page), before);
       }
+      if (width >= 1191) await page.locator('.beta-layout-menu > summary').click();
       const range = page.locator(selectors.resize);
       if (await range.isVisible()) {
         const value = Number(await range.inputValue());
@@ -328,6 +336,7 @@ async function main() {
         assert.notEqual(Number(await range.inputValue()), value, 'native keyboard resize changes the range value');
         assert.deepEqual(await simulatorSession(page), before);
       } else assert(width < 1024, 'desktop keyboard resize control must be visible');
+      if (width >= 1191) await page.locator('.beta-layout-menu > summary').click();
       assert.deepEqual(await stored(page), expectedStorage);
       await geometry(page);
     });
@@ -370,7 +379,7 @@ async function main() {
       await shot(clean.page, `dictionary-workspace-${width}.png`, '[role="tablist"]');
       if (width < 1024) await shot(clean.page, `dictionary-preview-${width}.png`, '.dictionary-live-panel');
       await navigate(clean.page, 'practice'); await app(clean.page, a => a.selectLesson('JS-101', true));
-      await clean.page.getByTestId('simulator-reference-run').click();
+      await clean.page.getByTestId('tech-reference-run').click();
       await clean.page.waitForFunction(() => window.vueLexiconApp.executionState === 'preview_ready');
       await shot(clean.page, `simulator-${width}.png`);
       if (width === 390) {

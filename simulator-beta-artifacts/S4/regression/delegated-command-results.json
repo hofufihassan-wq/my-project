@@ -1,0 +1,30 @@
+[
+  {
+    "command": [
+      "node",
+      "run_phase5b_browser_tests.js"
+    ],
+    "label": "run_phase5b_browser_tests",
+    "exitCode": 0,
+    "seconds": null,
+    "log": "run_phase5b_browser_tests.log",
+    "report": "run_phase5b_browser_tests/phase5b-browser-report.json",
+    "delegatedTo": "/root/inspect_tests",
+    "outputTail": "32/32 passed",
+    "sourceVerification": "The report runtimeHashes were checked against final root source by the delegated agent."
+  },
+  {
+    "command": [
+      "node",
+      "run_phase5b1_browser_tests.js"
+    ],
+    "label": "run_phase5b1_browser_tests",
+    "exitCode": 0,
+    "seconds": null,
+    "log": "run_phase5b1_browser_tests.log",
+    "report": "run_phase5b1_browser_tests/phase5b1-browser-report.json",
+    "delegatedTo": "/root/inspect_tests",
+    "outputTail": "34/34 passed",
+    "sourceVerification": "The report runtimeHashes were checked against final root source by the delegated agent."
+  }
+]

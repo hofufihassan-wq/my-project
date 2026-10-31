@@ -204,7 +204,7 @@ async function runAutomatedTests() {
 
   // TEST 6: All 5 tracks rendered with real lesson counts
   const renderedTracks = await evaluate(`(() => {
-    const cards = Array.from(document.querySelectorAll('[data-track] h3'));
+    const cards = Array.from(document.querySelectorAll('[data-track] h3, [data-track] > strong'));
     return cards.map(c => c.textContent.trim());
   })()`);
   const trackCheck = ['JavaScript', 'HTML5', 'CSS3', 'TypeScript', 'Vue 3'].every(t => renderedTracks.includes(t));
@@ -222,20 +222,20 @@ async function runAutomatedTests() {
 
   // TEST 8: Check Desktop Layout (Grid: Code & Preview Left, Instructions Right)
   const layoutCheck = await evaluate(`(() => {
-    const grid = document.querySelector('.lesson-workspace-grid');
+    const grid = document.querySelector('.tech-main-grid');
     if (!grid) return { ok: false, reason: 'No grid found' };
     const style = window.getComputedStyle(grid);
-    const editor = document.querySelector('.lesson-area-editor');
-    const preview = document.querySelector('.lesson-area-preview');
-    const instructions = document.querySelector('.lesson-area-instructions');
+    const editor = document.querySelector('.tech-editor-panel');
+    const preview = document.querySelector('.tech-preview-panel');
+    const instructions = document.querySelector('.tech-explain-card');
     return {
-      ok: style.display === 'grid' && editor?.getAttribute('dir') === 'ltr' && instructions?.getAttribute('dir') === 'rtl',
+      ok: style.display === 'grid' && (editor ? getComputedStyle(editor).direction : null) === 'ltr' && (instructions ? getComputedStyle(instructions).direction : null) === 'rtl',
       display: style.display,
-      editorDir: editor?.getAttribute('dir'),
-      instructionsDir: instructions?.getAttribute('dir')
+      editorDir: (editor ? getComputedStyle(editor).direction : null),
+      instructionsDir: (instructions ? getComputedStyle(instructions).direction : null)
     };
   })()`);
-  recordTest('TEST-08', 'Desktop Layout: Editor/Preview Left (LTR) & Instructions Right (RTL)', layoutCheck.ok, JSON.stringify(layoutCheck));
+  recordTest('TEST-08', 'Desktop beta grid keeps code LTR and Arabic guidance RTL', layoutCheck.ok, JSON.stringify(layoutCheck));
 
   // TEST 9: Autocomplete Overlay while typing
   await evaluate(`(() => {

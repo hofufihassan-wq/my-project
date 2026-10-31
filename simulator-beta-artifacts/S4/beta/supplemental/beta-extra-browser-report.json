@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-10-31T05:15:25.812Z",
+  "browser": "154.0.8037.57",
+  "runtimeHashes": {
+    "app.js": "b1d42f0720b435e3779668e85d36790bd37c8fe8409036f2d3165e2f69ecba00",
+    "index.html": "8683b721a0349b23bea6adaee2db1d0bbf43c2c0659a0727a2e961c039f32864",
+    "simulator-beta.js": "0b6a0302efb4ad94ea45fbfb992f5d7a311b3684644f20738261431d7ba8ab1e",
+    "simulator-reference.css": "0d7c111ab21566d7cbd2507fa221fe6a617bab049be01ab3cf14f60b1ba043ee"
+  },
+  "passed": 7,
+  "total": 7,
+  "errors": [],
+  "failed": [],
+  "results": [
+    {
+      "title": "F8 and Meta+Enter run real drafts and F9 stops after ordinary typing",
+      "passed": true
+    },
+    {
+      "title": "CSS and JavaScript Tab indentation is real editing confined to the selected source block",
+      "passed": true
+    },
+    {
+      "title": "reset button restores this actual lesson code and starts a genuine fresh session",
+      "passed": true
+    },
+    {
+      "title": "enabled decorative pulse actually animates and motion toggle persists across reload",
+      "passed": true
+    },
+    {
+      "title": "full desktop capture includes actual DOM observations and real event journal",
+      "passed": true
+    },
+    {
+      "title": "320px actual touch layout supports run tabs focus and preview device scrolling without page overflow",
+      "passed": true
+    },
+    {
+      "title": "no unexpected exceptions asset failures or runtime source mutations during supplemental acceptance",
+      "passed": true
+    }
+  ]
+}
