@@ -54,6 +54,7 @@ vm.runInContext(curCode, context);
 vm.runInContext(progressDataCode, context);
 vm.runInContext(previewRunnerCode, context);
 vm.runInContext(betaCode, context);
+vm.runInContext(fs.readFileSync('code-explainer.js', 'utf8'), context);
 vm.runInContext(appCode, context);
 
 const setupScope = mockWindow.vueApp;

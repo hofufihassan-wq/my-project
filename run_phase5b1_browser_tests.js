@@ -360,13 +360,14 @@ async function main() {
     const original = await contextFor(baselineOrigin, { width, height }, false);
     await Promise.all([load(clean.page, origin), load(original.page, baselineOrigin)]);
     await test(width, 'homepage is pixel-identical to approved phase5B commit a49a7c7 in clean contexts', async () => {
+      await require('./scripts/explainer-homepage-fixture.cjs')(clean.page,original.page);
       const before = await shot(original.page, `homepage-before-${width}.png`);
       const after = await shot(clean.page, `homepage-after-${width}.png`);
       const left = PNG.sync.read(before), right = PNG.sync.read(after);
       assert.equal(left.width, right.width); assert.equal(left.height, right.height);
       let changedPixels = 0;
       for (let i = 0; i < left.data.length; i += 4) if (!left.data.subarray(i, i + 4).equals(right.data.subarray(i, i + 4))) changedPixels++;
-      homepageComparisons.push({ width, height, baselineRef, changedPixels, beforePngSha256: sha(before), afterPngSha256: sha(after) });
+      homepageComparisons.push({ width, height, baselineRef, expectedBadgeChange: "شرح الأكواد: لاحقًا → متاح", changedPixels, beforePngSha256: sha(before), afterPngSha256: sha(after) });
       assert.equal(changedPixels, 0, 'homepage must remain visually unchanged from the approved commit');
     });
     await test(width, 'clean-context corrected dictionary and simulator screenshots show real interactive pages', async () => {

@@ -237,7 +237,7 @@ const app = createApp({
       { id: 'kanban', title: 'لوحة المهام', icon: 'grid', description: 'أساس بصري للوحة Kanban. إنشاء المهام وربطها بالمشاريع لم يُنفذ بعد.' },
       { id: 'notes', title: 'الملاحظات', icon: 'note', description: 'مساحة الملاحظات المخططة. المحرر والحفظ والاسترجاع ضمن دفعة التنظيم القادمة.' },
       { id: 'calendar', title: 'التقويم', icon: 'calendar', description: 'تنظيم أنشطة التعلم في الدفعة القادمة. لا توجد أحداث أو مواعيد محفوظة حاليًا.' },
-      { id: 'explain', title: 'شرح الأكواد', icon: 'code', description: 'الشرح العام سطرًا بسطر لم يُنفذ بعد. شروح المصطلحات ومسرح التنفيذ التعليمي متاحان داخل القاموس.' }
+      { id: 'explain', title: 'شرح الأكواد', icon: 'code', description: 'شرح محلي لبنية المصدر سطرًا بسطر، ضمن نطاق المحللات ودون تنفيذ الكود.' }
     ];
     const activeFoundation = computed(() => foundationSections.find(s => s.id === foundationSection.value));
     function openFoundation(id) {
@@ -2338,6 +2338,18 @@ const app = createApp({
       for (const element of surface.querySelectorAll('pre,textarea,.tech-line-numbers')) { element.scrollTop = 0; element.scrollLeft = 0; }
     }));
 
+    // 5C-1: source-only explanation; a pending reference never replaces a lesson draft.
+    function openExplainerReference(example) {
+      openVisualSimulator();
+      stopPracticeExecution();
+      simulatorExternalExample.value = { ...example };
+      simulatorReferenceVisible.value = true;
+      techPreviewTab.value = 'result';
+      triggerToast('نُقلت نسخة مرجعية دون تغيير مسودتك. اضغط «تشغيل المرجع» لتجربتها.', 'info');
+    }
+    const explainer = Vue.reactive(window.VueLexiconExplainer.createController({ Vue, terms: rawLexiconData.value,
+      onSimulator: openExplainerReference, onTerm: term => { setAppMode('lexicon'); selectTerm(term); }, notify: triggerToast }));
+
     // Dashboard values are derived from actual local records, never concept-art stats.
     const dashboardStats = computed(() => ({
       mastered: rawLexiconData.value.filter(t => termMastery.value[t.id] === 'mastered').length,
@@ -2390,6 +2402,8 @@ const app = createApp({
       window.addEventListener('blur', techEndResize);
       if (storageWarnings.length) triggerToast(storageWarnings.join(' '), 'warning');
 
+      if (new URL(location.href).searchParams.get('page') === 'explain') openFoundation('explain');
+
       // Auto initialize practice code for first lesson
       if (currentLesson.value) {
         restoreEditorDraft(practiceProgress.value[currentLesson.value.id]?.codeDraft ?? currentLesson.value.initialCode);
@@ -2408,6 +2422,7 @@ const app = createApp({
         activeRun.value = null;
         dictionaryPreviewSession.value = null;
         techBeta.dispose();
+        explainer.dispose();
       });
     });
 
@@ -2426,6 +2441,7 @@ const app = createApp({
       theme, setTheme, practiceSurface, openVisualSimulator, openTraining,
       foundationSections, activeFoundation, openFoundation,
       dashboardStats, dashboardMasteryPercent, dictionaryRelated, openDashboardTerm,
+      explainer,
       // Core Lexicon State
       rawLexiconData,
       appMode,

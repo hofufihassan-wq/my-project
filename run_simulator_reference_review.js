@@ -103,7 +103,7 @@ async function main(){
   await test('accepted homepage stays unchanged and submission/message handlers match reviewed S2 telemetry baseline',async()=>{
     const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),baseHtml=old('index.html').toString();
     const begin='  <main v-if="appMode === \'home\'"',end='  <main v-if="appMode === \'settings\'"';
-    assert.equal(section(html,begin,end),section(baseHtml,begin,end));
+    assert.equal(section(html,begin,end).replace("{{ section.id === 'explain' ? 'متاح' : 'لاحقًا' }}",'لاحقًا'),section(baseHtml,begin,end));
     // S2 intentionally instruments these parent handlers; pin their exact accepted S2 source.
     // The execution modules remain protected against the original baseline above.
     const current=fs.readFileSync(path.join(root,'app.js'),'utf8'),base=git(['show','3f4dfdd:app.js']).toString();
@@ -199,11 +199,12 @@ async function main(){
   const clean=await contextFor(origin,false,'no-preference');
   const base=await contextFor(baselineOrigin,false,'reduce');
   await test('approved homepage remains pixel-identical at 1440px',async()=>{
+    await require('./scripts/explainer-homepage-fixture.cjs')(clean.page,base.page);
     await clean.page.emulateMedia({reducedMotion:'reduce'});await settle(clean.page);
     const before=await base.page.screenshot(),after=await clean.page.screenshot();
     const a=PNG.sync.read(before),b=PNG.sync.read(after);assert.equal(a.width,b.width);assert.equal(a.height,b.height);
     let changedPixels=0;for(let i=0;i<a.data.length;i+=4)if(a.data[i]!==b.data[i]||a.data[i+1]!==b.data[i+1]||a.data[i+2]!==b.data[i+2]||a.data[i+3]!==b.data[i+3])changedPixels++;
-    homepageComparisons.push({width:1440,height:960,baselineRef,changedPixels,beforeSha256:sha(before),afterSha256:sha(after)});assert.equal(changedPixels,0);
+    homepageComparisons.push({width:1440,height:960,baselineRef,expectedBadgeChange:"شرح الأكواد: لاحقًا → متاح",changedPixels,beforeSha256:sha(before),afterSha256:sha(after)});assert.equal(changedPixels,0);
   });
   await base.context.close();
   await test('delivery screenshot is an actual 1440px browser page with a real running original reference and empty user storage',async()=>{

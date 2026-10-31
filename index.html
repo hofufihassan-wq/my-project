@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="simulator-correction.css">
   <link rel="stylesheet" href="simulator-reference.css">
   <link rel="stylesheet" href="simulator-final.css">
+  <link rel="stylesheet" href="code-explainer.css">
 </head>
 <body class="bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased">
 
@@ -134,7 +135,7 @@
       <button @click="openTraining"><svg><use href="#i-code"/></svg>التدريب العملي</button>
       <button @click="openVisualSimulator"><svg><use href="#i-monitor"/></svg>المحاكي</button>
       <div class="sidebar-divider"></div>
-      <button v-for="section in foundationSections" :key="section.id" @click="openFoundation(section.id)"><svg><use :href="'#i-' + section.icon"/></svg>{{ section.title }}<small>لاحقًا</small></button>
+      <button v-for="section in foundationSections" :key="section.id" @click="openFoundation(section.id)"><svg><use :href="'#i-' + section.icon"/></svg>{{ section.title }}<small>{{ section.id === 'explain' ? 'متاح' : 'لاحقًا' }}</small></button>
       <button @click="setAppMode('settings')"><svg><use href="#i-settings"/></svg>الإعدادات</button>
       <div class="sidebar-note"><span>✧</span><p>خطوة صغيرة كل يوم</p><small>تعلّم مفهومًا، جرّب كودًا، وابنِ فهمك على مهل.</small></div>
     </aside>
@@ -176,10 +177,24 @@
     </section>
     <section class="dashboard-panel"><div class="panel-heading"><h3>بياناتك والنسخ الاحتياطي</h3></div><p>التقدم والمفضلة والمسودات عبر أدوات التصدير والاستيراد الحالية.</p><button class="primary-button" @click="showProgressModal = true">فتح أدوات بياناتي</button></section>
   </main>
-  <main v-if="appMode === 'foundation'" class="foundation-page">
+  <main v-if="appMode === 'foundation' && activeFoundation.id !== 'explain'" class="foundation-page">
     <div class="page-heading"><span class="eyebrow">أساس بصري · وظائف قادمة</span><h2>{{ activeFoundation.title }}</h2><p>{{ activeFoundation.description }}</p></div>
     <nav class="foundation-tabs" aria-label="أقسام قادمة"><button v-for="section in foundationSections" :key="section.id" @click="openFoundation(section.id)" :aria-current="activeFoundation.id === section.id ? 'page' : undefined"><svg><use :href="'#i-' + section.icon"/></svg>{{ section.title }}</button></nav>
     <section class="dashboard-panel empty-state foundation-empty"><svg><use :href="'#i-' + activeFoundation.icon"/></svg><h3>مساحة جاهزة للخطوة القادمة</h3><p>{{ activeFoundation.description }}</p><small>هذه معاينة للهوية المشتركة، ولا تمثل أداة مكتملة أو بيانات محفوظة.</small><button class="primary-button" @click="setAppMode('home')">العودة للرئيسية ←</button></section>
+  </main>
+  <main v-if="appMode === 'foundation' && activeFoundation.id === 'explain'" class="code-explainer" :data-tab="explainer.mobileTab" data-testid="code-explainer">
+    <div class="ex-heading"><div><span class="ex-eyebrow">مساحة للفهم · تحليل محلي</span><h2>شرح الأكواد سطرًا بسطر</h2><p class="ex-subtitle">الصق كودك، ثم اختر سطرًا لفهم بنيته ومعناه. المصدر يبقى كما كتبته.</p></div><button @click="setAppMode('home')">العودة للرئيسية ←</button></div>
+    <div class="ex-toolbar"><label>لغة المصدر<select data-testid="ex-language" v-model="explainer.language"><option value="javascript">JavaScript</option><option value="html">HTML</option><option value="css">CSS</option><option value="vue">Vue 3 · SFC</option></select></label><button data-testid="ex-analyze" @click="explainer.analyze" :disabled="!explainer.source || explainer.busy">تحليل المصدر</button><button @click="copyCode(explainer.source)" :disabled="!explainer.source">نسخ الأصل</button><button data-testid="ex-download" @click="explainer.download" :disabled="!explainer.source">تنزيل الأصل</button><button class="ex-primary" data-testid="ex-transfer" @click="explainer.transfer" :disabled="!explainer.source.trim()">جرّب في المحاكي ↗</button><span class="ex-status" role="status">{{ explainer.busy ? 'يحلّل Worker المصدر محليًا…' : explainer.result ? explainer.result.lines.length + ' سطر · دون تشغيل الكود' : 'اختر اللغة والصق المصدر للبدء' }}</span></div>
+    <p v-if="explainer.error" class="ex-warning" role="alert" data-testid="ex-error">{{ explainer.error }}</p>
+    <div class="ex-mobile-tabs" role="group" aria-label="لوحات شرح الأكواد"><button v-for="tab in [{id:'source',label:'المصدر'},{id:'lines',label:'الأسطر'},{id:'details',label:'التفاصيل'}]" :key="tab.id" :data-testid="'ex-tab-'+tab.id" :aria-pressed="explainer.mobileTab === tab.id" @click="explainer.mobileTab = tab.id">{{ tab.label }}</button></div>
+    <div class="ex-workspace">
+      <section class="ex-panel ex-source"><h3>المصدر الأصلي <small>قراءة وتحليل فقط</small></h3><textarea data-testid="ex-source"  :value="explainer.source" @input="explainer.updateSource" @paste="explainer.pasteSource" @click="explainer.choose($event.target.value.slice(0,$event.target.selectionStart).split('\n').length,false)" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="الصق المصدر الأصلي هنا" placeholder="الصق كودك هنا…"></textarea><div class="ex-source-foot">لا تنسيق تلقائي أو إصلاح أو تشغيل. الحفظ في هذه الجلسة فقط؛ نزّل الأصل قبل إغلاق الصفحة.</div></section>
+      <section class="ex-panel ex-reading"><h3>اختر سطرًا <small>{{ explainer.result ? explainer.result.lines.length : 0 }} سطر</small></h3><div v-if="explainer.result" class="ex-lines" data-testid="ex-lines"><button v-for="line in explainer.result.lines" :key="line.number" class="ex-line" :data-line="line.number" :aria-current="explainer.selected === line.number ? 'true' : undefined" @click="explainer.choose(line.number)"><span class="ex-number">{{ line.number }}</span><span><code>{{ line.text || ' ' }}</code><small>{{ line.annotations.length ? explainer.result.entries[line.annotations[0]].short : line.fallback }}</small></span></button></div><div v-else class="ex-empty">ستظهر أسطرك هنا بعد التحليل. يمكن اختيار السطر بالماوس أو لوحة المفاتيح، دون تنفيذ محتواه.</div></section>
+      <section class="ex-panel ex-details"><h3>تفاصيل السطر {{ explainer.line ? explainer.line.number : '—' }}</h3><div class="ex-detail-body"><div class="ex-levels"><button data-testid="ex-brief" :aria-pressed="explainer.detail === 'brief'" @click="explainer.detail='brief'">مختصر</button><button data-testid="ex-detailed" :aria-pressed="explainer.detail === 'detailed'" @click="explainer.detail='detailed'">مفصل</button></div><template v-if="explainer.line"><pre data-testid="ex-selected-source">{{ explainer.line.text }}</pre><article v-for="entry in explainer.descriptions" :key="entry.id"><h4>{{ entry.short }}</h4><p>{{ explainer.detail === 'detailed' || entry.detail.length &lt;= 110 ? entry.detail : entry.detail.slice(0,110) + '…' }}</p></article><p v-if="!explainer.descriptions.length">{{ explainer.line.fallback }}</p><div v-for="(issue,index) in explainer.issues" :key="index" class="ex-warning" :data-kind="issue.kind">{{ issue.message }}</div><h4 v-if="explainer.related.length">تعمّق في القاموس</h4><div class="ex-links"><button v-for="term in explainer.related" :key="term.id" :data-term-id="term.id" @click="explainer.openTerm(term)">{{ term.term }} ↗</button></div></template><p v-else class="ex-note">اختر سطرًا لعرض شرح البنية والتعريفات وملاحظات السياق.</p><p class="ex-note">شرح بقواعد محلية، وليس ذكاءً اصطناعيًا أو تتبعًا للتنفيذ. لا نستنتج قيم المتغيرات أو نتائج الشروط.</p></div></section>
+    </div>
+    <details v-if="explainer.result" class="ex-disclosure" data-testid="ex-diagnostics"><summary>ملاحظات الصياغة والسياق · {{ explainer.result.diagnostics.length }}</summary><p v-if="!explainer.result.diagnostics.length">لم يرصد المحلل ملاحظات ضمن نطاقه. هذه ليست شهادة بصحة البرنامج منطقيًا.</p><button v-for="(issue,index) in explainer.result.diagnostics" :key="index" class="ex-warning" @click="explainer.choose(issue.line)">سطر {{ issue.line }} · {{ issue.message }}</button></details>
+    <details v-if="explainer.result" class="ex-disclosure" data-testid="ex-symbols"><summary>التعريفات والدوال والمعاملات · {{ explainer.result.symbols.length }}</summary><div class="ex-symbols"><button v-for="(symbol,index) in explainer.result.symbols" :key="index" @click="explainer.choose(symbol.line)">{{ symbol.name }} · {{ symbol.kind }} · {{ symbol.line }}</button></div></details>
+    <details class="ex-disclosure"><summary>نطاق الدعم والخصوصية</summary><p>تحليل ثابت محلي بواسطة محللات JavaScript وCSS وقوالب Vue الموجودة في النسخة. لا يرسل كودك إلى خدمة خارجية ولا ينفّذه. اللغات أو الأجزاء غير المدعومة تظهر بقيودها؛ لا TypeScript أو Nuxt أو حل تلقائي للتبعيات. ملاحظات HTML ليست تدقيق HTML5 شاملًا. الحد128KiB و5000 سطر و30000 عقدة ومهلة5 ثوانٍ؛ يبقى الأصل كاملًا عند الرفض.</p></details>
   </main>
   <section v-if="appMode === 'lexicon'" class="lexicon-hero"><span class="eyebrow">تعلّم · استكشف · أتقن</span><h2><svg><use href="#i-book"/></svg>القاموس</h2><p>موسوعة مصطلحات وتقنيات تطوير الويب الحديثة</p><span class="hero-caption">كل مصطلح هنا، خطوة أقرب للفهم.</span></section>
   <!-- ==================================================== -->
@@ -2424,6 +2439,7 @@
 <script src="progress-data.js"></script>
 <script src="preview-runner.js"></script>
 <script src="simulator-beta.js"></script>
+<script src="code-explainer.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
