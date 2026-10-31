@@ -1,0 +1,84 @@
+{
+  "runtime": "Chromium + actual Vue 3.4.21 test-only CDN fixture",
+  "timestamp": "2026-10-31T12:32:00.383Z",
+  "passed": 19,
+  "total": 19,
+  "results": [
+    {
+      "name": "simulator entry exists and preserves 180 terms and 15 examples",
+      "passed": true
+    },
+    {
+      "name": "all 15 examples open even with locked historical status; navigation changes no historical records",
+      "passed": true
+    },
+    {
+      "name": "previous and next example navigation needs no success grade",
+      "passed": true
+    },
+    {
+      "name": "reference display is read-only and does not replace editor or saved draft",
+      "passed": true
+    },
+    {
+      "name": "running reference submits a separate session while retaining original draft and historical status",
+      "passed": true
+    },
+    {
+      "name": "manual editing keeps reference preview unchanged until draft run; empty draft survives navigation",
+      "passed": true
+    },
+    {
+      "name": "sandbox, debounce and old-session message rejection remain active in simulator",
+      "passed": true
+    },
+    {
+      "name": "reference and snapshot evidence resets on changing example",
+      "passed": true
+    },
+    {
+      "name": "Vue reference is interactive and observations follow real button events without replacing draft",
+      "passed": true
+    },
+    {
+      "name": "lexicon example runs separately and cannot overwrite any lesson draft or historical status",
+      "passed": true
+    },
+    {
+      "name": "export includes original historical statuses and independently edited drafts",
+      "passed": true
+    },
+    {
+      "name": "reload preserves drafts and changing sections cannot fire pending automatic run",
+      "passed": true
+    },
+    {
+      "name": "imported active draft replaces editor only after commit; edit save reopen and reload preserve every other draft",
+      "passed": true
+    },
+    {
+      "name": "empty and null imported drafts synchronize without rewriting their stored representation",
+      "passed": true
+    },
+    {
+      "name": "status-only and other-lesson imports leave the active editor and preview untouched",
+      "passed": true
+    },
+    {
+      "name": "rejected import and failed persistence cannot alter editor or current session",
+      "passed": true
+    },
+    {
+      "name": "import invalidates reference and pending auto run without executing imported source",
+      "passed": true
+    },
+    {
+      "name": "async file completion respects lesson selected at completion time",
+      "passed": true
+    },
+    {
+      "name": "no application page errors in simulator checks",
+      "passed": true
+    }
+  ]
+}

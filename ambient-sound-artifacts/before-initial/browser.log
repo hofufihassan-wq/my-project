@@ -1,0 +1,15 @@
+PASS all approved application visuals engine content IDs and drafts schema stay byte-identical
+PASS entry remains silent without autoplay or writing user preferences
+PASS default level emits quiet real audio while error alerts stay independently muted
+FAIL ambient output no longer concentrates energy at the old three audible hum tones {"sampleRate":44100,"binHz":1.3458251953125,"dominantBinFraction":0.17496005503207102,"oldHumBandFraction":0.9999974115593597}
+RECORDING 1 seconds
+RECORDING 9 seconds
+RECORDING 17 seconds
+RECORDING 25 seconds
+FAIL wave recording has gentle rises and quieter intervals instead of a steady drone {"rmsPerSecond":[0.014501702899721105,0.019327579556074975,0.020137962914694683,0.020307629382449385,0.02013316477820823,0.019486093525576117,0.018510302173565155,0.0177025964915674,0.016827462021049355,0.016322604146149854,0.01604474118438606,0.01616099534863761,0.016754570917381247,0.01766151867120872,0.01855643576891725,0.019503442373236368,0.02010674434027295,0.02033132707107633,0.020152102914234176,0.019643493267897435,0.018942515060704983,0.01797586895123655,0.01703656843705001,0.01640853738521488,0.016080614841707863,0.016180843355680936,0.01663375285443918,0.017329541330054373,0.018245031937778693,0.019247449433175322,0.01989440760935733,0.020304811275894296],"peak":0.04754747822880745,"peakToQuietRms":1.4019958353627102,"quietSeconds":0}
+FAIL ambient volume zero truly silences its output {"rms":0.011888835858143387,"peak":0.03221458941698074,"n":7}
+PASS the original real error cue remains audible independently of ambient
+PASS saved settings survive reload without autoplay and resume needs a fresh click
+PASS rapid toggles stay bounded and leaving simulator stops the ambient sources
+PASS no application exceptions external requests or runtime-file changes occurred
+7/10

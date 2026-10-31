@@ -1,0 +1,15 @@
+PASS all approved application visuals engine content IDs and drafts schema stay byte-identical
+PASS entry remains silent without autoplay or writing user preferences
+PASS default level emits quiet real audio while error alerts stay independently muted
+PASS ambient output no longer concentrates energy at the old three audible hum tones
+RECORDING 1 seconds
+RECORDING 9 seconds
+RECORDING 17 seconds
+RECORDING 25 seconds
+PASS wave recording has gentle rises and quieter intervals instead of a steady drone
+PASS ambient volume zero truly silences its output
+PASS the original real error cue remains audible independently of ambient
+PASS saved settings survive reload without autoplay and resume needs a fresh click
+PASS rapid toggles stay bounded and leaving simulator stops the ambient sources
+PASS no application exceptions external requests or runtime-file changes occurred
+10/10

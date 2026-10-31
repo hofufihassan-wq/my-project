@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-10-31T12:37:42.046893+00:00",
+  "approvedDesignBranch": "feat/simulator-final-glass-workbench",
+  "approvedDesignCommit": "3d4575aeae16c22b6932a6bac5b18a7a4f9cca37",
+  "audioFixBranch": "fix/simulator-ambient-no-hum",
+  "audioCodeCommit": "d0923c6592f9bcf3760d8f242789194dd1c3bf46",
+  "runtimeHashes": {
+    "app.js": "5c5bc86889844feaf2f2c03d5718b44cd1b07c3b91dfbf41f85798f11d546e3a",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "bda77dc00b2b3aa8861d95b8792e795959fbff75f77b4992874bbad5acf16c0a",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "8f34c8a724cf0872a9a73bffb1b05420066836759e5fc3cf00c926db47256e51"
+  },
+  "results": {
+    "soundBefore": {
+      "passed": 8,
+      "total": 10
+    },
+    "soundAfter": {
+      "passed": 10,
+      "total": 10
+    },
+    "unit": 13,
+    "completionBrowser": 33,
+    "simulatorAcceptance": 43,
+    "allPriorCommands": 25
+  },
+  "runtimeHashAgreement": true,
+  "noVisualChanges": true,
+  "errorSoundUnchanged": true,
+  "noExplainerImplementation": true,
+  "noMergeOrDeployment": true,
+  "audioSamples": [
+    {
+      "path": "ambient-sound-artifacts/before/ambient-preview.mp3",
+      "bytes": 512684,
+      "sha256": "d61ccc29e950c182ec4bd78df3b95101390de3ae0aef641c97396a98c0801b92"
+    },
+    {
+      "path": "ambient-sound-artifacts/after/ambient-preview.mp3",
+      "bytes": 512684,
+      "sha256": "074d9b6e71402f690188e709dd06f236457ce16951d5d8d4c25c89d758752c4e"
+    }
+  ]
+}

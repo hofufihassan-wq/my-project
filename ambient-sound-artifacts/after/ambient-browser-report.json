@@ -1,0 +1,117 @@
+{
+  "runtimeHashes": {
+    "app.js": "5c5bc86889844feaf2f2c03d5718b44cd1b07c3b91dfbf41f85798f11d546e3a",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "bda77dc00b2b3aa8861d95b8792e795959fbff75f77b4992874bbad5acf16c0a",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "8f34c8a724cf0872a9a73bffb1b05420066836759e5fc3cf00c926db47256e51"
+  },
+  "errors": [],
+  "failed": [],
+  "defaultSamples": {
+    "rms": 0.0005970618148888492,
+    "peak": 0.002234670566394925,
+    "n": 12
+  },
+  "spectrum": {
+    "sampleRate": 44100,
+    "binHz": 1.3458251953125,
+    "dominantBinFraction": 0.02033962244913353,
+    "oldHumBandFraction": 0.040908359533861016
+  },
+  "recording": {
+    "seconds": 32.623,
+    "volume": 0.4,
+    "source": "Native simulator WebAudio output, no replacement track or gain normalization."
+  },
+  "envelope": {
+    "rmsPerSecond": [
+      0.0011331924850953017,
+      0.0022018654078606345,
+      0.002798264261317578,
+      0.0032065484307399633,
+      0.00345916301293097,
+      0.0036039761989216227,
+      0.0036785260580330216,
+      0.0037704048210013916,
+      0.0036058152390540887,
+      0.003150026062276515,
+      0.0028608593313557066,
+      0.0024216319225536095,
+      0.0019909724404773405,
+      0.0015810773889519806,
+      0.0011936244102137142,
+      0.0008246021574029375,
+      0.0004367249548866127,
+      0.00025943418432794615,
+      0.00011635578166241429,
+      0.00008171438918467126,
+      0.00016290015202000596,
+      0.00032918668178471633,
+      0.0006089108689396021,
+      0.000962533731334528,
+      0.0013616198886577135,
+      0.0017163344239758827,
+      0.002172207824358097,
+      0.002577841262358616,
+      0.002837998421330344,
+      0.0033046163252967897,
+      0.003532043653535694,
+      0.003658491716141805
+    ],
+    "peak": 0.01586826704442501,
+    "peakToQuietRms": 46.14125931334354,
+    "quietSeconds": 8
+  },
+  "errorSamples": {
+    "rms": 0.0058159345054833245,
+    "peak": 0.0234843660145998,
+    "n": 5
+  },
+  "results": [
+    {
+      "name": "all approved application visuals engine content IDs and drafts schema stay byte-identical",
+      "passed": true
+    },
+    {
+      "name": "entry remains silent without autoplay or writing user preferences",
+      "passed": true
+    },
+    {
+      "name": "default level emits quiet real audio while error alerts stay independently muted",
+      "passed": true
+    },
+    {
+      "name": "ambient output no longer concentrates energy at the old three audible hum tones",
+      "passed": true
+    },
+    {
+      "name": "wave recording has gentle rises and quieter intervals instead of a steady drone",
+      "passed": true
+    },
+    {
+      "name": "ambient volume zero truly silences its output",
+      "passed": true
+    },
+    {
+      "name": "the original real error cue remains audible independently of ambient",
+      "passed": true
+    },
+    {
+      "name": "saved settings survive reload without autoplay and resume needs a fresh click",
+      "passed": true
+    },
+    {
+      "name": "rapid toggles stay bounded and leaving simulator stops the ambient sources",
+      "passed": true
+    },
+    {
+      "name": "no application exceptions external requests or runtime-file changes occurred",
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "total": 10,
+  "timestamp": "2026-10-31T12:28:15.777Z"
+}

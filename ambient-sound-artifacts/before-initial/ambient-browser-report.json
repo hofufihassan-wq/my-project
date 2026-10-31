@@ -1,0 +1,120 @@
+{
+  "runtimeHashes": {
+    "app.js": "5c5bc86889844feaf2f2c03d5718b44cd1b07c3b91dfbf41f85798f11d546e3a",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "8f34c8a724cf0872a9a73bffb1b05420066836759e5fc3cf00c926db47256e51"
+  },
+  "errors": [],
+  "failed": [],
+  "defaultSamples": {
+    "rms": 0.006052305271898496,
+    "peak": 0.012479686178267002,
+    "n": 12
+  },
+  "spectrum": {
+    "sampleRate": 44100,
+    "binHz": 1.3458251953125,
+    "dominantBinFraction": 0.17496005503207102,
+    "oldHumBandFraction": 0.9999974115593597
+  },
+  "recording": {
+    "seconds": 32.468,
+    "volume": 0.4,
+    "source": "Native simulator WebAudio output, no replacement track or gain normalization."
+  },
+  "envelope": {
+    "rmsPerSecond": [
+      0.014501702899721105,
+      0.019327579556074975,
+      0.020137962914694683,
+      0.020307629382449385,
+      0.02013316477820823,
+      0.019486093525576117,
+      0.018510302173565155,
+      0.0177025964915674,
+      0.016827462021049355,
+      0.016322604146149854,
+      0.01604474118438606,
+      0.01616099534863761,
+      0.016754570917381247,
+      0.01766151867120872,
+      0.01855643576891725,
+      0.019503442373236368,
+      0.02010674434027295,
+      0.02033132707107633,
+      0.020152102914234176,
+      0.019643493267897435,
+      0.018942515060704983,
+      0.01797586895123655,
+      0.01703656843705001,
+      0.01640853738521488,
+      0.016080614841707863,
+      0.016180843355680936,
+      0.01663375285443918,
+      0.017329541330054373,
+      0.018245031937778693,
+      0.019247449433175322,
+      0.01989440760935733,
+      0.020304811275894296
+    ],
+    "peak": 0.04754747822880745,
+    "peakToQuietRms": 1.4019958353627102,
+    "quietSeconds": 0
+  },
+  "errorSamples": {
+    "rms": 0.007295024709708081,
+    "peak": 0.03017188049852848,
+    "n": 5
+  },
+  "results": [
+    {
+      "name": "all approved application visuals engine content IDs and drafts schema stay byte-identical",
+      "passed": true
+    },
+    {
+      "name": "entry remains silent without autoplay or writing user preferences",
+      "passed": true
+    },
+    {
+      "name": "default level emits quiet real audio while error alerts stay independently muted",
+      "passed": true
+    },
+    {
+      "name": "ambient output no longer concentrates energy at the old three audible hum tones",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"sampleRate\":44100,\"binHz\":1.3458251953125,\"dominantBinFraction\":0.17496005503207102,\"oldHumBandFraction\":0.9999974115593597}\n    at /workspace/my-progect/run_simulator_ambient_sound_tests.js:16:140\n    at async test (/workspace/my-progect/run_simulator_ambient_sound_tests.js:8:34)\n    at async main (/workspace/my-progect/run_simulator_ambient_sound_tests.js:16:1)"
+    },
+    {
+      "name": "wave recording has gentle rises and quieter intervals instead of a steady drone",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"rmsPerSecond\":[0.014501702899721105,0.019327579556074975,0.020137962914694683,0.020307629382449385,0.02013316477820823,0.019486093525576117,0.018510302173565155,0.0177025964915674,0.016827462021049355,0.016322604146149854,0.01604474118438606,0.01616099534863761,0.016754570917381247,0.01766151867120872,0.01855643576891725,0.019503442373236368,0.02010674434027295,0.02033132707107633,0.020152102914234176,0.019643493267897435,0.018942515060704983,0.01797586895123655,0.01703656843705001,0.01640853738521488,0.016080614841707863,0.016180843355680936,0.01663375285443918,0.017329541330054373,0.018245031937778693,0.019247449433175322,0.01989440760935733,0.020304811275894296],\"peak\":0.04754747822880745,\"peakToQuietRms\":1.4019958353627102,\"quietSeconds\":0}\n    at /workspace/my-progect/run_simulator_ambient_sound_tests.js:22:661\n    at test (/workspace/my-progect/run_simulator_ambient_sound_tests.js:8:40)\n    at main (/workspace/my-progect/run_simulator_ambient_sound_tests.js:22:7)"
+    },
+    {
+      "name": "ambient volume zero truly silences its output",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"rms\":0.011888835858143387,\"peak\":0.03221458941698074,\"n\":7}\n    at /workspace/my-progect/run_simulator_ambient_sound_tests.js:23:175\n    at async test (/workspace/my-progect/run_simulator_ambient_sound_tests.js:8:34)\n    at async main (/workspace/my-progect/run_simulator_ambient_sound_tests.js:23:1)"
+    },
+    {
+      "name": "the original real error cue remains audible independently of ambient",
+      "passed": true
+    },
+    {
+      "name": "saved settings survive reload without autoplay and resume needs a fresh click",
+      "passed": true
+    },
+    {
+      "name": "rapid toggles stay bounded and leaving simulator stops the ambient sources",
+      "passed": true
+    },
+    {
+      "name": "no application exceptions external requests or runtime-file changes occurred",
+      "passed": true
+    }
+  ],
+  "passed": 7,
+  "total": 10,
+  "timestamp": "2026-10-31T12:25:57.347Z"
+}

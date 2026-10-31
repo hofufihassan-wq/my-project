@@ -1,0 +1,98 @@
+build_compiler 0 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+
+build_css 0 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+
+verify 0 PASS: 27 local runtime/license assets match their locked SHA-256 hashes.
+
+run_preview_protocol_tests 0 unded and typed
+PASS: initial DOM snapshot arrives before readiness and captures the output target
+
+Preview protocol and child console: 19/19 passed.
+
+run_data_safety_tests 0 e valid canonical record
+PASS Earlier null bookmark corruption retains valid siblings and an exact raw recovery copy
+Data safety: 15/15 tests passed.
+
+run_json_import_test 0 حالة درس غير صالحة
+✓ PASS [File size > 1MB]: error -> تعذر الاستيراد: حجم الملف يتجاوز 1 MiB. لم يتم تعديل أي بيانات.
+
+Result: 9/9 unit tests passed.
+
+run_curriculum_tests 0 ير الخصائص Props في Vue 3.
+
+Curriculum source-only expectations: 15/15 passed. Real reference execution is covered by run_stability_browser_tests.js.
+
+run_content_integrity_test 0 PASS: original content SHA-256 hashes; 180 unique terms; 15 unique lessons across 5 tracks, 3 each.
+
+run_legacy_validator_tests 0 evidence is rejected without throwing
+PASS TS-101 valid isolated target text still accepts the reference fixture
+10/10 legacy validator checks passed
+
+run_simulator_reference_review 0 ative animation without changing the running session
+PASS verification leaves source and protected files unchanged
+15/15 tech simulator checks passed
+
+run_dictionary_preview_tests 0 e
+PASS /nested/app/ real core files work offline in this path, without request failures or uncaught exceptions
+58/58 dictionary preview checks passed
+
+run_phase0a_browser_tests 0 ars old verification and creates new lesson session
+PASS no application page errors during integration checks
+14/14 browser integration checks passed
+
+run_dictionary_inventory 0 330 of 360
+AUDITED 360 of 360
+{"summary":{"vue:preview_ready":96,"vue:error":84,"vanilla:error":59,"vanilla:preview_ready":121},"invariantErrors":[]}
+
+run_simulator_browser_tests 0 file completion respects lesson selected at completion time
+PASS no application page errors in simulator checks
+19/19 simulator browser checks passed
+
+run_runtime_assets_tests 0 orrectly with Internet blocked
+PASS context 3: VUE-103 loads local Vue and behaves correctly with Internet blocked
+18/18 actual runtime checks passed
+
+run_stability_browser_tests 0 E webkit browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh
+65/65 stability browser checks passed
+
+run_phase5b_browser_tests 0 eenshots
+PASS null educational sources execution modules and visual runtime remain unchanged during verification
+32/32 phase 5B browser checks passed
+
+run_phase5b1_browser_tests 0  all original educational content IDs and backup files match phase5B and runtime remained stable during checks
+34/34 phase 5B.1 browser checks passed
+
+run_hands_on_verification 0  /workspace/work/ambient-no-hum/regression/run_hands_on_verification/hands_on_verification_report.json
+==============================================
+
+run_simulator_beta_unit_tests 0  protect the unknown original even when later writes succeed
+PASS audio floods are limited per cue and by a fixed simultaneous oscillator bound
+27/27
+
+run_simulator_beta_browser_tests 0 ctual beta screenshots and responsive geometry
+PASS all runtime source hashes remain unchanged throughout acceptance
+30/30 beta browser checks passed
+
+run_simulator_beta_extra_tests 0 ew device scrolling without page overflow
+PASS no unexpected exceptions asset failures or runtime source mutations during supplemental acceptance
+7/7
+
+run_simulator_completion_unit_tests 0 ect invalid values without writing or creating contexts
+PASS rapid ambient toggling cleans every replaced source and leaves no graph on disable
+13/13
+
+run_simulator_completion_browser_tests 0  controls usable and panels fully visible
+PASS all final source hashes are unchanged and only intentional child errors/resource probes occurred
+33/33
+
+run_simulator_ambient_storage_tests 0 PASS corrupt
+PASS backup-denied
+PASS read-denied
+3/3
+
