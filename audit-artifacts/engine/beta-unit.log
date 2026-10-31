@@ -1,0 +1,28 @@
+PASS first use is muted and performs no storage writes
+PASS valid strict preferences round-trip including silent volume zero
+PASS preferences reject extra fields bad versions and nonboolean flags
+PASS corrupted text survives byte-for-byte before defaults are repaired
+PASS backup refusal protects corrupted original even after preference edits
+PASS unavailable localStorage degrades to session values without false persistence
+PASS invalid interactive preference setters do not alter records
+PASS layout visibility is session-only and resettable
+PASS CSS source projection skips tag-like strings inside actual JavaScript
+PASS script projection follows exact raw block boundaries
+PASS projection replacement preserves every byte before and after its selected body
+PASS stale section edits cannot overwrite a newer source
+PASS comments textarea title and declarations do not masquerade as code blocks
+PASS style raw text skips JavaScript-looking tags
+PASS multiple blocks stay read-only instead of silently merging order
+PASS external scripts unclosed tags and unsupported languages stay read-only
+PASS missing blocks are not invented and full-source edit preserves literal text
+PASS closing tag names require a boundary and support case-insensitive HTML
+PASS Vue-style JavaScript and plain CSS sections need no source rewrite
+PASS shortcuts preserve normal typing and composition
+PASS muted first use never creates an audio context even from a trusted click
+PASS saved unmuted preference still waits for a new browser user gesture
+PASS explicit enabled sound can schedule a short tone but volume zero blocks every cue
+PASS inactive simulator cannot create contexts or emit cues
+PASS mute silences active tones and disposal closes audio resources
+PASS transient preference read failures protect the unknown original even when later writes succeed
+PASS audio floods are limited per cue and by a fixed simultaneous oscillator bound
+27/27

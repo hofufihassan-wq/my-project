@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-10-31T13:09:29.470Z",
+  "passed": 2,
+  "total": 6,
+  "results": [
+    {
+      "name": "Unicode before script",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "Unicode within script",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "Unicode within CSS",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "Repeated expansion and uppercase closing",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "Raw closing boundary remains exact",
+      "passed": true
+    },
+    {
+      "name": "Trailing source is preserved",
+      "passed": true
+    }
+  ]
+}

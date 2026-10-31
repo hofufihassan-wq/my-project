@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-10-31T13:10:16.758Z",
+  "mode": "before",
+  "browser": "154.0.8037.57",
+  "state": {
+    "view": {
+      "kind": "script",
+      "language": "javascript",
+      "code": "console.log(\"ENGINE_UNICODE_OK\")</script>",
+      "editable": false,
+      "count": 1,
+      "start": 34,
+      "end": 75,
+      "reason": "الكتلة غير مكتملة؛ استخدم المصدر الكامل لإصلاح الوسوم دون إكمال تلقائي."
+    },
+    "source": "<p>Unicode example: İ</p>\n<script>console.log(\"ENGINE_UNICODE_OK\")</script>"
+  },
+  "assertionsPassed": true,
+  "annotation": "Real browser capture; CSS audit overlay circles observed diagnostic when present."
+}

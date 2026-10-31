@@ -382,23 +382,22 @@
     }
     return attrs;
   }
-  function closeRaw(source, tag, from, lowerSource) {
-    const lower = lowerSource || source.toLowerCase();
-    const needle = '</' + tag;
-    let cursor = from;
-    while ((cursor = lower.indexOf(needle, cursor)) >= 0) {
-      const boundary = lower[cursor + needle.length];
-      if (boundary && !/[\s/>]/.test(boundary)) { cursor += needle.length; continue; }
+  function closeRaw(source, tag, from) {
+    // Match ASCII tag names in the original source. Unicode lowercasing can
+    // expand a character (İ → i + combining dot) and corrupt source offsets.
+    const matcher = new RegExp('</' + tag + '(?=[\\s/>]|$)', 'gi');
+    matcher.lastIndex = from;
+    let match;
+    while ((match = matcher.exec(source))) {
+      const cursor = match.index;
       const closing = readTag(source, cursor);
       if (closing && closing.closing && closing.name === tag && !closing.incomplete) return closing;
-      cursor += needle.length;
     }
     return null;
   }
   function scanBlocks(source) {
     if (typeof source !== 'string') throw new TypeError('Source must be a string');
     const blocks = [];
-    const lowerSource = source.toLowerCase();
     const raw = new Set(['script', 'style', 'textarea', 'title', 'xmp', 'iframe', 'noembed', 'noframes']);
     let cursor = 0;
     while (cursor < source.length) {
@@ -426,7 +425,7 @@
       if (tag.closing) continue;
       if (tag.name === 'plaintext') break;
       if (!raw.has(tag.name)) continue;
-      const closing = tag.incomplete ? null : closeRaw(source, tag.name, tag.end, lowerSource);
+      const closing = tag.incomplete ? null : closeRaw(source, tag.name, tag.end);
       if (tag.name === 'script' || tag.name === 'style') {
         blocks.push({ kind: tag.name, start: tag.end, end: closing?.start ?? source.length, openStart: tag.start,
           closeEnd: closing?.end ?? source.length, code: source.slice(tag.end, closing?.start ?? source.length),
