@@ -276,3 +276,201 @@
 .tech-raw-observation summary { cursor:pointer; }
 .tech-raw-observation pre { color:#7babc0; font-size:8px; max-height:150px; overflow:auto; padding:6px; white-space:pre-wrap; overflow-wrap:anywhere; }
 .tech-observation-card { overflow:auto; }
+/* S1 professional workbench refinement. Application pages outside this component
+   retain their existing markup and styles; engine and draft bindings are intact. */
+.tech-simulator { --tech-ink:#e0f0fa; --tech-muted:#91b1c6; --tech-line:#1d5a78; font-size:12px; }
+.tech-topbar { height:64px; gap:16px; border-radius:0 0 15px 15px; box-shadow:0 2px 0 #0783a822,0 8px 25px #0009; }
+.tech-logo { min-width:216px; gap:10px; }
+.tech-simulator .tech-v-mark { height:36px; width:43px; stroke:none; filter:drop-shadow(0 0 7px #00c4ed55); }
+.tech-logo strong { font-size:22px; letter-spacing:-.5px; }
+.tech-topbar nav { gap:3px; }
+.tech-topbar nav button { font-size:11px; padding-inline:12px; height:38px; }
+.tech-topbar nav .is-active { color:#effdff; border-color:#189bc3; box-shadow:inset 0 -2px 0 #50eaff,0 0 18px #19bce02d; }
+.tech-search { height:38px; font-size:11px; color:#8eafc3; }
+.tech-top-tools { gap:9px; }
+.tech-top-tools button { height:35px; width:35px; color:#b6d5e5; }
+.tech-page-layout { padding:12px 14px 16px; grid-template-columns:202px minmax(0,1fr); gap:14px; }
+.tech-breadcrumb { min-height:21px; margin-bottom:6px; color:#8facbf; font-size:10px; }
+.tech-breadcrumb strong { color:#7ae6f1; font-size:10px; }
+.tech-actionbar { gap:7px; height:55px; margin-bottom:11px; }
+.tech-actionbar > button { height:40px; font-size:11px; padding-inline:10px; color:#b7d5e7; }
+.tech-actionbar .tech-primary { font-size:12px; height:43px; min-width:135px; padding-inline:14px; border-color:#a2faff; box-shadow:inset 0 1px 8px #dbffff77,0 0 0 3px #064575,0 0 16px #0ac9f13d; }
+.tech-primary kbd { font:8px 'JetBrains Mono',monospace; color:#b5f5ff; opacity:.85; margin-inline-start:3px; }
+.tech-actionbar .tech-reference-action { font-size:10px; padding-inline:10px; }
+.tech-actionbar .tech-effects { padding-inline:9px; font-size:10px; }
+.tech-auto { font-size:10px; color:#91adc0; }
+.tech-run-summary { display:flex; gap:6px; align-items:center; padding:0 5px; color:#9cc5d6; min-width:0; white-space:nowrap; font-size:9px; }
+.tech-run-summary i { height:5px; width:5px; border-radius:50%; background:#728d9b; }
+.tech-run-summary strong { font-weight:500; }
+.tech-run-summary > span { color:#64869c; font-size:8px; padding-left:6px; border-left:1px solid #244859; }
+.tech-run-summary[data-state="preview_ready"] i { background:#6ce9ce; box-shadow:0 0 7px #30cfba; }
+.tech-run-summary[data-state="error"] i { background:#fb8b9d; box-shadow:0 0 7px #b13a58; }
+.tech-run-summary[data-state="running"] i { background:#61daff; box-shadow:0 0 8px #13bdf4; }
+.tech-main-grid { grid-template-columns:minmax(0,420fr) minmax(0,290fr) minmax(0,464fr); grid-template-rows:412px 162px 158px; grid-template-areas:"editor flow preview" "console explain preview" "wave wave observation"; gap:12px; }
+.tech-panel { border-color:#1a5878; background:linear-gradient(145deg,#082033e8,#03111dea 68%); box-shadow:inset 0 0 0 3px #09263c66,0 0 0 2px #020b144d; }
+.tech-panel::before { width:75px; background:linear-gradient(90deg,transparent,#38c5ee,transparent); box-shadow:0 0 8px #168fb2; }
+.tech-panel-bar { background:linear-gradient(100deg,#0b2b4399,#041826b3); padding-inline:12px; }
+.tech-panel-bar h3 { font-size:12px; color:#cee5f2; }
+.tech-panel-bar h3 small { font-size:9px; }
+.tech-panel-bar button { color:#adc9db; font-size:10px; }
+.tech-editor-panel { border-color:#227799; }
+.tech-editor-bar { height:46px; }
+.tech-file-tab { padding-inline:14px; box-shadow:inset 0 4px 10px #1c8bc52b; }
+.tech-file-tab strong { font-size:12px; }
+.tech-source-switch { height:31px; padding-inline:10px; }
+.tech-source-switch button { font-size:10px; padding:3px 8px; }
+.tech-source-switch > span { font-size:8px; color:#819db0; }
+.tech-simulator .tech-highlight,.tech-simulator .tech-input,.tech-simulator .tech-reference-code { font-size:12.5px!important; line-height:22px!important; }
+.tech-line-numbers { color:#62859d; font-size:11px; }
+.tech-editor-status { font-size:8px; color:#7e9fb4; }
+.tech-simulator .hljs-comment { color:#69aa94!important; }
+.tech-simulator .hljs-keyword,.tech-simulator .hljs-tag .hljs-name { color:#d39cf0; }
+.tech-simulator .hljs-string { color:#e3bd86; }
+.tech-simulator .hljs-attr,.tech-simulator .hljs-attribute { color:#95cdf0; }
+.tech-console-lines { font-size:11px; line-height:1.8; padding:9px 10px; }
+.tech-console-lines p { margin-bottom:5px; }
+.tech-console-lines time { color:#66859c; font-size:8px; }
+.tech-console-lines p[data-level="error"] { color:#ff9daf; background:#83344815; border-radius:4px; }
+.tech-console-lines p[data-level="warn"] { color:#ead196; }
+.tech-flow-panel { height:452px; padding-inline:10px; background:radial-gradient(ellipse at 50% 53%,#05457038,transparent 69%),#031420; border-color:#175b7a; }
+.tech-section-title { font-size:12px; padding-top:12px; color:#c9e5f3; }
+.tech-flow-badge { font-size:8px; color:#87a8bd; line-height:1.8; }
+.tech-simulator .tech-decoration-note { display:none; }
+.tech-simulator .tech-flow-art { inset:34px 0 23px; z-index:0; opacity:.85; }
+.tech-simulator .tech-flow-art > svg { height:100%; width:100%; }
+.tech-simulator .tech-flow-art::after { display:none; }
+.tech-flow-spine-glow { opacity:.4; }
+.tech-flow-spine-pulse { animation:tech-s1-pulse 6s linear infinite; opacity:.5; }
+.tech-flow-art[data-state="running"] .tech-flow-spine-pulse { animation-duration:1.8s; opacity:1; }
+.tech-flow-art[data-state="stopped"] .tech-flow-spine-pulse { animation:none; opacity:.15; }
+.tech-flow-nodes { gap:18px; margin:21px 18px 0; }
+.tech-flow-node { margin-inline:0!important; min-height:61px; padding:9px 10px; border-color:#197ca4; background:linear-gradient(110deg,#0c3e60ed,#041c2df5); box-shadow:inset 0 1px 0 #39b6e51f,0 4px 13px #0007,0 0 13px #087ca51a; }
+.tech-flow-node::before { width:57%; opacity:.7; }
+.tech-node-symbol { width:33px; height:35px; }
+.tech-flow-node strong { font-size:11px; }
+.tech-flow-node small { font-size:8px; color:#92b8cb; max-width:136px; line-height:1.7; margin-top:4px; }
+.tech-flow-node i { color:#5edbd9; font-size:9px; }
+.tech-flow-endpoints { margin-top:22px; gap:8px; }
+.tech-flow-endpoints > div { background:#041c29; border-color:#1c5c71!important; box-shadow:none!important; padding:7px 4px; min-height:54px; }
+.tech-flow-endpoints strong { color:#b8dce8; font-size:9px; }
+.tech-flow-endpoints small { color:#77a0b8; font-size:8px; }
+.tech-flow-endpoints > div > span { font-size:12px; color:#6cceea; }
+.tech-explain-card { margin-top:40px; padding:10px 11px; }
+.tech-explain-card h3 { font-size:11px; }
+.tech-explain-card > p { color:#aec4d4; font-size:9px; line-height:1.9; }
+.tech-explain-card > div > span { color:#7399ae; font-size:8px; }
+.tech-explain-card button { font-size:9px; }
+.tech-preview-stack { grid-template-rows:minmax(0,1fr); }
+.tech-preview-panel { border-color:#2689af; box-shadow:inset 0 0 0 3px #0e365166,0 0 0 2px #021d2f,0 0 20px #087ca51c; padding:0 9px 9px; }
+.tech-preview-panel > .tech-panel-bar { height:43px; margin-inline:-9px; }
+.tech-preview-tabs { min-height:34px; padding:3px; gap:2px; margin:7px 0 10px; }
+.tech-preview-tabs button { font-size:11px; }
+.tech-preview-tabs button[aria-selected="true"] { color:#ddfcff; background:linear-gradient(140deg,#146a95,#073047); border-color:#2699bd; }
+.tech-preview-body { border-color:#196786; border-radius:8px; box-shadow:inset 0 0 0 3px #0b293c88; }
+.tech-live-surface { padding:20px 13px; background:radial-gradient(ellipse at 53% 47%,#0b6b784d,transparent 70%),#041b29; }
+.tech-iframe-mount { border-color:#258295; box-shadow:0 0 15px #12d3bd20,inset 0 0 0 3px #0a3d4a; }
+.tech-preview-status { min-height:25px; font-size:9px; gap:7px; }
+.tech-preview-status > span { font-size:8px; }
+.tech-preview-tools button { width:28px; height:25px; }
+.tech-source-inspector h4 { font-size:12px; }
+.tech-source-inspector p { font-size:10px; }
+.tech-source-inspector pre { font-size:11px; line-height:1.8; }
+.tech-inspection-card { grid-area:observation; padding:12px 13px; }
+.tech-inspection-card h3 { font-size:12px; }
+.tech-inspection-card h3 small { font-size:8px; }
+.tech-inspection-card > p { font-size:10px; color:#abc6d6; }
+.tech-raw-observation { font-size:10px; margin-top:8px; }
+.tech-data-note { font-size:8px; color:#7a9bae; }
+.tech-wave-panel { padding:10px 12px; }
+.tech-wave-panel h3 { font-size:11px; }
+.tech-wave-panel h3 small { font-size:8px; color:#7999af; }
+.tech-wave-caption { font-size:9px; color:#8ba9be; bottom:10px; }
+.tech-wave-panel .tech-wave-art { height:110px; opacity:.8; }
+.tech-track-card > p { font-size:9px; color:#96adbf; }
+.tech-lesson-list strong { font-size:10px; }
+.tech-lesson-list small { font-size:9px; color:#84a6be; }
+.tech-lesson-list button { min-height:64px; padding:8px 5px; }
+.tech-track-link { padding:8px 7px; }
+.tech-track-link strong { font-size:11px; }
+.tech-track-link small { color:#829fb1; font-size:10px; }
+.tech-sidebar-label { color:#8ba8bc; font-size:9px; }
+.tech-resources button { font-size:10px; color:#b3c9d7; padding-block:10px; }
+.tech-guide { color:#aec2ce; }
+.tech-guide summary { font-size:11px; }
+.tech-guide p { font-size:10px; }
+@keyframes tech-s1-pulse { to { stroke-dashoffset:-182; } }
+@media (max-width:1250px) and (min-width:851px) {
+ .tech-actionbar { flex-wrap:wrap; height:auto; min-height:75px; }
+ .tech-run-summary { order:8; width:100%; }
+ .tech-topbar nav button:nth-child(3) { display:none; }
+}
+@media (max-width:1190px) {
+ .tech-main-grid { grid-template-areas:"editor preview" "console preview" "flow flow" "explain observation" "wave wave"; grid-template-rows:412px 162px 440px 145px 158px; }
+ .tech-flow-panel { height:440px; }
+ .tech-flow-nodes { gap:14px; margin-top:40px; flex-direction:row; }
+ .tech-flow-node { min-height:115px; flex:1; }
+ .tech-flow-node small { white-space:normal; }
+ .tech-flow-endpoints { margin:50px 30% 0; }
+ .tech-flow-art { opacity:.4!important; }
+ .tech-explain-card { margin-top:0; }
+}
+@media (max-width:850px) {
+ .tech-topbar { height:62px; }
+ .tech-topbar nav button { font-size:10px; }
+ .tech-topbar nav button:nth-child(3) { display:none; }
+ .tech-simulator .tech-v-mark { width:33px; height:31px; }
+ .tech-sidebar { display:grid; grid-template-columns:minmax(0,1fr); }
+ .tech-sidebar .tech-resources,.tech-sidebar .tech-guide { display:none; }
+ .tech-track-card { padding:10px 12px; }
+ .tech-track-title { display:none; }
+ .tech-track-card > p,.tech-track-light,.tech-sidebar-label,.tech-track-link { display:none; }
+ .tech-lesson-list { display:flex; gap:7px; overflow:auto; padding:2px; }
+ .tech-lesson-list li { min-width:155px; flex:1; }
+ .tech-lesson-list button { min-height:58px; height:100%; padding:6px; }
+ .tech-lesson-list strong { font-size:9px; }
+ .tech-lesson-list small { font-size:8px; }
+ .tech-breadcrumb { min-height:26px; margin-top:3px; }
+ .tech-actionbar { min-height:79px; }
+ .tech-action-spacer { display:none; }
+ .tech-run-summary { flex:1; }
+}
+@media (max-width:560px) {
+ .tech-topbar { padding-inline:11px; gap:7px; height:60px; }
+ .tech-logo { min-width:0; gap:6px; }
+ .tech-logo strong { font-size:17px; }
+ .tech-topbar nav button { font-size:9px; padding-inline:6px; }
+ .tech-main-grid { display:flex; gap:13px; }
+ .tech-editor-panel { height:430px; }
+ .tech-console-panel { height:180px; }
+ .tech-flow-panel { height:520px; }
+ .tech-flow-nodes { flex-direction:column; margin:22px 29px 0; gap:29px; }
+ .tech-flow-node { min-height:63px; flex-direction:row; }
+ .tech-flow-node small { font-size:9px; max-width:168px; }
+ .tech-flow-endpoints { margin:28px 0 0; }
+ .tech-preview-stack { height:520px; }
+ .tech-preview-panel { height:100%; }
+ .tech-wave-panel { height:158px; }
+ .tech-inspection-card { min-height:153px; }
+ .tech-explain-card { min-height:145px; }
+ .tech-actionbar { min-height:111px; gap:7px; padding-block:5px; }
+ .tech-actionbar > button { height:36px; font-size:10px; padding-inline:10px; }
+ .tech-actionbar .tech-primary { font-size:12px; min-width:139px; }
+ .tech-primary kbd { display:none; }
+ .tech-run-summary { order:8; flex-basis:100%; justify-content:flex-start; padding:3px 0; font-size:10px; }
+ .tech-run-summary > span { font-size:9px; }
+ .tech-actionbar .tech-reference-action { font-size:10px; }
+ .tech-preview-status { font-size:9px; }
+ .tech-panel-bar h3 { font-size:12px; }
+ .tech-console-lines { font-size:11px; }
+}
+@media (prefers-reduced-motion:reduce) { .tech-simulator .tech-flow-spine-pulse { animation:none!important; } }
+@media (max-width:560px) {
+ .tech-topbar { min-height:100px; height:auto; padding-block:8px; flex-wrap:wrap; gap:7px; }
+ .tech-topbar nav { height:34px; }
+ .tech-top-tools { display:flex; justify-content:flex-end; width:100%; gap:9px; padding-top:3px; border-top:1px solid #163d54; }
+ .tech-top-tools button { width:30px; height:29px; padding:5px; }
+ .tech-top-tools .tech-avatar { margin-right:auto; width:27px; height:27px; font-size:14px; }
+}
+@media (max-width:850px) { .tech-actionbar { height:auto; flex-wrap:wrap; align-content:flex-start; position:relative; z-index:2; padding-block:6px; } }
+@media (max-width:560px) { .tech-actionbar { min-height:0; } .tech-actionbar > .tech-action-spacer { display:none; } .tech-actionbar .tech-reference-action { margin-bottom:3px; } .tech-run-summary { min-height:23px; } }
+@media (max-width:850px) { .tech-page-layout { grid-template-columns:minmax(0,1fr); padding:10px; gap:10px; } .tech-sidebar { min-width:0; } .tech-track-card { min-width:0; overflow:hidden; } .tech-lesson-list li { flex:0 0 auto; } }
