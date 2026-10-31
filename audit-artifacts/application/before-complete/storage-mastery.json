@@ -1,0 +1,6 @@
+{
+  "key": "vuelexicon_mastery_v3",
+  "expected": "{\"js-const\":\"mastered\"}",
+  "actual": "{\"js-let\":\"learning\"}",
+  "toast": "تم تحديث مستوى الإتقان: أتعلم 🟡"
+}

@@ -1,0 +1,37 @@
+FAIL transient native Storage read failure preserves practice original browserContext.newPage: Executable doesn't exist at /home/agent/.cache/ms-playwright/ffmpeg-1011/ffmpeg-linux
+╔═════════════════════════════════════════════════════════════════════════╗
+║ Looks like Playwright Test or Playwright was just installed or updated. ║
+║ Please run the following command to download new browsers:              ║
+║                                                                         ║
+║     npx playwright install                                              ║
+║                                                                         ║
+║ <3 Playwright Team                                                      ║
+╚═════════════════════════════════════════════════════════════════════════╝
+FAIL transient native Storage read failure preserves bookmarks original Unread existing record must not be replaced by fallback state
++ actual - expected
+
++ '["js-let"]'
+- '["js-const"]'
+        ^
+
+FAIL transient native Storage read failure preserves mastery original Unread existing record must not be replaced by fallback state
++ actual - expected
+
++ '{"js-let":"learning"}'
+- '{"js-const":"mastered"}'
+        ^
+
+FAIL transient native Storage read failure preserves recent original Unread existing record must not be replaced by fallback state
++ actual - expected
+
++ '["js-let"]'
+- '["js-const"]'
+        ^
+
+FAIL IME composing Tab preserves CSS text Expected values to be strictly equal:
++ actual - expected
+
++ 'p{color:red}  '
+- 'p{color:red}'
+               ^
+

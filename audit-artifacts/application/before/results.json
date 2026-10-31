@@ -1,0 +1,33 @@
+{
+  "root": "/tmp/vuelexicon-audit-base",
+  "timestamp": "2026-10-31T13:11:38.731Z",
+  "passed": 0,
+  "total": 5,
+  "results": [
+    {
+      "name": "transient native Storage read failure preserves practice original",
+      "passed": false,
+      "error": "browserContext.newPage: Executable doesn't exist at /home/agent/.cache/ms-playwright/ffmpeg-1011/ffmpeg-linux\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:11:23\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:6:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:8:65"
+    },
+    {
+      "name": "transient native Storage read failure preserves bookmarks original",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Unread existing record must not be replaced by fallback state\n+ actual - expected\n\n+ '[\"js-let\"]'\n- '[\"js-const\"]'\n        ^\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:13:298\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:6:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:8:65"
+    },
+    {
+      "name": "transient native Storage read failure preserves mastery original",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Unread existing record must not be replaced by fallback state\n+ actual - expected\n\n+ '{\"js-let\":\"learning\"}'\n- '{\"js-const\":\"mastered\"}'\n        ^\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:13:298\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:6:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:8:65"
+    },
+    {
+      "name": "transient native Storage read failure preserves recent original",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Unread existing record must not be replaced by fallback state\n+ actual - expected\n\n+ '[\"js-let\"]'\n- '[\"js-const\"]'\n        ^\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:13:298\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:6:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:8:65"
+    },
+    {
+      "name": "IME composing Tab preserves CSS text",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'p{color:red}  '\n- 'p{color:red}'\n               ^\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:15:549\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:6:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:15:1"
+    }
+  ]
+}

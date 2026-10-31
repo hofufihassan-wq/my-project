@@ -1,0 +1,33 @@
+{
+  "root": "/tmp/vuelexicon-audit-base",
+  "timestamp": "2026-10-31T13:12:38.827Z",
+  "passed": 0,
+  "total": 5,
+  "results": [
+    {
+      "name": "transient native Storage read failure preserves practice original",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Unread existing record must not be replaced by fallback state\n+ actual - expected\n\n+ '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>SESSION EDIT</p>\"},\"HTML-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"CSS-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"TS-101\":{\"status\":\"unlocked\",\"codeDraft\":null},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null}}'\n- '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>ORIGINAL DRAFT</p>\"},\"JS-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>SECOND ORIGINAL</p>\"}}'\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:14:298\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:7:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:9:65"
+    },
+    {
+      "name": "transient native Storage read failure preserves bookmarks original",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Unread existing record must not be replaced by fallback state\n+ actual - expected\n\n+ '[\"js-let\"]'\n- '[\"js-const\"]'\n        ^\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:14:298\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:7:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:9:65"
+    },
+    {
+      "name": "transient native Storage read failure preserves mastery original",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Unread existing record must not be replaced by fallback state\n+ actual - expected\n\n+ '{\"js-let\":\"learning\"}'\n- '{\"js-const\":\"mastered\"}'\n        ^\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:14:298\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:7:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:9:65"
+    },
+    {
+      "name": "transient native Storage read failure preserves recent original",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Unread existing record must not be replaced by fallback state\n+ actual - expected\n\n+ '[\"js-let\"]'\n- '[\"js-const\"]'\n        ^\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:14:298\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:7:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:9:65"
+    },
+    {
+      "name": "IME composing Tab preserves CSS text",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'p{color:red}  '\n- 'p{color:red}'\n               ^\n\n    at /workspace/my-progect/audit-artifacts/application/run.cjs:16:549\n    at async test (/workspace/my-progect/audit-artifacts/application/run.cjs:7:34)\n    at async /workspace/my-progect/audit-artifacts/application/run.cjs:16:1"
+    }
+  ]
+}

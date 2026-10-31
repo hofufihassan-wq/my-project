@@ -20,7 +20,14 @@ const app = createApp({
     const SafeStorage = {
       _mem: new Map(),
       getItem(key) {
-        try { return localStorage.getItem(key); } catch (_) {}
+        try { return localStorage.getItem(key); } catch (_) {
+          // A failed read is not evidence of an absent record. Never replace
+          // an unread original with the empty in-memory fallback later on.
+          if (!protectedStorageKeys.has(key)) {
+            protectedStorageKeys.add(key);
+            storageWarnings.push('تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.');
+          }
+        }
         return this._mem.has(key) ? this._mem.get(key) : null;
       },
       writeDurably(key, val) {
@@ -1542,6 +1549,7 @@ const app = createApp({
     }
 
     function handleEditorKeydown(event) {
+      if (event.isComposing || event.keyCode === 229) return;
       if (autocompleteVisible.value && autocompleteSuggestions.value.length > 0) {
         if (event.key === 'ArrowDown') {
           event.preventDefault();
@@ -2306,6 +2314,7 @@ const app = createApp({
       }
     }
     function techEditorKeydown(event) {
+      if (event.isComposing || event.keyCode === 229) return;
       if (window.VueLexiconSimulatorBeta.actionForShortcut(event)) return;
       if (techLanguage.value === 'source') { handleEditorKeydown(event); return; }
       if (event.key === 'Tab' && !techEditorReadonly.value) {
