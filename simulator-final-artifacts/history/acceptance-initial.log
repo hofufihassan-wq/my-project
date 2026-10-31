@@ -1,0 +1,251 @@
+PASS approved audio module engine protocol progress schema content and backups remain byte-identical
+PASS fresh activity is empty without fake attempts donut chart or execution duration
+PASS every graph node explains a real source frame ready DOM or error signal
+PASS drag editor height changes real geometry with glass feedback and keeps the running iframe
+PASS desktop column drag changes its share without editing or rerunning source
+PASS preview and Console drag plus accessible keyboard bounds change only panel sizes
+FAIL resize buttons and ranges provide non-drag alternatives and preserve frame identity Expected values to be strictly equal:
+
+420 !== 422
+
+FAIL custom viewport applies exact CSS dimensions and invalid input leaves them unchanged locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.final-custom-dimensions > summary')[22m
+[2m    - locator resolved to <summary>مقاس مخصص</summary>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="beta-layout-options">…</div> from <div class="final-command-deck">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="beta-layout-options">…</div> from <div class="final-command-deck">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is not stable[22m
+[2m  57 × retrying click action[22m
+[2m       - waiting 500ms[22m
+[2m       - waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div class="beta-layout-options">…</div> from <div class="final-command-deck">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+
+FAIL zoom fit and reset alter only outer presentation never user CSS or viewport source locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('final-zoom-in')[22m
+[2m    - locator resolved to <button data-testid="final-zoom-in" aria-label="تكبير محتوى المعاينة">+</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not stable[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="beta-layout-options">…</div> from <div class="final-command-deck">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is not stable[22m
+[2m  57 × retrying click action[22m
+[2m       - waiting 500ms[22m
+[2m       - waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div class="beta-layout-options">…</div> from <div class="final-command-deck">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+
+FAIL device controls produce real tablet and mobile widths without iframe remount locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('beta-preview-tablet')[22m
+[2m    - locator resolved to <button aria-pressed="false" data-testid="beta-preview-tablet">تابلت 768</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not stable[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is not stable[22m
+[2m  - retrying click action[22m
+[2m    - waiting 100ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <div class="beta-layout-options">…</div> from <div class="final-command-deck">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 100ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is not stable[22m
+[2m  57 × retrying click action[22m
+[2m       - waiting 500ms[22m
+[2m       - waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div class="beta-layout-options">…</div> from <div class="final-command-deck">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+
+FAIL hide expand restore and focus retain the same live session and expose useful controls locator.check: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('beta-panel-console')[22m
+[2m    - locator resolved to <input type="checkbox" data-testid="beta-panel-console"/>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+PASS only actual ready/error events change attempt counts and no variable paths are invented
+PASS late real errors reclassify a ready attempt without counting it twice
+PASS forged messages cannot alter either graph branch or statistics
+PASS motion is tied to new actual signals and becomes static when effects are disabled
+PASS lesson JS-101 native navigation hints draft reference and preview remain functional
+PASS lesson JS-102 native navigation hints draft reference and preview remain functional
+PASS lesson JS-103 native navigation hints draft reference and preview remain functional
+PASS lesson HTML-101 native navigation hints draft reference and preview remain functional
+PASS lesson HTML-102 native navigation hints draft reference and preview remain functional
+PASS lesson HTML-103 native navigation hints draft reference and preview remain functional
+PASS lesson CSS-101 native navigation hints draft reference and preview remain functional
+PASS lesson CSS-102 native navigation hints draft reference and preview remain functional
+PASS lesson CSS-103 native navigation hints draft reference and preview remain functional
+PASS lesson TS-101 native navigation hints draft reference and preview remain functional
+PASS lesson TS-102 native navigation hints draft reference and preview remain functional
+PASS lesson TS-103 native navigation hints draft reference and preview remain functional
+PASS lesson VUE-101 native navigation hints draft reference and preview remain functional
+FAIL lesson VUE-102 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('.tech-track-link[data-track="vue"]')[22m
+[2m    - locator resolved to <button data-track="vue" class="tech-track-link is-active">…</button>[22m
+[2m  - attempting click action[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - performing click action[22m
+
+FAIL lesson VUE-103 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL all fifteen edited drafts survive reload without automatic execution page.reload: Target page, context or browser has been closed
+browserContext.newPage: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-ICGS57 --remote-debugging-pipe --no-startup-window
+<launched> pid=122687
+[pid=122687][err] [122687:122687:1031/075120.032023:ERROR:third_party/crashpad/crashpad/util/file/filesystem_posix.cc:63] mkdir : No such file or directory (2)
+[pid=122687][err] chrome_crashpad_handler: --database is required
+[pid=122687][err] Try 'chrome_crashpad_handler --help' for more information.
+[pid=122687][err] [122687:122711:1031/075120.071325:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=122687][err] [122687:122711:1031/075120.074536:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122711:1031/075120.074576:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=122687][err] [122687:122711:1031/075120.074587:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=122687][err] [122687:122711:1031/075120.074592:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122721:1031/075120.079760:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 122724: Read-only file system (30)
+[pid=122687][err] [122687:122711:1031/075120.134269:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122721:1031/075120.134370:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 122746: Read-only file system (30)
+[pid=122687][err] [122687:122687:1031/075120.155219:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] [122687:122687:1031/075120.155276:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] [122687:122711:1031/075120.155294:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122711:1031/075120.155329:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122687:1031/075120.158874:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] [122687:122711:1031/075120.159251:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122687:1031/075120.162444:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] [122687:122687:1031/075120.162464:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] [122687:122711:1031/075120.162670:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=122687][err] [122687:122711:1031/075120.162782:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=122687][err] [122687:122711:1031/075120.162851:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122687:1031/075120.167873:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] [122687:122687:1031/075120.168428:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+[pid=122687][err] [122687:122687:1031/075120.168443:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] [122687:122711:1031/075120.168502:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122687:1031/075120.171112:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] [122687:122711:1031/075120.172053:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=122687][err] [122687:122687:1031/075120.172405:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=122687][err] 
+[pid=122687][err] (process:122687): dconf-CRITICAL **: 07:51:20.186: unable to create file '/home/agent/.cache/dconf/user': Read-only file system.  dconf will not work properly.
+[pid=122687][err] 
+[pid=122687][err] (process:122687): dconf-CRITICAL **: 07:51:20.186: unable to create file '/home/agent/.cache/dconf/user': Read-only file system.  dconf will not work properly.
+[pid=122687][err] 
+[pid=122687][err] (process:122687): dconf-CRITICAL **: 07:51:20.186: unable to create file '/home/agent/.cache/dconf/user': Read-only file system.  dconf will not work properly.
+[pid=122687][err] [122687:122721:1031/075120.209345:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 122765: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075120.238920:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 122774: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075120.241895:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 122776: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075121.463892:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 122799: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075121.852208:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 122816: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075328.350727:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123206: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075328.757921:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123218: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075329.319742:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123229: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075329.563631:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123238: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075330.314747:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123248: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075330.881370:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123258: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075331.037529:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123267: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075331.387793:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123277: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075331.642016:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123287: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075331.782051:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123296: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075332.240662:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123307: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075332.553853:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123316: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075332.725264:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123325: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075333.216767:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123340: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075333.519979:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123351: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075333.716260:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123360: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075334.143410:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123370: Read-only file system (30)
+[pid=122687][err] [122724:122737:1031/075334.149688:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122724:122737:1031/075334.150102:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122724:122737:1031/075334.150427:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122724:122737:1031/075334.150510:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122724:122737:1031/075334.150612:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122687:122721:1031/075334.378112:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123379: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075334.559989:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123388: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075334.989736:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123398: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075335.279642:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123411: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075335.439088:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123421: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075335.818172:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123430: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075336.202578:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123439: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075336.399993:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123448: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075336.778876:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123457: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075337.032361:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123466: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075337.252547:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123475: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075337.703801:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123484: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075338.019038:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123493: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075338.246323:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123502: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075338.679923:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123512: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075339.010199:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123521: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075339.205145:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123531: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075339.581484:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123541: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075339.896234:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123550: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075340.059816:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123560: Read-only file system (30)
+[pid=122687][err] [122724:122737:1031/075340.444903:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122724:122737:1031/075340.445086:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122724:122737:1031/075340.445242:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122724:122737:1031/075340.445447:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122724:122737:1031/075340.445510:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[pid=122687][err] [122687:122721:1031/075340.450143:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123570: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075340.717017:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123579: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075340.900853:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123590: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075341.357028:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123599: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075341.648413:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123609: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075341.807836:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123619: Read-only file system (30)
+[pid=122687][err] [122687:122721:1031/075342.275538:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 123629: Read-only file system (30)
+[pid=122687] <gracefully close start>
+    at context (/workspace/my-progect/run_simulator_final_browser_tests.js:8:466)
+    at async main (/workspace/my-progect/run_simulator_final_browser_tests.js:33:46)

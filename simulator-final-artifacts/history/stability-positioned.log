@@ -1,0 +1,7 @@
+PASS chromium 360 RTL Arabic fonts dark theme and layouts remain usable at this width
+PASS chromium 390 RTL Arabic fonts dark theme and layouts remain usable at this width
+PASS chromium 768 RTL Arabic fonts dark theme and layouts remain usable at this width
+PASS chromium 1440 RTL Arabic fonts dark theme and layouts remain usable at this width
+UNAVAILABLE firefox browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/firefox-1497/firefox/firefox
+UNAVAILABLE webkit browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh
+4/4 stability browser checks passed

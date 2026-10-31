@@ -1,0 +1,68 @@
+[
+  {
+    "scroll": 509,
+    "frame": {
+      "x": 31,
+      "y": 1565.78125,
+      "width": 298,
+      "height": 377
+    },
+    "button": {
+      "x": 120.59375,
+      "y": 1791.6875,
+      "width": 118.8125,
+      "height": 49
+    },
+    "child": {
+      "scroll": 0,
+      "width": 298,
+      "height": 377
+    }
+  },
+  {
+    "auto": "locator.scrollIntoViewIfNeeded: Timeout 3994.4010000000003ms exceeded.\nCall log:\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n"
+  },
+  {
+    "scroll": 509,
+    "frame": {
+      "x": 31,
+      "y": 1565.78125,
+      "width": 298,
+      "height": 377
+    },
+    "button": {
+      "x": 120.59375,
+      "y": 1791.6875,
+      "width": 118.8125,
+      "height": 49
+    },
+    "child": {
+      "scroll": 0,
+      "width": 298,
+      "height": 377
+    }
+  },
+  {
+    "scroll": 1867,
+    "frame": {
+      "x": 31,
+      "y": 199.78125,
+      "width": 298,
+      "height": 377
+    },
+    "button": {
+      "x": 120.59375,
+      "y": 425.6875,
+      "width": 118.8125,
+      "height": 49
+    },
+    "child": {
+      "scroll": 0,
+      "width": 298,
+      "height": 377
+    }
+  },
+  {
+    "count": "1"
+  }
+]

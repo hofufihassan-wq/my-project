@@ -1,0 +1,229 @@
+{
+  "timestamp": "2026-10-31T11:20:41.891Z",
+  "browser": "154.0.8037.57",
+  "runtimeHashes": {
+    "app.js": "5c5bc86889844feaf2f2c03d5718b44cd1b07c3b91dfbf41f85798f11d546e3a",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-final.css": "0e7a35e826bcfa136d0d2d16375328dfafc8aaf77918c7939090695a63e2ca32",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "assets/vendor/manifest.json": "8f34c8a724cf0872a9a73bffb1b05420066836759e5fc3cf00c926db47256e51"
+  },
+  "passed": 43,
+  "total": 43,
+  "captures": [
+    "screenshots/error-graph.png",
+    "screenshots/preview-768.png",
+    "screenshots/graph-768.png",
+    "screenshots/mobile-768.png",
+    "screenshots/preview-390.png",
+    "screenshots/graph-390.png",
+    "screenshots/mobile-390.png",
+    "screenshots/preview-320.png",
+    "screenshots/graph-320.png",
+    "screenshots/mobile-320.png"
+  ],
+  "network": [
+    {
+      "width": 1440,
+      "external": [],
+      "failed": [],
+      "errors": [
+        "FINAL_EXPECTED_ERROR",
+        "FINAL_LATE_ERROR"
+      ]
+    },
+    {
+      "width": 768,
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 320,
+      "external": [],
+      "failed": [],
+      "errors": []
+    }
+  ],
+  "results": [
+    {
+      "title": "approved audio module engine protocol progress schema content and backups remain byte-identical",
+      "passed": true
+    },
+    {
+      "title": "fresh activity is empty without fake attempts donut chart or execution duration",
+      "passed": true
+    },
+    {
+      "title": "editor syntax mirror and gutter share a line height and JavaScript navigation stays aligned",
+      "passed": true
+    },
+    {
+      "title": "every graph node explains a real source frame ready DOM or error signal",
+      "passed": true
+    },
+    {
+      "title": "drag editor height changes real geometry with glass feedback and keeps the running iframe",
+      "passed": true
+    },
+    {
+      "title": "desktop column drag changes its share without editing or rerunning source",
+      "passed": true
+    },
+    {
+      "title": "preview and Console drag plus accessible keyboard bounds change only panel sizes",
+      "passed": true
+    },
+    {
+      "title": "resize buttons and ranges provide non-drag alternatives and preserve frame identity",
+      "passed": true
+    },
+    {
+      "title": "custom viewport applies exact CSS dimensions and invalid input leaves them unchanged",
+      "passed": true
+    },
+    {
+      "title": "zoom fit and reset alter only outer presentation never user CSS or viewport source",
+      "passed": true
+    },
+    {
+      "title": "zoom and fit from source or Console reveal the result before measuring its actual viewport",
+      "passed": true
+    },
+    {
+      "title": "device controls produce real tablet and mobile widths without iframe remount",
+      "passed": true
+    },
+    {
+      "title": "hide expand restore and focus retain the same live session and expose useful controls",
+      "passed": true
+    },
+    {
+      "title": "only actual ready/error events change attempt counts and no variable paths are invented",
+      "passed": true
+    },
+    {
+      "title": "late real errors reclassify a ready attempt without counting it twice",
+      "passed": true
+    },
+    {
+      "title": "forged messages cannot alter either graph branch or statistics",
+      "passed": true
+    },
+    {
+      "title": "motion is tied to new actual signals and becomes static when effects are disabled",
+      "passed": true
+    },
+    {
+      "title": "lesson JS-101 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson JS-102 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson JS-103 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson HTML-101 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson HTML-102 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson HTML-103 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson CSS-101 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson CSS-102 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson CSS-103 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson TS-101 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson TS-102 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson TS-103 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson VUE-101 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson VUE-102 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "lesson VUE-103 native navigation hints draft reference and preview remain functional",
+      "passed": true
+    },
+    {
+      "title": "all fifteen edited drafts survive reload without automatic execution",
+      "passed": true
+    },
+    {
+      "title": "768px compact panels and fixed run controls preserve the running frame",
+      "passed": true
+    },
+    {
+      "title": "768px native touch drag and keyboard alternatives change editor height",
+      "passed": true
+    },
+    {
+      "title": "768px actual Vue touch interaction works in All view and survives compact switching",
+      "passed": true
+    },
+    {
+      "title": "390px compact panels and fixed run controls preserve the running frame",
+      "passed": true
+    },
+    {
+      "title": "390px native touch drag and keyboard alternatives change editor height",
+      "passed": true
+    },
+    {
+      "title": "390px actual Vue touch interaction works in All view and survives compact switching",
+      "passed": true
+    },
+    {
+      "title": "320px compact panels and fixed run controls preserve the running frame",
+      "passed": true
+    },
+    {
+      "title": "320px native touch drag and keyboard alternatives change editor height",
+      "passed": true
+    },
+    {
+      "title": "320px actual Vue touch interaction works in All view and survives compact switching",
+      "passed": true
+    },
+    {
+      "title": "no unexpected runtime exceptions external assets or source mutations occurred",
+      "passed": true
+    }
+  ]
+}

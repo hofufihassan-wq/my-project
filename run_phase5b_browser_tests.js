@@ -90,6 +90,7 @@ async function navigate(page, mode) {
   await control.click();
   await settle(page);
   assert.equal(await appCall(page, a => a.appMode), mode === 'training' ? 'practice' : mode);
+  if (mode === 'practice' && await page.getByTestId('final-panel-all').isVisible()) { await page.getByTestId('final-panel-all').click(); await settle(page); }
 }
 async function test(width, title, fn) {
   try {

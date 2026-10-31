@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-31T11:35:53.975Z",
+  "browser": "154.0.8037.57",
+  "runtimeHashes": {
+    "app.js": "5c5bc86889844feaf2f2c03d5718b44cd1b07c3b91dfbf41f85798f11d546e3a",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "8f34c8a724cf0872a9a73bffb1b05420066836759e5fc3cf00c926db47256e51"
+  },
+  "passed": 3,
+  "total": 3,
+  "results": [
+    {
+      "mode": "corrupt",
+      "passed": true
+    },
+    {
+      "mode": "backup-denied",
+      "passed": true
+    },
+    {
+      "mode": "read-denied",
+      "passed": true
+    }
+  ]
+}

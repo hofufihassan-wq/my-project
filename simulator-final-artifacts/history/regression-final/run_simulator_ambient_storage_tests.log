@@ -1,0 +1,4 @@
+PASS corrupt
+PASS backup-denied
+PASS read-denied
+3/3

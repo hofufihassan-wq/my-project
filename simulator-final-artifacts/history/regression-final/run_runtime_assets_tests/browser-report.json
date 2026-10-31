@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-10-31T10:55:33.112Z",
+  "runtime": "Real Chromium, actual local Vue/CSS/fonts/highlight; external requests blocked; no substitutes",
+  "passed": 18,
+  "total": 18,
+  "results": [
+    {
+      "name": "cold context 1, load 1: local assets mount with matching fonts/styles and no network",
+      "passed": true
+    },
+    {
+      "name": "cold context 1, load 2: local assets mount with matching fonts/styles and no network",
+      "passed": true
+    },
+    {
+      "name": "context 1: dictionary filtering and simulator layout retain CSS",
+      "passed": true
+    },
+    {
+      "name": "context 1: VUE-101 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    },
+    {
+      "name": "context 1: VUE-102 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    },
+    {
+      "name": "context 1: VUE-103 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    },
+    {
+      "name": "cold context 2, load 1: local assets mount with matching fonts/styles and no network",
+      "passed": true
+    },
+    {
+      "name": "cold context 2, load 2: local assets mount with matching fonts/styles and no network",
+      "passed": true
+    },
+    {
+      "name": "context 2: dictionary filtering and simulator layout retain CSS",
+      "passed": true
+    },
+    {
+      "name": "context 2: VUE-101 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    },
+    {
+      "name": "context 2: VUE-102 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    },
+    {
+      "name": "context 2: VUE-103 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    },
+    {
+      "name": "cold context 3, load 1: local assets mount with matching fonts/styles and no network",
+      "passed": true
+    },
+    {
+      "name": "cold context 3, load 2: local assets mount with matching fonts/styles and no network",
+      "passed": true
+    },
+    {
+      "name": "context 3: dictionary filtering and simulator layout retain CSS",
+      "passed": true
+    },
+    {
+      "name": "context 3: VUE-101 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    },
+    {
+      "name": "context 3: VUE-102 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    },
+    {
+      "name": "context 3: VUE-103 loads local Vue and behaves correctly with Internet blocked",
+      "passed": true
+    }
+  ]
+}

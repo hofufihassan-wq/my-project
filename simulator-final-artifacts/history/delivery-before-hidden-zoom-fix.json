@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-10-31T11:11:22.573342+00:00",
+  "branch": "feat/simulator-final-glass-workbench",
+  "base": "5d05acf",
+  "implementationCommits": [
+    "7ccd53c",
+    "480b318"
+  ],
+  "runtimeHashes": {
+    "app.js": "84559adad9e31a188dde948e7f807b89efb24066f55cf5dc90a7739413a994c5",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "0e7a35e826bcfa136d0d2d16375328dfafc8aaf77918c7939090695a63e2ca32",
+    "assets/vendor/manifest.json": "4c3497c3c472d668c8ac7da5571d4bb77e85edcd481c33b5945b2192c35d92a3"
+  },
+  "runtimeHashAgreement": true,
+  "results": {
+    "newBrowserAcceptance": 42,
+    "allPriorCommands": 25,
+    "syntaxJS": 38,
+    "protectedFiles": 47
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1440,
+        "height": 960
+      },
+      {
+        "codec_name": "aac"
+      }
+    ],
+    "format": {
+      "duration": "43.776333"
+    }
+  },
+  "audioModuleSha256": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+  "desktopCaptureActualAttempts": {
+    "total": 8,
+    "ready": 6,
+    "errors": 2,
+    "pending": 0
+  },
+  "files": [
+    {
+      "path": "simulator-final-artifacts/demo/VueLexicon_Simulator_Final_Demo.mp4",
+      "bytes": 3970214,
+      "sha256": "5ba6dbb4f4a402946ae0d0dcb2abf7fc7ee103071d1e46e04b424278927b4ac8"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/approved-sound-controls.png",
+      "bytes": 24626,
+      "sha256": "7f5c03fa27aaeb8d32348868589bc74793a2b913fcfd57fd445ad746e64aee23"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/attempts-detail.png",
+      "bytes": 127372,
+      "sha256": "aa1b220ba51e17d8d1cab43b90eb7d514c4b759fc207cbab48215e645ce2f70c"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/console-390.png",
+      "bytes": 220770,
+      "sha256": "090f461195535aab6e1d93ce1935cc987313f9a8ed7551fb206ebbbd4273ade7"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/console-768.png",
+      "bytes": 406803,
+      "sha256": "ecc1e16631d1647d2008ffc129e9cec838052e48b7f445083ba249790115361a"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/console-detail.png",
+      "bytes": 43347,
+      "sha256": "d37c4871c0ddb74b1cd1a309b0d6a9e81f664d6a9cfa96254bc8f344db904ed4"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/desktop-1440.png",
+      "bytes": 975373,
+      "sha256": "cf0a8c47dcb7fcb98bbb7ea7acbf39ff32855be867ce6c70bf1d487e3cca73ba"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/desktop-empty-1440.png",
+      "bytes": 944396,
+      "sha256": "39b899352bd3aa07f32eac9e84a29a3cb21afd7649f103a2c12cb93d7a5aac60"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/desktop-error-console.png",
+      "bytes": 46012,
+      "sha256": "5d710a72563231c97617e225437fec5e18449b31e9c16fc35cee5593e8dd9de2"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/desktop-error-graph.png",
+      "bytes": 152941,
+      "sha256": "a37ddcf348206c4c54d6cc5c63240dca3fec777888a1d8c128680d535776c74e"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/editor-390.png",
+      "bytes": 205518,
+      "sha256": "f83074c69f4995ffd67bec0ed82ed17d86a6716565ce84280c3c07a5737fb78f"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/editor-768.png",
+      "bytes": 391977,
+      "sha256": "65442ac26ab20b74b92b8a3ce9c15a77478c18c0969ccc63a52da3daa9818415"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/editor-detail.png",
+      "bytes": 73707,
+      "sha256": "984d37af0d6eb1bbc82d85350d7e295077eaf28edd2158d58ffc738aa70308a1"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/graph-390.png",
+      "bytes": 219737,
+      "sha256": "0909def590ca0b4c402967698b92314eb63391439b125e12400fc87b9439eb83"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/graph-768.png",
+      "bytes": 337736,
+      "sha256": "18b733b4d8a711ae1492a121207ad450c5ce21d0e93e03036733d1426d8f2e55"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/graph-detail.png",
+      "bytes": 151625,
+      "sha256": "d549808fecb5ab5d939fe6dbaab5cbbe4e8832a9cb8e505cb0f3095a2b79f41b"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-390.png",
+      "bytes": 147402,
+      "sha256": "d62bc0455cedc7e0acfaf2be048da97b326ac8299173eea0c8f218f76868f312"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-768.png",
+      "bytes": 303359,
+      "sha256": "78f847fedbd2ae7741aa7960772cd02d01053744fcc0657152d10208440e4376"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-detail.png",
+      "bytes": 89729,
+      "sha256": "ebb6f4ddfdd5fbc874a09da009fe8f1c7a2396d7ff887334d49f84d263aab64f"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-panel-390.png",
+      "bytes": 81762,
+      "sha256": "a91ce1d3445f5a8cf8a8bb743b986d59ed92787a7650bebf1e3634bc6ba05557"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-panel-768.png",
+      "bytes": 115062,
+      "sha256": "5af9e710a2ab4d54d61545687414e49978eea18cfba70e7ed8bba4e9bde51d8c"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/session-detail.png",
+      "bytes": 73614,
+      "sha256": "6d311261402730758ec2bf3c8f0e814aaa92b171290ef77fb774d9f40e581d82"
+    }
+  ],
+  "reference": "Latest image attached by the owner after explicitly canceling03_simulator_blue_tech.jpg. No pixel-match claim.",
+  "noPush": true,
+  "noMerge": true,
+  "noDeployment": true
+}

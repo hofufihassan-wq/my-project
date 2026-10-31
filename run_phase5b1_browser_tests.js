@@ -132,6 +132,7 @@ async function navigate(page, mode) {
   assert.equal(await control.count(), 1, `visible navigation button required: ${testId}`);
   await control.click(); await settle(page);
   assert.equal(await app(page, a => a.appMode), mode === 'training' ? 'practice' : mode);
+  if (mode === 'practice' && await page.getByTestId('final-panel-all').isVisible()) { await page.getByTestId('final-panel-all').click(); await settle(page); }
 }
 async function geometry(page) {
   const geometry = await page.evaluate(() => ({ rtl: document.documentElement.dir, width: innerWidth, scrollWidth: document.documentElement.scrollWidth }));

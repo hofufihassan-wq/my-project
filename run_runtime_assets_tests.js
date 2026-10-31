@@ -44,10 +44,12 @@ async function main() {
     const base = origin + (round===2?'/nested/app/':'/');
     const app = (fn,arg) => page.evaluate(({s,arg}) => (new Function('a','arg',`return (${s})(a,arg)`))(window.vueLexiconApp,arg), {s:fn.toString(),arg});
     async function clickInFrame(button) {
-      // This suite checks loading and Vue's native DOM event handling. Pointer
-      // interaction and frame positioning remain covered by the simulator suite.
+      // Use an actual pointer after positioning the newly composed opaque frame.
       await page.waitForFunction(()=>window.vueLexiconApp.simulatorObservation !== null);
-      await button.evaluate(button=>button.click());
+      await page.locator('iframe').evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
+      await button.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
+      await page.waitForTimeout(200);
+      await button.click();
     }
     for (let load=0;load<2;load++) {
       await test(`cold context ${round+1}, load ${load+1}: local assets mount with matching fonts/styles and no network`, async () => {
@@ -94,6 +96,8 @@ async function main() {
         const draft=await app(a=>a.practiceCode);
         await page.getByTestId('tech-reference-run').click();
         await page.waitForFunction(id=>window.vueLexiconApp.activeRun?.lessonId===id && window.vueLexiconApp.activeRun?.kind==='reference' && window.vueLexiconApp.executionState==='preview_ready',id);
+        if(await page.getByTestId('final-panel-preview').isVisible())await page.getByTestId('final-panel-preview').click();
+        await page.waitForTimeout(200);
         const frame=page.locator('iframe').contentFrame();
         await frame.locator('#app').waitFor();
         assert.equal(await frame.locator('body').evaluate(()=>Vue.version),'3.4.21');

@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-10-31T11:07:39.823Z",
+  "runtimeHashes": {
+    "app.js": "84559adad9e31a188dde948e7f807b89efb24066f55cf5dc90a7739413a994c5",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "0e7a35e826bcfa136d0d2d16375328dfafc8aaf77918c7939090695a63e2ca32",
+    "assets/vendor/manifest.json": "4c3497c3c472d668c8ac7da5571d4bb77e85edcd481c33b5945b2192c35d92a3"
+  },
+  "errors": [
+    "COMPLETION_DEMO_ERROR"
+  ],
+  "failed": [],
+  "steps": [
+    {
+      "name": "enable quiet ambient audio; alerts remain muted",
+      "recordingSecond": 2.579
+    },
+    {
+      "name": "run the original reference with real stage and DOM signals",
+      "recordingSecond": 4.595
+    },
+    {
+      "name": "native drag editor height with glass edge feedback",
+      "recordingSecond": 13.301
+    },
+    {
+      "name": "native drag column width",
+      "recordingSecond": 16.455
+    },
+    {
+      "name": "native drag Console height",
+      "recordingSecond": 23.403
+    },
+    {
+      "name": "focus live preview without remounting iframe",
+      "recordingSecond": 23.985
+    },
+    {
+      "name": "real390px device viewport",
+      "recordingSecond": 25.365
+    },
+    {
+      "name": "fit presentation without injecting CSS into the user document",
+      "recordingSecond": 26.684
+    },
+    {
+      "name": "native preview interaction updates DOM and real Console",
+      "recordingSecond": 29.281
+    },
+    {
+      "name": "preview tab html",
+      "recordingSecond": 31.089
+    },
+    {
+      "name": "preview tab css",
+      "recordingSecond": 32.301
+    },
+    {
+      "name": "preview tab console",
+      "recordingSecond": 33.376
+    },
+    {
+      "name": "preview tab result",
+      "recordingSecond": 34.3
+    },
+    {
+      "name": "switch ambient off and error/notification channel on independently",
+      "recordingSecond": 35.499
+    },
+    {
+      "name": "genuine deliberate runtime error with actual audible error cue",
+      "recordingSecond": 36.982
+    },
+    {
+      "name": "actual red error branch and stage explanation",
+      "recordingSecond": 39.311
+    },
+    {
+      "name": "stop replaces isolated frame and invalidates run",
+      "recordingSecond": 39.667
+    },
+    {
+      "name": "reset restores original lesson source and starts a fresh run",
+      "recordingSecond": 41.067
+    },
+    {
+      "name": "return to quiet ambient only",
+      "recordingSecond": 42.397
+    }
+  ],
+  "audio": "Actual simulator output; every native output bus is tapped into MediaStreamDestination in test instrumentation only.",
+  "ambientSamples": {
+    "rms": 0.0058527020062104085,
+    "peak": 0.011442413553595543,
+    "n": 16
+  },
+  "errorSamples": {
+    "rms": 0.0003207886153636448,
+    "peak": 0.0018429734045639634,
+    "n": 5
+  },
+  "audioOffsetSeconds": 2.576,
+  "rawVideo": "/workspace/work/simulator-final/demo-release/raw-video/7b8aa15c42296209d54204959bfd4dba.webm",
+  "recordedAudioPeak": 0.03510747477412224,
+  "output": "/workspace/work/simulator-final/demo-release/VueLexicon_Simulator_Final_Demo.mp4"
+}

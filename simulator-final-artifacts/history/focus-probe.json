@@ -1,0 +1,67 @@
+[
+  {
+    "time": 1579.2999999970198,
+    "focus": "preview",
+    "style": "flex",
+    "height": 412,
+    "animations": [
+      {
+        "state": "running",
+        "time": 0,
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 160,
+          "easing": "ease",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "time": 1690.0999999940395,
+    "focus": "preview",
+    "style": "flex",
+    "height": 412,
+    "animations": [
+      {
+        "state": "running",
+        "time": 0,
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 160,
+          "easing": "ease",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "time": 1905.2000000029802,
+    "focus": "preview",
+    "style": "none",
+    "height": 0,
+    "animations": []
+  },
+  {
+    "time": 2415.5999999940395,
+    "focus": "preview",
+    "style": "none",
+    "height": 0,
+    "animations": []
+  },
+  {
+    "time": 3424.0999999940395,
+    "focus": "preview",
+    "style": "none",
+    "height": 0,
+    "animations": []
+  }
+]

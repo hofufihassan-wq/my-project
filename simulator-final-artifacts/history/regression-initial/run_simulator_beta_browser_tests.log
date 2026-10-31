@@ -1,0 +1,34 @@
+PASS original engine modules content identifiers storage schema and all backups remain byte-identical
+PASS entry never runs or mutates a saved null absent or existing draft
+PASS audio is muted by default and does not create AudioContext before an explicit gesture
+PASS original reference runs without replacing saved draft and preserves opaque sandbox isolation
+PASS HTML CSS Console and Result tabs retain the same actual iframe and run identity
+PASS HTML CSS JavaScript and Vue 3 actually execute within the current supported runtime
+PASS runtime events and DOM observations report real received signals and interactions
+PASS actual errors remain errors with a generated-frame location when supplied
+PASS foreign malformed and stale session messages cannot overwrite real execution evidence
+PASS stop resets the actual frame and cancels old timer output
+PASS CSS and JavaScript editor tabs alter only their own real source blocks
+PASS ambiguous missing and unsupported language blocks remain read-only with an honest reason
+PASS standalone Vue SFC uses the existing compiler adapter and unsupported TypeScript fails honestly
+PASS panel hiding focus and keyboard resizing preserve the live iframe and submitted session
+PASS preview device modes change the actual isolated viewport without remounting
+FAIL motion preference persists and prefers-reduced-motion disables every decorative animation The expression evaluated to a falsy value:
+
+  assert(names.length>0)
+
+PASS explicit sound preference and volume zero persist while unrelated records remain untouched
+PASS simulator shortcuts execute and stop without hijacking ordinary code typing
+PASS audio cannot schedule cues in training or outside the simulator
+PASS core beta has no external requests failed local assets or uncaught exceptions
+PASS malformed new preferences preserve original bytes in a separate recovery record
+PASS unrecoverable malformed simulator preferences remain byte-for-byte intact and block replacement
+PASS transient preference read failure cannot overwrite an unread original after storage becomes writable
+PASS 1440: accepted homepage is pixel-identical to the initial simulator baseline
+PASS 1440: actual beta screenshots and responsive geometry
+PASS 768: accepted homepage is pixel-identical to the initial simulator baseline
+PASS 768: actual beta screenshots and responsive geometry
+PASS 390: accepted homepage is pixel-identical to the initial simulator baseline
+PASS 390: actual beta screenshots and responsive geometry
+PASS all runtime source hashes remain unchanged throughout acceptance
+29/30 beta browser checks passed

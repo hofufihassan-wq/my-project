@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-10-31T10:53:22.213Z",
+  "baselineRef": "ab3a676",
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "passed": 15,
+  "total": 15,
+  "protectedFileCount": 44,
+  "runtimeHashes": {
+    "app.js": "84559adad9e31a188dde948e7f807b89efb24066f55cf5dc90a7739413a994c5",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "assets/tailwind-3.4.17.min.css": "8685dc13ad7f371dc9d53b05f8ebf82cd832a928e21e16e86b1bdf325d3423c7",
+    "assets/vendor/manifest.json": "4c3497c3c472d668c8ac7da5571d4bb77e85edcd481c33b5945b2192c35d92a3",
+    "assets/fonts/alexandria/index.css": "eeb5f3219512085794a5ae501b78fc8dccd05e78849f284af18817677d2f42bb",
+    "assets/fonts/jetbrains-mono/index.css": "273f27b590784ce54baaac5975e287e9ccbb0ae7c74ebed1cdb06e3e78104580",
+    "assets/vendor/atom-one-dark-11.9.0.min.css": "4237ffca7ce6aadb438c457e0a675b125c534bbdda5b87f41f3a1495603bcc9b",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "identity.css": "467d75013e077e3044adda6eed83e1cb5af50f03f975b4ddae789aef081a2175",
+    "dictionary-correction.css": "dd797342dae2da394ebc09e7bd44ae747a72d1a8cfc5dc4d4dda91cc4a61cd54",
+    "simulator-correction.css": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "501301f6092d71fe21d5b35762c806a258ec59c25a2cf1363ec9436adcc622ad"
+  },
+  "homepageComparisons": [
+    {
+      "width": 1440,
+      "height": 960,
+      "baselineRef": "ab3a676",
+      "changedPixels": 0,
+      "beforeSha256": "378efd1dcc383b23c6608e775b9cb4a10a1e7db16ff285671d9764d79780e9a6",
+      "afterSha256": "378efd1dcc383b23c6608e775b9cb4a10a1e7db16ff285671d9764d79780e9a6"
+    }
+  ],
+  "screenshots": [
+    "screenshots/simulator-1440.png"
+  ],
+  "networkEvidence": [
+    {
+      "origin": "http://127.0.0.1:41179",
+      "seeded": true,
+      "reducedMotion": "reduce",
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:41179",
+      "seeded": false,
+      "reducedMotion": "no-preference",
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:38429",
+      "seeded": false,
+      "reducedMotion": "reduce",
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    }
+  ],
+  "results": [
+    {
+      "title": "educational sources, engine modules, dictionary styles and all original backups match baseline",
+      "passed": true
+    },
+    {
+      "title": "accepted homepage stays unchanged and submission/message handlers match reviewed S2 telemetry baseline",
+      "passed": true
+    },
+    {
+      "title": "manual simulator entry preserves null, absent and stored drafts without running them",
+      "passed": true
+    },
+    {
+      "title": "original reference actually runs in an opaque iframe while all drafts remain unchanged",
+      "passed": true
+    },
+    {
+      "title": "preview HTML CSS and Console tools switch without recreating or rerunning the live frame",
+      "passed": true
+    },
+    {
+      "title": "editor, organized Console, central decoration and live preview have the requested desktop geometry",
+      "passed": true
+    },
+    {
+      "title": "syntax overlay preserves complete editor text and scroll alignment",
+      "passed": true
+    },
+    {
+      "title": "manual edit saves only its selected lesson and does not silently execute the draft",
+      "passed": true
+    },
+    {
+      "title": "forged and stale-source messages cannot change actual simulator evidence",
+      "passed": true
+    },
+    {
+      "title": "stop invalidates the session and replaces its frame while retaining the saved draft",
+      "passed": true
+    },
+    {
+      "title": "all seeded runtime checks use only local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "title": "approved homepage remains pixel-identical at 1440px",
+      "passed": true
+    },
+    {
+      "title": "delivery screenshot is an actual 1440px browser page with a real running original reference and empty user storage",
+      "passed": true
+    },
+    {
+      "title": "reduced-motion mode suppresses decorative animation without changing the running session",
+      "passed": true
+    },
+    {
+      "title": "verification leaves source and protected files unchanged",
+      "passed": true
+    }
+  ]
+}

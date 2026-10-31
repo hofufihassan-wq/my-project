@@ -55,7 +55,7 @@ async function main(){
       const app=(fn,arg)=>page.evaluate(({s,arg})=>(new Function('a','arg',`return (${s})(a,arg)`))(window.vueLexiconApp,arg),{s:fn.toString(),arg});
       const stored=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('vuelexicon_practice_progress')));
       async function test(title,fn){if(process.env.PHASE4_FILTER&&!title.includes(process.env.PHASE4_FILTER))return;try{await fn();results.push({engine:name,width,title,passed:true});console.log('PASS',name,width,title);}catch(error){results.push({engine:name,width,title,passed:false,error:error.message});console.error('FAIL',name,width,title,error.message);}}
-      async function ready(){await page.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));await page.waitForTimeout(200);}
+      async function ready(){await page.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));await page.waitForTimeout(200);if(await page.getByTestId('final-panel-all').isVisible())await page.getByTestId('final-panel-all').click();}
       const search=page.locator('input[placeholder^="ابحث عن أي"]');
       await test('header geometry keeps every quick action fully inside the viewport',async()=>{
         const geometry=await page.locator('header').evaluate(header=>({width:innerWidth,
@@ -178,7 +178,7 @@ async function main(){
         assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
         await page.getByTestId('tech-reference-run').click();await ready();
         const frame=page.locator('iframe').contentFrame();await frame.locator('.count-display').waitFor();
-        await frame.getByRole('button',{name:'انقر للزيادة ⚡'}).click();assert.equal(await frame.locator('.count-display').textContent(),'1');
+        await page.locator('iframe').evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await frame.getByRole('button',{name:'انقر للزيادة ⚡'}).evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await page.waitForTimeout(200);await frame.getByRole('button',{name:'انقر للزيادة ⚡'}).click();assert.equal(await frame.locator('.count-display').textContent(),'1');
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
         if(process.env.PHASE4_SCREENSHOTS){
           fs.mkdirSync(process.env.PHASE4_SCREENSHOTS,{recursive:true});
