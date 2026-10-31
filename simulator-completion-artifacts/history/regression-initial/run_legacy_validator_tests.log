@@ -1,0 +1,11 @@
+PASS JS-101 rejects the documented false positive without DOM
+PASS JS-101 reference source alone cannot claim a rendered result
+PASS JS-101 ignores unrelated body text and wrong target text
+PASS JS-101 null/absent evidence is rejected without throwing
+PASS JS-101 valid isolated target text still accepts the reference fixture
+PASS TS-101 rejects the documented false positive without DOM
+PASS TS-101 reference source alone cannot claim a rendered result
+PASS TS-101 ignores unrelated body text and wrong target text
+PASS TS-101 null/absent evidence is rejected without throwing
+PASS TS-101 valid isolated target text still accepts the reference fixture
+10/10 legacy validator checks passed

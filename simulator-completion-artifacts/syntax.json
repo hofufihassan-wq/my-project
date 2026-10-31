@@ -1,0 +1,217 @@
+{
+  "passed": 35,
+  "total": 35,
+  "pythonAstPassed": true,
+  "results": [
+    {
+      "path": "app.js",
+      "exitCode": 0,
+      "sha256": "adfa3823b2b322fc7b97b6cd644ad5f02124be1017bf04d9c30cbf1484bf435a",
+      "output": ""
+    },
+    {
+      "path": "dictionary-preview.js",
+      "exitCode": 0,
+      "sha256": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+      "output": ""
+    },
+    {
+      "path": "legacy-validator-guards.js",
+      "exitCode": 0,
+      "sha256": "21a821036bcda8170f3294476d4417aa532cb1ef9c53c695a81928143e85b89c",
+      "output": ""
+    },
+    {
+      "path": "lexicon-data.js",
+      "exitCode": 0,
+      "sha256": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+      "output": ""
+    },
+    {
+      "path": "practice-curriculum.js",
+      "exitCode": 0,
+      "sha256": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+      "output": ""
+    },
+    {
+      "path": "preview-runner.js",
+      "exitCode": 0,
+      "sha256": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+      "output": ""
+    },
+    {
+      "path": "progress-data.js",
+      "exitCode": 0,
+      "sha256": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+      "output": ""
+    },
+    {
+      "path": "run_content_integrity_test.js",
+      "exitCode": 0,
+      "sha256": "f70b3bdb24a7479d4657ad8681830bb0c8fc23dce78b5f9dfb9a45d9bc36ce6d",
+      "output": ""
+    },
+    {
+      "path": "run_curriculum_tests.js",
+      "exitCode": 0,
+      "sha256": "c4ee9daa4316cf3a71c15d57bbcd10f4b689f49fcfedf702ba21296bf96df7e6",
+      "output": ""
+    },
+    {
+      "path": "run_data_safety_tests.js",
+      "exitCode": 0,
+      "sha256": "6343d510ea575caa2c2ddc1265b91fffaab59027d9c26a94c504e7eb5774aae2",
+      "output": ""
+    },
+    {
+      "path": "run_dictionary_inventory.js",
+      "exitCode": 0,
+      "sha256": "38d740f6ecba4b8960d675fe128f589c86c6a53870850a0355812a1fc24eaaed",
+      "output": ""
+    },
+    {
+      "path": "run_dictionary_preview_tests.js",
+      "exitCode": 0,
+      "sha256": "03ec53dea74747daa9e0461b3556539213b9c46aefd41de5f2235b659e1f6aad",
+      "output": ""
+    },
+    {
+      "path": "run_hands_on_verification.js",
+      "exitCode": 0,
+      "sha256": "22c44a19c208dd7d01757292f4fc8dd2b51b20288aa3baa0397e3fddb19bb3af",
+      "output": ""
+    },
+    {
+      "path": "run_json_import_test.js",
+      "exitCode": 0,
+      "sha256": "21884c4e3a64fe3dbbdcb955e5ad85a3cbf9f2dcc3beab989bc6038c609a31c7",
+      "output": ""
+    },
+    {
+      "path": "run_legacy_validator_tests.js",
+      "exitCode": 0,
+      "sha256": "990cacbe3702f069a8ee979ed2d4fd33942afd6e659e79303eaa0c2872f97585",
+      "output": ""
+    },
+    {
+      "path": "run_phase0a_browser_tests.js",
+      "exitCode": 0,
+      "sha256": "fb52dc7fd92ecb1b2ddd209c7c4962506e5533b754a858557c2c034df911275e",
+      "output": ""
+    },
+    {
+      "path": "run_phase5b1_browser_tests.js",
+      "exitCode": 0,
+      "sha256": "ae41a728e376b3d066162313a4e3a24d804b6326b0976f02ce361ecb47a949a2",
+      "output": ""
+    },
+    {
+      "path": "run_phase5b_browser_tests.js",
+      "exitCode": 0,
+      "sha256": "6e1759d96656febc32c826c8556b93a199e527cd3b1aaa7d92d9e93316cdde0b",
+      "output": ""
+    },
+    {
+      "path": "run_preview_protocol_tests.js",
+      "exitCode": 0,
+      "sha256": "1455fa02de5dd04de0eb86bdc4bf0dd04e73a0d538da8eefdaa78d036298805b",
+      "output": ""
+    },
+    {
+      "path": "run_runtime_assets_tests.js",
+      "exitCode": 0,
+      "sha256": "c8839d976799d6e973e08d08cd46ab264d3bfccd7d9bd929323928330453a885",
+      "output": ""
+    },
+    {
+      "path": "run_simulator_ambient_storage_tests.js",
+      "exitCode": 0,
+      "sha256": "737ea9475de2036f357307908cdad491ef8e30e48c15811298622ebdf3d68936",
+      "output": ""
+    },
+    {
+      "path": "run_simulator_beta_browser_tests.js",
+      "exitCode": 0,
+      "sha256": "f3e26329103a9fc553985bda8cc1f140ab23d971cd20bb64e7b9b3b171caf6c6",
+      "output": ""
+    },
+    {
+      "path": "run_simulator_beta_extra_tests.js",
+      "exitCode": 0,
+      "sha256": "bea86d1187c309548eed85a7cdb7c327bd8321fcc381042f711c0abf08088f21",
+      "output": ""
+    },
+    {
+      "path": "run_simulator_browser_tests.js",
+      "exitCode": 0,
+      "sha256": "d54dbda762963b2027019a47c221a2ded35404df0cd588568685e2d8a511d3aa",
+      "output": ""
+    },
+    {
+      "path": "run_simulator_completion_browser_tests.js",
+      "exitCode": 0,
+      "sha256": "45cb58f9ed31db06c087b07f7669a5cb78800a7da4e85762d9b65c024d39cc87",
+      "output": ""
+    },
+    {
+      "path": "run_simulator_completion_unit_tests.js",
+      "exitCode": 0,
+      "sha256": "f76ae2e0e61e9987fe675321e00d8e9e985f6af23bfef331f11e40be5d5e7e44",
+      "output": ""
+    },
+    {
+      "path": "run_simulator_reference_review.js",
+      "exitCode": 0,
+      "sha256": "a4fe6d3adf6a092c768ca57a1dd419770d38f80c0112b3d05e7b22cbc0999266",
+      "output": ""
+    },
+    {
+      "path": "run_stability_browser_tests.js",
+      "exitCode": 0,
+      "sha256": "a989c7b3362dbfc248c555b6aec13eb22e9b88616637a04affeb88345d4145bb",
+      "output": ""
+    },
+    {
+      "path": "scripts/build-sfc-compiler.cjs",
+      "exitCode": 0,
+      "sha256": "2b5b268d8049273d15b3e3ad228cb444b8d68c9f51cd44d17bb690800c3afa7d",
+      "output": ""
+    },
+    {
+      "path": "scripts/capture-simulator-beta.cjs",
+      "exitCode": 0,
+      "sha256": "e2e7d8912ec2095caab2edc4e0e7ebc773bcc8d084edacef7701f32e627d4ed6",
+      "output": ""
+    },
+    {
+      "path": "scripts/capture-simulator-completion.cjs",
+      "exitCode": 0,
+      "sha256": "15ced7134b2d2b0beb6ba0e0bfe24bb53ad6f2f9732045dcb315322f931e1773",
+      "output": ""
+    },
+    {
+      "path": "scripts/simulator-completion-test-helpers.cjs",
+      "exitCode": 0,
+      "sha256": "513062982082ab813e7c8c7f0f032fcc198a8237750be2cb15bff8222fa18148",
+      "output": ""
+    },
+    {
+      "path": "simulator-beta.js",
+      "exitCode": 0,
+      "sha256": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+      "output": ""
+    },
+    {
+      "path": "simulator-guides.js",
+      "exitCode": 0,
+      "sha256": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+      "output": ""
+    },
+    {
+      "path": "tailwind.config.cjs",
+      "exitCode": 0,
+      "sha256": "7403886f28e77ad6be0b8e874413a2708e4aa179ae2fb413c7118534ab04871f",
+      "output": ""
+    }
+  ]
+}

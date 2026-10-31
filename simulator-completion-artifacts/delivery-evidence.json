@@ -1,0 +1,137 @@
+{
+  "timestamp": "2026-10-31T07:15:28.924431+00:00",
+  "branch": "feat/simulator-beta-completion",
+  "base": "c025160",
+  "featureCommit": "ee6d374",
+  "runtimeHashes": {
+    "app.js": "adfa3823b2b322fc7b97b6cd644ad5f02124be1017bf04d9c30cbf1484bf435a",
+    "index.html": "51a26e1da89d774f8f19279c2125d4cee6c4380412079c1e65f513082628c7c9",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "assets/vendor/manifest.json": "30fa73ecb464ea9548f282815b06ed354cb2203111c1448db55355a6b1d70d15"
+  },
+  "runtimeHashesAgreeAcrossEvidence": true,
+  "passed": {
+    "completionBrowser": 33,
+    "nativeFreshFrameClicks": 40,
+    "ambientStorageBrowser": 3,
+    "ambientUnit": 13,
+    "priorRegressionCommands": 22,
+    "jsCjsSyntax": 35
+  },
+  "homepageComparisons": [
+    {
+      "width": 1440,
+      "height": 960,
+      "changedPixels": 0
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "changedPixels": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "changedPixels": 0
+    }
+  ],
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1440,
+        "height": 960
+      },
+      {
+        "codec_name": "aac"
+      }
+    ],
+    "format": {
+      "duration": "22.087333"
+    }
+  },
+  "files": [
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/analysis-detail.png",
+      "bytes": 88727,
+      "sha256": "26d98f600c75d02214a7957ecfc5affd14899af51ff67ce29d4e740493797cb1"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/console-390.png",
+      "bytes": 36523,
+      "sha256": "2361633c759767fd4f00e3261c4dbc9382843fa5b595a3dfc66db5c5d9d1c25b"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/console-768.png",
+      "bytes": 33182,
+      "sha256": "6943c0f5884ea45a19482ed332af2840657ee33649d4f82b8d713801bd5f20be"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/console-detail.png",
+      "bytes": 36558,
+      "sha256": "1c6585b30afb9b2edc8dc3e3cc04c3141b16e787e2e0b786081f1cc00c88a759"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/editor-detail.png",
+      "bytes": 87766,
+      "sha256": "82ef67b64d73a6ab190e897660349ab5c50d83870f8bee5126c0e319e54dee85"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/preview-390.png",
+      "bytes": 57852,
+      "sha256": "c01d3a32c5d0e1f5f3d68e4ec516760a6010cacf5b74982eddb72659ae565cff"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/preview-768.png",
+      "bytes": 57918,
+      "sha256": "2c81b6cd53ecce7240ae1e39cc60e7824de934ba54020643fadbc140e37a69d3"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/preview-detail.png",
+      "bytes": 62934,
+      "sha256": "424679d0b205cefa3a0f0c7e55be4507fb6782d63269ea60409da761c8afed02"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/simulator-1440-full.png",
+      "bytes": 934071,
+      "sha256": "b8c2b99d59a3af80a498f4ce16f1f349f853685eabb435fa4be1bc5062499578"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/simulator-1440.png",
+      "bytes": 684564,
+      "sha256": "4842b20c4854f825e3dd9b14c7003db2ce9c7ac3af87f7722be2f5d5eec5458b"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/simulator-390.png",
+      "bytes": 196431,
+      "sha256": "dce9f8aa37929bf7b64b5d51b41bdb6567b9ee333ab7e4fc8387bebbe0f75d49"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/simulator-768.png",
+      "bytes": 335664,
+      "sha256": "ccbecd209723e931c4860aec6040862cd85072777048c8b5c4080c0288384996"
+    },
+    {
+      "path": "simulator-completion-artifacts/browser/screenshots/sound-detail.png",
+      "bytes": 10552,
+      "sha256": "f5d7493ea46012e6f8d2c0726033a818fc5ae363b6d22dc026feb2d940834c8d"
+    },
+    {
+      "path": "simulator-completion-artifacts/demo/VueLexicon_Simulator_Completion_Demo.mp4",
+      "bytes": 2191795,
+      "sha256": "275d13fb1d00b033c7d2dbb189f45aa3bb76e6c7c7359aef0a866ece64724058"
+    },
+    {
+      "path": "simulator-completion-artifacts/sound/sound-enabled-detail.png",
+      "bytes": 10870,
+      "sha256": "b2128d7416d60ef37af7ab9d8a615f3d910bbc3ee00519a605ef08abbc0827cd"
+    }
+  ],
+  "noPush": true,
+  "noMerge": true,
+  "noDeployment": true,
+  "designDecision": "Current design accepted by owner at90%, kept as reference; final beta approval pending owner."
+}

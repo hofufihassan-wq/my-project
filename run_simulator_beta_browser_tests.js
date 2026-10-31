@@ -41,7 +41,7 @@ async function context(origin,{width=1440,height=960,seeded=false,reducedMotion=
  await p.goto(origin,{waitUntil:'networkidle'});await p.waitForFunction(()=>window.vueLexiconApp?.practiceLessons?.length===15);await p.evaluate(()=>document.fonts.ready);return{context:c,page:p,evidence};
 }
 async function enter(p){await p.locator('[data-testid="nav-simulator"]:visible').first().click();await settle(p);assert.equal(await app(p,a=>a.appMode),'practice');}
-async function ready(p){await p.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));await settle(p);}
+async function ready(p){await p.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));await settle(p);await p.waitForTimeout(200);}
 async function submit(p,code){await app(p,(a,code)=>{a.techEditorView='draft';a.practiceAutoRun=false;a.practiceCode=code;},code);await p.locator(select.run).click();await ready(p);}
 async function shot(p,name){await settle(p);await p.screenshot({path:path.join(output,'screenshots',name),fullPage:false});screenshots.push('screenshots/'+name);}
 async function geometry(p){const d=await p.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));assert(d.scroll<=d.width+1,JSON.stringify(d));}

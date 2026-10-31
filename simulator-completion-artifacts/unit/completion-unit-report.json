@@ -1,0 +1,59 @@
+{
+  "passed": 13,
+  "total": 13,
+  "limitation": "Lifecycle test double only; browser waveform samples are recorded separately.",
+  "results": [
+    {
+      "name": "new ambience is opt-in silent and does not write either preference record on entry",
+      "passed": true
+    },
+    {
+      "name": "ambient parser rejects invalid shape version volume and extra fields",
+      "passed": true
+    },
+    {
+      "name": "enabling ambience leaves original alert preferences and unrelated user records byte-identical",
+      "passed": true
+    },
+    {
+      "name": "persisted enabled ambience waits for a fresh trusted gesture after reload",
+      "passed": true
+    },
+    {
+      "name": "repeated preparation and gain changes reuse a fixed ambient graph",
+      "passed": true
+    },
+    {
+      "name": "muting alerts or zeroing their volume never stops ambience",
+      "passed": true
+    },
+    {
+      "name": "zero ambient volume stops its graph while real error cues remain available",
+      "passed": true
+    },
+    {
+      "name": "leaving simulator stops and disconnects all ambient resources without changing preference",
+      "passed": true
+    },
+    {
+      "name": "corrupted ambience keeps an exact raw recovery before replacing defaults",
+      "passed": true
+    },
+    {
+      "name": "failed recovery prevents every later overwrite of the original ambience record",
+      "passed": true
+    },
+    {
+      "name": "transient ambient read failure protects the unknown original even after storage recovers",
+      "passed": true
+    },
+    {
+      "name": "ambient setters reject invalid values without writing or creating contexts",
+      "passed": true
+    },
+    {
+      "name": "rapid ambient toggling cleans every replaced source and leaves no graph on disable",
+      "passed": true
+    }
+  ]
+}

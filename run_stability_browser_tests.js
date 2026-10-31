@@ -55,7 +55,7 @@ async function main(){
       const app=(fn,arg)=>page.evaluate(({s,arg})=>(new Function('a','arg',`return (${s})(a,arg)`))(window.vueLexiconApp,arg),{s:fn.toString(),arg});
       const stored=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('vuelexicon_practice_progress')));
       async function test(title,fn){if(process.env.PHASE4_FILTER&&!title.includes(process.env.PHASE4_FILTER))return;try{await fn();results.push({engine:name,width,title,passed:true});console.log('PASS',name,width,title);}catch(error){results.push({engine:name,width,title,passed:false,error:error.message});console.error('FAIL',name,width,title,error.message);}}
-      async function ready(){await page.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));}
+      async function ready(){await page.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));await page.waitForTimeout(200);}
       const search=page.locator('input[placeholder^="ابحث عن أي"]');
       await test('header geometry keeps every quick action fully inside the viewport',async()=>{
         const geometry=await page.locator('header').evaluate(header=>({width:innerWidth,

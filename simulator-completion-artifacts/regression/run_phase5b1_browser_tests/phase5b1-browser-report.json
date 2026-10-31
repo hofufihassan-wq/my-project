@@ -1,0 +1,416 @@
+{
+  "timestamp": "2026-10-31T07:14:02.947Z",
+  "baselineRef": "a49a7c7",
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "otherBrowsers": "Not exercised by this runner.",
+  "sourceHashes": {
+    "lexicon-data.js": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+    "practice-curriculum.js": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+    "progress-data.js": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+    "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+    "_pristine_backup/app.js": "dfdb234804cf580e812d74f1ab444a81c2340bae1c9fdf832a91a2814a58ff26",
+    "_pristine_backup/build_full_spa.py": "3ad2f1518652ff42206237c5c86874b1d3dce588efd54b8091bc5cdb49c8e838",
+    "_pristine_backup/build_full_spa_v2.py": "a1e22943e67a93778c57730419aa1c982f9b3529c63645bda09bb056982f04b4",
+    "_pristine_backup/build_full_spa_v3.py": "52908fd4080dfcc0b2b4ceffeb76d1b9c524d0ae877dda49064fd5ea9b57607a",
+    "_pristine_backup/compile_index_v3.py": "7f270de1d93142fba9e165a6c0896f661f06a40311cbb95985b00b2cae0f1186",
+    "_pristine_backup/index.html": "e8f7e5983c8e5e60ee586e4e5cc331dd1883222eb50daf00246a26c299a5b83e",
+    "_pristine_backup/lexicon-data.js": "853d9ad301b03c6bddcdddbcf7a9de4ab80015527fdfbb82fc814b8f46cb856a",
+    "_pristine_backup/lexicon_data_css.py": "ef84af16197aca24f305e36cf0e84ef3f3dd9d7cbffd01f1b8ee797a8182a7ad",
+    "_pristine_backup/lexicon_data_html.py": "103f5652b7b97ca81f06670efec98c81a16f6c446ba12cc4e0e12aac3e76ca9e",
+    "_pristine_backup/lexicon_data_js.py": "a0e238be90ec8bb4dc4fbe64db320423cf761d77685e2b6393ed5125afb02655",
+    "_pristine_backup/lexicon_data_nuxt.py": "542535fcfe11d235c995c0b2353ec1b962343fa39c030dc5b76905889045161f",
+    "_pristine_backup/lexicon_data_vue.py": "b39b22581651b6166562ea972f1a696d75f586de992dc9154363b781233cfec3",
+    "_pristine_backup/make_lexicon_data_js.py": "5f0d09018dde2d664f7f7d9a378c47358686a5c93fb64d86683d228c8c186947",
+    "_pristine_backup/styles.css": "8760ace0d2d10a20b9d1aa7a56e6e5d255525e2b3bfa0be783d8dbbe1cd61397",
+    "_pristine_backup/v3_parts/10_quiz_and_footer.html": "32acb320ace2a21e590420232aafbe8390cfee77b842e4e5135da0d3d16282e0",
+    "_pristine_backup/v3_parts/11_app_script.js": "90e1342fe36355d51b3200446dc644de2822ea6fb41fdc450fbfcb47f9c921f1",
+    "_pristine_backup/v3_parts/1_head_and_styles.html": "40cfa43e3c777fccfea8ff480d41f4711b8a8dad6ab59b5c2f580e1ff94735e0",
+    "_pristine_backup/v3_parts/2_header_and_nav.html": "1505ce5e6d26e8490a3ce40aab709b60e9d5729e00c60a582eb88bed8bc2d440",
+    "_pristine_backup/v3_parts/3_search_and_filters.html": "070d989395a54300b65c9d1d2cc018f1a839fc78277478717e1a2446642e6376",
+    "_pristine_backup/v3_parts/4_master_detail_head.html": "f458584a8d11846760e003187fd84ce71f3dfec295ed87ed505ea4eaa3818be3",
+    "_pristine_backup/v3_parts/5_css_widgets.html": "ea6954cb215872da0e36b492f0e121e8d3d039b85685356b2c0cbc2ad7eb545d",
+    "_pristine_backup/v3_parts/6_html_widgets.html": "ba458dfe3f253a57dec676d90871cb864e620ed772f21d697fdd48d664d1a439",
+    "_pristine_backup/v3_parts/7_js_vue_nuxt_widgets.html": "2a51a2d37d35c35a2ae134a43a54cb331ec662c96cb56195d41add7c010fedca",
+    "_pristine_backup/v3_parts/8_nuxt_lab.html": "13e383b472bbe95b361c2f5719706d3dae8d708718c338472a10a28bd9e21219",
+    "_pristine_backup/v3_parts/9_scratchpad_studio.html": "55862643472a411e2d46184ad8aad70e695f23131cdd59ea53cf1bd34f481f54",
+    "_v3.5_pre_hands_on_backup/CHANGELOG.md": "0e4393482fba97c809a2463f85e966150546dda9925c6bb71d9de544a2dd7b27",
+    "_v3.5_pre_hands_on_backup/README.md": "8cd8e50014ce435d63acb73855d830d8af5cdb3b7d6157ec6c97cd0c3d4860da",
+    "_v3.5_pre_hands_on_backup/TEST_REPORT.md": "a72b2d951122c3e0da1ec635a1a60d50673e7552c8077c33a59bfc929adcabd8",
+    "_v3.5_pre_hands_on_backup/app.js": "e2db26f464c9e7b6634aea3dcc028ee6570dc8edaf704cfa8f355ad97e74aca7",
+    "_v3.5_pre_hands_on_backup/index.html": "45d8e5cf26698a5df2669886fcff4897d6e40622cd70fec9be3e5b7a77760e75",
+    "_v3.5_pre_hands_on_backup/lexicon-data.js": "4779ccd3a89075a03d40f96d2f30a0818995973e080a454e43bb2d43bce75971",
+    "_v3.5_pre_hands_on_backup/styles.css": "172b56e8d3e0ddcf59f4b0c727e148d3f26976945732e08893254abed75fef87"
+  },
+  "runtimeHashes": {
+    "app.js": "adfa3823b2b322fc7b97b6cd644ad5f02124be1017bf04d9c30cbf1484bf435a",
+    "index.html": "51a26e1da89d774f8f19279c2125d4cee6c4380412079c1e65f513082628c7c9",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "identity.css": "467d75013e077e3044adda6eed83e1cb5af50f03f975b4ddae789aef081a2175",
+    "dictionary-correction.css": "dd797342dae2da394ebc09e7bd44ae747a72d1a8cfc5dc4d4dda91cc4a61cd54",
+    "simulator-correction.css": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681",
+    "assets/tailwind-3.4.17.min.css": "8685dc13ad7f371dc9d53b05f8ebf82cd832a928e21e16e86b1bdf325d3423c7",
+    "preview-runner.js": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+    "dictionary-preview.js": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+    "assets/vendor/manifest.json": "30fa73ecb464ea9548f282815b06ed354cb2203111c1448db55355a6b1d70d15"
+  },
+  "passed": 34,
+  "total": 34,
+  "screenshotData": "Clean independent contexts, no seeded test records.",
+  "screenshots": [
+    "screenshots/homepage-before-1440.png",
+    "screenshots/homepage-after-1440.png",
+    "screenshots/dictionary-1440.png",
+    "screenshots/dictionary-workspace-1440.png",
+    "screenshots/simulator-1440.png",
+    "screenshots/homepage-before-768.png",
+    "screenshots/homepage-after-768.png",
+    "screenshots/dictionary-768.png",
+    "screenshots/dictionary-workspace-768.png",
+    "screenshots/dictionary-preview-768.png",
+    "screenshots/simulator-768.png",
+    "screenshots/homepage-before-390.png",
+    "screenshots/homepage-after-390.png",
+    "screenshots/dictionary-390.png",
+    "screenshots/dictionary-workspace-390.png",
+    "screenshots/dictionary-preview-390.png",
+    "screenshots/simulator-390.png",
+    "screenshots/simulator-editor-390.png",
+    "screenshots/simulator-preview-390.png"
+  ],
+  "homepageComparisons": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "baselineRef": "a49a7c7",
+      "changedPixels": 0,
+      "beforePngSha256": "ef97366b18ff58bc894a3f3fb1b541b703be30ccd896ac1b004393af80c4a1e2",
+      "afterPngSha256": "ef97366b18ff58bc894a3f3fb1b541b703be30ccd896ac1b004393af80c4a1e2"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "baselineRef": "a49a7c7",
+      "changedPixels": 0,
+      "beforePngSha256": "2ecb11f9a6ec4389f2f4b9ae4ad81a321905c4249aa18d695bc0dd94affa73f4",
+      "afterPngSha256": "2ecb11f9a6ec4389f2f4b9ae4ad81a321905c4249aa18d695bc0dd94affa73f4"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "baselineRef": "a49a7c7",
+      "changedPixels": 0,
+      "beforePngSha256": "df9dd29d994dd713f992268c8064087a54a745909d494edf58910b25870cd64b",
+      "afterPngSha256": "df9dd29d994dd713f992268c8064087a54a745909d494edf58910b25870cd64b"
+    }
+  ],
+  "networkEvidence": [
+    {
+      "origin": "http://127.0.0.1:33311",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "seeded": true,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:33311",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:37891",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:33311",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "seeded": true,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:33311",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:37891",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:33311",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seeded": true,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:33311",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "origin": "http://127.0.0.1:37891",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    }
+  ],
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "startup preserves null absent and multiple drafts plus favorites mastery history and backup sentinel",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "dictionary tabs expose every original explanation field with keyboard and ARIA relationships",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "dictionary runs the unchanged ref example in its own sandbox without touching simulator drafts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "dictionary editor is ephemeral and manual edits cannot silently rerun or alter educational sources",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "dictionary session copies are scoped to term and format while incomplete original examples keep their error",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "simulator retains manual reference execution with editor left console below stages center and preview right",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "expanding and keyboard resizing simulator panels preserve the existing run iframe and saved code",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "returning to dictionary and reloading keeps source content persistent data and manual-run boundaries",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "corrected workspaces load with local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "homepage is pixel-identical to approved phase5B commit a49a7c7 in clean contexts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "clean-context corrected dictionary and simulator screenshots show real interactive pages",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "startup preserves null absent and multiple drafts plus favorites mastery history and backup sentinel",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "dictionary tabs expose every original explanation field with keyboard and ARIA relationships",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "dictionary runs the unchanged ref example in its own sandbox without touching simulator drafts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "dictionary editor is ephemeral and manual edits cannot silently rerun or alter educational sources",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "dictionary session copies are scoped to term and format while incomplete original examples keep their error",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "simulator retains manual reference execution with editor left console below stages center and preview right",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "expanding and keyboard resizing simulator panels preserve the existing run iframe and saved code",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "returning to dictionary and reloading keeps source content persistent data and manual-run boundaries",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "corrected workspaces load with local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "homepage is pixel-identical to approved phase5B commit a49a7c7 in clean contexts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "clean-context corrected dictionary and simulator screenshots show real interactive pages",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "startup preserves null absent and multiple drafts plus favorites mastery history and backup sentinel",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "dictionary tabs expose every original explanation field with keyboard and ARIA relationships",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "dictionary runs the unchanged ref example in its own sandbox without touching simulator drafts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "dictionary editor is ephemeral and manual edits cannot silently rerun or alter educational sources",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "dictionary session copies are scoped to term and format while incomplete original examples keep their error",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "simulator retains manual reference execution with editor left console below stages center and preview right",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "expanding and keyboard resizing simulator panels preserve the existing run iframe and saved code",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "returning to dictionary and reloading keeps source content persistent data and manual-run boundaries",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "corrected workspaces load with local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "homepage is pixel-identical to approved phase5B commit a49a7c7 in clean contexts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "clean-context corrected dictionary and simulator screenshots show real interactive pages",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": null,
+      "title": "all original educational content IDs and backup files match phase5B and runtime remained stable during checks",
+      "passed": true
+    }
+  ]
+}

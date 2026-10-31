@@ -78,6 +78,7 @@ async function main() {
   }
   async function waitReady() {
     await page.waitForFunction(() => ['preview_ready', 'error'].includes(window.vueLexiconApp.executionState));
+    await page.waitForTimeout(200); // Let Chromium publish the fresh opaque-frame hit-test surface.
   }
   async function select(id) {
     await app((a, id) => { a.selectedTrack = a.practiceLessons.find(l => l.id === id).track; a.selectLesson(id); }, id);
@@ -249,6 +250,7 @@ async function main() {
     assert.equal(await page.evaluate(b => document.elementFromPoint(b.x+b.width/2,b.y+b.height/2)?.tagName, bounds), 'IFRAME');
     // Wait for the button's own stable position and hit target after local CSS
     // loads. Locator.click still sends a real pointer event, unlike DOM.click.
+    await page.waitForTimeout(200); // Repositioning also invalidates Chromium's compositor hit-test cache.
     await frame.locator('#term-demo').click();
     await page.waitForFunction(() => window.vueLexiconApp.simulatorObservation?.bodyText.includes('changed'));
     assert.equal(await frame.locator('#term-demo').textContent(), 'changed');
