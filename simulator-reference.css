@@ -493,3 +493,47 @@
 .tech-simulator .beta-event-journal time { direction:ltr;color:#6690a7;font:9px 'JetBrains Mono',monospace; }
 .tech-simulator .beta-event-journal li span { grid-column:2;color:#709bb2; }
 @media(max-width:600px) { .tech-simulator .beta-event-journal li { display:flex;flex-direction:column; } }
+/* S3: controls remain outside panels so hidden layouts are always recoverable. */
+.tech-simulator .beta-tools { display:flex;flex-wrap:wrap;align-items:center;gap:9px;padding:8px 10px;margin-bottom:12px;border:1px solid #174b64;border-radius:9px;background:#061a29;position:relative;z-index:5; }
+.tech-simulator .beta-tools button,.tech-simulator .beta-tools summary { cursor:pointer;color:#a7cbdc;font-size:10px; }
+.tech-simulator .beta-sound-controls { display:flex;align-items:center;gap:9px; }
+.tech-simulator .beta-sound-controls button { border:1px solid #267595;border-radius:6px;padding:6px 8px;background:#0a2b40;min-width:112px; }
+.tech-simulator .beta-sound-controls label { display:flex;align-items:center;gap:5px;color:#87acbf;font-size:9px; }
+.tech-simulator .beta-sound-controls input { width:78px;accent-color:#32cdf0; }
+.tech-simulator .beta-sound-controls > span { color:#66b8d0;font:9px 'JetBrains Mono',monospace; }
+.tech-simulator .beta-layout-menu,.tech-simulator .beta-shortcuts { padding:6px 9px;border-inline-start:1px solid #1c3d52; }
+.tech-simulator .beta-layout-options,.tech-simulator .beta-shortcuts > p { background:#092336;border:1px solid #27536b;padding:12px;position:absolute;z-index:15;right:0;top:100%;width:min(500px,100%);box-shadow:0 10px 30px #0008;max-height:300px;overflow:auto; }
+.tech-simulator .beta-shortcuts > p { position:static;width:100%;margin-top:8px;font-size:10px;line-height:1.8; }
+.tech-simulator .beta-shortcuts[open] { flex-basis:100%; }
+.tech-simulator .beta-layout-options { display:flex;gap:12px;flex-wrap:wrap; }
+.tech-simulator .beta-layout-options label { display:flex;align-items:center;gap:6px;font-size:10px;color:#a4c8d8; }
+.tech-simulator .beta-layout-options input { accent-color:#2edbe9;max-width:150px; }
+.tech-simulator .beta-layout-options > p { font-size:9px;color:#799db0;line-height:1.8; }
+.tech-simulator .beta-layout-options button { border:1px solid #3698b2;border-radius:5px;padding:6px 9px; }
+.tech-simulator .beta-mobile-tracks { display:none;color:#add8e5;background:#0a2b40;border:1px solid #216386;border-radius:6px;padding:5px;max-width:145px;font-size:10px; }
+.tech-simulator .beta-preference-warning { color:#edd39c;border:1px solid #775b2c;background:#2a2316;padding:9px;font-size:10px;line-height:1.8;margin-bottom:10px; }
+.tech-simulator .beta-language-tabs { display:flex;direction:ltr;border-bottom:1px solid #19445c;background:#051927;height:29px;flex-shrink:0; }
+.tech-simulator .beta-language-tabs button { flex:1;font:10px 'JetBrains Mono','Alexandria',monospace;color:#809eb3;border-inline-end:1px solid #102d41; }
+.tech-simulator .beta-language-tabs button[aria-selected="true"] { color:#6be1ec;background:#10384f;border-bottom:2px solid #36c5e2; }
+.tech-simulator .beta-language-reason { padding:7px 10px;color:#e0c083;background:#282515;font-size:9px;line-height:1.8;max-height:65px;overflow:auto; }
+.tech-simulator .beta-preview-devices { display:flex;gap:6px;justify-content:flex-end;direction:ltr;padding:0 1px 7px;min-height:27px; }
+.tech-simulator .beta-preview-devices button { border:1px solid #204b66;border-radius:4px;padding:3px 8px;font-size:9px;color:#789fb6; }
+.tech-simulator .beta-preview-devices button[aria-pressed="true"] { color:#91eff1;background:#0a4558;border-color:#298f9a; }
+.tech-simulator .beta-device-scroll { height:100%;overflow:auto;position:relative;max-width:100%; }
+.tech-simulator .beta-device-width { height:100%;margin-inline:auto;position:relative;flex-shrink:0; }
+.tech-simulator .tech-iframe-mount { border:0;outline:1px solid #237c85; }
+.tech-simulator .tech-main-grid { grid-template-columns:minmax(0,var(--beta-editor-width)) minmax(0,26fr) minmax(0,var(--beta-preview-width));grid-template-rows:max(var(--beta-editor-height),calc(var(--beta-preview-height) - 174px)) 162px 158px; }
+.tech-simulator .tech-editor-panel { height:var(--beta-editor-height);align-self:start; }
+.tech-simulator .tech-preview-stack { height:var(--beta-preview-height);align-self:start; }
+.tech-simulator .tech-preview-panel { height:100%;min-height:0; }
+.tech-simulator[data-custom-layout="true"] .tech-main-grid { display:flex;flex-direction:column; }
+.tech-simulator[data-custom-layout="true"] .tech-main-grid > * { width:100%;flex-shrink:0; }
+.tech-simulator[data-custom-layout="true"] .tech-console-panel { height:165px; }
+.tech-simulator[data-focus="editor"] .tech-main-grid { grid-template-columns:1fr;grid-template-rows:var(--beta-editor-height) 170px; }
+.tech-simulator[data-focus="preview"] .tech-preview-stack { height:max(650px,var(--beta-preview-height)); }
+@media(max-width:1190px) { .tech-simulator .tech-main-grid { grid-template-columns:1fr 1fr;grid-template-rows:max(var(--beta-editor-height),calc(var(--beta-preview-height) - 174px)) 162px 440px 158px 158px; } .tech-simulator .beta-desktop-size { display:none; } }
+@media(max-width:850px) { .tech-simulator .beta-mobile-tracks { display:block; } .tech-simulator .beta-dom-fields { max-height:200px; } }
+@media(max-width:560px) { .tech-simulator .tech-main-grid { display:flex; } .tech-simulator .beta-tools { gap:8px;padding:8px; } .tech-simulator .beta-sound-controls { flex-wrap:wrap;gap:6px; } .tech-simulator .beta-sound-controls button { min-width:105px; } .tech-simulator .tech-preview-stack { min-height:400px; } .tech-simulator .tech-editor-panel { flex-shrink:0; } .tech-simulator .beta-language-tabs button { font-size:9px; } }
+@media(max-width:560px) { .tech-simulator .tech-main-grid > * { width:100%;align-self:stretch; } .tech-simulator .tech-editor-panel { min-width:0; } }
+.tech-simulator .beta-sound-controls button { display:flex;align-items:center;justify-content:center;gap:7px; }
+.tech-simulator .beta-sound-controls button svg { width:15px;height:15px; }

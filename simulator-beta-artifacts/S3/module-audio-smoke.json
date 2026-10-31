@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "engine": "Chromium",
+  "observations": [
+    "no context before enable",
+    "trusted click starts real AudioContext",
+    "ready cue schedules oscillator",
+    "volume zero schedules no cue",
+    "reload preserves unmuted/zero volume but creates no context"
+  ],
+  "limit": "Confirms real Web Audio scheduling/gating; no claim about a physical speaker or recorded sound."
+}

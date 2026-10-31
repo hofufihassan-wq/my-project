@@ -2053,16 +2053,17 @@ const app = createApp({
     const techFocusPanel = ref('');
     const techMotion = ref(true);
     const techSource = computed(() => submittedPracticeCode.value ?? practiceCode.value);
-    const techEditorCode = computed(() => techEditorView.value === 'submitted' ? techSource.value : practiceCode.value);
-    const techHighlightedCode = computed(() => highlightCode(techEditorCode.value, 'xml'));
-    const techSourceCSS = computed(() => [...techSource.value.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style\s*>/gi)].map(m => m[1]).join('\n\n'));
+    const techEditorCode = computed(() => techBlockView.value.code);
+    const techHighlightedCode = computed(() => highlightCode(techEditorCode.value, techLanguage.value === 'css' ? 'css' : techLanguage.value === 'js' ? 'javascript' : 'xml'));
+    const techSourceCSS = computed(() => window.VueLexiconSimulatorBeta.inspectBlocks(techSource.value, 'css').code);
     const techStatusLabel = computed(() => ({ ready: 'بانتظار التشغيل', running: 'جارٍ التشغيل', preview_ready: 'المعاينة جاهزة', error: 'خطأ في التشغيل', stopped: 'متوقفة' }[executionState.value] || 'بانتظار التشغيل'));
-    function techRunReference() {
+    function techRunReference(event) {
+      techPrepareRunSound(event);
       techEditorView.value = 'submitted';
       techPreviewTab.value = 'result';
       runSimulatorReference();
     }
-    function techRunDraft() { techEditorView.value = 'draft'; techPreviewTab.value = 'result'; runPracticeCode(); }
+    function techRunDraft(event) { techPrepareRunSound(event); techEditorView.value = 'draft'; techPreviewTab.value = 'result'; runPracticeCode(); }
     function techSyncEditorScroll(event) {
       const surface = event.target.closest('.tech-code-surface');
       const mirror = surface?.querySelector('.tech-highlight');
@@ -2077,11 +2078,78 @@ const app = createApp({
       const line = code.slice(0, start).split('\n').length - 1;
       nextTick(() => {
         const surface = document.querySelector('.tech-code-surface');
-        const editor = surface?.querySelector(techEditorView.value === 'draft' ? 'textarea' : '.tech-reference-code');
+        const editor = surface?.querySelector(!techEditorReadonly.value ? 'textarea' : '.tech-reference-code');
         if (editor) { editor.scrollTop = Math.max(0, line * 22 - 12); techSyncEditorScroll({ target: editor }); }
       });
     }
     function techToggleFocus(panel) { techFocusPanel.value = techFocusPanel.value === panel ? '' : panel; }
+
+    // S3: session layout and strict, separate simulator preferences.
+    const techBeta = window.VueLexiconSimulatorBeta.createController({
+      Vue, storage: { getItem: key => localStorage.getItem(key), setItem: (key, value) => localStorage.setItem(key, value) },
+      isActive: () => appMode.value === 'practice' && practiceSurface.value === 'simulator'
+    });
+    const betaMuted = techBeta.muted, betaVolume = techBeta.volume, betaAudioStatus = techBeta.audioStatus;
+    const betaWarnings = techBeta.warnings, betaStorageStatus = techBeta.storageStatus;
+    const techLanguage = ref('source');
+    const techViewport = ref('desktop');
+    const techEditorHeight = ref(412), techPreviewHeight = ref(586), techEditorWidth = ref(36);
+    const techHiddenPanels = techBeta.hiddenPanels;
+    const techBlockView = computed(() => window.VueLexiconSimulatorBeta.inspectBlocks(techEditorView.value === 'submitted' ? techSource.value : practiceCode.value, techLanguage.value));
+    const techEditorReadonly = computed(() => techEditorView.value === 'submitted' || !techBlockView.value.editable);
+    const techAnyHidden = computed(() => techHiddenPanels.value.length > 0);
+    const techPreviewWidth = computed(() => ({ desktop: '100%', tablet: '768px', mobile: '390px' }[techViewport.value]));
+    function techPanelVisible(panel) { return !techHiddenPanels.value.includes(panel); }
+    function techSetPanel(panel, visible) { techBeta.setPanelVisible(panel, visible); techFocusPanel.value = ''; }
+    function techResetLayout() {
+      techBeta.resetLayout(); techFocusPanel.value = ''; techEditorHeight.value = 412; techPreviewHeight.value = 586; techEditorWidth.value = 36;
+    }
+    function techSetLanguage(language) {
+      if (!['source', 'css', 'js'].includes(language)) return;
+      techLanguage.value = language; autocompleteVisible.value = false;
+    }
+    function techUpdateEditor(event) {
+      if (techEditorReadonly.value) return;
+      if (techLanguage.value === 'source') handleEditorInput(event);
+      else {
+        const result = window.VueLexiconSimulatorBeta.updateBlock(practiceCode.value, techLanguage.value, event.target.value, techBlockView.value.code);
+        if (!result.ok) { triggerToast(result.reason, 'warning'); return; }
+        practiceCode.value = result.source; autocompleteVisible.value = false;
+        const lines = event.target.value.slice(0, event.target.selectionStart).split('\n');
+        cursorLine.value = lines.length; cursorCol.value = lines[lines.length - 1].length + 1;
+      }
+    }
+    function techEditorKeydown(event) {
+      if (window.VueLexiconSimulatorBeta.actionForShortcut(event)) return;
+      if (techLanguage.value === 'source') { handleEditorKeydown(event); return; }
+      if (event.key === 'Tab' && !techEditorReadonly.value) {
+        event.preventDefault();
+        const element = event.target, start = element.selectionStart, end = element.selectionEnd;
+        element.value = element.value.slice(0, start) + '  ' + element.value.slice(end);
+        techUpdateEditor({ target: element });
+        nextTick(() => { element.selectionStart = element.selectionEnd = start + 2; });
+      }
+    }
+    function techToggleMotion() { techBeta.setAnimations(!techBeta.animations.value); }
+    function techToggleSound(event) {
+      techBeta.setMuted(!techBeta.muted.value, event);
+      if (!techBeta.muted.value) void techBeta.prepareAudio(event).then(ok => { if (ok) techBeta.playCue('enabled'); });
+    }
+    function techPrepareRunSound(event) { void techBeta.prepareAudio(event).then(ok => { if (ok) techBeta.playCue('start'); }); }
+    function techStopManual() { stopPracticeExecution(); techBeta.playCue('stop'); }
+    function techResetManual(event) { techPrepareRunSound(event); techEditorView.value = 'draft'; resetLessonCode(); }
+    watch(techBeta.animations, value => { techMotion.value = value; }, { immediate: true, flush: 'sync' });
+    watch(techRunEvents, events => {
+      const event = events[events.length - 1];
+      if (event?.type === 'preview_ready') techBeta.playCue('ready');
+      else if (event?.type === 'execution_error') techBeta.playCue('error');
+    }, { flush: 'sync' });
+    watch([appMode, practiceSurface], ([mode, surface]) => { if (mode !== 'practice' || surface !== 'simulator') techBeta.silence(); }, { flush: 'sync' });
+    watch([techLanguage, techEditorView], () => nextTick(() => {
+      const surface = document.querySelector('.tech-code-surface');
+      if (!surface) return;
+      for (const element of surface.querySelectorAll('pre,textarea,.tech-line-numbers')) { element.scrollTop = 0; element.scrollLeft = 0; }
+    }));
 
     // Dashboard values are derived from actual local records, never concept-art stats.
     const dashboardStats = computed(() => ({
@@ -2103,6 +2171,10 @@ const app = createApp({
     // ==========================================
     onMounted(() => {
       const handleGlobalKeys = (e) => {
+        if (appMode.value === 'practice' && practiceSurface.value === 'simulator') {
+          const action = window.VueLexiconSimulatorBeta.actionForShortcut(e);
+          if (action) { e.preventDefault(); if (action === 'run') techRunDraft(e); else techStopManual(); return; }
+        }
         const editing = e.target?.isContentEditable || e.target?.closest?.('input, textarea, select');
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
           e.preventDefault();
@@ -2140,6 +2212,7 @@ const app = createApp({
         cancelAutoRun();
         activeRun.value = null;
         dictionaryPreviewSession.value = null;
+        techBeta.dispose();
       });
     });
 
@@ -2147,6 +2220,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
+      techBeta, betaMuted, betaVolume, betaAudioStatus, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation,
       techPreviewTab, techEditorView, techFocusPanel, techMotion, techSource, techEditorCode, techHighlightedCode, techSourceCSS, techStatusLabel, techRunReference, techRunDraft, techSyncEditorScroll, techJumpToScript, techToggleFocus,
       simulatorReferenceReading, simulatorExpandedPanel, simulatorEditorShare, toggleSimulatorPanel, simulatorStages,
