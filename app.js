@@ -2012,6 +2012,16 @@ const app = createApp({
       ];
     });
     const techTraceLimitation = 'لا يدعم المشغّل الحالي تتبعًا عامًا لقيم المتغيرات أو تنفيذ الأسطر. المراحل إشارات جلسة حقيقية، وليست تحليلًا لمسارات الكود أو قياسًا لمدته.';
+    const techFlowSummary = computed(() => {
+      const session = activeRun.value;
+      if (!session) return executionState.value === 'stopped'
+        ? 'أُوقفت المعاينة وأُبطلت الجلسة. شغّل الكود لبدء اتصال جديد.'
+        : 'اكتب أو اختر مثالًا، ثم شغّله. ستضيء المراحل عند استلام إشاراته الفعلية.';
+      if (session.sourceRevision !== techEvidenceRevision.value) return 'تغيّر المصدر بعد التشغيل؛ هذه إشارات النسخة السابقة. شغّل التعديل لتحديث النتيجة.';
+      if (executionState.value === 'error') return 'أبلغ الإطار عن خطأ. راجع Console ورسالة الخطأ؛ الجاهزية لا تعني صحة البرنامج.';
+      if (simulatorObservation.value) return 'وصلت جاهزية الإطار ولقطة صفحته. جرّب التفاعل في المعاينة؛ اللقطة تتحدث عند تغير DOM.';
+      return 'أُرسلت نسخة معزولة. ننتظر إشارات الإطار؛ لا نستنتج خطوات أو قيمًا من الكود.';
+    });
 
     // Visual workbench controls are session-only and never touch drafts or sessions.
     const simulatorReferenceReading = ref(false);
@@ -2094,6 +2104,8 @@ const app = createApp({
       isActive: () => appMode.value === 'practice' && practiceSurface.value === 'simulator'
     });
     const betaMuted = techBeta.muted, betaVolume = techBeta.volume, betaAudioStatus = techBeta.audioStatus;
+    const betaAmbientEnabled = techBeta.ambientEnabled, betaAmbientVolume = techBeta.ambientVolume, betaAmbientStatus = techBeta.ambientStatus;
+    const betaAmbientLabel = computed(() => ({ off: 'متوقف', playing: 'يعمل بهدوء', silent: 'المستوى صفر', paused: 'متوقف مؤقتًا', 'gesture-required': 'بانتظار التفعيل', unsupported: 'غير متاح', error: 'تعذر التفعيل', closed: 'مغلق' }[betaAmbientStatus.value] || 'متوقف'));
     const betaWarnings = techBeta.warnings, betaStorageStatus = techBeta.storageStatus;
     const techLanguage = ref('source');
     const techViewport = ref('desktop');
@@ -2111,6 +2123,20 @@ const app = createApp({
     function techSetLanguage(language) {
       if (!['source', 'css', 'js'].includes(language)) return;
       techLanguage.value = language; autocompleteVisible.value = false;
+    }
+    function techPreviewKeydown(event) {
+      const tabs = ['result', 'html', 'css', 'console'];
+      const index = tabs.indexOf(techPreviewTab.value);
+      let target;
+      if (event.key === 'ArrowRight') target = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') target = (index + tabs.length - 1) % tabs.length;
+      else if (event.key === 'Home') target = 0;
+      else if (event.key === 'End') target = tabs.length - 1;
+      else return;
+      if (event.altKey || event.ctrlKey || event.metaKey || event.isComposing) return;
+      event.preventDefault(); event.stopPropagation();
+      techPreviewTab.value = tabs[target];
+      event.currentTarget.querySelectorAll('[role="tab"]')[target]?.focus();
     }
     function techUpdateEditor(event) {
       if (techEditorReadonly.value) return;
@@ -2139,6 +2165,7 @@ const app = createApp({
       techBeta.setMuted(!techBeta.muted.value, event);
       if (!techBeta.muted.value) void techBeta.prepareAudio(event).then(ok => { if (ok) techBeta.playCue('enabled'); });
     }
+    function techToggleAmbient(event) { techBeta.setAmbientEnabled(!betaAmbientEnabled.value, event); }
     function techPrepareRunSound(event) { void techBeta.prepareAudio(event).then(ok => { if (ok) techBeta.playCue('start'); }); }
     function techStopManual() { stopPracticeExecution(); techBeta.playCue('stop'); }
     function techResetManual(event) { techPrepareRunSound(event); techEditorView.value = 'draft'; resetLessonCode(); }
@@ -2200,6 +2227,9 @@ const app = createApp({
 
       window.addEventListener('keydown', handleGlobalKeys);
       window.addEventListener('message', handleWindowMessage);
+      const handleAudioVisibility = () => { if (document.visibilityState === 'hidden') techBeta.silence(); };
+      document.addEventListener('visibilitychange', handleAudioVisibility);
+      window.addEventListener('pagehide', techBeta.silence);
       if (storageWarnings.length) triggerToast(storageWarnings.join(' '), 'warning');
 
       // Auto initialize practice code for first lesson
@@ -2210,6 +2240,8 @@ const app = createApp({
       onUnmounted(() => {
         window.removeEventListener('keydown', handleGlobalKeys);
         window.removeEventListener('message', handleWindowMessage);
+        document.removeEventListener('visibilitychange', handleAudioVisibility);
+        window.removeEventListener('pagehide', techBeta.silence);
         if (clockInterval) clearInterval(clockInterval);
         if (debounceTimer) clearTimeout(debounceTimer);
         if (toastTimer) clearTimeout(toastTimer);
@@ -2224,9 +2256,9 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
-      techBeta, betaMuted, betaVolume, betaAudioStatus, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
-      techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation,
-      techPreviewTab, techEditorView, techFocusPanel, techMotion, techSource, techEditorCode, techHighlightedCode, techSourceCSS, techStatusLabel, techRunReference, techRunDraft, techSyncEditorScroll, techJumpToScript, techToggleFocus,
+      techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
+      techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
+      techPreviewTab, techEditorView, techFocusPanel, techMotion, techSource, techEditorCode, techHighlightedCode, techSourceCSS, techStatusLabel, techRunReference, techRunDraft, techSyncEditorScroll, techJumpToScript, techToggleFocus, techPreviewKeydown,
       simulatorReferenceReading, simulatorExpandedPanel, simulatorEditorShare, toggleSimulatorPanel, simulatorStages,
       theme, setTheme, practiceSurface, openVisualSimulator, openTraining,
       foundationSections, activeFoundation, openFoundation,

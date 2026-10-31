@@ -539,3 +539,25 @@
 .tech-simulator .beta-sound-controls button svg { width:15px;height:15px; }
 .tech-simulator .tech-flow-badge { line-height:1.5; }
 .tech-simulator .tech-flow-nodes { margin-top:12px; }
+/* Completion pass: keep the accepted blue identity, reclaim preview space. */
+.tech-simulator .tech-live-surface { padding:7px 5px; background:radial-gradient(ellipse at 40% 40%,#07557055,transparent 75%),#03111c; }
+.tech-simulator .tech-source-inspector pre { font-size:11px;line-height:1.9;direction:ltr;text-align:left; }
+.tech-simulator .tech-source-inspector p { font-size:10px; }
+.tech-simulator .tech-inspector-console p { font:11px/1.9 'JetBrains Mono','Alexandria',monospace;white-space:pre-wrap;overflow-wrap:anywhere; }
+.tech-simulator .tech-console-lines p > span:nth-child(2) { min-width:0;overflow-wrap:anywhere;white-space:pre-wrap; }
+.tech-simulator .beta-console-level { color:#86aebe;font:9px 'JetBrains Mono',monospace;margin-inline-end:8px; }
+.tech-simulator .beta-sound-controls { flex-wrap:wrap;gap:6px; }
+.tech-simulator .beta-sound-controls small { color:#7fa8b9;font-size:8px; }
+.tech-simulator .beta-ambient-controls { border-inline-start:1px solid #24516a;padding-inline-start:10px; }
+.tech-simulator .beta-ambient-controls button[aria-pressed="true"] { border-color:#258d9c;background:#083847;color:#b0f2ed; }
+.tech-simulator .beta-ambient-controls [data-testid="beta-ambient-resume"] { min-width:0;font-size:9px;padding:4px 7px; }
+.tech-simulator .beta-flow-summary { background:#041b29;border-radius:6px;padding:4px 7px;color:#add1df;font-size:9px;line-height:1.8;min-height:32px;margin:9px 5px 0;position:relative;z-index:2; }
+.tech-simulator .tech-flow-endpoints { margin-top:8px; }
+.tech-simulator .tech-flow-node i { flex-shrink:0;min-width:17px;text-align:center;font:11px 'JetBrains Mono',monospace; }
+.tech-simulator :is(button,input,summary,[role="tabpanel"]):focus-visible { outline:2px solid #71e5fa;outline-offset:3px; }
+.tech-simulator .tech-iframe-mount::before { pointer-events:none; }
+@media(max-width:560px) {
+ .tech-simulator .beta-sound-controls { width:100%; }
+ .tech-simulator .beta-ambient-controls { border-inline-start:0;border-top:1px solid #24516a;padding-inline-start:0;padding-top:8px; }
+ .tech-simulator .tech-flow-endpoints { margin-top:12px; }
+}

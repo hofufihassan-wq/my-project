@@ -5,6 +5,8 @@
   'use strict';
   const PREFERENCE_KEY = 'vuelexicon_simulator_preferences_v1';
   const DEFAULTS = Object.freeze({ version: 1, muted: true, volume: 0.25, animations: true });
+  const AMBIENT_PREFERENCE_KEY = 'vuelexicon_simulator_ambient_v1';
+  const AMBIENT_DEFAULTS = Object.freeze({ version: 1, enabled: false, volume: 0.18 });
   const own = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
   const record = value => value !== null && typeof value === 'object' && !Array.isArray(value);
   function parsePreferences(raw) {
@@ -16,6 +18,62 @@
       throw new TypeError('إعدادات المحاكي غير متوافقة مع المخطط الحالي.');
     }
     return { version: 1, muted: value.muted, volume: value.volume, animations: value.animations };
+  }
+
+  function parseAmbientPreferences(raw) {
+    if (typeof raw !== 'string' || raw.length > 2048) throw new TypeError('حجم إعدادات الصوت المحيطي غير صالح.');
+    const value = JSON.parse(raw);
+    if (!record(value) || Object.keys(value).sort().join(',') !== 'enabled,version,volume' ||
+        value.version !== 1 || typeof value.enabled !== 'boolean' ||
+        typeof value.volume !== 'number' || !Number.isFinite(value.volume) || value.volume < 0 || value.volume > 1) {
+      throw new TypeError('إعدادات الصوت المحيطي غير متوافقة.');
+    }
+    return { version: 1, enabled: value.enabled, volume: value.volume };
+  }
+
+  // A separate opt-in record keeps existing alert/motion preferences byte-compatible.
+  function ambientPreferences(storage, ref, warn) {
+    let values = { ...AMBIENT_DEFAULTS }, protectedOriginal = false, raw = null;
+    const status = ref('ready'), recoveryKey = ref(null);
+    const write = (key, value) => {
+      try { storage.setItem(key, value); return storage.getItem(key) === value; } catch (_) { return false; }
+    };
+    try { raw = storage.getItem(AMBIENT_PREFERENCE_KEY); }
+    catch (_) {
+      protectedOriginal = true; status.value = 'protected';
+      warn('تعذر قراءة إعدادات الصوت المحيطي؛ أبقينا الأصل دون استبدال، والتفضيل لهذه الجلسة فقط.');
+    }
+    if (raw !== null) {
+      try { values = parseAmbientPreferences(raw); }
+      catch (_) {
+        let key = null;
+        try {
+          for (let i = 1; i <= 50; i++) {
+            const candidate = 'vuelexicon_recovery_simulator_ambient_v1_' + Date.now() + '_' + i;
+            if (storage.getItem(candidate) === null) { key = candidate; break; }
+          }
+        } catch (_) {}
+        if (key && write(key, raw)) {
+          recoveryKey.value = key;
+          status.value = write(AMBIENT_PREFERENCE_KEY, JSON.stringify(values)) ? 'recovered' : 'memory';
+          warn('حُفظ أصل إعدادات الصوت المحيطي كاملًا في نسخة استرجاع، واستُخدمت القيم الافتراضية.');
+        } else {
+          protectedOriginal = true; status.value = 'protected';
+          warn('تعذر حفظ نسخة استرجاع للصوت المحيطي؛ لم نستبدل الأصل، والتفضيل لهذه الجلسة فقط.');
+        }
+      }
+    }
+    const enabled = ref(values.enabled), volume = ref(values.volume);
+    const snapshot = () => ({ version: 1, enabled: enabled.value, volume: volume.value });
+    function persist() {
+      if (!protectedOriginal && write(AMBIENT_PREFERENCE_KEY, JSON.stringify(snapshot()))) {
+        status.value = 'ready'; return true;
+      }
+      status.value = protectedOriginal ? 'protected' : 'memory';
+      warn('لم يُحفظ تفضيل الصوت المحيطي؛ أبقينا إعداداته الأصلية، والاختيار الحالي مؤقت.');
+      return false;
+    }
+    return { enabled, volume, status, recoveryKey, snapshot, persist };
   }
 
   function createController(options) {
@@ -78,9 +136,12 @@
     const muted = ref(values.muted);
     const volume = ref(values.volume);
     const animations = ref(values.animations);
+    const ambient = ambientPreferences(storage, ref, warn);
+    const ambientStatus = ref(ambient.enabled.value ? 'gesture-required' : 'off');
     audioStatus.value = muted.value ? 'muted' : 'gesture-required';
     let context = null;
     let masterGain = null;
+    let ambientGraph = null;
     let disposed = false;
     let scheduledCues = 0;
     const tones = new Set();
@@ -90,7 +151,8 @@
     const maxActiveCues = 4;
     const cueCooldownSeconds = 0.12;
     const active = () => {
-      try { return !disposed && (typeof options.isActive !== 'function' || options.isActive() === true); }
+      try { return !disposed && root.document?.visibilityState !== 'hidden' &&
+        (typeof options.isActive !== 'function' || options.isActive() === true); }
       catch (_) { return false; }
     };
     function snapshot() { return { version: 1, muted: muted.value, volume: volume.value, animations: animations.value }; }
@@ -103,6 +165,11 @@
       return false;
     }
     function silence() {
+      stopAmbient();
+      silenceAlerts();
+      audioStatus.value = muted.value || volume.value === 0 ? 'muted' : 'gesture-required';
+    }
+    function silenceAlerts() {
       if (masterGain && context) {
         try { masterGain.gain.cancelScheduledValues(context.currentTime); masterGain.gain.setValueAtTime(0, context.currentTime); } catch (_) {}
       }
@@ -110,16 +177,69 @@
       tones.clear();
       lastCueAt.clear();
     }
+
+    function stopAmbient() {
+      const graph = ambientGraph;
+      ambientGraph = null;
+      if (graph) {
+        // Disconnect first: no residual tone survives navigation, hiding or disposal.
+        try { graph.gain.disconnect(); } catch (_) {}
+        for (const source of graph.sources) { try { source.stop(); source.disconnect(); } catch (_) {} }
+        for (const node of graph.nodes) { try { node.disconnect(); } catch (_) {} }
+      }
+      ambientStatus.value = !ambient.enabled.value ? 'off' : ambient.volume.value === 0 ? 'silent' : 'paused';
+    }
+    function startAmbient() {
+      if (!active() || !ambient.enabled.value || ambient.volume.value === 0 || context?.state !== 'running') return false;
+      if (ambientGraph) { updateAmbientGain(); ambientStatus.value = 'playing'; return true; }
+      const sources = [], nodes = [];
+      try {
+        const gain = context.createGain(), filter = context.createBiquadFilter();
+        nodes.push(gain, filter);
+        filter.type = 'lowpass'; filter.frequency.value = 650; filter.Q.value = 0.3;
+        gain.gain.value = 0; filter.connect(gain); gain.connect(context.destination);
+        // Three quiet consonant sine tones, gently breathed by one slow LFO.
+        // Fixed-size native graph: no timers, loops, external files or worklets.
+        for (const frequency of [130.8128, 196, 261.6256]) {
+          const oscillator = context.createOscillator(), voiceGain = context.createGain();
+          sources.push(oscillator); nodes.push(voiceGain);
+          oscillator.type = 'sine'; oscillator.frequency.value = frequency; voiceGain.gain.value = 0.025;
+          oscillator.connect(voiceGain); voiceGain.connect(filter); oscillator.start();
+        }
+        const breath = context.createOscillator(), depth = context.createGain();
+        sources.push(breath); nodes.push(depth);
+        breath.frequency.value = 0.07; depth.gain.value = ambient.volume.value * 0.12;
+        breath.connect(depth); depth.connect(gain.gain); breath.start();
+        ambientGraph = { gain, depth, sources, nodes };
+        updateAmbientGain(); ambientStatus.value = 'playing'; return true;
+      } catch (_) {
+        for (const source of sources) { try { source.stop(); source.disconnect(); } catch (_) {} }
+        for (const node of nodes) { try { node.disconnect(); } catch (_) {} }
+        ambientStatus.value = 'error';
+        warn('تعذر تشغيل الصوت المحيطي؛ تنبيهات الأخطاء والمعاينة مستقلتان عنه.'); return false;
+      }
+    }
+    function updateAmbientGain() {
+      if (!ambientGraph || !context) return;
+      try {
+        ambientGraph.gain.gain.setTargetAtTime(ambient.volume.value, context.currentTime, 0.35);
+        ambientGraph.depth.gain.setTargetAtTime(ambient.volume.value * 0.12, context.currentTime, 0.35);
+      } catch (_) {}
+    }
     function updateGain() {
       if (masterGain && context) {
         try { masterGain.gain.setValueAtTime(muted.value || !active() ? 0 : volume.value, context.currentTime); } catch (_) {}
       }
     }
     async function prepareAudio(event) {
-      if (disposed || !active() || muted.value || volume.value === 0) {
+      const wantsAlerts = !muted.value && volume.value > 0;
+      const wantsAmbient = ambient.enabled.value && ambient.volume.value > 0;
+      if (disposed || !active() || (!wantsAlerts && !wantsAmbient)) {
         audioStatus.value = muted.value || volume.value === 0 ? 'muted' : 'inactive'; return false;
       }
-      if (context?.state === 'running') { updateGain(); audioStatus.value = 'ready'; return true; }
+      if (context?.state === 'running') {
+        updateGain(); startAmbient(); audioStatus.value = wantsAlerts ? 'ready' : 'muted'; return true;
+      }
       // Native clicks/keys are required. Reloaded saved consent does not autoplay.
       if (!event || event.isTrusted !== true || root.navigator?.userActivation?.isActive === false) {
         audioStatus.value = 'gesture-required'; return false;
@@ -129,6 +249,7 @@
           const Audio = options.AudioContext || root.AudioContext || root.webkitAudioContext;
           if (typeof Audio !== 'function') {
             audioStatus.value = 'unsupported';
+            ambientStatus.value = 'unsupported';
             warn('الصوت غير متاح في هذا المتصفح؛ التشغيل والمعاينة يعملان دون صوت.'); return false;
           }
           context = new Audio();
@@ -136,15 +257,18 @@
           context.onstatechange = () => {
             if (disposed) return;
             audioStatus.value = muted.value || volume.value === 0 ? 'muted' : context.state === 'running' ? 'ready' : 'suspended';
+            if (ambient.enabled.value) ambientStatus.value = context.state === 'running' && ambientGraph ? 'playing' : 'paused';
           };
         }
         if (context.state !== 'running') await context.resume();
-        if (disposed || !active() || muted.value || volume.value === 0) { silence(); return false; }
+        if (disposed || !active()) { silence(); return false; }
         updateGain();
-        audioStatus.value = context.state === 'running' ? 'ready' : 'suspended';
+        startAmbient();
+        audioStatus.value = muted.value || volume.value === 0 ? 'muted' : context.state === 'running' ? 'ready' : 'suspended';
         return context.state === 'running';
       } catch (_) {
         audioStatus.value = 'error';
+        if (ambient.enabled.value) ambientStatus.value = 'error';
         warn('تعذر تفعيل الصوت؛ لا يؤثر ذلك على تشغيل الأكواد أو حفظ المسودة.'); return false;
       }
     }
@@ -172,16 +296,36 @@
     function setMuted(value, event) {
       if (typeof value !== 'boolean') return false;
       muted.value = value;
-      if (value) { silence(); audioStatus.value = 'muted'; }
+      if (value) {
+        // Alerts and ambience are separate buses; muting alerts keeps ambience.
+        silenceAlerts(); audioStatus.value = 'muted';
+      }
       else { audioStatus.value = 'gesture-required'; void prepareAudio(event); }
       return persist();
     }
     function setVolume(value) {
       if (typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > 1) return false;
       volume.value = value;
-      if (value === 0) { silence(); audioStatus.value = 'muted'; }
+      if (value === 0) { silenceAlerts(); audioStatus.value = 'muted'; }
       else { updateGain(); audioStatus.value = muted.value ? 'muted' : context?.state === 'running' ? 'ready' : 'gesture-required'; }
       return persist();
+    }
+    function setAmbientEnabled(value, event) {
+      if (typeof value !== 'boolean') return false;
+      ambient.enabled.value = value;
+      if (!value) stopAmbient();
+      else { ambientStatus.value = 'gesture-required'; void prepareAudio(event); }
+      return ambient.persist();
+    }
+    function setAmbientVolume(value, event) {
+      if (typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > 1) return false;
+      ambient.volume.value = value;
+      if (value === 0) stopAmbient();
+      else if (ambient.enabled.value) {
+        if (ambientGraph) updateAmbientGain();
+        else void prepareAudio(event);
+      }
+      return ambient.persist();
     }
     function setAnimations(value) {
       if (typeof value !== 'boolean') return false;
@@ -194,14 +338,19 @@
       return true;
     }
     function resetLayout() { hiddenPanels.value = []; }
-    function diagnostics() { return { contextState: context?.state || 'not-created', scheduledCues, activeTones: tones.size }; }
+    function diagnostics() { return { contextState: context?.state || 'not-created', scheduledCues, activeTones: tones.size,
+      ambientPlaying: !!ambientGraph, ambientSources: ambientGraph?.sources.length || 0 }; }
     function dispose() {
       silence(); disposed = true;
       if (context) { context.onstatechange = null; try { void context.close(); } catch (_) {} }
       audioStatus.value = 'closed';
+      ambientStatus.value = 'closed';
     }
     return Object.freeze({ muted, volume, animations, storageStatus, recoveryKey, warnings, hiddenPanels,
       audioStatus, snapshot, setMuted, setVolume, setAnimations, prepareAudio, playCue, silence,
+      ambientEnabled: ambient.enabled, ambientVolume: ambient.volume, ambientStatus,
+      ambientStorageStatus: ambient.status, ambientRecoveryKey: ambient.recoveryKey, ambientSnapshot: ambient.snapshot,
+      setAmbientEnabled, setAmbientVolume,
       setPanelVisible, resetLayout, diagnostics, dispose });
   }
 
@@ -320,7 +469,8 @@
     if (!event.ctrlKey && !event.metaKey && event.key === 'F9') return 'stop';
     return null;
   }
-  const api = Object.freeze({ PREFERENCE_KEY, DEFAULTS, parsePreferences, createController, scanBlocks, inspectBlocks, updateBlock, actionForShortcut });
+  const api = Object.freeze({ PREFERENCE_KEY, DEFAULTS, AMBIENT_PREFERENCE_KEY, AMBIENT_DEFAULTS, parsePreferences, parseAmbientPreferences,
+    createController, scanBlocks, inspectBlocks, updateBlock, actionForShortcut });
   root.VueLexiconSimulatorBeta = api;
   if (typeof module === 'object' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);
