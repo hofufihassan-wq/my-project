@@ -93,7 +93,8 @@
 .tech-simulator[data-dragging]:not([data-dragging=""]) .tech-main-grid > .tech-panel { border-color:#a8e4ffb0;box-shadow:0 0 20px #72dfff42,inset 0 0 15px #58cbff1f; }
 .tech-simulator[data-dragging]:not([data-dragging=""]) iframe { pointer-events:none; }
 .tech-simulator[data-dragging]:not([data-dragging=""]) .tech-main-grid { user-select:none; }
-.tech-simulator .tech-flow-panel { height:100%;min-height:520px;padding:0 12px 10px;display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(120deg,#0e31487d,#061a2bd9),repeating-linear-gradient(0deg,transparent 0 29px,#4bb8dc17 30px),repeating-linear-gradient(90deg,transparent 0 29px,#4bb8dc17 30px); }
+.tech-simulator .tech-flow-panel { height:100%;min-height:0;padding:0 12px 10px;display:flex;flex-direction:column;overflow:auto;background:linear-gradient(120deg,#0e31487d,#061a2bd9),repeating-linear-gradient(0deg,transparent 0 29px,#4bb8dc17 30px),repeating-linear-gradient(90deg,transparent 0 29px,#4bb8dc17 30px); }
+.tech-simulator .tech-flow-panel > :is(.tech-section-title,.tech-flow-badge,.final-stage-explanation,.beta-flow-summary) { flex-shrink:0; }
 .tech-simulator .tech-section-title { min-height:36px;font-size:13px;border-bottom:1px solid #5094b53b; }
 .tech-simulator .tech-flow-badge { margin-top:6px;font-size:8px;line-height:1.6;color:#87b2c9; }
 .tech-simulator .final-flow-wires { inset:80px 0 auto!important;height:350px;opacity:1!important;z-index:0; }
@@ -229,8 +230,8 @@
 }
 @media(max-width:1190px) {
  .tech-simulator .tech-page-layout { grid-template-columns:165px minmax(0,1fr); }
- .tech-simulator .tech-main-grid { grid-template-columns:1fr 1fr;grid-template-rows:var(--beta-editor-height) var(--final-console-height) 570px auto auto;grid-template-areas:"editor preview" "console preview" "flow flow" "wave wave" "observation observation" "notes notes"; }
- .tech-simulator .tech-flow-panel { min-height:570px;height:570px; }
+ .tech-simulator .tech-main-grid { grid-template-columns:1fr 1fr;grid-template-rows:var(--beta-editor-height) var(--final-console-height) minmax(570px,auto) auto auto;grid-template-areas:"editor preview" "console preview" "flow flow" "wave wave" "observation observation" "notes notes"; }
+ .tech-simulator .tech-flow-panel { min-height:570px;height:auto; }
  .tech-simulator .tech-preview-stack { height:calc(var(--beta-editor-height) + var(--final-console-height) + 13px); }
  .tech-simulator .tech-flow-nodes { width:min(440px,100%);align-self:center; }
  .tech-simulator .final-flow-wires { width:min(440px,100%);left:50%!important;right:auto!important;transform:translateX(-50%); }
@@ -289,7 +290,7 @@
  .tech-simulator .tech-main-grid > * { width:100%; }
  .tech-simulator .tech-editor-panel { height:var(--beta-editor-height); }
  .tech-simulator .tech-preview-stack { height:var(--beta-preview-height);min-height:400px; }
- .tech-simulator .tech-flow-panel { height:590px;min-height:590px; }
+ .tech-simulator .tech-flow-panel { height:auto;min-height:590px; }
  .tech-simulator .tech-flow-node strong { font-size:11px; }
  .tech-simulator .tech-flow-node small { font-size:8px; }
  .tech-simulator .final-attempt-dashboard { grid-template-columns:minmax(0,1fr) 110px;gap:4px;padding-inline:7px; }
