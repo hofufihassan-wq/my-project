@@ -786,14 +786,15 @@ window.PRACTICE_CURRICULUM = {
 <body>
   <div class="form-card">
     <h2 style="color:#00DC82; margin-top:0; font-size:18px;">انضم إلى النشرة البريدية 📬</h2>
-    <form onsubmit="event.preventDefault(); alert('تم استلام بياناتك بنجاح!');">
+    <form>
       <label for="full-name">الاسم الكريم:</label>
       <input id="full-name" type="text" placeholder="اكتب اسمك..." required>
 
       <label for="user-email">البريد الإلكتروني:</label>
       <input id="user-email" type="email" placeholder="name@example.com" required>
 
-      <button type="submit">تأكيد الاشتراك</button>
+      <button type="submit" onclick="event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';">تأكيد الاشتراك</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </body>
@@ -814,14 +815,15 @@ window.PRACTICE_CURRICULUM = {
 <body>
   <div class="form-card">
     <h2 style="color:#00DC82; margin-top:0; font-size:18px;">انضم إلى النشرة البريدية 📬</h2>
-    <form onsubmit="event.preventDefault(); alert('تم استلام بياناتك بنجاح!');">
+    <form>
       <label for="full-name">الاسم الكريم:</label>
       <input id="full-name" type="text" placeholder="اكتب اسمك..." required>
 
       <label for="user-email">البريد الإلكتروني:</label>
       <input id="user-email" type="email" placeholder="name@example.com" required>
 
-      <button type="submit">تأكيد الاشتراك</button>
+      <button type="submit" onclick="event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';">تأكيد الاشتراك</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </body>
