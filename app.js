@@ -2114,12 +2114,163 @@ const app = createApp({
     const techBlockView = computed(() => window.VueLexiconSimulatorBeta.inspectBlocks(techEditorView.value === 'submitted' ? techSource.value : practiceCode.value, techLanguage.value));
     const techEditorReadonly = computed(() => techEditorView.value === 'submitted' || !techBlockView.value.editable);
     const techAnyHidden = computed(() => techHiddenPanels.value.length > 0);
-    const techPreviewWidth = computed(() => ({ desktop: '100%', tablet: '768px', mobile: '390px' }[techViewport.value]));
+    const techCustomWidth = ref(1024), techCustomHeight = ref(640), techPreviewZoom = ref(1);
+    const techDimensionDraft = ref({ width: 1024, height: 640 }), techDimensionError = ref('');
+    const techConsoleHeight = ref(162), techCompactPanel = ref('editor');
+    const techDragging = ref('');
+    const techPreviewWidth = computed(() => techViewport.value === 'custom' ? techCustomWidth.value + 'px'
+      : ({ desktop: '100%', tablet: '768px', mobile: '390px' }[techViewport.value] || '100%'));
+    const techPreviewCanvasStyle = computed(() => techViewport.value === 'custom'
+      ? { width: techCustomWidth.value + 'px', height: techCustomHeight.value + 'px', transform: 'scale(' + techPreviewZoom.value + ')' }
+      : { width: techPreviewWidth.value, height: '100%' });
+    const techPreviewCarrierStyle = computed(() => techViewport.value === 'custom'
+      ? { width: techCustomWidth.value * techPreviewZoom.value + 'px', height: techCustomHeight.value * techPreviewZoom.value + 'px' }
+      : { width: techPreviewWidth.value, height: '100%' });
     function techPanelVisible(panel) { return !techHiddenPanels.value.includes(panel); }
     function techSetPanel(panel, visible) { techBeta.setPanelVisible(panel, visible); techFocusPanel.value = ''; }
     function techResetLayout() {
       techBeta.resetLayout(); techFocusPanel.value = ''; techEditorHeight.value = 412; techPreviewHeight.value = 586; techEditorWidth.value = 36;
+      techConsoleHeight.value = 162; techCompactPanel.value = 'all'; techEndResize();
     }
+    function techSelectCompact(panel) {
+      if (!['all', 'editor', 'stages', 'preview', 'console'].includes(panel)) return;
+      techCompactPanel.value = panel; techFocusPanel.value = '';
+      if (panel !== 'all') techBeta.setPanelVisible(panel, true);
+      nextTick(() => document.querySelector('.final-compact-tabs')?.scrollIntoView({ block: 'start', behavior: 'auto' }));
+    }
+    function techSetViewport(device) {
+      if (!['desktop', 'tablet', 'mobile'].includes(device)) return;
+      techViewport.value = device; techPreviewZoom.value = 1; techDimensionError.value = '';
+    }
+    function techApplyDimensions() {
+      const width = Number(techDimensionDraft.value.width), height = Number(techDimensionDraft.value.height);
+      if (!Number.isInteger(width) || width < 240 || width > 1920 || !Number.isInteger(height) || height < 160 || height > 1200) {
+        techDimensionError.value = 'العرض من240 إلى1920، والارتفاع من160 إلى1200 بكسل صحيح. لم يتغير المقاس.'; return false;
+      }
+      techCustomWidth.value = width; techCustomHeight.value = height; techPreviewZoom.value = 1;
+      techViewport.value = 'custom'; techDimensionError.value = ''; return true;
+    }
+    function techCaptureViewport() {
+      if (techViewport.value !== 'custom' && practiceIframeRef.value) {
+        techCustomWidth.value = Math.max(240, Math.round(practiceIframeRef.value.clientWidth));
+        techCustomHeight.value = Math.max(160, Math.round(practiceIframeRef.value.clientHeight));
+        techDimensionDraft.value = { width: techCustomWidth.value, height: techCustomHeight.value };
+      }
+      techViewport.value = 'custom';
+    }
+    function techZoomPreview(delta) {
+      if (!Number.isFinite(delta)) return;
+      techCaptureViewport(); techPreviewZoom.value = Math.min(1.5, Math.max(0.1, Math.round((techPreviewZoom.value + delta) * 10) / 10));
+    }
+    function techFitPreview() {
+      techPreviewTab.value = 'result'; techCaptureViewport();
+      nextTick(() => {
+        const holder = document.querySelector('.beta-device-scroll');
+        if (!holder) return;
+        techPreviewZoom.value = Math.min(1.5, Math.max(0.1, Math.floor(Math.min(holder.clientWidth / techCustomWidth.value,
+          holder.clientHeight / techCustomHeight.value) * 100) / 100));
+      });
+    }
+    const techResizeLimits = { editor: [340, 650, 10], preview: [400, 740, 10], console: [100, 360, 10], width: [29, 44, 1] };
+    const techResizeRefs = { editor: techEditorHeight, preview: techPreviewHeight, console: techConsoleHeight, width: techEditorWidth };
+    function techResizeValue(kind, value) {
+      const limits = techResizeLimits[kind];
+      if (!limits || !Number.isFinite(value)) return;
+      techResizeRefs[kind].value = Math.min(limits[1], Math.max(limits[0], Math.round(value)));
+    }
+    let techDrag = null, techDragFrame = null;
+    function techBeginResize(event, kind) {
+      if (!techResizeLimits[kind] || event.button !== 0 || !event.isPrimary) return;
+      event.preventDefault();
+      techEndResize();
+      const grid = event.currentTarget.closest('.tech-main-grid');
+      techDrag = { kind, pointerId: event.pointerId, target: event.currentTarget, x: event.clientX, y: event.clientY,
+        initial: techResizeRefs[kind].value, width: grid?.clientWidth || 1, next: techResizeRefs[kind].value };
+      techDragging.value = kind;
+      event.currentTarget.setPointerCapture?.(event.pointerId);
+    }
+    function techMoveResize(event) {
+      if (!techDrag || event.pointerId !== techDrag.pointerId) return;
+      const drag = techDrag;
+      drag.next = drag.initial + (drag.kind === 'width' ? (event.clientX - drag.x) / drag.width * 100 : event.clientY - drag.y);
+      if (techDragFrame !== null) return;
+      techDragFrame = requestAnimationFrame(() => {
+        techDragFrame = null;
+        if (techDrag === drag) techResizeValue(drag.kind, drag.next);
+      });
+    }
+    function techEndResize(event) {
+      if (event && techDrag && event.pointerId !== undefined && event.pointerId !== techDrag.pointerId) return;
+      const drag = techDrag; techDrag = null; techDragging.value = '';
+      if (techDragFrame !== null) { cancelAnimationFrame(techDragFrame); techDragFrame = null; }
+      if (drag) {
+        techResizeValue(drag.kind, drag.next);
+        try { if (drag.target.hasPointerCapture?.(drag.pointerId)) drag.target.releasePointerCapture(drag.pointerId); } catch (_) {}
+      }
+    }
+    function techResizeKey(event, kind) {
+      const limits = techResizeLimits[kind];
+      if (!limits || event.altKey || event.ctrlKey || event.metaKey || event.isComposing) return;
+      let value = techResizeRefs[kind].value;
+      if (event.key === 'Home') value = limits[0];
+      else if (event.key === 'End') value = limits[1];
+      else if (['ArrowRight', 'ArrowDown'].includes(event.key)) value += limits[2];
+      else if (['ArrowLeft', 'ArrowUp'].includes(event.key)) value -= limits[2];
+      else return;
+      event.preventDefault(); event.stopPropagation(); techResizeValue(kind, value);
+    }
+    const techSelectedStage = ref('source');
+    const techStageExplanations = {
+      source: 'هذه نسخة المصدر التي أُرسلت آخر مرة، لا تحليلًا لأسطره. تشغيل المرجع لا يستبدل مسودة الدرس.',
+      sent: 'يُنشئ المشغّل مستندًا داخل iframe معزول بصلاحية allow-scripts فقط. لا ينفذ كودك في التطبيق الأم.',
+      ready: 'إشعار PREVIEW_READY يعني وصول جاهزية الإطار. لا يثبت صحة منطق البرنامج أو انتهاء جميع المؤقتات؛ الخطأ المبلغ يظل ظاهرًا.',
+      error: 'هذا الفرع يضيء فقط عند وصول EXECUTION_ERROR من الإطار المطابق. قد يصل خطأ بعد إشعار الجاهزية؛ ليس تحليلًا لشرط if/else أو مسار بديل مفترض.',
+      observation: 'نصوص وعدّادات DOM محدودة استلمناها من الإطار المطابق. ليست شجرة كاملة أو قيم متغيرات أو تتبع أسطر.'
+    };
+    const techStageExplanation = computed(() => techStageExplanations[techSelectedStage.value]);
+    function techSelectStage(stage) { if (Object.hasOwn(techStageExplanations, stage)) techSelectedStage.value = stage; }
+    // A bounded session journal of real attempts, separate from educational progress.
+    const techAttempts = ref([]);
+    const techActivityWindow = ref(10);
+    const techVisibleAttempts = computed(() => techAttempts.value.slice(-techActivityWindow.value));
+    const techActivity = computed(() => ({ total: techVisibleAttempts.value.length,
+      ready: techVisibleAttempts.value.filter(a => a.ready && !a.error).length,
+      errors: techVisibleAttempts.value.filter(a => a.error).length,
+      pending: techVisibleAttempts.value.filter(a => !a.ready && !a.error).length }));
+    const techReadyRatio = computed(() => techActivity.value.total ? Math.round(techActivity.value.ready / techActivity.value.total * 100) : 0);
+    const techAttemptChart = computed(() => {
+      let readyCount = 0;
+      const rows = techVisibleAttempts.value.map((attempt, index) => ({ ...attempt,
+        x: 30 + index * (520 / Math.max(1, techVisibleAttempts.value.length)),
+        index: index + 1, readyCount: (readyCount += attempt.ready && !attempt.error ? 1 : 0) }));
+      const maximum = Math.max(1, readyCount);
+      return { rows, maximum, width: Math.min(26, 210 / Math.max(1, rows.length)),
+        line: rows.map(row => (row.x + 12) + ',' + (144 - row.readyCount / maximum * 116)).join(' ') };
+    });
+    const techEventCells = computed(() => {
+      const events = techRunEvents.value.slice(-60);
+      return Array.from({ length: 60 }, (_, index) => events[index] || null);
+    });
+    function techInspectEvents() {
+      nextTick(() => {
+        const journal = document.querySelector('[data-testid="beta-events"]');
+        if (journal) { journal.open = true; journal.scrollIntoView({ block: 'nearest', behavior: 'auto' }); }
+      });
+    }
+    watch(techRunEvents, events => {
+      const event = events[events.length - 1];
+      if (!event?.runId) return;
+      if (event.type === 'submitted') techAttempts.value = [...techAttempts.value, {
+        id: event.runId, lessonId: event.lessonId, at: event.recordedAt, ready: false, error: false, stopped: false, message: ''
+      }].slice(-100);
+      else {
+        const attempt = techAttempts.value.find(a => a.id === event.runId);
+        if (!attempt) return;
+        if (event.type === 'preview_ready') attempt.ready = true;
+        if (event.type === 'execution_error') { attempt.error = true; attempt.message = event.detail; }
+        if (['stopped', 'invalidated'].includes(event.type)) attempt.stopped = true;
+      }
+    }, { flush: 'sync' });
     function techSetLanguage(language) {
       if (!['source', 'css', 'js'].includes(language)) return;
       techLanguage.value = language; autocompleteVisible.value = false;
@@ -2216,6 +2367,7 @@ const app = createApp({
         } else if (e.key === '?' && !editing && !e.ctrlKey && !e.metaKey && !e.altKey) {
           showShortcutsModal.value = !showShortcutsModal.value;
         } else if (e.key === 'Escape') {
+          document.querySelectorAll('.tech-simulator .beta-layout-menu[open], .tech-simulator .final-custom-dimensions[open], .tech-simulator .beta-shortcuts[open]').forEach(detail => { detail.open = false; });
           showShortcutsModal.value = false;
           showProgressModal.value = false;
           showLessonTimelineModal.value = false;
@@ -2230,6 +2382,7 @@ const app = createApp({
       const handleAudioVisibility = () => { if (document.visibilityState === 'hidden') techBeta.silence(); };
       document.addEventListener('visibilitychange', handleAudioVisibility);
       window.addEventListener('pagehide', techBeta.silence);
+      window.addEventListener('blur', techEndResize);
       if (storageWarnings.length) triggerToast(storageWarnings.join(' '), 'warning');
 
       // Auto initialize practice code for first lesson
@@ -2242,6 +2395,7 @@ const app = createApp({
         window.removeEventListener('message', handleWindowMessage);
         document.removeEventListener('visibilitychange', handleAudioVisibility);
         window.removeEventListener('pagehide', techBeta.silence);
+        window.removeEventListener('blur', techEndResize); techEndResize();
         if (clockInterval) clearInterval(clockInterval);
         if (debounceTimer) clearTimeout(debounceTimer);
         if (toastTimer) clearTimeout(toastTimer);
@@ -2258,6 +2412,10 @@ const app = createApp({
     return {
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
+      techCustomWidth, techCustomHeight, techPreviewZoom, techDimensionDraft, techDimensionError, techConsoleHeight, techCompactPanel, techDragging,
+      techPreviewCanvasStyle, techPreviewCarrierStyle, techSelectCompact, techSetViewport, techApplyDimensions, techZoomPreview, techFitPreview,
+      techBeginResize, techMoveResize, techEndResize, techResizeKey, techResizeValue, techSelectedStage, techSelectStage, techStageExplanation, techAttempts, techActivity,
+      techActivityWindow, techVisibleAttempts, techReadyRatio, techAttemptChart, techEventCells, techInspectEvents,
       techPreviewTab, techEditorView, techFocusPanel, techMotion, techSource, techEditorCode, techHighlightedCode, techSourceCSS, techStatusLabel, techRunReference, techRunDraft, techSyncEditorScroll, techJumpToScript, techToggleFocus, techPreviewKeydown,
       simulatorReferenceReading, simulatorExpandedPanel, simulatorEditorShare, toggleSimulatorPanel, simulatorStages,
       theme, setTheme, practiceSurface, openVisualSimulator, openTraining,
