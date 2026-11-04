@@ -1,0 +1,128 @@
+[
+  {
+    "command": [
+      "node",
+      "run_content_integrity_test.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final",
+    "status": "completed",
+    "exit_code": 1,
+    "seconds": 0.25,
+    "timestamp": "2026-10-31T13:19:10.604426+00:00",
+    "reported_ratios": [],
+    "pass_lines": 0,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_curriculum_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.3,
+    "timestamp": "2026-10-31T13:19:10.646231+00:00",
+    "reported_ratios": [
+      "15/15"
+    ],
+    "pass_lines": 0,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_data_safety_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 1.1,
+    "timestamp": "2026-10-31T13:19:11.709882+00:00",
+    "reported_ratios": [
+      "15/15"
+    ],
+    "pass_lines": 15,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_json_import_test.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 3.01,
+    "timestamp": "2026-10-31T13:19:13.662143+00:00",
+    "reported_ratios": [
+      "9/9"
+    ],
+    "pass_lines": 9,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_legacy_validator_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.19,
+    "timestamp": "2026-10-31T13:19:11.901027+00:00",
+    "reported_ratios": [
+      "10/10"
+    ],
+    "pass_lines": 10,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_preview_protocol_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.25,
+    "timestamp": "2026-10-31T13:19:12.148572+00:00",
+    "reported_ratios": [
+      "19/19"
+    ],
+    "pass_lines": 19,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_beta_unit_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.2,
+    "timestamp": "2026-10-31T13:19:12.345936+00:00",
+    "reported_ratios": [
+      "27/27"
+    ],
+    "pass_lines": 27,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_completion_unit_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.31,
+    "timestamp": "2026-10-31T13:19:12.657374+00:00",
+    "reported_ratios": [
+      "13/13"
+    ],
+    "pass_lines": 13,
+    "fail_lines": 0
+  }
+]

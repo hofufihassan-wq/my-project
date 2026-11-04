@@ -1,0 +1,7 @@
+PASS background palette changes actual background, color palette changes actual foreground
+PASS all four aspect ratios determine rendered geometry
+PASS backdrop-filter label emits valid CSS and actual blur changes
+PASS all 21 distinct native CSS controls have an accessible name
+PASS all animation choices change actual animation and reduced motion disables sustained motion
+PASS all eight cursor targets expose the intended native cursor on hover
+PASS user-select demo exposes native all/none CSS

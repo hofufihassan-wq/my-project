@@ -1,0 +1,6 @@
+
+> vuelexicon-pro@4.0.0 build:compiler
+> node scripts/build-sfc-compiler.cjs
+
+Local compiler built: 736961 bytes
+

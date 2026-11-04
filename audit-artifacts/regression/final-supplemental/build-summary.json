@@ -1,0 +1,29 @@
+[
+  {
+    "command": [
+      "npm",
+      "run",
+      "build:compiler"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final-build",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "build:css"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final-build",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "verify:assets"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-final-build",
+    "exit_code": 0
+  }
+]

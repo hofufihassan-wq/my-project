@@ -1,0 +1,14 @@
+PASS new ambience is opt-in silent and does not write either preference record on entry
+PASS ambient parser rejects invalid shape version volume and extra fields
+PASS enabling ambience leaves original alert preferences and unrelated user records byte-identical
+PASS persisted enabled ambience waits for a fresh trusted gesture after reload
+PASS repeated preparation and gain changes reuse a fixed ambient graph
+PASS muting alerts or zeroing their volume never stops ambience
+PASS zero ambient volume stops its graph while real error cues remain available
+PASS leaving simulator stops and disconnects all ambient resources without changing preference
+PASS corrupted ambience keeps an exact raw recovery before replacing defaults
+PASS failed recovery prevents every later overwrite of the original ambience record
+PASS transient ambient read failure protects the unknown original even after storage recovers
+PASS ambient setters reject invalid values without writing or creating contexts
+PASS rapid ambient toggling cleans every replaced source and leaves no graph on disable
+13/13

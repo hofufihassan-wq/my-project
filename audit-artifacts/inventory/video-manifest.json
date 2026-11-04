@@ -1,0 +1,26 @@
+{
+  "base": "3d4575aeae16c22b6932a6bac5b18a7a4f9cca37",
+  "timestamp": "2026-10-31T13:17:50.313Z",
+  "video": "videos/actual-content-errors-annotated.webm",
+  "annotation": "Red rings and auditor explanatory labels over actual Chromium screen recording; source unchanged.",
+  "steps": [
+    {
+      "term": "Blob / FileReader",
+      "note": "خطأ مثبت: زر المثال يبحث عن حقل ملف غير موجود",
+      "state": "error",
+      "text": "تعذر تشغيل المثال: خطأ في مثال Vue: Cannot read properties of null (reading 'addEventListener')\n\nBlob / FileReader\nتشغيل الدالة تفاعلياً"
+    },
+    {
+      "term": "computed()",
+      "note": "خطأ محتوى: تعريف computed ظاهر كنص في القالب ولا ينفّذ",
+      "state": "preview_ready",
+      "text": "const fullName = computed(() => `${first.value} ${last.value}`); // يتم التحديث فوراً في كل مكان يُعرض فيه fullName دون أي تدخل يدوي!"
+    },
+    {
+      "term": "async / await",
+      "note": "حد تعليمي: رسالة نجاح ثابتة، لكن fetchUserData لم تستدعَ",
+      "state": "preview_ready",
+      "text": "async / await\nتشغيل الدالة تفاعلياً\n\nالنتيجة: تم التنفيذ بنجاح ✓"
+    }
+  ]
+}

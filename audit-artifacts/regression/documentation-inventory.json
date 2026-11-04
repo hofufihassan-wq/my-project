@@ -1,0 +1,68 @@
+[
+  {
+    "file": "README.md",
+    "exists": true,
+    "bytes": 12407,
+    "missing_relative_links": []
+  },
+  {
+    "file": "PROJECT_STATUS_AR.md",
+    "exists": true,
+    "bytes": 78170,
+    "missing_relative_links": []
+  },
+  {
+    "file": "VUELEXICON_MASTER_PLAN_AR.md",
+    "exists": true,
+    "bytes": 42978,
+    "missing_relative_links": []
+  },
+  {
+    "file": "PHASE0A_REPORT.md",
+    "exists": true,
+    "bytes": 17297,
+    "missing_relative_links": []
+  },
+  {
+    "file": "PHASE0B_VALIDATOR_NOTES.md",
+    "exists": true,
+    "bytes": 4872,
+    "missing_relative_links": []
+  },
+  {
+    "file": "PHASE4_STABILITY_REPORT_AR.md",
+    "exists": true,
+    "bytes": 24800,
+    "missing_relative_links": []
+  },
+  {
+    "file": "PHASE5B_VISUAL_REPORT_AR.md",
+    "exists": true,
+    "bytes": 13751,
+    "missing_relative_links": []
+  },
+  {
+    "file": "PHASE5B1_VISUAL_CORRECTION_AR.md",
+    "exists": true,
+    "bytes": 13404,
+    "missing_relative_links": []
+  },
+  {
+    "file": "SIMULATOR_BETA_REPORT_AR.md",
+    "exists": true,
+    "bytes": 20458,
+    "missing_relative_links": []
+  },
+  {
+    "file": "SIMULATOR_COMPLETION_REPORT_AR.md",
+    "exists": true,
+    "bytes": 23072,
+    "missing_relative_links": []
+  },
+  {
+    "file": "SIMULATOR_FINAL_GLASS_REPORT_AR.md",
+    "exists": true,
+    "bytes": 28227,
+    "missing_relative_links": []
+  }
+]

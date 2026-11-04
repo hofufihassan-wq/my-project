@@ -1,0 +1,250 @@
+{
+  "source": "after-stable/results.json",
+  "note": "The replay clone intentionally disables transition/animation to compare final property values. Metadata of those disabled effects cannot be compared to the original; raw observations are retained. This exclusion applies only to harness-induced clone metadata, not to product values. Animation behavior is tested separately in fix-verification.json.",
+  "checked": 409,
+  "css_supported": 409,
+  "computed_equal": 409,
+  "excluded_harness_effect_metadata": [
+    {
+      "term": "css-transform_transition",
+      "requested_value": "-180",
+      "property": "transition-behavior",
+      "valid": true,
+      "original": "normal",
+      "reapplied": "normal"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "-180",
+      "property": "transition-duration",
+      "valid": true,
+      "original": "1e-05s",
+      "reapplied": "1e-05s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "-180",
+      "property": "transition-timing-function",
+      "valid": true,
+      "original": "ease-out",
+      "reapplied": "ease"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "-180",
+      "property": "transition-delay",
+      "valid": true,
+      "original": "0s",
+      "reapplied": "0s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "-180",
+      "property": "transition-property",
+      "valid": true,
+      "original": "transform",
+      "reapplied": "none"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0",
+      "property": "transition-behavior",
+      "valid": true,
+      "original": "normal",
+      "reapplied": "normal"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0",
+      "property": "transition-duration",
+      "valid": true,
+      "original": "1e-05s",
+      "reapplied": "1e-05s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0",
+      "property": "transition-timing-function",
+      "valid": true,
+      "original": "ease-out",
+      "reapplied": "ease"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0",
+      "property": "transition-delay",
+      "valid": true,
+      "original": "0s",
+      "reapplied": "0s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0",
+      "property": "transition-property",
+      "valid": true,
+      "original": "transform",
+      "reapplied": "none"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "180",
+      "property": "transition-behavior",
+      "valid": true,
+      "original": "normal",
+      "reapplied": "normal"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "180",
+      "property": "transition-duration",
+      "valid": true,
+      "original": "1e-05s",
+      "reapplied": "1e-05s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "180",
+      "property": "transition-timing-function",
+      "valid": true,
+      "original": "ease-out",
+      "reapplied": "ease"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "180",
+      "property": "transition-delay",
+      "valid": true,
+      "original": "0s",
+      "reapplied": "0s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "180",
+      "property": "transition-property",
+      "valid": true,
+      "original": "transform",
+      "reapplied": "none"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0.5",
+      "property": "transition-behavior",
+      "valid": true,
+      "original": "normal",
+      "reapplied": "normal"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0.5",
+      "property": "transition-duration",
+      "valid": true,
+      "original": "1e-05s",
+      "reapplied": "1e-05s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0.5",
+      "property": "transition-timing-function",
+      "valid": true,
+      "original": "ease-out",
+      "reapplied": "ease"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0.5",
+      "property": "transition-delay",
+      "valid": true,
+      "original": "0s",
+      "reapplied": "0s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "0.5",
+      "property": "transition-property",
+      "valid": true,
+      "original": "transform",
+      "reapplied": "none"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1",
+      "property": "transition-behavior",
+      "valid": true,
+      "original": "normal",
+      "reapplied": "normal"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1",
+      "property": "transition-duration",
+      "valid": true,
+      "original": "1e-05s",
+      "reapplied": "1e-05s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1",
+      "property": "transition-timing-function",
+      "valid": true,
+      "original": "ease-out",
+      "reapplied": "ease"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1",
+      "property": "transition-delay",
+      "valid": true,
+      "original": "0s",
+      "reapplied": "0s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1",
+      "property": "transition-property",
+      "valid": true,
+      "original": "transform",
+      "reapplied": "none"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1.5",
+      "property": "transition-behavior",
+      "valid": true,
+      "original": "normal",
+      "reapplied": "normal"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1.5",
+      "property": "transition-duration",
+      "valid": true,
+      "original": "1e-05s",
+      "reapplied": "1e-05s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1.5",
+      "property": "transition-timing-function",
+      "valid": true,
+      "original": "ease-out",
+      "reapplied": "ease"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1.5",
+      "property": "transition-delay",
+      "valid": true,
+      "original": "0s",
+      "reapplied": "0s"
+    },
+    {
+      "term": "css-transform_transition",
+      "requested_value": "1.5",
+      "property": "transition-property",
+      "valid": true,
+      "original": "transform",
+      "reapplied": "none"
+    }
+  ],
+  "failures": []
+}

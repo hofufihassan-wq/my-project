@@ -1,0 +1,494 @@
+{
+  "timestamp": "2026-10-31T13:21:32.267920+00:00",
+  "passed": 45,
+  "total": 46,
+  "results": [
+    {
+      "file": "app.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/app.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "audit_engine_browser.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/audit_engine_browser.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "audit_engine_security_browser.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/audit_engine_security_browser.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "audit_engine_unicode_test.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/audit_engine_unicode_test.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "dictionary-preview.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/dictionary-preview.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "legacy-validator-guards.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/legacy-validator-guards.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "lexicon-data.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/lexicon-data.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "practice-curriculum.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/practice-curriculum.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "preview-runner.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/preview-runner.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "progress-data.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/progress-data.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_content_integrity_test.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_content_integrity_test.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_curriculum_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_curriculum_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_data_safety_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_data_safety_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_dictionary_inventory.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_dictionary_inventory.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_dictionary_preview_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_dictionary_preview_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_hands_on_verification.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_hands_on_verification.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_json_import_test.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_json_import_test.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_legacy_validator_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_legacy_validator_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_phase0a_browser_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_phase0a_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_phase5b1_browser_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_phase5b1_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_phase5b_browser_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_phase5b_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_preview_protocol_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_preview_protocol_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_runtime_assets_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_runtime_assets_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_ambient_storage_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_ambient_storage_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_beta_browser_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_beta_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_beta_extra_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_beta_extra_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_beta_unit_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_beta_unit_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_browser_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_completion_browser_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_completion_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_completion_unit_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_completion_unit_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_final_browser_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_final_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_simulator_reference_review.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_simulator_reference_review.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "run_stability_browser_tests.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/run_stability_browser_tests.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "scripts/build-sfc-compiler.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/scripts/build-sfc-compiler.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "scripts/capture-simulator-beta.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/scripts/capture-simulator-beta.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "scripts/capture-simulator-completion.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/scripts/capture-simulator-completion.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "scripts/capture-simulator-final-screenshots.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/scripts/capture-simulator-final-screenshots.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "scripts/capture-simulator-final.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/scripts/capture-simulator-final.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "scripts/simulator-completion-test-helpers.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/scripts/simulator-completion-test-helpers.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "simulator-beta.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/simulator-beta.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "simulator-guides.js",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/simulator-guides.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "tailwind.config.cjs",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/vuelexicon-audit-final/tailwind.config.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "scripts/assets.py",
+      "command": "ast.parse",
+      "exit_code": 0
+    },
+    {
+      "file": "scripts/run-simulator-completion-regression.py",
+      "command": "ast.parse",
+      "exit_code": 0
+    },
+    {
+      "file": "scripts/run-simulator-final-regression.py",
+      "command": "ast.parse",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/assets.py",
+        "verify"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/vuelexicon-audit-final/scripts/assets.py\", line 69, in <module>\n    raise ValueError('CSS input changed; run npm run build:css: ' + name)\nValueError: CSS input changed; run npm run build:css: index.html\n"
+    }
+  ]
+}

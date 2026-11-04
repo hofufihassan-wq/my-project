@@ -1,0 +1,242 @@
+[
+  {
+    "file": "simulator-guides.js",
+    "bytes": 8966,
+    "lines": 83
+  },
+  {
+    "file": "simulator-beta.js",
+    "bytes": 27417,
+    "lines": 476
+  },
+  {
+    "file": "run_stability_browser_tests.js",
+    "bytes": 17826,
+    "lines": 216
+  },
+  {
+    "file": "run_simulator_reference_review.js",
+    "bytes": 19530,
+    "lines": 237
+  },
+  {
+    "file": "run_simulator_final_browser_tests.js",
+    "bytes": 23638,
+    "lines": 39
+  },
+  {
+    "file": "run_simulator_completion_unit_tests.js",
+    "bytes": 9143,
+    "lines": 120
+  },
+  {
+    "file": "run_simulator_completion_browser_tests.js",
+    "bytes": 18626,
+    "lines": 53
+  },
+  {
+    "file": "run_simulator_browser_tests.js",
+    "bytes": 26100,
+    "lines": 394
+  },
+  {
+    "file": "run_simulator_beta_unit_tests.js",
+    "bytes": 12126,
+    "lines": 45
+  },
+  {
+    "file": "run_simulator_beta_extra_tests.js",
+    "bytes": 9122,
+    "lines": 25
+  },
+  {
+    "file": "run_simulator_beta_browser_tests.js",
+    "bytes": 31725,
+    "lines": 102
+  },
+  {
+    "file": "run_simulator_ambient_storage_tests.js",
+    "bytes": 3619,
+    "lines": 9
+  },
+  {
+    "file": "run_runtime_assets_tests.js",
+    "bytes": 9713,
+    "lines": 140
+  },
+  {
+    "file": "run_preview_protocol_tests.js",
+    "bytes": 10513,
+    "lines": 175
+  },
+  {
+    "file": "run_phase5b_browser_tests.js",
+    "bytes": 20943,
+    "lines": 309
+  },
+  {
+    "file": "run_phase5b1_browser_tests.js",
+    "bytes": 29671,
+    "lines": 405
+  },
+  {
+    "file": "run_phase0a_browser_tests.js",
+    "bytes": 13062,
+    "lines": 176
+  },
+  {
+    "file": "run_legacy_validator_tests.js",
+    "bytes": 2759,
+    "lines": 31
+  },
+  {
+    "file": "run_json_import_test.js",
+    "bytes": 3789,
+    "lines": 107
+  },
+  {
+    "file": "run_hands_on_verification.js",
+    "bytes": 18467,
+    "lines": 416
+  },
+  {
+    "file": "run_dictionary_preview_tests.js",
+    "bytes": 18255,
+    "lines": 235
+  },
+  {
+    "file": "run_dictionary_inventory.js",
+    "bytes": 4615,
+    "lines": 54
+  },
+  {
+    "file": "run_data_safety_tests.js",
+    "bytes": 10659,
+    "lines": 175
+  },
+  {
+    "file": "run_curriculum_tests.js",
+    "bytes": 1534,
+    "lines": 44
+  },
+  {
+    "file": "run_content_integrity_test.js",
+    "bytes": 1607,
+    "lines": 25
+  },
+  {
+    "file": "progress-data.js",
+    "bytes": 5757,
+    "lines": 104
+  },
+  {
+    "file": "preview-runner.js",
+    "bytes": 11256,
+    "lines": 201
+  },
+  {
+    "file": "practice-curriculum.js",
+    "bytes": 102280,
+    "lines": 2002
+  },
+  {
+    "file": "lexicon-data.js",
+    "bytes": 542932,
+    "lines": 7928
+  },
+  {
+    "file": "legacy-validator-guards.js",
+    "bytes": 2288,
+    "lines": 40
+  },
+  {
+    "file": "dictionary-preview.js",
+    "bytes": 14143,
+    "lines": 237
+  },
+  {
+    "file": "app.js",
+    "bytes": 131464,
+    "lines": 2688
+  },
+  {
+    "file": "styles.css",
+    "bytes": 5907,
+    "lines": 250
+  },
+  {
+    "file": "simulator-reference.css",
+    "bytes": 56217,
+    "lines": 563
+  },
+  {
+    "file": "simulator-final.css",
+    "bytes": 36467,
+    "lines": 348
+  },
+  {
+    "file": "simulator-correction.css",
+    "bytes": 17115,
+    "lines": 136
+  },
+  {
+    "file": "identity.css",
+    "bytes": 35875,
+    "lines": 414
+  },
+  {
+    "file": "dictionary-correction.css",
+    "bytes": 18739,
+    "lines": 173
+  },
+  {
+    "file": "index.html",
+    "bytes": 203479,
+    "lines": 2429
+  },
+  {
+    "file": "scripts/simulator-completion-test-helpers.cjs",
+    "bytes": 3139,
+    "lines": 12
+  },
+  {
+    "file": "scripts/run-simulator-final-regression.py",
+    "bytes": 4637,
+    "lines": 66
+  },
+  {
+    "file": "scripts/run-simulator-completion-regression.py",
+    "bytes": 4384,
+    "lines": 64
+  },
+  {
+    "file": "scripts/capture-simulator-final.cjs",
+    "bytes": 9288,
+    "lines": 22
+  },
+  {
+    "file": "scripts/capture-simulator-final-screenshots.cjs",
+    "bytes": 5688,
+    "lines": 18
+  },
+  {
+    "file": "scripts/capture-simulator-completion.cjs",
+    "bytes": 7594,
+    "lines": 17
+  },
+  {
+    "file": "scripts/capture-simulator-beta.cjs",
+    "bytes": 7344,
+    "lines": 25
+  },
+  {
+    "file": "scripts/build-sfc-compiler.cjs",
+    "bytes": 1436,
+    "lines": 20
+  },
+  {
+    "file": "scripts/assets.py",
+    "bytes": 3787,
+    "lines": 72
+  }
+]

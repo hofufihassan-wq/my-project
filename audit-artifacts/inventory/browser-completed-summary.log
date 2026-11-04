@@ -1,0 +1,25 @@
+Derived completion summary from browser-inventory.json, not a replacement for raw stdout.
+{
+  "base": "3d4575aeae16c22b6932a6bac5b18a7a4f9cca37",
+  "timestamp": "2026-10-31T13:20:53.270Z",
+  "counts": {
+    "terms": 180,
+    "sources": 360,
+    "actualDomSnapshots": 360,
+    "attemptedControlInteractions": 88,
+    "harnessErrors": 0,
+    "timeouts": 0,
+    "initialDefinitionsRead": 180,
+    "secondarySourceReviews": 74,
+    "correctedTerms": 12,
+    "correctedStrings": 13
+  },
+  "statuses": {
+    "يعمل": 46,
+    "يحتاج سياقًا": 219,
+    "غير مدعوم": 53,
+    "يحتوي خطأً": 42
+  },
+  "limits": "Works is scoped to observable behavior described per row. No claim of complete semantic correctness; declaration-only examples and all context-dependent features are not marked works. Reference URLs supplied for180; only saved official source documents fetched. No context fixtures inserted."
+}
+Storage unchanged: True

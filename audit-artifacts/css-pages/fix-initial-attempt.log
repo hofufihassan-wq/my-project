@@ -1,0 +1,19 @@
+FAIL background palette changes actual background, color palette changes actual foreground Expected values to be strictly equal:
++ actual - expected
+
++ 'rgb(56, 189, 248)'
+- 'rgb(236, 72, 153)'
+       ^
+
+PASS all four aspect ratios determine rendered geometry
+FAIL backdrop-filter label emits valid CSS and actual blur changes Expected values to be strictly equal:
++ actual - expected
+
++ 'blur(12px)'
+- 'blur(17px)'
+         ^
+
+PASS all 21 distinct native CSS controls have an accessible name
+PASS all animation choices change actual animation and reduced motion disables sustained motion
+PASS all eight cursor targets expose the intended native cursor on hover
+PASS user-select demo exposes native all/none CSS

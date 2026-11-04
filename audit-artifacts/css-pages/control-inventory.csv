@@ -1,0 +1,65 @@
+﻿term_id,term,previewType,kind,label,min,max,step,tested_values
+css-animation_keyframes,animation & @keyframes,css_animation,button,pulse,,,,pulse
+css-animation_keyframes,animation & @keyframes,css_animation,button,bounce,,,,bounce
+css-animation_keyframes,animation & @keyframes,css_animation,button,spin,,,,spin
+css-animation_keyframes,animation & @keyframes,css_animation,button,ping,,,,ping
+css-aspect-ratio,aspect-ratio,css_aspect_ratio,button,16/9,,,,16/9
+css-aspect-ratio,aspect-ratio,css_aspect_ratio,button,4/3,,,,4/3
+css-aspect-ratio,aspect-ratio,css_aspect_ratio,button,1/1,,,,1/1
+css-aspect-ratio,aspect-ratio,css_aspect_ratio,button,21/9,,,,21/9
+css-background,background,css_background,input/select,محدد الألوان الحي:#00DC82,,,,#ff0000 | #000000 | #ffffff
+css-background,background,css_background,button,,,,,
+css-background,background,css_background,button,,,,,
+css-background,background,css_background,button,,,,,
+css-background,background,css_background,button,,,,,
+css-background,background,css_background,button,,,,,
+css-background,background,css_background,button,,,,,
+css-border_border-radius,border & border-radius,css_border_radius,input/select,الاستدارة (border-radius: 16px):,0,40,,0 | 20 | 40
+css-border_border-radius,border & border-radius,css_border_radius,input/select,سُمك الحد (border-width: 2px):,1,8,,1 | 4.5 | 8
+css-border_border-radius,border & border-radius,css_border_radius,input/select,نمط الحد (border-style):soliddasheddotteddouble,,,,solid | dashed | dotted | double
+css-box-shadow,box-shadow,css_box_shadow,input/select,X Offset: 0px,-30,30,,-30 | 0 | 30
+css-box-shadow,box-shadow,css_box_shadow,input/select,Y Offset: 8px,-30,30,,-30 | 0 | 30
+css-box-shadow,box-shadow,css_box_shadow,input/select,Blur: 24px,0,50,,0 | 25 | 50
+css-box-shadow,box-shadow,css_box_shadow,input/select,Spread: -4px,-10,20,,-10 | 5 | 20
+css-color,color,css_color,input/select,محدد الألوان الحي:#FFFFFF,,,,#ff0000 | #000000 | #ffffff
+css-color,color,css_color,button,,,,,
+css-color,color,css_color,button,,,,,
+css-color,color,css_color,button,,,,,
+css-color,color,css_color,button,,,,,
+css-color,color,css_color,button,,,,,
+css-color,color,css_color,button,,,,,
+css-filter_blur_drop-shadow,"filter (blur, drop-shadow)",css_filter,input/select,الضبابية: 0px,0,15,,0 | 7.5 | 15
+css-filter_blur_drop-shadow,"filter (blur, drop-shadow)",css_filter,input/select,السطوع: 110%,30,200,,30 | 115 | 200
+css-filter_blur_drop-shadow,"filter (blur, drop-shadow)",css_filter,input/select,التباين: 100%,30,200,,30 | 115 | 200
+css-filter_blur_drop-shadow,"filter (blur, drop-shadow)",css_filter,input/select,أبيض وأسود: 0%,0,100,,0 | 50 | 100
+css-flex_flexbox,flex (Flexbox),css_flexbox,input/select,المحاذاة الرئيسية (justify-content):flex-startcenterflex-endspace-betweenspace-around,,,,flex-start | center | flex-end | space-between | space-around
+css-flex_flexbox,flex (Flexbox),css_flexbox,input/select,المحاذاة العرضية (align-items):centerflex-startflex-endstretch,,,,center | flex-start | flex-end | stretch
+css-flex_flexbox,flex (Flexbox),css_flexbox,button,row,,,,row
+css-flex_flexbox,flex (Flexbox),css_flexbox,button,column,,,,column
+css-flex_flexbox,flex (Flexbox),css_flexbox,button,row-reverse,,,,row-reverse
+css-gap,gap,css_gap,input/select,المسافة (gap: 12px):,4,24,,4 | 14 | 24
+css-gap,gap,css_gap,button,2 cols,,,,2 cols
+css-gap,gap,css_gap,button,3 cols,,,,3 cols
+css-gap,gap,css_gap,button,4 cols,,,,4 cols
+css-grid_css_grid,grid (CSS Grid),css_grid,input/select,المسافة (gap: 24px):,4,24,,4 | 14 | 24
+css-grid_css_grid,grid (CSS Grid),css_grid,button,2 cols,,,,2 cols
+css-grid_css_grid,grid (CSS Grid),css_grid,button,3 cols,,,,3 cols
+css-grid_css_grid,grid (CSS Grid),css_grid,button,4 cols,,,,4 cols
+css-justify-content_align-items,justify-content & align-items,css_alignment,input/select,المحاذاة الرئيسية (justify-content):flex-startcenterflex-endspace-betweenspace-around,,,,flex-start | center | flex-end | space-between | space-around
+css-justify-content_align-items,justify-content & align-items,css_alignment,input/select,المحاذاة العرضية (align-items):centerflex-startflex-endstretch,,,,center | flex-start | flex-end | stretch
+css-justify-content_align-items,justify-content & align-items,css_alignment,button,row,,,,row
+css-justify-content_align-items,justify-content & align-items,css_alignment,button,column,,,,column
+css-justify-content_align-items,justify-content & align-items,css_alignment,button,row-reverse,,,,row-reverse
+css-margin_padding,margin & padding,css_box_model,input/select,الهامش الخارجي (Margin: 16px):,0,32,,0 | 16 | 32
+css-margin_padding,margin & padding,css_box_model,input/select,الحشو الداخلي (Padding: 16px):,4,32,,4 | 18 | 32
+css-opacity_backdrop-filter,opacity & backdrop-filter,css_opacity_blur,input/select,نسبة الشفافية (opacity: 85%):,10,100,,10 | 55 | 100
+css-opacity_backdrop-filter,opacity & backdrop-filter,css_opacity_blur,input/select,الضبابية الزجاجية (backdrop-blur: 12px):,0,30,,0 | 15 | 30
+css-overflow_overflow-x_y,overflow / overflow-x / y,css_overflow,button,auto,,,,auto
+css-overflow_overflow-x_y,overflow / overflow-x / y,css_overflow,button,hidden,,,,hidden
+css-overflow_overflow-x_y,overflow / overflow-x / y,css_overflow,button,scroll,,,,scroll
+css-overflow_overflow-x_y,overflow / overflow-x / y,css_overflow,button,visible,,,,visible
+css-transform_transition,transform & transition,css_transform,input/select,الدوران (rotate: 12deg):,-180,180,,-180 | 0 | 180
+css-transform_transition,transform & transition,css_transform,input/select,التكبير (scale: 1.05x):,0.5,1.5,0.05,0.5 | 1 | 1.5
+css-z-index,z-index,css_zindex,button,بطاقة رقم 1,,,,بطاقة رقم 1
+css-z-index,z-index,css_zindex,button,بطاقة رقم 2,,,,بطاقة رقم 2
+css-z-index,z-index,css_zindex,button,بطاقة رقم 3,,,,بطاقة رقم 3
