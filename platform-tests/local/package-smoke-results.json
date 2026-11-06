@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-04T17:54:43.306Z",
+  "archive": "/workspace/downloads/VLex-Pro-local-20261104-175252-4ee969f2.zip",
+  "extracted": "/tmp/VLex local package cxspnq",
+  "passed": 2,
+  "total": 2,
+  "results": [
+    {
+      "name": "extract exact ZIP and verify every file hash",
+      "passed": true
+    },
+    {
+      "name": "launch extracted folder with spaces and render dictionary",
+      "passed": true
+    }
+  ]
+}

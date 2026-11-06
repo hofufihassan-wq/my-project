@@ -1,0 +1,5 @@
+PASS health identifies exact loopback origin and same-folder reuse
+PASS runtime HTML and MIME headers load, source/private paths are denied
+PASS actual launcher serves dictionary and English/Arabic search
+PASS favorite survives full browser close and local server stop/restart
+PASS package contains runtime, originals and matching checksums without private source

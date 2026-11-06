@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-11-04T17:55:23.329Z",
+  "passed": 2,
+  "total": 13,
+  "results": [
+    {
+      "name": "actual component schemas survive backup roundtrip without dropping fields",
+      "passed": true
+    },
+    {
+      "name": "older partial sections retain defaults and no feature requires new metadata",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n\nundefined !== {}\n\n    at /workspace/my-progect/platform-tests/store/schema.cjs:22:9\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:20:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+    },
+    {
+      "name": "falsy and object organizer strings cannot bypass validation",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception: notes: [{\"id\":\"n\",\"title\":\"N\",\"body\":{}}]\n    at rejects (/workspace/my-progect/platform-tests/store/schema.cjs:12:67)\n    at /workspace/my-progect/platform-tests/store/schema.cjs:25:2\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:24:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+    },
+    {
+      "name": "organizer impossible dates times and typed timestamp fields are rejected",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception: tasks: [{\"id\":\"task-id\",\"title\":\"مهمة\",\"status\":\"todo\",\"due\":null,\"projectId\":\"project-id\",\"createdAt\":\"2026-11-04T12:30:00.000Z\",\"updatedAt\":\"2026-11-04T12:30:00.000Z\",\"archived\":false}]\n    at rejects (/workspace/my-progect/platform-tests/store/schema.cjs:12:67)\n    at /workspace/my-progect/platform-tests/store/schema.cjs:31:78\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:30:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+    },
+    {
+      "name": "course maps refuse arrays null and primitive containers",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception: course: {\"answers\":null}\n    at rejects (/workspace/my-progect/platform-tests/store/schema.cjs:12:67)\n    at /workspace/my-progect/platform-tests/store/schema.cjs:37:107\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:36:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+    },
+    {
+      "name": "course answer records are checked without assuming lesson ids",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception: course: {\"answers\":{\"future-safe-id\":null}}\n    at rejects (/workspace/my-progect/platform-tests/store/schema.cjs:12:67)\n    at /workspace/my-progect/platform-tests/store/schema.cjs:41:161\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:39:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+    },
+    {
+      "name": "review entries check calendar timestamps and finite interval bounds",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception: course: {\"reviews\":{\"id\":null}}\n    at rejects (/workspace/my-progect/platform-tests/store/schema.cjs:12:67)\n    at /workspace/my-progect/platform-tests/store/schema.cjs:45:135\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:44:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+    },
+    {
+      "name": "course drafts project checklists and history reject malformed entries",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception: course: {\"drafts\":{\"id\":{}}}\n    at rejects (/workspace/my-progect/platform-tests/store/schema.cjs:12:67)\n    at /workspace/my-progect/platform-tests/store/schema.cjs:48:2\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:47:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+    },
+    {
+      "name": "editor source fields are exact strings and flags are real booleans",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception: cssLab: {\"html\":null}\n    at rejects (/workspace/my-progect/platform-tests/store/schema.cjs:12:67)\n    at /workspace/my-progect/platform-tests/store/schema.cjs:51:42\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:50:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+    },
+    {
+      "name": "CSS controls refuse invalid known property types and preserve optional controls",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception: cssLab: {\"controls\":{\"background\":\"#ecfdf5\",\"foreground\":\"#12312b\",\"display\":\"flex\",\"direction\":\"row\",\"justify\":\"flex-start\",\"align\":\"stretch\",\"wrap\":\"wrap\",\"columns\":2,\"margin\":{\"value\":16,\"unit\":\"px\"},\"padding\":{\"value\":24,\"unit\":\"px\"},\"fontSize\":{\"value\":18,\"unit\":\"px\"},\"width\":{\"value\":480,\"unit\":\"px\"},\"height\":{\"value\":240,\"unit\":\"px\"},\"gap\":{\"value\":\"12\",\"unit\":\"px\"},\"radius\":{\"value\":12,\"unit\":\"px\"}}}\n    at rejects (/workspace/my-progect/platform-tests/store/schema.cjs:12:67)\n    at /workspace/my-progect/platform-tests/store/schema.cjs:55:2\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:54:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+    },
+    {
+      "name": "malformed backup rejection is atomic and creates no recovery side effects",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Missing expected exception.\n    at /workspace/my-progect/platform-tests/store/schema.cjs:60:136\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:58:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+    },
+    {
+      "name": "invalid stored shapes protect and preserve exact original on load",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ready'\n- 'protected'\n\n    at /workspace/my-progect/platform-tests/store/schema.cjs:65:9\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:63:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+    },
+    {
+      "name": "harmless unknown optional metadata remains lossless while unsafe keys fail",
+      "passed": true
+    }
+  ]
+}

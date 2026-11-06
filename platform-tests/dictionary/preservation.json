@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-11-04T17:57:42.931Z",
+  "terms": 180,
+  "uniqueIds": 180,
+  "legacyLessons": 15,
+  "changedExampleSources": [
+    {
+      "id": "html-canvas",
+      "field": 11
+    }
+  ],
+  "backupsUnchanged": true
+}

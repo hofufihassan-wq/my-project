@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-11-04T17:50:46.301Z",
+  "platform": "linux",
+  "windowsCmdAvailable": false,
+  "origin": "http://127.0.0.1:8091",
+  "passed": 4,
+  "total": 5,
+  "results": [
+    {
+      "name": "health identifies exact loopback origin and same-folder reuse",
+      "passed": true
+    },
+    {
+      "name": "runtime HTML and MIME headers load, source/private paths are denied",
+      "passed": true
+    },
+    {
+      "name": "actual launcher serves dictionary and English/Arabic search",
+      "passed": true
+    },
+    {
+      "name": "favorite survives full browser close and local server stop/restart",
+      "passed": false,
+      "error": "locator.click: Error: strict mode violation: getByTitle('إضافة للمفضلة', { exact: true }) resolved to 181 elements:\n    1) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka getByRole('button', { name: '★' }).nth(2)\n    2) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka getByRole('button', { name: '★' }).nth(3)\n    3) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka getByRole('button', { name: '★' }).nth(4)\n    4) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka getByRole('button', { name: '★' }).nth(5)\n    5) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka getByRole('button', { name: '★', exact: true }).nth(4)\n    6) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka getByRole('button', { name: '★', exact: true }).nth(5)\n    7) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka locator('div:nth-child(7) > .flex.items-center.gap-1\\\\.5 > .text-xs.p-1')\n    8) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka locator('div:nth-child(8) > .flex.items-center.gap-1\\\\.5 > .text-xs.p-1')\n    9) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka locator('div:nth-child(9) > .flex.items-center.gap-1\\\\.5 > .text-xs.p-1')\n    10) <button title=\"إضافة للمفضلة\" class=\"text-xs p-1 hover:scale-125 transition-transform\">…</button> aka locator('div:nth-child(10) > .flex.items-center.gap-1\\\\.5 > .text-xs.p-1')\n    ...\n\nCall log:\n\u001b[2m  - waiting for getByTitle('إضافة للمفضلة', { exact: true })\u001b[22m\n\n    at /workspace/my-progect/platform-tests/local/browser.cjs:16:143\n    at test (/workspace/my-progect/platform-tests/local/browser.cjs:5:40)\n    at /workspace/my-progect/platform-tests/local/browser.cjs:16:7"
+    },
+    {
+      "name": "package contains runtime, originals and matching checksums without private source",
+      "passed": true
+    }
+  ]
+}

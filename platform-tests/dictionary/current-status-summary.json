@@ -1,0 +1,15 @@
+{
+  "base": "3d4575aeae16c22b6932a6bac5b18a7a4f9cca37",
+  "historicalObservedAt": "2026-10-31",
+  "canvasPriorStatus": "يحتوي خطأً",
+  "canvasVerifiedAt": "2026-11-04",
+  "counts": {
+    "يحتاج سياقًا": 219,
+    "يعمل": 47,
+    "يحتوي خطأً": 41,
+    "غير مدعوم": 53
+  },
+  "terms": 180,
+  "sources": 360,
+  "note": "359 classifications carried from actual pinned-source audit; source fingerprints unchanged. Canvas rerun and corrected; do not describe359 as rerun today."
+}

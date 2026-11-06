@@ -1,0 +1,38 @@
+PASS initial local HTML, CSS and live Flex preview are real
+PASS margin / px minimum midpoint maximum preserve valid replay CSS
+PASS margin / rem minimum midpoint maximum preserve valid replay CSS
+PASS margin / % minimum midpoint maximum preserve valid replay CSS
+PASS padding / px minimum midpoint maximum preserve valid replay CSS
+PASS padding / rem minimum midpoint maximum preserve valid replay CSS
+PASS padding / % minimum midpoint maximum preserve valid replay CSS
+PASS fontSize / px minimum midpoint maximum preserve valid replay CSS
+PASS fontSize / rem minimum midpoint maximum preserve valid replay CSS
+PASS fontSize / % minimum midpoint maximum preserve valid replay CSS
+PASS width / px minimum midpoint maximum preserve valid replay CSS
+PASS width / rem minimum midpoint maximum preserve valid replay CSS
+PASS width / % minimum midpoint maximum preserve valid replay CSS
+PASS height / px minimum midpoint maximum preserve valid replay CSS
+PASS height / rem minimum midpoint maximum preserve valid replay CSS
+PASS height / % minimum midpoint maximum preserve valid replay CSS
+PASS gap / px minimum midpoint maximum preserve valid replay CSS
+PASS gap / rem minimum midpoint maximum preserve valid replay CSS
+PASS gap / % minimum midpoint maximum preserve valid replay CSS
+PASS radius / px minimum midpoint maximum preserve valid replay CSS
+PASS radius / rem minimum midpoint maximum preserve valid replay CSS
+PASS radius / % minimum midpoint maximum preserve valid replay CSS
+PASS all display options reach actual computed style
+PASS all direction options reach actual computed style
+PASS all justify options reach actual computed style
+PASS all align options reach actual computed style
+PASS all wrap options reach actual computed style
+PASS grid columns 1 and 6 and colors affect actual target
+PASS custom CSS outside managed rule survives repeated control changes exactly
+PASS manual mode keeps current preview until explicit apply
+PASS invalid control leaves CSS unchanged and shows meaningful error
+PASS copy does not claim success on native clipboard rejection
+PASS CSS download contains actual editor source
+PASS native storage survives close and reopen with exact HTML/CSS
+PASS imported section updates editors without automatic preview execution
+PASS script/event handlers and network are blocked in opaque sandbox
+PASS HTML links and refresh cannot navigate preview while editor source is preserved
+PASS mobile layout keeps editors and controls inside document width

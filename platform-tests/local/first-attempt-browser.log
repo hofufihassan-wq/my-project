@@ -1,0 +1,20 @@
+PASS health identifies exact loopback origin and same-folder reuse
+PASS runtime HTML and MIME headers load, source/private paths are denied
+PASS actual launcher serves dictionary and English/Arabic search
+FAIL favorite survives full browser close and local server stop/restart locator.click: Error: strict mode violation: getByTitle('إضافة للمفضلة', { exact: true }) resolved to 181 elements:
+    1) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka getByRole('button', { name: '★' }).nth(2)
+    2) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka getByRole('button', { name: '★' }).nth(3)
+    3) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka getByRole('button', { name: '★' }).nth(4)
+    4) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka getByRole('button', { name: '★' }).nth(5)
+    5) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka getByRole('button', { name: '★', exact: true }).nth(4)
+    6) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka getByRole('button', { name: '★', exact: true }).nth(5)
+    7) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka locator('div:nth-child(7) > .flex.items-center.gap-1\\.5 > .text-xs.p-1')
+    8) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka locator('div:nth-child(8) > .flex.items-center.gap-1\\.5 > .text-xs.p-1')
+    9) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka locator('div:nth-child(9) > .flex.items-center.gap-1\\.5 > .text-xs.p-1')
+    10) <button title="إضافة للمفضلة" class="text-xs p-1 hover:scale-125 transition-transform">…</button> aka locator('div:nth-child(10) > .flex.items-center.gap-1\\.5 > .text-xs.p-1')
+    ...
+
+Call log:
+[2m  - waiting for getByTitle('إضافة للمفضلة', { exact: true })[22m
+
+PASS package contains runtime, originals and matching checksums without private source

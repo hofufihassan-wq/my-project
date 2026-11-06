@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-11-04T17:57:46.505Z",
+  "findings": [
+    {
+      "issue": "snapshot invokes object getters",
+      "observed": "log READS 1",
+      "baseline": 0,
+      "confirmed": true
+    },
+    {
+      "issue": "continuous stepping inserts await changing microtask order",
+      "observed": "log ORDER 1",
+      "baseline": 0,
+      "confirmed": true
+    },
+    {
+      "issue": "AsyncFunction arguments exposes capture callback",
+      "observed": "بعد السطر 1: notDeclaredInUserCode = 999بعد السطر 1: ",
+      "confirmed": true
+    },
+    {
+      "issue": "worker user event listener receives control nonce and forges log",
+      "observed": "log FORGED_FROM_NONCE",
+      "confirmed": true
+    }
+  ]
+}

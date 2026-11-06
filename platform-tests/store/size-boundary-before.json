@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-11-04T18:00:39.722Z",
+  "passed": 15,
+  "total": 16,
+  "results": [
+    {
+      "name": "actual component schemas survive backup roundtrip without dropping fields",
+      "passed": true
+    },
+    {
+      "name": "older partial sections retain defaults and no feature requires new metadata",
+      "passed": true
+    },
+    {
+      "name": "falsy and object organizer strings cannot bypass validation",
+      "passed": true
+    },
+    {
+      "name": "organizer impossible dates times and typed timestamp fields are rejected",
+      "passed": true
+    },
+    {
+      "name": "course maps refuse arrays null and primitive containers",
+      "passed": true
+    },
+    {
+      "name": "course answer records are checked without assuming lesson ids",
+      "passed": true
+    },
+    {
+      "name": "review entries check calendar timestamps and finite interval bounds",
+      "passed": true
+    },
+    {
+      "name": "course drafts project checklists and history reject malformed entries",
+      "passed": true
+    },
+    {
+      "name": "editor source fields are exact strings and flags are real booleans",
+      "passed": true
+    },
+    {
+      "name": "CSS controls refuse invalid known property types and preserve optional controls",
+      "passed": true
+    },
+    {
+      "name": "malformed backup rejection is atomic and creates no recovery side effects",
+      "passed": true
+    },
+    {
+      "name": "invalid live edit cannot poison saving mode or erase the last valid draft",
+      "passed": true
+    },
+    {
+      "name": "rejected payload keeps protected and memory sessions in their existing modes",
+      "passed": true
+    },
+    {
+      "name": "invalid stored shapes protect and preserve exact original on load",
+      "passed": true
+    },
+    {
+      "name": "harmless unknown optional metadata remains lossless while unsafe keys fail",
+      "passed": true
+    },
+    {
+      "name": "near-limit saved data always fits its own importable backup envelope",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at /workspace/my-progect/platform-tests/store/schema.cjs:83:9\n    at test (/workspace/my-progect/platform-tests/store/schema.cjs:7:28)\n    at Object.<anonymous> (/workspace/my-progect/platform-tests/store/schema.cjs:81:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+    }
+  ]
+}

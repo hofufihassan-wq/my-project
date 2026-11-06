@@ -4936,7 +4936,7 @@ window.RAW_LEXICON_TUPLES = [
       "تطبيق الفلاتر وقص وضغط الصور محلياً داخل المتصفح"
     ],
     "html_canvas",
-    "<canvas id=\"myCanvas\" width=\"300\" height=\"150\" class=\"border border-emerald-500 rounded\"></canvas>\n\n<script>\nconst canvas = document.getElementById('myCanvas');\nif (canvas) {\n  const ctx = canvas.getContext('2d');\n  ctx.fillStyle = '#00DC82';\n  ctx.fillRect(20, 20, 100, 80);\n}\n<\\/script>",
+    "<canvas id=\"myCanvas\" width=\"300\" height=\"150\" class=\"border border-emerald-500 rounded\"></canvas>\n\n<script>\nconst canvas = document.getElementById('myCanvas');\nif (canvas) {\n  const ctx = canvas.getContext('2d');\n  ctx.fillStyle = '#00DC82';\n  ctx.fillRect(20, 20, 100, 80);\n}\n</script>",
     "مقارنة بين استخدام التاق داخل مكون Vue 3 واستخدامه كعنصر HTML5 تقليدي نقي",
     "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas",
     [

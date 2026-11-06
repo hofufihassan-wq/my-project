@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-11-04T17:52:32.186Z",
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "name": "all16 lessons are open with16 fixed unique IDs",
+      "passed": true
+    },
+    {
+      "name": "wrong answer gives alternate explanation without locking lesson",
+      "passed": true
+    },
+    {
+      "name": "correct answer and completion retained, previous mistake remains",
+      "passed": true
+    },
+    {
+      "name": "draft is stored and practice event exports exact text only on click",
+      "passed": true
+    },
+    {
+      "name": "real page close/reopen preserves draft and mistake history on same origin",
+      "passed": true
+    },
+    {
+      "name": "four project stages retain typed drafts/self-checks and never claim auto correctness",
+      "passed": true
+    },
+    {
+      "name": "review list comes from actual mistake records with alternate explanation",
+      "passed": true
+    },
+    {
+      "name": "all16 example sources render actual expected output offline in opaque iframe",
+      "passed": true
+    },
+    {
+      "name": "no unexpected parent or child page errors",
+      "passed": true
+    },
+    {
+      "name": "390px layout has no document overflow and real controls remain usable",
+      "passed": true
+    }
+  ]
+}

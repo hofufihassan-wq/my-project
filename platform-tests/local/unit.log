@@ -1,0 +1,10 @@
+test_exact_health_contract (__main__.PublicFileBoundary.test_exact_health_contract) ... ok
+test_path_traversal_and_unusual_paths (__main__.PublicFileBoundary.test_path_traversal_and_unusual_paths) ... ok
+test_private_and_non_runtime_files (__main__.PublicFileBoundary.test_private_and_non_runtime_files) ... ok
+test_runtime_files (__main__.PublicFileBoundary.test_runtime_files) ... ok
+test_windows_launcher_crlf_and_version_guard (__main__.PublicFileBoundary.test_windows_launcher_crlf_and_version_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+OK

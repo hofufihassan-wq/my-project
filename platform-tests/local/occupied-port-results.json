@@ -1,0 +1,8 @@
+[
+  {
+    "name": "unrelated occupied port is preserved and no alternate origin is opened",
+    "passed": true,
+    "exit": 2,
+    "stderr": "ERROR: Port 8091 is already in use or unavailable. Stop its existing server, then try again.\nThe port will not change automatically because your browser data belongs to this origin.\n"
+  }
+]

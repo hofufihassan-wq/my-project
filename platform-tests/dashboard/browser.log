@@ -1,0 +1,11 @@
+PASS empty tasks are real empty state; no seeded records
+PASS create daily task persists exact date title status
+PASS edit and move task using native controls
+PASS archive is reversible and keeps record bytes unrelated fields
+PASS notes escape markup and retain exact multiline text
+PASS project creation links task without losing existing task
+PASS calendar monthly navigation selected day and local event add edit archive restore
+PASS dashboard shows actual task stats and ticking clock
+PASS close/reopen same browser profile retains tasks notes projects and calendar events
+PASS desktop and390px viewport have no page horizontal overflow
+PASS no uncaught browser errors

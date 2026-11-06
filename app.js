@@ -8,6 +8,7 @@
 const { createApp, ref, computed, watch, onMounted, onUnmounted, nextTick } = Vue;
 
 const app = createApp({
+  components: Object.fromEntries((window.VLexPlatformComponents || []).map(entry => [entry.name, entry.component])),
   setup() {
 
     // ==========================================
@@ -232,7 +233,10 @@ const app = createApp({
     const appMode = ref('home');
     const practiceSurface = ref('simulator');
     // Theme selection is session-only in 5B; existing persisted records are untouched.
-    const theme = ref('petroleum');
+    const theme = ref(window.VLexLearningStore?.getSection('preferences', {}).theme || 'petroleum');
+    const learningRevision = ref(0), explainSource = ref(''), explainKey = ref(0);
+    const learningStatus = computed(() => { learningRevision.value; return window.VLexLearningStore?.status() || { mode: 'protected', message: 'التخزين الجديد غير متاح', persistent: false }; });
+    let learningUnsubscribe = null;
     // Vue compiles the mount element's contents; sync attributes on the mount itself.
     watch([theme, appMode, practiceSurface], ([appearance, mode, surface]) => {
       const root = document.getElementById('app');
@@ -241,20 +245,24 @@ const app = createApp({
     }, { immediate: true, flush: 'sync' });
     const foundationSection = ref('projects');
     const foundationSections = [
-      { id: 'projects', title: 'المشاريع', icon: 'folder', description: 'مساحة مشاريعك وروابطها. إدارة المشاريع وحفظها ضمن دفعة التنظيم القادمة.' },
-      { id: 'kanban', title: 'لوحة المهام', icon: 'grid', description: 'أساس بصري للوحة Kanban. إنشاء المهام وربطها بالمشاريع لم يُنفذ بعد.' },
-      { id: 'notes', title: 'الملاحظات', icon: 'note', description: 'مساحة الملاحظات المخططة. المحرر والحفظ والاسترجاع ضمن دفعة التنظيم القادمة.' },
-      { id: 'calendar', title: 'التقويم', icon: 'calendar', description: 'تنظيم أنشطة التعلم في الدفعة القادمة. لا توجد أحداث أو مواعيد محفوظة حاليًا.' },
-      { id: 'explain', title: 'شرح الأكواد', icon: 'code', description: 'الشرح العام سطرًا بسطر لم يُنفذ بعد. شروح المصطلحات ومسرح التنفيذ التعليمي متاحان داخل القاموس.' }
+      { id: 'projects', title: 'المشاريع', icon: 'folder', description: 'مشاريعك المحلية ومهامها، مع مسار عملي لبناء مدير مهام.' },
+      { id: 'kanban', title: 'لوحة المهام', icon: 'grid', description: 'رتب مهامك بين قيد الانتظار والعمل والمنجزة.' },
+      { id: 'notes', title: 'الملاحظات', icon: 'note', description: 'اكتب ملاحظاتك وعدّلها واحتفظ بها محليًا.' },
+      { id: 'calendar', title: 'التقويم', icon: 'calendar', description: 'مواعيدك وتواريخ مهامك، دون اشتراك أو مزامنة خارجية.' },
+      { id: 'explain', title: 'شرح الأكواد', icon: 'code', description: 'شرح محلي للبنية والكلمات والرموز المعروفة، مع توضيح الحدود.' }
     ];
     const activeFoundation = computed(() => foundationSections.find(s => s.id === foundationSection.value));
     function openFoundation(id) {
+      if (id === 'explain') { openLearning('explain'); return; }
       if (!foundationSections.some(s => s.id === id)) return;
       foundationSection.value = id;
       setAppMode('foundation');
     }
     function setTheme(value) {
-      if (['petroleum', 'light', 'purple'].includes(value)) theme.value = value;
+      if (!['petroleum', 'light', 'purple', 'green', 'glass'].includes(value)) return;
+      theme.value = value;
+      const store = window.VLexLearningStore;
+      if (store && !store.setSection('preferences', { ...store.getSection('preferences', {}), theme: value })) triggerToast(store.status().message, 'warning');
     }
     function openVisualSimulator() {
       setAppMode('practice');
@@ -322,6 +330,16 @@ const app = createApp({
     const dictionaryEditorCode = computed(() => Object.hasOwn(dictionaryEdits.value, dictionaryEditorKey.value)
       ? dictionaryEdits.value[dictionaryEditorKey.value] : currentCode.value);
     const dictionaryEditorChanged = computed(() => dictionaryEditorCode.value !== currentCode.value);
+    const dictionaryAudit = computed(() => {
+      const code = dictionaryEditorCode.value;
+      const record = window.VLexDictionaryAudit?.terms[selectedTerm.value?.id]?.[activeCodeFormat.value === 'vanilla' ? 'vanilla' : 'vue'];
+      if (!record) return { status: 'لم يُتحقق منه بعد', reason: 'شغّل المثال واقرأ نتيجته الفعلية؛ الجاهزية ليست إثباتًا للفهم أو الصحة.' };
+      let fingerprint = 2166136261;
+      for (let i = 0; i < code.length; i++) fingerprint = Math.imul(fingerprint ^ code.charCodeAt(i), 16777619);
+      if ((fingerprint >>> 0).toString(16) !== record.fingerprint) return { status: 'نسخة معدلة', reason: 'تغير المصدر منذ الفحص المسجل؛ لا تنطبق نتيجة النسخة الأصلية تلقائيًا.' };
+      return record;
+    });
+
     function updateDictionaryEditor(event) {
       dictionaryEdits.value = { ...dictionaryEdits.value, [dictionaryEditorKey.value]: event.target.value };
     }
@@ -749,7 +767,7 @@ const app = createApp({
     }
 
     function setAppMode(mode) {
-      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation'].includes(mode)) return;
+      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation', 'explain', 'course', 'cssLab', 'jsLab'].includes(mode)) return;
       if (mode === 'training' || mode === 'practice' || mode === 'quiz') {
         const surface = mode === 'training' ? 'training' : 'simulator';
         if (practiceSurface.value !== surface) stopPracticeExecution();
@@ -2363,10 +2381,63 @@ const app = createApp({
     });
     function openDashboardTerm(term) { setAppMode('lexicon'); selectTerm(term); }
 
+    function openLearning(mode, source) {
+      if (!['explain', 'course', 'cssLab', 'jsLab'].includes(mode)) return;
+      if (mode === 'explain' && typeof source === 'string') { explainSource.value = source; explainKey.value++; }
+      setAppMode(mode);
+    }
+    function openLearningTerm(id) {
+      const term = rawLexiconData.value.find(item => item.id === id);
+      if (term) { setAppMode('lexicon'); selectTerm(term); }
+    }
+    function practiceFromLearning(payload) {
+      if (!payload || typeof payload.code !== 'string' || window.VueLexiconData.bytes(payload.code) > window.VueLexiconData.MAX_DRAFT_BYTES) {
+        triggerToast('مصدر التجربة غير صالح أو كبير جدًا؛ لم تتغير مسوداتك.', 'error'); return;
+      }
+      openSimulator(); stopPracticeExecution(); practiceAutoRun.value = false; selectTrack('js', true);
+      simulatorExternalExample.value = { title: 'تجربة مسار التعلّم', code: payload.code, type: payload.type === 'vue' ? 'vue' : 'html', legacyClosers: false };
+      simulatorReferenceVisible.value = true;
+      triggerToast('تجربتك محفوظة في المثال المرجعي؛ اقرأها ثم اضغط تشغيل المرجع لتجربتها. مسودة الدرس لم تتغير.', 'info');
+    }
+    function navigateLearningSection(section) {
+      if (['projects', 'kanban', 'notes', 'calendar'].includes(section)) openFoundation(section);
+      else if (section === 'tasks') openFoundation('kanban');
+      else openLearning('course');
+    }
+    function exportLearningData() {
+      const store = window.VLexLearningStore;
+      if (!store) return;
+      const blob = new Blob([store.exportData()], { type: 'application/json' });
+      const url = URL.createObjectURL(blob), link = document.createElement('a');
+      link.href = url; link.download = 'vlex-learning-' + new Date().toISOString().slice(0, 10) + '.json'; link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      triggerToast('نُزّلت بيانات التعلّم والتنظيم. بيانات القاموس والدروس القديمة لها زر تصدير مستقل.', 'success');
+    }
+    let learningImportSequence = 0;
+    async function importLearningData(event) {
+      const requestId = ++learningImportSequence;
+      const file = event.target?.files?.[0]; if (!file) return;
+      try {
+        if (file.size > 2 * 1024 * 1024) throw new Error('الملف أكبر من 2 MiB');
+        const text = await file.text();
+        if (requestId !== learningImportSequence) return;
+        window.VLexLearningStore.parseBackup(text);
+        if (!window.confirm('استبدال بيانات التعلّم والتنظيم بالنسخة المختارة؟ سنحفظ نسخة استرجاع من الأصل. لا تتغير بيانات القاموس أو مسودات الدروس القديمة.')) return;
+        window.VLexLearningStore.importData(text);
+        triggerToast('تم استيراد بيانات التعلّم وحفظ نسخة استرجاع؛ لم يُشغّل أي كود.', 'success');
+      } catch (error) { triggerToast('تعذر الاستيراد: ' + error.message, 'error'); }
+      finally { event.target.value = ''; }
+    }
+
     // ==========================================
     // 17. Lifecycle & Listeners Cleanup (P0 Safe)
     // ==========================================
     onMounted(() => {
+      if (window.VLexLearningStore) learningUnsubscribe = window.VLexLearningStore.subscribe(() => {
+        learningRevision.value++;
+        const restoredTheme = window.VLexLearningStore.getSection('preferences', {}).theme;
+        if (['petroleum', 'light', 'purple', 'green', 'glass'].includes(restoredTheme)) theme.value = restoredTheme;
+      });
       const handleGlobalKeys = (e) => {
         if (e.isComposing || e.keyCode === 229) return;
         if (appMode.value === 'practice' && practiceSurface.value === 'simulator') {
@@ -2407,6 +2478,7 @@ const app = createApp({
       }
 
       onUnmounted(() => {
+        learningUnsubscribe?.();
         window.removeEventListener('keydown', handleGlobalKeys);
         window.removeEventListener('message', handleWindowMessage);
         document.removeEventListener('visibilitychange', handleAudioVisibility);
@@ -2426,6 +2498,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
+      learningStatus, explainSource, explainKey, openLearning, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
       techCustomWidth, techCustomHeight, techPreviewZoom, techDimensionDraft, techDimensionError, techConsoleHeight, techCompactPanel, techDragging,
@@ -2488,7 +2561,7 @@ const app = createApp({
 
       dictionaryPreviewRef, dictionaryPreviewKey, dictionaryPreviewState, dictionaryPreviewLogs, dictionaryPreviewDoc,
       dictionaryPreviewSession, dictionaryPreviewStale, runDictionaryPreview, stopDictionaryPreview,
-      handleDictionaryTabKeydown, dictionaryTab, dictionaryEditorCode, dictionaryEditorChanged, updateDictionaryEditor, resetDictionaryEditor,
+      handleDictionaryTabKeydown, dictionaryTab, dictionaryAudit, dictionaryEditorCode, dictionaryEditorChanged, updateDictionaryEditor, resetDictionaryEditor,
       // Code Formatting & Highlight
       activeCodeFormat,
       setCodeFormat,

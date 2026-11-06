@@ -1,0 +1,756 @@
+{
+  "timestamp": "2026-11-04T17:54:52.795Z",
+  "browser": "Chromium real local component+learning-store",
+  "passed": 38,
+  "total": 38,
+  "results": [
+    {
+      "name": "initial local HTML, CSS and live Flex preview are real",
+      "passed": true,
+      "detail": {
+        "width": "480px",
+        "display": "flex"
+      }
+    },
+    {
+      "name": "margin / px minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": -64,
+          "unit": "px",
+          "computed": "-64px",
+          "replay": "-64px",
+          "supported": true
+        },
+        {
+          "value": 28,
+          "unit": "px",
+          "computed": "28px",
+          "replay": "28px",
+          "supported": true
+        },
+        {
+          "value": 120,
+          "unit": "px",
+          "computed": "120px",
+          "replay": "120px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "margin / rem minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": -4,
+          "unit": "rem",
+          "computed": "-64px",
+          "replay": "-64px",
+          "supported": true
+        },
+        {
+          "value": 2,
+          "unit": "rem",
+          "computed": "32px",
+          "replay": "32px",
+          "supported": true
+        },
+        {
+          "value": 8,
+          "unit": "rem",
+          "computed": "128px",
+          "replay": "128px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "margin / % minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": -10,
+          "unit": "%",
+          "computed": "-106.594px",
+          "replay": "-106.594px",
+          "supported": true
+        },
+        {
+          "value": 5,
+          "unit": "%",
+          "computed": "53.2969px",
+          "replay": "53.2969px",
+          "supported": true
+        },
+        {
+          "value": 20,
+          "unit": "%",
+          "computed": "213.188px",
+          "replay": "213.188px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "padding / px minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "px",
+          "computed": "0px",
+          "replay": "0px",
+          "supported": true
+        },
+        {
+          "value": 60,
+          "unit": "px",
+          "computed": "60px",
+          "replay": "60px",
+          "supported": true
+        },
+        {
+          "value": 120,
+          "unit": "px",
+          "computed": "120px",
+          "replay": "120px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "padding / rem minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "rem",
+          "computed": "0px",
+          "replay": "0px",
+          "supported": true
+        },
+        {
+          "value": 4,
+          "unit": "rem",
+          "computed": "64px",
+          "replay": "64px",
+          "supported": true
+        },
+        {
+          "value": 8,
+          "unit": "rem",
+          "computed": "128px",
+          "replay": "128px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "padding / % minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "%",
+          "computed": "0px",
+          "replay": "0px",
+          "supported": true
+        },
+        {
+          "value": 10,
+          "unit": "%",
+          "computed": "106.594px",
+          "replay": "106.594px",
+          "supported": true
+        },
+        {
+          "value": 20,
+          "unit": "%",
+          "computed": "213.188px",
+          "replay": "213.188px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "fontSize / px minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 8,
+          "unit": "px",
+          "computed": "8px",
+          "replay": "8px",
+          "supported": true
+        },
+        {
+          "value": 40,
+          "unit": "px",
+          "computed": "40px",
+          "replay": "40px",
+          "supported": true
+        },
+        {
+          "value": 72,
+          "unit": "px",
+          "computed": "72px",
+          "replay": "72px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "fontSize / rem minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0.5,
+          "unit": "rem",
+          "computed": "8px",
+          "replay": "8px",
+          "supported": true
+        },
+        {
+          "value": 2.25,
+          "unit": "rem",
+          "computed": "36px",
+          "replay": "36px",
+          "supported": true
+        },
+        {
+          "value": 4,
+          "unit": "rem",
+          "computed": "64px",
+          "replay": "64px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "fontSize / % minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 50,
+          "unit": "%",
+          "computed": "8px",
+          "replay": "8px",
+          "supported": true
+        },
+        {
+          "value": 175,
+          "unit": "%",
+          "computed": "28px",
+          "replay": "28px",
+          "supported": true
+        },
+        {
+          "value": 300,
+          "unit": "%",
+          "computed": "48px",
+          "replay": "48px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "width / px minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 120,
+          "unit": "px",
+          "computed": "426.375px",
+          "replay": "426.375px",
+          "supported": true
+        },
+        {
+          "value": 660,
+          "unit": "px",
+          "computed": "660px",
+          "replay": "660px",
+          "supported": true
+        },
+        {
+          "value": 1200,
+          "unit": "px",
+          "computed": "1200px",
+          "replay": "1200px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "width / rem minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 8,
+          "unit": "rem",
+          "computed": "426.375px",
+          "replay": "426.375px",
+          "supported": true
+        },
+        {
+          "value": 41.5,
+          "unit": "rem",
+          "computed": "664px",
+          "replay": "664px",
+          "supported": true
+        },
+        {
+          "value": 75,
+          "unit": "rem",
+          "computed": "1200px",
+          "replay": "1200px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "width / % minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 10,
+          "unit": "%",
+          "computed": "426.375px",
+          "replay": "426.375px",
+          "supported": true
+        },
+        {
+          "value": 55,
+          "unit": "%",
+          "computed": "586.297px",
+          "replay": "586.297px",
+          "supported": true
+        },
+        {
+          "value": 100,
+          "unit": "%",
+          "computed": "1066px",
+          "replay": "1066px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "height / px minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 100,
+          "unit": "px",
+          "computed": "426.375px",
+          "replay": "426.375px",
+          "supported": true
+        },
+        {
+          "value": 550,
+          "unit": "px",
+          "computed": "550px",
+          "replay": "550px",
+          "supported": true
+        },
+        {
+          "value": 1000,
+          "unit": "px",
+          "computed": "1000px",
+          "replay": "1000px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "height / rem minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 6,
+          "unit": "rem",
+          "computed": "426.375px",
+          "replay": "426.375px",
+          "supported": true
+        },
+        {
+          "value": 33,
+          "unit": "rem",
+          "computed": "528px",
+          "replay": "528px",
+          "supported": true
+        },
+        {
+          "value": 60,
+          "unit": "rem",
+          "computed": "960px",
+          "replay": "960px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "height / % minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 10,
+          "unit": "%",
+          "computed": "700.375px",
+          "replay": "700.375px",
+          "supported": true
+        },
+        {
+          "value": 55,
+          "unit": "%",
+          "computed": "700.375px",
+          "replay": "700.375px",
+          "supported": true
+        },
+        {
+          "value": 100,
+          "unit": "%",
+          "computed": "700.375px",
+          "replay": "700.375px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "gap / px minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "px",
+          "computed": "0px",
+          "replay": "0px",
+          "supported": true
+        },
+        {
+          "value": 40,
+          "unit": "px",
+          "computed": "40px",
+          "replay": "40px",
+          "supported": true
+        },
+        {
+          "value": 80,
+          "unit": "px",
+          "computed": "80px",
+          "replay": "80px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "gap / rem minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "rem",
+          "computed": "0px",
+          "replay": "0px",
+          "supported": true
+        },
+        {
+          "value": 2.5,
+          "unit": "rem",
+          "computed": "40px",
+          "replay": "40px",
+          "supported": true
+        },
+        {
+          "value": 5,
+          "unit": "rem",
+          "computed": "80px",
+          "replay": "80px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "gap / % minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "%",
+          "computed": "0%",
+          "replay": "0%",
+          "supported": true
+        },
+        {
+          "value": 10,
+          "unit": "%",
+          "computed": "10%",
+          "replay": "10%",
+          "supported": true
+        },
+        {
+          "value": 20,
+          "unit": "%",
+          "computed": "20%",
+          "replay": "20%",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "radius / px minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "px",
+          "computed": "0px",
+          "replay": "0px",
+          "supported": true
+        },
+        {
+          "value": 60,
+          "unit": "px",
+          "computed": "60px",
+          "replay": "60px",
+          "supported": true
+        },
+        {
+          "value": 120,
+          "unit": "px",
+          "computed": "120px",
+          "replay": "120px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "radius / rem minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "rem",
+          "computed": "0px",
+          "replay": "0px",
+          "supported": true
+        },
+        {
+          "value": 4,
+          "unit": "rem",
+          "computed": "64px",
+          "replay": "64px",
+          "supported": true
+        },
+        {
+          "value": 8,
+          "unit": "rem",
+          "computed": "128px",
+          "replay": "128px",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "radius / % minimum midpoint maximum preserve valid replay CSS",
+      "passed": true,
+      "detail": [
+        {
+          "value": 0,
+          "unit": "%",
+          "computed": "0%",
+          "replay": "0%",
+          "supported": true
+        },
+        {
+          "value": 25,
+          "unit": "%",
+          "computed": "25%",
+          "replay": "25%",
+          "supported": true
+        },
+        {
+          "value": 50,
+          "unit": "%",
+          "computed": "50%",
+          "replay": "50%",
+          "supported": true
+        }
+      ]
+    },
+    {
+      "name": "all display options reach actual computed style",
+      "passed": true,
+      "detail": [
+        {
+          "value": "flex",
+          "actual": "flex"
+        },
+        {
+          "value": "grid",
+          "actual": "grid"
+        },
+        {
+          "value": "block",
+          "actual": "block"
+        }
+      ]
+    },
+    {
+      "name": "all direction options reach actual computed style",
+      "passed": true,
+      "detail": [
+        {
+          "value": "row",
+          "actual": "row"
+        },
+        {
+          "value": "column",
+          "actual": "column"
+        },
+        {
+          "value": "row-reverse",
+          "actual": "row-reverse"
+        },
+        {
+          "value": "column-reverse",
+          "actual": "column-reverse"
+        }
+      ]
+    },
+    {
+      "name": "all justify options reach actual computed style",
+      "passed": true,
+      "detail": [
+        {
+          "value": "flex-start",
+          "actual": "flex-start"
+        },
+        {
+          "value": "center",
+          "actual": "center"
+        },
+        {
+          "value": "flex-end",
+          "actual": "flex-end"
+        },
+        {
+          "value": "space-between",
+          "actual": "space-between"
+        },
+        {
+          "value": "space-around",
+          "actual": "space-around"
+        },
+        {
+          "value": "space-evenly",
+          "actual": "space-evenly"
+        }
+      ]
+    },
+    {
+      "name": "all align options reach actual computed style",
+      "passed": true,
+      "detail": [
+        {
+          "value": "stretch",
+          "actual": "stretch"
+        },
+        {
+          "value": "flex-start",
+          "actual": "flex-start"
+        },
+        {
+          "value": "center",
+          "actual": "center"
+        },
+        {
+          "value": "flex-end",
+          "actual": "flex-end"
+        },
+        {
+          "value": "baseline",
+          "actual": "baseline"
+        }
+      ]
+    },
+    {
+      "name": "all wrap options reach actual computed style",
+      "passed": true,
+      "detail": [
+        {
+          "value": "wrap",
+          "actual": "wrap"
+        },
+        {
+          "value": "nowrap",
+          "actual": "nowrap"
+        },
+        {
+          "value": "wrap-reverse",
+          "actual": "wrap-reverse"
+        }
+      ]
+    },
+    {
+      "name": "grid columns 1 and 6 and colors affect actual target",
+      "passed": true,
+      "detail": [
+        "639.625px",
+        "0px 0px 0px 0px 0px 0px"
+      ]
+    },
+    {
+      "name": "custom CSS outside managed rule survives repeated control changes exactly",
+      "passed": true
+    },
+    {
+      "name": "manual mode keeps current preview until explicit apply",
+      "passed": true
+    },
+    {
+      "name": "invalid control leaves CSS unchanged and shows meaningful error",
+      "passed": true
+    },
+    {
+      "name": "copy does not claim success on native clipboard rejection",
+      "passed": true
+    },
+    {
+      "name": "CSS download contains actual editor source",
+      "passed": true,
+      "detail": "vlex-css-lab.css"
+    },
+    {
+      "name": "native storage survives close and reopen with exact HTML/CSS",
+      "passed": true,
+      "detail": {
+        "htmlCharacters": 166,
+        "cssCharacters": 787
+      }
+    },
+    {
+      "name": "imported section updates editors without automatic preview execution",
+      "passed": true
+    },
+    {
+      "name": "script/event handlers and network are blocked in opaque sandbox",
+      "passed": true
+    },
+    {
+      "name": "HTML links and refresh cannot navigate preview while editor source is preserved",
+      "passed": true
+    },
+    {
+      "name": "mobile layout keeps editors and controls inside document width",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    }
+  ],
+  "errors": [],
+  "network": []
+}
