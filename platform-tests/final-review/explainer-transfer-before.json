@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-11-06T08:56:03.381Z",
+  "sourceRoot": "/workspace/my-progect",
+  "passed": 0,
+  "total": 1,
+  "results": [
+    {
+      "name": "manual explanation source transfer never overrides later saved draft on return",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'const transferred=1;'\n- 'const userDraft=2;'\n         ^\n\n    at /workspace/my-progect/platform-tests/final-review/explainer-transfer-regression.cjs:14:12",
+      "observed": {
+        "editor": "const transferred=1;",
+        "stored": "const userDraft=2;",
+        "automatic": false
+      }
+    }
+  ]
+}

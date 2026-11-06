@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-11-06T08:47:52.500Z",
+  "passed": 21,
+  "total": 21,
+  "results": [
+    {
+      "name": "html-accessible-feedback actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "html-native-validation actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "html-details-disclosure actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "html-table-relations actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "css-grid-minmax actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "css-flex-min-width actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "css-custom-properties-clamp actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "css-transition-reduced-motion actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "js-closure-counters actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "js-async-error-handling actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "js-reduce-summary actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "js-event-delegation actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "vue-computed-filter actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "vue-watch-side-effect actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "vue-props-emits actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "vue-keyed-component-state actual DOM and behavior",
+      "passed": true
+    },
+    {
+      "name": "responsive grid at390px becomes one column without overflow",
+      "passed": true
+    },
+    {
+      "name": "reduced motion disables displacement and transition while preserving state",
+      "passed": true
+    },
+    {
+      "name": "all32lessons append to real component and advanced source opens without autoexecution",
+      "passed": true
+    },
+    {
+      "name": "390px course remains usable with advanced lesson selected",
+      "passed": true
+    },
+    {
+      "name": "no external requests or unexpected errors in actual examples",
+      "passed": true
+    }
+  ]
+}

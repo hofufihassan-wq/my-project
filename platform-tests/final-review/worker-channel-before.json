@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-11-06T08:53:04.928Z",
+  "sourceRoot": "/tmp/vlex-review-worker-before",
+  "passed": 1,
+  "total": 2,
+  "results": [
+    {
+      "name": "nested bootstrap clone cannot forge log or an existing declared variable",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: log NESTED_NONCE_LEAK\nlog FORGED_PRIVATE_CHANNEL\nlog NESTED_NONCE_LEAK\nlog FORGED_PRIVATE_CHANNEL\nlog NESTED_NONCE_LEAK\nlog FORGED_PRIVATE_CHANNEL\nlog NESTED_NONCE_LEAK\nlog FORGED_PRIVATE_CHANNEL\nlog NESTED_NONCE_LEAK\nlog FORGED_PRIVATE_CHANNEL\n    at /workspace/my-progect/platform-tests/final-review/worker-channel-regression.cjs:61:5\n    at async test (/workspace/my-progect/platform-tests/final-review/worker-channel-regression.cjs:19:26)\n    at async /workspace/my-progect/platform-tests/final-review/worker-channel-regression.cjs:40:3"
+    },
+    {
+      "name": "normal console and observation survive private telemetry; global spoof ignored",
+      "passed": true,
+      "observed": {
+        "log": "log ACTUAL 9"
+      }
+    }
+  ]
+}

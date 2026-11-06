@@ -1,0 +1,153 @@
+{
+  "phase": "applied",
+  "time": "2026-11-06T08:54:12.282Z",
+  "runDirectory": "applied/2026-11-06T08-54-06-633Z",
+  "passed": 2,
+  "total": 2,
+  "sourceHash": "86ab128a7e5e8339d6b3b7003e257891beda24ab1e80b8766a047f98b074dee2",
+  "results": [
+    {
+      "id": "css-overflow_overflow-x_y",
+      "expected": "قائمةscrollHeightأكبر منclientHeight؛ scrollTopيتغير معscroll-y، overflow-x:hidden يقص المحتوى العريض.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow",
+      "state": "preview_ready",
+      "observed": {
+        "css": {
+          "display": "block",
+          "color": "rgb(226, 232, 240)",
+          "backgroundColor": "rgb(6, 78, 59)",
+          "backgroundImage": "none",
+          "backgroundSize": "auto",
+          "borderTopWidth": "0px",
+          "borderTopStyle": "solid",
+          "borderTopColor": "rgb(229, 231, 235)",
+          "borderTopLeftRadius": "0px",
+          "boxShadow": "none",
+          "aspectRatio": "auto",
+          "filter": "none",
+          "cursor": "auto",
+          "opacity": "1",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "flexDirection": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "gridTemplateColumns": "none",
+          "padding": "0px",
+          "marginBottom": "0px",
+          "position": "static",
+          "right": "auto",
+          "top": "auto",
+          "backdropFilter": "none",
+          "overflowX": "hidden",
+          "overflowY": "auto",
+          "scrollBehavior": "auto",
+          "transform": "none",
+          "transitionDuration": "0s",
+          "userSelect": "auto",
+          "zIndex": "auto",
+          "width": 240,
+          "height": 120,
+          "x": 116,
+          "y": 111.1875,
+          "scrollHeight": 304,
+          "clientHeight": 120,
+          "scrollWidth": 360,
+          "clientWidth": 240,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        "keyboardEndScrollTop": 184
+      },
+      "logs": [],
+      "passed": true
+    },
+    {
+      "id": "css-scroll-behavior",
+      "expected": "تقدّمscrollTopبين0و320أثناءحركةالقفز ثم يستقرعند320؛ reduce-motionيعيدالسلوكauto.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior",
+      "state": "preview_ready",
+      "observed": {
+        "css": {
+          "display": "block",
+          "color": "rgb(226, 232, 240)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundSize": "auto",
+          "borderTopWidth": "1px",
+          "borderTopStyle": "solid",
+          "borderTopColor": "rgb(52, 211, 153)",
+          "borderTopLeftRadius": "0px",
+          "boxShadow": "none",
+          "aspectRatio": "auto",
+          "filter": "none",
+          "cursor": "auto",
+          "opacity": "1",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "flexDirection": "row",
+          "justifyContent": "normal",
+          "alignItems": "normal",
+          "gridTemplateColumns": "none",
+          "padding": "0px",
+          "marginBottom": "0px",
+          "position": "static",
+          "right": "auto",
+          "top": "auto",
+          "backdropFilter": "none",
+          "overflowX": "auto",
+          "overflowY": "auto",
+          "scrollBehavior": "smooth",
+          "transform": "none",
+          "transitionDuration": "0s",
+          "userSelect": "auto",
+          "zIndex": "auto",
+          "width": 312,
+          "height": 160,
+          "x": 44,
+          "y": 166.78125,
+          "scrollHeight": 640,
+          "clientHeight": 158,
+          "scrollWidth": 310,
+          "clientWidth": 310,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        "intermediate": [
+          {
+            "top": 2,
+            "time": 703.6999999999534
+          },
+          {
+            "top": 37,
+            "time": 751.3000000000466
+          },
+          {
+            "top": 210,
+            "time": 801
+          },
+          {
+            "top": 276,
+            "time": 847.6999999999534
+          },
+          {
+            "top": 305,
+            "time": 894.9000000000233
+          },
+          {
+            "top": 317,
+            "time": 942.6999999999534
+          }
+        ],
+        "final": 320,
+        "reducedMotion": "auto"
+      },
+      "logs": [],
+      "passed": true
+    }
+  ],
+  "parentErrors": [],
+  "externalRequests": []
+}

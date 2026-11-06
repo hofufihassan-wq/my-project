@@ -443,12 +443,14 @@
             <div class="dictionary-breadcrumb"><span>القاموس</span><span>‹</span><span>{{ selectedTerm.categoryLabel }}</span><span>‹</span><span dir="ltr">{{ selectedTerm.term }}</span></div>
             <div class="dictionary-title-row"><div><h2 dir="ltr">{{ selectedTerm.term }} <span class="dictionary-term-dot">●</span></h2><p>{{ selectedTerm.arabicTitle }}</p></div><span class="dictionary-tech-mark" aria-hidden="true">{{ selectedTerm.category === 'vue' ? 'V' : selectedTerm.category === 'js' ? 'JS' : selectedTerm.category.toUpperCase() }}</span></div>
             <div class="dictionary-title-actions">
+              <button data-testid="pronounce-term" @click="speakTerm">انطق المصطلح بالإنجليزية</button>
               <button @click="toggleBookmark(selectedTerm)" :aria-pressed="isBookmarked(selectedTerm)" :title="isBookmarked(selectedTerm) ? 'إزالة من المفضلة' : 'إضافة للمفضلة'">{{ isBookmarked(selectedTerm) ? '★ محفوظ' : '☆ حفظ' }}</button>
               <a v-if="selectedTerm.docUrl" :href="selectedTerm.docUrl" target="_blank" rel="noopener noreferrer">التوثيق الرسمي ↗</a>
               <button @click="launchTermInTimeline(selectedTerm)" title="مسرح التنفيذ التعليمي للمفهوم">مسرح التنفيذ التعليمي</button>
               <span class="dictionary-mastery"><span>إتقاني</span><button @click="setTermMastery(selectedTerm.id, 'new')" :aria-pressed="getTermMastery(selectedTerm.id) === 'new'">جديد</button><button @click="setTermMastery(selectedTerm.id, 'learning')" :aria-pressed="getTermMastery(selectedTerm.id) === 'learning'">أتعلم</button><button @click="setTermMastery(selectedTerm.id, 'mastered')" :aria-pressed="getTermMastery(selectedTerm.id) === 'mastered'">أتقنته</button></span>
             </div>
           </div>
+          <p v-if="termSpeechStatus" class="dictionary-pronunciation" role="status">{{ termSpeechStatus }}</p>
           <nav class="dictionary-content-tabs" aria-label="أقسام شرح المصطلح" role="tablist">
             <button v-for="tab in [{id:'meaning',label:'المعنى',icon:'book'},{id:'example',label:'مثال',icon:'code'},{id:'usage',label:'متى أستخدمه',icon:'note'},{id:'compare',label:'مقارنة',icon:'grid'},{id:'pitfalls',label:'أخطاء شائعة',icon:'note'}]" :key="tab.id" role="tab" :id="'dictionary-tab-' + tab.id" :aria-selected="dictionaryTab === tab.id" :aria-controls="'dictionary-panel-' + tab.id" :data-testid="'dictionary-tab-' + tab.id" :tabindex="dictionaryTab === tab.id ? 0 : -1" @keydown="handleDictionaryTabKeydown($event, tab.id)" @click="dictionaryTab = tab.id"><svg><use :href="'#i-' + tab.icon"/></svg>{{ tab.label }}</button>
           </nav>

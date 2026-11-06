@@ -1,0 +1,6 @@
+{
+  "path": "/tmp/vlex-final-review-baseline-20261106T084459",
+  "timestamp": "2026-11-06T08:44:59.925661+00:00",
+  "sourceHead": "55fab885d1eba6cb48313b407bd6d10432dd2297",
+  "sourceStatus": " M platform-tests/integration/course.png\n M platform-tests/integration/cssLab.png\n M platform-tests/integration/jsLab.png\n M platform-tests/integration/mobile-390.png\n M platform-tests/integration/mobile-768.png\n M platform-tests/integration/smoke-results.json\n M platform-tests/store/results.json\n M platform-tests/store/schema-results.json\n"
+}

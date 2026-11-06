@@ -60,8 +60,11 @@
   // This function's text is sent to a Worker; it is never invoked in the parent.
   function workerBootstrap(config) {
     'use strict';
-    const nonce = config.nonce, portSend = self.postMessage.bind(self);
-    const send = (type, payload) => portSend({ nonce, type, payload });
+    // Source can clone this Blob Worker and inspect messages from its clone.
+    // Telemetry therefore uses only the transferred capability, never the
+    // Worker global message channel or a secret embedded in the Blob source.
+    let portSend = null;
+    const send = (type, payload) => { if (portSend) portSend({ type, payload }); };
     // Capture these before running source: changing global built-ins must not falsify a snapshot.
     const nativeString = String, NativePromise = Promise, nativeIsArray = Array.isArray;
     const slice = Function.prototype.call.bind(String.prototype.slice);
@@ -120,6 +123,7 @@
       // The only transferred port arrives BEFORE user source runs. Future commands
       // never touch the Worker global message event, so user listeners cannot read it.
       const privatePort = event.ports[0];
+      portSend = privatePort.postMessage.bind(privatePort);
       privatePort.onmessage = e => {
         const action = e.data && e.data.action;
         if (action === 'continue') continuous = true;
@@ -131,7 +135,7 @@
   }
   // Runs only in the opaque iframe. The frame is a broker, not the execution realm.
   function frameBootstrap(config) {
-    const nonce = crypto.randomUUID(), runId = config.runId;
+    const runId = config.runId;
     let worker = null, controlPort = null, timer = null, budget = 0, workerUrl = null;
     const send = (type, payload) => parent.postMessage({ source: 'VLEX_JS_LAB', runId, type, payload }, '*');
     function clear() { if (timer) clearTimeout(timer); timer = null; }
@@ -144,14 +148,13 @@
       if (worker && controlPort && ['next', 'continue'].includes(action)) { arm(); controlPort.postMessage({ action }); }
     });
     try {
-      const data = { nonce, continuous: config.continuous, body: config.body, parameters: config.parameters };
+      const data = { continuous: config.continuous, body: config.body, parameters: config.parameters };
       workerUrl = URL.createObjectURL(new Blob(['(' + config.workerBootstrap + ')(' + JSON.stringify(data) + ');'], { type: 'text/javascript' }));
       worker = new Worker(workerUrl);
       const controls = new MessageChannel(); controlPort = controls.port1;
-      worker.postMessage({ type: 'VLEX_INIT_PORT' }, [controls.port2]);
-      worker.onmessage = event => {
+      controlPort.onmessage = event => {
         const message = event.data;
-        if (!message || message.nonce !== nonce || ++budget > 1200) return;
+        if (!message || ++budget > 1200) return;
         const type = message.type, p = message.payload;
         if (!p || typeof p !== 'object' || Array.isArray(p)) return;
         if (['paused', 'executing', 'snapshot'].includes(type)) {
@@ -168,6 +171,7 @@
           send(type, { text: p.text, level: ['log', 'info', 'warn', 'error', 'debug'].includes(p.level) ? p.level : 'error' });
         } else if (type === 'done') { clear(); send('done', {}); timer = setTimeout(() => { if (worker) worker.terminate(); worker = null; if (workerUrl) URL.revokeObjectURL(workerUrl); workerUrl = null; send('settled', {}); }, 2500); }
       };
+      worker.postMessage({ type: 'VLEX_INIT_PORT' }, [controls.port2]);
       worker.onerror = e => { clear(); send('error', { text: String(e.message || 'تعذر بدء Worker').slice(0, 2000), level: 'error' }); };
       arm();
     } catch (e) { clear(); send('unsupported', { text: String(e.message).slice(0, 2000) }); }

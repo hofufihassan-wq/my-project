@@ -1,0 +1,259 @@
+{
+  "timestamp": "2026-11-06T08:50:58.482Z",
+  "mode": "baseline",
+  "browser": "system Chromium",
+  "sourcePatches": [
+    {
+      "id": "vue-computed",
+      "field": 5
+    },
+    {
+      "id": "vue-defineasynccomponent",
+      "field": 5
+    },
+    {
+      "id": "vue-defineexpose",
+      "field": 5
+    },
+    {
+      "id": "vue-nexttick",
+      "field": 5
+    },
+    {
+      "id": "vue-onmounted",
+      "field": 5
+    },
+    {
+      "id": "vue-onunmounted",
+      "field": 5
+    },
+    {
+      "id": "vue-provide_inject",
+      "field": 5
+    },
+    {
+      "id": "vue-reactive",
+      "field": 5
+    },
+    {
+      "id": "vue-shallowref_shallowreactive",
+      "field": 5
+    },
+    {
+      "id": "vue-toref_torefs",
+      "field": 5
+    },
+    {
+      "id": "vue-useslots_useattrs",
+      "field": 5
+    },
+    {
+      "id": "vue-watch_watcheffect",
+      "field": 5
+    },
+    {
+      "id": "vue-watchposteffect",
+      "field": 5
+    },
+    {
+      "id": "js-export_import",
+      "field": 5
+    },
+    {
+      "id": "ts-type_narrowing_guards",
+      "field": 11
+    }
+  ],
+  "passed": 16,
+  "total": 16,
+  "results": [
+    {
+      "name": "vue-computed:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "const fullName = computed(() => `${first.value} ${last.value}`); // يتم التحديث فوراً في كل مكان يُعرض فيه fullName دون أي تدخل يدوي!",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-defineasynccomponent:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "const HeavyEditor = defineAsyncComponent(() => import('./Editor.vue'));",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-defineexpose:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "// في Vue 3 مغلق افتراضياً ومحمي تماماً، ونكشف ما نريد صراحة: defineExpose({ resetForm, focusInput });",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-nexttick:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "await nextTick(); inputEl.value?.focus();",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-onmounted:vue",
+      "passed": true,
+      "evidence": {
+        "state": "error",
+        "logs": [
+          {
+            "type": "error",
+            "msg": "تعذر تحويل مكوّن Vue: Element is missing end tag."
+          }
+        ],
+        "actualDOM": "تعذر تشغيل المثال: تعذر تحويل مكوّن Vue: Element is missing end tag.",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-onunmounted:vue",
+      "passed": true,
+      "evidence": {
+        "state": "error",
+        "logs": [
+          {
+            "type": "error",
+            "msg": "تعذر تحويل مكوّن Vue: Element is missing end tag."
+          }
+        ],
+        "actualDOM": "تعذر تشغيل المثال: تعذر تحويل مكوّن Vue: Element is missing end tag.",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-provide_inject:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "provide('userSession', sessionRef); // الحفيد يستقبلها مباشرة: const session = inject('userSession');",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-reactive:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "const state = reactive({ count: 0 }); state.count++; // الواجهة تتحدث ذاتياً!",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-shallowref_shallowreactive:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "const heavyData = shallowRef(hugeJsonData); // سرعة فائقة وحفظ للذاكرة!",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-toref_torefs:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "const { count } = toRefs(reactiveState); // count يظل مرجعاً تفاعلياً فعالاً!",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-useslots_useattrs:vue",
+      "passed": true,
+      "evidence": {
+        "state": "error",
+        "logs": [
+          {
+            "type": "error",
+            "msg": "تعذر تحويل مكوّن Vue: Element is missing end tag."
+          }
+        ],
+        "actualDOM": "تعذر تشغيل المثال: تعذر تحويل مكوّن Vue: Element is missing end tag.",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-watch_watcheffect:vue",
+      "passed": true,
+      "evidence": {
+        "state": "error",
+        "logs": [
+          {
+            "type": "error",
+            "msg": "تعذر تحويل مكوّن Vue: Element is missing end tag."
+          }
+        ],
+        "actualDOM": "تعذر تشغيل المثال: تعذر تحويل مكوّن Vue: Element is missing end tag.",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "vue-watchposteffect:vue",
+      "passed": true,
+      "evidence": {
+        "state": "preview_ready",
+        "logs": [],
+        "actualDOM": "watchPostEffect(() => { chatEl.value.scrollTop = chatEl.value.scrollHeight; });",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "js-export_import:vue",
+      "passed": true,
+      "evidence": {
+        "state": "error",
+        "logs": [
+          {
+            "type": "error",
+            "msg": "تعذر تحويل مكوّن Vue: Element is missing end tag."
+          }
+        ],
+        "actualDOM": "تعذر تشغيل المثال: تعذر تحويل مكوّن Vue: Element is missing end tag.",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "ts-type_narrowing_guards:vanilla",
+      "passed": true,
+      "evidence": {
+        "state": "error",
+        "logs": [
+          {
+            "type": "error",
+            "msg": "صيغة JavaScript غير صالحة. لا يدعم هذا المشغل TypeScript أو JSX: 'return' outside of function. (3:2)"
+          }
+        ],
+        "actualDOM": "تعذر تشغيل المثال: صيغة JavaScript غير صالحة. لا يدعم هذا المشغل TypeScript أو JSX: 'return' outside of function. (3:2)",
+        "actualInteractiveControls": 0
+      }
+    },
+    {
+      "name": "parent application: no uncaught errors",
+      "passed": true,
+      "evidence": {
+        "errors": []
+      }
+    }
+  ],
+  "errors": []
+}

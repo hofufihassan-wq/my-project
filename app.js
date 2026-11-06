@@ -2381,9 +2381,25 @@ const app = createApp({
     });
     function openDashboardTerm(term) { setAppMode('lexicon'); selectTerm(term); }
 
+    const termSpeechStatus = ref('');
+    let termUtterance = null;
+    function speakTerm() {
+      if (!selectedTerm.value) return;
+      if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) { termSpeechStatus.value = 'النطق غير متاح في هذا المتصفح. الترجمة والشرح النصي متاحان.'; return; }
+      const voice = window.speechSynthesis.getVoices().find(v => v.localService && /^en(?:-|_)/i.test(v.lang));
+      if (!voice) { termSpeechStatus.value = 'لا يوجد صوت إنجليزي محلي جاهز. ثبّت صوتًا إنجليزيًا من إعدادات Windows ثم أعد المحاولة؛ لا نرسل المصطلح لخدمة خارجية.'; return; }
+      try {
+        window.speechSynthesis.cancel();
+        termUtterance = new window.SpeechSynthesisUtterance(selectedTerm.value.term.replace(/[<>]/g, ''));
+        termUtterance.voice = voice; termUtterance.lang = voice.lang; termUtterance.rate = 0.8;
+        termUtterance.onend = () => { termSpeechStatus.value = 'انتهى النطق.'; };
+        termUtterance.onerror = () => { termSpeechStatus.value = 'تعذر تشغيل الصوت المحلي؛ جرّب إعدادات الصوت في النظام.'; };
+        termSpeechStatus.value = 'جارٍ النطق بالإنجليزية…'; window.speechSynthesis.speak(termUtterance);
+      } catch (_) { termSpeechStatus.value = 'تعذر تشغيل الصوت المحلي.'; }
+    }
     function openLearning(mode, source) {
       if (!['explain', 'course', 'cssLab', 'jsLab'].includes(mode)) return;
-      if (mode === 'explain' && typeof source === 'string') { explainSource.value = source; explainKey.value++; }
+      if (mode === 'explain') { explainSource.value = typeof source === 'string' ? source : ''; explainKey.value++; }
       setAppMode(mode);
     }
     function openLearningTerm(id) {
@@ -2479,6 +2495,7 @@ const app = createApp({
 
       onUnmounted(() => {
         learningUnsubscribe?.();
+        if (termUtterance) window.speechSynthesis?.cancel();
         window.removeEventListener('keydown', handleGlobalKeys);
         window.removeEventListener('message', handleWindowMessage);
         document.removeEventListener('visibilitychange', handleAudioVisibility);
@@ -2498,7 +2515,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
-      learningStatus, explainSource, explainKey, openLearning, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
+      termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
       techCustomWidth, techCustomHeight, techPreviewZoom, techDimensionDraft, techDimensionError, techConsoleHeight, techCompactPanel, techDragging,

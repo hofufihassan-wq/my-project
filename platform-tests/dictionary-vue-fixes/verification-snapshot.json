@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-06T08:52:12.541Z",
+  "baseCommit": "55fab885d1eba6cb48313b407bd6d10432dd2297",
+  "branch": "feat/vlex-personal-learning-platform",
+  "files": {
+    "lexicon-data.js": "e54841e20d64e334110e82b5a5fe49b184250af51f7a09b1969eb261eb34d136",
+    "platform-tests/dictionary-vue-fixes/patches.json": "08dec3bb0f73b80538aabefe86aa0b7369dac8ca037ab3b08d8babb16ba9ea31",
+    "platform-tests/dictionary-vue-fixes/browser.cjs": "f816017c2eec623d4c75bc700991f00353a28c99b2353b1e23c1fbe077bac1ca",
+    "platform-tests/dictionary-vue-fixes/source/results.json": "ab4c3aa9d95ae73cbdbc1c49d99e309aaf0e610936d51afa3f490c5b42cf5162"
+  }
+}

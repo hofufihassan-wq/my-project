@@ -40,6 +40,8 @@ config.content = ["./index.html", "./app.js", "./lexicon-data.js", "./practice-c
 // Keep the existing preview utility surface available to previously saved drafts.
 // These classes left application chrome in 5B but remain supported inside previews.
 config.safelist = [
+  // Retain the approved utility for older saved code; the corrected aspect demo no longer uses it.
+  "max-h-40",
   "-bottom-1",
   "-bottom-40",
   "-left-40",

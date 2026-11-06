@@ -19,6 +19,12 @@
       return { key: dateKey(date), number: date.getDate(), currentMonth: date.getMonth() === month };
     });
   }
+  function courseMetrics(course, lessonIds, now = Date.now()) {
+    const known = new Set(lessonIds);
+    const completed = new Set((Array.isArray(course.completed) ? course.completed : []).filter(id => known.has(id)));
+    const due = Object.entries(course.reviews || {}).filter(([id, value]) => known.has(id) && value && typeof value.due === 'string' && Number.isFinite(Date.parse(value.due)) && Date.parse(value.due) <= now).length;
+    return { completed: completed.size, due };
+  }
   function uuid() {
     if (root.crypto && root.crypto.randomUUID) return root.crypto.randomUUID();
     return 'local-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
@@ -105,8 +111,9 @@
     const activeTasks = computed(() => data.value.tasks.filter(task => !task.archived));
     const todayTasks = computed(() => activeTasks.value.filter(task => !task.due || task.due <= today.value).sort((a, b) => (a.status === 'done') - (b.status === 'done') || String(a.due).localeCompare(String(b.due))));
     const upcoming = computed(() => data.value.events.filter(event => !event.archived && event.date >= today.value).sort((a, b) => (a.date + (a.time || '')).localeCompare(b.date + (b.time || ''))));
-    const completedLessons = computed(() => Array.isArray(data.value.course.completed) ? new Set(data.value.course.completed).size : 0);
-    const dueReviews = computed(() => Object.entries(data.value.course.reviews || {}).filter(([, value]) => value && typeof value.due === 'string' && Number.isFinite(Date.parse(value.due)) && Date.parse(value.due) <= now.value.getTime()).length);
+    const learningCounts = computed(() => courseMetrics(data.value.course, (root.VLexCourse?.lessons || []).map(lesson => lesson.id), now.value.getTime()));
+    const completedLessons = computed(() => learningCounts.value.completed);
+    const dueReviews = computed(() => learningCounts.value.due);
     onMounted(() => { refresh(); if (store && typeof store.subscribe === 'function') unsubscribe = store.subscribe(refresh); timer = setInterval(() => { now.value = new Date(); }, 1000); });
     onUnmounted(() => { clearInterval(timer); if (typeof unsubscribe === 'function') unsubscribe(); });
     return { data, message, storageWarning, now, today, activeTasks, todayTasks, upcoming, completedLessons, dueReviews, refresh, save, patch, archive };
@@ -201,7 +208,7 @@
       <p class="vlp-local-note">الأرشفة قابلة للعكس ولا تحذف بياناتك. التواريخ والأوقات حسب جهازك، بلا مزامنة أو إشعارات خارج الصفحة. صدّر نسخة من بيانات المنصة قبل نقل الجهاز.</p>
     </section>`
   };
-  const api = { dateKey, validDate, calendarDays, validate, statusNames };
+  const api = { dateKey, validDate, calendarDays, validate, statusNames, courseMetrics };
   root.VLexOrganizer = api;
   root.VLexPlatformComponents = root.VLexPlatformComponents || [];
   root.VLexPlatformComponents.push({ name: 'vlex-dashboard', component: dashboard }, { name: 'vlex-organizer', component: organizer });
