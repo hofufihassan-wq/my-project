@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-06T09:14:05.655Z",
+  "archive": "/workspace/downloads/VLex-Pro-local-20261106-091327-b7a20fd8.zip",
+  "extracted": "/tmp/VLex local package tB4T0e",
+  "passed": 2,
+  "total": 2,
+  "results": [
+    {
+      "name": "extract exact ZIP and verify every file hash",
+      "passed": true
+    },
+    {
+      "name": "launch extracted folder with spaces and render dictionary",
+      "passed": true
+    }
+  ]
+}
