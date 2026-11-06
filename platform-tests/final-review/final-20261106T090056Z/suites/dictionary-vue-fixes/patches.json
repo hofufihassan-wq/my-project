@@ -1,0 +1,137 @@
+[
+  {
+    "id": "vue-computed",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    const fullName = computed(() => `${first.value} ${last.value}`);\n// يتم التحديث فوراً في كل مكان يُعرض فيه fullName دون أي تدخل يدوي!\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>computed: قيمة مشتقة من حالة تفاعلية</h3>\n    <button data-testid=\"increment\" @click=\"count++\">زِد العدد</button>\n    <p data-testid=\"count\">العدد: {{ count }}</p>\n    <p data-testid=\"doubled\">الضعف: {{ doubled }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { ref, computed } from 'vue'\nconst count = ref(0)\n// computed تتحدث تلقائيًا عندما تتغير count.\nconst doubled = computed(() => count.value * 2)\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "يظهر العدد 0 والضعف 0؛ بعد النقر يظهر 1 و2.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-defineasynccomponent",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    const HeavyEditor = defineAsyncComponent(() => import('./Editor.vue'));\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>مكوّن يُحمّل عند الحاجة</h3>\n    <p>المثال محلي؛ لا يطلب ملفًا خارجيًا.</p>\n    <AsyncCounter />\n  </main>\n</template>\n\n<script setup>\nimport { defineAsyncComponent, defineComponent, h, ref } from 'vue'\n// يعيد loader مكوّنًا حقيقيًا. في مشروع متعدد الملفات قد يستورد ملفًا آخر.\n// استيراد ملفات خارجية ليس مدعومًا في هذا المشغّل المستقل.\nconst AsyncCounter = defineAsyncComponent(() => Promise.resolve(defineComponent({\n  setup() {\n    const count = ref(0)\n    return () => h('button', { 'data-testid': 'async-counter', onClick: () => count.value++ },\n      'عداد المكوّن المحمّل: ' + count.value)\n  }\n})))\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "يحل loader الوعد إلى مكوّن حقيقي؛ النقر يغيّر عداده من 0 إلى 1 دون شبكة.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-defineexpose",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    // في Vue 3 مغلق افتراضياً ومحمي تماماً، ونكشف ما نريد صراحة:\ndefineExpose({ resetForm, focusInput });\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>defineExpose: واجهة المكوّن للأب</h3>\n    <p>زر التجربة يعمل داخل المكوّن. وصول الأب إلى الدوال المكشوفة يحتاج مكوّن أب وtemplate ref في مشروع أكبر.</p>\n    <input ref=\"inputEl\" data-testid=\"exposed-input\" v-model=\"name\" aria-label=\"الاسم\" />\n    <button data-testid=\"clear\" @click=\"resetForm\">امسح النموذج</button>\n    <button data-testid=\"focus\" @click=\"focusInput\">ركّز حقل الاسم</button>\n    <p data-testid=\"name\">الاسم: {{ name }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\nconst name = ref('سارة')\nconst inputEl = ref(null)\nfunction resetForm() { name.value = '' }\nfunction focusInput() { inputEl.value?.focus() }\n// هذه واجهة يقرأها الأب عبر template ref، وليست آلية حماية أمنية.\ndefineExpose({ resetForm, focusInput })\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "الحقل يبدأ بسارة؛ المسح يفرّغه والتركيز يركّزه. اختبار استدعاء الأب للدوال المكشوفة يحتاج سياق مكوّن أب.",
+    "statusIfContextRequired": "needs_context"
+  },
+  {
+    "id": "vue-nexttick",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    await nextTick();\ninputEl.value?.focus();\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>nextTick: انتظر تحديث DOM</h3>\n    <button data-testid=\"increment\" @click=\"incrementAndRead\">زِد واقرأ DOM</button>\n    <p ref=\"outputEl\" data-testid=\"count\">{{ count }}</p>\n    <p data-testid=\"observed\">{{ observed }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { ref, nextTick } from 'vue'\nconst count = ref(0)\nconst outputEl = ref(null)\nconst observed = ref('لم نقرأ DOM بعد')\nasync function incrementAndRead() {\n  const before = outputEl.value.textContent\n  count.value++\n  await nextTick()\n  observed.value = 'قبل=' + before + '؛ بعد=' + outputEl.value.textContent\n}\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "عند النقر ينتقل النص إلى 1 ويسجل القراءة الفعلية: قبل=0؛ بعد=1.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-onmounted",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    <script setup>\nonMounted(async () => {\n  await loadDashboardData();\n});\n<\\/script>\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>onMounted: العنصر صار موجودًا</h3>\n    <p ref=\"messageEl\" data-testid=\"element\">عنصر جاهز</p>\n    <p data-testid=\"mounted\">{{ mountedMessage }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { ref, onMounted } from 'vue'\nconst messageEl = ref(null)\nconst mountedMessage = ref('ننتظر التركيب')\nonMounted(() => {\n  mountedMessage.value = 'قرأنا من DOM بعد التركيب: ' + messageEl.value.textContent\n})\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "تقرأ onMounted النص من العنصر الفعلي وتعرض: قرأنا من DOM بعد التركيب: عنصر جاهز.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-onunmounted",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    <script setup>\nonUnmounted(() => clearInterval(timerId));\n<\\/script>\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>onUnmounted: نظّف المؤقت عند إزالة المكوّن</h3>\n    <TimerChild v-if=\"visible\" @tick=\"ticks = $event\" @stopped=\"stopped = true\" />\n    <button data-testid=\"remove\" @click=\"visible = false\">أزل المكوّن</button>\n    <p data-testid=\"ticks\">{{ ticks }}</p>\n    <p data-testid=\"cleanup\">{{ stopped ? 'تم تنظيف المؤقت' : 'المؤقت يعمل' }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { ref, defineComponent, h, onMounted, onUnmounted } from 'vue'\nconst visible = ref(true)\nconst ticks = ref(0)\nconst stopped = ref(false)\nconst TimerChild = defineComponent({\n  emits: ['tick', 'stopped'],\n  setup(_, { emit }) {\n    let timerId\n    let count = 0\n    onMounted(() => { timerId = setInterval(() => emit('tick', ++count), 100) })\n    onUnmounted(() => { clearInterval(timerId); emit('stopped') })\n    return () => h('p', { 'data-testid': 'timer-child' }, 'مكوّن له مؤقت حقيقي')\n  }\n})\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "يزداد عداد مؤقت حقيقي؛ إزالة الطفل تشغّل onUnmounted، وتحذف عنصره وتوقف العداد.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-provide_inject",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    provide('userSession', sessionRef);\n// الحفيد يستقبلها مباشرة:\nconst session = inject('userSession');\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>provide / inject: مشاركة مرجع مع مكوّن ابن</h3>\n    <button data-testid=\"rename\" @click=\"session = 'ليان'\">غيّر الجلسة إلى ليان</button>\n    <SessionChild />\n  </main>\n</template>\n\n<script setup>\nimport { ref, provide, inject, defineComponent, h } from 'vue'\nconst session = ref('سارة')\nconst sessionKey = Symbol('userSession')\nprovide(sessionKey, session)\nconst SessionChild = defineComponent({\n  setup() {\n    const inheritedSession = inject(sessionKey)\n    return () => h('p', { 'data-testid': 'session' }, 'جلسة الابن: ' + inheritedSession.value)\n  }\n})\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "يعرض ابن حقيقي المرجع المحقون باسم سارة ثم يتحدث إلى ليان بعد النقر.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-reactive",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    const state = reactive({ count: 0 });\nstate.count++; // الواجهة تتحدث ذاتياً!\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>reactive: كائن تفاعلي</h3>\n    <button data-testid=\"increment\" @click=\"state.count++\">زِد العدد</button>\n    <p data-testid=\"count\">{{ state.count }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { reactive } from 'vue'\nconst state = reactive({ count: 0 })\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "تغيير state.count عبر الزر يحدث DOM من 0 إلى 1.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-shallowref_shallowreactive",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    const heavyData = shallowRef(hugeJsonData); // سرعة فائقة وحفظ للذاكرة!\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>التفاعل السطحي: راقب المستوى الأول</h3>\n    <button data-testid=\"nested\" @click=\"mutateNested\">غيّر الخاصية المتداخلة فقط</button>\n    <button data-testid=\"replace\" @click=\"replaceRoots\">استبدل المستوى الأول</button>\n    <p>الأول لا يطلب تحديث DOM. الثاني يطلبه ويظهر القيم الحالية.</p>\n    <p data-testid=\"shallow-ref\">shallowRef: {{ item.count }}</p>\n    <p data-testid=\"shallow-reactive\">shallowReactive: {{ state.info.count }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { shallowRef, shallowReactive } from 'vue'\nconst item = shallowRef({ count: 0 })\nconst state = shallowReactive({ info: { count: 0 } })\nfunction mutateNested() {\n  item.value.count++\n  state.info.count++\n}\nfunction replaceRoots() {\n  item.value = { count: item.value.count + 1 }\n  state.info = { count: state.info.count + 1 }\n}\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "بعد تعديل المتداخل تبقى القيم المعروضة 0؛ بعد استبدال الجذر تظهر 2 لكليهما.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-toref_torefs",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    const { count } = toRefs(reactiveState); // count يظل مرجعاً تفاعلياً فعالاً!\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>toRef / toRefs: مرجع متصل بالكائن</h3>\n    <input data-testid=\"name-input\" v-model=\"name\" aria-label=\"الاسم\" />\n    <button data-testid=\"increment\" @click=\"count++\">زِد عبر المرجع</button>\n    <p data-testid=\"state\">{{ state.name }}: {{ state.count }}</p>\n    <p data-testid=\"refs\">{{ name }}: {{ count }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { reactive, toRef, toRefs } from 'vue'\nconst state = reactive({ name: 'سارة', count: 0 })\nconst name = toRef(state, 'name')\nconst { count } = toRefs(state)\n// name وcount متصلان بالكائن الأصلي؛ تعديل أيهما يحدث state.\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "تعديل name والعداد عبر refs يتطابق فورًا مع state الأصلي.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-useslots_useattrs",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    <script setup>\nconst slots = useSlots();\nconst hasFooter = computed(() => !!slots.footer);\n<\\/script>\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>useSlots / useAttrs في مكوّن حقيقي</h3>\n    <input data-testid=\"title-input\" v-model=\"title\" aria-label=\"عنوان البطاقة\" />\n    <LocalCard :title=\"title\" aria-label=\"بطاقة محلية\">\n      <p data-testid=\"default-slot\">محتوى الفتحة الأساسية</p>\n      <template #footer><small data-testid=\"footer-slot\">تذييل من المكوّن الأب</small></template>\n    </LocalCard>\n  </main>\n</template>\n\n<script setup>\nimport { ref, defineComponent, h, useSlots, useAttrs } from 'vue'\nconst title = ref('عنوان أول')\nconst LocalCard = defineComponent({\n  inheritAttrs: false,\n  setup() {\n    const slots = useSlots()\n    const attrs = useAttrs()\n    return () => h('section', { ...attrs, 'data-testid': 'attrs-card' }, [\n      h('strong', { 'data-testid': 'card-title' }, attrs.title),\n      slots.default?.(),\n      slots.footer?.()\n    ])\n  }\n})\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "يعرض الطفل الفتحتين ويطبق attrs على section؛ تعديل العنوان يحدث title ومحتوى strong.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-watch_watcheffect",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    <script setup>\nwatch(activeFilter, () => {\n  fetchData();\n});\n<\\/script>\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>watch وwatchEffect</h3>\n    <button data-testid=\"increment\" @click=\"count++\">زِد العدد</button>\n    <p data-testid=\"effect\">{{ effectMessage }}</p>\n    <p data-testid=\"watch\">{{ watchMessage }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { ref, watch, watchEffect } from 'vue'\nconst count = ref(0)\nconst effectMessage = ref('')\nconst watchMessage = ref('watch ينتظر أول تغيير')\nwatchEffect(() => { effectMessage.value = 'watchEffect: ' + count.value })\nwatch(count, (value, oldValue) => {\n  watchMessage.value = 'watch: ' + oldValue + ' → ' + value\n})\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "watchEffect يعرض 0 عند التركيب؛ بعد النقر يعرض 1 ويسجل watch الانتقال 0 → 1.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "vue-watchposteffect",
+    "field": 5,
+    "before": "<template>\n  <div class=\"component-demo\">\n    watchPostEffect(() => {\n  chatEl.value.scrollTop = chatEl.value.scrollHeight;\n});\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>watchPostEffect: اقرأ DOM بعد تحديثه</h3>\n    <button data-testid=\"increment\" @click=\"count++\">زِد العدد</button>\n    <p ref=\"outputEl\" data-testid=\"count\">{{ count }}</p>\n    <p data-testid=\"observed\">{{ observed }}</p>\n  </main>\n</template>\n\n<script setup>\nimport { ref, watchPostEffect } from 'vue'\nconst count = ref(0)\nconst outputEl = ref(null)\nconst observed = ref('')\nwatchPostEffect(() => {\n  const expectedCount = count.value // اعتماد تفاعلي لكي يعمل بعد كل تغيير.\n  observed.value = 'DOM بعد التحديث: ' + outputEl.value.textContent + '؛ الحالة: ' + expectedCount\n})\n</script>",
+    "reason": "المصدر السابق وضع الشيفرة كنص داخل template أو داخل موضع غير صالح؛ استُبدل بمثال مستقل حقيقي يعمل بمكتبة Vue المحلية، دون استيراد ملفات أو بيانات وهمية.",
+    "expected": "تطابق قراءة DOM الحالة 0 عند البدء و1 بعد النقر، داخل watchPostEffect.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "js-export_import",
+    "field": 5,
+    "before": "<template>\n  <div class=\"demo-card p-4 rounded-xl bg-slate-900 border border-emerald-500/30 text-white\">\n    <h3 class=\"font-bold text-sm text-[#00DC82]\">export / import</h3>\n    <button @click=\"execute\" class=\"mt-2 px-4 py-2 rounded-lg bg-[#00DC82] text-slate-950 font-bold text-xs\">\n      تشغيل الدالة تفاعلياً\n    </button>\n    <p v-if=\"result\" class=\"mt-2 text-xs font-mono text-emerald-300\">النتيجة: {{ result }}</p>\n  </div>\n</template>\n\n<script setup>\nimport { ref } from 'vue'\n\nconst result = ref('')\n\nfunction execute() {\n  // كود Vue 3 التفاعلي لـ export / import:\n  // ملف helpers.js\nexport const formatCurrency = (val) => `$${val.toFixed(2)}`;\nexport default class CartService { /* ... */ }\n\n// ملف main.js\nimport CartService, { formatCurrency } from './helpers.js';\n  result.value = 'تم التنفيذ بنجاح ✓'\n}\n<\\/script>",
+    "after": "<template>\n  <main dir=\"rtl\" style=\"padding:20px;font-family:Arial,sans-serif;line-height:1.8\">\n    <h3>import وexport في مستوى الوحدة</h3>\n    <p>استوردنا ref من Vue ثم صدّرنا تعريف المكوّن. استيراد ملفات مشروع أخرى خارج دعم هذه المعاينة.</p>\n    <button data-testid=\"increment\" @click=\"count++\">زِد العدد</button>\n    <p data-testid=\"count\">{{ count }}</p>\n  </main>\n</template>\n\n<script>\n// import وexport في مستوى الوحدة، وليسا داخل دالة.\nimport { ref } from 'vue'\nexport default {\n  setup() {\n    const count = ref(0)\n    return { count }\n  }\n}\n</script>",
+    "reason": "المصدر السابق يحوي import وexport داخل execute ويشير إلى helpers.js غير موجود. المصدر الجديد يوضح مستوى الوحدة باستخدام استيراد Vue المدعوم وتصدير مكوّن حقيقي دون ملفات خارجية.",
+    "expected": "import من Vue المحلي وexport default لتعريف المكوّن صالحان؛ الزر يغيّر العدد من 0 إلى 1.",
+    "statusIfContextRequired": null
+  },
+  {
+    "id": "ts-type_narrowing_guards",
+    "field": 11,
+    "before": "// في JS: الفحص اليدوي يعمل ولكن المحرر لا يعلم بتغير النمط\nif (typeof val === 'string') {\n  return val.toUpperCase();\n}",
+    "after": "// JavaScript فعلي: typeof يحدد المسار وقت التشغيل؛ لا يوجد هنا مترجم TypeScript.\nfunction processInput(val) {\n  if (typeof val === 'string') {\n    return val.toUpperCase();\n  }\n  if (typeof val === 'number') {\n    return val.toFixed(2);\n  }\n  throw new TypeError('المطلوب نص أو رقم');\n}\nconsole.log(processInput('vuelexicon')); // VUELEXICON\nconsole.log(processInput(42.856)); // 42.86",
+    "reason": "المصدر السابق يحوي return خارج دالة ويستخدم val دون تعريف؛ أصبحت الحراسة داخل دالة ذات مدخلات ونتائج صريحة، دون الادعاء بدعم TypeScript.",
+    "expected": "يسجل Console الناتجين VUELEXICON و42.86؛ الدالة ترفض نوعًا آخر بخطأ TypeError صريح.",
+    "statusIfContextRequired": null
+  }
+]

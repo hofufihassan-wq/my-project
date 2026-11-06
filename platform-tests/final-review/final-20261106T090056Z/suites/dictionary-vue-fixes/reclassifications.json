@@ -1,0 +1,8 @@
+[
+  {
+    "id": "ts-tsconfig_json",
+    "format": "vanilla",
+    "status": "unsupported",
+    "reason": "هذا ملف إعداد JSON يقرأه TypeScript/المحرر ضمن مشروع، وليس برنامج JavaScript قابلًا للتنفيذ. المشغّل المستقل لا يشغّل مترجم TypeScript أو إعداداته. يبقى المصدر كما هو؛ لا نحوله لبرنامج وهمي لإخفاء الفشل."
+  }
+]

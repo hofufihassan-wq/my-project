@@ -1,0 +1,7 @@
+PASS snapshot never invokes object getters
+PASS continuous execution preserves microtask ordering across top-level statements
+PASS zeroargument user wrapper does not expose capture capability
+PASS user worker message listener cannot read private control nonce and forge Console
+PASS snapshot never enumerates Proxy properties or invokes get traps
+PASS manual mode explains unsupported Promise scheduling instead of silently changing its meaning
+PASS nested Worker cannot reuse the bootstrap channel to forge an outer variable snapshot

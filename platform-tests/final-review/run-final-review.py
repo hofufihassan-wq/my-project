@@ -68,7 +68,7 @@ def main():
             (snapshot / 'node_modules').symlink_to(ROOT / 'node_modules', target_is_directory=True)
     hashes = {}
     for file in sorted(snapshot.iterdir()):
-        if file.is_file() and file.suffix in {'.js', '.css', '.html'}:
+        if file.is_file() and file.suffix in {'.js', '.css', '.html'} and not file.name.startswith(('run_', 'audit_', 'test_', 'test-')):
             hashes[file.name] = hashlib.sha256(file.read_bytes()).hexdigest()
     for name in ['assets/vendor/manifest.json', 'assets/tailwind-3.4.17.min.css', 'scripts/start-local.py', 'start-local.bat']:
         hashes[name] = hashlib.sha256((snapshot / name).read_bytes()).hexdigest()

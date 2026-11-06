@@ -1,0 +1,307 @@
+{
+  "date": "2026-11-06T08:49:57.742Z",
+  "source": "source/results.json",
+  "verified": 15,
+  "works": 14,
+  "needsContext": 1,
+  "records": [
+    {
+      "id": "vue-computed",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "يظهر العدد 0 والضعف 0؛ بعد النقر يظهر 1 و2.",
+      "fingerprint": "c3a91f6e",
+      "beforeSHA256": "5d07ae0350279200af97a86fe5d2c74054aed56b4ab23d215f8fe9546cf98b46",
+      "afterSHA256": "ecf0d13d4103eff30f659c1633a87b42ae286e61ff555f06ab2b75026c38a313",
+      "evidence": {
+        "count": 1,
+        "doubled": 2,
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-defineasynccomponent",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "يحل loader الوعد إلى مكوّن حقيقي؛ النقر يغيّر عداده من 0 إلى 1 دون شبكة.",
+      "fingerprint": "bfe71c45",
+      "beforeSHA256": "c69de787fa7388d636fe65a786c7b2cf3ba0b9f6d878543c7455da732f8c705d",
+      "afterSHA256": "ed581434936fd7e1c34f7e18d08d664c2194f877bd7a382c3c3193fe6b75d860",
+      "evidence": {
+        "asyncComponentCounter": 1,
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-defineexpose",
+      "format": "vue",
+      "field": 5,
+      "status": "يحتاج سياقًا",
+      "reason": "نجح المصدر داخليًا: المسح والتركيز؛ ماكرو defineExpose صالح لكن استدعاء الأب عبر template ref يحتاج مكوّن أب خارج المعاينة المستقلة ولم يُختبر.",
+      "expected": "الحقل يبدأ بسارة؛ المسح يفرّغه والتركيز يركّزه. اختبار استدعاء الأب للدوال المكشوفة يحتاج سياق مكوّن أب.",
+      "fingerprint": "6c7c9941",
+      "beforeSHA256": "fb18c8543bef9fcf06cd2fd3235961c21b63512513328f4b517af9ee9ef01afa",
+      "afterSHA256": "90e635df917ecbb233cdeaaa1d65976475fa4a2e7db1084d12c859ec67f78336",
+      "evidence": {
+        "resetWorked": true,
+        "focusWorked": true,
+        "parentAccess": "not verified: requires external parent context",
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-nexttick",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "عند النقر ينتقل النص إلى 1 ويسجل القراءة الفعلية: قبل=0؛ بعد=1.",
+      "fingerprint": "ba723dac",
+      "beforeSHA256": "10801f40e6920b403a297dd8d799fa9aec406996d3057aeefeafeb50ac61e801",
+      "afterSHA256": "5cf38fa12c8f8b50ae16eb651a6fe1d3fc1dfb2c0bfc8ca3fac3ae74e8831062",
+      "evidence": {
+        "actualDOMBefore": "0",
+        "actualDOMAfter": "1",
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-onmounted",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "تقرأ onMounted النص من العنصر الفعلي وتعرض: قرأنا من DOM بعد التركيب: عنصر جاهز.",
+      "fingerprint": "104c581",
+      "beforeSHA256": "bdfa9bec6ed874a5f1abbfe0e6fda2a093ef596be2ccd9308484e70137b680de",
+      "afterSHA256": "c0308d23a1d357fa65f610f25149b6f9bfb7cfc206e7b6b4a77b28a60da94f2d",
+      "evidence": {
+        "actualDOMReadOnMount": "عنصر جاهز",
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-onunmounted",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "يزداد عداد مؤقت حقيقي؛ إزالة الطفل تشغّل onUnmounted، وتحذف عنصره وتوقف العداد.",
+      "fingerprint": "4abb8d57",
+      "beforeSHA256": "951117457a08e9b3cb977c349a2ffba544a68286513807bf8326fc6f35ff71ad",
+      "afterSHA256": "25661d4def97a99ea58e77173fa2cebe44550c0a68e9a2e477a6ccd7953996b3",
+      "evidence": {
+        "timerStoppedAt": 2,
+        "waitedAfterRemovalMs": 350,
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-provide_inject",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "يعرض ابن حقيقي المرجع المحقون باسم سارة ثم يتحدث إلى ليان بعد النقر.",
+      "fingerprint": "b5207dca",
+      "beforeSHA256": "be642caaca7931873490173a57ed366e9e3dbaf6b3fa77c26a40d5b448e08f2d",
+      "afterSHA256": "dbff0aa1a341bd4ca30060aaacc079a88a4e14a3a621062c3ad58ce9de7e9b6c",
+      "evidence": {
+        "injectedRefUpdated": "ليان",
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-reactive",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "تغيير state.count عبر الزر يحدث DOM من 0 إلى 1.",
+      "fingerprint": "9b50b274",
+      "beforeSHA256": "2c5a3108d614055e8975ee4e76e4aedd5d4c75b8fcc877e38b3917787166a6bb",
+      "afterSHA256": "d09379895c0197d160389149cdf03cd6505840e0dac405d44c769ecb7a8c7652",
+      "evidence": {
+        "actualCount": 1,
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-shallowref_shallowreactive",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "بعد تعديل المتداخل تبقى القيم المعروضة 0؛ بعد استبدال الجذر تظهر 2 لكليهما.",
+      "fingerprint": "4c162878",
+      "beforeSHA256": "4c6d65a356c2d5c0278fcb42c9763a925719d700f839c4c8a5542403717f402b",
+      "afterSHA256": "87c92687e2c5b425543f7403e1c1f6f9b52c0af6d7fc074b8c8bfccd81faabe2",
+      "evidence": {
+        "afterNestedMutationDOM": [
+          0,
+          0
+        ],
+        "afterRootReplacementDOM": [
+          2,
+          2
+        ],
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-toref_torefs",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "تعديل name والعداد عبر refs يتطابق فورًا مع state الأصلي.",
+      "fingerprint": "e93f33c",
+      "beforeSHA256": "526119286722d741766c1960a8ed80697fa5869e94d1438c65a06b2c86600f49",
+      "afterSHA256": "469bf7dc939edac0695700aaf95b3e60f04768a0284063aa2d748ff277e5c383",
+      "evidence": {
+        "originalStateAndRefs": "ليان: 1",
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-useslots_useattrs",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "يعرض الطفل الفتحتين ويطبق attrs على section؛ تعديل العنوان يحدث title ومحتوى strong.",
+      "fingerprint": "45a38814",
+      "beforeSHA256": "18467491fa2a40dc13b8919d19dc8d381d8ffe4949ad9d1e9a81506e401195d1",
+      "afterSHA256": "e71a57fc5ffc025ad0a69a98dd52b8602d25dc47c456c3456ed228bef1198420",
+      "evidence": {
+        "slotsRendered": [
+          "default",
+          "footer"
+        ],
+        "reactiveAttrsTitle": "عنوان جديد",
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-watch_watcheffect",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "watchEffect يعرض 0 عند التركيب؛ بعد النقر يعرض 1 ويسجل watch الانتقال 0 → 1.",
+      "fingerprint": "55f7d2e6",
+      "beforeSHA256": "4e510db9f74bdabdfb7bfe07d5c71c5976efc0edad11ad316ad0909cbb6093ee",
+      "afterSHA256": "d92f47834425a52c207751e8b565870ae73cbfea33a72c9a7e4418d613b0d168",
+      "evidence": {
+        "effectRunsImmediately": true,
+        "watchedTransition": [
+          0,
+          1
+        ],
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "vue-watchposteffect",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "تطابق قراءة DOM الحالة 0 عند البدء و1 بعد النقر، داخل watchPostEffect.",
+      "fingerprint": "50cfe0d4",
+      "beforeSHA256": "dc1975fba154fb67c46f491705af408611a513961323784a34c65f3d43c76cb9",
+      "afterSHA256": "48afe4946bc86acbfce651d4903eb1cb5bf0ef6a3026fa2a5c8afc28bbdae54f",
+      "evidence": {
+        "afterPatchDOMEqualsState": [
+          1,
+          1
+        ],
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "js-export_import",
+      "format": "vue",
+      "field": 5,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "import من Vue المحلي وexport default لتعريف المكوّن صالحان؛ الزر يغيّر العدد من 0 إلى 1.",
+      "fingerprint": "acc64221",
+      "beforeSHA256": "1c18d90f5a680a1ad3066825ca3fa0cb5f51885a5adfbbbae1aa153d7d95a21a",
+      "afterSHA256": "01f82fbbdf533e7aee2a7d30158bb3b3082702ef79480b37145b3eb06938dfab",
+      "evidence": {
+        "topLevelImportExportCompiled": true,
+        "actualCount": 1,
+        "externalModulesSupported": false,
+        "state": "preview_ready",
+        "logs": []
+      },
+      "officialReferenceRetained": true
+    },
+    {
+      "id": "ts-type_narrowing_guards",
+      "format": "vanilla",
+      "field": 11,
+      "status": "يعمل",
+      "reason": "اختُبر المصدر المصحح من lexicon-data.js نفسه في Chromium، وطابقت نتيجة DOM/Console أو التفاعل المتوقع؛ لم يُكتفَ بإشارة Ready.",
+      "expected": "يسجل Console الناتجين VUELEXICON و42.86؛ الدالة ترفض نوعًا آخر بخطأ TypeError صريح.",
+      "fingerprint": "edece726",
+      "beforeSHA256": "ac0d9df15107e7aa028544b1e7f308d995ad9900e06a733b7d702c574d336d46",
+      "afterSHA256": "d454c218bdb410a147dd67dc0f7716aec3dbf5380e437be76643c1a9f0352c58",
+      "evidence": {
+        "actualConsole": [
+          {
+            "type": "log",
+            "msg": "42.86"
+          },
+          {
+            "type": "log",
+            "msg": "VUELEXICON"
+          }
+        ],
+        "state": "preview_ready",
+        "logs": [
+          {
+            "type": "log",
+            "msg": "42.86"
+          },
+          {
+            "type": "log",
+            "msg": "VUELEXICON"
+          }
+        ]
+      },
+      "officialReferenceRetained": true
+    }
+  ]
+}

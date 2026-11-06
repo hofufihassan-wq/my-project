@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-11-04T17:53:16.466Z",
+  "passed": 10,
+  "total": 11,
+  "results": [
+    {
+      "name": "all platform components registered and mount no errors",
+      "passed": true
+    },
+    {
+      "name": "real navigation course",
+      "passed": true
+    },
+    {
+      "name": "real navigation explain",
+      "passed": true
+    },
+    {
+      "name": "real navigation cssLab",
+      "passed": true
+    },
+    {
+      "name": "real navigation jsLab",
+      "passed": true
+    },
+    {
+      "name": "organizer four modes real components",
+      "passed": true
+    },
+    {
+      "name": "new themes persist reload and simulator palette stays independent",
+      "passed": true
+    },
+    {
+      "name": "legacy dictionary search and favorites still work",
+      "passed": false,
+      "error": "locator.innerText: Error: strict mode violation: locator('main:visible,section.dictionary-toolbar') resolved to 2 elements:\n    1) <section class=\"dictionary-toolbar relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 w-full\">…</section> aka getByText('🔍 ✕ Ctrl + K 🌐الكل180📄')\n    2) <main class=\"dictionary-workspace flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full relative z-10\">…</main> aka getByRole('main')\n\nCall log:\n\u001b[2m  - waiting for locator('main:visible,section.dictionary-toolbar')\u001b[22m\n\n    at /workspace/my-progect/platform-tests/integration-smoke.cjs:9:269\n    at async test (/workspace/my-progect/platform-tests/integration-smoke.cjs:2:34)\n    at async /workspace/my-progect/platform-tests/integration-smoke.cjs:9:1"
+    },
+    {
+      "name": "responsive new tools at 390",
+      "passed": true
+    },
+    {
+      "name": "responsive new tools at 768",
+      "passed": true
+    },
+    {
+      "name": "parent has no unexpected runtime errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "consoleErrors": []
+}

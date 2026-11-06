@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-11-06T09:02:05.897Z",
+  "passed": 11,
+  "total": 11,
+  "results": [
+    {
+      "name": "180terms all selectable and IDs unique",
+      "passed": true
+    },
+    {
+      "name": "Arabic and English query return actual matching results",
+      "passed": true
+    },
+    {
+      "name": "HTMLexample genuine DOM",
+      "passed": true
+    },
+    {
+      "name": "CSSexample actual computed style",
+      "passed": true
+    },
+    {
+      "name": "JavaScriptexample exact console output",
+      "passed": true
+    },
+    {
+      "name": "Vueexample actual ref and event",
+      "passed": true
+    },
+    {
+      "name": "Canvas corrected source paints nonzero pixel",
+      "passed": true
+    },
+    {
+      "name": "legacy export-import restores valid bookmark without auto executing",
+      "passed": true
+    },
+    {
+      "name": "learning code transfer never replaces lesson draft or auto-runs",
+      "passed": true
+    },
+    {
+      "name": "Flex stretch changes both axes real child geometry",
+      "passed": true
+    },
+    {
+      "name": "no parent errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

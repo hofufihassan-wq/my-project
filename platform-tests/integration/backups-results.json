@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-11-06T08:55:11.718Z",
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "real settings export includes all new sections and preserves exact source",
+      "passed": true
+    },
+    {
+      "name": "real file import restores with explicit confirmation and backs up prior original",
+      "passed": true
+    },
+    {
+      "name": "malformed imported file rejects atomically",
+      "passed": true
+    },
+    {
+      "name": "import cannot pollute prototypes or change legacy data",
+      "passed": true
+    },
+    {
+      "name": "pronunciation has real local service or explicit availability feedback",
+      "passed": true
+    },
+    {
+      "name": "imported code never auto executes after navigation or reopen",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

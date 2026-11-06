@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-11-06T09:01:48.393Z",
+  "passed": 7,
+  "total": 7,
+  "results": [
+    {
+      "name": "snapshot never invokes object getters",
+      "passed": true
+    },
+    {
+      "name": "continuous execution preserves microtask ordering across top-level statements",
+      "passed": true
+    },
+    {
+      "name": "zeroargument user wrapper does not expose capture capability",
+      "passed": true
+    },
+    {
+      "name": "user worker message listener cannot read private control nonce and forge Console",
+      "passed": true
+    },
+    {
+      "name": "snapshot never enumerates Proxy properties or invokes get traps",
+      "passed": true
+    },
+    {
+      "name": "manual mode explains unsupported Promise scheduling instead of silently changing its meaning",
+      "passed": true
+    },
+    {
+      "name": "nested Worker cannot reuse the bootstrap channel to forge an outer variable snapshot",
+      "passed": true
+    }
+  ]
+}

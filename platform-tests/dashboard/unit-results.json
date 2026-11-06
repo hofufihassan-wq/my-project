@@ -1,6 +1,6 @@
 {
-  "passed": 5,
-  "total": 5,
+  "passed": 6,
+  "total": 6,
   "results": [
     {
       "name": "calendar accepts real leap date and rejects overflow",
@@ -20,6 +20,10 @@
     },
     {
       "name": "oversized note is refused without truncation",
+      "passed": true
+    },
+    {
+      "name": "unknown imported course identifiers cannot inflate learning statistics",
       "passed": true
     }
   ]

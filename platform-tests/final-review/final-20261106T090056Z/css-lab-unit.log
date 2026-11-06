@@ -1,0 +1,46 @@
+PASS managed block replacement preserves exact surrounding custom CSS and remains single
+PASS margin px supports bound 0
+PASS margin px supports bound 1
+PASS margin rem supports bound 0
+PASS margin rem supports bound 1
+PASS margin % supports bound 0
+PASS margin % supports bound 1
+PASS padding px supports bound 0
+PASS padding px supports bound 1
+PASS padding rem supports bound 0
+PASS padding rem supports bound 1
+PASS padding % supports bound 0
+PASS padding % supports bound 1
+PASS fontSize px supports bound 0
+PASS fontSize px supports bound 1
+PASS fontSize rem supports bound 0
+PASS fontSize rem supports bound 1
+PASS fontSize % supports bound 0
+PASS fontSize % supports bound 1
+PASS width px supports bound 0
+PASS width px supports bound 1
+PASS width rem supports bound 0
+PASS width rem supports bound 1
+PASS width % supports bound 0
+PASS width % supports bound 1
+PASS height px supports bound 0
+PASS height px supports bound 1
+PASS height rem supports bound 0
+PASS height rem supports bound 1
+PASS height % supports bound 0
+PASS height % supports bound 1
+PASS gap px supports bound 0
+PASS gap px supports bound 1
+PASS gap rem supports bound 0
+PASS gap rem supports bound 1
+PASS gap % supports bound 0
+PASS gap % supports bound 1
+PASS radius px supports bound 0
+PASS radius px supports bound 1
+PASS radius rem supports bound 0
+PASS radius rem supports bound 1
+PASS radius % supports bound 0
+PASS radius % supports bound 1
+PASS invalid CSS control cannot inject code or produce NaN
+PASS source bounds reject without silently truncating
+PASS preview disables scripts and network and neutralizes style rawtext closer

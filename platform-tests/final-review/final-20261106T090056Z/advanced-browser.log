@@ -1,0 +1,21 @@
+PASS html-accessible-feedback actual DOM and behavior
+PASS html-native-validation actual DOM and behavior
+PASS html-details-disclosure actual DOM and behavior
+PASS html-table-relations actual DOM and behavior
+PASS css-grid-minmax actual DOM and behavior
+PASS css-flex-min-width actual DOM and behavior
+PASS css-custom-properties-clamp actual DOM and behavior
+PASS css-transition-reduced-motion actual DOM and behavior
+PASS js-closure-counters actual DOM and behavior
+PASS js-async-error-handling actual DOM and behavior
+PASS js-reduce-summary actual DOM and behavior
+PASS js-event-delegation actual DOM and behavior
+PASS vue-computed-filter actual DOM and behavior
+PASS vue-watch-side-effect actual DOM and behavior
+PASS vue-props-emits actual DOM and behavior
+PASS vue-keyed-component-state actual DOM and behavior
+PASS responsive grid at390px becomes one column without overflow
+PASS reduced motion disables displacement and transition while preserving state
+PASS all32lessons append to real component and advanced source opens without autoexecution
+PASS 390px course remains usable with advanced lesson selected
+PASS no external requests or unexpected errors in actual examples

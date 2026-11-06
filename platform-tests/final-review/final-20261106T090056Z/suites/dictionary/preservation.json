@@ -1,0 +1,173 @@
+{
+  "timestamp": "2026-11-06T09:01:00.573Z",
+  "terms": 180,
+  "uniqueIds": 180,
+  "legacyLessons": 15,
+  "changedExampleSources": [
+    {
+      "id": "css-animation_keyframes",
+      "field": 5
+    },
+    {
+      "id": "css-aspect-ratio",
+      "field": 5
+    },
+    {
+      "id": "css-background",
+      "field": 5
+    },
+    {
+      "id": "css-border_border-radius",
+      "field": 5
+    },
+    {
+      "id": "css-box-shadow",
+      "field": 5
+    },
+    {
+      "id": "css-color",
+      "field": 5
+    },
+    {
+      "id": "css-cursor",
+      "field": 5
+    },
+    {
+      "id": "css-display",
+      "field": 5
+    },
+    {
+      "id": "css-filter_blur_drop-shadow",
+      "field": 5
+    },
+    {
+      "id": "css-flex_flexbox",
+      "field": 5
+    },
+    {
+      "id": "css-gap",
+      "field": 5
+    },
+    {
+      "id": "css-grid_css_grid",
+      "field": 5
+    },
+    {
+      "id": "css-hover_focus",
+      "field": 5
+    },
+    {
+      "id": "css-justify-content_align-items",
+      "field": 5
+    },
+    {
+      "id": "css-linear-gradient",
+      "field": 5
+    },
+    {
+      "id": "css-margin_padding",
+      "field": 5
+    },
+    {
+      "id": "css-media",
+      "field": 5
+    },
+    {
+      "id": "css-opacity_backdrop-filter",
+      "field": 5
+    },
+    {
+      "id": "css-overflow_overflow-x_y",
+      "field": 5
+    },
+    {
+      "id": "css-position",
+      "field": 5
+    },
+    {
+      "id": "css-scroll-behavior",
+      "field": 5
+    },
+    {
+      "id": "css-transform_transition",
+      "field": 5
+    },
+    {
+      "id": "css-user-select",
+      "field": 5
+    },
+    {
+      "id": "css-width_height",
+      "field": 5
+    },
+    {
+      "id": "css-z-index",
+      "field": 5
+    },
+    {
+      "id": "html-canvas",
+      "field": 11
+    },
+    {
+      "id": "js-export_import",
+      "field": 5
+    },
+    {
+      "id": "ts-type_narrowing_guards",
+      "field": 11
+    },
+    {
+      "id": "vue-computed",
+      "field": 5
+    },
+    {
+      "id": "vue-defineasynccomponent",
+      "field": 5
+    },
+    {
+      "id": "vue-defineexpose",
+      "field": 5
+    },
+    {
+      "id": "vue-nexttick",
+      "field": 5
+    },
+    {
+      "id": "vue-onmounted",
+      "field": 5
+    },
+    {
+      "id": "vue-onunmounted",
+      "field": 5
+    },
+    {
+      "id": "vue-provide_inject",
+      "field": 5
+    },
+    {
+      "id": "vue-reactive",
+      "field": 5
+    },
+    {
+      "id": "vue-shallowref_shallowreactive",
+      "field": 5
+    },
+    {
+      "id": "vue-toref_torefs",
+      "field": 5
+    },
+    {
+      "id": "vue-useslots_useattrs",
+      "field": 5
+    },
+    {
+      "id": "vue-watch_watcheffect",
+      "field": 5
+    },
+    {
+      "id": "vue-watchposteffect",
+      "field": 5
+    }
+  ],
+  "backupsUnchanged": true
+}

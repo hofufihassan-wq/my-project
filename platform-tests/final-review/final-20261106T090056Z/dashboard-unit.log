@@ -1,0 +1,6 @@
+PASS calendar accepts real leap date and rejects overflow
+PASS calendar42 includes adjacent month and correct weekdays
+PASS task validation rejects blank title bad status and impossible date
+PASS event validation rejects bad local time and missing date
+PASS oversized note is refused without truncation
+PASS unknown imported course identifiers cannot inflate learning statistics

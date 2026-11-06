@@ -27,6 +27,7 @@ import { ref, computed } from 'vue';
 const count = ref(0); const visible = ref(true);
 const doubled = computed(() => count.value * 2); const items = ref(['أ','ب']);
 const literal = 'import { imaginary } from "missing"';
+globalThis.__vlxPreviewExecutionSentinel = 'opaque-preview-only';
 </script>
 <template><button id="increment" @click="count++">{{ count }} / {{ doubled }}</button>
 <button id="toggle" @click="visible=!visible">إظهار</button><ul v-if="visible"><li v-for="item in items" :key="item">{{item}}</li></ul>
@@ -86,7 +87,11 @@ async function main() {
       assert.equal(await frame.locator('.scoped-text').evaluate(el=>getComputedStyle(el).color),'rgb(255, 0, 0)');
       assert.equal(await frame.locator('.scoped-text').getAttribute('data-v-lexicon-preview'),'');
       assert.notEqual(await frame.locator('body').evaluate(()=>{const p=document.createElement('p');p.className='scoped-text';document.body.append(p);return getComputedStyle(p).color;}),'rgb(255, 0, 0)');
-      assert.equal(await page.evaluate(()=>typeof window.VueLexiconCompiler),'undefined');
+      // The learning lab loads this trusted parser for AST analysis in the parent.
+      // User SFC execution must still occur only in the opaque preview realm.
+      assert.equal(await page.evaluate(()=>typeof window.VueLexiconCompiler?.babelParse),'function');
+      assert.equal(await page.evaluate(()=>typeof window.__vlxPreviewExecutionSentinel),'undefined');
+      assert.equal(await frame.locator('body').evaluate(()=>globalThis.__vlxPreviewExecutionSentinel),'opaque-preview-only');
       assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
       assert.equal(await frame.locator('body').evaluate(()=>{try{parent.localStorage.getItem('x');return false;}catch(_){return true;}}),true);
       assert.equal(await app(a=>a.simulatorReferenceCode),sfc);

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-11-06T09:01:50.651Z",
+  "sourceRoot": "/tmp/vlex-final-review-20261106T090056Z",
+  "passed": 2,
+  "total": 2,
+  "results": [
+    {
+      "name": "nested bootstrap clone cannot forge log or an existing declared variable",
+      "passed": true,
+      "observed": {
+        "log": "log CLONE_PORT_OBSERVED\nlog CLONE_PORT_OBSERVED\nlog CLONE_PORT_OBSERVED\nlog CLONE_PORT_OBSERVED\nlog CLONE_PORT_OBSERVED",
+        "history": "بعد السطر 1: actual = 1بعد السطر 2: actual = 1"
+      }
+    },
+    {
+      "name": "normal console and observation survive private telemetry; global spoof ignored",
+      "passed": true,
+      "observed": {
+        "log": "log ACTUAL 9"
+      }
+    }
+  ]
+}

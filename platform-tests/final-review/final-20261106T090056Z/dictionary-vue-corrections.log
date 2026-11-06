@@ -1,0 +1,17 @@
+PASS vue-computed:vue
+PASS vue-defineasynccomponent:vue
+PASS vue-defineexpose:vue
+PASS vue-nexttick:vue
+PASS vue-onmounted:vue
+PASS vue-onunmounted:vue
+PASS vue-provide_inject:vue
+PASS vue-reactive:vue
+PASS vue-shallowref_shallowreactive:vue
+PASS vue-toref_torefs:vue
+PASS vue-useslots_useattrs:vue
+PASS vue-watch_watcheffect:vue
+PASS vue-watchposteffect:vue
+PASS js-export_import:vue
+PASS ts-type_narrowing_guards:vanilla
+PASS typeof guard: invalid type throws actual TypeError
+PASS parent application: no uncaught errors
