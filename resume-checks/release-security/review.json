@@ -1,0 +1,1924 @@
+{
+  "created_utc": "2026-11-07T17:49:12.053210+00:00",
+  "branch": "feat/vlex-personal-learning-platform",
+  "baseline_commit": "1cf220c506a132ae1a43a78f3cb508ee394a48c6",
+  "checked_head": "21af491d3610511ce2c6ff1bb0098301265cf2b8",
+  "result": "No credential patterns found within the explicitly documented scope; not an absolute privacy guarantee.",
+  "incremental": {
+    "files": 303,
+    "text_files": 87,
+    "text_bytes": 1653017,
+    "png": 205,
+    "videos": 11,
+    "sampled_video_frames": 33,
+    "ocr_success": 238,
+    "ocr_total": 238,
+    "new_commit_metadata": 6,
+    "gitleaks": {
+      "version": "8.24.3",
+      "exit": 0,
+      "finding_count": 0,
+      "findings_redacted": []
+    },
+    "supplemental_candidates": [],
+    "sensitive_filename_candidates": [],
+    "excluded_folder_scanned_separately": "delivery/20261107-b717d9bd/",
+    "files_and_hashes": [
+      {
+        "path": "FREE_HOSTING_AR.md",
+        "bytes": 6271,
+        "sha256": "366ab1cbe4f23cf12a7d55ae113a6660aa33b8b86391b5b3f280c08c67fc5abb",
+        "text": true
+      },
+      {
+        "path": "GITHUB_CONNECTION_AR.md",
+        "bytes": 2970,
+        "sha256": "5171d06d6520b51b7df872cb7856eb43f945f554bfd0d822117617b465cb11f7",
+        "text": true
+      },
+      {
+        "path": "RESUME_DELIVERY_STATUS_AR.md",
+        "bytes": 13920,
+        "sha256": "998d5aa7d4dae4b59c0375544fc4cb8f2629462893c6acfe42c8e1ab35b8345a",
+        "text": true
+      },
+      {
+        "path": "app.js",
+        "bytes": 139352,
+        "sha256": "7da7f6983d3dc67036558be9e3ee1adc3ea3f963e4ff36994741b9663d80fecb",
+        "text": true
+      },
+      {
+        "path": "assets/vendor/manifest.json",
+        "bytes": 9333,
+        "sha256": "615269843f9a3d7663cd03dc7837e1116ee21664a564ac361833aff8aa36e6e1",
+        "text": true
+      },
+      {
+        "path": "preview-runner.js",
+        "bytes": 12689,
+        "sha256": "810581922329cd8394248b941f0c1309b1c186c21f806855df71e9dceb10a09d",
+        "text": true
+      },
+      {
+        "path": "resume-checks/browser/README_AR.md",
+        "bytes": 5327,
+        "sha256": "9212cf16349f6c1aaab0422e6ba87c3d6bc8284d97bbea75050b039fab366f82",
+        "text": true
+      },
+      {
+        "path": "resume-checks/browser/backup-check.json",
+        "bytes": 64,
+        "sha256": "4aec831ec86f5e214b8737883d29ca6e5c9982bdc6b60369471be8f81dccb436",
+        "text": true
+      },
+      {
+        "path": "resume-checks/browser/backup-import-and-invalid.png",
+        "bytes": 380230,
+        "sha256": "bb83815dcbd87466820e59663e1f4bb047e45d099fef72fa6aad78ee255d4310",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/css-live-computed.png",
+        "bytes": 275184,
+        "sha256": "dbbb9159a7932b4c6714b6ed42d82d34f1d74062bc896462d38f2690e83efab6",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/css-live-controls.png",
+        "bytes": 275231,
+        "sha256": "1076a510e7cf1dd92a17833bcac2e4e06748fd5474de79dfa22b31073cb65916",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/current-state.png",
+        "bytes": 247367,
+        "sha256": "f20e18697ebdab203788753261791c2fb115c797b63581b3b40ca0c6ea23a86f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/dictionary-backup-test.json",
+        "bytes": 405,
+        "sha256": "a6c447cc01b8daa45e0c86dcad738988c03a6d9b12956b42035def507328a8f1",
+        "text": true
+      },
+      {
+        "path": "resume-checks/browser/dictionary-search.png",
+        "bytes": 399587,
+        "sha256": "59262868efb69601b08e46b0a489719e696d67a793182df3ac85e4ee93f739ae",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/explainer-local.png",
+        "bytes": 258494,
+        "sha256": "aa498c75f368be7345de026fd913c17a23bbae7a359e0001a0d1e19a2ea4b5d0",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/explore-driver.cjs",
+        "bytes": 2362,
+        "sha256": "4aed7ccb6f0f9323b6403453210cdd2f21a6fed1a7b96cdf2feb9b9c50f89c18",
+        "text": true
+      },
+      {
+        "path": "resume-checks/browser/finish-practical-browser.png",
+        "bytes": 203477,
+        "sha256": "c5c0b581fd236b13fa48a41cddd3dc9b58f8f66d7a1db83cd4da4ea85d98a7bc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/home.png",
+        "bytes": 186318,
+        "sha256": "08e153cbe6151f446fba552b649cde4f3ff353fc6210d57f1fe4affa1591d99f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/js-real-error.png",
+        "bytes": 208589,
+        "sha256": "8fef9425db22baa7d43f0ad57fcd7937feb2577f07be41f5ed29fc87ae6de6e1",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/js-real-output.png",
+        "bytes": 248115,
+        "sha256": "e8e9a9d112c2297d6caa327c33b1e595ef91789f1bbd66c9b45f85b78a9e6dcc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/js-step-observation.png",
+        "bytes": 203477,
+        "sha256": "c5c0b581fd236b13fa48a41cddd3dc9b58f8f66d7a1db83cd4da4ea85d98a7bc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/learning-backup-test.json",
+        "bytes": 1869,
+        "sha256": "538b6109b81afcf3b2564717f0b4fd90d97954dc9111cf0957c465a68865eb8a",
+        "text": true
+      },
+      {
+        "path": "resume-checks/browser/legacy-backup-download.png",
+        "bytes": 178560,
+        "sha256": "2200e780b86c10114e74c49d118f54d357e76923e0ce8bc2621497adf182763a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/legacy-import-and-favorite-reopen.png",
+        "bytes": 182943,
+        "sha256": "64abdacfc0b6a766f50f196e7e438bfd872027de42eefb583d7a2ce70ddc3db8",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/navigation-inspection.png",
+        "bytes": 195282,
+        "sha256": "eff3019d69b483b71890c12bba5c37a71a0e782d3c9e7e143966dee201e89089",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/new-backup-download.png",
+        "bytes": 384049,
+        "sha256": "665f14ec4e9ab8e0955c09f7b5533a1f21346bc4cbf0edb3738a0110695806f5",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/observations.json",
+        "bytes": 80562,
+        "sha256": "06ebef3b895ea1caa19f62e4a233b49470bb1a8f914fcd8865ac22524147e500",
+        "text": true
+      },
+      {
+        "path": "resume-checks/browser/settings-open.png",
+        "bytes": 387162,
+        "sha256": "d224ac5e8c99882b46f96db8dad991d12efce157ae88c250045b1130b43c50cf",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/vue-counter-interaction.png",
+        "bytes": 352569,
+        "sha256": "3086641a1fc9a92661baa99a761a98b0d87e34b6cade792723346e7b0e9c42b2",
+        "text": false
+      },
+      {
+        "path": "resume-checks/browser/vue-live-and-bookmark.png",
+        "bytes": 438765,
+        "sha256": "3b6a65e0c6d10afea2bb8887fdd0060c17f4101711e09ffb7fd83536903d6e96",
+        "text": false
+      },
+      {
+        "path": "resume-checks/fragments/README_AR.md",
+        "bytes": 6607,
+        "sha256": "78d28026bf4e56d674c4946d8b1fa00a072478133f28e6143a2eef878f55eaf0",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/after.log",
+        "bytes": 796,
+        "sha256": "b5468614f2f7aa216c871788c91596e5e718609a7698ea7b74c055c9835b1518",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/after/full-simulator-fragment.png",
+        "bytes": 825116,
+        "sha256": "135fdabb2a6ba3676e01af2db138c31c8f3817f6b0ef784b21b32b9c37c5ab89",
+        "text": false
+      },
+      {
+        "path": "resume-checks/fragments/after/keyboard-fragment.png",
+        "bytes": 19457,
+        "sha256": "3c84a0f9d697d3e0b6a154b8098164ca483d0c34ea975bb8b6256cfc67e6fafc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/fragments/after/mouse-fragment.png",
+        "bytes": 19457,
+        "sha256": "3c84a0f9d697d3e0b6a154b8098164ca483d0c34ea975bb8b6256cfc67e6fafc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/fragments/after/results.json",
+        "bytes": 7218,
+        "sha256": "dac7f34226dc26cb3d62e8106c52dfae4605dc5496e01424fcff619b65e9c935",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/after/video/d5b1d224e8eb94a39278c8e47f5c94ec.webm",
+        "bytes": 906391,
+        "sha256": "04cc2ad4e88b3e12423c74b96ddd353cf9c727e173982717ac5b9578dbea7b0d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/fragments/before-runtime.log",
+        "bytes": 1821,
+        "sha256": "13a6142a0d509d64a042806e5a421fbfc5532e8bc285f79dd10979b669b87ad9",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/before-runtime/keyboard-fragment.png",
+        "bytes": 11457,
+        "sha256": "da2553e83d2f6bcd9bd60c4848b1d6a4ea7e169773779d730161a6aaed7a83c9",
+        "text": false
+      },
+      {
+        "path": "resume-checks/fragments/before-runtime/mouse-fragment.png",
+        "bytes": 11457,
+        "sha256": "da2553e83d2f6bcd9bd60c4848b1d6a4ea7e169773779d730161a6aaed7a83c9",
+        "text": false
+      },
+      {
+        "path": "resume-checks/fragments/before-runtime/results.json",
+        "bytes": 7299,
+        "sha256": "9f4cab3acf495b41074c9b527ba764463cf5bfb9a445b50174617a83d438ef9d",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/before-runtime/video/5e592e12e4bf587e065a8ac3e2768b89.webm",
+        "bytes": 968849,
+        "sha256": "39a62abe5648a2e2f3a5ea0a6574a84e7b31c935bc5531bce3c67e4642b1a165",
+        "text": false
+      },
+      {
+        "path": "resume-checks/fragments/before.log",
+        "bytes": 35,
+        "sha256": "b9aec71c02a52957dd701b05300c24c5d1b69920705a751dc7a9079e4c4a76dc",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/before/results.json",
+        "bytes": 1436,
+        "sha256": "cceca04fe36569fa5e99120e19e3256f8c4e7241db3612e5db94e682a5debd5c",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/browser.cjs",
+        "bytes": 11609,
+        "sha256": "bb4a97663de2cfdce4e74a5404cd65baf0b07ad0e639dc81435ac4b5a329dd56",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/data-safety-after.log",
+        "bytes": 1212,
+        "sha256": "d6656d4f42513f0aec081a661b3f2bdb1bda971d9a636d0dd9ae31bcf6fa035f",
+        "text": true
+      },
+      {
+        "path": "resume-checks/fragments/protocol-after.log",
+        "bytes": 1294,
+        "sha256": "3223c16e3a9ab96cad62fb9bc6ebe02060f1cd40c8b458ce7524e7be50e3bca5",
+        "text": true
+      },
+      {
+        "path": "resume-checks/home-preview/comparison.json",
+        "bytes": 627,
+        "sha256": "9ee5c5a8c6c3ea6745477c3da94b832c3465fbd440ccabf63e91003a8a824bda",
+        "text": true
+      },
+      {
+        "path": "resume-checks/home-preview/home-component-fix.patch",
+        "bytes": 286,
+        "sha256": "e9c3ad5bcd90eee3c33ff73033e76e56bdb95c7cd66dea761f6a0a25171476db",
+        "text": true
+      },
+      {
+        "path": "resume-checks/home-preview/prepare.cjs",
+        "bytes": 2677,
+        "sha256": "22d7d0336d4d47ed5163c338a1b674af77fac7acb69f7cb473f84a794f3ef2f2",
+        "text": true
+      },
+      {
+        "path": "resume-checks/home-preview/restored-home-preview.png",
+        "bytes": 713146,
+        "sha256": "36904e94016945778da0b1c2fe04608ee606b1a7dca93d76291ff23b1da3876c",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/BASELINE_FINDINGS_AR.md",
+        "bytes": 7307,
+        "sha256": "1a19798d2ec14dd9265d1e5cbe4ebef7358f79b058ec5b7fed57f09cf84d67ec",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/EVIDENCE_INDEX.html",
+        "bytes": 8511,
+        "sha256": "4c3c745a542c2ac3960977d2a5a07a3c00444fb17bbed34a838e04fb19860520",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/FINAL_EVIDENCE_INDEX.html",
+        "bytes": 9894,
+        "sha256": "0300e7894a0edc9ea0db36510085fb8a95beaa8870a530e04f5d3163e4757a58",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/FINAL_LESSONS_REPORT_AR.md",
+        "bytes": 12653,
+        "sha256": "7dda9e32d1afbddda8762c7e90529a1182a2e1c480aac0dd98890d16ffcb41cf",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/REPORT_AR.md",
+        "bytes": 12087,
+        "sha256": "bb8b79feca93ef18d30da7486c6cf5bf8269fcd3e1d3f0d153115e23a2bef0b1",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/complete-run.log",
+        "bytes": 8804,
+        "sha256": "518bab090189c62eb1cff74be8cf05743e338b3cfe507311639d6657425f8bc0",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/complete/results.json",
+        "bytes": 218288,
+        "sha256": "ea762d7590e63d0a4e64801591ab877782cc60c147c2a76bf491a81cb8585806",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/CSS-103-reference.png",
+        "bytes": 1041156,
+        "sha256": "355202d519fbda437ad4dbe8d6b0d7be76084575e4703b27c9546aa624d173e8",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/HTML-103-reference.png",
+        "bytes": 1045862,
+        "sha256": "2575e9a3d5b44e11162e14c2dbc6f7bbb84aadfd9ea26d93ddcb455d35758a88",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/VUE-101-reference.png",
+        "bytes": 1048680,
+        "sha256": "561eec75357659ebf98eb42665462bc8225392d132468fccb0603483abe67bd1",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-custom-properties-clamp-course.png",
+        "bytes": 245910,
+        "sha256": "4044e34a1b83da74b61e1b15ad2c09847445c3a3c2039ac4d2448747d3b697aa",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-flex-course.png",
+        "bytes": 187280,
+        "sha256": "36751057f56d3e830ea3d10bc9530cc4e2a9572eebb8f496b60ffc53f34f3927",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-flex-min-width-course.png",
+        "bytes": 240278,
+        "sha256": "e73d4aadff91bd67d229eeafedca69ca1ce23256bdf624361fd74bf77e043656",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-grid-minmax-course.png",
+        "bytes": 214479,
+        "sha256": "51d7c4952e6c5bcb47e07cee03df88271151adb2f7bcad2dcede1f89d0c6b626",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-grid-minmax-simulator.png",
+        "bytes": 1022292,
+        "sha256": "3c84e2a6a7f763a0008465fb77cf747b9862ceb6dd2ecb5498a7a7f3c2c6b902",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-responsive-course.png",
+        "bytes": 198113,
+        "sha256": "9a5cce343a49e61ef9d1fb608bab2dcc7904049e97afc3882b4a8ce6d09d1cf8",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-selectors-course.png",
+        "bytes": 182715,
+        "sha256": "48035e305756ba2b9867bd4e89d6fb5b2e4b36c79b110b4ea2288a49aa26dae0",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-spacing-course.png",
+        "bytes": 182193,
+        "sha256": "dc1d59a98ba09afff4777399913eab875687720f1a5a4b887881cd9984ebaf0b",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/css-transition-reduced-motion-course.png",
+        "bytes": 247046,
+        "sha256": "8a2a7df00f07d98f78380fad0ed11d6fb6ed5ae38ecd994cc72db27f0c7d3e6d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-accessible-feedback-course.png",
+        "bytes": 260378,
+        "sha256": "d3381e9ec6f21fda30983dbf167134807910204e919151d0c0cf5d4b5d8b3291",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-attributes-course.png",
+        "bytes": 184890,
+        "sha256": "9a9f2a0b6b0d186fb327e2ce737e311c7d4e1f021edfbeaabe9b8603d4e81e19",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-details-disclosure-course.png",
+        "bytes": 220579,
+        "sha256": "d9fc41909b0844374b9751ae7e791927eaeb33de1f9db6b8a1771debf465cee3",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-form-course.png",
+        "bytes": 196435,
+        "sha256": "40611bc6d61af7e69668fa6bb2afe83141576cee4f6991f71cad039af1947e11",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-native-validation-course.png",
+        "bytes": 257756,
+        "sha256": "e0c4ea2d9cc3487fc57150a10059c4555f5cfbec1f0d7d32659580c6a1ce496e",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-native-validation-simulator.png",
+        "bytes": 1061651,
+        "sha256": "78922b088420bbc1c2a5a92f6e0fee842adaaed942b51948e11410baddcde9c3",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-semantics-course.png",
+        "bytes": 186821,
+        "sha256": "49c54663bfe44a8e41822d4ae8d034c843b75fa9a6d41f1599ad311e003c733b",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-structure-course.png",
+        "bytes": 172448,
+        "sha256": "b491fa5a1935f65eb486a148be820ce1b013ec1a46a2b0ca25a361a9b88af08f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/html-table-relations-course.png",
+        "bytes": 222097,
+        "sha256": "c31014f70c32eee03f31a0c369742f1955adaf996b3cef11410f98d781c83f29",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/js-arrays-course.png",
+        "bytes": 199398,
+        "sha256": "c558c4e8864ad154a0e29337aebfceaeedc2c733605428fe2e93fac076005134",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/js-async-error-handling-course.png",
+        "bytes": 271593,
+        "sha256": "0de2c3d9eb134a4a80d29c5485633152596455ed7547cc4a71629452f1494e15",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/js-closure-counters-course.png",
+        "bytes": 236876,
+        "sha256": "1ed261b5f3ebe96d788592ede328d6d7879e9af33c03642558779868a6e65bfc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/js-conditions-course.png",
+        "bytes": 191734,
+        "sha256": "57e409605038d453eecfef77a2a5db108bc8c4d9194cead913ed94b3cd40d536",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/js-event-delegation-course.png",
+        "bytes": 261149,
+        "sha256": "3cdc5339beb19ff93a138ec8eb5abf623f8c277d4ea93ee23cc9017e608fae72",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/js-events-course.png",
+        "bytes": 197863,
+        "sha256": "d2702bcaa7d722ba096d872cbc95b8658b9a41e6d769bed05a8a92579c42e478",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/js-reduce-summary-course.png",
+        "bytes": 239240,
+        "sha256": "ac1ae56c429e44188ed8297a5a6d5cd1e35cd5a8ccceb896c48b163b3c906d74",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/js-values-course.png",
+        "bytes": 187874,
+        "sha256": "18624935252a44960668e87c000cb5d389dc88156085922279c69ce7c95c334d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-components-course.png",
+        "bytes": 221355,
+        "sha256": "f466b93b15be6186a7d7e8b12758d4e85a7bcda69bb4c86ff55d6bab47d05e53",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-computed-filter-course.png",
+        "bytes": 254601,
+        "sha256": "ec869ca26645ac9d53e550628ba54955d4c8cbb2aa576dea98e3ad9cdd4edf82",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-keyed-component-state-course.png",
+        "bytes": 253772,
+        "sha256": "9baf72e9113865795a4978259eef7c82fcf1a2424fe741bc5597be19125ddca0",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-list-course.png",
+        "bytes": 228004,
+        "sha256": "7c9174fa371a8adfa9f7e98c684f4f8075f4219bcd2e1c5e7f90e1d83f853b89",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-model-course.png",
+        "bytes": 212085,
+        "sha256": "a214d08dcafada8ed6c3d2637fe77861d7412f0588b51ae172c309e837251e49",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-props-emits-course.png",
+        "bytes": 248377,
+        "sha256": "392235b05b682c1e14ee8ca49cbda9cb29e8d0548ffe914fad706f3045681124",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-props-emits-simulator.png",
+        "bytes": 1064007,
+        "sha256": "6c5fcad0633d532c6b46bdca7f991c2af4b54e5f1a7787e2ab46df8d369bf08c",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-ref-course.png",
+        "bytes": 208297,
+        "sha256": "e525e3f89fa452fe4f1850c29dc85ae9a522cb6af6e79293c361fbbfb0f922bf",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/screenshots/vue-watch-side-effect-course.png",
+        "bytes": 259125,
+        "sha256": "afd6b9e09c32e576095ab7059e0f56b397ad070ff85d609c027f89e6d5a25479",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/complete/video/3508911697e3cf07ed3afa57ef3d3d8f.webm",
+        "bytes": 18413967,
+        "sha256": "7b0131b5d274324e6fbd7c4ac7553684c9e2fec9da0623564b777a01c0f202fe",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop-interactions.cjs",
+        "bytes": 5984,
+        "sha256": "dbca9ca0ea6b2fd328f90f649eef36c8d76f497305edf634d6416002a1897a14",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/desktop-run.log",
+        "bytes": 4238,
+        "sha256": "042eba60f77e222ec888a321c49b24e8121a31a4f399441f990e227d754e21d6",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/desktop/native-interactions.mp4",
+        "bytes": 4057381,
+        "sha256": "dc95158664496d500f56f6a911e77db592be767fc4b107266257121087534843",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/results.json",
+        "bytes": 45479,
+        "sha256": "269319196cf3fab35d99e4a59fd4e729f1251fef089feaf1b804961175d57887",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/html-attributes-1000-after.png",
+        "bytes": 1093976,
+        "sha256": "2bfd137489c21fb6ab9482316441a4709d7923b550706baadea12b251cba81ee",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/html-attributes-1000-before.png",
+        "bytes": 1019414,
+        "sha256": "8da9fbe343a0cec95e26712acc31846fb407785437ed1f0d535300f85ca4c595",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/html-attributes-keyboard-after.png",
+        "bytes": 1176989,
+        "sha256": "c747751030f1394e24d319feaf7700c409e439ffbecf96118e94c88306a50e35",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/html-details-disclosure-1000-after.png",
+        "bytes": 1037297,
+        "sha256": "9157d1f2a70c29b2e7e1d23a7f2d425c0843af38fbffd6991f1ee6fd09320cce",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/html-details-disclosure-1000-before.png",
+        "bytes": 1036199,
+        "sha256": "565015c1566c7080b8850018f58f8a5b5157073c44b8dab000c6f87d76f15d82",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/html-form-1000-after.png",
+        "bytes": 1017760,
+        "sha256": "3bcb32f9d82a222159df77769888985f73ad3a1cb1526e24c5a7d5fa6d8de233",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/html-form-1000-before.png",
+        "bytes": 1022946,
+        "sha256": "10ce32ce65bcb39c262881c22cbaced7ee1412692c1cfca33ccae6b7929b484d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/js-closure-counters-1000-after.png",
+        "bytes": 1039441,
+        "sha256": "a44a327161616065849e183eefae52e9d281781abc2667b2fe43a1a983041fe8",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/js-closure-counters-1000-before.png",
+        "bytes": 1044337,
+        "sha256": "c8aadddff0c5f824495feb0ac71a5b4eb177cdfb69f6f3ce86cf4df796573efb",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/js-event-delegation-1000-after.png",
+        "bytes": 1054102,
+        "sha256": "d25e4c70df883ca09c6aeb97cdddbd6b2212f2030ad5b49c2eb090d6ab50f295",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/js-event-delegation-1000-before.png",
+        "bytes": 1055780,
+        "sha256": "9d7614e523ecabfd95e20dba9e580aab83d613d2ad8aab6a5bfce30673edee46",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/js-events-1000-after.png",
+        "bytes": 1029514,
+        "sha256": "21905068f4c42ecdcd096de82c4d23f7e7dc6afe8093cf7f86d9393cb7152390",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/js-events-1000-before.png",
+        "bytes": 1033995,
+        "sha256": "b86fe36df3809de4d76f9223bafbed00073499e70f15ebf316a1c8baeb041a67",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/vue-ref-1000-after.png",
+        "bytes": 1036978,
+        "sha256": "526d6480c26b592924a614b56cfec1a5969c2b273c1491ebedd4c55a2db651df",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/screenshots/vue-ref-1000-before.png",
+        "bytes": 1036611,
+        "sha256": "8139b46c93e69c6c9867f4181b8d6e4eb2cdb0e2f846ce1e06c5c7689b315b2b",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/desktop/video/97e8307508851a629ffc138523676410.webm",
+        "bytes": 4425453,
+        "sha256": "f4f5bc54fd0f0eb439abda9c48104cd00bf6e5a36e919a221fee0567a4095655",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/final-report.cjs",
+        "bytes": 10257,
+        "sha256": "da0ca5af658ab45241b8f5d538717028dad514364396f4413999a140c2c3e111",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/focused-interactions.cjs",
+        "bytes": 5249,
+        "sha256": "0426a7ebe3619ac3364b9a089f3e7c6bd8c1a44c29a04263c06a400b69c4545b",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/focused-run.log",
+        "bytes": 3734,
+        "sha256": "a8b6c8fbafc2a3497c4a9b8e858d81da8a96bfbff9092415b592a10f90ea520d",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/focused/results.json",
+        "bytes": 39060,
+        "sha256": "6a9f2ca161596ace85da557c4cb67e171a5c63aff4ce4179d0738b53ddcad85d",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-attributes-0-after.png",
+        "bytes": 1023008,
+        "sha256": "9ed805f5f9b0b488bed8cdf2e15a01f71ea03d2ea42b09f4b7d629913e634879",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-attributes-1000-after.png",
+        "bytes": 1032295,
+        "sha256": "4382d3a46815878784a9d5ae3953540453ba9955f6fc2b0834c4012af8540c70",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-attributes-1000-before.png",
+        "bytes": 1015546,
+        "sha256": "b95bef0ac781929104fa23fbb4b73b6985609c511225ef354134a0720db59006",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-details-disclosure-0-after.png",
+        "bytes": 1030481,
+        "sha256": "6f39f56e498d600941f437ecea76fd2bd532b2faf48c961b76d2d6a65016dc04",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-details-disclosure-1000-after.png",
+        "bytes": 1023942,
+        "sha256": "7465512e7715657198c4c99db62520b36e9bd1364131e9606489b334e7e21887",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-details-disclosure-1000-before.png",
+        "bytes": 1030662,
+        "sha256": "ae6b2d2099a0aec10df59199fbeabe052ea6b1bfbb6552e50d2f61a2315b7951",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-form-0-after.png",
+        "bytes": 1026789,
+        "sha256": "26bad8d3f99267bedb633ab05c7252d00084745b087a0da4959ea3e7f1788be3",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-form-1000-after.png",
+        "bytes": 1021670,
+        "sha256": "aa0612cdab49fda563b598dc4453737c71f11adf8be896e1d56b3e989bf24071",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/html-form-1000-before.png",
+        "bytes": 1023748,
+        "sha256": "684be379b8a9136e954931d9efd5079a8aff0a0ce580413824790167b74fc91c",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-closure-counters-0-after.png",
+        "bytes": 1053154,
+        "sha256": "71acc18510d18dd16c5d47eeb9c055df5a040d6a0facad9e6996e2a94fba66b9",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-closure-counters-1000-after.png",
+        "bytes": 1048172,
+        "sha256": "4a0a603e8cdc92c8d07b94755bee89736ca8b06f64f1e696ff3cd1b6b0ce8272",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-closure-counters-1000-before.png",
+        "bytes": 1040980,
+        "sha256": "f455a487d2fc5c1a02eab75cb166ced93e7fa47c066f34026310498e3a4f2e87",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-event-delegation-0-after.png",
+        "bytes": 1064089,
+        "sha256": "60bdfb3a4960519df1024ffe6c1d7f669f8f25ce018fc391a6922a39bb5d964e",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-event-delegation-1000-after.png",
+        "bytes": 1061578,
+        "sha256": "64666a5f6b6c460596c431efbd50e3cef8a1223f2c84a9043db091c0da307271",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-event-delegation-1000-before.png",
+        "bytes": 1055859,
+        "sha256": "e64fd16807033439623294267697669183ab88d057abdc455eae0aeab39bfcd5",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-events-0-after.png",
+        "bytes": 1040235,
+        "sha256": "a416009116afddb41149cb120285c5564226cd8d9970af13ef3d4e5d1ac41df4",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-events-1000-after.png",
+        "bytes": 1043658,
+        "sha256": "54b9229127f111c0b427108ad358b01ee16c710547d8143ac8a5c0ef710fd69a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/js-events-1000-before.png",
+        "bytes": 1035124,
+        "sha256": "9bb361fee8a55eaf6022a490d55048037b2a7f5f60bd6052b0b16c5c9561f521",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/vue-ref-0-after.png",
+        "bytes": 1049298,
+        "sha256": "b708a85b554b3aebae6cb03ea30dd39c32307ecd8d7d8c0bfe286101e673398e",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/vue-ref-1000-after.png",
+        "bytes": 1044908,
+        "sha256": "5fadd840d352598b0894d269e3dd9032a5f5d509347bb2258b86119cdc171e2a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/screenshots/vue-ref-1000-before.png",
+        "bytes": 1044707,
+        "sha256": "4f4151d1cd2c6de5e4021b3607fd635359b53c6c5de677ca29eed8ce99e9e851",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/focused/video/190955f86b3fd2f57945bb77e56e97dc.webm",
+        "bytes": 6612608,
+        "sha256": "1c669da36e78720ece686d5692281f4afe1e1006ef004e769216b6e5df54902c",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh-run.log",
+        "bytes": 14343,
+        "sha256": "78bc8be466f7a892809829e464ab4ac1fd4551d45bacf11c8cf9306a60603245",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/fresh/results.json",
+        "bytes": 172761,
+        "sha256": "c7285c5a4d6cddf19009c481c0e45efc350b8bbe93eb8fbb0d71bcb6f0bd89ac",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/CSS-103-reference.png",
+        "bytes": 1041873,
+        "sha256": "e432b4484cbfd3f9240b2f6ef56aabe8a01c42d1fd69fbe93ac77d055089f26d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/HTML-103-reference.png",
+        "bytes": 1045858,
+        "sha256": "9c2159f2174fd39cee956bf73991bf8cc4ed46d69f8a93bceeacf7df16f28551",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/VUE-101-reference.png",
+        "bytes": 1048240,
+        "sha256": "2d702b052d63ad0b3b4354491f702bab564484fde7f2dc3922d7f761289fe2b1",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/css-custom-properties-clamp-course.png",
+        "bytes": 245527,
+        "sha256": "8de4ae6ccb5c1d82b6de4672bd5840bc266405b7c63d5158720ae753dce7cf35",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/css-flex-course.png",
+        "bytes": 187288,
+        "sha256": "d468b651dbdad753d612e71525275d57218906d0817ab6388d19c740a8e25a35",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/css-flex-min-width-course.png",
+        "bytes": 240724,
+        "sha256": "d9ea98661f7064668f97e1cbe93a8a16df083b083df693dc6ab832af63759f26",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/css-grid-minmax-course.png",
+        "bytes": 214799,
+        "sha256": "c8b9d4209daf00544d1b02dc9117078a759036f647307b24116293a91d50765a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/css-responsive-course.png",
+        "bytes": 198340,
+        "sha256": "61f2f80a6bd9cd2ddbc22a8e7dd7997cb82d30c8d47b431b3cb5551eff461b8e",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/css-selectors-course.png",
+        "bytes": 174830,
+        "sha256": "81ba835a838addc386973d45a11b45c8ff0a16d7925208bca78925fd668e53dc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/css-spacing-course.png",
+        "bytes": 174386,
+        "sha256": "f3daccd2dc15c45af2393b19a2e69e0ab2b0582937e91a2ad522461daa21a0ed",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/css-transition-reduced-motion-course.png",
+        "bytes": 239079,
+        "sha256": "dedf9a6570aa38d4c877ebc3862e282de89ef2a74b6524ea40281e63a6c6f390",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/html-accessible-feedback-course.png",
+        "bytes": 252488,
+        "sha256": "551964536b19bef884e92ebd13e41f1bd25ecabb8b74b9a2b59df0e918d9dc2d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/html-attributes-course.png",
+        "bytes": 184539,
+        "sha256": "9bb82a3af3debcbd5ca569b92ee3675e33743e707a0435ed13940499fa59f729",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/html-details-disclosure-course.png",
+        "bytes": 228539,
+        "sha256": "d56455d69916ba530d2dae7bbe7fb490e0141717532386c6b1e1b3eaac5acab0",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/html-form-course.png",
+        "bytes": 192791,
+        "sha256": "95a63002687148251ef955cebf9f9babbc8d712ee422aeeb2586a7d9f9569456",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/html-native-validation-course.png",
+        "bytes": 250382,
+        "sha256": "8ea7b707e17e743ba6f0ff3f4b7cc8cd64d89f07e9ceb0ba94db390d74bbdd6a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/html-semantics-course.png",
+        "bytes": 186386,
+        "sha256": "1d0871f48c48342cb4b7ec9e8581c3dcb3c78d21ad7f7b7765ea9db872f90900",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/html-structure-course.png",
+        "bytes": 172448,
+        "sha256": "b491fa5a1935f65eb486a148be820ce1b013ec1a46a2b0ca25a361a9b88af08f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/html-table-relations-course.png",
+        "bytes": 221669,
+        "sha256": "48b2babada125530422c3c33394ddcc04ce5f2c15f2edc169a3a56a96480b432",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/js-arrays-course.png",
+        "bytes": 199363,
+        "sha256": "ecc98370b18305041280b0e6f0ee02aa0387f87e60f36766805b8e3afd62f2fb",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/js-async-error-handling-course.png",
+        "bytes": 271698,
+        "sha256": "7e2a908d81587e93546697f37f8434855a8b1e04257e482275815d5d82b175d9",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/js-closure-counters-course.png",
+        "bytes": 236876,
+        "sha256": "1ed261b5f3ebe96d788592ede328d6d7879e9af33c03642558779868a6e65bfc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/js-conditions-course.png",
+        "bytes": 192004,
+        "sha256": "a262cd25467a63deac8a36b486989d354fda6c2919a9df1bc5c2091ee8130e26",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/js-event-delegation-course.png",
+        "bytes": 260975,
+        "sha256": "c305a6fec186b392346474e6cc4d48b8b09b4ac2352aff793319368ca366e341",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/js-events-course.png",
+        "bytes": 197556,
+        "sha256": "58ebd27c2b157e9292a2fb06e221a2f53752ec83ccbb120fc99fbb74dd9e5c4b",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/js-reduce-summary-course.png",
+        "bytes": 247006,
+        "sha256": "2a76aaf5a9507db5d748f90c84d42446a70546166642b6cf2a8f0ad1f47897d2",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/js-values-course.png",
+        "bytes": 187472,
+        "sha256": "dd8863236ac2244eaa01f783a2c3e8748bc5d76a9bbea9d46cc9c43aef0f06d2",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/vue-components-course.png",
+        "bytes": 213428,
+        "sha256": "9cd681cd9f102816eb27ab4e2ca24a036e4a1b9e30ed7f00db95dba18fef046a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/vue-computed-filter-course.png",
+        "bytes": 262349,
+        "sha256": "f7d73caf8225cdb0bd8ccbe3c3efed8efffd9cedc15601e291dfe763b92fc341",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/vue-keyed-component-state-course.png",
+        "bytes": 261288,
+        "sha256": "bce84b2f24ed3a01f3a58cc0ecea81fcb0229341db7a821acefc57e03cb0e003",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/vue-list-course.png",
+        "bytes": 220845,
+        "sha256": "c95125f0dd7dc4f23b6b8ccf19be5eb830775673daca176249fd77a49c7b5fa4",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/vue-model-course.png",
+        "bytes": 220046,
+        "sha256": "889d42ed99753f3e3543ede9244d0bc30d3c0508eb973b177c04b588f41436fa",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/vue-props-emits-course.png",
+        "bytes": 248364,
+        "sha256": "c146c790b3c6f05daa40bf62e3d5f160693111640d6e5781f8b721fc23188584",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/vue-ref-course.png",
+        "bytes": 216252,
+        "sha256": "ab5936f8699d134c0d53a874acf0bb10736a718c908e903160c967a424833b4f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/screenshots/vue-watch-side-effect-course.png",
+        "bytes": 259026,
+        "sha256": "b9a4977aaf7642c073b6b562d50ff816a6a69cc10bab3bfdfe47763ba024d44f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/fresh/video/1821487842fcc8654f4857d107793e93.webm",
+        "bytes": 15404214,
+        "sha256": "7df3467bc19d7ca045945fd70ef8728fc74ce7e7633570baac2da6ad5417f749",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/legacy-expanded-run.log",
+        "bytes": 1097,
+        "sha256": "a9288aa143dc36c39f03566df903a37d97c8bcd5981c1689aa00696057d13e8b",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/legacy-expanded.cjs",
+        "bytes": 7379,
+        "sha256": "84663a2f6b115cafa39f982d4569551043b7da4b75fc404fce9413f4bea3c15e",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/legacy-expanded/results.json",
+        "bytes": 44885,
+        "sha256": "ca54ac392d1afce8a8b3ce4d78c7f0af4f6d109bffe98462665d106d04eafead",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/legacy-expanded/screenshots/CSS-103-expanded.png",
+        "bytes": 731896,
+        "sha256": "2c168c648bb8d88209cfddb35808fc5f53328e024975e8c240e91b04ef5250c9",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/legacy-expanded/screenshots/HTML-103-expanded.png",
+        "bytes": 747205,
+        "sha256": "d8b41f73fa28641430a7178288e22804529cd96718c7d9142adb4aa77e41db0a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/legacy-expanded/screenshots/VUE-101-expanded.png",
+        "bytes": 735026,
+        "sha256": "d36c4badbe63e0ec9adf12e9c60e8baf57bdc9bb79b70bb7d5d644c895973582",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/legacy-expanded/video/46a071501fdb749c2d5d59ac336b3f28.webm",
+        "bytes": 3913400,
+        "sha256": "9709e65bade8271a3d5e3a754fd10255b958658ae47869785fa681a5e5a15b92",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/results.json",
+        "bytes": 158377,
+        "sha256": "e1ae86e21f04f5170dd42cc71be8e3d044aec847ad141dfe1c6f775a6663e1af",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/run.log",
+        "bytes": 24984,
+        "sha256": "72984cd6639d838ad81fd6cba93390286ce9b3d020db99423937b21dbb3036d2",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/screenshots/CSS-103-reference.png",
+        "bytes": 1041976,
+        "sha256": "cedd3c15cbd119c30c09ce5ed19008c7846ffbd67afe7b3daad6a5c5afe88b37",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/screenshots/HTML-103-reference.png",
+        "bytes": 1045875,
+        "sha256": "bf5fbb7b579848ce67e6732f616e969ffd7b8dfc52be73c58a8d59eace198a56",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/screenshots/VUE-101-reference.png",
+        "bytes": 1048591,
+        "sha256": "e9a4659fa733ced9ebb0dadccaf6fc50ac251c428488a64ff3ae395e57387ca1",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes-run.log",
+        "bytes": 6962,
+        "sha256": "17f80d4d7587836c0b0f07d5a8e271e00b5c8ca16d4a4aa6c73676918519a38f",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/results.json",
+        "bytes": 255760,
+        "sha256": "c7d2c6bcb7ac30c62feb793b6d041ffaf6e9c0389aec3d875c05f664aafde5c2",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/CSS-103-reference.png",
+        "bytes": 1041388,
+        "sha256": "ad65451da6a744a655d50e99c977ab00dae45ddddadb76ce84955074c8bc82a5",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/HTML-103-reference.png",
+        "bytes": 1045812,
+        "sha256": "b4d3895d5e0c3c0c2cc8f123d2dcd4bd42807ea91fd593cb020b212b3aa65768",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-custom-properties-clamp-course.png",
+        "bytes": 245884,
+        "sha256": "93f83ce3d1894fd851bdeb15d81d1b9fb4a9e37f8ccdb033563e244f5aead1ee",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-flex-course.png",
+        "bytes": 186911,
+        "sha256": "781df3ea0224abd15e6567f9d84ed8a0968b4dd7cf76bde21e9eab1c9cd713c8",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-flex-min-width-course.png",
+        "bytes": 240636,
+        "sha256": "0c7a9a5d884dc26b9845e376c3514ed072ffab408654e99efa764559edddc607",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-grid-minmax-course.png",
+        "bytes": 214886,
+        "sha256": "2dece28a0a8622c75632173520bc4f2d2412275a1db2e25b02f874ab38fe8fcc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-grid-minmax-simulator.png",
+        "bytes": 714853,
+        "sha256": "3123416c4274f76d8c4abc01b8419b09228b5bf79372f583aabec57db90e2bbc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-responsive-course.png",
+        "bytes": 198239,
+        "sha256": "59db6f9a86a26e5f622c60f800f98a41353885ee08ffd72188f5e61f6da1cdfd",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-selectors-course.png",
+        "bytes": 182359,
+        "sha256": "e4aee87a2add5a5d52b4e05e6c3abdd38b347bb49b4d3e7c3cccd9176bea442e",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-spacing-course.png",
+        "bytes": 182629,
+        "sha256": "2e8526f76e6a357115f7eb80664831600421a9b283d97bd6a6e973d9f43f666d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/css-transition-reduced-motion-course.png",
+        "bytes": 246691,
+        "sha256": "681164dbcfcd85b165753c28c5d9eae6ac589aae058808da6380f55732cc05b2",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-accessible-feedback-course.png",
+        "bytes": 252488,
+        "sha256": "551964536b19bef884e92ebd13e41f1bd25ecabb8b74b9a2b59df0e918d9dc2d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-attributes-course.png",
+        "bytes": 188407,
+        "sha256": "220bd8e39e13d4fd7edfd0a02d093be54f64ceaadc0764987b0fde5d18de7dc0",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-details-disclosure-course.png",
+        "bytes": 220579,
+        "sha256": "d9fc41909b0844374b9751ae7e791927eaeb33de1f9db6b8a1771debf465cee3",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-form-course.png",
+        "bytes": 192807,
+        "sha256": "73bfce43000d8ba672831a7b840c9a91e29c456f49a39533bbbd638989608a6a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-native-validation-course.png",
+        "bytes": 250382,
+        "sha256": "8ea7b707e17e743ba6f0ff3f4b7cc8cd64d89f07e9ceb0ba94db390d74bbdd6a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-native-validation-simulator.png",
+        "bytes": 740473,
+        "sha256": "1ad7ce99dbcb83264c13b0ed779bad596328848574a8f55bf23955795842de14",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-semantics-course.png",
+        "bytes": 186685,
+        "sha256": "233dcebc563f40d6cb05067bc09630068fe269fd3e0879013bad07e81127db75",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-structure-course.png",
+        "bytes": 172448,
+        "sha256": "b491fa5a1935f65eb486a148be820ce1b013ec1a46a2b0ca25a361a9b88af08f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/html-table-relations-course.png",
+        "bytes": 214184,
+        "sha256": "0197b437288b9498078ff63e5fe813b1cfbb56b761b14e5501f482cbe852e715",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-arrays-course.png",
+        "bytes": 199743,
+        "sha256": "f28bef3e73eadf4d3e360bb7afda55851184ae964d394d52cabf8c32b8ccb6c8",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-async-error-handling-course.png",
+        "bytes": 271409,
+        "sha256": "9169d3ec5ddb3facc3ca234e87691cfcf6a1ed27c71907125acb73e9be0389c2",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-closure-counters-course.png",
+        "bytes": 236649,
+        "sha256": "ef6be3714d2d707c257476eda31db6ad66688f273e31f0cfbe666380a031bad8",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-conditions-course.png",
+        "bytes": 192083,
+        "sha256": "f775040067e18efe6d74d8f05f83ef2245e2dff9d4ae4a28b9de08a4d3cecefa",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-event-delegation-course.png",
+        "bytes": 261156,
+        "sha256": "c3976ab394cff0f43925c238e633fb9b66fcf124fba27c2a9bee75985f02ad66",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-event-delegation-simulator.png",
+        "bytes": 744150,
+        "sha256": "6a8b97dd771e02551a3b72ba8c5b4c6b197a6d30406e9f079b3d9d96ecec7581",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-events-course.png",
+        "bytes": 189749,
+        "sha256": "8c3d7bfa5008637df0a2bbb2dd6080845f56e671fe80d0c7b1be0d045c7cb759",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-reduce-summary-course.png",
+        "bytes": 239240,
+        "sha256": "ac1ae56c429e44188ed8297a5a6d5cd1e35cd5a8ccceb896c48b163b3c906d74",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/js-values-course.png",
+        "bytes": 187809,
+        "sha256": "4c1e6621bd315817118a940214b9823564abaead09ced8caacd519347842addc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-components-course.png",
+        "bytes": 213428,
+        "sha256": "9cd681cd9f102816eb27ab4e2ca24a036e4a1b9e30ed7f00db95dba18fef046a",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-computed-filter-course.png",
+        "bytes": 254601,
+        "sha256": "ec869ca26645ac9d53e550628ba54955d4c8cbb2aa576dea98e3ad9cdd4edf82",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-keyed-component-state-course.png",
+        "bytes": 253772,
+        "sha256": "9baf72e9113865795a4978259eef7c82fcf1a2424fe741bc5597be19125ddca0",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-keyed-component-state-simulator.png",
+        "bytes": 749937,
+        "sha256": "ed75a84b8fedb45727a095b27e79fcc4085a442ffe2cae736350494c30f299fd",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-list-course.png",
+        "bytes": 220845,
+        "sha256": "c95125f0dd7dc4f23b6b8ccf19be5eb830775673daca176249fd77a49c7b5fa4",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-model-course.png",
+        "bytes": 212085,
+        "sha256": "3fca6eb26684d63123b64fccac8b40c3c86b40b4e96ba73e15c9c6855e05e734",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-props-emits-course.png",
+        "bytes": 248413,
+        "sha256": "098847c88ef74f9be2e985d7e410b54fb2f076e921303b8df4b63dcc5a9486b0",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-props-emits-simulator.png",
+        "bytes": 751299,
+        "sha256": "184045eed23ae235be83afc4d1eecf511b0d8c052434d633551fce60c69785a2",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-ref-course.png",
+        "bytes": 208297,
+        "sha256": "e525e3f89fa452fe4f1850c29dc85ae9a522cb6af6e79293c361fbbfb0f922bf",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-ref-simulator.png",
+        "bytes": 727260,
+        "sha256": "fd79c05128ca71900d2621a4ed2ae4efe3f071a12fc7e8f104eef02e7bbf9c73",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/screenshots/vue-watch-side-effect-course.png",
+        "bytes": 259080,
+        "sha256": "c12c7067b10f2a2dab4682850d6e616d45f7319855782b59d330200f29c98d1e",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/verified-after-fixes/video/441616a4467843ea1518cdc0a0a86392.webm",
+        "bytes": 16194108,
+        "sha256": "ca88cd46bec4623b0071a62508b2a4bcd40ad911bb4febacb0af04a2070d76a6",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/video/5df60fb5c7b656a944f0f65f2c8c6aae.webm",
+        "bytes": 3590327,
+        "sha256": "f614fd833ad16b1a6307f9ed8a90be1af309ac0f9f8b65c905cd5c2851928eec",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/walkthrough-wide.cjs",
+        "bytes": 20444,
+        "sha256": "e6ceb71a232beca2686f5f05831002ee46a3b683997f666a9706c2a31d297cdb",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/walkthrough.cjs",
+        "bytes": 18871,
+        "sha256": "6d033d34b80a08bc44274e1c9e2f9086f13b4cba184cd63d73e80a1b02aa319c",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/wide-run.log",
+        "bytes": 7683,
+        "sha256": "05fba07045a07a3a24319822ab86910c45e746dbd6538944094a4ba15ebab2f7",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/wide/ABORTED_AR.md",
+        "bytes": 483,
+        "sha256": "2035f8b327faec8f9d80af3cda4edf6376feb85f5c6d528d4f55417c608326a3",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/wide/results.json",
+        "bytes": 53933,
+        "sha256": "cb086b17c37317bb889cddccfe9cfe3e3ae9262659c772775f39de06411e84cf",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/css-flex-course.png",
+        "bytes": 179098,
+        "sha256": "ab1f05740ca08419b9bbb2ac4e36ec3125b0e1227854bb44b0e716758463412d",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/css-responsive-course.png",
+        "bytes": 190157,
+        "sha256": "4b8e6821a146e1d2ed958a1862ac5e27a4a6d5925a56083557aafc3cd0464166",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/css-selectors-course.png",
+        "bytes": 174830,
+        "sha256": "81ba835a838addc386973d45a11b45c8ff0a16d7925208bca78925fd668e53dc",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/css-spacing-course.png",
+        "bytes": 174386,
+        "sha256": "f3daccd2dc15c45af2393b19a2e69e0ab2b0582937e91a2ad522461daa21a0ed",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/html-attributes-course.png",
+        "bytes": 185003,
+        "sha256": "037aa4600668daa44e0c7225a81a42a02185dfd5444b00b5e544bc1a1bdaebe5",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/html-form-course.png",
+        "bytes": 184849,
+        "sha256": "39607d997eefd763ac91f10d1e0e2e5787b2c9eb9f0bc3cdbf699224ebe549c3",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/html-semantics-course.png",
+        "bytes": 178861,
+        "sha256": "cb53dbeb87a73adf67db16cd73f93d66801ab047b4ecfff20f27b68892e4735f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/html-structure-course.png",
+        "bytes": 172448,
+        "sha256": "b491fa5a1935f65eb486a148be820ce1b013ec1a46a2b0ca25a361a9b88af08f",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/js-conditions-course.png",
+        "bytes": 183943,
+        "sha256": "7313e729d72cb4cff89bde3c8d6ddba9f7175215b50dce3f7672a907322341d7",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/screenshots/js-values-course.png",
+        "bytes": 179952,
+        "sha256": "f08dec0644a3a8e81d5f22270dae69b10d0594d0b1e146f3543b0fddc47778f2",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/wide/source-manifest.json",
+        "bytes": 3053,
+        "sha256": "1850d9cde9983ea6af9d8b8adf6fb3571d9055188526664f3caa683fb9e1ec13",
+        "text": true
+      },
+      {
+        "path": "resume-checks/lessons/wide/video/2a6dc4040111512e14f1e442c1f27171.webm",
+        "bytes": 7677921,
+        "sha256": "e679c708e1d2158fe00f953861f5d149b8b597130360b4f89bf519f8892ca330",
+        "text": false
+      },
+      {
+        "path": "resume-checks/lessons/write-report.cjs",
+        "bytes": 7490,
+        "sha256": "c817188fe6964afe079ffb630d78d1bf22afa10d34128b31edca27761a7b95c0",
+        "text": true
+      },
+      {
+        "path": "resume-checks/regression/dictionary-browser.log",
+        "bytes": 5314,
+        "sha256": "100e17011973f922e2f9f03affbaee0895b61c10c683a3f6e4bff2c89380eea1",
+        "text": true
+      },
+      {
+        "path": "resume-checks/regression/dictionary-browser/browser-report.json",
+        "bytes": 8185,
+        "sha256": "0ecb5aa8ae05cb4152f946aa4534082d2e05986a1ad4e4fc0a7e82cd401e2586",
+        "text": true
+      },
+      {
+        "path": "resume-checks/regression/dictionary/applied-source-patches.json",
+        "bytes": 20830,
+        "sha256": "f72f3c6e40380d82c80a710709f4a3b5c4c0af82695da24d4918affd4ccc63b0",
+        "text": true
+      },
+      {
+        "path": "resume-checks/regression/dictionary/check-ids.cjs",
+        "bytes": 2023,
+        "sha256": "8ad8c49ec06794f83d9fba548015b02a0924c822c5b2e9a024f1c9b290467e2f",
+        "text": true
+      },
+      {
+        "path": "resume-checks/regression/dictionary/preservation.json",
+        "bytes": 2762,
+        "sha256": "f46dfce667af0eed040d785f88ffccf5864c7c3c5b5869c28fc30faebd330de9",
+        "text": true
+      },
+      {
+        "path": "resume-checks/regression/source-preservation.json",
+        "bytes": 2957,
+        "sha256": "75198ec0caa0f2be28d0fa234c45269cb96140d52c5eb1f01715eeecab56ecbb",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-local/README_AR.md",
+        "bytes": 4049,
+        "sha256": "04c8a2a906f99fcc1b5ca49441fc0c977e349ea5c651595e325ccf7fcc4ab9a5",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-local/css-draft-after-reopen.png",
+        "bytes": 254106,
+        "sha256": "c39c6c68f5e730c69cd96fe02143541d8edd4de93106d2e1dbe1807fb1ff554c",
+        "text": false
+      },
+      {
+        "path": "resume-checks/release-local/favorite-after-reopen.png",
+        "bytes": 464404,
+        "sha256": "03f71b6c4a32a68f1df28c2a7653b3fc3731390e1e0ddbd9da8f942010449ebb",
+        "text": false
+      },
+      {
+        "path": "resume-checks/release-local/favorite-before-close.png",
+        "bytes": 467595,
+        "sha256": "9799ca29493f7ba9ea47168ebe4912eb6a4536c9579c9cd3f0ce4046964555f2",
+        "text": false
+      },
+      {
+        "path": "resume-checks/release-local/js-draft-after-reopen.png",
+        "bytes": 252110,
+        "sha256": "68689892eef76f6d2a6b32e02b1cf7454d3eb31c160788997c482c27480e7e9b",
+        "text": false
+      },
+      {
+        "path": "resume-checks/release-local/package-roundtrip.cjs",
+        "bytes": 10960,
+        "sha256": "05cd28a4b56dc8b913e24fd43e59338d419ff4defea39670a937c55a8ebeffcf",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-local/results.json",
+        "bytes": 4183,
+        "sha256": "b41902dbe20b27ca41ba5c20c59b45b6efb711801737d9d31b50f1b726471966",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-local/server.log",
+        "bytes": 755,
+        "sha256": "534f077dda5082250e19b704d71c5540f03125e748edb74340ede7f28e1afdbb",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-local/stdout.log",
+        "bytes": 848,
+        "sha256": "cf8f6fef653de09c2f6d36a717eab6f56e3dea41419de8a7e00d7ea16c42862a",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-static/README_AR.md",
+        "bytes": 2279,
+        "sha256": "fdfa13984e272135dbdbb18e21d42c5cdcbd5dccc4e2679711bb810e15d7cab4",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-static/browser-results.json",
+        "bytes": 1196,
+        "sha256": "0583cf0a3be388315cac5ceaf5b00a3863f98d2ee1a4ddc72c110b4f87008f35",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-static/browser-static.cjs",
+        "bytes": 6802,
+        "sha256": "44120333e4e0cf5e521a102c2d6fc928b71b92dae6bb9afb47e1fa8d05331bb9",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-static/browser-stdout.log",
+        "bytes": 948,
+        "sha256": "a9f7846d14c48cf5fe8ce4cf4f889b6e5a2adbae831e7f6dedff441e2afa56b5",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-static/check-package.py",
+        "bytes": 3060,
+        "sha256": "d922bed8a90bebb6abecf71456c7e5dd2fe9a95e7ed957ae8bb0709895a6bec3",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-static/package-results.json",
+        "bytes": 3762,
+        "sha256": "9855925256f8f6af415f822d5d0cdb3958108f987faf3ef9f30b4b9f77b0439c",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-static/package-stdout.log",
+        "bytes": 47,
+        "sha256": "dc5544211d88396766cc3ac64ccb03da343a98dae8e97c346e7fabdd9de5f46d",
+        "text": true
+      },
+      {
+        "path": "resume-checks/release-static/static-nested.png",
+        "bytes": 445600,
+        "sha256": "9602baed3308220915a5c1374918433e023ead3dc111cb94a5faac13d33f3298",
+        "text": false
+      },
+      {
+        "path": "resume-checks/release-static/static-root.png",
+        "bytes": 445600,
+        "sha256": "9602baed3308220915a5c1374918433e023ead3dc111cb94a5faac13d33f3298",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/README_AR.md",
+        "bytes": 5188,
+        "sha256": "f97abd6765bd445928e75b3ac7b994fb36c34664f2b088dbbb426c34c7b01198",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/browser-attempt-1.json",
+        "bytes": 757,
+        "sha256": "a9b959cc1ac78c6a96bcc7d950a79854384882389b4b89ad3a42b6cdedbf49fd",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/browser-results.json",
+        "bytes": 1103,
+        "sha256": "eff29175865bd8ce22a527998fc66dd6f37c63cda5fbad906b80b715fa4575d7",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/browser-static.cjs",
+        "bytes": 6802,
+        "sha256": "44120333e4e0cf5e521a102c2d6fc928b71b92dae6bb9afb47e1fa8d05331bb9",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/check-package.py",
+        "bytes": 3060,
+        "sha256": "d922bed8a90bebb6abecf71456c7e5dd2fe9a95e7ed957ae8bb0709895a6bec3",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/organizer-binding-check.cjs",
+        "bytes": 4233,
+        "sha256": "5f99c1962789cdcae59ec3841b1ebadc715b669af72d42d99d42ec2670658938",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/organizer-binding-results.json",
+        "bytes": 2362,
+        "sha256": "b1092840a78bfe0c74ce8b58ebd906c072793fcbfef7a2cc67d1b29f93eb9c1b",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/organizer-binding-review.md",
+        "bytes": 7770,
+        "sha256": "750d122c209c992d35683190130b9305826a0b2d4ba9d7f3c275e0dfae4f8f2e",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/organizer-native-after-after.png",
+        "bytes": 253854,
+        "sha256": "14d6a4a3a7e984e13c3c425b2a85ac15fb9a1c35997f1d983f53d1aa19964d43",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/organizer-native-after-before-reload.png",
+        "bytes": 269288,
+        "sha256": "2c32dc0a80bf883bf948ebc5fae0f8b7d59eb9d51ecde7844ccc1d52f3d38276",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/organizer-native-after.json",
+        "bytes": 3090,
+        "sha256": "72f5df4ab24c377705fff0f7d9d5ac2fb7312022dece0c40798dc1994daa8524",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/organizer-native-before-after.png",
+        "bytes": 204474,
+        "sha256": "b9b5c8c95a22208620ca0d66c06428ffd1d9742b61acd88ed836fe893890e181",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/organizer-native-before-before-reload.png",
+        "bytes": 204474,
+        "sha256": "b9b5c8c95a22208620ca0d66c06428ffd1d9742b61acd88ed836fe893890e181",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/organizer-native-before.json",
+        "bytes": 2481,
+        "sha256": "d1cb309e5fc674d75850fed7235b18e0eb043625cb06b1690b5099ebdace6feb",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/organizer-native-regression.cjs",
+        "bytes": 10093,
+        "sha256": "492a048fadddab26f06bab0923e06af13d4ac188a09d241b464c69bcad3c31d5",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/organizer-route-calendar.png",
+        "bytes": 195530,
+        "sha256": "8c5c662651320e20c5d921065272aac7df664fe386f751aa93caa5a39deaac2e",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/organizer-route-kanban.png",
+        "bytes": 195534,
+        "sha256": "00c330466a995ed496de14cbf8fd974fd17f00607d52cddd27cdd85e54c7bc78",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/organizer-route-notes.png",
+        "bytes": 193925,
+        "sha256": "0693bb53dc046c2e9143dff07719a57afd640e4cb7d18b87c40aff39f3308b68",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/organizer-route-projects.png",
+        "bytes": 195417,
+        "sha256": "12394ba9d34579b909780e4c07626d388f6d19c5be19379bdc1eebbb342bceff",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/package-results.json",
+        "bytes": 3762,
+        "sha256": "3b0c5adf50daf4ab3ede599319c82b1a06725c1e7f80f3ca100f49a8a6db5780",
+        "text": true
+      },
+      {
+        "path": "resume-checks/static/static-nested.png",
+        "bytes": 446255,
+        "sha256": "337cd92af45255a62a398ac831be9dee234194e2655edf61c554a6e141e6c0b9",
+        "text": false
+      },
+      {
+        "path": "resume-checks/static/static-root.png",
+        "bytes": 445600,
+        "sha256": "9602baed3308220915a5c1374918433e023ead3dc111cb94a5faac13d33f3298",
+        "text": false
+      },
+      {
+        "path": "scripts/package-local.py",
+        "bytes": 5304,
+        "sha256": "2882bcbdbb614123480269b7849de3e2eddc2829c228ae926d6855d446d5e21b",
+        "text": true
+      },
+      {
+        "path": "scripts/package-static.py",
+        "bytes": 7961,
+        "sha256": "e4b9f422108b6a0ff0332a848536faee8264fec5c1e0c1053cdf5aa8cf7bd07c",
+        "text": true
+      }
+    ]
+  },
+  "zip_checks": {
+    "timestamp_utc": "2026-11-07T11:26:42.477724+00:00",
+    "packages": [
+      {
+        "name": "Windows",
+        "path": "/workspace/downloads/VLex-Pro-local-20261107-112524-b717d9bd.zip",
+        "sha256": "18d575831844d4a96681da2affb4ac3c3238fbc1b98bca4e534503074a423249",
+        "zip_entries": 125,
+        "text_entries": 115,
+        "binary_entries": 10,
+        "manifest_hashes_verified": true,
+        "source_clean": true,
+        "source_commit": "b717d9bda1e62a57f047a32fac0ca2148c76aa69",
+        "unsafe_paths": [],
+        "backups": {
+          "_pristine_backup": 25,
+          "_v3.5_pre_hands_on_backup": 7
+        }
+      },
+      {
+        "name": "static",
+        "path": "/workspace/downloads/VLex-Pro-static-20261107-112525-171243-b717d9bd/VLex-Pro-static-20261107-112525-171243-b717d9bd.zip",
+        "sha256": "6ada1bc375230b13d9bce9e8e844cdda458e27c98d0f7a2a35c4503c9e8792c0",
+        "zip_entries": 59,
+        "text_entries": 49,
+        "binary_entries": 10,
+        "manifest_hashes_verified": true,
+        "source_clean": true,
+        "source_commit": "b717d9bda1e62a57f047a32fac0ca2148c76aa69",
+        "unsafe_paths": [],
+        "backups": null
+      }
+    ],
+    "gitleaks": {
+      "exit": 0,
+      "findings": 0
+    },
+    "limits": "Text extracted and scanned from both ZIPs. Binary runtime assets are unchanged from previously fully scanned baseline; no OCR of ZIP binaries repeated."
+  },
+  "delivery_text_checks": {
+    "files": [
+      {
+        "path": "delivery/20261107-b717d9bd/BUILD.json",
+        "sha256": "5801b51b1c377d6dde14da213d91051688bca00cdac3fd5a07557ae0d2a4ae79",
+        "bytes": 554
+      },
+      {
+        "path": "delivery/20261107-b717d9bd/SHA256SUMS.txt",
+        "sha256": "4e3e21bcc82f4c9fa7f6c892d694f99d90c7b1fe15f58eecce56ca37a064f785",
+        "bytes": 191
+      },
+      {
+        "path": "delivery/20261107-b717d9bd/README_AR.md",
+        "sha256": "d8433977b55a0aa94d9b2d48c872aa65edaaa72e3cbb7ba2b8b2f6269864a3bf",
+        "bytes": 3929
+      }
+    ],
+    "gitleaks_exit": 0,
+    "finding_count": 0
+  },
+  "baseline_reports": {
+    "upload-security-review.md": {
+      "sha256": "cb26803fb0fb4fc294f15210d1398f0a307372d94fa3312acbb12459cd772fe3",
+      "bytes": 3928
+    },
+    "upload-security-review.json": {
+      "sha256": "0fd8b035a8544165901a4c08cfa8ccd47b4ab99ba9e451eb850e5d294afba538",
+      "bytes": 5701
+    }
+  },
+  "limits": [
+    "Baseline full scan covers locally reachable history through1cf220c; remote/unreachable refs and reflogs not included.",
+    "OCR English only; 205 PNGs and3 frames per11 new videos; not every video frame, not audio transcription or comprehensive Arabic personal-data analysis.",
+    "10 unchanged WOFF2 assets in each ZIP were not semantically decoded; their hashes match prior baseline.",
+    "Temporary first OCR attempt stopped due OpenMP resource contention; complete successful238-input scan used OMP_THREAD_LIMIT=1.",
+    "The final future commit recording these reports requires a text/metadata delta check only; no runtime or package bytes are changed by this report."
+  ]
+}

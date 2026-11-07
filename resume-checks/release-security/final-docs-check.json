@@ -1,0 +1,35 @@
+{
+  "scope": "Only final reports added after the complete incremental security scan; no repeated OCR",
+  "checked_head_before_report_commit": "21af491d3610511ce2c6ff1bb0098301265cf2b8",
+  "created_utc": "2026-11-07T17:50:44.381609+00:00",
+  "scanner": "Gitleaks 8.24.3 default rules, no inherited config, no ignores, allow comments ignored, decode depth 3",
+  "exit_code": 0,
+  "finding_count": 0,
+  "files": [
+    {
+      "file": "RESUME_DELIVERY_STATUS_AR.md",
+      "sha256": "df7aec737b9100084705e90b27020d6c08b3c219e12da4658011218b3655c790",
+      "bytes": 15394
+    },
+    {
+      "file": "resume-checks/release-security/review.json",
+      "sha256": "5e871061ed5e4ee523c90a0b1c46868322b878f836f66b224db59775b054fa0b",
+      "bytes": 73483
+    },
+    {
+      "file": "resume-checks/release-security/BASELINE_REVIEW_AR.md",
+      "sha256": "cb26803fb0fb4fc294f15210d1398f0a307372d94fa3312acbb12459cd772fe3",
+      "bytes": 3928
+    },
+    {
+      "file": "resume-checks/release-security/REVIEW_AR.md",
+      "sha256": "d4cf54b919a06f3b49c2c3661cda13d3d2820bfc747192050fe90ed08d992d79",
+      "bytes": 4934
+    },
+    {
+      "file": "resume-checks/release-security/baseline-review.json",
+      "sha256": "0fd8b035a8544165901a4c08cfa8ccd47b4ab99ba9e451eb850e5d294afba538",
+      "bytes": 5701
+    }
+  ]
+}
