@@ -1,0 +1,275 @@
+{
+  "started": "2026-11-07T11:22:53.495Z",
+  "commit": "74d6b99fb5c3ccacacbdd28b60495092d9c45854",
+  "sourceHashesBefore": {
+    "app.js": "7da7f6983d3dc67036558be9e3ee1adc3ea3f963e4ff36994741b9663d80fecb",
+    "index.html": "cabe723b99459002a72fea4cc98b6a1f82c39e32b10ee34f361b56d299d07435",
+    "preview-runner.js": "810581922329cd8394248b941f0c1309b1c186c21f806855df71e9dceb10a09d",
+    "practice-curriculum.js": "41822064e89272698042e7e76a94b80519d6d5524a1c0e2259789e1ecf4af6f6",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "615269843f9a3d7663cd03dc7837e1116ee21664a564ac361833aff8aa36e6e1"
+  },
+  "sourceDiff": "",
+  "lessons": [
+    {
+      "id": "JS-101",
+      "track": "js",
+      "title": "المتغيرات والقيم والقوالب النصية",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 16px; box-sizing: border-box; }\n    #card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; text-align: center; max-width: 380px; width: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    h2 { color: #00DC82; margin: 0 0 10px 0; font-size: 20px; }\n    p { color: #cbd5e1; margin: 0; font-size: 14px; line-height: 1.6; }\n    .badge { display: inline-block; background: rgba(0, 220, 130, 0.15); color: #00DC82; border: 1px solid rgba(0, 220, 130, 0.3); font-size: 11px; padding: 4px 10px; border-radius: 9999px; margin-bottom: 12px; }\n  </style>\n</head>\n<body>\n  <div id=\"card\">\n    <span class=\"badge\">بطاقة ترحيب</span>\n    <p id=\"placeholder\">بانتظار تحديد المتغيرات لتوليد البطاقة...</p>\n  </div>\n\n  <script>\n    // 1. اكتب اسمك هنا\n    const userName = \"\";\n\n    // 2. اكتب رسالتك هنا\n    const welcomeMsg = \"\";\n\n    // منطق تحديث الواجهة:\n    const cardEl = document.getElementById('card');\n    if (userName && welcomeMsg) {\n      cardEl.innerHTML = `\n        <span class=\"badge\">بطاقة ترحيب برمجية</span>\n        <h2>مرحباً بك، ${userName}! 👋</h2>\n        <p>${welcomeMsg}</p>\n      `;\n    }\n  </script>\n</body>\n</html>",
+      "details": {
+        "actualDOMVerified": true
+      },
+      "actual": {
+        "text": "بطاقة ترحيب برمجية\nمرحباً بك، سارة! 👋\n\nأهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!",
+        "html": "\n  <div id=\"card\">\n        <span class=\"badge\">بطاقة ترحيب برمجية</span>\n        <h2>مرحباً بك، سارة! 👋</h2>\n        <p>أهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!</p>\n      </div>\n\n  <script>\n    const userName = \"سارة\";\n    const welcomeMsg = \"أهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!\";\n\n    const cardEl = document.getElementById('card');\n    if (userName && welcomeMsg) {\n      cardEl.innerHTML = `\n        <span class=\"badge\">بطاقة ترحيب برمجية</span>\n        <h2>مرحباً بك، ${userName}! 👋</h2>\n        <p>${welcomeMsg}</p>\n      `;\n    }\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "JS-102",
+      "track": "js",
+      "title": "اتخاذ القرارات بواسطة if / else",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 16px; box-sizing: border-box; }\n    .box { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; text-align: center; max-width: 380px; width: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    .btn { display: inline-block; background: #00DC82; color: #020420; font-weight: bold; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-top: 12px; font-size: 13px; }\n    .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-left: 6px; }\n  </style>\n</head>\n<body>\n  <div id=\"app-view\" class=\"box\">\n    <!-- ستظهر الواجهة المناسبة هنا بناء على الشرط -->\n  </div>\n\n  <script>\n    // غيّر هذه القيمة بين true و false لاختبار النتيجة\n    const isLoggedIn = true;\n\n    const container = document.getElementById('app-view');\n\n    // اكتب الشرط البرمجي هنا:\n    if (isLoggedIn) {\n      container.innerHTML = `\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      `;\n    } else {\n      container.innerHTML = `\n        <h2 style=\"color: #f59e0b; margin-top:0;\">تسجيل الدخول 🔒</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">يرجى تسجيل الدخول للوصول إلى لوحة التحكم الخاصة بك.</p>\n        <button class=\"btn\">تسجيل الدخول الآن</button>\n      `;\n    }\n  </script>\n</body>\n</html>",
+      "details": {
+        "actualDOMVerified": true
+      },
+      "actual": {
+        "text": "لوحة التحكم الرئيسية 📊\n\nأهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.\n\nتسجيل الخروج",
+        "html": "\n  <div id=\"app-view\" class=\"box\">\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      </div>\n\n  <script>\n    const isLoggedIn = true;\n    const container = document.getElementById('app-view');\n\n    if (isLoggedIn) {\n      container.innerHTML = `\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      `;\n    } else {\n      container.innerHTML = `\n        <h2 style=\"color: #f59e0b; margin-top:0;\">تسجيل الدخول 🔒</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">يرجى تسجيل الدخول للوصول إلى لوحة التحكم الخاصة بك.</p>\n        <button class=\"btn\">تسجيل الدخول الآن</button>\n      `;\n    }\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "JS-103",
+      "track": "js",
+      "title": "المصفوفات ودالة التحويل map()",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; margin: 0; }\n    h1 { text-align: center; color: #00DC82; font-size: 20px; margin-bottom: 20px; }\n    #cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 700px; margin: 0 auto; }\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 12px; padding: 16px; text-align: center; transition: transform 0.2s; }\n    .card:hover { transform: translateY(-3px); border-color: #00DC82; }\n    .card-icon { font-size: 28px; margin-bottom: 8px; }\n    .card-title { font-weight: bold; font-size: 15px; color: #f8fafc; margin-bottom: 4px; }\n    .card-price { color: #00DC82; font-size: 13px; font-weight: 600; }\n  </style>\n</head>\n<body>\n  <h1>منتجاتنا المختارة ✨</h1>\n  <div id=\"cards-container\">\n    <!-- ستظهر 3 بطاقات هنا عبر دالة map() -->\n  </div>\n\n  <script>\n    // مصفوفة المنتجات (3 عناصر)\n    const products = [\n      { id: 1, title: \"سماعات محيطية\", price: \"180 ر.س\", icon: \"🎧\" },\n      { id: 2, title: \"لوحة مفاتيح ميكانيكية\", price: \"320 ر.س\", icon: \"⌨️\" },\n      { id: 3, title: \"فأرة ألعاب لاسلكية\", price: \"150 ر.س\", icon: \"🖱️\" }\n    ];\n\n    const container = document.getElementById('cards-container');\n\n    // استخدم دالة map() هنا لتوليد البطاقات:\n    const cardsHtml = products.map(p => `\n      <div class=\"card\">\n        <div class=\"card-icon\">${p.icon}</div>\n        <div class=\"card-title\">${p.title}</div>\n        <div class=\"card-price\">${p.price}</div>\n      </div>\n    `).join('');\n\n    container.innerHTML = cardsHtml;\n  </script>\n</body>\n</html>",
+      "details": {
+        "actualDOMVerified": true
+      },
+      "actual": {
+        "text": "منتجاتنا المختارة ✨\n🎧\nسماعات محيطية\n180 ر.س\n⌨️\nلوحة مفاتيح ميكانيكية\n320 ر.س\n🖱️\nفأرة ألعاب لاسلكية\n150 ر.س",
+        "html": "\n  <h1>منتجاتنا المختارة ✨</h1>\n  <div id=\"cards-container\">\n      <div class=\"card\">\n        <div class=\"card-icon\">🎧</div>\n        <div class=\"card-title\">سماعات محيطية</div>\n        <div class=\"card-price\">180 ر.س</div>\n      </div>\n    \n      <div class=\"card\">\n        <div class=\"card-icon\">⌨️</div>\n        <div class=\"card-title\">لوحة مفاتيح ميكانيكية</div>\n        <div class=\"card-price\">320 ر.س</div>\n      </div>\n    \n      <div class=\"card\">\n        <div class=\"card-icon\">🖱️</div>\n        <div class=\"card-title\">فأرة ألعاب لاسلكية</div>\n        <div class=\"card-price\">150 ر.س</div>\n      </div>\n    </div>\n\n  <script>\n    const products = [\n      { id: 1, title: \"سماعات محيطية\", price: \"180 ر.س\", icon: \"🎧\" },\n      { id: 2, title: \"لوحة مفاتيح ميكانيكية\", price: \"320 ر.س\", icon: \"⌨️\" },\n      { id: 3, title: \"فأرة ألعاب لاسلكية\", price: \"150 ر.س\", icon: \"🖱️\" }\n    ];\n\n    const container = document.getElementById('cards-container');\n    container.innerHTML = products.map(p => `\n      <div class=\"card\">\n        <div class=\"card-icon\">${p.icon}</div>\n        <div class=\"card-title\">${p.title}</div>\n        <div class=\"card-price\">${p.price}</div>\n      </div>\n    `).join('');\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "HTML-101",
+      "track": "html",
+      "title": "هيكل المستند والعناصر الدلالية",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 30px; margin: 0; line-height: 1.6; }\n    article { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; max-width: 600px; margin: 0 auto; }\n    h1 { color: #00DC82; font-size: 24px; margin-top: 0; }\n    p { color: #cbd5e1; font-size: 15px; }\n  </style>\n</head>\n<body>\n  <article>\n    <!-- اكتب العنوان والفقرة هنا -->\n    <h1>مستقبل تطوير الويب مع HTML5 الحديثة</h1>\n    <p>توفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.</p>\n  </article>\n</body>\n</html>",
+      "details": {
+        "actualDOMVerified": true
+      },
+      "actual": {
+        "text": "مستقبل تطوير الويب مع HTML5 الحديثة\n\nتوفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.",
+        "html": "\n  <article>\n    <h1>مستقبل تطوير الويب مع HTML5 الحديثة</h1>\n    <p>توفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.</p>\n  </article>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "HTML-102",
+      "track": "html",
+      "title": "الروابط والصور وإمكانية الوصول",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 20px; max-width: 420px; margin: 0 auto; }\n    img { max-width: 100%; border-radius: 10px; margin-bottom: 14px; border: 1px solid #334155; }\n    a { display: inline-block; background: #00DC82; color: #020420; font-weight: bold; text-decoration: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; margin-top: 8px; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>استكشف عالم التطوير 🚀</h2>\n    <img src=\"https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400\" alt=\"شاشة حاسوب تعرض أسطر كود برمجية ملونة\">\n    <br>\n    <a href=\"https://developer.mozilla.org\" target=\"_blank\" rel=\"noopener\">اقرأ المزيد على شبكة MDN</a>\n  </div>\n</body>\n</html>",
+      "details": {
+        "networkImage": {
+          "loaded": false,
+          "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400",
+          "alt": "شاشة حاسوب تعرض أسطر كود برمجية ملونة"
+        },
+        "note": "Remote image intentionally blocked; link metadata and alt verified, remote image not claimed offline."
+      },
+      "actual": {
+        "text": "استكشف عالم التطوير 🚀\n\nاقرأ المزيد على شبكة MDN",
+        "html": "\n  <div class=\"card\">\n    <h2>استكشف عالم التطوير 🚀</h2>\n    <img src=\"https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400\" alt=\"شاشة حاسوب تعرض أسطر كود برمجية ملونة\">\n    <br>\n    <a href=\"https://developer.mozilla.org\" target=\"_blank\" rel=\"noopener\">اقرأ المزيد على شبكة MDN</a>\n  </div>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "HTML-103",
+      "track": "html",
+      "title": "النماذج وحقول الإدخال والتحقق",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; }\n    .form-card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; }\n    label { display: block; font-size: 13px; color: #94a3b8; margin-bottom: 6px; font-weight: 500; }\n    input { width: 100%; box-sizing: border-box; background: #070d1e; border: 1px solid #334155; border-radius: 8px; padding: 10px 12px; color: #fff; margin-bottom: 16px; font-size: 14px; }\n    input:focus { outline: none; border-color: #00DC82; }\n    button { width: 100%; background: #00DC82; color: #020420; font-weight: bold; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-size: 14px; }\n  </style>\n</head>\n<body>\n  <div class=\"form-card\">\n    <h2 style=\"color:#00DC82; margin-top:0; font-size:18px;\">انضم إلى النشرة البريدية 📬</h2>\n    <form>\n      <label for=\"full-name\">الاسم الكريم:</label>\n      <input id=\"full-name\" type=\"text\" placeholder=\"اكتب اسمك...\" required>\n\n      <label for=\"user-email\">البريد الإلكتروني:</label>\n      <input id=\"user-email\" type=\"email\" placeholder=\"name@example.com\" required>\n\n      <button type=\"submit\" onclick=\"event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';\">تأكيد الاشتراك</button>\n      <p id=\"form-status\" role=\"status\" aria-live=\"polite\"></p>\n    </form>\n  </div>\n</body>\n</html>",
+      "details": {
+        "localValidation": "تم التحقق من النموذج محليًا؛ لم تُرسل البيانات."
+      },
+      "actual": {
+        "text": "انضم إلى النشرة البريدية 📬\nالاسم الكريم:\nالبريد الإلكتروني:\n تأكيد الاشتراك\n\nتم التحقق من النموذج محليًا؛ لم تُرسل البيانات.",
+        "html": "\n  <div class=\"form-card\">\n    <h2 style=\"color:#00DC82; margin-top:0; font-size:18px;\">انضم إلى النشرة البريدية 📬</h2>\n    <form>\n      <label for=\"full-name\">الاسم الكريم:</label>\n      <input id=\"full-name\" type=\"text\" placeholder=\"اكتب اسمك...\" required=\"\">\n\n      <label for=\"user-email\">البريد الإلكتروني:</label>\n      <input id=\"user-email\" type=\"email\" placeholder=\"name@example.com\" required=\"\">\n\n      <button type=\"submit\" onclick=\"event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';\">تأكيد الاشتراك</button>\n      <p id=\"form-status\" role=\"status\" aria-live=\"polite\">تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.</p>\n    </form>\n  </div>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "CSS-101",
+      "track": "css",
+      "title": "نموذج الصندوق (Box Model) والمسافات",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 20px; }\n    \n    /* نسّق الصندوق هنا باستخدام نموذج الصندوق (Box Model) */\n    .box {\n      background: #0f1c3f;\n      max-width: 400px;\n      margin: 40px auto;\n      padding: 24px;\n      border: 2px solid #00DC82;\n      border-radius: 16px;\n      box-shadow: 0 10px 25px rgba(0,0,0,0.4);\n      text-align: center;\n    }\n\n    h2 { color: #00DC82; margin: 0 0 10px 0; }\n    p { color: #cbd5e1; font-size: 14px; line-height: 1.6; margin: 0; }\n  </style>\n</head>\n<body>\n  <div class=\"box\">\n    <h2>نموذج الصندوق (Box Model) 📦</h2>\n    <p>لاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.</p>\n  </div>\n</body>\n</html>",
+      "details": {
+        "actualDOMVerified": true
+      },
+      "actual": {
+        "text": "نموذج الصندوق (Box Model) 📦\n\nلاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.",
+        "html": "\n  <div class=\"box\">\n    <h2>نموذج الصندوق (Box Model) 📦</h2>\n    <p>لاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.</p>\n  </div>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "CSS-102",
+      "track": "css",
+      "title": "نظام التخطيط المرن (Flexbox)",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 20px; }\n    \n    .navbar {\n      background: #0f1c3f;\n      border: 1px solid #1e3a8a;\n      border-radius: 12px;\n      padding: 14px 24px;\n      max-width: 650px;\n      margin: 0 auto;\n      \n      /* اكتب خصائص Flexbox هنا */\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .logo { font-weight: bold; font-size: 18px; color: #00DC82; }\n    .nav-links { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }\n    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 14px; }\n    .nav-links a:hover { color: #00DC82; }\n  </style>\n</head>\n<body>\n  <nav class=\"navbar\">\n    <div class=\"logo\">⚡ فيوليكسيكون</div>\n    <ul class=\"nav-links\">\n      <li><a href=\"#\">الرئيسية</a></li>\n      <li><a href=\"#\">المعجم</a></li>\n      <li><a href=\"#\">التدريب</a></li>\n    </ul>\n  </nav>\n</body>\n</html>",
+      "details": {
+        "actualDOMVerified": true
+      },
+      "actual": {
+        "text": "⚡ فيوليكسيكون\nالرئيسية\nالمعجم\nالتدريب",
+        "html": "\n  <nav class=\"navbar\">\n    <div class=\"logo\">⚡ فيوليكسيكون</div>\n    <ul class=\"nav-links\">\n      <li><a href=\"#\">الرئيسية</a></li>\n      <li><a href=\"#\">المعجم</a></li>\n      <li><a href=\"#\">التدريب</a></li>\n    </ul>\n  </nav>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "CSS-103",
+      "track": "css",
+      "title": "شبكة CSS المتجاوبة (CSS Grid)",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 24px; }\n    h1 { text-align: center; color: #00DC82; font-size: 20px; margin-bottom: 20px; }\n    \n    .grid-container {\n      /* طبّق شبكة Grid المتجاوبة هنا */\n      display: grid;\n      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));\n      gap: 16px;\n      max-width: 750px;\n      margin: 0 auto;\n    }\n\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 12px; padding: 20px; text-align: center; }\n    .card h3 { margin: 0 0 6px 0; color: #00DC82; font-size: 16px; }\n    .card p { margin: 0; font-size: 13px; color: #94a3b8; }\n  </style>\n</head>\n<body>\n  <h1>شبكة الخدمات التقنية 🌐</h1>\n  <div class=\"grid-container\">\n    <div class=\"card\"><h3>تصميم الواجهات</h3><p>تجربة مستخدم سهلة وجذابة.</p></div>\n    <div class=\"card\"><h3>تطوير الواجهات</h3><p>مكونات Vue 3 فائقة السرعة.</p></div>\n    <div class=\"card\"><h3>أمان الأكواد</h3><p>تحقق صارم مع TypeScript.</p></div>\n  </div>\n</body>\n</html>",
+      "details": {
+        "actualDOMVerified": true
+      },
+      "actual": {
+        "text": "شبكة الخدمات التقنية 🌐\nتصميم الواجهات\n\nتجربة مستخدم سهلة وجذابة.\n\nتطوير الواجهات\n\nمكونات Vue 3 فائقة السرعة.\n\nأمان الأكواد\n\nتحقق صارم مع TypeScript.",
+        "html": "\n  <h1>شبكة الخدمات التقنية 🌐</h1>\n  <div class=\"grid-container\">\n    <div class=\"card\"><h3>تصميم الواجهات</h3><p>تجربة مستخدم سهلة وجذابة.</p></div>\n    <div class=\"card\"><h3>تطوير الواجهات</h3><p>مكونات Vue 3 فائقة السرعة.</p></div>\n    <div class=\"card\"><h3>أمان الأكواد</h3><p>تحقق صارم مع TypeScript.</p></div>\n  </div>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "TS-101",
+      "track": "ts",
+      "title": "الأنواع الأساسية والتعليقات النوعية",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 420px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    h2 { color: #3178C6; margin-top: 0; }\n    .result { background: #070d1e; border: 1px dashed #3178C6; border-radius: 8px; padding: 12px; margin-top: 14px; font-family: monospace; font-size: 13px; color: #38bdf8; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>TypeScript: أمان الأنواع الأول 🔷</h2>\n    <p style=\"font-size:13px; color:#cbd5e1;\">التحقق من الأنواع قبل زمن التشغيل</p>\n    <div id=\"output\" class=\"result\">بانتظار تنفيذ الدالة...</div>\n  </div>\n\n  <script>\n    // في بيئة المتصفح يتم تحويل TypeScript إلى JavaScript\n    // أضف التعليقات النوعية في تعليقات التوثيق JSDoc أو صياغة TypeScript:\n    const appTitle = \"VueLexicon Pro\";\n    const appVersion = 3.6;\n    const isStable = true;\n\n    function formatAppDetails(title, version, stable) {\n      const statusText = stable ? \"نسخة مستقرة ✓\" : \"قيد التطوير 🚧\";\n      return title + \" - v\" + version + \" (\" + statusText + \")\";\n    }\n\n    const outputEl = document.getElementById('output');\n    outputEl.textContent = formatAppDetails(appTitle, appVersion, isStable);\n  </script>\n</body>\n</html>",
+      "details": {
+        "runtime": "JavaScript equivalent; not TypeScript compilation"
+      },
+      "actual": {
+        "text": "TypeScript: أمان الأنواع الأول 🔷\nVueLexicon Pro - v3.6 (نسخة مستقرة ✓)",
+        "html": "\n  <div class=\"card\">\n    <h2>TypeScript: أمان الأنواع الأول 🔷</h2>\n    <div id=\"output\" class=\"result\">VueLexicon Pro - v3.6 (نسخة مستقرة ✓)</div>\n  </div>\n\n  <script>\n    const appTitle = \"VueLexicon Pro\";\n    const appVersion = 3.6;\n    const isStable = true;\n\n    function formatAppDetails(title, version, stable) {\n      const statusText = stable ? \"نسخة مستقرة ✓\" : \"قيد التطوير 🚧\";\n      return title + \" - v\" + version + \" (\" + statusText + \")\";\n    }\n\n    document.getElementById('output').textContent = formatAppDetails(appTitle, appVersion, isStable);\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "TS-102",
+      "track": "ts",
+      "title": "الواجهات (Interfaces) ونماذج البيانات",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; }\n    h2 { color: #3178C6; margin-top: 0; font-size: 18px; }\n    .prop-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1e293b; font-size: 13px; }\n    .prop-label { color: #94a3b8; }\n    .prop-val { color: #00DC82; font-weight: bold; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>بطاقة المبرمج: نموذج الواجهة Interface 🔷</h2>\n    <div id=\"dev-card\">\n      <!-- ستظهر بيانات المطور هنا -->\n    </div>\n  </div>\n\n  <script>\n    // عقد الواجهة (Interface Contract):\n    // interface DevProfile {\n    //   name: string;\n    //   track: string;\n    //   experienceYears: number;\n    // }\n\n    const developer = {\n      name: \"سعود العتيبي\",\n      track: \"Vue 3 & TypeScript\",\n      experienceYears: 4\n    };\n\n    const container = document.getElementById('dev-card');\n    container.innerHTML = `\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">${developer.name}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">${developer.track}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">${developer.experienceYears} سنوات</span></div>\n    `;\n  </script>\n</body>\n</html>",
+      "details": {
+        "runtime": "JavaScript equivalent; not TypeScript compilation"
+      },
+      "actual": {
+        "text": "بطاقة المبرمج: نموذج الواجهة Interface 🔷\nالمطور:\nسعود العتيبي\nالمسار:\nVue 3 & TypeScript\nالخبرة:\n4 سنوات",
+        "html": "\n  <div class=\"card\">\n    <h2>بطاقة المبرمج: نموذج الواجهة Interface 🔷</h2>\n    <div id=\"dev-card\">\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">سعود العتيبي</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">Vue 3 &amp; TypeScript</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">4 سنوات</span></div>\n    </div>\n  </div>\n\n  <script>\n    const developer = {\n      name: \"سعود العتيبي\",\n      track: \"Vue 3 & TypeScript\",\n      experienceYears: 4\n    };\n\n    const container = document.getElementById('dev-card');\n    container.innerHTML = `\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">${developer.name}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">${developer.track}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">${developer.experienceYears} سنوات</span></div>\n    `;\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "TS-103",
+      "track": "ts",
+      "title": "أنواع الاتحاد والتضييق (Union & Narrowing)",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 420px; margin: 0 auto; }\n    h2 { color: #3178C6; margin-top: 0; font-size: 18px; }\n    .tag { display: inline-block; background: rgba(49, 120, 198, 0.2); color: #38bdf8; border: 1px solid #3178C6; border-radius: 6px; padding: 6px 12px; margin: 6px; font-family: monospace; font-size: 14px; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>تضييق الأنواع: Union & Narrowing 🔷</h2>\n    <p style=\"font-size:13px; color:#cbd5e1;\">التعامل الآمن مع القيم متعددة الأنواع</p>\n    <div id=\"results\">\n      <!-- ستظهر النتائج المعالجة هنا -->\n    </div>\n  </div>\n\n  <script>\n    // الدالة تقبل معرفاً كـ (string | number):\n    function formatIdentifier(id) {\n      if (typeof id === 'string') {\n        // تم تضييق النوع إلى string بأمان\n        return 'ID-STR: ' + id.toUpperCase();\n      } else if (typeof id === 'number') {\n        // تم تضييق النوع إلى number بأمان\n        return 'ID-NUM: #' + String(id).padStart(4, '0');\n      }\n      return 'UNKNOWN';\n    }\n\n    const test1 = formatIdentifier(\"vue-pro\");\n    const test2 = formatIdentifier(42);\n\n    const container = document.getElementById('results');\n    container.innerHTML = `\n      <div class=\"tag\">${test1}</div>\n      <div class=\"tag\">${test2}</div>\n    `;\n  </script>\n</body>\n</html>",
+      "details": {
+        "runtime": "JavaScript equivalent; not TypeScript compilation"
+      },
+      "actual": {
+        "text": "تضييق الأنواع: Union & Narrowing 🔷\nID-STR: VUE-PRO ID-NUM: #0042",
+        "html": "\n  <div class=\"card\">\n    <h2>تضييق الأنواع: Union &amp; Narrowing 🔷</h2>\n    <div id=\"results\">\n      <div class=\"tag\">ID-STR: VUE-PRO</div>\n      <div class=\"tag\">ID-NUM: #0042</div>\n    </div>\n  </div>\n\n  <script>\n    function formatIdentifier(id) {\n      if (typeof id === 'string') {\n        return 'ID-STR: ' + id.toUpperCase();\n      } else if (typeof id === 'number') {\n        return 'ID-NUM: #' + String(id).padStart(4, '0');\n      }\n      return 'UNKNOWN';\n    }\n\n    const container = document.getElementById('results');\n    container.innerHTML = `\n      <div class=\"tag\">${formatIdentifier(\"vue-pro\")}</div>\n      <div class=\"tag\">${formatIdentifier(42)}</div>\n    `;\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "VUE-101",
+      "track": "vue",
+      "title": "التفاعلية وعرض البيانات مع ref()",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    .card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    h2 { color: #42B883; margin-top: 0; font-size: 18px; }\n    .count-display { font-size: 42px; font-weight: bold; color: #42B883; margin: 16px 0; }\n    button { background: #42B883; color: #020420; font-weight: bold; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: transform 0.1s; }\n    button:active { transform: scale(0.96); }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <div class=\"card\">\n      <h2>عداد تفاعلي مع Vue 3 💚</h2>\n      <div class=\"count-display\">{{ count }}</div>\n      <button @click=\"increment\">انقر للزيادة ⚡</button>\n    </div>\n  </div>\n\n  <script>\n    const { createApp, ref } = Vue;\n\n    createApp({\n      setup() {\n        const count = ref(0);\n\n        function increment() {\n          count.value++;\n        }\n\n        return {\n          count,\n          increment\n        };\n      }\n    }).mount('#app');\n  </script>\n</body>\n</html>",
+      "details": {
+        "counterAfterNativeClick": "1"
+      },
+      "actual": {
+        "text": "عداد تفاعلي مع Vue 3 💚\n1\nانقر للزيادة ⚡",
+        "html": "\n  <div id=\"app\" data-v-app=\"\"><div class=\"card\"><h2>عداد تفاعلي مع Vue 3 💚</h2><div class=\"count-display\">1</div><button>انقر للزيادة ⚡</button></div></div>\n\n  <script>\n    const { createApp, ref } = Vue;\n    createApp({\n      setup() {\n        const count = ref(0);\n        function increment() {\n          count.value++;\n        }\n        return { count, increment };\n      }\n    }).mount('#app');\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "VUE-102",
+      "track": "vue",
+      "title": "التوجيهات الشرطية والتكرار (v-if & v-for)",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    .card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 16px; padding: 24px; max-width: 440px; margin: 0 auto; }\n    h2 { color: #42B883; margin-top: 0; font-size: 18px; }\n    ul { list-style: none; padding: 0; margin: 16px 0 0 0; text-align: right; }\n    li { background: #070d1e; border: 1px solid #1e293b; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px; }\n    .toggle-btn { background: #42B883; color: #020420; font-weight: bold; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; margin-top: 10px; }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <div class=\"card\">\n      <h2>إدارة المهام مع Vue 3 💚</h2>\n\n      <!-- التوجيهات الشرطية: -->\n      <div v-if=\"isLoggedIn\">\n        <p style=\"color:#00DC82; font-size:13px; margin:0;\">جلسة المستخدم نشطة ✓</p>\n        <ul>\n          <li v-for=\"task in tasks\" :key=\"task.id\">\n            <span>📌</span>\n            <span>{{ task.title }}</span>\n          </li>\n        </ul>\n      </div>\n\n      <div v-else>\n        <p style=\"color:#f59e0b; font-size:14px;\">يرجى تسجيل الدخول لمشاهدة قائمة مهامك.</p>\n      </div>\n\n      <button class=\"toggle-btn\" @click=\"isLoggedIn = !isLoggedIn\">\n        تبديل حالة الدخول ({{ isLoggedIn ? 'تسجيل خروج' : 'تسجيل دخول' }})\n      </button>\n    </div>\n  </div>\n\n  <script>\n    const { createApp, ref } = Vue;\n\n    createApp({\n      setup() {\n        const isLoggedIn = ref(true);\n        const tasks = ref([\n          { id: 1, title: 'إتقان أساسيات قالب Vue 3' },\n          { id: 2, title: 'تطبيق التوجيهات v-if و v-for' },\n          { id: 3, title: 'بناء المكونات وتمرير الخصائص' }\n        ]);\n\n        return {\n          isLoggedIn,\n          tasks\n        };\n      }\n    }).mount('#app');\n  </script>\n</body>\n</html>",
+      "details": {
+        "vIfHiddenCount": 0,
+        "vForRestoredCount": 3
+      },
+      "actual": {
+        "text": "إدارة المهام مع Vue 3 💚\n\nجلسة المستخدم نشطة ✓\n\n📌\nإتقان أساسيات قالب Vue 3\n📌\nتطبيق التوجيهات v-if و v-for\n📌\nبناء المكونات وتمرير الخصائص\nتبديل حالة الدخول",
+        "html": "\n  <div id=\"app\" data-v-app=\"\"><div class=\"card\"><h2>إدارة المهام مع Vue 3 💚</h2><div><p style=\"color: rgb(0, 220, 130); font-size: 13px; margin: 0px;\">جلسة المستخدم نشطة ✓</p><ul><li><span>📌</span><span>إتقان أساسيات قالب Vue 3</span></li><li><span>📌</span><span>تطبيق التوجيهات v-if و v-for</span></li><li><span>📌</span><span>بناء المكونات وتمرير الخصائص</span></li></ul></div><button class=\"toggle-btn\"> تبديل حالة الدخول </button></div></div>\n\n  <script>\n    const { createApp, ref } = Vue;\n    createApp({\n      setup() {\n        const isLoggedIn = ref(true);\n        const tasks = ref([\n          { id: 1, title: 'إتقان أساسيات قالب Vue 3' },\n          { id: 2, title: 'تطبيق التوجيهات v-if و v-for' },\n          { id: 3, title: 'بناء المكونات وتمرير الخصائص' }\n        ]);\n        return { isLoggedIn, tasks };\n      }\n    }).mount('#app');\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    },
+    {
+      "id": "VUE-103",
+      "track": "vue",
+      "title": "المكونات وتمرير الخصائص (Props & Components)",
+      "draft": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    h2 { color: #42B883; margin-top: 0; font-size: 20px; }\n    .cards-grid { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }\n    .course-card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 12px; padding: 18px; width: 180px; text-align: center; }\n    .icon { font-size: 30px; margin-bottom: 8px; }\n    .title { font-weight: bold; font-size: 15px; margin-bottom: 4px; }\n    .badge { display: inline-block; background: rgba(66, 184, 131, 0.2); color: #42B883; font-size: 11px; padding: 2px 8px; border-radius: 9999px; }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <h2>مسارات التعلم عبر المكونات 💚</h2>\n    <div class=\"cards-grid\">\n      <!-- استدعاء المكون القابل لإعادة الاستخدام: -->\n      <course-card title=\"JavaScript\" level=\"مبتدئ\" icon=\"⚡\"></course-card>\n      <course-card title=\"TypeScript\" level=\"متوسط\" icon=\"🔷\"></course-card>\n      <course-card title=\"Vue.js 3\" level=\"متقدم\" icon=\"💚\"></course-card>\n    </div>\n  </div>\n\n  <script>\n    const { createApp } = Vue;\n    const app = createApp({});\n\n    // تسجيل المكون واستقبال الخصائص props:\n    app.component('course-card', {\n      props: ['title', 'level', 'icon'],\n      template: `\n        <div class=\"course-card\">\n          <div class=\"icon\">{{ icon }}</div>\n          <div class=\"title\">{{ title }}</div>\n          <span class=\"badge\">{{ level }}</span>\n        </div>\n      `\n    });\n\n    app.mount('#app');\n  </script>\n</body>\n</html>",
+      "details": {
+        "actualDOMVerified": true
+      },
+      "actual": {
+        "text": "مسارات التعلم عبر المكونات 💚\n⚡\nJavaScript\nمبتدئ\n🔷\nTypeScript\nمتوسط\n💚\nVue.js 3\nمتقدم",
+        "html": "\n  <div id=\"app\" data-v-app=\"\"><h2>مسارات التعلم عبر المكونات 💚</h2><div class=\"cards-grid\"><div class=\"course-card\"><div class=\"icon\">⚡</div><div class=\"title\">JavaScript</div><span class=\"badge\">مبتدئ</span></div><div class=\"course-card\"><div class=\"icon\">🔷</div><div class=\"title\">TypeScript</div><span class=\"badge\">متوسط</span></div><div class=\"course-card\"><div class=\"icon\">💚</div><div class=\"title\">Vue.js 3</div><span class=\"badge\">متقدم</span></div></div></div>\n\n  <script>\n    const { createApp } = Vue;\n    const app = createApp({});\n\n    app.component('course-card', {\n      props: ['title', 'level', 'icon'],\n      template: `\n        <div class=\"course-card\">\n          <div class=\"icon\">{{ icon }}</div>\n          <div class=\"title\">{{ title }}</div>\n          <span class=\"badge\">{{ level }}</span>\n        </div>\n      `\n    });\n\n    app.mount('#app');\n  </script>\n\n",
+        "width": 768,
+        "height": 435
+      },
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "method": "Fresh full-app native track/lesson clicks and editor inspection, then existing expanded preview 768px for actual reference interaction; no runtime source changes.",
+  "sourceHashesAfter": {
+    "app.js": "7da7f6983d3dc67036558be9e3ee1adc3ea3f963e4ff36994741b9663d80fecb",
+    "index.html": "cabe723b99459002a72fea4cc98b6a1f82c39e32b10ee34f361b56d299d07435",
+    "preview-runner.js": "810581922329cd8394248b941f0c1309b1c186c21f806855df71e9dceb10a09d",
+    "practice-curriculum.js": "41822064e89272698042e7e76a94b80519d6d5524a1c0e2259789e1ecf4af6f6",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "615269843f9a3d7663cd03dc7837e1116ee21664a564ac361833aff8aa36e6e1"
+  },
+  "sourceStable": true,
+  "finished": "2026-11-07T11:23:25.453Z",
+  "passed": 15,
+  "total": 15
+}

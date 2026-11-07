@@ -32,7 +32,7 @@
 
 ## أدلة مرئية فعلية
 
-- قبل: [الماوس](before-runtime/mouse-fragment.png)، [Enter](before-runtime/keyboard-fragment.png)، [المحاكي](before-runtime/full-simulator-fragment.png).
+- قبل: [الماوس](before-runtime/mouse-fragment.png)، [Enter](before-runtime/keyboard-fragment.png). فحص المحاكي قبل الإصلاح أخفق قبل خطوة التقاط صورته، ونتيجته محفوظة في JSON والسجل.
 - بعد: [الماوس](after/mouse-fragment.png)، [Enter](after/keyboard-fragment.png)، [المحاكي](after/full-simulator-fragment.png).
 - تسجيلات WebM أصلية داخل `before-runtime/video/` و`after/video/`؛ تسجيل المتصفح كامل للجولة، بلا صور مولدة.
 - صورة المحاكي بعد الإصلاح تُظهر نص الهدف الحقيقي أعلى المعاينة. تم التحقق من موضعه بالـDOM أيضًا، وليس من الصورة وحدها.

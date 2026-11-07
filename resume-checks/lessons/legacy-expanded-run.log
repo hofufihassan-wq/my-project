@@ -1,0 +1,16 @@
+PASS JS-101 المتغيرات والقيم والقوالب النصية
+PASS JS-102 اتخاذ القرارات بواسطة if / else
+PASS JS-103 المصفوفات ودالة التحويل map()
+PASS HTML-101 هيكل المستند والعناصر الدلالية
+PASS HTML-102 الروابط والصور وإمكانية الوصول
+PASS HTML-103 النماذج وحقول الإدخال والتحقق
+PASS CSS-101 نموذج الصندوق (Box Model) والمسافات
+PASS CSS-102 نظام التخطيط المرن (Flexbox)
+PASS CSS-103 شبكة CSS المتجاوبة (CSS Grid)
+PASS TS-101 الأنواع الأساسية والتعليقات النوعية
+PASS TS-102 الواجهات (Interfaces) ونماذج البيانات
+PASS TS-103 أنواع الاتحاد والتضييق (Union & Narrowing)
+PASS VUE-101 التفاعلية وعرض البيانات مع ref()
+PASS VUE-102 التوجيهات الشرطية والتكرار (v-if & v-for)
+PASS VUE-103 المكونات وتمرير الخصائص (Props & Components)
+{"passed":15,"total":15,"sourceStable":true}

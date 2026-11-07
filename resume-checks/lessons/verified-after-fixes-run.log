@@ -1,0 +1,105 @@
+PASS course filters beginner/intermediate/advanced and no disabled lessons
+PASS course html-structure view/question/feedback
+PASS course html-structure transfer without autorun + explicit reference + actual output
+PASS course html-attributes view/question/feedback
+PASS course html-attributes transfer without autorun + explicit reference + actual output
+PASS course html-form view/question/feedback
+PASS course html-form transfer without autorun + explicit reference + actual output
+PASS course html-semantics view/question/feedback
+PASS course html-semantics transfer without autorun + explicit reference + actual output
+PASS course css-selectors view/question/feedback
+PASS course css-selectors transfer without autorun + explicit reference + actual output
+PASS course css-spacing view/question/feedback
+PASS course css-spacing transfer without autorun + explicit reference + actual output
+PASS course css-flex view/question/feedback
+PASS course css-flex transfer without autorun + explicit reference + actual output
+PASS course css-responsive view/question/feedback
+PASS course css-responsive transfer without autorun + explicit reference + actual output
+PASS course js-values view/question/feedback
+PASS course js-values transfer without autorun + explicit reference + actual output
+PASS course js-conditions view/question/feedback
+PASS course js-conditions transfer without autorun + explicit reference + actual output
+PASS course js-arrays view/question/feedback
+PASS course js-arrays transfer without autorun + explicit reference + actual output
+PASS course js-events view/question/feedback
+PASS course js-events transfer without autorun + explicit reference + actual output
+PASS course vue-ref view/question/feedback
+PASS course vue-ref transfer without autorun + explicit reference + actual output
+PASS course vue-model view/question/feedback
+PASS course vue-model transfer without autorun + explicit reference + actual output
+PASS course vue-list view/question/feedback
+PASS course vue-list transfer without autorun + explicit reference + actual output
+PASS course vue-components view/question/feedback
+PASS course vue-components transfer without autorun + explicit reference + actual output
+PASS course html-accessible-feedback view/question/feedback
+PASS course html-accessible-feedback transfer without autorun + explicit reference + actual output
+PASS course html-native-validation view/question/feedback
+PASS course html-native-validation transfer without autorun + explicit reference + actual output
+PASS course html-details-disclosure view/question/feedback
+PASS course html-details-disclosure transfer without autorun + explicit reference + actual output
+PASS course html-table-relations view/question/feedback
+PASS course html-table-relations transfer without autorun + explicit reference + actual output
+PASS course css-grid-minmax view/question/feedback
+PASS course css-grid-minmax transfer without autorun + explicit reference + actual output
+PASS course css-flex-min-width view/question/feedback
+PASS course css-flex-min-width transfer without autorun + explicit reference + actual output
+PASS course css-custom-properties-clamp view/question/feedback
+PASS course css-custom-properties-clamp transfer without autorun + explicit reference + actual output
+PASS course css-transition-reduced-motion view/question/feedback
+PASS course css-transition-reduced-motion transfer without autorun + explicit reference + actual output
+PASS course js-closure-counters view/question/feedback
+PASS course js-closure-counters transfer without autorun + explicit reference + actual output
+PASS course js-async-error-handling view/question/feedback
+PASS course js-async-error-handling transfer without autorun + explicit reference + actual output
+PASS course js-reduce-summary view/question/feedback
+PASS course js-reduce-summary transfer without autorun + explicit reference + actual output
+PASS course js-event-delegation view/question/feedback
+PASS course js-event-delegation transfer without autorun + explicit reference + actual output
+PASS course vue-computed-filter view/question/feedback
+PASS course vue-computed-filter transfer without autorun + explicit reference + actual output
+PASS course vue-watch-side-effect view/question/feedback
+PASS course vue-watch-side-effect transfer without autorun + explicit reference + actual output
+PASS course vue-props-emits view/question/feedback
+PASS course vue-props-emits transfer without autorun + explicit reference + actual output
+PASS course vue-keyed-component-state view/question/feedback
+PASS course vue-keyed-component-state transfer without autorun + explicit reference + actual output
+PASS course html-structure own edited draft/navigation/explicit transfer
+PASS course css-spacing own edited draft/navigation/explicit transfer
+PASS course js-events own edited draft/navigation/explicit transfer
+PASS course vue-ref own edited draft/navigation/explicit transfer
+PASS course progress/mistake histories/drafts survive full reload
+PASS legacy JS-101 native track/lesson navigation/unlocked
+PASS legacy JS-101 explicit reference actual DOM/interaction
+PASS legacy JS-102 native track/lesson navigation/unlocked
+PASS legacy JS-102 explicit reference actual DOM/interaction
+PASS legacy JS-103 native track/lesson navigation/unlocked
+PASS legacy JS-103 explicit reference actual DOM/interaction
+PASS legacy HTML-101 native track/lesson navigation/unlocked
+PASS legacy HTML-101 explicit reference actual DOM/interaction
+PASS legacy HTML-102 native track/lesson navigation/unlocked
+PASS legacy HTML-102 explicit reference actual DOM/interaction
+PASS legacy HTML-103 native track/lesson navigation/unlocked
+PASS legacy HTML-103 explicit reference actual DOM/interaction
+PASS legacy CSS-101 native track/lesson navigation/unlocked
+PASS legacy CSS-101 explicit reference actual DOM/interaction
+PASS legacy CSS-102 native track/lesson navigation/unlocked
+PASS legacy CSS-102 explicit reference actual DOM/interaction
+PASS legacy CSS-103 native track/lesson navigation/unlocked
+PASS legacy CSS-103 explicit reference actual DOM/interaction
+PASS legacy TS-101 native track/lesson navigation/unlocked
+PASS legacy TS-101 explicit reference actual DOM/interaction
+PASS legacy TS-102 native track/lesson navigation/unlocked
+PASS legacy TS-102 explicit reference actual DOM/interaction
+PASS legacy TS-103 native track/lesson navigation/unlocked
+PASS legacy TS-103 explicit reference actual DOM/interaction
+PASS legacy VUE-101 native track/lesson navigation/unlocked
+FAIL legacy VUE-101 explicit reference actual DOM/interaction Expected values to be strictly equal:
+
+'0' !== '1'
+
+PASS legacy VUE-102 native track/lesson navigation/unlocked
+PASS legacy VUE-102 explicit reference actual DOM/interaction
+PASS legacy VUE-103 native track/lesson navigation/unlocked
+PASS legacy VUE-103 explicit reference actual DOM/interaction
+PASS no uncaught JavaScript page errors
+{"passed":100,"total":101,"courses":32,"legacy":15}

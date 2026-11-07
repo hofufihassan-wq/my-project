@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "source_commit": "1cf220c506a132ae1a43a78f3cb508ee394a48c6",
+  "archive": "/workspace/downloads/VLex-Pro-static-20261107-110407-339863-1cf220c5/VLex-Pro-static-20261107-110407-339863-1cf220c5.zip",
+  "runtime_file_count": 59,
+  "checks": [
+    "ZIP, extracted directory, manifest SHA and runtime-only inventory match",
+    "Every HTML/CSS resource exists; vendored manifest matches; no empty runtime CSS",
+    "Exporter refuses missing script",
+    "Exporter refuses empty CSS",
+    "Exporter refuses altered vendored asset",
+    "Exporter refuses writing its bundle inside the checkout"
+  ],
+  "asset_checks": {
+    "html_assets": [
+      "assets/fonts/alexandria/index.css",
+      "assets/fonts/jetbrains-mono/index.css",
+      "assets/vendor/atom-one-dark-11.9.0.min.css",
+      "assets/tailwind-3.4.17.min.css",
+      "assets/vendor/vue-3.4.21.global.prod.js",
+      "assets/vendor/highlight-11.9.0.min.js",
+      "assets/vendor/highlight-xml-11.9.0.min.js",
+      "assets/vendor/highlight-javascript-11.9.0.min.js",
+      "assets/vendor/highlight-css-11.9.0.min.js",
+      "styles.css",
+      "identity.css",
+      "dictionary-correction.css",
+      "simulator-correction.css",
+      "simulator-reference.css",
+      "simulator-final.css",
+      "learning-explainer.css",
+      "learning-course.css",
+      "learning-css-lab.css",
+      "learning-js-lab.css",
+      "learning-dashboard.css",
+      "learning-platform.css",
+      "lexicon-data.js",
+      "practice-curriculum.js",
+      "legacy-validator-guards.js",
+      "simulator-guides.js",
+      "progress-data.js",
+      "preview-runner.js",
+      "simulator-beta.js",
+      "assets/vendor/compiler-sfc-3.4.21.global.min.js",
+      "learning-dictionary-status.js",
+      "learning-store.js",
+      "learning-explainer.js",
+      "learning-course.js",
+      "learning-course-advanced.js",
+      "learning-css-lab.js",
+      "learning-js-lab.js",
+      "learning-dashboard.js",
+      "app.js"
+    ],
+    "css_url_references": [
+      {
+        "source": "assets/fonts/alexandria/index.css",
+        "target": "assets/fonts/alexandria/files/alexandria-arabic-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/alexandria/index.css",
+        "target": "assets/fonts/alexandria/files/alexandria-vietnamese-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/alexandria/index.css",
+        "target": "assets/fonts/alexandria/files/alexandria-latin-ext-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/alexandria/index.css",
+        "target": "assets/fonts/alexandria/files/alexandria-latin-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/jetbrains-mono/index.css",
+        "target": "assets/fonts/jetbrains-mono/files/jetbrains-mono-cyrillic-ext-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/jetbrains-mono/index.css",
+        "target": "assets/fonts/jetbrains-mono/files/jetbrains-mono-cyrillic-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/jetbrains-mono/index.css",
+        "target": "assets/fonts/jetbrains-mono/files/jetbrains-mono-greek-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/jetbrains-mono/index.css",
+        "target": "assets/fonts/jetbrains-mono/files/jetbrains-mono-vietnamese-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/jetbrains-mono/index.css",
+        "target": "assets/fonts/jetbrains-mono/files/jetbrains-mono-latin-ext-wght-normal.woff2"
+      },
+      {
+        "source": "assets/fonts/jetbrains-mono/index.css",
+        "target": "assets/fonts/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2"
+      }
+    ],
+    "vendored_manifest_entries_verified": 27,
+    "empty_css": []
+  }
+}

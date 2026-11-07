@@ -1,0 +1,261 @@
+PASS course filters beginner/intermediate/advanced and no disabled lessons
+FAIL course html-structure view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر العنوان إلى اسمك، وأضف فقرة ثانية عن هدفك. ب…</p> aka getByText('غيّر العنوان إلى اسمك، وأضف فقرة ثانية عن هدفك. بعد التشغيل تأكد أنك تشوف عنوانً')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course html-attributes view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر قيمة id إلى my-goal، وغيّر href إلى #my-goal…</p> aka getByText('غيّر قيمة id إلى my-goal')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course html-form view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>جرّب التحقق والحقل فارغ. اكتب مهمة ثم جرّب مرة ثا…</p> aka getByText('جرّب التحقق والحقل فارغ. اكتب مهمة ثم جرّب مرة ثانية. اضغط التسمية ولاحظ أنها تر')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course html-semantics view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>أضف مهمة ثالثة داخل li، وافصل وصف اليوم في p. تأك…</p> aka getByText('أضف مهمة ثالثة داخل li')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course css-selectors view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر لون النص والخلفية. أضف p ثانية بلا class، ول…</p> aka getByText('غيّر لون النص والخلفية. أضف p')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course css-spacing view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر padding من 20px إلى 40px، ثم غيّر margin. قا…</p> aka getByText('غيّر padding من 20px إلى 40px')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course css-flex view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر flex-direction إلى column، ثم أعده row وغيّر…</p> aka getByText('غيّر flex-direction إلى')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course css-responsive view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>بدّل عرض المعاينة بين 390 و768 بكسل. لاحظ عدد الأ…</p> aka getByText('بدّل عرض المعاينة بين 390 و')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course js-values view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر الاسم والعدد الابتدائي. توقع الناتج قبل التش…</p> aka getByText('غيّر الاسم والعدد الابتدائي. توقع الناتج قبل التشغيل ثم قارنه بالعنوان')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course js-conditions view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر taskCount إلى3 وشغّل. بعدها جرّب النص '0' ول…</p> aka getByText('غيّر taskCount إلى3')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course js-arrays view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>أضف مهمة رابعة إلى المصفوفة. توقع عدد li ثم افحصه…</p> aka getByText('أضف مهمة رابعة إلى المصفوفة. توقع عدد li')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course js-events view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اضغط الزر ثلاث مرات. بعدها غيّر الزيادة من1 إلى2.…</p> aka getByText('اضغط الزر ثلاث مرات. بعدها غيّر الزيادة من1 إلى2. توقع العدد بعد ثلاث نقرات')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course vue-ref view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اضغط الزر، ثم غيّر الزيادة إلى2. لاحظ أن النص يتح…</p> aka getByText('اضغط الزر، ثم غيّر الزيادة إلى2. لاحظ أن النص يتحدث بدون getElementById.')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course vue-model view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اكتب اسم مهمة في الحقل. بعد إعادة تشغيل المعاينة …</p> aka getByText('اكتب اسم مهمة في الحقل. بعد إعادة تشغيل المعاينة يرجع إلى قيمته الأولية؛ ناقش ال')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course vue-list view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اجعل المصفوفة فارغة لتشوف رسالة v-if. ثم أضف مهمة…</p> aka getByText('اجعل المصفوفة فارغة لتشوف رسالة v-if. ثم أضف مهمة بمعرّف مختلف وشاهد العدد')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course vue-components view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>أضف task-card ثالثًا بعنوانك. غيّر تنسيق المكون م…</p> aka getByText('أضف task-card')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course html-accessible-feedback view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اضغط التحقق والحقل فارغ، ثم اكتب اسمك وأعد المحاو…</p> aka getByText('اضغط التحقق والحقل فارغ، ثم اكتب اسمك وأعد المحاولة. غيّر id مع for وaria-')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course html-native-validation view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>جرّب فراغًا، ثم كلمة بلا @، ثم learner@example.co…</p> aka getByText('جرّب فراغًا، ثم كلمة بلا @، ثم learner@example.com')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course html-details-disclosure view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>افتح التفاصيل بالنقر، ثم جرّب Tab وEnter. أضف ope…</p> aka getByText('افتح التفاصيل بالنقر، ثم جرّب Tab وEnter. أضف open إلى أول details')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course html-table-relations view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>أضف صف JavaScript مع مدة40. تأكد أن أول خلية th s…</p> aka getByText('أضف صف JavaScript مع مدة40')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course css-grid-minmax view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>جرّب عرض800 ثم390 بكسل. راقب عرض البطاقات وعدد ال…</p> aka getByText('جرّب عرض800 ثم390')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course css-flex-min-width view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>احذف min-width:0 مؤقتًا وقارن. جرّب تقليل عرض الح…</p> aka getByText('احذف min-width:0')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course css-custom-properties-clamp view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر اللون بالزر وتحقق أن الحد والنص تغيرا معًا. …</p> aka getByText('غيّر اللون بالزر وتحقق أن الحد والنص تغيرا معًا. جرّب عرض390 ثم800')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course css-transition-reduced-motion view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اضغط الزر مرتين. فعّل تقليل الحركة من نظامك أو أد…</p> aka getByText('اضغط الزر مرتين. فعّل تقليل الحركة من نظامك أو أدوات المطور ثم أعد التجربة؛ المف')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course js-closure-counters view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اضغط أ مرتين وب مرة. توقع القيمتين قبل النظر. بعد…</p> aka getByText('اضغط أ مرتين وب مرة. توقع القيمتين قبل النظر. بعدها جرّب استخدام nextA')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course js-async-error-handling view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>جرّب النجاح ثم الفشل. زد التأخير إلى1000 ولاحظ حا…</p> aka getByText('جرّب النجاح ثم الفشل. زد التأخير إلى1000 ولاحظ حالة الانتظار والأزرار. احذف')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course js-reduce-summary view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر CSS إلى done:true وتوقع المجموع. بعدها اجعل …</p> aka getByText('غيّر CSS إلى done:true')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course js-event-delegation view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>أضف مهمتين، ثم احذف واحدة جديدة والأصلية. جرّب ال…</p> aka getByText('أضف مهمتين، ثم احذف واحدة جديدة والأصلية. جرّب الضغط على كلمة إزالة داخل span')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course vue-computed-filter view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اكتب css ثم امسح البحث. أضف مهمة للقائمة الأصلية …</p> aka getByText('اكتب css')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course vue-watch-side-effect view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>غيّر الاسم إلى أحمد. لاحظ أن المراقب ما اشتغل فور…</p> aka getByText('غيّر الاسم إلى أحمد. لاحظ أن المراقب ما اشتغل فور الإنشاء افتراضيًا. أضف {')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course vue-props-emits view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اضغط الزر مرتين وراقب حالة الأب. أضف prop ثانية ل…</p> aka getByText('اضغط الزر مرتين وراقب حالة الأب. أضف prop ثانية للوصف مع default')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course vue-keyed-component-state view/question/feedback locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:
+    1) <p>اكتب «ملاحظتي» بجانب HTML ثم اعكس الترتيب. تأكد أ…</p> aka getByText('اكتب «ملاحظتي» بجانب HTML')
+    2) <p class="vlc-small">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')
+
+Call log:
+[2m  - waiting for locator('.vlc-experiment > p')[22m
+
+FAIL course progress/mistake histories/drafts survive full reload Expected values to be strictly equal:
+
+0 !== 32
+
+PASS legacy JS-101 native track/lesson navigation/unlocked
+PASS legacy JS-101 explicit reference actual DOM/interaction
+PASS legacy JS-102 native track/lesson navigation/unlocked
+PASS legacy JS-102 explicit reference actual DOM/interaction
+PASS legacy JS-103 native track/lesson navigation/unlocked
+PASS legacy JS-103 explicit reference actual DOM/interaction
+PASS legacy HTML-101 native track/lesson navigation/unlocked
+PASS legacy HTML-101 explicit reference actual DOM/interaction
+PASS legacy HTML-102 native track/lesson navigation/unlocked
+PASS legacy HTML-102 explicit reference actual DOM/interaction
+PASS legacy HTML-103 native track/lesson navigation/unlocked
+PASS legacy HTML-103 explicit reference actual DOM/interaction
+PASS legacy CSS-101 native track/lesson navigation/unlocked
+PASS legacy CSS-101 explicit reference actual DOM/interaction
+PASS legacy CSS-102 native track/lesson navigation/unlocked
+PASS legacy CSS-102 explicit reference actual DOM/interaction
+PASS legacy CSS-103 native track/lesson navigation/unlocked
+PASS legacy CSS-103 explicit reference actual DOM/interaction
+PASS legacy TS-101 native track/lesson navigation/unlocked
+PASS legacy TS-101 explicit reference actual DOM/interaction
+PASS legacy TS-102 native track/lesson navigation/unlocked
+PASS legacy TS-102 explicit reference actual DOM/interaction
+PASS legacy TS-103 native track/lesson navigation/unlocked
+PASS legacy TS-103 explicit reference actual DOM/interaction
+PASS legacy VUE-101 native track/lesson navigation/unlocked
+PASS legacy VUE-101 explicit reference actual DOM/interaction
+PASS legacy VUE-102 native track/lesson navigation/unlocked
+PASS legacy VUE-102 explicit reference actual DOM/interaction
+PASS legacy VUE-103 native track/lesson navigation/unlocked
+PASS legacy VUE-103 explicit reference actual DOM/interaction
+PASS no uncaught JavaScript page errors
+{"passed":32,"total":65,"courses":32,"legacy":15}

@@ -1,0 +1,1315 @@
+{
+  "started": "2026-11-07T11:05:14.020Z",
+  "commit": "1cf220c506a132ae1a43a78f3cb508ee394a48c6",
+  "method": "Fresh Playwright native Chromium UI clicks on complete unchanged current app; isolated new context, loopback ephemeral server, all nonlocal requests blocked. Test fixture expectations reused, observations and screenshots freshly generated. Not a human Windows run.",
+  "checks": [
+    {
+      "name": "course filters beginner/intermediate/advanced and no disabled lessons",
+      "passed": true,
+      "ms": 617,
+      "counts": {
+        "beginner": 16,
+        "intermediate": 10,
+        "advanced": 6
+      }
+    },
+    {
+      "name": "course html-structure view/question/feedback",
+      "passed": false,
+      "ms": 266,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر العنوان إلى اسمك، وأضف فقرة ثانية عن هدفك. ب…</p> aka getByText('غيّر العنوان إلى اسمك، وأضف فقرة ثانية عن هدفك. بعد التشغيل تأكد أنك تشوف عنوانً')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course html-attributes view/question/feedback",
+      "passed": false,
+      "ms": 180,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر قيمة id إلى my-goal، وغيّر href إلى #my-goal…</p> aka getByText('غيّر قيمة id إلى my-goal')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course html-form view/question/feedback",
+      "passed": false,
+      "ms": 197,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>جرّب التحقق والحقل فارغ. اكتب مهمة ثم جرّب مرة ثا…</p> aka getByText('جرّب التحقق والحقل فارغ. اكتب مهمة ثم جرّب مرة ثانية. اضغط التسمية ولاحظ أنها تر')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course html-semantics view/question/feedback",
+      "passed": false,
+      "ms": 192,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف مهمة ثالثة داخل li، وافصل وصف اليوم في p. تأك…</p> aka getByText('أضف مهمة ثالثة داخل li')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course css-selectors view/question/feedback",
+      "passed": false,
+      "ms": 165,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر لون النص والخلفية. أضف p ثانية بلا class، ول…</p> aka getByText('غيّر لون النص والخلفية. أضف p')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course css-spacing view/question/feedback",
+      "passed": false,
+      "ms": 152,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر padding من 20px إلى 40px، ثم غيّر margin. قا…</p> aka getByText('غيّر padding من 20px إلى 40px')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course css-flex view/question/feedback",
+      "passed": false,
+      "ms": 161,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر flex-direction إلى column، ثم أعده row وغيّر…</p> aka getByText('غيّر flex-direction إلى')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course css-responsive view/question/feedback",
+      "passed": false,
+      "ms": 1079,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>بدّل عرض المعاينة بين 390 و768 بكسل. لاحظ عدد الأ…</p> aka getByText('بدّل عرض المعاينة بين 390 و')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course js-values view/question/feedback",
+      "passed": false,
+      "ms": 1404,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر الاسم والعدد الابتدائي. توقع الناتج قبل التش…</p> aka getByText('غيّر الاسم والعدد الابتدائي. توقع الناتج قبل التشغيل ثم قارنه بالعنوان')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course js-conditions view/question/feedback",
+      "passed": false,
+      "ms": 1527,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر taskCount إلى3 وشغّل. بعدها جرّب النص '0' ول…</p> aka getByText('غيّر taskCount إلى3')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course js-arrays view/question/feedback",
+      "passed": false,
+      "ms": 151,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف مهمة رابعة إلى المصفوفة. توقع عدد li ثم افحصه…</p> aka getByText('أضف مهمة رابعة إلى المصفوفة. توقع عدد li')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course js-events view/question/feedback",
+      "passed": false,
+      "ms": 176,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط الزر ثلاث مرات. بعدها غيّر الزيادة من1 إلى2.…</p> aka getByText('اضغط الزر ثلاث مرات. بعدها غيّر الزيادة من1 إلى2. توقع العدد بعد ثلاث نقرات')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course vue-ref view/question/feedback",
+      "passed": false,
+      "ms": 176,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط الزر، ثم غيّر الزيادة إلى2. لاحظ أن النص يتح…</p> aka getByText('اضغط الزر، ثم غيّر الزيادة إلى2. لاحظ أن النص يتحدث بدون getElementById.')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course vue-model view/question/feedback",
+      "passed": false,
+      "ms": 166,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اكتب اسم مهمة في الحقل. بعد إعادة تشغيل المعاينة …</p> aka getByText('اكتب اسم مهمة في الحقل. بعد إعادة تشغيل المعاينة يرجع إلى قيمته الأولية؛ ناقش ال')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course vue-list view/question/feedback",
+      "passed": false,
+      "ms": 162,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اجعل المصفوفة فارغة لتشوف رسالة v-if. ثم أضف مهمة…</p> aka getByText('اجعل المصفوفة فارغة لتشوف رسالة v-if. ثم أضف مهمة بمعرّف مختلف وشاهد العدد')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course vue-components view/question/feedback",
+      "passed": false,
+      "ms": 159,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف task-card ثالثًا بعنوانك. غيّر تنسيق المكون م…</p> aka getByText('أضف task-card')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course html-accessible-feedback view/question/feedback",
+      "passed": false,
+      "ms": 119,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط التحقق والحقل فارغ، ثم اكتب اسمك وأعد المحاو…</p> aka getByText('اضغط التحقق والحقل فارغ، ثم اكتب اسمك وأعد المحاولة. غيّر id مع for وaria-')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course html-native-validation view/question/feedback",
+      "passed": false,
+      "ms": 149,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>جرّب فراغًا، ثم كلمة بلا @، ثم learner@example.co…</p> aka getByText('جرّب فراغًا، ثم كلمة بلا @، ثم learner@example.com')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course html-details-disclosure view/question/feedback",
+      "passed": false,
+      "ms": 141,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>افتح التفاصيل بالنقر، ثم جرّب Tab وEnter. أضف ope…</p> aka getByText('افتح التفاصيل بالنقر، ثم جرّب Tab وEnter. أضف open إلى أول details')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course html-table-relations view/question/feedback",
+      "passed": false,
+      "ms": 148,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف صف JavaScript مع مدة40. تأكد أن أول خلية th s…</p> aka getByText('أضف صف JavaScript مع مدة40')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course css-grid-minmax view/question/feedback",
+      "passed": false,
+      "ms": 152,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>جرّب عرض800 ثم390 بكسل. راقب عرض البطاقات وعدد ال…</p> aka getByText('جرّب عرض800 ثم390')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course css-flex-min-width view/question/feedback",
+      "passed": false,
+      "ms": 169,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>احذف min-width:0 مؤقتًا وقارن. جرّب تقليل عرض الح…</p> aka getByText('احذف min-width:0')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course css-custom-properties-clamp view/question/feedback",
+      "passed": false,
+      "ms": 159,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر اللون بالزر وتحقق أن الحد والنص تغيرا معًا. …</p> aka getByText('غيّر اللون بالزر وتحقق أن الحد والنص تغيرا معًا. جرّب عرض390 ثم800')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course css-transition-reduced-motion view/question/feedback",
+      "passed": false,
+      "ms": 153,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط الزر مرتين. فعّل تقليل الحركة من نظامك أو أد…</p> aka getByText('اضغط الزر مرتين. فعّل تقليل الحركة من نظامك أو أدوات المطور ثم أعد التجربة؛ المف')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course js-closure-counters view/question/feedback",
+      "passed": false,
+      "ms": 147,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط أ مرتين وب مرة. توقع القيمتين قبل النظر. بعد…</p> aka getByText('اضغط أ مرتين وب مرة. توقع القيمتين قبل النظر. بعدها جرّب استخدام nextA')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course js-async-error-handling view/question/feedback",
+      "passed": false,
+      "ms": 140,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>جرّب النجاح ثم الفشل. زد التأخير إلى1000 ولاحظ حا…</p> aka getByText('جرّب النجاح ثم الفشل. زد التأخير إلى1000 ولاحظ حالة الانتظار والأزرار. احذف')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course js-reduce-summary view/question/feedback",
+      "passed": false,
+      "ms": 122,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر CSS إلى done:true وتوقع المجموع. بعدها اجعل …</p> aka getByText('غيّر CSS إلى done:true')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course js-event-delegation view/question/feedback",
+      "passed": false,
+      "ms": 176,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف مهمتين، ثم احذف واحدة جديدة والأصلية. جرّب ال…</p> aka getByText('أضف مهمتين، ثم احذف واحدة جديدة والأصلية. جرّب الضغط على كلمة إزالة داخل span')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course vue-computed-filter view/question/feedback",
+      "passed": false,
+      "ms": 146,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اكتب css ثم امسح البحث. أضف مهمة للقائمة الأصلية …</p> aka getByText('اكتب css')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course vue-watch-side-effect view/question/feedback",
+      "passed": false,
+      "ms": 143,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر الاسم إلى أحمد. لاحظ أن المراقب ما اشتغل فور…</p> aka getByText('غيّر الاسم إلى أحمد. لاحظ أن المراقب ما اشتغل فور الإنشاء افتراضيًا. أضف {')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course vue-props-emits view/question/feedback",
+      "passed": false,
+      "ms": 170,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط الزر مرتين وراقب حالة الأب. أضف prop ثانية ل…</p> aka getByText('اضغط الزر مرتين وراقب حالة الأب. أضف prop ثانية للوصف مع default')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course vue-keyed-component-state view/question/feedback",
+      "passed": false,
+      "ms": 165,
+      "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اكتب «ملاحظتي» بجانب HTML ثم اعكس الترتيب. تأكد أ…</p> aka getByText('اكتب «ملاحظتي» بجانب HTML')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:318\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:49:10)"
+    },
+    {
+      "name": "course progress/mistake histories/drafts survive full reload",
+      "passed": false,
+      "ms": 1151,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 32\n\n    at /workspace/my-progect/resume-checks/lessons/walkthrough.cjs:52:275\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough.cjs:52:1)"
+    },
+    {
+      "name": "legacy JS-101 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 188,
+      "title": "المتغيرات والقيم والقوالب النصية",
+      "source": "<h1>مسودة قديمة مستقلة لا يغيرها نقل الدروس</h1>",
+      "status": "unlocked"
+    },
+    {
+      "name": "legacy JS-101 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 674,
+      "details": {
+        "actualDOMVerified": true
+      },
+      "observed": {
+        "text": "بطاقة ترحيب برمجية\nمرحباً بك، سارة! 👋\n\nأهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!",
+        "html": "\n  <div id=\"card\">\n        <span class=\"badge\">بطاقة ترحيب برمجية</span>\n        <h2>مرحباً بك، سارة! 👋</h2>\n        <p>أهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!</p>\n      </div>\n\n  <script>\n    const userName = \"سارة\";\n    const welcomeMsg = \"أهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!\";\n\n    const cardEl = document.getElementById('card');\n    if (userName && welcomeMsg) {\n      cardEl.innerHTML = `\n        <span class=\"badge\">بطاقة ترحيب برمجية</span>\n        <h2>مرحباً بك، ${userName}! 👋</h2>\n        <p>${welcomeMsg}</p>\n      `;\n    }\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy JS-102 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 435,
+      "title": "اتخاذ القرارات بواسطة if / else",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 16px; box-sizing: border-box; }\n    .box { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; text-align: center; max-width: 380px; width: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    .btn { display: inline-block; background: #00DC82; color: #020420; font-weight: bold; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-top: 12px; font-size: 13px; }\n    .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-left: 6px; }\n  </style>\n</head>\n<body>\n  <div id=\"app-view\" class=\"box\">\n    <!-- ستظهر الواجهة المناسبة هنا بناء على الشرط -->\n  </div>\n\n  <script>\n    // غيّر هذه القيمة بين true و false لاختبار النتيجة\n    const isLoggedIn = true;\n\n    const container = document.getElementById('app-view');\n\n    // اكتب الشرط البرمجي هنا:\n    if (isLoggedIn) {\n      container.innerHTML = `\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      `;\n    } else {\n      container.innerHTML = `\n        <h2 style=\"color: #f59e0b; margin-top:0;\">تسجيل الدخول 🔒</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">يرجى تسجيل الدخول للوصول إلى لوحة التحكم الخاصة بك.</p>\n        <button class=\"btn\">تسجيل الدخول الآن</button>\n      `;\n    }\n  </script>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy JS-102 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 765,
+      "details": {
+        "actualDOMVerified": true
+      },
+      "observed": {
+        "text": "لوحة التحكم الرئيسية 📊\n\nأهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.\n\nتسجيل الخروج",
+        "html": "\n  <div id=\"app-view\" class=\"box\">\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      </div>\n\n  <script>\n    const isLoggedIn = true;\n    const container = document.getElementById('app-view');\n\n    if (isLoggedIn) {\n      container.innerHTML = `\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      `;\n    } else {\n      container.innerHTML = `\n        <h2 style=\"color: #f59e0b; margin-top:0;\">تسجيل الدخول 🔒</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">يرجى تسجيل الدخول للوصول إلى لوحة التحكم الخاصة بك.</p>\n        <button class=\"btn\">تسجيل الدخول الآن</button>\n      `;\n    }\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy JS-103 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 223,
+      "title": "المصفوفات ودالة التحويل map()",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; margin: 0; }\n    h1 { text-align: center; color: #00DC82; font-size: 20px; margin-bottom: 20px; }\n    #cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 700px; margin: 0 auto; }\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 12px; padding: 16px; text-align: center; transition: transform 0.2s; }\n    .card:hover { transform: translateY(-3px); border-color: #00DC82; }\n    .card-icon { font-size: 28px; margin-bottom: 8px; }\n    .card-title { font-weight: bold; font-size: 15px; color: #f8fafc; margin-bottom: 4px; }\n    .card-price { color: #00DC82; font-size: 13px; font-weight: 600; }\n  </style>\n</head>\n<body>\n  <h1>منتجاتنا المختارة ✨</h1>\n  <div id=\"cards-container\">\n    <!-- ستظهر 3 بطاقات هنا عبر دالة map() -->\n  </div>\n\n  <script>\n    // مصفوفة المنتجات (3 عناصر)\n    const products = [\n      { id: 1, title: \"سماعات محيطية\", price: \"180 ر.س\", icon: \"🎧\" },\n      { id: 2, title: \"لوحة مفاتيح ميكانيكية\", price: \"320 ر.س\", icon: \"⌨️\" },\n      { id: 3, title: \"فأرة ألعاب لاسلكية\", price: \"150 ر.س\", icon: \"🖱️\" }\n    ];\n\n    const container = document.getElementById('cards-container');\n\n    // استخدم دالة map() هنا لتوليد البطاقات:\n    const cardsHtml = products.map(p => `\n      <div class=\"card\">\n        <div class=\"card-icon\">${p.icon}</div>\n        <div class=\"card-title\">${p.title}</div>\n        <div class=\"card-price\">${p.price}</div>\n      </div>\n    `).join('');\n\n    container.innerHTML = cardsHtml;\n  </script>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy JS-103 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 934,
+      "details": {
+        "actualDOMVerified": true
+      },
+      "observed": {
+        "text": "منتجاتنا المختارة ✨\n🎧\nسماعات محيطية\n180 ر.س\n⌨️\nلوحة مفاتيح ميكانيكية\n320 ر.س\n🖱️\nفأرة ألعاب لاسلكية\n150 ر.س",
+        "html": "\n  <h1>منتجاتنا المختارة ✨</h1>\n  <div id=\"cards-container\">\n      <div class=\"card\">\n        <div class=\"card-icon\">🎧</div>\n        <div class=\"card-title\">سماعات محيطية</div>\n        <div class=\"card-price\">180 ر.س</div>\n      </div>\n    \n      <div class=\"card\">\n        <div class=\"card-icon\">⌨️</div>\n        <div class=\"card-title\">لوحة مفاتيح ميكانيكية</div>\n        <div class=\"card-price\">320 ر.س</div>\n      </div>\n    \n      <div class=\"card\">\n        <div class=\"card-icon\">🖱️</div>\n        <div class=\"card-title\">فأرة ألعاب لاسلكية</div>\n        <div class=\"card-price\">150 ر.س</div>\n      </div>\n    </div>\n\n  <script>\n    const products = [\n      { id: 1, title: \"سماعات محيطية\", price: \"180 ر.س\", icon: \"🎧\" },\n      { id: 2, title: \"لوحة مفاتيح ميكانيكية\", price: \"320 ر.س\", icon: \"⌨️\" },\n      { id: 3, title: \"فأرة ألعاب لاسلكية\", price: \"150 ر.س\", icon: \"🖱️\" }\n    ];\n\n    const container = document.getElementById('cards-container');\n    container.innerHTML = products.map(p => `\n      <div class=\"card\">\n        <div class=\"card-icon\">${p.icon}</div>\n        <div class=\"card-title\">${p.title}</div>\n        <div class=\"card-price\">${p.price}</div>\n      </div>\n    `).join('');\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy HTML-101 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 278,
+      "title": "هيكل المستند والعناصر الدلالية",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 30px; margin: 0; line-height: 1.6; }\n    article { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; max-width: 600px; margin: 0 auto; }\n    h1 { color: #00DC82; font-size: 24px; margin-top: 0; }\n    p { color: #cbd5e1; font-size: 15px; }\n  </style>\n</head>\n<body>\n  <article>\n    <!-- اكتب العنوان والفقرة هنا -->\n    <h1>مستقبل تطوير الويب مع HTML5 الحديثة</h1>\n    <p>توفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.</p>\n  </article>\n</body>\n</html>",
+      "status": "unlocked"
+    },
+    {
+      "name": "legacy HTML-101 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 584,
+      "details": {
+        "actualDOMVerified": true
+      },
+      "observed": {
+        "text": "مستقبل تطوير الويب مع HTML5 الحديثة\n\nتوفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.",
+        "html": "\n  <article>\n    <h1>مستقبل تطوير الويب مع HTML5 الحديثة</h1>\n    <p>توفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.</p>\n  </article>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy HTML-102 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 228,
+      "title": "الروابط والصور وإمكانية الوصول",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 20px; max-width: 420px; margin: 0 auto; }\n    img { max-width: 100%; border-radius: 10px; margin-bottom: 14px; border: 1px solid #334155; }\n    a { display: inline-block; background: #00DC82; color: #020420; font-weight: bold; text-decoration: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; margin-top: 8px; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>استكشف عالم التطوير 🚀</h2>\n    <img src=\"https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400\" alt=\"شاشة حاسوب تعرض أسطر كود برمجية ملونة\">\n    <br>\n    <a href=\"https://developer.mozilla.org\" target=\"_blank\" rel=\"noopener\">اقرأ المزيد على شبكة MDN</a>\n  </div>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy HTML-102 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 716,
+      "details": {
+        "networkImage": {
+          "loaded": false,
+          "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400",
+          "alt": "شاشة حاسوب تعرض أسطر كود برمجية ملونة"
+        },
+        "note": "Remote image intentionally blocked; link metadata and alt verified, remote image not claimed offline."
+      },
+      "observed": {
+        "text": "استكشف عالم التطوير 🚀\n\nاقرأ المزيد على شبكة MDN",
+        "html": "\n  <div class=\"card\">\n    <h2>استكشف عالم التطوير 🚀</h2>\n    <img src=\"https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400\" alt=\"شاشة حاسوب تعرض أسطر كود برمجية ملونة\">\n    <br>\n    <a href=\"https://developer.mozilla.org\" target=\"_blank\" rel=\"noopener\">اقرأ المزيد على شبكة MDN</a>\n  </div>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy HTML-103 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 206,
+      "title": "النماذج وحقول الإدخال والتحقق",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; }\n    .form-card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; }\n    label { display: block; font-size: 13px; color: #94a3b8; margin-bottom: 6px; font-weight: 500; }\n    input { width: 100%; box-sizing: border-box; background: #070d1e; border: 1px solid #334155; border-radius: 8px; padding: 10px 12px; color: #fff; margin-bottom: 16px; font-size: 14px; }\n    input:focus { outline: none; border-color: #00DC82; }\n    button { width: 100%; background: #00DC82; color: #020420; font-weight: bold; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-size: 14px; }\n  </style>\n</head>\n<body>\n  <div class=\"form-card\">\n    <h2 style=\"color:#00DC82; margin-top:0; font-size:18px;\">انضم إلى النشرة البريدية 📬</h2>\n    <form>\n      <label for=\"full-name\">الاسم الكريم:</label>\n      <input id=\"full-name\" type=\"text\" placeholder=\"اكتب اسمك...\" required>\n\n      <label for=\"user-email\">البريد الإلكتروني:</label>\n      <input id=\"user-email\" type=\"email\" placeholder=\"name@example.com\" required>\n\n      <button type=\"submit\" onclick=\"event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';\">تأكيد الاشتراك</button>\n      <p id=\"form-status\" role=\"status\" aria-live=\"polite\"></p>\n    </form>\n  </div>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy HTML-103 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 1630,
+      "details": {
+        "localValidation": "تم التحقق من النموذج محليًا؛ لم تُرسل البيانات."
+      },
+      "observed": {
+        "text": "انضم إلى النشرة البريدية 📬\nالاسم الكريم:\nالبريد الإلكتروني:\n تأكيد الاشتراك\n\nتم التحقق من النموذج محليًا؛ لم تُرسل البيانات.",
+        "html": "\n  <div class=\"form-card\">\n    <h2 style=\"color:#00DC82; margin-top:0; font-size:18px;\">انضم إلى النشرة البريدية 📬</h2>\n    <form>\n      <label for=\"full-name\">الاسم الكريم:</label>\n      <input id=\"full-name\" type=\"text\" placeholder=\"اكتب اسمك...\" required=\"\">\n\n      <label for=\"user-email\">البريد الإلكتروني:</label>\n      <input id=\"user-email\" type=\"email\" placeholder=\"name@example.com\" required=\"\">\n\n      <button type=\"submit\" onclick=\"event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';\">تأكيد الاشتراك</button>\n      <p id=\"form-status\" role=\"status\" aria-live=\"polite\">تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.</p>\n    </form>\n  </div>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy CSS-101 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 201,
+      "title": "نموذج الصندوق (Box Model) والمسافات",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 20px; }\n    \n    /* نسّق الصندوق هنا باستخدام نموذج الصندوق (Box Model) */\n    .box {\n      background: #0f1c3f;\n      max-width: 400px;\n      margin: 40px auto;\n      padding: 24px;\n      border: 2px solid #00DC82;\n      border-radius: 16px;\n      box-shadow: 0 10px 25px rgba(0,0,0,0.4);\n      text-align: center;\n    }\n\n    h2 { color: #00DC82; margin: 0 0 10px 0; }\n    p { color: #cbd5e1; font-size: 14px; line-height: 1.6; margin: 0; }\n  </style>\n</head>\n<body>\n  <div class=\"box\">\n    <h2>نموذج الصندوق (Box Model) 📦</h2>\n    <p>لاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.</p>\n  </div>\n</body>\n</html>",
+      "status": "unlocked"
+    },
+    {
+      "name": "legacy CSS-101 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 587,
+      "details": {
+        "actualDOMVerified": true
+      },
+      "observed": {
+        "text": "نموذج الصندوق (Box Model) 📦\n\nلاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.",
+        "html": "\n  <div class=\"box\">\n    <h2>نموذج الصندوق (Box Model) 📦</h2>\n    <p>لاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.</p>\n  </div>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy CSS-102 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 190,
+      "title": "نظام التخطيط المرن (Flexbox)",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 20px; }\n    \n    .navbar {\n      background: #0f1c3f;\n      border: 1px solid #1e3a8a;\n      border-radius: 12px;\n      padding: 14px 24px;\n      max-width: 650px;\n      margin: 0 auto;\n      \n      /* اكتب خصائص Flexbox هنا */\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .logo { font-weight: bold; font-size: 18px; color: #00DC82; }\n    .nav-links { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }\n    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 14px; }\n    .nav-links a:hover { color: #00DC82; }\n  </style>\n</head>\n<body>\n  <nav class=\"navbar\">\n    <div class=\"logo\">⚡ فيوليكسيكون</div>\n    <ul class=\"nav-links\">\n      <li><a href=\"#\">الرئيسية</a></li>\n      <li><a href=\"#\">المعجم</a></li>\n      <li><a href=\"#\">التدريب</a></li>\n    </ul>\n  </nav>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy CSS-102 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 827,
+      "details": {
+        "actualDOMVerified": true
+      },
+      "observed": {
+        "text": "⚡ فيوليكسيكون\nالرئيسية\nالمعجم\nالتدريب",
+        "html": "\n  <nav class=\"navbar\">\n    <div class=\"logo\">⚡ فيوليكسيكون</div>\n    <ul class=\"nav-links\">\n      <li><a href=\"#\">الرئيسية</a></li>\n      <li><a href=\"#\">المعجم</a></li>\n      <li><a href=\"#\">التدريب</a></li>\n    </ul>\n  </nav>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy CSS-103 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 175,
+      "title": "شبكة CSS المتجاوبة (CSS Grid)",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 24px; }\n    h1 { text-align: center; color: #00DC82; font-size: 20px; margin-bottom: 20px; }\n    \n    .grid-container {\n      /* طبّق شبكة Grid المتجاوبة هنا */\n      display: grid;\n      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));\n      gap: 16px;\n      max-width: 750px;\n      margin: 0 auto;\n    }\n\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 12px; padding: 20px; text-align: center; }\n    .card h3 { margin: 0 0 6px 0; color: #00DC82; font-size: 16px; }\n    .card p { margin: 0; font-size: 13px; color: #94a3b8; }\n  </style>\n</head>\n<body>\n  <h1>شبكة الخدمات التقنية 🌐</h1>\n  <div class=\"grid-container\">\n    <div class=\"card\"><h3>تصميم الواجهات</h3><p>تجربة مستخدم سهلة وجذابة.</p></div>\n    <div class=\"card\"><h3>تطوير الواجهات</h3><p>مكونات Vue 3 فائقة السرعة.</p></div>\n    <div class=\"card\"><h3>أمان الأكواد</h3><p>تحقق صارم مع TypeScript.</p></div>\n  </div>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy CSS-103 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 1338,
+      "details": {
+        "actualDOMVerified": true
+      },
+      "observed": {
+        "text": "شبكة الخدمات التقنية 🌐\nتصميم الواجهات\n\nتجربة مستخدم سهلة وجذابة.\n\nتطوير الواجهات\n\nمكونات Vue 3 فائقة السرعة.\n\nأمان الأكواد\n\nتحقق صارم مع TypeScript.",
+        "html": "\n  <h1>شبكة الخدمات التقنية 🌐</h1>\n  <div class=\"grid-container\">\n    <div class=\"card\"><h3>تصميم الواجهات</h3><p>تجربة مستخدم سهلة وجذابة.</p></div>\n    <div class=\"card\"><h3>تطوير الواجهات</h3><p>مكونات Vue 3 فائقة السرعة.</p></div>\n    <div class=\"card\"><h3>أمان الأكواد</h3><p>تحقق صارم مع TypeScript.</p></div>\n  </div>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy TS-101 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 344,
+      "title": "الأنواع الأساسية والتعليقات النوعية",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 420px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    h2 { color: #3178C6; margin-top: 0; }\n    .result { background: #070d1e; border: 1px dashed #3178C6; border-radius: 8px; padding: 12px; margin-top: 14px; font-family: monospace; font-size: 13px; color: #38bdf8; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>TypeScript: أمان الأنواع الأول 🔷</h2>\n    <p style=\"font-size:13px; color:#cbd5e1;\">التحقق من الأنواع قبل زمن التشغيل</p>\n    <div id=\"output\" class=\"result\">بانتظار تنفيذ الدالة...</div>\n  </div>\n\n  <script>\n    // في بيئة المتصفح يتم تحويل TypeScript إلى JavaScript\n    // أضف التعليقات النوعية في تعليقات التوثيق JSDoc أو صياغة TypeScript:\n    const appTitle = \"VueLexicon Pro\";\n    const appVersion = 3.6;\n    const isStable = true;\n\n    function formatAppDetails(title, version, stable) {\n      const statusText = stable ? \"نسخة مستقرة ✓\" : \"قيد التطوير 🚧\";\n      return title + \" - v\" + version + \" (\" + statusText + \")\";\n    }\n\n    const outputEl = document.getElementById('output');\n    outputEl.textContent = formatAppDetails(appTitle, appVersion, isStable);\n  </script>\n</body>\n</html>",
+      "status": "unlocked"
+    },
+    {
+      "name": "legacy TS-101 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 613,
+      "details": {
+        "runtime": "JavaScript equivalent; not TypeScript compilation"
+      },
+      "observed": {
+        "text": "TypeScript: أمان الأنواع الأول 🔷\nVueLexicon Pro - v3.6 (نسخة مستقرة ✓)",
+        "html": "\n  <div class=\"card\">\n    <h2>TypeScript: أمان الأنواع الأول 🔷</h2>\n    <div id=\"output\" class=\"result\">VueLexicon Pro - v3.6 (نسخة مستقرة ✓)</div>\n  </div>\n\n  <script>\n    const appTitle = \"VueLexicon Pro\";\n    const appVersion = 3.6;\n    const isStable = true;\n\n    function formatAppDetails(title, version, stable) {\n      const statusText = stable ? \"نسخة مستقرة ✓\" : \"قيد التطوير 🚧\";\n      return title + \" - v\" + version + \" (\" + statusText + \")\";\n    }\n\n    document.getElementById('output').textContent = formatAppDetails(appTitle, appVersion, isStable);\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy TS-102 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 217,
+      "title": "الواجهات (Interfaces) ونماذج البيانات",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; }\n    h2 { color: #3178C6; margin-top: 0; font-size: 18px; }\n    .prop-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1e293b; font-size: 13px; }\n    .prop-label { color: #94a3b8; }\n    .prop-val { color: #00DC82; font-weight: bold; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>بطاقة المبرمج: نموذج الواجهة Interface 🔷</h2>\n    <div id=\"dev-card\">\n      <!-- ستظهر بيانات المطور هنا -->\n    </div>\n  </div>\n\n  <script>\n    // عقد الواجهة (Interface Contract):\n    // interface DevProfile {\n    //   name: string;\n    //   track: string;\n    //   experienceYears: number;\n    // }\n\n    const developer = {\n      name: \"سعود العتيبي\",\n      track: \"Vue 3 & TypeScript\",\n      experienceYears: 4\n    };\n\n    const container = document.getElementById('dev-card');\n    container.innerHTML = `\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">${developer.name}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">${developer.track}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">${developer.experienceYears} سنوات</span></div>\n    `;\n  </script>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy TS-102 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 668,
+      "details": {
+        "runtime": "JavaScript equivalent; not TypeScript compilation"
+      },
+      "observed": {
+        "text": "بطاقة المبرمج: نموذج الواجهة Interface 🔷\nالمطور:\nسعود العتيبي\nالمسار:\nVue 3 & TypeScript\nالخبرة:\n4 سنوات",
+        "html": "\n  <div class=\"card\">\n    <h2>بطاقة المبرمج: نموذج الواجهة Interface 🔷</h2>\n    <div id=\"dev-card\">\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">سعود العتيبي</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">Vue 3 &amp; TypeScript</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">4 سنوات</span></div>\n    </div>\n  </div>\n\n  <script>\n    const developer = {\n      name: \"سعود العتيبي\",\n      track: \"Vue 3 & TypeScript\",\n      experienceYears: 4\n    };\n\n    const container = document.getElementById('dev-card');\n    container.innerHTML = `\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">${developer.name}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">${developer.track}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">${developer.experienceYears} سنوات</span></div>\n    `;\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy TS-103 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 189,
+      "title": "أنواع الاتحاد والتضييق (Union & Narrowing)",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 420px; margin: 0 auto; }\n    h2 { color: #3178C6; margin-top: 0; font-size: 18px; }\n    .tag { display: inline-block; background: rgba(49, 120, 198, 0.2); color: #38bdf8; border: 1px solid #3178C6; border-radius: 6px; padding: 6px 12px; margin: 6px; font-family: monospace; font-size: 14px; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>تضييق الأنواع: Union & Narrowing 🔷</h2>\n    <p style=\"font-size:13px; color:#cbd5e1;\">التعامل الآمن مع القيم متعددة الأنواع</p>\n    <div id=\"results\">\n      <!-- ستظهر النتائج المعالجة هنا -->\n    </div>\n  </div>\n\n  <script>\n    // الدالة تقبل معرفاً كـ (string | number):\n    function formatIdentifier(id) {\n      if (typeof id === 'string') {\n        // تم تضييق النوع إلى string بأمان\n        return 'ID-STR: ' + id.toUpperCase();\n      } else if (typeof id === 'number') {\n        // تم تضييق النوع إلى number بأمان\n        return 'ID-NUM: #' + String(id).padStart(4, '0');\n      }\n      return 'UNKNOWN';\n    }\n\n    const test1 = formatIdentifier(\"vue-pro\");\n    const test2 = formatIdentifier(42);\n\n    const container = document.getElementById('results');\n    container.innerHTML = `\n      <div class=\"tag\">${test1}</div>\n      <div class=\"tag\">${test2}</div>\n    `;\n  </script>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy TS-103 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 720,
+      "details": {
+        "runtime": "JavaScript equivalent; not TypeScript compilation"
+      },
+      "observed": {
+        "text": "تضييق الأنواع: Union & Narrowing 🔷\nID-STR: VUE-PRO ID-NUM: #0042",
+        "html": "\n  <div class=\"card\">\n    <h2>تضييق الأنواع: Union &amp; Narrowing 🔷</h2>\n    <div id=\"results\">\n      <div class=\"tag\">ID-STR: VUE-PRO</div>\n      <div class=\"tag\">ID-NUM: #0042</div>\n    </div>\n  </div>\n\n  <script>\n    function formatIdentifier(id) {\n      if (typeof id === 'string') {\n        return 'ID-STR: ' + id.toUpperCase();\n      } else if (typeof id === 'number') {\n        return 'ID-NUM: #' + String(id).padStart(4, '0');\n      }\n      return 'UNKNOWN';\n    }\n\n    const container = document.getElementById('results');\n    container.innerHTML = `\n      <div class=\"tag\">${formatIdentifier(\"vue-pro\")}</div>\n      <div class=\"tag\">${formatIdentifier(42)}</div>\n    `;\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy VUE-101 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 281,
+      "title": "التفاعلية وعرض البيانات مع ref()",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    .card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    h2 { color: #42B883; margin-top: 0; font-size: 18px; }\n    .count-display { font-size: 42px; font-weight: bold; color: #42B883; margin: 16px 0; }\n    button { background: #42B883; color: #020420; font-weight: bold; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: transform 0.1s; }\n    button:active { transform: scale(0.96); }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <div class=\"card\">\n      <h2>عداد تفاعلي مع Vue 3 💚</h2>\n      <div class=\"count-display\">{{ count }}</div>\n      <button @click=\"increment\">انقر للزيادة ⚡</button>\n    </div>\n  </div>\n\n  <script>\n    const { createApp, ref } = Vue;\n\n    createApp({\n      setup() {\n        const count = ref(0);\n\n        function increment() {\n          count.value++;\n        }\n\n        return {\n          count,\n          increment\n        };\n      }\n    }).mount('#app');\n  </script>\n</body>\n</html>",
+      "status": "unlocked"
+    },
+    {
+      "name": "legacy VUE-101 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 1668,
+      "details": {
+        "counterAfterNativeClick": "1"
+      },
+      "observed": {
+        "text": "عداد تفاعلي مع Vue 3 💚\n1\nانقر للزيادة ⚡",
+        "html": "\n  <div id=\"app\" data-v-app=\"\"><div class=\"card\"><h2>عداد تفاعلي مع Vue 3 💚</h2><div class=\"count-display\">1</div><button>انقر للزيادة ⚡</button></div></div>\n\n  <script>\n    const { createApp, ref } = Vue;\n    createApp({\n      setup() {\n        const count = ref(0);\n        function increment() {\n          count.value++;\n        }\n        return { count, increment };\n      }\n    }).mount('#app');\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy VUE-102 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 194,
+      "title": "التوجيهات الشرطية والتكرار (v-if & v-for)",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    .card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 16px; padding: 24px; max-width: 440px; margin: 0 auto; }\n    h2 { color: #42B883; margin-top: 0; font-size: 18px; }\n    ul { list-style: none; padding: 0; margin: 16px 0 0 0; text-align: right; }\n    li { background: #070d1e; border: 1px solid #1e293b; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px; }\n    .toggle-btn { background: #42B883; color: #020420; font-weight: bold; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; margin-top: 10px; }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <div class=\"card\">\n      <h2>إدارة المهام مع Vue 3 💚</h2>\n\n      <!-- التوجيهات الشرطية: -->\n      <div v-if=\"isLoggedIn\">\n        <p style=\"color:#00DC82; font-size:13px; margin:0;\">جلسة المستخدم نشطة ✓</p>\n        <ul>\n          <li v-for=\"task in tasks\" :key=\"task.id\">\n            <span>📌</span>\n            <span>{{ task.title }}</span>\n          </li>\n        </ul>\n      </div>\n\n      <div v-else>\n        <p style=\"color:#f59e0b; font-size:14px;\">يرجى تسجيل الدخول لمشاهدة قائمة مهامك.</p>\n      </div>\n\n      <button class=\"toggle-btn\" @click=\"isLoggedIn = !isLoggedIn\">\n        تبديل حالة الدخول ({{ isLoggedIn ? 'تسجيل خروج' : 'تسجيل دخول' }})\n      </button>\n    </div>\n  </div>\n\n  <script>\n    const { createApp, ref } = Vue;\n\n    createApp({\n      setup() {\n        const isLoggedIn = ref(true);\n        const tasks = ref([\n          { id: 1, title: 'إتقان أساسيات قالب Vue 3' },\n          { id: 2, title: 'تطبيق التوجيهات v-if و v-for' },\n          { id: 3, title: 'بناء المكونات وتمرير الخصائص' }\n        ]);\n\n        return {\n          isLoggedIn,\n          tasks\n        };\n      }\n    }).mount('#app');\n  </script>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy VUE-102 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 994,
+      "details": {
+        "vIfHiddenCount": 0,
+        "vForRestoredCount": 3
+      },
+      "observed": {
+        "text": "إدارة المهام مع Vue 3 💚\n\nجلسة المستخدم نشطة ✓\n\n📌\nإتقان أساسيات قالب Vue 3\n📌\nتطبيق التوجيهات v-if و v-for\n📌\nبناء المكونات وتمرير الخصائص\nتبديل حالة الدخول",
+        "html": "\n  <div id=\"app\" data-v-app=\"\"><div class=\"card\"><h2>إدارة المهام مع Vue 3 💚</h2><div><p style=\"color: rgb(0, 220, 130); font-size: 13px; margin: 0px;\">جلسة المستخدم نشطة ✓</p><ul><li><span>📌</span><span>إتقان أساسيات قالب Vue 3</span></li><li><span>📌</span><span>تطبيق التوجيهات v-if و v-for</span></li><li><span>📌</span><span>بناء المكونات وتمرير الخصائص</span></li></ul></div><button class=\"toggle-btn\"> تبديل حالة الدخول </button></div></div>\n\n  <script>\n    const { createApp, ref } = Vue;\n    createApp({\n      setup() {\n        const isLoggedIn = ref(true);\n        const tasks = ref([\n          { id: 1, title: 'إتقان أساسيات قالب Vue 3' },\n          { id: 2, title: 'تطبيق التوجيهات v-if و v-for' },\n          { id: 3, title: 'بناء المكونات وتمرير الخصائص' }\n        ]);\n        return { isLoggedIn, tasks };\n      }\n    }).mount('#app');\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "legacy VUE-103 native track/lesson navigation/unlocked",
+      "passed": true,
+      "ms": 232,
+      "title": "المكونات وتمرير الخصائص (Props & Components)",
+      "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    h2 { color: #42B883; margin-top: 0; font-size: 20px; }\n    .cards-grid { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }\n    .course-card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 12px; padding: 18px; width: 180px; text-align: center; }\n    .icon { font-size: 30px; margin-bottom: 8px; }\n    .title { font-weight: bold; font-size: 15px; margin-bottom: 4px; }\n    .badge { display: inline-block; background: rgba(66, 184, 131, 0.2); color: #42B883; font-size: 11px; padding: 2px 8px; border-radius: 9999px; }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <h2>مسارات التعلم عبر المكونات 💚</h2>\n    <div class=\"cards-grid\">\n      <!-- استدعاء المكون القابل لإعادة الاستخدام: -->\n      <course-card title=\"JavaScript\" level=\"مبتدئ\" icon=\"⚡\"></course-card>\n      <course-card title=\"TypeScript\" level=\"متوسط\" icon=\"🔷\"></course-card>\n      <course-card title=\"Vue.js 3\" level=\"متقدم\" icon=\"💚\"></course-card>\n    </div>\n  </div>\n\n  <script>\n    const { createApp } = Vue;\n    const app = createApp({});\n\n    // تسجيل المكون واستقبال الخصائص props:\n    app.component('course-card', {\n      props: ['title', 'level', 'icon'],\n      template: `\n        <div class=\"course-card\">\n          <div class=\"icon\">{{ icon }}</div>\n          <div class=\"title\">{{ title }}</div>\n          <span class=\"badge\">{{ level }}</span>\n        </div>\n      `\n    });\n\n    app.mount('#app');\n  </script>\n</body>\n</html>",
+      "status": "locked"
+    },
+    {
+      "name": "legacy VUE-103 explicit reference actual DOM/interaction",
+      "passed": true,
+      "ms": 686,
+      "details": {
+        "actualDOMVerified": true
+      },
+      "observed": {
+        "text": "مسارات التعلم عبر المكونات 💚\n⚡\nJavaScript\nمبتدئ\n🔷\nTypeScript\nمتوسط\n💚\nVue.js 3\nمتقدم",
+        "html": "\n  <div id=\"app\" data-v-app=\"\"><h2>مسارات التعلم عبر المكونات 💚</h2><div class=\"cards-grid\"><div class=\"course-card\"><div class=\"icon\">⚡</div><div class=\"title\">JavaScript</div><span class=\"badge\">مبتدئ</span></div><div class=\"course-card\"><div class=\"icon\">🔷</div><div class=\"title\">TypeScript</div><span class=\"badge\">متوسط</span></div><div class=\"course-card\"><div class=\"icon\">💚</div><div class=\"title\">Vue.js 3</div><span class=\"badge\">متقدم</span></div></div></div>\n\n  <script>\n    const { createApp } = Vue;\n    const app = createApp({});\n\n    app.component('course-card', {\n      props: ['title', 'level', 'icon'],\n      template: `\n        <div class=\"course-card\">\n          <div class=\"icon\">{{ icon }}</div>\n          <div class=\"title\">{{ title }}</div>\n          <span class=\"badge\">{{ level }}</span>\n        </div>\n      `\n    });\n\n    app.mount('#app');\n  </script>\n\n",
+        "frameWidth": 397,
+        "frameHeight": 371,
+        "overflow": false
+      },
+      "draftUnchanged": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "no uncaught JavaScript page errors",
+      "passed": true,
+      "ms": 2,
+      "pageErrors": []
+    }
+  ],
+  "courses": [
+    {
+      "id": "html-structure",
+      "topic": "html",
+      "level": "beginner",
+      "title": "أول صفحة: العنوان والفقرة",
+      "exampleSha256": "25afcdf0b53cdf0b10decc8e1ba3d2aebc415019224b7d16872b39d9a9da278b",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر العنوان إلى اسمك، وأضف فقرة ثانية عن هدفك. ب…</p> aka getByText('غيّر العنوان إلى اسمك، وأضف فقرة ثانية عن هدفك. بعد التشغيل تأكد أنك تشوف عنوانً')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-attributes",
+      "topic": "html",
+      "level": "beginner",
+      "title": "الخصائص والروابط",
+      "exampleSha256": "e51c1916fdd25ac8427533b4e1e94748af3df963533a62347947435ec40b0d09",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر قيمة id إلى my-goal، وغيّر href إلى #my-goal…</p> aka getByText('غيّر قيمة id إلى my-goal')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-form",
+      "topic": "html",
+      "level": "beginner",
+      "title": "مدخلات لها أسماء واضحة",
+      "exampleSha256": "47c8feda80b1af96de50b9c23b15db2ee2e2755eec25ca6039b2372e54ff73c2",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>جرّب التحقق والحقل فارغ. اكتب مهمة ثم جرّب مرة ثا…</p> aka getByText('جرّب التحقق والحقل فارغ. اكتب مهمة ثم جرّب مرة ثانية. اضغط التسمية ولاحظ أنها تر')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-semantics",
+      "topic": "html",
+      "level": "beginner",
+      "title": "عناصر لها معنى",
+      "exampleSha256": "0a88db8936017d181cf03c279adb8235ee693485f164c8b53692e862caa334af",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف مهمة ثالثة داخل li، وافصل وصف اليوم في p. تأك…</p> aka getByText('أضف مهمة ثالثة داخل li')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-selectors",
+      "topic": "css",
+      "level": "beginner",
+      "title": "من نختار ونلوّن؟",
+      "exampleSha256": "4d685bf637014794249c8fa3c59e3b3f28b56597d696a0dac38e26b48926d9bc",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر لون النص والخلفية. أضف p ثانية بلا class، ول…</p> aka getByText('غيّر لون النص والخلفية. أضف p')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-spacing",
+      "topic": "css",
+      "level": "beginner",
+      "title": "الحشو والهامش والحجم",
+      "exampleSha256": "2033573008c7d7f8736aafeb2ec6c54017d90953f361babba5383587f60c2a5e",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر padding من 20px إلى 40px، ثم غيّر margin. قا…</p> aka getByText('غيّر padding من 20px إلى 40px')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-flex",
+      "topic": "css",
+      "level": "beginner",
+      "title": "رتّب المهام بـFlexbox",
+      "exampleSha256": "a4f1d4732b2c8bec66a2493bde475f35fb77cb6fee9f2a93992259cfc401022f",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر flex-direction إلى column، ثم أعده row وغيّر…</p> aka getByText('غيّر flex-direction إلى')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-responsive",
+      "topic": "css",
+      "level": "beginner",
+      "title": "خلّ الصفحة تناسب الجوال",
+      "exampleSha256": "f416203249f3702ff5f351e959aa45426942592a9bc67388b2213be35fcd20b4",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>بدّل عرض المعاينة بين 390 و768 بكسل. لاحظ عدد الأ…</p> aka getByText('بدّل عرض المعاينة بين 390 و')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-values",
+      "topic": "js",
+      "level": "beginner",
+      "title": "القيم والمتغيرات",
+      "exampleSha256": "470f20c6dae719fc7461fada5bce5c2bfb7d6040a37e3a6b8e2ac01d70bb574a",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر الاسم والعدد الابتدائي. توقع الناتج قبل التش…</p> aka getByText('غيّر الاسم والعدد الابتدائي. توقع الناتج قبل التشغيل ثم قارنه بالعنوان')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-conditions",
+      "topic": "js",
+      "level": "beginner",
+      "title": "قرار بـif وelse",
+      "exampleSha256": "187455e421be17f924f3d1aeef8420ac8b64804886386a1ebcfd0e4bc7940da7",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر taskCount إلى3 وشغّل. بعدها جرّب النص '0' ول…</p> aka getByText('غيّر taskCount إلى3')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-arrays",
+      "topic": "js",
+      "level": "beginner",
+      "title": "المصفوفات والتكرار",
+      "exampleSha256": "eaf10070f975f389cc17e6fe7f341600bf5b97b9cb24a6d38793e1b05b791b7e",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف مهمة رابعة إلى المصفوفة. توقع عدد li ثم افحصه…</p> aka getByText('أضف مهمة رابعة إلى المصفوفة. توقع عدد li')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-events",
+      "topic": "js",
+      "level": "beginner",
+      "title": "الدوال والأحداث",
+      "exampleSha256": "ed9f206e17228f2158625a25346b5ab4a534254af1401744b5ff70bc3ba2b2d1",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط الزر ثلاث مرات. بعدها غيّر الزيادة من1 إلى2.…</p> aka getByText('اضغط الزر ثلاث مرات. بعدها غيّر الزيادة من1 إلى2. توقع العدد بعد ثلاث نقرات')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "vue-ref",
+      "topic": "vue",
+      "level": "beginner",
+      "title": "ref تربط القيمة بالواجهة",
+      "exampleSha256": "5ada6c48843da66ade790d4bfd930e9e4c2a2219ed983500f2d7bb54c0935191",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط الزر، ثم غيّر الزيادة إلى2. لاحظ أن النص يتح…</p> aka getByText('اضغط الزر، ثم غيّر الزيادة إلى2. لاحظ أن النص يتحدث بدون getElementById.')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "vue-model",
+      "topic": "vue",
+      "level": "beginner",
+      "title": "v-model: الكتابة تصير بيانات",
+      "exampleSha256": "5c0f34859da05f7be4184601164683409b4966a978b6dbe620f37fa075f91e28",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اكتب اسم مهمة في الحقل. بعد إعادة تشغيل المعاينة …</p> aka getByText('اكتب اسم مهمة في الحقل. بعد إعادة تشغيل المعاينة يرجع إلى قيمته الأولية؛ ناقش ال')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "vue-list",
+      "topic": "vue",
+      "level": "beginner",
+      "title": "v-for وv-if وcomputed",
+      "exampleSha256": "2772473efa64471d1b4993819f6dde778adab346fc487b8a5d287b30afb2122e",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اجعل المصفوفة فارغة لتشوف رسالة v-if. ثم أضف مهمة…</p> aka getByText('اجعل المصفوفة فارغة لتشوف رسالة v-if. ثم أضف مهمة بمعرّف مختلف وشاهد العدد')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "vue-components",
+      "topic": "vue",
+      "level": "beginner",
+      "title": "المكونات والـprops",
+      "exampleSha256": "e4a481e30f17094d8cea0bd2069dabb090f850703ea954a29de6346b6d2df675",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف task-card ثالثًا بعنوانك. غيّر تنسيق المكون م…</p> aka getByText('أضف task-card')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-accessible-feedback",
+      "topic": "html",
+      "level": "intermediate",
+      "title": "رسائل مرتبطة بالحقل وتُقرأ عند التغيير",
+      "exampleSha256": "d23b3b31dfd11b312dfa7e7c113c84a8cf05569e657ebf3a7562af47a142e4c8",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط التحقق والحقل فارغ، ثم اكتب اسمك وأعد المحاو…</p> aka getByText('اضغط التحقق والحقل فارغ، ثم اكتب اسمك وأعد المحاولة. غيّر id مع for وaria-')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-native-validation",
+      "topic": "html",
+      "level": "intermediate",
+      "title": "تحقق المتصفح من نموذج محلي",
+      "exampleSha256": "a0c2ed2db41c559cbeeddcd41dc91a4c7dab491900d24611e00befb362e10309",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>جرّب فراغًا، ثم كلمة بلا @، ثم learner@example.co…</p> aka getByText('جرّب فراغًا، ثم كلمة بلا @، ثم learner@example.com')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-details-disclosure",
+      "topic": "html",
+      "level": "intermediate",
+      "title": "إظهار التفاصيل بعنصر أصلي",
+      "exampleSha256": "9389a9b63c388eb65ec075a0e6f191643f66e04fa876254f9a78a1063990e8c1",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>افتح التفاصيل بالنقر، ثم جرّب Tab وEnter. أضف ope…</p> aka getByText('افتح التفاصيل بالنقر، ثم جرّب Tab وEnter. أضف open إلى أول details')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-table-relations",
+      "topic": "html",
+      "level": "intermediate",
+      "title": "جدول بيانات بعلاقات واضحة",
+      "exampleSha256": "c1f82cc2996cdd98a6c92704b2b93c736343e3163c890c21cf378703b8d7ab34",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف صف JavaScript مع مدة40. تأكد أن أول خلية th s…</p> aka getByText('أضف صف JavaScript مع مدة40')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-grid-minmax",
+      "topic": "css",
+      "level": "intermediate",
+      "title": "Grid يتكيف حسب المساحة المتاحة",
+      "exampleSha256": "be084c7ca8edd0b3e0a84f084e87923e4698ae425238bf5a4e550186ee569f2d",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>جرّب عرض800 ثم390 بكسل. راقب عرض البطاقات وعدد ال…</p> aka getByText('جرّب عرض800 ثم390')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-flex-min-width",
+      "topic": "css",
+      "level": "intermediate",
+      "title": "عنصر Flex طويل بدون كسر التخطيط",
+      "exampleSha256": "83513c07287b4fbd4f93dc97576b28486f3bc6c8fe5e711a10a958256338c863",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>احذف min-width:0 مؤقتًا وقارن. جرّب تقليل عرض الح…</p> aka getByText('احذف min-width:0')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-custom-properties-clamp",
+      "topic": "css",
+      "level": "advanced",
+      "title": "قيم مشتركة وقياس مرن بحدود",
+      "exampleSha256": "983818131130b31b9b04701091e416fa02fc50346cc625e325cf43b37f9053d6",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر اللون بالزر وتحقق أن الحد والنص تغيرا معًا. …</p> aka getByText('غيّر اللون بالزر وتحقق أن الحد والنص تغيرا معًا. جرّب عرض390 ثم800')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-transition-reduced-motion",
+      "topic": "css",
+      "level": "advanced",
+      "title": "تفاعل مرئي يحترم تقليل الحركة",
+      "exampleSha256": "ba0b6d2f524638c422e7203de5d499277d792fa75737eb0be5b7144072ba37e6",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط الزر مرتين. فعّل تقليل الحركة من نظامك أو أد…</p> aka getByText('اضغط الزر مرتين. فعّل تقليل الحركة من نظامك أو أدوات المطور ثم أعد التجربة؛ المف')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-closure-counters",
+      "topic": "js",
+      "level": "intermediate",
+      "title": "Closure: كل عداد يحتفظ بقيمته",
+      "exampleSha256": "2afea3555cc86a9cb938c85215834fe9278cc852cff4e38aae5f60156f0f7847",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط أ مرتين وب مرة. توقع القيمتين قبل النظر. بعد…</p> aka getByText('اضغط أ مرتين وب مرة. توقع القيمتين قبل النظر. بعدها جرّب استخدام nextA')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-async-error-handling",
+      "topic": "js",
+      "level": "advanced",
+      "title": "Promise وasync/await مع خطأ متوقع",
+      "exampleSha256": "8de3383fc76b7adf5644107ffcb1d4a5309b9da8d70e35aee15b3be22ecd1baa",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>جرّب النجاح ثم الفشل. زد التأخير إلى1000 ولاحظ حا…</p> aka getByText('جرّب النجاح ثم الفشل. زد التأخير إلى1000 ولاحظ حالة الانتظار والأزرار. احذف')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-reduce-summary",
+      "topic": "js",
+      "level": "intermediate",
+      "title": "reduce: حول قائمة إلى ملخص",
+      "exampleSha256": "64ad6b5dfc4d42a15f9ff404511006ef483f199b5beb9f67b9ac81cde475c9df",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر CSS إلى done:true وتوقع المجموع. بعدها اجعل …</p> aka getByText('غيّر CSS إلى done:true')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-event-delegation",
+      "topic": "js",
+      "level": "advanced",
+      "title": "مستمع واحد لعناصر تُضاف لاحقًا",
+      "exampleSha256": "626d80e44c82db1209f8665b7629311f31f3576ecf1b7d592ac1db17bfb40896",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>أضف مهمتين، ثم احذف واحدة جديدة والأصلية. جرّب ال…</p> aka getByText('أضف مهمتين، ثم احذف واحدة جديدة والأصلية. جرّب الضغط على كلمة إزالة داخل span')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "vue-computed-filter",
+      "topic": "vue",
+      "level": "intermediate",
+      "title": "computed: نتيجة مشتقة بدون نسخ الحالة",
+      "exampleSha256": "bb9aaa086b718b41250aaae454a558542c1f2f8f9dce5580f1e1272fdba382db",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اكتب css ثم امسح البحث. أضف مهمة للقائمة الأصلية …</p> aka getByText('اكتب css')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "vue-watch-side-effect",
+      "topic": "vue",
+      "level": "intermediate",
+      "title": "watch لأثر جانبي واضح",
+      "exampleSha256": "82dd7c49e25e47f82f8c953a82c2de2c3bcab91c41281c1df13710cbc651d734",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>غيّر الاسم إلى أحمد. لاحظ أن المراقب ما اشتغل فور…</p> aka getByText('غيّر الاسم إلى أحمد. لاحظ أن المراقب ما اشتغل فور الإنشاء افتراضيًا. أضف {')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "vue-props-emits",
+      "topic": "vue",
+      "level": "advanced",
+      "title": "المكون يستقبل بيانات ويعلن حدثًا",
+      "exampleSha256": "af8109c4547bd951abf0c8e4c98633085f899beaa48f3fc7a32620e62ca61364",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اضغط الزر مرتين وراقب حالة الأب. أضف prop ثانية ل…</p> aka getByText('اضغط الزر مرتين وراقب حالة الأب. أضف prop ثانية للوصف مع default')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    },
+    {
+      "id": "vue-keyed-component-state",
+      "topic": "vue",
+      "level": "advanced",
+      "title": "key ثابت يحافظ على هوية المكون",
+      "exampleSha256": "168d14bf44e12efe8d0dea7af80f5315f310b1df5c628f185bf7bb2a5c886b3f",
+      "ui": {
+        "failed": true,
+        "error": "locator.innerText: Error: strict mode violation: locator('.vlc-experiment > p') resolved to 2 elements:\n    1) <p>اكتب «ملاحظتي» بجانب HTML ثم اعكس الترتيب. تأكد أ…</p> aka getByText('اكتب «ملاحظتي» بجانب HTML')\n    2) <p class=\"vlc-small\">ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ ل…</p> aka getByText('ينقل النص للمحاكي عند الضغط. التشغيل هناك يدوي؛ لا تُستبدل مسودات الدروس القديمة')\n\nCall log:\n\u001b[2m  - waiting for locator('.vlc-experiment > p')\u001b[22m\n"
+      }
+    }
+  ],
+  "legacy": [
+    {
+      "id": "JS-101",
+      "track": "js",
+      "navigation": {
+        "title": "المتغيرات والقيم والقوالب النصية",
+        "source": "<h1>مسودة قديمة مستقلة لا يغيرها نقل الدروس</h1>",
+        "status": "unlocked"
+      },
+      "reference": {
+        "details": {
+          "actualDOMVerified": true
+        },
+        "observed": {
+          "text": "بطاقة ترحيب برمجية\nمرحباً بك، سارة! 👋\n\nأهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!",
+          "html": "\n  <div id=\"card\">\n        <span class=\"badge\">بطاقة ترحيب برمجية</span>\n        <h2>مرحباً بك، سارة! 👋</h2>\n        <p>أهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!</p>\n      </div>\n\n  <script>\n    const userName = \"سارة\";\n    const welcomeMsg = \"أهلاً بك في أولى خطواتك العملية مع لغة JavaScript الحديثة!\";\n\n    const cardEl = document.getElementById('card');\n    if (userName && welcomeMsg) {\n      cardEl.innerHTML = `\n        <span class=\"badge\">بطاقة ترحيب برمجية</span>\n        <h2>مرحباً بك، ${userName}! 👋</h2>\n        <p>${welcomeMsg}</p>\n      `;\n    }\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "JS-102",
+      "track": "js",
+      "navigation": {
+        "title": "اتخاذ القرارات بواسطة if / else",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 16px; box-sizing: border-box; }\n    .box { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; text-align: center; max-width: 380px; width: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    .btn { display: inline-block; background: #00DC82; color: #020420; font-weight: bold; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-top: 12px; font-size: 13px; }\n    .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-left: 6px; }\n  </style>\n</head>\n<body>\n  <div id=\"app-view\" class=\"box\">\n    <!-- ستظهر الواجهة المناسبة هنا بناء على الشرط -->\n  </div>\n\n  <script>\n    // غيّر هذه القيمة بين true و false لاختبار النتيجة\n    const isLoggedIn = true;\n\n    const container = document.getElementById('app-view');\n\n    // اكتب الشرط البرمجي هنا:\n    if (isLoggedIn) {\n      container.innerHTML = `\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      `;\n    } else {\n      container.innerHTML = `\n        <h2 style=\"color: #f59e0b; margin-top:0;\">تسجيل الدخول 🔒</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">يرجى تسجيل الدخول للوصول إلى لوحة التحكم الخاصة بك.</p>\n        <button class=\"btn\">تسجيل الدخول الآن</button>\n      `;\n    }\n  </script>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "actualDOMVerified": true
+        },
+        "observed": {
+          "text": "لوحة التحكم الرئيسية 📊\n\nأهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.\n\nتسجيل الخروج",
+          "html": "\n  <div id=\"app-view\" class=\"box\">\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      </div>\n\n  <script>\n    const isLoggedIn = true;\n    const container = document.getElementById('app-view');\n\n    if (isLoggedIn) {\n      container.innerHTML = `\n        <h2 style=\"color: #00DC82; margin-top:0;\">لوحة التحكم الرئيسية 📊</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">أهلاً بك مجدداً، حسابك نشط وجلسة العمل مفتوحة.</p>\n        <button class=\"btn\" style=\"background:#ef4444; color:#fff;\">تسجيل الخروج</button>\n      `;\n    } else {\n      container.innerHTML = `\n        <h2 style=\"color: #f59e0b; margin-top:0;\">تسجيل الدخول 🔒</h2>\n        <p style=\"font-size:13px; color:#cbd5e1;\">يرجى تسجيل الدخول للوصول إلى لوحة التحكم الخاصة بك.</p>\n        <button class=\"btn\">تسجيل الدخول الآن</button>\n      `;\n    }\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "JS-103",
+      "track": "js",
+      "navigation": {
+        "title": "المصفوفات ودالة التحويل map()",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; margin: 0; }\n    h1 { text-align: center; color: #00DC82; font-size: 20px; margin-bottom: 20px; }\n    #cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 700px; margin: 0 auto; }\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 12px; padding: 16px; text-align: center; transition: transform 0.2s; }\n    .card:hover { transform: translateY(-3px); border-color: #00DC82; }\n    .card-icon { font-size: 28px; margin-bottom: 8px; }\n    .card-title { font-weight: bold; font-size: 15px; color: #f8fafc; margin-bottom: 4px; }\n    .card-price { color: #00DC82; font-size: 13px; font-weight: 600; }\n  </style>\n</head>\n<body>\n  <h1>منتجاتنا المختارة ✨</h1>\n  <div id=\"cards-container\">\n    <!-- ستظهر 3 بطاقات هنا عبر دالة map() -->\n  </div>\n\n  <script>\n    // مصفوفة المنتجات (3 عناصر)\n    const products = [\n      { id: 1, title: \"سماعات محيطية\", price: \"180 ر.س\", icon: \"🎧\" },\n      { id: 2, title: \"لوحة مفاتيح ميكانيكية\", price: \"320 ر.س\", icon: \"⌨️\" },\n      { id: 3, title: \"فأرة ألعاب لاسلكية\", price: \"150 ر.س\", icon: \"🖱️\" }\n    ];\n\n    const container = document.getElementById('cards-container');\n\n    // استخدم دالة map() هنا لتوليد البطاقات:\n    const cardsHtml = products.map(p => `\n      <div class=\"card\">\n        <div class=\"card-icon\">${p.icon}</div>\n        <div class=\"card-title\">${p.title}</div>\n        <div class=\"card-price\">${p.price}</div>\n      </div>\n    `).join('');\n\n    container.innerHTML = cardsHtml;\n  </script>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "actualDOMVerified": true
+        },
+        "observed": {
+          "text": "منتجاتنا المختارة ✨\n🎧\nسماعات محيطية\n180 ر.س\n⌨️\nلوحة مفاتيح ميكانيكية\n320 ر.س\n🖱️\nفأرة ألعاب لاسلكية\n150 ر.س",
+          "html": "\n  <h1>منتجاتنا المختارة ✨</h1>\n  <div id=\"cards-container\">\n      <div class=\"card\">\n        <div class=\"card-icon\">🎧</div>\n        <div class=\"card-title\">سماعات محيطية</div>\n        <div class=\"card-price\">180 ر.س</div>\n      </div>\n    \n      <div class=\"card\">\n        <div class=\"card-icon\">⌨️</div>\n        <div class=\"card-title\">لوحة مفاتيح ميكانيكية</div>\n        <div class=\"card-price\">320 ر.س</div>\n      </div>\n    \n      <div class=\"card\">\n        <div class=\"card-icon\">🖱️</div>\n        <div class=\"card-title\">فأرة ألعاب لاسلكية</div>\n        <div class=\"card-price\">150 ر.س</div>\n      </div>\n    </div>\n\n  <script>\n    const products = [\n      { id: 1, title: \"سماعات محيطية\", price: \"180 ر.س\", icon: \"🎧\" },\n      { id: 2, title: \"لوحة مفاتيح ميكانيكية\", price: \"320 ر.س\", icon: \"⌨️\" },\n      { id: 3, title: \"فأرة ألعاب لاسلكية\", price: \"150 ر.س\", icon: \"🖱️\" }\n    ];\n\n    const container = document.getElementById('cards-container');\n    container.innerHTML = products.map(p => `\n      <div class=\"card\">\n        <div class=\"card-icon\">${p.icon}</div>\n        <div class=\"card-title\">${p.title}</div>\n        <div class=\"card-price\">${p.price}</div>\n      </div>\n    `).join('');\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "HTML-101",
+      "track": "html",
+      "navigation": {
+        "title": "هيكل المستند والعناصر الدلالية",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 30px; margin: 0; line-height: 1.6; }\n    article { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; max-width: 600px; margin: 0 auto; }\n    h1 { color: #00DC82; font-size: 24px; margin-top: 0; }\n    p { color: #cbd5e1; font-size: 15px; }\n  </style>\n</head>\n<body>\n  <article>\n    <!-- اكتب العنوان والفقرة هنا -->\n    <h1>مستقبل تطوير الويب مع HTML5 الحديثة</h1>\n    <p>توفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.</p>\n  </article>\n</body>\n</html>",
+        "status": "unlocked"
+      },
+      "reference": {
+        "details": {
+          "actualDOMVerified": true
+        },
+        "observed": {
+          "text": "مستقبل تطوير الويب مع HTML5 الحديثة\n\nتوفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.",
+          "html": "\n  <article>\n    <h1>مستقبل تطوير الويب مع HTML5 الحديثة</h1>\n    <p>توفر عناصر HTML5 الدلالية طريقة معيارية لتنظيم بنية المستند، مما يسهل قراءته وفهرسته بدقة.</p>\n  </article>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "HTML-102",
+      "track": "html",
+      "navigation": {
+        "title": "الروابط والصور وإمكانية الوصول",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 20px; max-width: 420px; margin: 0 auto; }\n    img { max-width: 100%; border-radius: 10px; margin-bottom: 14px; border: 1px solid #334155; }\n    a { display: inline-block; background: #00DC82; color: #020420; font-weight: bold; text-decoration: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; margin-top: 8px; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>استكشف عالم التطوير 🚀</h2>\n    <img src=\"https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400\" alt=\"شاشة حاسوب تعرض أسطر كود برمجية ملونة\">\n    <br>\n    <a href=\"https://developer.mozilla.org\" target=\"_blank\" rel=\"noopener\">اقرأ المزيد على شبكة MDN</a>\n  </div>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "networkImage": {
+            "loaded": false,
+            "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400",
+            "alt": "شاشة حاسوب تعرض أسطر كود برمجية ملونة"
+          },
+          "note": "Remote image intentionally blocked; link metadata and alt verified, remote image not claimed offline."
+        },
+        "observed": {
+          "text": "استكشف عالم التطوير 🚀\n\nاقرأ المزيد على شبكة MDN",
+          "html": "\n  <div class=\"card\">\n    <h2>استكشف عالم التطوير 🚀</h2>\n    <img src=\"https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400\" alt=\"شاشة حاسوب تعرض أسطر كود برمجية ملونة\">\n    <br>\n    <a href=\"https://developer.mozilla.org\" target=\"_blank\" rel=\"noopener\">اقرأ المزيد على شبكة MDN</a>\n  </div>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "HTML-103",
+      "track": "html",
+      "navigation": {
+        "title": "النماذج وحقول الإدخال والتحقق",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; }\n    .form-card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; }\n    label { display: block; font-size: 13px; color: #94a3b8; margin-bottom: 6px; font-weight: 500; }\n    input { width: 100%; box-sizing: border-box; background: #070d1e; border: 1px solid #334155; border-radius: 8px; padding: 10px 12px; color: #fff; margin-bottom: 16px; font-size: 14px; }\n    input:focus { outline: none; border-color: #00DC82; }\n    button { width: 100%; background: #00DC82; color: #020420; font-weight: bold; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-size: 14px; }\n  </style>\n</head>\n<body>\n  <div class=\"form-card\">\n    <h2 style=\"color:#00DC82; margin-top:0; font-size:18px;\">انضم إلى النشرة البريدية 📬</h2>\n    <form>\n      <label for=\"full-name\">الاسم الكريم:</label>\n      <input id=\"full-name\" type=\"text\" placeholder=\"اكتب اسمك...\" required>\n\n      <label for=\"user-email\">البريد الإلكتروني:</label>\n      <input id=\"user-email\" type=\"email\" placeholder=\"name@example.com\" required>\n\n      <button type=\"submit\" onclick=\"event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';\">تأكيد الاشتراك</button>\n      <p id=\"form-status\" role=\"status\" aria-live=\"polite\"></p>\n    </form>\n  </div>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "localValidation": "تم التحقق من النموذج محليًا؛ لم تُرسل البيانات."
+        },
+        "observed": {
+          "text": "انضم إلى النشرة البريدية 📬\nالاسم الكريم:\nالبريد الإلكتروني:\n تأكيد الاشتراك\n\nتم التحقق من النموذج محليًا؛ لم تُرسل البيانات.",
+          "html": "\n  <div class=\"form-card\">\n    <h2 style=\"color:#00DC82; margin-top:0; font-size:18px;\">انضم إلى النشرة البريدية 📬</h2>\n    <form>\n      <label for=\"full-name\">الاسم الكريم:</label>\n      <input id=\"full-name\" type=\"text\" placeholder=\"اكتب اسمك...\" required=\"\">\n\n      <label for=\"user-email\">البريد الإلكتروني:</label>\n      <input id=\"user-email\" type=\"email\" placeholder=\"name@example.com\" required=\"\">\n\n      <button type=\"submit\" onclick=\"event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';\">تأكيد الاشتراك</button>\n      <p id=\"form-status\" role=\"status\" aria-live=\"polite\">تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.</p>\n    </form>\n  </div>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "CSS-101",
+      "track": "css",
+      "navigation": {
+        "title": "نموذج الصندوق (Box Model) والمسافات",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 20px; }\n    \n    /* نسّق الصندوق هنا باستخدام نموذج الصندوق (Box Model) */\n    .box {\n      background: #0f1c3f;\n      max-width: 400px;\n      margin: 40px auto;\n      padding: 24px;\n      border: 2px solid #00DC82;\n      border-radius: 16px;\n      box-shadow: 0 10px 25px rgba(0,0,0,0.4);\n      text-align: center;\n    }\n\n    h2 { color: #00DC82; margin: 0 0 10px 0; }\n    p { color: #cbd5e1; font-size: 14px; line-height: 1.6; margin: 0; }\n  </style>\n</head>\n<body>\n  <div class=\"box\">\n    <h2>نموذج الصندوق (Box Model) 📦</h2>\n    <p>لاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.</p>\n  </div>\n</body>\n</html>",
+        "status": "unlocked"
+      },
+      "reference": {
+        "details": {
+          "actualDOMVerified": true
+        },
+        "observed": {
+          "text": "نموذج الصندوق (Box Model) 📦\n\nلاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.",
+          "html": "\n  <div class=\"box\">\n    <h2>نموذج الصندوق (Box Model) 📦</h2>\n    <p>لاحظ كيف تمنح الحشوة الداخلية (Padding) مساحة تنفس للنص، وكيف تفصل الهوامش (Margin) الصندوق عن بقية الصفحة.</p>\n  </div>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "CSS-102",
+      "track": "css",
+      "navigation": {
+        "title": "نظام التخطيط المرن (Flexbox)",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 20px; }\n    \n    .navbar {\n      background: #0f1c3f;\n      border: 1px solid #1e3a8a;\n      border-radius: 12px;\n      padding: 14px 24px;\n      max-width: 650px;\n      margin: 0 auto;\n      \n      /* اكتب خصائص Flexbox هنا */\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .logo { font-weight: bold; font-size: 18px; color: #00DC82; }\n    .nav-links { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }\n    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 14px; }\n    .nav-links a:hover { color: #00DC82; }\n  </style>\n</head>\n<body>\n  <nav class=\"navbar\">\n    <div class=\"logo\">⚡ فيوليكسيكون</div>\n    <ul class=\"nav-links\">\n      <li><a href=\"#\">الرئيسية</a></li>\n      <li><a href=\"#\">المعجم</a></li>\n      <li><a href=\"#\">التدريب</a></li>\n    </ul>\n  </nav>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "actualDOMVerified": true
+        },
+        "observed": {
+          "text": "⚡ فيوليكسيكون\nالرئيسية\nالمعجم\nالتدريب",
+          "html": "\n  <nav class=\"navbar\">\n    <div class=\"logo\">⚡ فيوليكسيكون</div>\n    <ul class=\"nav-links\">\n      <li><a href=\"#\">الرئيسية</a></li>\n      <li><a href=\"#\">المعجم</a></li>\n      <li><a href=\"#\">التدريب</a></li>\n    </ul>\n  </nav>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "CSS-103",
+      "track": "css",
+      "navigation": {
+        "title": "شبكة CSS المتجاوبة (CSS Grid)",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; margin: 0; padding: 24px; }\n    h1 { text-align: center; color: #00DC82; font-size: 20px; margin-bottom: 20px; }\n    \n    .grid-container {\n      /* طبّق شبكة Grid المتجاوبة هنا */\n      display: grid;\n      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));\n      gap: 16px;\n      max-width: 750px;\n      margin: 0 auto;\n    }\n\n    .card { background: #0f1c3f; border: 1px solid #1e3a8a; border-radius: 12px; padding: 20px; text-align: center; }\n    .card h3 { margin: 0 0 6px 0; color: #00DC82; font-size: 16px; }\n    .card p { margin: 0; font-size: 13px; color: #94a3b8; }\n  </style>\n</head>\n<body>\n  <h1>شبكة الخدمات التقنية 🌐</h1>\n  <div class=\"grid-container\">\n    <div class=\"card\"><h3>تصميم الواجهات</h3><p>تجربة مستخدم سهلة وجذابة.</p></div>\n    <div class=\"card\"><h3>تطوير الواجهات</h3><p>مكونات Vue 3 فائقة السرعة.</p></div>\n    <div class=\"card\"><h3>أمان الأكواد</h3><p>تحقق صارم مع TypeScript.</p></div>\n  </div>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "actualDOMVerified": true
+        },
+        "observed": {
+          "text": "شبكة الخدمات التقنية 🌐\nتصميم الواجهات\n\nتجربة مستخدم سهلة وجذابة.\n\nتطوير الواجهات\n\nمكونات Vue 3 فائقة السرعة.\n\nأمان الأكواد\n\nتحقق صارم مع TypeScript.",
+          "html": "\n  <h1>شبكة الخدمات التقنية 🌐</h1>\n  <div class=\"grid-container\">\n    <div class=\"card\"><h3>تصميم الواجهات</h3><p>تجربة مستخدم سهلة وجذابة.</p></div>\n    <div class=\"card\"><h3>تطوير الواجهات</h3><p>مكونات Vue 3 فائقة السرعة.</p></div>\n    <div class=\"card\"><h3>أمان الأكواد</h3><p>تحقق صارم مع TypeScript.</p></div>\n  </div>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "TS-101",
+      "track": "ts",
+      "navigation": {
+        "title": "الأنواع الأساسية والتعليقات النوعية",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 420px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    h2 { color: #3178C6; margin-top: 0; }\n    .result { background: #070d1e; border: 1px dashed #3178C6; border-radius: 8px; padding: 12px; margin-top: 14px; font-family: monospace; font-size: 13px; color: #38bdf8; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>TypeScript: أمان الأنواع الأول 🔷</h2>\n    <p style=\"font-size:13px; color:#cbd5e1;\">التحقق من الأنواع قبل زمن التشغيل</p>\n    <div id=\"output\" class=\"result\">بانتظار تنفيذ الدالة...</div>\n  </div>\n\n  <script>\n    // في بيئة المتصفح يتم تحويل TypeScript إلى JavaScript\n    // أضف التعليقات النوعية في تعليقات التوثيق JSDoc أو صياغة TypeScript:\n    const appTitle = \"VueLexicon Pro\";\n    const appVersion = 3.6;\n    const isStable = true;\n\n    function formatAppDetails(title, version, stable) {\n      const statusText = stable ? \"نسخة مستقرة ✓\" : \"قيد التطوير 🚧\";\n      return title + \" - v\" + version + \" (\" + statusText + \")\";\n    }\n\n    const outputEl = document.getElementById('output');\n    outputEl.textContent = formatAppDetails(appTitle, appVersion, isStable);\n  </script>\n</body>\n</html>",
+        "status": "unlocked"
+      },
+      "reference": {
+        "details": {
+          "runtime": "JavaScript equivalent; not TypeScript compilation"
+        },
+        "observed": {
+          "text": "TypeScript: أمان الأنواع الأول 🔷\nVueLexicon Pro - v3.6 (نسخة مستقرة ✓)",
+          "html": "\n  <div class=\"card\">\n    <h2>TypeScript: أمان الأنواع الأول 🔷</h2>\n    <div id=\"output\" class=\"result\">VueLexicon Pro - v3.6 (نسخة مستقرة ✓)</div>\n  </div>\n\n  <script>\n    const appTitle = \"VueLexicon Pro\";\n    const appVersion = 3.6;\n    const isStable = true;\n\n    function formatAppDetails(title, version, stable) {\n      const statusText = stable ? \"نسخة مستقرة ✓\" : \"قيد التطوير 🚧\";\n      return title + \" - v\" + version + \" (\" + statusText + \")\";\n    }\n\n    document.getElementById('output').textContent = formatAppDetails(appTitle, appVersion, isStable);\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "TS-102",
+      "track": "ts",
+      "navigation": {
+        "title": "الواجهات (Interfaces) ونماذج البيانات",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; }\n    h2 { color: #3178C6; margin-top: 0; font-size: 18px; }\n    .prop-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1e293b; font-size: 13px; }\n    .prop-label { color: #94a3b8; }\n    .prop-val { color: #00DC82; font-weight: bold; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>بطاقة المبرمج: نموذج الواجهة Interface 🔷</h2>\n    <div id=\"dev-card\">\n      <!-- ستظهر بيانات المطور هنا -->\n    </div>\n  </div>\n\n  <script>\n    // عقد الواجهة (Interface Contract):\n    // interface DevProfile {\n    //   name: string;\n    //   track: string;\n    //   experienceYears: number;\n    // }\n\n    const developer = {\n      name: \"سعود العتيبي\",\n      track: \"Vue 3 & TypeScript\",\n      experienceYears: 4\n    };\n\n    const container = document.getElementById('dev-card');\n    container.innerHTML = `\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">${developer.name}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">${developer.track}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">${developer.experienceYears} سنوات</span></div>\n    `;\n  </script>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "runtime": "JavaScript equivalent; not TypeScript compilation"
+        },
+        "observed": {
+          "text": "بطاقة المبرمج: نموذج الواجهة Interface 🔷\nالمطور:\nسعود العتيبي\nالمسار:\nVue 3 & TypeScript\nالخبرة:\n4 سنوات",
+          "html": "\n  <div class=\"card\">\n    <h2>بطاقة المبرمج: نموذج الواجهة Interface 🔷</h2>\n    <div id=\"dev-card\">\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">سعود العتيبي</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">Vue 3 &amp; TypeScript</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">4 سنوات</span></div>\n    </div>\n  </div>\n\n  <script>\n    const developer = {\n      name: \"سعود العتيبي\",\n      track: \"Vue 3 & TypeScript\",\n      experienceYears: 4\n    };\n\n    const container = document.getElementById('dev-card');\n    container.innerHTML = `\n      <div class=\"prop-row\"><span class=\"prop-label\">المطور:</span><span class=\"prop-val\">${developer.name}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">المسار:</span><span class=\"prop-val\">${developer.track}</span></div>\n      <div class=\"prop-row\"><span class=\"prop-label\">الخبرة:</span><span class=\"prop-val\">${developer.experienceYears} سنوات</span></div>\n    `;\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "TS-103",
+      "track": "ts",
+      "navigation": {
+        "title": "أنواع الاتحاد والتضييق (Union & Narrowing)",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; }\n    .card { background: #0f1c3f; border: 1px solid #3178C6; border-radius: 16px; padding: 24px; max-width: 420px; margin: 0 auto; }\n    h2 { color: #3178C6; margin-top: 0; font-size: 18px; }\n    .tag { display: inline-block; background: rgba(49, 120, 198, 0.2); color: #38bdf8; border: 1px solid #3178C6; border-radius: 6px; padding: 6px 12px; margin: 6px; font-family: monospace; font-size: 14px; }\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>تضييق الأنواع: Union & Narrowing 🔷</h2>\n    <p style=\"font-size:13px; color:#cbd5e1;\">التعامل الآمن مع القيم متعددة الأنواع</p>\n    <div id=\"results\">\n      <!-- ستظهر النتائج المعالجة هنا -->\n    </div>\n  </div>\n\n  <script>\n    // الدالة تقبل معرفاً كـ (string | number):\n    function formatIdentifier(id) {\n      if (typeof id === 'string') {\n        // تم تضييق النوع إلى string بأمان\n        return 'ID-STR: ' + id.toUpperCase();\n      } else if (typeof id === 'number') {\n        // تم تضييق النوع إلى number بأمان\n        return 'ID-NUM: #' + String(id).padStart(4, '0');\n      }\n      return 'UNKNOWN';\n    }\n\n    const test1 = formatIdentifier(\"vue-pro\");\n    const test2 = formatIdentifier(42);\n\n    const container = document.getElementById('results');\n    container.innerHTML = `\n      <div class=\"tag\">${test1}</div>\n      <div class=\"tag\">${test2}</div>\n    `;\n  </script>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "runtime": "JavaScript equivalent; not TypeScript compilation"
+        },
+        "observed": {
+          "text": "تضييق الأنواع: Union & Narrowing 🔷\nID-STR: VUE-PRO ID-NUM: #0042",
+          "html": "\n  <div class=\"card\">\n    <h2>تضييق الأنواع: Union &amp; Narrowing 🔷</h2>\n    <div id=\"results\">\n      <div class=\"tag\">ID-STR: VUE-PRO</div>\n      <div class=\"tag\">ID-NUM: #0042</div>\n    </div>\n  </div>\n\n  <script>\n    function formatIdentifier(id) {\n      if (typeof id === 'string') {\n        return 'ID-STR: ' + id.toUpperCase();\n      } else if (typeof id === 'number') {\n        return 'ID-NUM: #' + String(id).padStart(4, '0');\n      }\n      return 'UNKNOWN';\n    }\n\n    const container = document.getElementById('results');\n    container.innerHTML = `\n      <div class=\"tag\">${formatIdentifier(\"vue-pro\")}</div>\n      <div class=\"tag\">${formatIdentifier(42)}</div>\n    `;\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "VUE-101",
+      "track": "vue",
+      "navigation": {
+        "title": "التفاعلية وعرض البيانات مع ref()",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    .card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 16px; padding: 24px; max-width: 400px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }\n    h2 { color: #42B883; margin-top: 0; font-size: 18px; }\n    .count-display { font-size: 42px; font-weight: bold; color: #42B883; margin: 16px 0; }\n    button { background: #42B883; color: #020420; font-weight: bold; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: transform 0.1s; }\n    button:active { transform: scale(0.96); }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <div class=\"card\">\n      <h2>عداد تفاعلي مع Vue 3 💚</h2>\n      <div class=\"count-display\">{{ count }}</div>\n      <button @click=\"increment\">انقر للزيادة ⚡</button>\n    </div>\n  </div>\n\n  <script>\n    const { createApp, ref } = Vue;\n\n    createApp({\n      setup() {\n        const count = ref(0);\n\n        function increment() {\n          count.value++;\n        }\n\n        return {\n          count,\n          increment\n        };\n      }\n    }).mount('#app');\n  </script>\n</body>\n</html>",
+        "status": "unlocked"
+      },
+      "reference": {
+        "details": {
+          "counterAfterNativeClick": "1"
+        },
+        "observed": {
+          "text": "عداد تفاعلي مع Vue 3 💚\n1\nانقر للزيادة ⚡",
+          "html": "\n  <div id=\"app\" data-v-app=\"\"><div class=\"card\"><h2>عداد تفاعلي مع Vue 3 💚</h2><div class=\"count-display\">1</div><button>انقر للزيادة ⚡</button></div></div>\n\n  <script>\n    const { createApp, ref } = Vue;\n    createApp({\n      setup() {\n        const count = ref(0);\n        function increment() {\n          count.value++;\n        }\n        return { count, increment };\n      }\n    }).mount('#app');\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "VUE-102",
+      "track": "vue",
+      "navigation": {
+        "title": "التوجيهات الشرطية والتكرار (v-if & v-for)",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    .card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 16px; padding: 24px; max-width: 440px; margin: 0 auto; }\n    h2 { color: #42B883; margin-top: 0; font-size: 18px; }\n    ul { list-style: none; padding: 0; margin: 16px 0 0 0; text-align: right; }\n    li { background: #070d1e; border: 1px solid #1e293b; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px; }\n    .toggle-btn { background: #42B883; color: #020420; font-weight: bold; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; margin-top: 10px; }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <div class=\"card\">\n      <h2>إدارة المهام مع Vue 3 💚</h2>\n\n      <!-- التوجيهات الشرطية: -->\n      <div v-if=\"isLoggedIn\">\n        <p style=\"color:#00DC82; font-size:13px; margin:0;\">جلسة المستخدم نشطة ✓</p>\n        <ul>\n          <li v-for=\"task in tasks\" :key=\"task.id\">\n            <span>📌</span>\n            <span>{{ task.title }}</span>\n          </li>\n        </ul>\n      </div>\n\n      <div v-else>\n        <p style=\"color:#f59e0b; font-size:14px;\">يرجى تسجيل الدخول لمشاهدة قائمة مهامك.</p>\n      </div>\n\n      <button class=\"toggle-btn\" @click=\"isLoggedIn = !isLoggedIn\">\n        تبديل حالة الدخول ({{ isLoggedIn ? 'تسجيل خروج' : 'تسجيل دخول' }})\n      </button>\n    </div>\n  </div>\n\n  <script>\n    const { createApp, ref } = Vue;\n\n    createApp({\n      setup() {\n        const isLoggedIn = ref(true);\n        const tasks = ref([\n          { id: 1, title: 'إتقان أساسيات قالب Vue 3' },\n          { id: 2, title: 'تطبيق التوجيهات v-if و v-for' },\n          { id: 3, title: 'بناء المكونات وتمرير الخصائص' }\n        ]);\n\n        return {\n          isLoggedIn,\n          tasks\n        };\n      }\n    }).mount('#app');\n  </script>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "vIfHiddenCount": 0,
+          "vForRestoredCount": 3
+        },
+        "observed": {
+          "text": "إدارة المهام مع Vue 3 💚\n\nجلسة المستخدم نشطة ✓\n\n📌\nإتقان أساسيات قالب Vue 3\n📌\nتطبيق التوجيهات v-if و v-for\n📌\nبناء المكونات وتمرير الخصائص\nتبديل حالة الدخول",
+          "html": "\n  <div id=\"app\" data-v-app=\"\"><div class=\"card\"><h2>إدارة المهام مع Vue 3 💚</h2><div><p style=\"color: rgb(0, 220, 130); font-size: 13px; margin: 0px;\">جلسة المستخدم نشطة ✓</p><ul><li><span>📌</span><span>إتقان أساسيات قالب Vue 3</span></li><li><span>📌</span><span>تطبيق التوجيهات v-if و v-for</span></li><li><span>📌</span><span>بناء المكونات وتمرير الخصائص</span></li></ul></div><button class=\"toggle-btn\"> تبديل حالة الدخول </button></div></div>\n\n  <script>\n    const { createApp, ref } = Vue;\n    createApp({\n      setup() {\n        const isLoggedIn = ref(true);\n        const tasks = ref([\n          { id: 1, title: 'إتقان أساسيات قالب Vue 3' },\n          { id: 2, title: 'تطبيق التوجيهات v-if و v-for' },\n          { id: 3, title: 'بناء المكونات وتمرير الخصائص' }\n        ]);\n        return { isLoggedIn, tasks };\n      }\n    }).mount('#app');\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "VUE-103",
+      "track": "vue",
+      "navigation": {
+        "title": "المكونات وتمرير الخصائص (Props & Components)",
+        "source": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\">\n  <script src=\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script>\n  <style>\n    body { font-family: system-ui, sans-serif; background: #070d1e; color: #f8fafc; padding: 24px; text-align: center; margin: 0; }\n    h2 { color: #42B883; margin-top: 0; font-size: 20px; }\n    .cards-grid { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }\n    .course-card { background: #0f1c3f; border: 1px solid #42B883; border-radius: 12px; padding: 18px; width: 180px; text-align: center; }\n    .icon { font-size: 30px; margin-bottom: 8px; }\n    .title { font-weight: bold; font-size: 15px; margin-bottom: 4px; }\n    .badge { display: inline-block; background: rgba(66, 184, 131, 0.2); color: #42B883; font-size: 11px; padding: 2px 8px; border-radius: 9999px; }\n  </style>\n</head>\n<body>\n  <div id=\"app\">\n    <h2>مسارات التعلم عبر المكونات 💚</h2>\n    <div class=\"cards-grid\">\n      <!-- استدعاء المكون القابل لإعادة الاستخدام: -->\n      <course-card title=\"JavaScript\" level=\"مبتدئ\" icon=\"⚡\"></course-card>\n      <course-card title=\"TypeScript\" level=\"متوسط\" icon=\"🔷\"></course-card>\n      <course-card title=\"Vue.js 3\" level=\"متقدم\" icon=\"💚\"></course-card>\n    </div>\n  </div>\n\n  <script>\n    const { createApp } = Vue;\n    const app = createApp({});\n\n    // تسجيل المكون واستقبال الخصائص props:\n    app.component('course-card', {\n      props: ['title', 'level', 'icon'],\n      template: `\n        <div class=\"course-card\">\n          <div class=\"icon\">{{ icon }}</div>\n          <div class=\"title\">{{ title }}</div>\n          <span class=\"badge\">{{ level }}</span>\n        </div>\n      `\n    });\n\n    app.mount('#app');\n  </script>\n</body>\n</html>",
+        "status": "locked"
+      },
+      "reference": {
+        "details": {
+          "actualDOMVerified": true
+        },
+        "observed": {
+          "text": "مسارات التعلم عبر المكونات 💚\n⚡\nJavaScript\nمبتدئ\n🔷\nTypeScript\nمتوسط\n💚\nVue.js 3\nمتقدم",
+          "html": "\n  <div id=\"app\" data-v-app=\"\"><h2>مسارات التعلم عبر المكونات 💚</h2><div class=\"cards-grid\"><div class=\"course-card\"><div class=\"icon\">⚡</div><div class=\"title\">JavaScript</div><span class=\"badge\">مبتدئ</span></div><div class=\"course-card\"><div class=\"icon\">🔷</div><div class=\"title\">TypeScript</div><span class=\"badge\">متوسط</span></div><div class=\"course-card\"><div class=\"icon\">💚</div><div class=\"title\">Vue.js 3</div><span class=\"badge\">متقدم</span></div></div></div>\n\n  <script>\n    const { createApp } = Vue;\n    const app = createApp({});\n\n    app.component('course-card', {\n      props: ['title', 'level', 'icon'],\n      template: `\n        <div class=\"course-card\">\n          <div class=\"icon\">{{ icon }}</div>\n          <div class=\"title\">{{ title }}</div>\n          <span class=\"badge\">{{ level }}</span>\n        </div>\n      `\n    });\n\n    app.mount('#app');\n  </script>\n\n",
+          "frameWidth": 397,
+          "frameHeight": 371,
+          "overflow": false
+        },
+        "draftUnchanged": true,
+        "sandbox": "allow-scripts"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "legacySnapshotSha256": "68aeaa20b96109ae4752bb622ed9ab249829f84fde1a2aae807b5df0ec3be176",
+  "finished": "2026-11-07T11:05:46.248Z",
+  "passed": 32,
+  "total": 65
+}

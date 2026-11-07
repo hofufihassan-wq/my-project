@@ -13,7 +13,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parent.parent
 BACKUPS = ('_pristine_backup', '_v3.5_pre_hands_on_backup')
 EXTRA_ROOT = {'start-local.bat', 'package.json', 'package-lock.json', 'tailwind.config.cjs'}
-SCRIPT_FILES = ('start-local.py', 'package-local.py', 'assets.py', 'build-sfc-compiler.cjs')
+SCRIPT_FILES = ('start-local.py', 'package-local.py', 'package-static.py', 'assets.py', 'build-sfc-compiler.cjs')
 FORBIDDEN_PARTS = {'.git', '.aws', '.codex', 'node_modules', '__pycache__'}
 FORBIDDEN_SUFFIXES = {'.pem', '.key', '.p12', '.pfx', '.pyc', '.zip'}
 
