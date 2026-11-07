@@ -1,0 +1,195 @@
+{
+  "phase": "after",
+  "timestamp": "2026-11-07T11:18:44.983Z",
+  "runnerSHA256": "810581922329cd8394248b941f0c1309b1c186c21f806855df71e9dceb10a09d",
+  "passed": 12,
+  "total": 12,
+  "results": [
+    {
+      "name": "mouse fragment stays in srcdoc and scrolls actual target",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "url": "about:srcdoc",
+          "baseURI": "http://127.0.0.1:40475/fragment-harness",
+          "scrollY": 0,
+          "goalTop": 1163.90625,
+          "goal": "REAL INNER GOAL",
+          "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+          "childCode": "child-only"
+        },
+        "after": {
+          "url": "about:srcdoc",
+          "baseURI": "http://127.0.0.1:40475/fragment-harness",
+          "scrollY": 1164,
+          "goalTop": -0.09375,
+          "goal": "REAL INNER GOAL",
+          "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+          "childCode": "child-only"
+        }
+      }
+    },
+    {
+      "name": "Enter fragment stays in srcdoc and scrolls actual target",
+      "passed": true,
+      "evidence": {
+        "before": {
+          "url": "about:srcdoc",
+          "baseURI": "http://127.0.0.1:40475/fragment-harness",
+          "scrollY": 0,
+          "goalTop": 1163.90625,
+          "goal": "REAL INNER GOAL",
+          "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+          "childCode": "child-only"
+        },
+        "after": {
+          "url": "about:srcdoc",
+          "baseURI": "http://127.0.0.1:40475/fragment-harness",
+          "scrollY": 1164,
+          "goalTop": -0.09375,
+          "goal": "REAL INNER GOAL",
+          "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+          "childCode": "child-only"
+        }
+      }
+    },
+    {
+      "name": "encoded Unicode id scrolls to real Arabic target",
+      "passed": true,
+      "evidence": {
+        "current": {
+          "url": "about:srcdoc",
+          "baseURI": "http://127.0.0.1:40475/fragment-harness",
+          "scrollY": 1211,
+          "goalTop": -47.09375,
+          "goal": "REAL INNER GOAL",
+          "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+          "childCode": "child-only"
+        },
+        "arabicTop": -0.1875
+      }
+    },
+    {
+      "name": "empty fragment returns to top without leaving child",
+      "passed": true,
+      "evidence": {
+        "url": "about:srcdoc",
+        "baseURI": "http://127.0.0.1:40475/fragment-harness",
+        "scrollY": 0,
+        "goalTop": 1163.90625,
+        "goal": "REAL INNER GOAL",
+        "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+        "childCode": "child-only"
+      }
+    },
+    {
+      "name": "missing fragment preserves document with no unhandled error",
+      "passed": true,
+      "evidence": {
+        "url": "about:srcdoc",
+        "baseURI": "http://127.0.0.1:40475/fragment-harness",
+        "scrollY": 0,
+        "goalTop": 1163.90625,
+        "goal": "REAL INNER GOAL",
+        "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+        "childCode": "child-only"
+      }
+    },
+    {
+      "name": "bad-encoding fragment preserves document with no unhandled error",
+      "passed": true,
+      "evidence": {
+        "url": "about:srcdoc",
+        "baseURI": "http://127.0.0.1:40475/fragment-harness",
+        "scrollY": 0,
+        "goalTop": 1163.90625,
+        "goal": "REAL INNER GOAL",
+        "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+        "childCode": "child-only"
+      }
+    },
+    {
+      "name": "legacy named anchor remains local and scrolls",
+      "passed": true,
+      "evidence": {
+        "current": {
+          "url": "about:srcdoc",
+          "baseURI": "http://127.0.0.1:40475/fragment-harness",
+          "scrollY": 1258,
+          "goalTop": -94.09375,
+          "goal": "REAL INNER GOAL",
+          "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+          "childCode": "child-only"
+        },
+        "namedTop": -0.28125
+      }
+    },
+    {
+      "name": "user preventDefault is respected and listener runs once",
+      "passed": true,
+      "evidence": {
+        "url": "about:srcdoc",
+        "baseURI": "http://127.0.0.1:40475/fragment-harness",
+        "scrollY": 0,
+        "goalTop": 1163.90625,
+        "goal": "REAL INNER GOAL",
+        "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+        "childCode": "child-only"
+      }
+    },
+    {
+      "name": "nonfragment document links retain their existing behavior",
+      "passed": true,
+      "evidence": {
+        "destination": "http://127.0.0.1:40475/different-page"
+      }
+    },
+    {
+      "name": "sandbox stays opaque and user code never runs in parent",
+      "passed": true,
+      "evidence": {
+        "parentDocument": true,
+        "parentStorage": true
+      }
+    },
+    {
+      "name": "message sender identity, run and payload bounds still reject forged data",
+      "passed": true,
+      "evidence": {
+        "accepted": 2,
+        "rejected": 3
+      }
+    },
+    {
+      "name": "full simulator user editor fragment click keeps actual lesson preview",
+      "passed": true,
+      "evidence": {
+        "url": "about:srcdoc",
+        "baseURI": "http://127.0.0.1:40475/",
+        "scrollY": 1182,
+        "goalTop": -0.09375,
+        "goal": "REAL INNER GOAL",
+        "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+        "childCode": "child-only"
+      }
+    }
+  ],
+  "errors": [],
+  "navigations": [
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:40475/different-page",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank"
+  ]
+}

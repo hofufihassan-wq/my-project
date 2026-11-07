@@ -75,6 +75,29 @@
     addEventListener('unhandledrejection', event => {
       fail(event.reason);
     });
+    // A srcdoc document inherits the parent's base URL. Native #links would
+    // therefore replace this preview with the application URL, not its target.
+    // Keep self-targeted fragment clicks within the child; other links and
+    // user-cancelled events retain their existing behavior. This is scrolling,
+    // not a replacement for the History API or script-driven navigation.
+    addEventListener('click', event => {
+      if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+          event.metaKey || event.shiftKey || event.altKey) return;
+      const link = event.target?.closest?.('a[href], area[href]');
+      if (!link || link.hasAttribute('download')) return;
+      const href = link.getAttribute('href').trim();
+      const target = link.getAttribute('target') ||
+        document.querySelector('base[target]')?.getAttribute('target') || '_self';
+      if (!href.startsWith('#') || target.toLowerCase() !== '_self') return;
+      event.preventDefault();
+      let fragment = href.slice(1);
+      try { fragment = decodeURIComponent(fragment); } catch (_) {}
+      if (!fragment) { scrollTo(0, 0); return; }
+      const destination = document.getElementById(fragment) ||
+        Array.from(document.getElementsByName(fragment)).find(element => element.localName === 'a');
+      if (destination) destination.scrollIntoView();
+      else if (fragment.toLowerCase() === 'top') scrollTo(0, 0);
+    });
     function snapshot() {
       try {
         const text = id => (document.getElementById(id)?.innerText || '').slice(0, 16000);

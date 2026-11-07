@@ -1,0 +1,37 @@
+FAIL mouse fragment stays in srcdoc and scrolls actual target The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:
+
+'http://127.0.0.1:41639/fragment-harness#goal'
+
+FAIL Enter fragment stays in srcdoc and scrolls actual target The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:
+
+'http://127.0.0.1:41639/fragment-harness#goal'
+
+FAIL encoded Unicode id scrolls to real Arabic target The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:
+
+'http://127.0.0.1:41639/fragment-harness#%D9%87%D8%AF%D9%81'
+
+FAIL empty fragment returns to top without leaving child The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:
+
+'http://127.0.0.1:41639/fragment-harness#'
+
+FAIL missing fragment preserves document with no unhandled error The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:
+
+'http://127.0.0.1:41639/fragment-harness#not-there'
+
+FAIL bad-encoding fragment preserves document with no unhandled error The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:
+
+'http://127.0.0.1:41639/fragment-harness#%E0%A4%A'
+
+FAIL legacy named anchor remains local and scrolls The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:
+
+'http://127.0.0.1:41639/fragment-harness#legacy-name'
+
+PASS user preventDefault is respected and listener runs once
+PASS nonfragment document links retain their existing behavior
+PASS sandbox stays opaque and user code never runs in parent
+PASS message sender identity, run and payload bounds still reject forged data
+FAIL full simulator user editor fragment click keeps actual lesson preview The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:
+
+'http://127.0.0.1:41639/#goal'
+
+{"passed":4,"total":12,"errors":[]}

@@ -1,0 +1,121 @@
+{
+  "phase": "before-runtime",
+  "timestamp": "2026-11-07T11:18:03.095Z",
+  "runnerSHA256": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+  "passed": 4,
+  "total": 12,
+  "results": [
+    {
+      "name": "mouse fragment stays in srcdoc and scrolls actual target",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:\n\n'http://127.0.0.1:41639/fragment-harness#goal'\n\n    at staysInside (/workspace/my-progect/resume-checks/fragments/browser.cjs:85:10)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processImmediate (node:internal/timers:502:9)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:102:19\n    at async test (/workspace/my-progect/resume-checks/fragments/browser.cjs:74:26)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:99:41"
+    },
+    {
+      "name": "Enter fragment stays in srcdoc and scrolls actual target",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:\n\n'http://127.0.0.1:41639/fragment-harness#goal'\n\n    at staysInside (/workspace/my-progect/resume-checks/fragments/browser.cjs:85:10)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:102:19\n    at async test (/workspace/my-progect/resume-checks/fragments/browser.cjs:74:26)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:99:41"
+    },
+    {
+      "name": "encoded Unicode id scrolls to real Arabic target",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:\n\n'http://127.0.0.1:41639/fragment-harness#%D9%87%D8%AF%D9%81'\n\n    at staysInside (/workspace/my-progect/resume-checks/fragments/browser.cjs:85:10)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:105:86\n    at async test (/workspace/my-progect/resume-checks/fragments/browser.cjs:74:26)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:104:3"
+    },
+    {
+      "name": "empty fragment returns to top without leaving child",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:\n\n'http://127.0.0.1:41639/fragment-harness#'\n\n    at staysInside (/workspace/my-progect/resume-checks/fragments/browser.cjs:85:10)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:110:21\n    at async test (/workspace/my-progect/resume-checks/fragments/browser.cjs:74:26)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:108:3"
+    },
+    {
+      "name": "missing fragment preserves document with no unhandled error",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:\n\n'http://127.0.0.1:41639/fragment-harness#not-there'\n\n    at staysInside (/workspace/my-progect/resume-checks/fragments/browser.cjs:85:10)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:113:70\n    at async test (/workspace/my-progect/resume-checks/fragments/browser.cjs:74:26)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:112:49"
+    },
+    {
+      "name": "bad-encoding fragment preserves document with no unhandled error",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:\n\n'http://127.0.0.1:41639/fragment-harness#%E0%A4%A'\n\n    at staysInside (/workspace/my-progect/resume-checks/fragments/browser.cjs:85:10)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:113:70\n    at async test (/workspace/my-progect/resume-checks/fragments/browser.cjs:74:26)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:112:49"
+    },
+    {
+      "name": "legacy named anchor remains local and scrolls",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:\n\n'http://127.0.0.1:41639/fragment-harness#legacy-name'\n\n    at staysInside (/workspace/my-progect/resume-checks/fragments/browser.cjs:85:10)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:116:84\n    at async test (/workspace/my-progect/resume-checks/fragments/browser.cjs:74:26)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:115:3"
+    },
+    {
+      "name": "user preventDefault is respected and listener runs once",
+      "passed": true,
+      "evidence": {
+        "url": "about:srcdoc",
+        "baseURI": "http://127.0.0.1:41639/fragment-harness",
+        "scrollY": 0,
+        "goalTop": 1163.90625,
+        "goal": "REAL INNER GOAL",
+        "text": "Go to goal Encoded Arabic target Top Missing Malformed encoding Named anchor User-cancelled Different document\nSpacer\nREAL INNER GOAL\nREAL ARABIC GOAL\nREAL NAMED GOAL\nTail",
+        "childCode": "child-only"
+      }
+    },
+    {
+      "name": "nonfragment document links retain their existing behavior",
+      "passed": true,
+      "evidence": {
+        "destination": "http://127.0.0.1:41639/different-page"
+      }
+    },
+    {
+      "name": "sandbox stays opaque and user code never runs in parent",
+      "passed": true,
+      "evidence": {
+        "parentDocument": true,
+        "parentStorage": true
+      }
+    },
+    {
+      "name": "message sender identity, run and payload bounds still reject forged data",
+      "passed": true,
+      "evidence": {
+        "accepted": 2,
+        "rejected": 3
+      }
+    },
+    {
+      "name": "full simulator user editor fragment click keeps actual lesson preview",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^about:srcdoc(?:#|$)/. Input:\n\n'http://127.0.0.1:41639/#goal'\n\n    at /workspace/my-progect/resume-checks/fragments/browser.cjs:143:51\n    at async test (/workspace/my-progect/resume-checks/fragments/browser.cjs:74:26)\n    at async /workspace/my-progect/resume-checks/fragments/browser.cjs:137:3"
+    }
+  ],
+  "errors": [],
+  "navigations": [
+    "about:blank",
+    "http://127.0.0.1:41639/fragment-harness#goal",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:41639/fragment-harness#goal",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:41639/fragment-harness#%D9%87%D8%AF%D9%81",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:41639/fragment-harness#",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:41639/fragment-harness#not-there",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:41639/fragment-harness#%E0%A4%A",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:41639/fragment-harness#legacy-name",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:41639/different-page",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "about:blank",
+    "http://127.0.0.1:41639/#goal",
+    "about:blank",
+    "about:blank",
+    "about:blank"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "phase": "before",
+  "timestamp": "2026-11-07T11:16:46.877Z",
+  "runnerSHA256": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+  "passed": 0,
+  "total": 1,
+  "results": [
+    {
+      "name": "runner",
+      "passed": false,
+      "error": "browserContext.newPage: Executable doesn't exist at /home/agent/.cache/ms-playwright/ffmpeg-1011/ffmpeg-linux\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝\n    at /workspace/my-progect/resume-checks/fragments/browser.cjs:95:24"
+    }
+  ],
+  "errors": [],
+  "navigations": []
+}
