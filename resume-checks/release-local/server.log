@@ -1,0 +1,13 @@
+V Lex Pro is running at http://127.0.0.1:8091/
+Keep this window open. Press Ctrl+C to stop. Nothing is exposed to your network.
+
+Local server stopped. Your browser data has not been changed.
+V Lex Pro is running at http://127.0.0.1:8091/
+Keep this window open. Press Ctrl+C to stop. Nothing is exposed to your network.
+127.0.0.1 - - [07/Nov/2026 11:26:01] "GET /.git/config HTTP/1.1" 404 -
+127.0.0.1 - - [07/Nov/2026 11:26:01] "GET /.env HTTP/1.1" 404 -
+127.0.0.1 - - [07/Nov/2026 11:26:01] "GET /README.md HTTP/1.1" 404 -
+127.0.0.1 - - [07/Nov/2026 11:26:01] "GET /_pristine_backup/index.html HTTP/1.1" 404 -
+127.0.0.1 - - [07/Nov/2026 11:26:01] "GET /scripts/start-local.py HTTP/1.1" 404 -
+
+Local server stopped. Your browser data has not been changed.

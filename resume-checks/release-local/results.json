@@ -1,0 +1,122 @@
+{
+  "archive": "/workspace/downloads/VLex-Pro-local-20261107-112524-b717d9bd.zip",
+  "archiveSHA256": "18d575831844d4a96681da2affb4ac3c3238fbc1b98bca4e534503074a423249",
+  "extracted": "/tmp/VLex release local ROeyfJ",
+  "platform": "linux",
+  "nativeWindowsCmdTested": false,
+  "origin": "http://127.0.0.1:8091",
+  "steps": [
+    {
+      "name": "extract exact release ZIP, verify every hash and required files",
+      "status": "passed",
+      "evidence": {
+        "source_commit": "b717d9bda1e62a57f047a32fac0ca2148c76aa69",
+        "branch": "feat/vlex-personal-learning-platform",
+        "files": 124,
+        "clean_source": true
+      }
+    },
+    {
+      "name": "start extracted folder with spaces on fixed loopback origin",
+      "status": "passed",
+      "evidence": {
+        "application": "VLex Pro local",
+        "protocol": 1,
+        "root_id": "45b3ae45d51797e645b5",
+        "origin": "http://127.0.0.1:8091"
+      }
+    },
+    {
+      "name": "Arabic and English search before shutdown",
+      "status": "passed",
+      "evidence": {
+        "filter": 4,
+        "مصفوفة": 17
+      }
+    },
+    {
+      "name": "save a favorite through dictionary button",
+      "status": "passed",
+      "evidence": {
+        "bookmarks": [
+          "js-filter"
+        ]
+      }
+    },
+    {
+      "name": "save CSS and JavaScript drafts through native editors",
+      "status": "passed",
+      "evidence": {
+        "cssHTML": "<section id=\"lab-target\">مسودة CSS محفوظة بعد إعادة الفتح</section>",
+        "cssSource": "#lab-target { padding: 23px; color: rgb(13, 77, 131); }\n/* release roundtrip */",
+        "jsSource": "const releaseValue = 42;\nconsole.log(releaseValue);\n// saved without auto-running"
+      }
+    },
+    {
+      "name": "close full persistent browser, stop and restart own local server, reopen same profile",
+      "status": "passed",
+      "evidence": {
+        "sameProfile": "/tmp/VLex release local ROeyfJ/persistent browser profile",
+        "sameOrigin": true,
+        "sameFolder": true,
+        "serverRestarted": true
+      }
+    },
+    {
+      "name": "Arabic and English search after full browser/server restart",
+      "status": "passed",
+      "evidence": {
+        "filter": 4,
+        "مصفوفة": 17
+      }
+    },
+    {
+      "name": "favorite persists after full browser/server restart",
+      "status": "passed",
+      "evidence": {
+        "favoriteVisible": true
+      }
+    },
+    {
+      "name": "CSS HTML/CSS and JS source drafts persist after full browser/server restart",
+      "status": "passed",
+      "evidence": {
+        "cssHTML": true,
+        "cssSource": true,
+        "autoRunPreference": false,
+        "jsSource": true,
+        "jsNotAutoRun": true
+      }
+    },
+    {
+      "name": "server denies private/project source files and browser stays offline",
+      "status": "passed",
+      "evidence": {
+        "privatePaths": "404",
+        "pageErrors": 0,
+        "externalRequests": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "serverLogs": [
+    "V Lex Pro is running at http://127.0.0.1:8091/\nKeep this window open. Press Ctrl+C to stop. Nothing is exposed to your network.\n",
+    "\nLocal server stopped. Your browser data has not been changed.\n",
+    "V Lex Pro is running at http://127.0.0.1:8091/\nKeep this window open. Press Ctrl+C to stop. Nothing is exposed to your network.\n",
+    "127.0.0.1 - - [07/Nov/2026 11:26:01] \"GET /.git/config HTTP/1.1\" 404 -\n",
+    "127.0.0.1 - - [07/Nov/2026 11:26:01] \"GET /.env HTTP/1.1\" 404 -\n",
+    "127.0.0.1 - - [07/Nov/2026 11:26:01] \"GET /README.md HTTP/1.1\" 404 -\n",
+    "127.0.0.1 - - [07/Nov/2026 11:26:01] \"GET /_pristine_backup/index.html HTTP/1.1\" 404 -\n",
+    "127.0.0.1 - - [07/Nov/2026 11:26:01] \"GET /scripts/start-local.py HTTP/1.1\" 404 -\n",
+    "\nLocal server stopped. Your browser data has not been changed.\n"
+  ],
+  "manifest": {
+    "source_commit": "b717d9bda1e62a57f047a32fac0ca2148c76aa69",
+    "branch": "feat/vlex-personal-learning-platform",
+    "files": 124,
+    "clean_source": true
+  },
+  "finishedUtc": "2026-11-07T11:26:01.498Z",
+  "status": "passed"
+}

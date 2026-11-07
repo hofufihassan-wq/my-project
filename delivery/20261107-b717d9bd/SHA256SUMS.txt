@@ -1,0 +1,2 @@
+18d575831844d4a96681da2affb4ac3c3238fbc1b98bca4e534503074a423249  VLex-Pro-Windows-b717d9bd.zip
+6ada1bc375230b13d9bce9e8e844cdda458e27c98d0f7a2a35c4503c9e8792c0  VLex-Pro-static-b717d9bd.zip
