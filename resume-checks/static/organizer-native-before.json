@@ -1,0 +1,65 @@
+{
+  "source": "/workspace/downloads/VLex-Pro-static-20261107-110407-339863-1cf220c5/website",
+  "phase": "before",
+  "startedUtc": "2026-11-07T11:14:40.272Z",
+  "steps": [
+    {
+      "name": "native route projects",
+      "status": "failed",
+      "error": "Native route projects rendered wrong organizer: {\"heading\":\"المشاريع\",\"mode\":\"tasks\",\"field\":false,\"kanbanVisible\":false}"
+    },
+    {
+      "name": "native route kanban",
+      "status": "failed",
+      "error": "Native route kanban rendered wrong organizer: {\"heading\":\"لوحة المهام\",\"mode\":\"tasks\",\"field\":true,\"kanbanVisible\":false}"
+    },
+    {
+      "name": "native route notes",
+      "status": "failed",
+      "error": "Native route notes rendered wrong organizer: {\"heading\":\"الملاحظات\",\"mode\":\"tasks\",\"field\":false,\"kanbanVisible\":false}"
+    },
+    {
+      "name": "native route calendar",
+      "status": "failed",
+      "error": "Native route calendar rendered wrong organizer: {\"heading\":\"التقويم\",\"mode\":\"tasks\",\"field\":false,\"kanbanVisible\":false}"
+    },
+    {
+      "name": "create project through full-app form",
+      "status": "blocked",
+      "reason": "Correct route/form unavailable; no alternate direct component mount used"
+    },
+    {
+      "name": "create task and move it to done through native select",
+      "status": "blocked",
+      "reason": "Correct route/form unavailable; no alternate direct component mount used"
+    },
+    {
+      "name": "create note through full-app form",
+      "status": "blocked",
+      "reason": "Correct route/form unavailable; no alternate direct component mount used"
+    },
+    {
+      "name": "create dated event and navigate calendar month",
+      "status": "blocked",
+      "reason": "Correct route/form unavailable; no alternate direct component mount used"
+    },
+    {
+      "name": "reload persistence: creation blocked",
+      "status": "blocked",
+      "reason": "Correct route/form unavailable; no alternate direct component mount used"
+    },
+    {
+      "name": "no page errors or external runtime requests",
+      "status": "passed",
+      "evidence": {
+        "pageErrors": 0,
+        "externalRequests": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "scope": "Full app via native UI, fresh isolated browser context, create and reload; no source/storage injection",
+  "finishedUtc": "2026-11-07T11:14:42.409Z",
+  "status": "failed"
+}

@@ -2525,7 +2525,7 @@ const app = createApp({
       techPreviewTab, techEditorView, techFocusPanel, techMotion, techSource, techEditorCode, techHighlightedCode, techSourceCSS, techStatusLabel, techRunReference, techRunDraft, techSyncEditorScroll, techJumpToScript, techToggleFocus, techPreviewKeydown,
       simulatorReferenceReading, simulatorExpandedPanel, simulatorEditorShare, toggleSimulatorPanel, simulatorStages,
       theme, setTheme, practiceSurface, openVisualSimulator, openTraining,
-      foundationSections, activeFoundation, openFoundation,
+      foundationSection, foundationSections, activeFoundation, openFoundation,
       dashboardStats, dashboardMasteryPercent, dictionaryRelated, openDashboardTerm,
       // Core Lexicon State
       rawLexiconData,
