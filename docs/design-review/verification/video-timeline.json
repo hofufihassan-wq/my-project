@@ -1,0 +1,64 @@
+{
+  "continuous": true,
+  "audioTrack": false,
+  "viewport": "1440x1000",
+  "timeline": [
+    {
+      "section": "01 Dashboard / emerald",
+      "seconds": 1.1
+    },
+    {
+      "section": "02 Dictionary",
+      "seconds": 10.6
+    },
+    {
+      "section": "03 Explain code",
+      "seconds": 18.1
+    },
+    {
+      "section": "04 Lessons",
+      "seconds": 27.7
+    },
+    {
+      "section": "05 CSS Lab / real controls and preview",
+      "seconds": 33.7
+    },
+    {
+      "section": "06 JavaScript Lab / execution",
+      "seconds": 44.7
+    },
+    {
+      "section": "07 Live preview / inside dictionary",
+      "seconds": 55.3
+    },
+    {
+      "section": "08 Training",
+      "seconds": 61.3
+    },
+    {
+      "section": "09 Projects",
+      "seconds": 67.4
+    },
+    {
+      "section": "10 Notes",
+      "seconds": 75.6
+    },
+    {
+      "section": "11 Calendar",
+      "seconds": 78.2
+    },
+    {
+      "section": "12 Settings / switch both themes",
+      "seconds": 85.5
+    },
+    {
+      "section": "Dashboard / glass",
+      "seconds": 89.9
+    },
+    {
+      "section": "13 Simulator / blue and red identity",
+      "seconds": 101.8
+    }
+  ],
+  "errors": []
+}

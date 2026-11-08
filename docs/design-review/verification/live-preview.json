@@ -1,0 +1,35 @@
+{
+  "passed": 4,
+  "total": 4,
+  "results": [
+    {
+      "name": "live-preview green: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "live-preview: mobile fits 390px",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "live-preview glass: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "native editor preserves input, selection, literal HTML and reload",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

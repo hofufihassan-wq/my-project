@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-11-08T23:41:07.633Z",
+  "browser": "154.0.8037.57",
+  "runtimeHashes": {
+    "app.js": "7da7f6983d3dc67036558be9e3ee1adc3ea3f963e4ff36994741b9663d80fecb",
+    "index.html": "51f8ba75630fa2ef4f9a91f81094b75bd5c39b044a27305698bfd07d4d859048",
+    "simulator-beta.js": "1e15740d1576b79c262ff3ddbd3926c041c31967c282cd9ee2e1dbc38c4d0dec",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "7453be294e2b6e5683b5585c3d55ea1436e5f6c66a19cba7c9309f3dbab50261"
+  },
+  "passed": 5,
+  "total": 5,
+  "audioEvidence": {
+    "ambient": {
+      "rms": 0.005677680089274817,
+      "peak": 0.011010091751813889,
+      "n": 12
+    },
+    "ambientZero": {
+      "rms": 0,
+      "peak": 0,
+      "n": 8
+    },
+    "error": {
+      "rms": 0.004421968893424785,
+      "peak": 0.0234843660145998,
+      "n": 7
+    }
+  },
+  "responsive": [],
+  "pointerEvidence": [],
+  "network": [
+    {
+      "width": 1440,
+      "external": [],
+      "failed": [],
+      "errors": [
+        "COMPLETION_ACTUAL_ERROR"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "title": "entry is silent with both channels opt-in and no AudioContext or ambient preference write",
+      "passed": true
+    },
+    {
+      "title": "ambient button creates a real bounded audio graph while alerts stay muted",
+      "passed": true
+    },
+    {
+      "title": "ambient level zero really silences its output and restores without changing alert volume",
+      "passed": true
+    },
+    {
+      "title": "alerts can be enabled and muted independently while ambient continues",
+      "passed": true
+    },
+    {
+      "title": "actual runtime error has a real audible error cue when ambience is off",
+      "passed": true
+    }
+  ]
+}
