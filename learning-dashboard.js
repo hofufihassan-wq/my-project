@@ -128,16 +128,44 @@
       function addTask() {
         if (state.save('tasks', { title: taskTitle.value, due: state.today.value, status: 'todo', projectId: '' })) taskTitle.value = '';
       }
-      return { ...state, taskTitle, clock, dateLabel, addTask, statusNames, emit };
+      // Read-only presentation metrics; existing persistence and organizer behavior are unchanged.
+      const lessons = root.VLexCourse?.lessons || [];
+      const lessonCount = lessons.length;
+      const learningTracks = computed(() => {
+        const completed = new Set(state.data.value.course.completed || []);
+        return [{ id: 'html', label: 'HTML', description: 'هيكل الصفحة' }, { id: 'css', label: 'CSS', description: 'الشكل والتنسيق' },
+          { id: 'js', label: 'JavaScript', description: 'المنطق والتفاعل' }, { id: 'vue', label: 'Vue', description: 'واجهات تفاعلية' }].map(track => {
+            const items = lessons.filter(lesson => lesson.topic === track.id);
+            const count = items.filter(lesson => completed.has(lesson.id)).length;
+            return { ...track, total: items.length, completed: count, percent: items.length ? Math.round(count / items.length * 100) : 0 };
+          });
+      });
+      const lessonPercent = computed(() => lessonCount ? Math.round(state.completedLessons.value / lessonCount * 100) : 0);
+      return { ...state, taskTitle, clock, dateLabel, addTask, statusNames, emit, lessonCount, learningTracks, lessonPercent };
     },
     template: `<section class="vlp-organizer vlp-daily-dashboard" aria-label="خطتك اليومية الحقيقية" data-testid="learning-daily-dashboard">
-      <div class="vlp-day-heading"><div><h2>خطتك اليوم</h2><p>{{ dateLabel }}</p></div><time class="vlp-local-clock" dir="ltr" aria-label="الوقت المحلي">{{ clock }}</time></div>
+      <div class="vlp-day-heading"><div><span class="vlp-section-kicker">لمحة عن يومك</span><h2>خطتك اليوم</h2><p>{{ dateLabel }}</p></div><div class="vlp-clock-block"><span class="vlp-clock-label"><i aria-hidden="true"></i>وقتك المحلي</span><time class="vlp-local-clock" dir="ltr" aria-label="الوقت المحلي">{{ clock }}</time></div></div>
       <p v-if="storageWarning" role="alert" class="vlp-storage-warning">{{ storageWarning }}</p>
-      <div class="vlp-mini-stats" aria-label="إحصاءات فعلية من بياناتك"><span><strong>{{ activeTasks.filter(t=>t.status==='done').length }}</strong> مهام مكتملة من {{ activeTasks.length }}</span><span><strong>{{ completedLessons }}</strong> دروس راجعتها</span><span><strong>{{ dueReviews }}</strong> مراجعات حان وقتها</span></div>
-      <div class="vlp-dashboard-columns"><div><h3>مهام اليوم وما تأخر</h3><form @submit.prevent="addTask" class="vlp-inline-form"><label class="vlp-field">مهمة صغيرة لليوم<input data-testid="dashboard-task-title" v-model="taskTitle" maxlength="180" required placeholder="مثلًا: أجرّب v-model"></label><button type="submit" data-testid="dashboard-task-add">أضف المهمة</button></form>
-      <ul class="vlp-record-list"><li v-for="task in todayTasks.slice(0,5)" :key="task.id"><label class="vlp-task-toggle"><input type="checkbox" :checked="task.status==='done'" @change="patch('tasks',task.id,{status:$event.target.checked?'done':'todo'})"><span :class="{'vlp-is-done':task.status==='done'}">{{ task.title }}</span></label><small v-if="task.due">{{ task.due }}</small></li></ul><p v-if="!todayTasks.length" class="vlp-empty">ما عندك مهام لليوم. أضف خطوة بسيطة تبدأ فيها.</p><button type="button" class="vlp-link-button" @click="emit('navigate','kanban')">لوحة جميع المهام ←</button></div>
-      <div><h3>المواعيد القادمة</h3><ul class="vlp-record-list"><li v-for="event in upcoming.slice(0,3)" :key="event.id"><span>{{ event.title }}</span><time>{{ event.date }} {{ event.time }}</time></li></ul><p v-if="!upcoming.length" class="vlp-empty">لا توجد مواعيد محفوظة. أضف وقت مراجعتك من التقويم.</p><div class="vlp-action-row"><button type="button" @click="emit('navigate','calendar')">افتح التقويم</button><button type="button" @click="emit('learn',{})">درس ومراجعة</button></div></div></div>
-      <p role="status" class="vlp-save-message">{{ message }}</p><p class="vlp-local-note">بيانات على هذا المتصفح فقط، بلا مزامنة أو تنبيه خارج الصفحة. صدّر نسخة من إعدادات البيانات.</p>
+      <div class="vlp-mini-stats" aria-label="إحصاءات فعلية من بياناتك">
+        <article><span class="vlp-stat-icon"><svg><use href="#i-book"/></svg></span><span class="vlp-stat-label">رحلتك في التعلّم</span><strong>{{ completedLessons }}<em> / {{ lessonCount }}</em></strong><small>دروس راجعتها</small><span class="vlp-stat-line"><i :style="{width:lessonPercent+'%'}"></i></span></article>
+        <article><span class="vlp-stat-icon"><svg><use href="#i-note"/></svg></span><span class="vlp-stat-label">خطوات أنجزتها</span><strong>{{ activeTasks.filter(t=>t.status==='done').length }}</strong><small>مهام مكتملة من {{ activeTasks.length }}</small><span class="vlp-stat-caption">من قائمة مهامك</span></article>
+        <article><span class="vlp-stat-icon"><svg><use href="#i-calendar"/></svg></span><span class="vlp-stat-label">وقت تثبيت الفكرة</span><strong>{{ dueReviews }}</strong><small>مراجعات حان وقتها</small><button class="vlp-stat-action" type="button" @click="emit('learn',{})">افتح دروسك <span aria-hidden="true">←</span></button></article>
+        <article><span class="vlp-stat-icon"><svg><use href="#i-folder"/></svg></span><span class="vlp-stat-label">أفكار قيد البناء</span><strong>{{ data.projects.filter(project=>!project.archived).length }}</strong><small>مشاريعك النشطة</small><button class="vlp-stat-action" type="button" @click="emit('navigate','projects')">افتح المشاريع <span aria-hidden="true">←</span></button></article>
+      </div>
+      <div class="vlp-overview-grid">
+        <section class="vlp-overview-panel"><div class="vlp-panel-heading"><div><h3>خطواتك في المسارات</h3><p>كل مفهوم تفهمه، يكمّل الصورة.</p></div><span class="vlp-chart-legend"><i aria-hidden="true"></i>دروس راجعتها</span></div><div class="vlp-progress-bars" aria-label="الدروس التي راجعتها حسب المسار">
+          <div class="vlp-progress-column" v-for="track in learningTracks" :key="track.id" :data-track="track.id"><span class="vlp-bar-value" dir="ltr">{{ track.completed }}<small> / {{ track.total }}</small></span><div class="vlp-bar-track" role="img" :aria-label="track.label + ': ' + track.completed + ' من ' + track.total + ' دروس راجعتها'"><span :style="{height:track.percent+'%'}"></span></div><strong dir="ltr">{{ track.label }}</strong><small>{{ track.description }}</small></div>
+        </div><div class="vlp-chart-note"><span>تقدّم من بياناتك المحلية</span><span>بحسب الدروس التي علّمتها كمفهومة</span></div></section>
+        <section class="vlp-overview-panel vlp-course-summary"><div class="vlp-panel-heading"><div><h3>على مهل، تتقدّم</h3><p>تعلّم يناسب وقتك</p></div><svg><use href="#i-star"/></svg></div><div class="vlp-course-ring" :style="{'--review-progress':lessonPercent+'%'}" role="img" :aria-label="lessonPercent + '% من الدروس راجعتها'"><div><strong>{{ lessonPercent }}<small>%</small></strong><span>من رحلتك الحالية</span></div></div><p><strong>{{ completedLessons }}</strong> من {{ lessonCount }} درسًا راجعتها</p><small>تقييمك لفهمك، وليس درجة اختبار.</small><button class="vlp-continue-button" type="button" @click="emit('learn',{})">خطوتك الجاية <span aria-hidden="true">←</span></button></section>
+      </div>
+      <div class="vlp-dashboard-columns">
+        <section class="vlp-today-panel"><div class="vlp-panel-heading"><div><h3>مساحة للإنجاز</h3><p>مهام اليوم وما تأخر</p></div><button type="button" class="vlp-link-button" @click="emit('navigate','kanban')">كل المهام ←</button></div>
+          <form @submit.prevent="addTask" class="vlp-inline-form"><label class="vlp-field">مهمة صغيرة لليوم<input data-testid="dashboard-task-title" v-model="taskTitle" maxlength="180" required placeholder="وش الخطوة اللي بتبدأ فيها؟"></label><button type="submit" data-testid="dashboard-task-add"><span aria-hidden="true">＋</span> أضف المهمة</button></form>
+          <ul class="vlp-record-list"><li v-for="task in todayTasks.slice(0,5)" :key="task.id"><label class="vlp-task-toggle"><input type="checkbox" :checked="task.status==='done'" @change="patch('tasks',task.id,{status:$event.target.checked?'done':'todo'})"><span :class="{'vlp-is-done':task.status==='done'}">{{ task.title }}</span></label><small v-if="task.due">{{ task.due }}</small></li></ul><p v-if="!todayTasks.length" class="vlp-empty">ما عندك مهام لليوم. أضف خطوة بسيطة تبدأ فيها.</p>
+        </section>
+        <section class="vlp-agenda-panel"><div class="vlp-panel-heading"><div><h3>في تقويمك</h3><p>المواعيد القادمة</p></div><button type="button" class="vlp-link-button" @click="emit('navigate','calendar')">التقويم ←</button></div><ul class="vlp-record-list"><li v-for="event in upcoming.slice(0,3)" :key="event.id"><span class="vlp-event-marker" aria-hidden="true"></span><div><strong>{{ event.title }}</strong><time>{{ event.date }} <span>{{ event.time }}</span></time></div></li></ul><p v-if="!upcoming.length" class="vlp-empty">لا توجد مواعيد محفوظة. أضف وقت مراجعتك من التقويم.</p><div class="vlp-action-row"><button type="button" @click="emit('navigate','calendar')">افتح التقويم <span aria-hidden="true">←</span></button><button type="button" @click="emit('learn',{})">درس ومراجعة</button></div></section>
+      </div>
+      <p v-if="message" role="status" class="vlp-save-message">{{ message }}</p><p class="vlp-local-note"><svg><use href="#i-note"/></svg> بياناتك على هذا المتصفح. احتفظ بنسخة من إعدادات البيانات.</p>
     </section>`
   };
   const organizer = {

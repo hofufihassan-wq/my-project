@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="learning-js-lab.css">
   <link rel="stylesheet" href="learning-dashboard.css">
   <link rel="stylesheet" href="learning-platform.css">
+  <link rel="stylesheet" href="emerald-dashboard.css">
 </head>
 <body class="bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased">
 
@@ -132,7 +133,7 @@
       <button data-testid="nav-simulator" @click="openVisualSimulator" :aria-current="appMode === 'practice' && practiceSurface === 'simulator' ? 'page' : undefined"><svg><use href="#i-monitor"/></svg>المحاكي</button>
     </nav>
   </header>
-  <nav v-if="appMode !== 'practice'" class="learning-launcher" aria-label="أدوات التعلّم">
+  <nav v-if="appMode !== 'practice' && appMode !== 'home'" class="learning-launcher" aria-label="أدوات التعلّم">
     <button data-testid="nav-course" @click="openLearning('course')" :aria-current="appMode === 'course' ? 'page' : undefined">تعلّم معي</button>
     <button data-testid="nav-explain" @click="openLearning('explain')" :aria-current="appMode === 'explain' ? 'page' : undefined">اشرح لي الكود</button>
     <button data-testid="nav-css-lab" @click="openLearning('cssLab')" :aria-current="appMode === 'cssLab' ? 'page' : undefined">مختبر CSS</button>
@@ -145,24 +146,33 @@
   <main v-if="appMode === 'course'" class="learning-page"><vlex-course @practice="practiceFromLearning" /></main>
   <main v-if="appMode === 'cssLab'" class="learning-page"><vlex-css-lab /></main>
   <main v-if="appMode === 'jsLab'" class="learning-page"><vlex-js-lab @practice="practiceFromLearning" /></main>
-  <main v-if="appMode === 'home'" class="dashboard-shell">
-    <aside class="dashboard-sidebar" aria-label="مساحات التعلم">
+  <main v-if="appMode === 'home'" class="dashboard-shell emerald-dashboard">
+    <aside class="dashboard-sidebar emerald-sidebar" aria-label="مساحات التعلم والتنظيم">
       <p class="eyebrow">مساحتك الشخصية</p>
-      <button class="active" @click="setAppMode('home')"><svg><use href="#i-home"/></svg>الرئيسية</button>
-      <button @click="setAppMode('lexicon')"><svg><use href="#i-book"/></svg>القاموس <span>{{ rawLexiconData.length }}</span></button>
+      <button class="active" aria-current="page" @click="setAppMode('home')"><svg><use href="#i-home"/></svg>لوحة التحكم<span class="sidebar-current-dot" aria-hidden="true"></span></button>
+      <p class="sidebar-group-label">تعلّم واكتشف</p>
+      <button data-testid="nav-course" @click="openLearning('course')"><svg><use href="#i-book"/></svg>تعلّم معي</button>
+      <button @click="setAppMode('lexicon')"><svg><use href="#i-book"/></svg>القاموس البرمجي<small>{{ rawLexiconData.length }}</small></button>
+      <button data-testid="nav-explain" @click="openLearning('explain')"><svg><use href="#i-code"/></svg>اشرح لي الكود</button>
+      <button data-testid="nav-css-lab" @click="openLearning('cssLab')"><svg><use href="#i-grid"/></svg>مختبر CSS</button>
+      <button data-testid="nav-js-lab" @click="openLearning('jsLab')"><svg><use href="#i-code"/></svg>مختبر JavaScript</button>
       <button @click="openTraining"><svg><use href="#i-code"/></svg>التدريب العملي</button>
-      <button @click="openVisualSimulator"><svg><use href="#i-monitor"/></svg>المحاكي</button>
+      <button @click="openVisualSimulator"><svg><use href="#i-monitor"/></svg>المحاكي التفاعلي</button>
+      <p class="sidebar-group-label">نظّم رحلتك</p>
+      <button v-for="section in foundationSections.filter(item => item.id !== 'explain')" :key="section.id" @click="openFoundation(section.id)"><svg><use :href="'#i-' + section.icon"/></svg>{{ section.title }}</button>
       <div class="sidebar-divider"></div>
-      <button v-for="section in foundationSections" :key="section.id" @click="openFoundation(section.id)"><svg><use :href="'#i-' + section.icon"/></svg>{{ section.title }}<small>محلي</small></button>
-      <button @click="setAppMode('settings')"><svg><use href="#i-settings"/></svg>الإعدادات</button>
-      <div class="sidebar-note"><span>✧</span><p>خطوة صغيرة كل يوم</p><small>تعلّم مفهومًا، جرّب كودًا، وابنِ فهمك على مهل.</small></div>
+      <button @click="setAppMode('settings')"><svg><use href="#i-settings"/></svg>الإعدادات والمظهر</button>
+      <div class="sidebar-note"><svg><use href="#i-star"/></svg><p>خطوة صغيرة كل يوم</p><small>تعلّم مفهومًا، جرّب كودًا، وابنِ فهمك على مهل.</small></div>
     </aside>
     <div class="dashboard-content">
-      <vlex-dashboard @navigate="navigateLearningSection" @learn="openLearning('course')" />
-      <section class="dashboard-welcome">
-        <div class="welcome-copy"><span class="eyebrow">رحلتك في تطوير الويب</span><h2>أهلًا بك في مساحتك <span>✧</span></h2><p>كل مفهوم تتعلّمه، خطوة جديدة نحو ما تريد بناءه.</p><button class="primary-button" @click="openTraining">واصل التعلّم <span>←</span></button></div>
-        <svg class="welcome-landscape" viewBox="0 0 800 260" aria-hidden="true"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#0d373c"/><stop offset="1" stop-color="#031012"/></linearGradient><radialGradient id="moonGlow"><stop stop-color="#eee2b2" stop-opacity=".4"/><stop offset="1" stop-color="#ddd8b7" stop-opacity="0"/></radialGradient><linearGradient id="mountain" x2="0" y2="1"><stop stop-color="#275159"/><stop offset="1" stop-color="#041113"/></linearGradient></defs><path fill="url(#sky)" d="M0 0h800v260H0z"/><circle cx="592" cy="78" r="94" fill="url(#moonGlow)"/><circle cx="592" cy="78" r="30" fill="#d6d3b4" opacity=".75"/><path d="m0 201 81-73 45 29 113-119 99 118 45-36 74 81 78-56 50 23 99-74 116 104v62H0Z" fill="url(#mountain)"/><path d="m126 157 113-119 31 60-32-13-17 28-8-5-27 38-12-5-24 29Z" fill="#719392" opacity=".4"/><path d="m0 246 137-53 83 28 83-38 119 55 89-52 106 31 79-63 104 51v55H0Z" fill="#05191c"/><path d="m490 260 71-34 28 6 21-10 63 38Z" fill="#447375" opacity=".3"/></svg>
-      </section>
+      <header class="dashboard-intro">
+        <div><div class="dashboard-breadcrumb"><span>مساحتك</span><span aria-hidden="true">/</span><span>لوحة التحكم</span></div><h1>كل يوم، خطوة أقرب<span aria-hidden="true">.</span></h1><p>مكان واحد لتعلّمك، وأفكارك، والخطوة الجاية.</p></div>
+        <div class="dashboard-intro-actions"><div class="dashboard-theme-switch" role="group" aria-label="مظهر لوحة التحكم"><button data-testid="dashboard-theme-green" @click="setTheme('green')" :aria-pressed="theme === 'green'"><span class="theme-dot emerald-dot" aria-hidden="true"></span>زمردي</button><button data-testid="dashboard-theme-glass" @click="setTheme('glass')" :aria-pressed="theme === 'glass'"><span class="theme-dot glass-dot" aria-hidden="true"></span>زجاجي</button></div><button class="dashboard-start-button" @click="openLearning('course')"><svg><use href="#i-code"/></svg>تابع التعلّم<span aria-hidden="true">←</span></button></div>
+      </header>
+      <vlex-dashboard @navigate="navigateLearningSection" @learn="openLearning('course')"></vlex-dashboard>
+      <details class="dashboard-library" data-testid="dashboard-library">
+        <summary class="dashboard-section-heading"><div><span class="eyebrow">اكتشف وطبّق</span><h2>مرجعك، ومساحات التجربة</h2></div><span class="dashboard-library-hint">{{ rawLexiconData.length }} مصطلحًا · {{ practiceLessons.length }} تجربة <span aria-hidden="true">⌄</span></span></summary>
+        <div class="dashboard-library-content">
       <section class="dashboard-stats" aria-label="بيانات التعلم الفعلية">
         <article class="stat-card"><svg><use href="#i-book"/></svg><div><p>مصطلحات القاموس</p><strong>{{ rawLexiconData.length }}</strong><small>مرجعك في تطوير الويب</small></div></article>
         <article class="stat-card"><svg><use href="#i-star"/></svg><div><p>مصطلحاتك المحفوظة</p><strong>{{ bookmarkedIds.size }}</strong><small>في قائمة المفضلة</small></div></article>
@@ -186,6 +196,8 @@
         <section class="dashboard-panel planning-panel"><div class="panel-heading"><h3><svg><use href="#i-folder"/></svg>نظّم رحلتك</h3><span class="small-badge">بياناتك المحلية</span></div><p>مشاريعك ومهامك وملاحظاتك ومواعيدك.</p><p class="muted">أضف وعدّل وأرشف بأمان، ثم صدّر نسخة احتياطية.</p><button class="subtle-button" @click="openFoundation('projects')">افتح مشاريعي ←</button></section>
         <section class="dashboard-panel daily-panel"><span class="eyebrow">مساحة للفهم، لا للاستعجال</span><h3>خطوة صغيرة كل يوم</h3><p>افتح مصطلحًا، اقرأ مثاله، ثم جرّب تغييرًا واحدًا لترى أثره.</p><button class="primary-button" @click="setAppMode('lexicon')">ابدأ من القاموس ←</button></section>
       </div>
+        </div>
+      </details>
     </div>
   </main>
   <main v-if="appMode === 'settings'" class="settings-page">
