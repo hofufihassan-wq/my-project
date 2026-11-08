@@ -2786,4 +2786,8 @@ const app = createApp({
   }
 });
 
+if (window.VLexCodePresentation && app.directive) {
+  app.directive('code-editor', window.VLexCodePresentation.editor);
+  app.directive('code-view', window.VLexCodePresentation.view);
+}
 window.vueLexiconApp = app.mount('#app');

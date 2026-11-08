@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="learning-dashboard.css">
   <link rel="stylesheet" href="learning-platform.css">
   <link rel="stylesheet" href="emerald-dashboard.css">
+  <link rel="stylesheet" href="learning-refinement.css">
 </head>
 <body class="bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased">
 
@@ -481,7 +482,7 @@
             <section class="dictionary-editor-panel" aria-label="محرر مثال القاموس">
               <div class="dictionary-panel-title"><strong><svg><use href="#i-code"/></svg>محرر المثال</strong><button @click="copyCode(dictionaryEditorCode)" title="نسخ كود المثال">نسخ الكود</button></div>
               <div class="dictionary-editor-formats"><div class="ios-segmented-control"><button @click="setCodeFormat('vue')" :class="{ active: activeCodeFormat === 'vue' }" class="ios-segment-btn">Vue 3 SFC</button><button @click="setCodeFormat('vanilla')" :class="{ active: activeCodeFormat === 'vanilla' }" class="ios-segment-btn">Vanilla JS</button></div><span dir="ltr">{{ activeCodeFormat === 'vue' ? 'Example.vue' : selectedTerm.category === 'css' ? 'styles.css' : selectedTerm.category === 'html' ? 'index.html' : 'script.js' }}</span></div>
-              <div class="dictionary-editor-surface" dir="ltr"><pre class="dictionary-line-gutter" aria-hidden="true"><span v-for="(_, index) in dictionaryEditorCode.split('\n')" :key="index">{{ index + 1 }}</span></pre><textarea data-testid="dictionary-editor" class="dictionary-code-editor" :value="dictionaryEditorCode" @input="updateDictionaryEditor" @scroll="$event.target.previousElementSibling.scrollTop = $event.target.scrollTop" aria-label="كود مثال المصطلح — تعديل مؤقت" spellcheck="false" dir="ltr"></textarea></div>
+              <div class="dictionary-editor-surface" dir="ltr"><pre class="dictionary-line-gutter" aria-hidden="true"><span v-for="(_, index) in dictionaryEditorCode.split('\n')" :key="index">{{ index + 1 }}</span></pre><div class="vlex-code-shell"><pre class="vlex-code-paint" aria-hidden="true"></pre><textarea v-code-editor="currentLang" data-testid="dictionary-editor" class="dictionary-code-editor" :value="dictionaryEditorCode" @input="updateDictionaryEditor" @scroll="$event.target.closest('.dictionary-editor-surface').querySelector('.dictionary-line-gutter').scrollTop = $event.target.scrollTop" aria-label="كود مثال المصطلح — تعديل مؤقت" spellcheck="false" dir="ltr"></textarea></div></div>
               <div class="dictionary-editor-footer"><span>{{ dictionaryEditorChanged ? 'نسخة معدلة مؤقتة' : 'المثال الأصلي' }}</span><button v-if="dictionaryEditorChanged" @click="resetDictionaryEditor" data-testid="dictionary-reset">استعادة الأصل</button><button @click="sendTermToScratchpad(selectedTerm)">الأصل في المحاكي ↗</button></div>
             </section>
             <section class="dictionary-live-panel" aria-label="المعاينة المباشرة للمثال">
@@ -2439,11 +2440,11 @@
         <span>— معجم ومرجع برمجي ومسارات تدريب عملي تفاعلية</span>
       </div>
       <div class="flex items-center gap-3 font-mono text-[11px]">
-        <span>Nuxt UI v3</span>
+        <span>تعلّم · جرّب · طبّق</span>
         <span>•</span>
-        <span>Vue 3.4</span>
+        <span>أمثلة قابلة للتجربة</span>
         <span>•</span>
-        <span>Tailwind CSS</span>
+        <span>مساحتك للتعلّم</span>
         <span>•</span>
         <span class="text-[#00DC82] font-bold">{{ rawLexiconData.length }} عنصراً تعليمياً تفاعلياً</span>
       </div>
@@ -2469,6 +2470,7 @@
 <script src="learning-css-lab.js"></script>
 <script src="learning-js-lab.js"></script>
 <script src="learning-dashboard.js"></script>
+<script src="code-presentation.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
