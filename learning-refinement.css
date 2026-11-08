@@ -59,3 +59,4 @@
 @media(max-width:680px){.vlp-calendar-grid button{min-height:64px;padding:5px}.vlp-calendar-grid button small{font-size:9px;margin-top:4px}}
 /* The dictionary's legacy selector is deliberately more specific than generic textarea styles. */
 #app[data-workspace="lexicon"] .dictionary-editor-surface .vlex-code-shell textarea.dictionary-code-editor{width:100%;background:transparent;color:transparent;-webkit-text-fill-color:transparent;caret-color:#fff;font:13px/1.8 'JetBrains Mono',monospace;padding:16px;min-height:370px}
+@media(max-width:680px){#app>footer>div{display:flex;flex-direction:column;align-items:center;gap:14px}#app>footer>div>div{width:100%;justify-content:center;flex-wrap:wrap;gap:8px 12px}#app>footer span{word-break:normal;white-space:normal}#app>footer>div>div>span{flex:0 0 auto;max-width:100%}}
