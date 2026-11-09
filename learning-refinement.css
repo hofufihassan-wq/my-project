@@ -105,3 +105,23 @@
 /* Keep the light theme's footer readable instead of using the dark footer surface. */
 #app[data-theme="light"]>footer{background:#e7ede8;color:#405b50}
 #app[data-theme="light"]>footer .text-white{color:#1c3f31!important}
+/* Integrated file/language metadata. The native editor and its paint sibling stay intact. */
+#app:not([data-workspace="practice"]) .vlex-editor-bar,#app:not([data-workspace="practice"]) .dictionary-editor-formats{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 12px;border:1px solid #46505d;border-bottom:0;border-radius:10px 10px 0 0;background:#252a2d;color:#d4d4d4;font:11px/1.6 'JetBrains Mono',monospace}
+#app:not([data-workspace="practice"]) .vlex-language-badge{display:inline-flex;align-items:center;flex:none;padding:2px 8px;border:1px solid #d4af6659;border-radius:6px;background:#d4af660d;color:#e0c58f;font:500 10px/1.6 'JetBrains Mono',monospace;white-space:nowrap;vertical-align:middle}
+#app:not([data-workspace="practice"]) .vlex-editor-bar+.vlex-code-shell{border-radius:0 0 10px 10px}
+#app:not([data-workspace="practice"]) .dictionary-editor-formats>span{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#app:not([data-workspace="practice"]) .vlex-css-editors>label{gap:0}
+#app:not([data-workspace="practice"]) .vlc-lesson details>.vlex-editor-bar+pre{margin-top:0;border-radius:0 0 10px 10px}
+#app:not([data-workspace="practice"]) .vlex-explain-intro{max-width:90ch;margin-bottom:8px}
+#app:not([data-workspace="practice"]) .vlex-explain-toolbar{gap:8px}
+#app:not([data-workspace="practice"]) .vlex-explain-source-label{margin-top:8px}
+#app:not([data-workspace="practice"]) .vlex-explain-badge{white-space:normal}
+#app:not([data-workspace="practice"]) .vlp-project-form{gap:10px;margin-block:10px;padding:16px}
+#app:not([data-workspace="practice"]) .vlp-project-form textarea{min-height:80px}
+#app:is([data-theme="green"],[data-theme="glass"]) .vlp-project-grid .vlp-record-card small{color:var(--muted)}
+#app:is([data-theme="green"],[data-theme="glass"]) .dictionary-breadcrumb{color:var(--muted)}
+@media(max-width:680px){#app:not([data-workspace="practice"]) .vlex-editor-bar{padding:8px 10px}}
+/* Reserve champagne for badges and active states, not every action label. */
+#app:is([data-theme="green"],[data-theme="glass"]) .lexicon-hero h2{color:var(--ink)}
+#app:is([data-theme="green"],[data-theme="glass"]) .dictionary-title-actions>:is(button,a){color:var(--ink)}
+#app:is([data-theme="green"],[data-theme="glass"]):not([data-workspace="practice"]) .header-actions button{color:var(--muted)}
