@@ -774,7 +774,7 @@ const app = createApp({
         practiceSurface.value = surface;
       }
       appMode.value = ['quiz', 'training'].includes(mode) ? 'practice' : mode;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }
 
     function resetFilters() {

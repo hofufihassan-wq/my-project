@@ -60,3 +60,29 @@
 /* The dictionary's legacy selector is deliberately more specific than generic textarea styles. */
 #app[data-workspace="lexicon"] .dictionary-editor-surface .vlex-code-shell textarea.dictionary-code-editor{width:100%;background:transparent;color:transparent;-webkit-text-fill-color:transparent;caret-color:#fff;font:13px/1.8 'JetBrains Mono',monospace;padding:16px;min-height:370px}
 @media(max-width:680px){#app>footer>div{display:flex;flex-direction:column;align-items:center;gap:14px}#app>footer>div>div{width:100%;justify-content:center;flex-wrap:wrap;gap:8px 12px}#app>footer span{word-break:normal;white-space:normal}#app>footer>div>div>span{flex:0 0 auto;max-width:100%}}
+/* Navigation polish: one simultaneous entrance; no per-card queue or timers. */
+#app:not([data-workspace="practice"]){--review-gold:#d4af66;--ui-enter:180ms}
+#app[data-theme="light"]{--review-gold:#86601e}
+#app:not([data-workspace="practice"]) :is(.vlp-mini-stats>article,.vlp-overview-grid,.vlp-dashboard-columns){animation:none;animation-delay:0s}
+#app:not([data-workspace="practice"])>:is(main,.lexicon-hero,.dictionary-toolbar,.dictionary-layout){animation:vlex-page-arrive 180ms ease-out both}
+@keyframes vlex-page-arrive{from{opacity:.7;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+#app:not([data-workspace="practice"]) :is(button,a){transition:background-color 140ms ease,border-color 140ms ease,color 140ms ease,box-shadow 140ms ease}
+#app:not([data-workspace="practice"]) :is(.dictionary-content-tabs,.foundation-tabs,.vlc-tabs) button[aria-selected="true"],#app:not([data-workspace="practice"]) .foundation-tabs button[aria-current="page"]{border-color:var(--review-gold)}
+#app:not([data-workspace="practice"]) details[open]>:not(summary){animation:vlex-detail-arrive 140ms ease-out}
+@keyframes vlex-detail-arrive{from{opacity:.8}to{opacity:1}}
+#app[data-theme="green"]:not([data-workspace="practice"]){--dash-card:rgba(29,49,43,.54);--dash-card-soft:rgba(24,43,37,.48);--dash-ink:#f2f2eb;--dash-muted:#c0ccc4;--dash-border:rgba(222,231,217,.17);--ink:#eef1ec;--muted:#bdc9c1}
+#app[data-theme="glass"]:not([data-workspace="practice"]){--dash-card:rgba(35,52,65,.48);--dash-card-soft:rgba(27,43,57,.44);--dash-ink:#f4f3ed;--dash-muted:#c2cfd7}
+#app:is([data-theme="green"],[data-theme="glass"]) :is(.vlp-stat-icon,.vlp-progress-value,.vlc-eyebrow,.vlp-calendar-nav h3){color:var(--review-gold)}
+#app:is([data-theme="green"],[data-theme="glass"]) .emerald-sidebar button.active{border-color:#d4af6680}
+#app:is([data-theme="green"],[data-theme="glass"]) .vlp-mini-stats>article{box-shadow:inset 0 1px #fff1,0 12px 30px #0002}
+#app:is([data-theme="green"],[data-theme="glass"]) .vlp-mini-stats>article:hover{border-color:#d4af665c}
+#app:is([data-theme="green"],[data-theme="glass"]) .dictionary-copy-panel h3{color:#dfc28a}
+#app:is([data-theme="green"],[data-theme="glass"]) .dictionary-summary{color:#d6ded7}
+.vlex-explain-workspace{gap:12px}.vlex-explain-results{margin-top:16px}.vlex-explain-line{margin-bottom:0}.vlex-explain-limits{margin-block:12px}.vlex-explain-line pre{margin-block:8px}
+.vlex-css-metric{border-radius:8px;padding-inline:5px;transition:background-color 140ms,border-color 140ms}
+.vlex-css-metric:focus-within{background:var(--accent-soft);border-bottom-color:var(--review-gold,var(--accent))}
+.vlex-css-controls :is(input,select):focus-visible{outline-color:var(--review-gold,var(--accent))}
+.vlex-css-preview{background:var(--surface-raised);padding:12px;border:1px solid var(--line);box-shadow:inset 0 1px #ffffff0d,0 12px 28px #0002}
+.vlex-css-preview iframe{border:1px solid var(--line);border-radius:9px;background:transparent}
+.vlx-js-console li{padding-block:10px}.vlx-js-console [data-level=warn]{border-inline-start:3px solid #d4af66;background:#d4af660a}
+@media(prefers-reduced-motion:reduce){#app:not([data-workspace="practice"]),#app:not([data-workspace="practice"]) *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
