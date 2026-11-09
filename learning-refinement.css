@@ -86,3 +86,22 @@
 .vlex-css-preview iframe{border:1px solid var(--line);border-radius:9px;background:transparent}
 .vlx-js-console li{padding-block:10px}.vlx-js-console [data-level=warn]{border-inline-start:3px solid #d4af66;background:#d4af660a}
 @media(prefers-reduced-motion:reduce){#app:not([data-workspace="practice"]),#app:not([data-workspace="practice"]) *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Final review: neutral glass hierarchy; emerald remains the primary action color. */
+#app[data-theme="green"]:not([data-workspace="practice"]){--canvas:#111b19;--surface:#192723;--surface-raised:#24332e;--glass:rgba(26,39,34,.7);--line:rgba(218,221,209,.17);--gold:#d4af66;background:radial-gradient(ellipse at 18% 12%,#4a70592b,transparent 43%),radial-gradient(ellipse at 83% 45%,#d4af6608,transparent 50%),#111b19}
+#app:is([data-theme="green"],[data-theme="glass"]) .emerald-dashboard .vlp-overview-panel:not(.vlp-course-summary){background:linear-gradient(135deg,#ffffff09,transparent 60%),var(--dash-card);border-color:#d4af663b;box-shadow:inset 0 1px #fff2,0 18px 38px #0003}
+#app:is([data-theme="green"],[data-theme="glass"]) .emerald-dashboard :is(.vlp-agenda-panel,.vlp-course-summary){background:var(--dash-card-soft);box-shadow:inset 0 1px #ffffff09,0 8px 20px #0002}
+#app:is([data-theme="green"],[data-theme="glass"]) :is(.vlp-course-ring>strong,.vlp-chart-legend,.vlp-event-marker){color:var(--review-gold)}
+#app:is([data-theme="green"],[data-theme="glass"]) .vlp-course-ring{border:1px solid #d4af6638}
+#app:is([data-theme="green"],[data-theme="glass"]):not([data-workspace="practice"]) .main-nav button[aria-current="page"]{border-color:#d4af6680}
+.vlex-css-preview{padding:16px;background:linear-gradient(135deg,#ffffff08,transparent 65%),var(--surface-raised);border-color:var(--line-strong,var(--line));box-shadow:inset 0 1px #ffffff12,0 16px 32px #0002}
+.vlex-css-preview iframe{display:block;width:100%;box-shadow:0 0 0 1px #0002}
+.vlex-explainer .vlex-explain-intro{margin-block:10px 12px;max-width:85ch}
+.vlex-explainer .vlex-explain-toolbar{margin-block:10px;padding:10px 12px}
+.vlex-explainer .vlex-explain-limits{padding:10px 14px;margin-block:10px}
+#app .vlex-explainer .vlex-code-shell>.vlex-code-input{min-height:210px}
+@media(max-width:680px){.vlex-css-preview{padding:10px}.vlex-explainer .vlex-explain-toolbar{padding:10px}#app .vlex-explainer .vlex-code-shell>.vlex-code-input{min-height:200px}}
+/* Override the legacy !important comment rule, only in learning code viewers. */
+#app:not([data-workspace="practice"]) :is(.vlex-code-paint,.vlex-code-view) .hljs-comment{color:#8ba878!important}
+/* Keep the light theme's footer readable instead of using the dark footer surface. */
+#app[data-theme="light"]>footer{background:#e7ede8;color:#405b50}
+#app[data-theme="light"]>footer .text-white{color:#1c3f31!important}
