@@ -1,0 +1,261 @@
+{
+  "passed": 36,
+  "total": 36,
+  "results": [
+    {
+      "name": "cycle 1: home",
+      "passed": true,
+      "detail": {
+        "milliseconds": 465
+      }
+    },
+    {
+      "name": "cycle 1: lexicon",
+      "passed": true,
+      "detail": {
+        "milliseconds": 876
+      }
+    },
+    {
+      "name": "cycle 1: course",
+      "passed": true,
+      "detail": {
+        "milliseconds": 408
+      }
+    },
+    {
+      "name": "cycle 1: cssLab",
+      "passed": true,
+      "detail": {
+        "milliseconds": 342
+      }
+    },
+    {
+      "name": "cycle 1: jsLab",
+      "passed": true,
+      "detail": {
+        "milliseconds": 296
+      }
+    },
+    {
+      "name": "cycle 1: explain",
+      "passed": true,
+      "detail": {
+        "milliseconds": 222
+      }
+    },
+    {
+      "name": "cycle 1: settings",
+      "passed": true,
+      "detail": {
+        "milliseconds": 208
+      }
+    },
+    {
+      "name": "cycle 1: training",
+      "passed": true,
+      "detail": {
+        "milliseconds": 221
+      }
+    },
+    {
+      "name": "cycle 1: projects",
+      "passed": true,
+      "detail": {
+        "milliseconds": 243
+      }
+    },
+    {
+      "name": "cycle 1: notes",
+      "passed": true,
+      "detail": {
+        "milliseconds": 208
+      }
+    },
+    {
+      "name": "cycle 1: calendar",
+      "passed": true,
+      "detail": {
+        "milliseconds": 288
+      }
+    },
+    {
+      "name": "cycle 2: home",
+      "passed": true,
+      "detail": {
+        "milliseconds": 290
+      }
+    },
+    {
+      "name": "cycle 2: lexicon",
+      "passed": true,
+      "detail": {
+        "milliseconds": 514
+      }
+    },
+    {
+      "name": "cycle 2: course",
+      "passed": true,
+      "detail": {
+        "milliseconds": 579
+      }
+    },
+    {
+      "name": "cycle 2: cssLab",
+      "passed": true,
+      "detail": {
+        "milliseconds": 324
+      }
+    },
+    {
+      "name": "cycle 2: jsLab",
+      "passed": true,
+      "detail": {
+        "milliseconds": 256
+      }
+    },
+    {
+      "name": "cycle 2: explain",
+      "passed": true,
+      "detail": {
+        "milliseconds": 224
+      }
+    },
+    {
+      "name": "cycle 2: settings",
+      "passed": true,
+      "detail": {
+        "milliseconds": 210
+      }
+    },
+    {
+      "name": "cycle 2: training",
+      "passed": true,
+      "detail": {
+        "milliseconds": 209
+      }
+    },
+    {
+      "name": "cycle 2: projects",
+      "passed": true,
+      "detail": {
+        "milliseconds": 217
+      }
+    },
+    {
+      "name": "cycle 2: notes",
+      "passed": true,
+      "detail": {
+        "milliseconds": 203
+      }
+    },
+    {
+      "name": "cycle 2: calendar",
+      "passed": true,
+      "detail": {
+        "milliseconds": 205
+      }
+    },
+    {
+      "name": "cycle 3: home",
+      "passed": true,
+      "detail": {
+        "milliseconds": 209
+      }
+    },
+    {
+      "name": "cycle 3: lexicon",
+      "passed": true,
+      "detail": {
+        "milliseconds": 357
+      }
+    },
+    {
+      "name": "cycle 3: course",
+      "passed": true,
+      "detail": {
+        "milliseconds": 300
+      }
+    },
+    {
+      "name": "cycle 3: cssLab",
+      "passed": true,
+      "detail": {
+        "milliseconds": 238
+      }
+    },
+    {
+      "name": "cycle 3: jsLab",
+      "passed": true,
+      "detail": {
+        "milliseconds": 259
+      }
+    },
+    {
+      "name": "cycle 3: explain",
+      "passed": true,
+      "detail": {
+        "milliseconds": 221
+      }
+    },
+    {
+      "name": "cycle 3: settings",
+      "passed": true,
+      "detail": {
+        "milliseconds": 210
+      }
+    },
+    {
+      "name": "cycle 3: training",
+      "passed": true,
+      "detail": {
+        "milliseconds": 260
+      }
+    },
+    {
+      "name": "cycle 3: projects",
+      "passed": true,
+      "detail": {
+        "milliseconds": 240
+      }
+    },
+    {
+      "name": "cycle 3: notes",
+      "passed": true,
+      "detail": {
+        "milliseconds": 221
+      }
+    },
+    {
+      "name": "cycle 3: calendar",
+      "passed": true,
+      "detail": {
+        "milliseconds": 234
+      }
+    },
+    {
+      "name": "no card stagger and short unified page entry",
+      "passed": true,
+      "detail": {
+        "animation": "vlex-page-arrive",
+        "duration": "0.18s",
+        "delays": [
+          "0s",
+          "0s",
+          "0s",
+          "0s"
+        ]
+      }
+    },
+    {
+      "name": "JS draft preserved through navigation and reload",
+      "passed": true
+    },
+    {
+      "name": "reduced motion removes page animation",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "historyLimitation": "Existing app uses local appMode state without URL routes or popstate. Browser back/forward do not navigate internal sections; no router introduced in visual-only polish."
+}

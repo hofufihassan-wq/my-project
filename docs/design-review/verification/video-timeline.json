@@ -1,64 +1,51 @@
 {
   "continuous": true,
   "audioTrack": false,
-  "viewport": "1440x1000",
+  "errors": [],
   "timeline": [
     {
-      "section": "01 Dashboard / emerald",
-      "seconds": 0.9
+      "section": "Dashboard / emerald",
+      "seconds": 1.205
     },
     {
-      "section": "02 Dictionary",
-      "seconds": 10.9
+      "section": "Dictionary",
+      "seconds": 3.355
     },
     {
-      "section": "03 Explain code",
-      "seconds": 18.9
+      "section": "Language badge tracks Vue format",
+      "seconds": 7.925
     },
     {
-      "section": "04 Lessons",
-      "seconds": 28.6
+      "section": "Lessons",
+      "seconds": 9.898
     },
     {
-      "section": "05 CSS Lab / real controls and preview",
-      "seconds": 34.6
+      "section": "CSS Lab",
+      "seconds": 13.995
     },
     {
-      "section": "06 JavaScript Lab / execution",
-      "seconds": 45.7
+      "section": "JavaScript Lab",
+      "seconds": 18.349
     },
     {
-      "section": "07 Live preview / inside dictionary",
-      "seconds": 55.9
+      "section": "Return home",
+      "seconds": 22.435
     },
     {
-      "section": "08 Training",
-      "seconds": 61.5
+      "section": "Projects",
+      "seconds": 23.893
     },
     {
-      "section": "09 Projects",
-      "seconds": 67.1
-    },
-    {
-      "section": "10 Notes",
-      "seconds": 74.8
-    },
-    {
-      "section": "11 Calendar",
-      "seconds": 77.3
-    },
-    {
-      "section": "12 Settings / switch both themes",
-      "seconds": 84.6
+      "section": "Explain",
+      "seconds": 25.714
     },
     {
       "section": "Dashboard / glass",
-      "seconds": 89
+      "seconds": 30.218
     },
     {
-      "section": "13 Simulator / blue and red identity",
-      "seconds": 100.8
+      "section": "CSS Lab / glass",
+      "seconds": 32.034
     }
-  ],
-  "errors": []
+  ]
 }

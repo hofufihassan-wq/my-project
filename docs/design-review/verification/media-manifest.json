@@ -1,6 +1,12 @@
 {
-  "codeCommit": "0778b0aa45f4324450b05c3e7e5729a56a9bf326",
+  "codeCommit": "1b7b3d55fa0a15457450015864be005f65d6ea6a",
   "files": [
+    {
+      "path": "EDITOR_INTEGRATION_AR.md",
+      "bytes": 5055,
+      "sha256": "e51d4e5d88515df5d4475305b202a01d80a6d82b75b834fb500ba78aba6124cf",
+      "gitBlob": "da9815985e45c833a096ef7f701866142c9ad7da"
+    },
     {
       "path": "FINAL_NOTES_AR.md",
       "bytes": 4687,
@@ -15,9 +21,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 18349,
-      "sha256": "7f0864c03c4c15c3ccffef865cb6101f7c8e5c89ea0fd61f36f676503b645302",
-      "gitBlob": "a08dbfa135e5c216f9bca309c3e1d6917fe9582b"
+      "bytes": 17704,
+      "sha256": "700364895bc548a0782f57e7cd22ec36f70c3fd292335a585b4503a422a600a0",
+      "gitBlob": "f0995f63b099b394663e50826597114841cfd71b"
     },
     {
       "path": "VERIFICATION_AR.md",
@@ -27,63 +33,63 @@
     },
     {
       "path": "images/before-calendar-glass-desktop.jpg",
-      "bytes": 105496,
-      "sha256": "c08deeb98ac1aa1979c3c7bb459cd9cc39ca86b1e26da39fe038ef6a4ea22bbe",
-      "gitBlob": "bf9f9a8b29e7bb20f11329f93e080aa58e62f90c"
+      "bytes": 105571,
+      "sha256": "d93908adb7b2d9c78e409e1d3e72ed8941bdc807192e0a4eb1a5dbf6cf600744",
+      "gitBlob": "a27729842a9215c485220f59faf6b7aa221826a1"
     },
     {
       "path": "images/before-calendar-green-desktop.jpg",
-      "bytes": 102719,
-      "sha256": "4fc4ac663784db7cbbd58fc03b58df578ebfde1fc9fa3ad472401a59a59cfeef",
-      "gitBlob": "bb8455e02f5e20954e183ca22e102a325ffa265f"
+      "bytes": 101187,
+      "sha256": "0b2e61be37cdfb9b2d8cf7d3e871f3e05ec31e7ec0072244bbb999320cd285e9",
+      "gitBlob": "e7fe672d4a65a8397ff8fde4d3360f502be4690e"
     },
     {
       "path": "images/before-css-lab-glass-desktop.jpg",
-      "bytes": 179944,
-      "sha256": "6b394a4453b4586bfe47a283e078d94715db1cc9871226dc6072162ca55bfa50",
-      "gitBlob": "dba89214c190001193820a38325527bf7b8e822f"
+      "bytes": 181760,
+      "sha256": "096c17f1da2cb94f3e533848ac713bb9fb1c86d608bc44710542d92df7379aa5",
+      "gitBlob": "1e2f5e806a23500048ec91177a8c1399f860934d"
     },
     {
       "path": "images/before-css-lab-green-desktop.jpg",
-      "bytes": 176128,
-      "sha256": "ef39f19e6977284c732d3968377397d64a5ec8a3e9fb0190a619e80d504a95b4",
-      "gitBlob": "b8248d8cd4fa80e97d78beab35528e6c12f7a007"
+      "bytes": 174949,
+      "sha256": "5177c8fe0093756c014b01884015e131fff2ba22056756a2154fe158b6c94409",
+      "gitBlob": "f02232cde7b74671ff7137bbce7c0a5f0bb587a1"
     },
     {
       "path": "images/before-dashboard-glass-desktop.jpg",
-      "bytes": 136461,
-      "sha256": "80642ab3d5c257479d425fdfaa230eb72c9fd91939eea9c108b307b8c00aefe9",
-      "gitBlob": "216fd5a92d4288881ec9eaf728e1eeb59e9d3ae4"
+      "bytes": 136485,
+      "sha256": "c8eafcbd12dca7775c876a1ea6e7c6214642f3b9e4a5dd19cfca130baf055983",
+      "gitBlob": "d33f6a94b0a2c4da18ee6a77e46209e6fe8bf100"
     },
     {
       "path": "images/before-dashboard-green-desktop.jpg",
-      "bytes": 133592,
-      "sha256": "1650cf045561dd990ad9fd86b9a4d05e74de9df8117ed784cb951855da2d1c39",
-      "gitBlob": "f69a6d9fd0eb487822526fd7f9d12056ba3e7cd2"
+      "bytes": 132258,
+      "sha256": "89f7947475c47a45ac043e42be36908c07e087ce07bbd312cf662e78dc7908e6",
+      "gitBlob": "10156125ae5443544f12319a9e1e1cc43e6feb5b"
     },
     {
       "path": "images/before-dictionary-glass-desktop.jpg",
-      "bytes": 209659,
-      "sha256": "6dccd8b41392a6bb119f7d8c0a8abbaa7bd0306bc4a43bc09e0757a9d1179185",
-      "gitBlob": "528da851e4c11f0fd585a13fd3c493291aaec315"
+      "bytes": 209761,
+      "sha256": "4ee08a024487b304cefdda048d176b625ff8789d0e6d603e1335f616bf18aef0",
+      "gitBlob": "78fb0f958ba7ff89d4a35e6f8756c3ee790b62f7"
     },
     {
       "path": "images/before-dictionary-green-desktop.jpg",
-      "bytes": 205989,
-      "sha256": "0b23c8685d2fceb0299f799cba34087d9a1d153c7e2c96b9cc29e461655e6b8c",
-      "gitBlob": "cdda24b078fec51b50af75a1ec23d437986faaf1"
+      "bytes": 205091,
+      "sha256": "941395fa630f5631312043f868c67ece1b75df280ddbfdfa130604fb53d606f8",
+      "gitBlob": "590072c8d44e0b239e36deec81af7e4d8236d4b0"
     },
     {
       "path": "images/before-explainer-glass-desktop.jpg",
-      "bytes": 235132,
-      "sha256": "e1a054bbc7de1bfcefe1461675809bf8bc2c903b63ba145341b8b0b81d2ab314",
-      "gitBlob": "1840e20f0659f9c3aa707a6d611b158bed31805b"
+      "bytes": 239374,
+      "sha256": "a4893da249698afec86c56a29310f4ad31b04c54e0e77dfda2eaaeb3eb76d4a0",
+      "gitBlob": "8545ff52ebce356bc9fd12bb464517eaad3d6b6c"
     },
     {
       "path": "images/before-explainer-green-desktop.jpg",
-      "bytes": 228476,
-      "sha256": "996952b080c9b19e735f1b69a97d1532c25cf7c05e1930642442839c19ce4d75",
-      "gitBlob": "95bf3450381bcf5537c73dd04b34810ff0fad219"
+      "bytes": 228458,
+      "sha256": "f86a76fb6bc308cf59deacfeb59bffeb523c466da05b906796ea93e3c671075b",
+      "gitBlob": "f97d06f6dcc2d591d2925a1b293a367289e59034"
     },
     {
       "path": "images/before-js-lab-glass-desktop.jpg",
@@ -93,9 +99,9 @@
     },
     {
       "path": "images/before-js-lab-green-desktop.jpg",
-      "bytes": 152315,
-      "sha256": "3c861f155b0ad288fa1bab2f8b28da8e5528b3f027bd196cb4db327a60ec034b",
-      "gitBlob": "e30eefa01926d075c7aa8ece9e3434fb29388378"
+      "bytes": 149563,
+      "sha256": "1ff518730f38958e7492624cfe5084318a9251eea7c50761c173409eed645aaa",
+      "gitBlob": "304a6567ec75926be8be583a808a6b007bdddf1b"
     },
     {
       "path": "images/before-lessons-glass-desktop.jpg",
@@ -105,27 +111,27 @@
     },
     {
       "path": "images/before-lessons-green-desktop.jpg",
-      "bytes": 346522,
-      "sha256": "83b4a1d5ae5627648af9866357b3645c27255a253b192f778aa3d349a18e695f",
-      "gitBlob": "341fd257081ee450a7deb854b5fed0c3f4e36ca9"
+      "bytes": 338663,
+      "sha256": "b3f0122795908cd53ccb86e19b6d34e2424ce81d9b7d1e254f8cfdfdf03021b1",
+      "gitBlob": "a281f4ec3fb2af6988939979306edad53d30c7dc"
     },
     {
       "path": "images/calendar-glass-desktop.jpg",
-      "bytes": 105571,
-      "sha256": "d93908adb7b2d9c78e409e1d3e72ed8941bdc807192e0a4eb1a5dbf6cf600744",
-      "gitBlob": "a27729842a9215c485220f59faf6b7aa221826a1"
+      "bytes": 105471,
+      "sha256": "95df36347ea4946b000addaca730b1b52f09b2b361e032b39cdca76444ed8882",
+      "gitBlob": "de8c1c1966fbc90d331e7ffaa97799a375ff2007"
     },
     {
       "path": "images/calendar-green-desktop.jpg",
-      "bytes": 101187,
-      "sha256": "0b2e61be37cdfb9b2d8cf7d3e871f3e05ec31e7ec0072244bbb999320cd285e9",
-      "gitBlob": "e7fe672d4a65a8397ff8fde4d3360f502be4690e"
+      "bytes": 101102,
+      "sha256": "b12a9951e1b01ccb953623f0ad0f9c63443158708ef256edc6b8bc88b46395ca",
+      "gitBlob": "2e43631af73d06955510de9c96293bbfb0fc23bc"
     },
     {
       "path": "images/calendar-mobile.jpg",
-      "bytes": 85234,
-      "sha256": "a5eef7e7fa6fd443393a82801549606f56d28e70bea2ea2a659a6f896588c352",
-      "gitBlob": "e5782547cc8d944bafc6bdef64eecc626b3ba9a5"
+      "bytes": 85159,
+      "sha256": "336b9c791a7ef349baff80b83a8e5185d9eb5d91327930a3fa849488074c6179",
+      "gitBlob": "1f6a5b350b62decf335127c9e77120821b21274e"
     },
     {
       "path": "images/css-controls-glass.jpg",
@@ -141,237 +147,297 @@
     },
     {
       "path": "images/css-lab-glass-desktop.jpg",
-      "bytes": 181760,
-      "sha256": "096c17f1da2cb94f3e533848ac713bb9fb1c86d608bc44710542d92df7379aa5",
-      "gitBlob": "1e2f5e806a23500048ec91177a8c1399f860934d"
+      "bytes": 184920,
+      "sha256": "67700f1296b9c6914c7a885d3705cf74607b59d32ebc776e522efbeb10fecfc9",
+      "gitBlob": "1eb9dfc1287783b3e94445d596a6035e9820826e"
     },
     {
       "path": "images/css-lab-green-desktop.jpg",
-      "bytes": 174949,
-      "sha256": "5177c8fe0093756c014b01884015e131fff2ba22056756a2154fe158b6c94409",
-      "gitBlob": "f02232cde7b74671ff7137bbce7c0a5f0bb587a1"
+      "bytes": 179087,
+      "sha256": "d0a24a26b8c8ad0954cbcd2b7123c37083a0e80bbec579bff13dec55a0efb70a",
+      "gitBlob": "8e312a2fd7323def2200cf443a099b2e65620de5"
     },
     {
       "path": "images/css-lab-mobile.jpg",
-      "bytes": 134345,
-      "sha256": "d589ad257ce6ac67d80760dec9b0761cb5b1144b250faa502d1a739128f00044",
-      "gitBlob": "9135c07b905307ba3342c30c6ec72823bb9b9af0"
+      "bytes": 137452,
+      "sha256": "df9a812be3d047344975a3c447f1bb824c99c54dfb1ce60ef0c3ed455be78c0e",
+      "gitBlob": "0eff05221f10f598208cf81ef3447cda06019cfd"
     },
     {
       "path": "images/dashboard-glass-desktop.jpg",
-      "bytes": 136485,
-      "sha256": "c8eafcbd12dca7775c876a1ea6e7c6214642f3b9e4a5dd19cfca130baf055983",
-      "gitBlob": "d33f6a94b0a2c4da18ee6a77e46209e6fe8bf100"
+      "bytes": 136395,
+      "sha256": "f552ab2c388f66a29093b239c73ae2604b19d1ca9a9505d32cfbbde687bc0661",
+      "gitBlob": "18e53e3e6f58d0db9a21f998f6f23ca69323b88d"
     },
     {
       "path": "images/dashboard-green-desktop.jpg",
-      "bytes": 132258,
-      "sha256": "89f7947475c47a45ac043e42be36908c07e087ce07bbd312cf662e78dc7908e6",
-      "gitBlob": "10156125ae5443544f12319a9e1e1cc43e6feb5b"
+      "bytes": 132319,
+      "sha256": "a27b1e8ccd81ce76d9837b2cef2f5f5e5c22645e25d0c731e9ade47d07d1eda9",
+      "gitBlob": "e694987f9dcea4d8db6ff61936d325de1929bd3e"
     },
     {
       "path": "images/dashboard-mobile.jpg",
-      "bytes": 91030,
-      "sha256": "ba7644ce20c5e48cb8cc0d95fca9fc1f0ed5f71191f069921d96357b40d49e60",
-      "gitBlob": "443bb364d1d4e732146d21fb57b0daea74fd2b38"
+      "bytes": 90977,
+      "sha256": "306d4cc3cf0ffa5c1674bf860bf0aeb1b9bc935990576830a449adc8652c88f6",
+      "gitBlob": "c955a97e59c4b4edeb68825931b318ef5b53b78c"
     },
     {
       "path": "images/dictionary-glass-desktop.jpg",
-      "bytes": 209761,
-      "sha256": "4ee08a024487b304cefdda048d176b625ff8789d0e6d603e1335f616bf18aef0",
-      "gitBlob": "78fb0f958ba7ff89d4a35e6f8756c3ee790b62f7"
+      "bytes": 209106,
+      "sha256": "f7190efba3e8daecdbb6bcc6a2fadd5bc46b6da85aee910dd376754c7fbde3c6",
+      "gitBlob": "5351a1fbb9a0ca5065b1a5921bf671f0e5d3aa68"
     },
     {
       "path": "images/dictionary-green-desktop.jpg",
-      "bytes": 205091,
-      "sha256": "941395fa630f5631312043f868c67ece1b75df280ddbfdfa130604fb53d606f8",
-      "gitBlob": "590072c8d44e0b239e36deec81af7e4d8236d4b0"
+      "bytes": 203735,
+      "sha256": "36d1671bc8144d3981bada9d29cf97cf9a04c0056fe195af8cf2c6c4b00ddafb",
+      "gitBlob": "057e7d64bddec63c0fecd9c1487a15e496f052bc"
     },
     {
       "path": "images/dictionary-mobile.jpg",
-      "bytes": 124836,
-      "sha256": "d4f3d1bbc9f62d25b6d2a353be8b9db55a89ff77fea5d56d6f44b5e69c320ffb",
-      "gitBlob": "e48dd3fb58034e5a10386ac11b31bd5686b30741"
+      "bytes": 124004,
+      "sha256": "1de576ac0bec6d2af552529a1bbf05a3fbd95e161399bfdae2556a1c08a33924",
+      "gitBlob": "4d9d8fcd0bde61aee868666d4455007ce254f7f0"
     },
     {
       "path": "images/editor-css-lab-glass.jpg",
-      "bytes": 14337,
-      "sha256": "46d1a9aa2ce9fcc58c895899d7a6b5683556ec54ed732448686fe5c3f7175305",
-      "gitBlob": "2b45dbf2c0067bc66574f4e02ef2d78553d95cb2"
+      "bytes": 14204,
+      "sha256": "44b61bb187ad6203a69673218d7ade405cea1dc813ba1797cc4eebcb9f7fd5b6",
+      "gitBlob": "a3730d6590fa5f0837e973800f1c8bc07cc804b4"
     },
     {
       "path": "images/editor-css-lab-green.jpg",
-      "bytes": 14275,
-      "sha256": "5fc8a9f8c5a67a80dd016215c338c92881e12aa4a3e2fe4c58e29709371ee435",
-      "gitBlob": "a016f10e7667c50959f615bb5d81d5952305fc64"
+      "bytes": 14203,
+      "sha256": "d73be21644adc4c96f384e60dbeee6ae6b84ba2922acb6f2c69bc0d884a6c162",
+      "gitBlob": "6e44994c8e6c3ca07e4b9c21166cd73e1f313ec3"
     },
     {
       "path": "images/editor-dictionary-glass.jpg",
-      "bytes": 10532,
-      "sha256": "4135f720d0e71ca45552ae329c0788f80174c064571857ebd1647cd1c3511463",
-      "gitBlob": "af5620a405bb4cb70ae2ede0f9da2d254500670a"
+      "bytes": 10301,
+      "sha256": "357b0568e051a34a6566be98224c4646d9d554aec9427ed1c4db746537a3cdf6",
+      "gitBlob": "6d812fb82801dea01748c2a0029ea7711229db2d"
     },
     {
       "path": "images/editor-dictionary-green.jpg",
-      "bytes": 10393,
-      "sha256": "dd51ae9e6015eab3681dceb8bb064961465b91291978a7a2b354f7f5efe15dd5",
-      "gitBlob": "16d1dde59e6ad1be1765e3fd698e4e6830ff2824"
+      "bytes": 10301,
+      "sha256": "357b0568e051a34a6566be98224c4646d9d554aec9427ed1c4db746537a3cdf6",
+      "gitBlob": "6d812fb82801dea01748c2a0029ea7711229db2d"
     },
     {
       "path": "images/editor-explainer-glass.jpg",
-      "bytes": 14056,
-      "sha256": "6b174fbf94a2aee850d8e1d8bdf8bd034b5d87c81eaee6e55418d8ac7ae4ed58",
-      "gitBlob": "29d2170908346a77f018a3d37fc503a59cefcb0c"
+      "bytes": 13711,
+      "sha256": "3f08f0163dac48de61e8535ab10af8a189f2c9cdf9f09228ca42715573e74b1d",
+      "gitBlob": "cb4aee9197d4a7d2051f2c1403f82233b7b410e1"
     },
     {
       "path": "images/editor-explainer-green.jpg",
-      "bytes": 13845,
-      "sha256": "908797780e4dbb2abbca4dc57ede0cf9bf0a2068192880857e58fb3b1f3021a0",
-      "gitBlob": "978abdf96d6b2403a45a84a2876946035810a9b5"
+      "bytes": 13709,
+      "sha256": "05c86ddecb686e3c0a01863816368747abdfdc9b450c52af287cc8292f760608",
+      "gitBlob": "91f34e8a66c9a0e99c2b83388892abaaf8567e33"
     },
     {
       "path": "images/editor-js-lab-glass.jpg",
-      "bytes": 13885,
-      "sha256": "0f8dfadac086f1c3dccb0488e09597aba57d2b0257a99f5bcc021f31bad23bea",
-      "gitBlob": "4aecd82adf3071760ef4bb25fc4a96a563a3834b"
+      "bytes": 13849,
+      "sha256": "41843bff9c9cad2e1cd5f100eaaf624ef11e82320144514bda35fbb886c9e3c0",
+      "gitBlob": "243cb514bb3f14552ca9b0e2b1b91d99ab48d867"
     },
     {
       "path": "images/editor-js-lab-green.jpg",
-      "bytes": 13785,
-      "sha256": "059de0ab5f56bc6035fa27d13b48927b284ebe9e6fab1124328721f33ba05bdb",
-      "gitBlob": "1dfac329d3e45b916936ccb5d9bf272c5c6dddc1"
+      "bytes": 13756,
+      "sha256": "98671b4bf6ea65795ea9adb5fb0dbbc3dc849e92c92f150794e0dd3d5432709a",
+      "gitBlob": "95c7586dbf0d73dbc448ed41fca6c5e9d90fd208"
     },
     {
       "path": "images/editor-lessons-glass.jpg",
-      "bytes": 22688,
-      "sha256": "0e48585dd9c1c10882886994105fd19ab93e2ecccb31ac2858537a60fef5addb",
-      "gitBlob": "9a40236520e9d444413ae4df9036de8fda0639f4"
+      "bytes": 23060,
+      "sha256": "89bfd01e9d0ffed801de690117fdc6907922215b94b9ad48051c1a2ac6a4baf4",
+      "gitBlob": "82b945ac95eb52c9beaa4476044c9b0d6132dec9"
     },
     {
       "path": "images/editor-lessons-green.jpg",
-      "bytes": 22673,
-      "sha256": "3d5ebe413bf0d326983a4ec7ba19ed68bfe03c5eb1c58d67867838d74805f30f",
-      "gitBlob": "961e3c9304775e70732436f590007c754a309e35"
+      "bytes": 22983,
+      "sha256": "65da0b83ceaa3754be780c812ad43e38b2540c96f078125310e365855f4e42d2",
+      "gitBlob": "28b8035b0fe1f823b4207e8ed2e56f8f9c16b60e"
     },
     {
       "path": "images/explainer-glass-desktop.jpg",
-      "bytes": 239374,
-      "sha256": "a4893da249698afec86c56a29310f4ad31b04c54e0e77dfda2eaaeb3eb76d4a0",
-      "gitBlob": "8545ff52ebce356bc9fd12bb464517eaad3d6b6c"
+      "bytes": 242797,
+      "sha256": "e847eb215addb629430d886d00493936298b8e61c99aa6e13dc1d60cc102f71e",
+      "gitBlob": "8f218fa2224fcaf2faa43f215fdfb876546e7b2f"
     },
     {
       "path": "images/explainer-green-desktop.jpg",
-      "bytes": 228458,
-      "sha256": "f86a76fb6bc308cf59deacfeb59bffeb523c466da05b906796ea93e3c671075b",
-      "gitBlob": "f97d06f6dcc2d591d2925a1b293a367289e59034"
+      "bytes": 231608,
+      "sha256": "75e94d7f73c53156c84dd49c0757590bf3e6740d1caf473a2875ec88ec671246",
+      "gitBlob": "f145cd40dfba2980a220018641caeb502e2e7ba4"
     },
     {
       "path": "images/explainer-mobile.jpg",
-      "bytes": 176550,
-      "sha256": "6e3672e6c55d93ae21a100c658135f14f12cc1860a50cc1ad122cbbe97520eea",
-      "gitBlob": "dfbfd2e89ea43568a7e5ea99f0aaae434bbc4026"
+      "bytes": 177257,
+      "sha256": "0e48969dbcf471f7372e15e9acaca66809a2b9c628ab596805cad03d3847af8e",
+      "gitBlob": "9c1e6dd3fcc22adbce47e863f4dcf31e96d48932"
+    },
+    {
+      "path": "images/file-bar-css-lab-glass.jpg",
+      "bytes": 3140,
+      "sha256": "3b4641b6d70659a64041a247d51a9c8d4b38df04953662d22624e2f7798f98fd",
+      "gitBlob": "1f719d6353f2a0b01c0b757abd7a02e144d1f27b"
+    },
+    {
+      "path": "images/file-bar-css-lab-green.jpg",
+      "bytes": 3027,
+      "sha256": "fb08dad345bc0f0cb122d5855bc2e7e94298293e1bdc065c291147c49c5f50d8",
+      "gitBlob": "9f99d23d1f62b53a72f1ee8f7de679803fd48e0f"
+    },
+    {
+      "path": "images/file-bar-dictionary-glass.jpg",
+      "bytes": 4589,
+      "sha256": "1ae889fe53967b0aedc82a68b728e26233c08d5eff97db8241a06c459b266a12",
+      "gitBlob": "e08964a865cef11c8bd304f4d7b6e13c059f1637"
+    },
+    {
+      "path": "images/file-bar-dictionary-green.jpg",
+      "bytes": 4511,
+      "sha256": "d5567cf0f0e32896f436e11d8e6f2aa22f8cd5431d29ba62e7e25401660b01fa",
+      "gitBlob": "fc30e1af658d2ea6220cbe6d08aee40ada8d10be"
+    },
+    {
+      "path": "images/file-bar-explainer-glass.jpg",
+      "bytes": 4875,
+      "sha256": "ce4b3b3123e369713d59ea4b29139e2de88766f8572525acff6363fe009e4d5e",
+      "gitBlob": "2371a3f1073e27253e5f1161b9ef7944ab3a50d8"
+    },
+    {
+      "path": "images/file-bar-explainer-green.jpg",
+      "bytes": 4655,
+      "sha256": "ea05edb9d95a45079d19cf1aa5d8be401fb42731fbae2a435b2bc118373b1d6a",
+      "gitBlob": "60c67c13934224c58e57a04a3b7397152fe5e66c"
+    },
+    {
+      "path": "images/file-bar-js-lab-glass.jpg",
+      "bytes": 4377,
+      "sha256": "fe116ebb930b9db07172a50c5e01cfcc5fe65bb101f23b91410530782087223f",
+      "gitBlob": "5c151f4fc0e7aaf76396b479b0a2188ea3ea264a"
+    },
+    {
+      "path": "images/file-bar-js-lab-green.jpg",
+      "bytes": 4375,
+      "sha256": "c161a9e0d9458c547df82de9c0614b215d33746eb130d5a3ad0d0f2a8a7ec85c",
+      "gitBlob": "ece375036764c54fa10a02b259629df8bad12f52"
+    },
+    {
+      "path": "images/file-bar-lessons-glass.jpg",
+      "bytes": 4923,
+      "sha256": "63e3cabdc31f9e783d511c44b4ca93f96fdc321bd41d2a23fdd110d4548682c4",
+      "gitBlob": "6df849c80c48e97563767c2d610c8cb5d8003df0"
+    },
+    {
+      "path": "images/file-bar-lessons-green.jpg",
+      "bytes": 4917,
+      "sha256": "ca32dde04eb6307a359c26f0ee339c397bec6ca8c304e5e99dc7fe5f01f6ee90",
+      "gitBlob": "93bbc351acca4c62baff1bdcb0f56ec95e761115"
     },
     {
       "path": "images/js-lab-glass-desktop.jpg",
-      "bytes": 156875,
-      "sha256": "a4459b0fa7bb143caccc424912b2526472c60835c85fc225a8eb865a36285378",
-      "gitBlob": "d76d750ab8a93064c47e80fc29f33d2aaac08910"
+      "bytes": 157797,
+      "sha256": "b4a87a734f0044bccb04e6eaa15e9b4f0c75678d4c6eccb3b14bcc4b1a15e86a",
+      "gitBlob": "4195e29d5020f582fe3027b442a8b3417cf9b31b"
     },
     {
       "path": "images/js-lab-green-desktop.jpg",
-      "bytes": 149563,
-      "sha256": "1ff518730f38958e7492624cfe5084318a9251eea7c50761c173409eed645aaa",
-      "gitBlob": "304a6567ec75926be8be583a808a6b007bdddf1b"
+      "bytes": 150755,
+      "sha256": "c138742e5f8d7f217dffe1b2d480759cc581a9594ecf924f49a5883cc9ad70ff",
+      "gitBlob": "52fb732cfffe50191221c390ed5f9dd95fcbada4"
     },
     {
       "path": "images/js-lab-mobile.jpg",
-      "bytes": 125565,
-      "sha256": "6a81a5af187ac6d3da16894dfab82e60a575c88140cec1f2989d77114c3d7125",
-      "gitBlob": "59cc8614efda82499e88ac49b03e3b222afcf91b"
+      "bytes": 129695,
+      "sha256": "2df6aa5c457cf11a18a2fae8213cbbab5a66e1f3e4578e1817325817338a4e9a",
+      "gitBlob": "640dfc687f5fdb236927abd480e995e4901b1308"
     },
     {
       "path": "images/lessons-glass-desktop.jpg",
-      "bytes": 356938,
-      "sha256": "707b450f95f710479df39d3b3218f1acfcc0518a502fc53a732ff902c9307f05",
-      "gitBlob": "de9750c2bf94547af28b34b132d6130ddaa99e7f"
+      "bytes": 358370,
+      "sha256": "ec8c46aec4e59758dd6e69f851a4d84f6a120c5cd7ba22c349ee914c693232ed",
+      "gitBlob": "cb821c1322def272b42db42eae966a5fc6ca9562"
     },
     {
       "path": "images/lessons-green-desktop.jpg",
-      "bytes": 338663,
-      "sha256": "b3f0122795908cd53ccb86e19b6d34e2424ce81d9b7d1e254f8cfdfdf03021b1",
-      "gitBlob": "a281f4ec3fb2af6988939979306edad53d30c7dc"
+      "bytes": 341211,
+      "sha256": "ca2fa38888a661b5e060231ef662dd5df13af75bb0f6dc0cd1f6c1fe3d081976",
+      "gitBlob": "c65b6ba519cb49ad97845ccf6ead4bd03a3c8a24"
     },
     {
       "path": "images/lessons-mobile.jpg",
-      "bytes": 156500,
-      "sha256": "31990f49fb47698701362ed7069ac49298a33d6a881827f80e3e5a623ed17e02",
-      "gitBlob": "99877f606f81236252f83ed3b93f030a2e70bea8"
+      "bytes": 158030,
+      "sha256": "f817504307687060490eefdcb88e8506fa91299abb4ec6cedbb86806edd2b36b",
+      "gitBlob": "eb54fca49a09e5d6d18b36dc830f09bb0dcff565"
     },
     {
       "path": "images/live-preview-detail-glass.jpg",
-      "bytes": 22716,
-      "sha256": "cbc9e224c7877597ead347c93df56b8504a6c38eee3c4ae74fd137e9c8feb027",
-      "gitBlob": "26a418a9e81ccbfae67aefc38365a417ea312d23"
+      "bytes": 22945,
+      "sha256": "d4221e8ddaa4266e34481b2825645aac85dc039d35784973e5ec10c241f56077",
+      "gitBlob": "b0d9b979dd29dd067bed486f5fd21d369c184793"
     },
     {
       "path": "images/live-preview-detail-green.jpg",
-      "bytes": 22907,
-      "sha256": "2e83bde563433216b9babfdf9469e4b27ba0ad1f1b9c303055c1b89b97a8cc1d",
-      "gitBlob": "9f38d26372f339afa44a99b14b2d0f5fc5af0586"
+      "bytes": 23032,
+      "sha256": "37519a3bbeda389ee08b0abd458d16d73bd98d636d54629ea3d281d82a1c873a",
+      "gitBlob": "c7f6a6ccaa968bf3fded9f9aa4d417054d6bc3a8"
     },
     {
       "path": "images/live-preview-glass-desktop.jpg",
-      "bytes": 208877,
-      "sha256": "920619378f811282b6f8128975d13399d5547f7e887155a05191ad0131d89341",
-      "gitBlob": "b55a60e425c1c1116dff7c939a29abf284c6a921"
+      "bytes": 209560,
+      "sha256": "b1138ef4bd0de89a1641d528a05d1a14bedfb8fc8bd81ca44b1833a44d70c029",
+      "gitBlob": "f64867c6c906945066365ade32c495f6367fe0b0"
     },
     {
       "path": "images/live-preview-green-desktop.jpg",
-      "bytes": 203772,
-      "sha256": "a014f5e24986e3a045d60ea5ef9af319d71fc13922ebe94ba95dedae3e62d7b9",
-      "gitBlob": "cc8bf7e5542cfa5ca067f943250eaee41bfca4ac"
+      "bytes": 204190,
+      "sha256": "140a9ecdde29c57c3718ccc65ffcc662c7730c0ee98f7ea5281ae657d9566763",
+      "gitBlob": "a6be1d387d9e8e97ebec5290e0d352622007be1e"
     },
     {
       "path": "images/live-preview-mobile.jpg",
-      "bytes": 123453,
-      "sha256": "97ff861e983f2d9367192ff3ae5f3173fcb7ab1d6651f44d02b6416f8d3183ef",
-      "gitBlob": "ab998f3887fc8aebf6431d7b4a3712919c7f1989"
+      "bytes": 122273,
+      "sha256": "abdf3ca6120d6c2f89551350fe0b6f07e5ff48e6414abecd7a261439947ec7ce",
+      "gitBlob": "84642d5bdedbd1b44865b57464596feb8ec973ca"
     },
     {
       "path": "images/notes-glass-desktop.jpg",
-      "bytes": 77559,
-      "sha256": "85d93040b4f585663b5f5b98afaa5bf2e056b4061319ffb6c24e473fd463da1e",
-      "gitBlob": "aca62ec0caf04dd6085fcfa77566668d91e6ce10"
+      "bytes": 77486,
+      "sha256": "3a61fa054a074b9622f4d26ea8ef88156b7f14cca61494e01176df73c61046fb",
+      "gitBlob": "7ddf6097e7637333104f81fd31f5760108b36ac9"
     },
     {
       "path": "images/notes-green-desktop.jpg",
-      "bytes": 73499,
-      "sha256": "772d516065634bd0bb0ab7a7081c95e78aa854768706518035182e02aaca3345",
-      "gitBlob": "a5f3eb83f36342a18309a2e02b73c50121f83f55"
+      "bytes": 73405,
+      "sha256": "9e3cbd6de39dd5a0dc4f28099ba53789df60b5bfeaa4a55b5abee74c79ef8c53",
+      "gitBlob": "87c9bc43c736c3f635df3d027e505074e6f28aec"
     },
     {
       "path": "images/notes-mobile.jpg",
-      "bytes": 55230,
-      "sha256": "3cecf792265c391e1611b5fcf7dcad7f6867e75f3c6f01b973f60736b1799e7c",
-      "gitBlob": "0c71b76517ab0ca14b61c595f1b481167291afe0"
+      "bytes": 55131,
+      "sha256": "b0e6e86de8c1dbb6d7e5ebab127a312d82ff463389f44ed11b96ad756a179105",
+      "gitBlob": "48503c1f135ea1eb929c7b8535c827092d472dd9"
     },
     {
       "path": "images/projects-glass-desktop.jpg",
-      "bytes": 111952,
-      "sha256": "71cb8b15ca82d321e2fe2cd09ef33a1ffd86834870925c9483796309e0caca8c",
-      "gitBlob": "b4310cf634a207e1b041811f1fb0051401d2f395"
+      "bytes": 111411,
+      "sha256": "0528a2cf5a686bf89ea5a6ec89ab7f0a7eed5f74b52f8803bc6bbe1e66c205b7",
+      "gitBlob": "8e852a766c2b41b7119e1f9a8c897d8033259bd2"
     },
     {
       "path": "images/projects-green-desktop.jpg",
-      "bytes": 107908,
-      "sha256": "35e8ed110f29e655e5787e792e1596c92ed1a0983421bf18cda3dcd98355d4e1",
-      "gitBlob": "80ccda9df1e06656e8fe6aafb996fb46ba705ca3"
+      "bytes": 107737,
+      "sha256": "f7e2bfe89ffee25cd8d735837e4fcc861e3c2c07e93769fbe536cfe34273632d",
+      "gitBlob": "0430d9de0e425e26d6e6dde1785afb9c94148144"
     },
     {
       "path": "images/projects-mobile.jpg",
-      "bytes": 84886,
-      "sha256": "dfd8ecff36c72c5ba6be469189f145c67ecf182c03d2014c1ec1c38347c45c70",
-      "gitBlob": "ec005a92a6317022645688db816c1f098300c38c"
+      "bytes": 84461,
+      "sha256": "12dc98694e62c6a47cdbffb0a6ae9d525cee7395c25cca8cf6fd0dd0d60143ef",
+      "gitBlob": "433006f6983cf0f0b6cb56da7b7159771657660f"
     },
     {
       "path": "images/reference-video-1s.png",
@@ -381,93 +447,93 @@
     },
     {
       "path": "images/settings-glass-desktop.jpg",
-      "bytes": 135113,
-      "sha256": "fed1488734a26f2b8695bd7b56b9ad844f86ac3518dd39d678efe61678d25135",
-      "gitBlob": "89c2c742ff0453b9eb36610dd20cfadae5ca2362"
+      "bytes": 135042,
+      "sha256": "2b75ca086f78df1d1ed3771cfd1747afe7afa027757e6c686e3ecd3b1c8d7299",
+      "gitBlob": "3d17446fba08ab66dfcb774316cb14f11a57fec5"
     },
     {
       "path": "images/settings-green-desktop.jpg",
-      "bytes": 130087,
-      "sha256": "90b21076ec25a63d1c09859e5f370830705da99766627b1ac83a63d4ff3dd0c4",
-      "gitBlob": "4277056e1422246ddbab1c73ca2300d85f141fff"
+      "bytes": 129994,
+      "sha256": "0478dc95114b60b995ca46d57afa854fdd69cc146f467de1aed1b6b6366bc790",
+      "gitBlob": "e940da93dcd47baf6be2df778330abf521864545"
     },
     {
       "path": "images/settings-mobile.jpg",
-      "bytes": 105559,
-      "sha256": "b9e979a90c076aeeca0ab10f8460a6c9067c233bd2643d6e1958e1d87ecc7f85",
-      "gitBlob": "ca9e234ffea719c375aff73016e860b98859e8bc"
+      "bytes": 105449,
+      "sha256": "e80809166d8605f01b3340eed2f6a5876c1581d1f82f61260a7e7e864f655efa",
+      "gitBlob": "b515f2ab59510d7f6e2b92f3731789818e1cf2ca"
     },
     {
       "path": "images/simulator-glass-desktop.jpg",
-      "bytes": 252116,
-      "sha256": "c0057f29d8b97dac7a1a08336b5d23cc941a795019333fbed6fc8bef0a03befd",
-      "gitBlob": "8e661f3e3f64f07ace7d871e5684adbfeb7f572f"
+      "bytes": 252103,
+      "sha256": "76fbd82674c8e018be44d8510007ed28c00fbbd44110e91c221f530021a6ab7a",
+      "gitBlob": "b91bea7706f8b8b316b30d382900d7a8c6d9022b"
     },
     {
       "path": "images/simulator-green-desktop.jpg",
-      "bytes": 252123,
-      "sha256": "83d4c139edbc276808bde211aaf5837dc531ad81cbf8930f858be0f7427d782f",
-      "gitBlob": "7d08b25ce7947f3856fdcf18ac551f42d63793ad"
+      "bytes": 252084,
+      "sha256": "7c173ac27b319823ff4d93b974f51e27d6a0248b968d500d8a1cbafd67f1c92e",
+      "gitBlob": "7c2fdaf179c86e6f6b2c9c5d6811815ed4ff60b3"
     },
     {
       "path": "images/simulator-mobile.jpg",
-      "bytes": 89063,
-      "sha256": "0125389ba7186d2cc32641afa37c990d9ce6daac70c4646673abdef82a3a10d5",
-      "gitBlob": "d74fd3699f9f7fe6018045b0626377a897d95924"
+      "bytes": 89011,
+      "sha256": "b260830645d9e2237754d3e7ff7cfc1218eb2299eb2ac501f71c46d5d923dc3d",
+      "gitBlob": "8f27a0284182f43d267b5c3d837a72ff66517e28"
     },
     {
       "path": "images/theme-glass.jpg",
-      "bytes": 134579,
-      "sha256": "bcf83ac51fc22ef096de25959e30a5eb3c74d15385254814af60a755ffb57442",
-      "gitBlob": "b1953dc38656f1237af8a2309f53233c6a5f42e1"
+      "bytes": 136429,
+      "sha256": "a6e3162c9fe2117aab2e6b7e96c156fcb6b53290850f2a0923d7129c69e2dfbd",
+      "gitBlob": "fa975965c112cb162f220a302428ddf28ea2497e"
     },
     {
       "path": "images/theme-green.jpg",
-      "bytes": 129291,
-      "sha256": "c3b0049752e4439442c76efd1ed3baef076191b51b7a0ce7fe524c94fe517391",
-      "gitBlob": "dd323ad1afaa45f0af44e23de0efb1f1f93caad0"
+      "bytes": 130704,
+      "sha256": "4bf50992578f0c26c082041393850adb18e7014b94f60a49d107318e09be973b",
+      "gitBlob": "db44860e5aa7396fb4e7213bae4d79bb62c7c3ab"
     },
     {
       "path": "images/theme-light.jpg",
-      "bytes": 130760,
-      "sha256": "b586b5863c37f37f8cae2a3c9716e000de52832b0d8a766753852b69f86b878b",
-      "gitBlob": "ccdd6a56cbf8902836462b15ab0899459c7476ec"
+      "bytes": 132541,
+      "sha256": "bd78c2be354707641120ba0fe8e139c5a0d5ae58674860dd14477240354db997",
+      "gitBlob": "5fa44b93edfa397d17b9511b4a1da6f2e66cf212"
     },
     {
       "path": "images/theme-petroleum.jpg",
-      "bytes": 132504,
-      "sha256": "1992ca535325e535ffbf6b78c5c7b7992797c276370bfa9a3c4c24bc86c2bb7c",
-      "gitBlob": "92d7fafec8a39f9aa18dca2a26ff8106a33f4f49"
+      "bytes": 134347,
+      "sha256": "21c543ad00882fbd341daf4ec8154822e33a5d8fe677cedd19c0e9fa528fed5e",
+      "gitBlob": "014d345bc6e1432a478007eb148f9c55764dfa99"
     },
     {
       "path": "images/theme-purple.jpg",
-      "bytes": 131170,
-      "sha256": "23548e32c69c0547ac54fc987812837238b6fa3cff70cc7b9e83ab2a94cf5e21",
-      "gitBlob": "4788810966838df1993e4d37dc83c4ca52805a5f"
+      "bytes": 133184,
+      "sha256": "b06606090ec4488c3d4232d39ba6bac269ec4e8fbeeddccdd55f3024d926f57f",
+      "gitBlob": "10dfcab9af3c31f9d622ffb24b4c833b6e9e48b1"
     },
     {
       "path": "images/training-glass-desktop.jpg",
-      "bytes": 134798,
-      "sha256": "2636bbab3a3fea7b57abe13075a277484b56f44b44ea2016729ab0228508a3ee",
-      "gitBlob": "d3cea3e9d2c350e0a140d2b49398768d506f0daf"
+      "bytes": 134711,
+      "sha256": "33a85f060814e3a4c6cec571e37643a310e077e730f65098b999e2fb353d3bf8",
+      "gitBlob": "bac1449e9bf14bbbe412dbd4517f8219213cdad7"
     },
     {
       "path": "images/training-green-desktop.jpg",
-      "bytes": 131663,
-      "sha256": "3977e56f8fa1acfcd73d45fbaa707895948f1cd6002decdddadf2b622a063c80",
-      "gitBlob": "dbd72c7c4a7b88af37cce3fdda9cf6b3e3e2ee49"
+      "bytes": 131539,
+      "sha256": "6fcd04886e63b3553c620622d9c65b48e50314a2f323b13835929f3712c60514",
+      "gitBlob": "84b7bbf61ebf60fb90d1e1c68690f377d7475817"
     },
     {
       "path": "images/training-mobile.jpg",
-      "bytes": 113348,
-      "sha256": "facd8c7745b52c7457e458190e935a8793b357d16f953cf6be425a8b76b6f523",
-      "gitBlob": "c3c763b743cd79b2c4ec8bc2e7c09b6ec9276ea1"
+      "bytes": 113243,
+      "sha256": "2a1243810ef1cef360e47feb69e9f4f9057b7e31b38860b9b3db2a8bf173fb8c",
+      "gitBlob": "9b78ab193c79ccb745a844baeca03cede2819d29"
     },
     {
       "path": "images/video-contact.jpg",
-      "bytes": 102055,
-      "sha256": "60bf7d8a79e4f8be2c089b4414fd300041415fb617e2cfe387570adcc75367a0",
-      "gitBlob": "ae10d3e47834323c98929e27276a5524a9c10d39"
+      "bytes": 80525,
+      "sha256": "626bcc0b2d157ee617bb1d43594c5ad82048ec7772d627b31436084a53d626dd",
+      "gitBlob": "617dba791d0c2bc6701aced8fd6ac6ef5fe09a4e"
     },
     {
       "path": "verification/audio-full-first.json",
@@ -504,6 +570,42 @@
       "bytes": 6342,
       "sha256": "5002d245026d3fa2a652fbc215d4809583f72afc844f6d2593705a849426e9bb",
       "gitBlob": "639f5241db275d14b0606cb56288403e698139dd"
+    },
+    {
+      "path": "verification/editor-round-contrast.json",
+      "bytes": 5628,
+      "sha256": "ad337b3ebeb68347d11ccb7560e7dcaa02ca775aa8b2f50f6021783f3e721e5f",
+      "gitBlob": "7969589c75043fbc7d42d8ab55b99fe8305d654c"
+    },
+    {
+      "path": "verification/editor-round-css-isolated.log",
+      "bytes": 1383,
+      "sha256": "f808b84d9a5a5aa0c47f76662427d9e7037fd685506c892be11be31edc5980a3",
+      "gitBlob": "7ed580abd868e6fe94f3adefdd5a2b47b242d1dd"
+    },
+    {
+      "path": "verification/editor-round-metadata.json",
+      "bytes": 620,
+      "sha256": "1d9006023ac0d98fb7ff8a6dbb750da892f1035986b2ce5c6e1e517461bb8a67",
+      "gitBlob": "2f98cbf6c3a2c6b5adb445413fccd05512d7cc7f"
+    },
+    {
+      "path": "verification/editor-round-navigation.json",
+      "bytes": 4783,
+      "sha256": "cbd431db141036ab46f5bcfd41826c8e5a9f1507b641022839f5fbe5a8e5d459",
+      "gitBlob": "870d8896dc6e23fa7192a3b87e2b0d2b4fe724f3"
+    },
+    {
+      "path": "verification/editor-round-pages.json",
+      "bytes": 10639,
+      "sha256": "256d4ca85ab352455b09a7462d08f031f853079d63095999e18e6589d9abfd3d",
+      "gitBlob": "cec84158f594c3c01265e46177e7ae91adbdca0b"
+    },
+    {
+      "path": "verification/editor-round-regression.json",
+      "bytes": 12967,
+      "sha256": "4db06767369e919c023ed3486f61d299a84d62e94518df4e4971e93222d030d8",
+      "gitBlob": "37da7ca628de4d071596ffbf81a54724731cbb8e"
     },
     {
       "path": "verification/explainer-final.log",
@@ -615,15 +717,15 @@
     },
     {
       "path": "verification/video-timeline.json",
-      "bytes": 1181,
-      "sha256": "13855b8afdc694313de33e71152c8987d43c2d6b04ce0a687bf14dfe97be0629",
-      "gitBlob": "7a9ec6e2e49a3962713dee4516ff5d1d97708a2c"
+      "bytes": 864,
+      "sha256": "530f72a7874e74b73c7ba2f2dbfadc064ade8e1b7b01ddf0c06ec51e0d8db2d0",
+      "gitBlob": "5195ecdde33db19806a48c4dd6849df1c1b5f587"
     },
     {
       "path": "walkthrough.mp4",
-      "bytes": 8444945,
-      "sha256": "ea82f91199d5f64a576d8946b3f1e35b6950a22356cdf8e433f6976fae3ce8ff",
-      "gitBlob": "6b2599ea99a60607e14fed4b443acf553f23251f"
+      "bytes": 2635195,
+      "sha256": "8bd651cb36c1501e058e1d946cee085b42fe1ba24c997ccd0f290bf7bcea4950",
+      "gitBlob": "af9e568f095f5c4660f971f9494271eee06d0112"
     }
   ]
 }
