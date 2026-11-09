@@ -1,11 +1,17 @@
 {
-  "codeCommit": "50ef1fc52af90215cf203cdf4a213568a66a5245",
+  "codeCommit": "ead55504ae3d855a420e684f191d0007d5d8f83c",
   "files": [
     {
+      "path": "POLISH_AR.md",
+      "bytes": 5788,
+      "sha256": "23bad4236cd21a3726c53cd5b26eae34c10f69d59cd41a112c8c3b28d9d8c8a4",
+      "gitBlob": "8e7abf1e8e061817480c9128d71183fc75d6b21e"
+    },
+    {
       "path": "README.md",
-      "bytes": 18506,
-      "sha256": "8f0f32d97ef513dad3eb050d6aea6377e20ba9d8f5f8b685bf3ed562408548b6",
-      "gitBlob": "b80a561c139d03bd6a2e6d72193796facc6b91e7"
+      "bytes": 17816,
+      "sha256": "545e18d0e41d6dd52be8957ec43a5a870045ffada60f96624b73515bf097345a",
+      "gitBlob": "e3c0cbfd19115b04058f3620db759ab6ec798beb"
     },
     {
       "path": "VERIFICATION_AR.md",
@@ -15,693 +21,417 @@
     },
     {
       "path": "images/before-calendar-glass-desktop.jpg",
-      "bytes": 104393,
-      "sha256": "c97a6ea82e6eca822691b0f988d4629a73611ac2a5e4f01045a494d55a05205d",
-      "gitBlob": "957d979ae75534b12e6d648e3d3006ad04728747",
-      "dimensions": [
-        1440,
-        1140
-      ]
+      "bytes": 105133,
+      "sha256": "52e39f7b4bd0a9e7d8cb41de7391bfeb632fd3ac5ccbb2d12a2480345f3340f7",
+      "gitBlob": "249f91705b26234b27c58a717474d37185a5e8ba"
     },
     {
       "path": "images/before-calendar-green-desktop.jpg",
-      "bytes": 100937,
-      "sha256": "d94e786f025af249720891ff43604d5651eda69e9d16c10cf4b961287303b206",
-      "gitBlob": "0b62c7a4b721f8fd2367c435b51d0964674a54f2",
-      "dimensions": [
-        1440,
-        1140
-      ]
+      "bytes": 101714,
+      "sha256": "79feeff0283deadafff8427ca6e1d894db6d85cb1a29752de12dfbc773e2433c",
+      "gitBlob": "f7b06fc3e7c045372b1207fec2a2e18bfc6b5d30"
     },
     {
       "path": "images/before-css-lab-glass-desktop.jpg",
-      "bytes": 174460,
-      "sha256": "684d28921329db0bb91101bb46b0da0746c418e8eb2cddfeccae674ae58da432",
-      "gitBlob": "1e8151bb2453364320f90235c5b35598a1cbd807",
-      "dimensions": [
-        1440,
-        1539
-      ]
+      "bytes": 173730,
+      "sha256": "c90f34762deee4d16b9c659b6357d8effa53c6d98df8eb2508ac466ec9e6f08b",
+      "gitBlob": "1053c8d3dc07a86ad4a81a4b29b991475150199c"
     },
     {
       "path": "images/before-css-lab-green-desktop.jpg",
-      "bytes": 170722,
-      "sha256": "8a67cbefc44528ae50e9b5704fb0dd2343332751d4fcbe542fe315ab50637297",
-      "gitBlob": "747c883d5978342aaee2d348372b0e5aed2f04bb",
-      "dimensions": [
-        1440,
-        1539
-      ]
+      "bytes": 169169,
+      "sha256": "e3cd1b050043a14e83c57b5e15c052466571f6e0c20e9e321abbe0844539186c",
+      "gitBlob": "3833ec083a3b960b6bab1a817d406af91af61d18"
     },
     {
       "path": "images/before-dashboard-glass-desktop.jpg",
-      "bytes": 135468,
-      "sha256": "ebd658a9119a5edb7c9bf7156713bdcc862fd907b713cc8f42bb9dc9e00bd887",
-      "gitBlob": "4d6218c56b3f3e5393d4a4b50ff420a5bf02defe",
-      "dimensions": [
-        1440,
-        1391
-      ]
+      "bytes": 137479,
+      "sha256": "a9e9a9ed65579ab25fd0e20e00eab78286f6238111bec39e6056107382f41cf6",
+      "gitBlob": "2a746849362d5f88978808e531993c050701b80e"
     },
     {
       "path": "images/before-dashboard-green-desktop.jpg",
-      "bytes": 134152,
-      "sha256": "b99f7d32c182b5dddd560ee812d52e22cbee8c34799437ca4af20e7f15b9b05f",
-      "gitBlob": "0b2d73e80f6ec798e52686c471a6ad6b470832e1",
-      "dimensions": [
-        1440,
-        1391
-      ]
+      "bytes": 133880,
+      "sha256": "5cfbc35661e966caeea17970b95a2d525c6f248e01917b9048798dc71a719286",
+      "gitBlob": "e51bfa9a89390c8afd963e101401f13af49b0817"
     },
     {
       "path": "images/before-dictionary-glass-desktop.jpg",
-      "bytes": 204841,
-      "sha256": "2e4877b5876457d65caa5b6745e4bbddda6e373c36d8941d8870060f7fab1223",
-      "gitBlob": "539bcd36d9494a576a31183e91f60f62eb77beb7",
-      "dimensions": [
-        1440,
-        1609
-      ]
+      "bytes": 208537,
+      "sha256": "8ae0caa3c653c8c696009c375935c226efd63a6febeba989c52460177d79e41e",
+      "gitBlob": "5c0528599465784b0d63a6b97a040a0285e8080a"
     },
     {
       "path": "images/before-dictionary-green-desktop.jpg",
-      "bytes": 199707,
-      "sha256": "8f8d56b54947d2af3330518d697c05a13680c2b1911c2b2d45441fa7d67bda53",
-      "gitBlob": "2d56d78c2a4749878e1a4ab617ec3ca17a5b6d8b",
-      "dimensions": [
-        1440,
-        1609
-      ]
+      "bytes": 204206,
+      "sha256": "1cacc33779fe15942f095a3b786b826b6fb9f8d7ae207c203ad83860a7596144",
+      "gitBlob": "4ced3b037b7b365a94ffd4d3469c75e42f6c2d49"
     },
     {
       "path": "images/before-explainer-glass-desktop.jpg",
-      "bytes": 228558,
-      "sha256": "12d16d0a72647b4694b02f9bd9c45926dceee715af8db7367a50f4d9e4e57e25",
-      "gitBlob": "de4c76511a7dfb6037233a5ff820c1549064cb2c",
-      "dimensions": [
-        1440,
-        2376
-      ]
+      "bytes": 236966,
+      "sha256": "d39fdd58995f6869f85479380001e8d8ee4a88929270a3bdc078006050d8ea87",
+      "gitBlob": "fb6767d7eb9f5c07ab1da8926307abdac304d37f"
     },
     {
       "path": "images/before-explainer-green-desktop.jpg",
-      "bytes": 221801,
-      "sha256": "b0e8d4a8108111f24c96240321003b05bbf9d6dbbd11c87f71a01360c73982ca",
-      "gitBlob": "8ea7d9fbf2003dc7db713c258dc8739a43931fd8",
-      "dimensions": [
-        1440,
-        2376
-      ]
+      "bytes": 229153,
+      "sha256": "328ec0988eb7940c14f308764e73ba0cc015f6ec28600c1c89597561c00aeb03",
+      "gitBlob": "1951fba334e61b08a82754a23937b3616808b4e2"
     },
     {
       "path": "images/before-js-lab-glass-desktop.jpg",
-      "bytes": 152243,
-      "sha256": "14b42cec5d6614caf26d7a9e9d6729ba725646b1897700dd373751916471f4fd",
-      "gitBlob": "a0fe12f55f04ea8fc56128c5a6d85939d82a2c1e",
-      "dimensions": [
-        1440,
-        1276
-      ]
+      "bytes": 156138,
+      "sha256": "edea1bab059431d249684ae53994d413604aea6b6826d38c6bde85fe7c4baba1",
+      "gitBlob": "676d16b0bba247fca5d9de553b946db22da05999"
     },
     {
       "path": "images/before-js-lab-green-desktop.jpg",
-      "bytes": 148055,
-      "sha256": "729b71c1bf59c54fe16f96a756667544736bc065dad82d2cf2a8af30f4fd742f",
-      "gitBlob": "859924151ee048d2a1125ee5735bf1bccb6f993d",
-      "dimensions": [
-        1440,
-        1276
-      ]
+      "bytes": 151770,
+      "sha256": "841ad0f12d61bd4a71757f5399a14dbf3276457782dcf3234457446430035811",
+      "gitBlob": "8acc0cc1858e8d9c00870a825b7f426d9e840ce3"
     },
     {
       "path": "images/before-lessons-glass-desktop.jpg",
-      "bytes": 352871,
-      "sha256": "54d8041f16d1021cb8679ac8bb66451ecfe46f317ee1fb7945c84403c84cd3c3",
-      "gitBlob": "326cdf1b7a1b447d33149e3f2c77a4b8bfff113a",
-      "dimensions": [
-        1440,
-        3527
-      ]
+      "bytes": 356676,
+      "sha256": "2e52bf9ff27048acaf87ae5c3fa6d5137cd04f5743cb5f880ed0663d3e320d45",
+      "gitBlob": "72a063df34493e52b49a33198cd361facfdfd2d4"
     },
     {
       "path": "images/before-lessons-green-desktop.jpg",
-      "bytes": 342423,
-      "sha256": "c7f0e7d6fae94569fcd9ca076e1fcd43349b0c8c464386db6e8a75ac28c6ba3c",
-      "gitBlob": "6445e0009992bda7dd0418a606c02c4e0de7ae63",
-      "dimensions": [
-        1440,
-        3527
-      ]
+      "bytes": 345379,
+      "sha256": "9bd4ea0770784ae774b947f1395bb3a2a0374019003016a5b4ba02a553ea1a2e",
+      "gitBlob": "4ed1a219df1bea3d25cd83a5d0ccbf9c91bc00ea"
     },
     {
       "path": "images/calendar-glass-desktop.jpg",
-      "bytes": 105133,
-      "sha256": "52e39f7b4bd0a9e7d8cb41de7391bfeb632fd3ac5ccbb2d12a2480345f3340f7",
-      "gitBlob": "249f91705b26234b27c58a717474d37185a5e8ba",
-      "dimensions": [
-        1440,
-        1140
-      ]
+      "bytes": 105496,
+      "sha256": "c08deeb98ac1aa1979c3c7bb459cd9cc39ca86b1e26da39fe038ef6a4ea22bbe",
+      "gitBlob": "bf9f9a8b29e7bb20f11329f93e080aa58e62f90c"
     },
     {
       "path": "images/calendar-green-desktop.jpg",
-      "bytes": 101714,
-      "sha256": "79feeff0283deadafff8427ca6e1d894db6d85cb1a29752de12dfbc773e2433c",
-      "gitBlob": "f7b06fc3e7c045372b1207fec2a2e18bfc6b5d30",
-      "dimensions": [
-        1440,
-        1140
-      ]
+      "bytes": 102719,
+      "sha256": "4fc4ac663784db7cbbd58fc03b58df578ebfde1fc9fa3ad472401a59a59cfeef",
+      "gitBlob": "bb8455e02f5e20954e183ca22e102a325ffa265f"
     },
     {
       "path": "images/calendar-mobile.jpg",
-      "bytes": 85201,
-      "sha256": "16c0b173615c8de0b8d21b362533b45407b0bfa7d6263b94626cb9a5bc17681b",
-      "gitBlob": "ed98fab4887879f9bfc5851b0e8ceeadf83c0d77",
-      "dimensions": [
-        390,
-        1894
-      ]
+      "bytes": 86176,
+      "sha256": "bfa5dbc6611df5ad9d224896b781fd9e27781109a76af5db245c078bdb8a82b9",
+      "gitBlob": "15cbe0a6198f56fedf51c3dc34a42167348553c6"
     },
     {
       "path": "images/css-controls-glass.jpg",
-      "bytes": 47964,
-      "sha256": "347d1fd53c6ce31bb19826d0e9ace3beaefdf62ea8cb254c1a44ce5f657e0a5b",
-      "gitBlob": "7b6938bd3bccfe997891e739cd7be8bb9fa2b5f7",
-      "dimensions": [
-        270,
-        1093
-      ]
+      "bytes": 48258,
+      "sha256": "5393528b9aa5459e4bd2a3a6f64ec29d3f499e23b99c53a3804f1ab080fd5aef",
+      "gitBlob": "dcdbcb2d9ca8c66bc8246474bb973d36a32c7e9b"
     },
     {
       "path": "images/css-controls-green.jpg",
-      "bytes": 46192,
-      "sha256": "bc0f5fc5fef6b2a5142451c720774571e6bbccaf18f0719c7c80cdcfc71b85e5",
-      "gitBlob": "063f263233225af0df07423428b38d6030e065db",
-      "dimensions": [
-        270,
-        1093
-      ]
+      "bytes": 46811,
+      "sha256": "ff602dc24620f7f84d1c439ef213f7a42fdfb4b3bb34c16adb3086709fbb8566",
+      "gitBlob": "862d5c14a5eac2c9e5c391c0663dc2ea0825b5e7"
     },
     {
       "path": "images/css-lab-glass-desktop.jpg",
-      "bytes": 173730,
-      "sha256": "c90f34762deee4d16b9c659b6357d8effa53c6d98df8eb2508ac466ec9e6f08b",
-      "gitBlob": "1053c8d3dc07a86ad4a81a4b29b991475150199c",
-      "dimensions": [
-        1440,
-        1627
-      ]
+      "bytes": 179944,
+      "sha256": "6b394a4453b4586bfe47a283e078d94715db1cc9871226dc6072162ca55bfa50",
+      "gitBlob": "dba89214c190001193820a38325527bf7b8e822f"
     },
     {
       "path": "images/css-lab-green-desktop.jpg",
-      "bytes": 169169,
-      "sha256": "e3cd1b050043a14e83c57b5e15c052466571f6e0c20e9e321abbe0844539186c",
-      "gitBlob": "3833ec083a3b960b6bab1a817d406af91af61d18",
-      "dimensions": [
-        1440,
-        1627
-      ]
+      "bytes": 176128,
+      "sha256": "ef39f19e6977284c732d3968377397d64a5ec8a3e9fb0190a619e80d504a95b4",
+      "gitBlob": "b8248d8cd4fa80e97d78beab35528e6c12f7a007"
     },
     {
       "path": "images/css-lab-mobile.jpg",
-      "bytes": 135247,
-      "sha256": "2900b738349037847c15e8c88bcb0493f9cd667037c8158eccf74651c8064829",
-      "gitBlob": "97ed69c7f93811ad9266ebf6c0f8debb5de50be5",
-      "dimensions": [
-        390,
-        2837
-      ]
+      "bytes": 136606,
+      "sha256": "11ebe0978ef1b2623699c485eeabf20daf237f4a8ef5e719a1926b31affe9dac",
+      "gitBlob": "d0dbf8fc4ba797977e50e57749b384a41794e121"
     },
     {
       "path": "images/dashboard-glass-desktop.jpg",
-      "bytes": 137479,
-      "sha256": "a9e9a9ed65579ab25fd0e20e00eab78286f6238111bec39e6056107382f41cf6",
-      "gitBlob": "2a746849362d5f88978808e531993c050701b80e",
-      "dimensions": [
-        1440,
-        1391
-      ]
+      "bytes": 136461,
+      "sha256": "80642ab3d5c257479d425fdfaa230eb72c9fd91939eea9c108b307b8c00aefe9",
+      "gitBlob": "216fd5a92d4288881ec9eaf728e1eeb59e9d3ae4"
     },
     {
       "path": "images/dashboard-green-desktop.jpg",
-      "bytes": 133880,
-      "sha256": "5cfbc35661e966caeea17970b95a2d525c6f248e01917b9048798dc71a719286",
-      "gitBlob": "e51bfa9a89390c8afd963e101401f13af49b0817",
-      "dimensions": [
-        1440,
-        1391
-      ]
+      "bytes": 133592,
+      "sha256": "1650cf045561dd990ad9fd86b9a4d05e74de9df8117ed784cb951855da2d1c39",
+      "gitBlob": "f69a6d9fd0eb487822526fd7f9d12056ba3e7cd2"
     },
     {
       "path": "images/dashboard-mobile.jpg",
-      "bytes": 91646,
-      "sha256": "668cf981bb4510c446d5c51e23e998cd3eb3a84a5f5f89b20f1cab84686f1d39",
-      "gitBlob": "fd83cab63e4e54d52957e5c28de7657c3c22ea5e",
-      "dimensions": [
-        390,
-        2210
-      ]
+      "bytes": 91272,
+      "sha256": "7a4c73eaee3e4f9ee4dc726d04dfef8854238a53cd83253b14c376cb5041f39b",
+      "gitBlob": "2803b05f00414828422f20f7da103140454f64da"
     },
     {
       "path": "images/dictionary-glass-desktop.jpg",
-      "bytes": 208537,
-      "sha256": "8ae0caa3c653c8c696009c375935c226efd63a6febeba989c52460177d79e41e",
-      "gitBlob": "5c0528599465784b0d63a6b97a040a0285e8080a",
-      "dimensions": [
-        1440,
-        1630
-      ]
+      "bytes": 209659,
+      "sha256": "6dccd8b41392a6bb119f7d8c0a8abbaa7bd0306bc4a43bc09e0757a9d1179185",
+      "gitBlob": "528da851e4c11f0fd585a13fd3c493291aaec315"
     },
     {
       "path": "images/dictionary-green-desktop.jpg",
-      "bytes": 204206,
-      "sha256": "1cacc33779fe15942f095a3b786b826b6fb9f8d7ae207c203ad83860a7596144",
-      "gitBlob": "4ced3b037b7b365a94ffd4d3469c75e42f6c2d49",
-      "dimensions": [
-        1440,
-        1630
-      ]
+      "bytes": 205989,
+      "sha256": "0b23c8685d2fceb0299f799cba34087d9a1d153c7e2c96b9cc29e461655e6b8c",
+      "gitBlob": "cdda24b078fec51b50af75a1ec23d437986faaf1"
     },
     {
       "path": "images/dictionary-mobile.jpg",
-      "bytes": 124708,
-      "sha256": "4d911334a0e36c7c3c681ffc89aa015d3eb1fb5e0f0a922595f53a67a1e222ce",
-      "gitBlob": "1dfd6c1227bd1907511aaefaafd5a3a7fb24b92e",
-      "dimensions": [
-        390,
-        2499
-      ]
+      "bytes": 125587,
+      "sha256": "e529de896ed851a1da8326ac9368232915f94a4568bf6ba5086c0d35f554f99e",
+      "gitBlob": "460b9f3cbf883d49d6098718750798d21b5f7f0c"
     },
     {
       "path": "images/editor-css-lab-glass.jpg",
       "bytes": 14337,
-      "sha256": "5f4279d5f06b617aa5bedd59fb15eead40a35310bb60a366866f2919dc829db0",
-      "gitBlob": "05932f3b5ee92f065463bb0556f155803c78e48e",
-      "dimensions": [
-        519,
-        263
-      ]
+      "sha256": "46d1a9aa2ce9fcc58c895899d7a6b5683556ec54ed732448686fe5c3f7175305",
+      "gitBlob": "2b45dbf2c0067bc66574f4e02ef2d78553d95cb2"
     },
     {
       "path": "images/editor-css-lab-green.jpg",
       "bytes": 14290,
-      "sha256": "2fcab51b53e39f2dd33bdc8e399b0473745d7fd6f2bfeac4bc609b4ebd7a8018",
-      "gitBlob": "fa06dbc62f0f291efdc93b8eec0737bd30540606",
-      "dimensions": [
-        519,
-        263
-      ]
+      "sha256": "8e6398cf14dcdceb3878ec9baf9f7c10ddbac5c725c8c3f273b58aba8bb3f24a",
+      "gitBlob": "2a97816d76a42540a229c8b359ca09ffe5d676fd"
     },
     {
       "path": "images/editor-dictionary-glass.jpg",
       "bytes": 10532,
       "sha256": "4135f720d0e71ca45552ae329c0788f80174c064571857ebd1647cd1c3511463",
-      "gitBlob": "af5620a405bb4cb70ae2ede0f9da2d254500670a",
-      "dimensions": [
-        433,
-        371
-      ]
+      "gitBlob": "af5620a405bb4cb70ae2ede0f9da2d254500670a"
     },
     {
       "path": "images/editor-dictionary-green.jpg",
       "bytes": 10428,
       "sha256": "c872ee3882894497cee8ce8cafad228ab9bd9dd69b8e1526ed7786e1d86b37a9",
-      "gitBlob": "50f5f2511bc878a95812489fd07839d67fed2418",
-      "dimensions": [
-        433,
-        371
-      ]
+      "gitBlob": "50f5f2511bc878a95812489fd07839d67fed2418"
     },
     {
       "path": "images/editor-explainer-glass.jpg",
-      "bytes": 14843,
-      "sha256": "a98176ccdd98f6fe3e20b03eef59df2c5b72ab1a7187a8b121eeb3536440ddb6",
-      "gitBlob": "1dd5e0e951eebe5e49075de68c35c2de61a63556",
-      "dimensions": [
-        1344,
-        263
-      ]
+      "bytes": 14868,
+      "sha256": "f9dec2809023ac9f35fd2361cb84fc2b25fd9d7f7219cb64e0a6f77e4c304302",
+      "gitBlob": "17443fd0e34900462e80ea876d3cf721438e277f"
     },
     {
       "path": "images/editor-explainer-green.jpg",
-      "bytes": 14672,
-      "sha256": "5051cdd2451f1b8787969588e2ffa35f6295bbaf3d26eb6e4299598308d79882",
-      "gitBlob": "8ff47fac0f02d90e3634777cbea108b0bd5e5a07",
-      "dimensions": [
-        1344,
-        263
-      ]
+      "bytes": 14673,
+      "sha256": "f3f7a4135e6c01417c98cde4125aec7a11b4b58f9685cc09110957196ae069ba",
+      "gitBlob": "edf63941f9403322167361403ecc56420c25e933"
     },
     {
       "path": "images/editor-js-lab-glass.jpg",
       "bytes": 13885,
-      "sha256": "d4d90f3cba86289f9da29de8cecbdd92955667ca4282909f2b2c94a92f252436",
-      "gitBlob": "6e09bebd551fa2c638efb9558c93aaaf3c462ddb",
-      "dimensions": [
-        650,
-        263
-      ]
+      "sha256": "0f8dfadac086f1c3dccb0488e09597aba57d2b0257a99f5bcc021f31bad23bea",
+      "gitBlob": "4aecd82adf3071760ef4bb25fc4a96a563a3834b"
     },
     {
       "path": "images/editor-js-lab-green.jpg",
       "bytes": 13776,
-      "sha256": "a4e3322a25816ffb28f6dc52cdb6d01a964b7b2775e2db147d499996007ec7d1",
-      "gitBlob": "2d67e9f3ee80889ff66ac43bdc849daae983f474",
-      "dimensions": [
-        650,
-        263
-      ]
+      "sha256": "17d1ecc408ed29953a1f2538c304a1e233f70c054aed4ac29aca83391254e4b1",
+      "gitBlob": "13ab160e700035dced0038e216fd498c0433ff90"
     },
     {
       "path": "images/editor-lessons-glass.jpg",
       "bytes": 22688,
       "sha256": "0e48585dd9c1c10882886994105fd19ab93e2ecccb31ac2858537a60fef5addb",
-      "gitBlob": "9a40236520e9d444413ae4df9036de8fda0639f4",
-      "dimensions": [
-        986,
-        263
-      ]
+      "gitBlob": "9a40236520e9d444413ae4df9036de8fda0639f4"
     },
     {
       "path": "images/editor-lessons-green.jpg",
       "bytes": 22679,
       "sha256": "61d5182475e909d2660ff0d8ddb2fb429de372b60d6d47e143910693460ca999",
-      "gitBlob": "199f4c6fa8436b4e0a3a50d08ffe7503e87588f5",
-      "dimensions": [
-        986,
-        263
-      ]
+      "gitBlob": "199f4c6fa8436b4e0a3a50d08ffe7503e87588f5"
     },
     {
       "path": "images/explainer-glass-desktop.jpg",
-      "bytes": 236966,
-      "sha256": "d39fdd58995f6869f85479380001e8d8ee4a88929270a3bdc078006050d8ea87",
-      "gitBlob": "fb6767d7eb9f5c07ab1da8926307abdac304d37f",
-      "dimensions": [
-        1440,
-        2578
-      ]
+      "bytes": 235132,
+      "sha256": "e1a054bbc7de1bfcefe1461675809bf8bc2c903b63ba145341b8b0b81d2ab314",
+      "gitBlob": "1840e20f0659f9c3aa707a6d611b158bed31805b"
     },
     {
       "path": "images/explainer-green-desktop.jpg",
-      "bytes": 229153,
-      "sha256": "328ec0988eb7940c14f308764e73ba0cc015f6ec28600c1c89597561c00aeb03",
-      "gitBlob": "1951fba334e61b08a82754a23937b3616808b4e2",
-      "dimensions": [
-        1440,
-        2578
-      ]
+      "bytes": 228476,
+      "sha256": "996952b080c9b19e735f1b69a97d1532c25cf7c05e1930642442839c19ce4d75",
+      "gitBlob": "95bf3450381bcf5537c73dd04b34810ff0fad219"
     },
     {
       "path": "images/explainer-mobile.jpg",
-      "bytes": 180438,
-      "sha256": "6c91287edb03b6f70fa8cd33313f099d5ac59cdeddb98e0b111271feb7768fca",
-      "gitBlob": "f7cd1ac6c2c92141738302b51d148ebe643b1301",
-      "dimensions": [
-        390,
-        3319
-      ]
+      "bytes": 179331,
+      "sha256": "baa9ea9e2d440a5f8ea8c74b82800cd87f9f62dd585b1f8a3b25a9c82c5414cc",
+      "gitBlob": "088d3c191bb8bc8e5fb511f8ef4a03db12e8b638"
     },
     {
       "path": "images/js-lab-glass-desktop.jpg",
-      "bytes": 156138,
-      "sha256": "edea1bab059431d249684ae53994d413604aea6b6826d38c6bde85fe7c4baba1",
-      "gitBlob": "676d16b0bba247fca5d9de553b946db22da05999",
-      "dimensions": [
-        1440,
-        1237
-      ]
+      "bytes": 156875,
+      "sha256": "a4459b0fa7bb143caccc424912b2526472c60835c85fc225a8eb865a36285378",
+      "gitBlob": "d76d750ab8a93064c47e80fc29f33d2aaac08910"
     },
     {
       "path": "images/js-lab-green-desktop.jpg",
-      "bytes": 151770,
-      "sha256": "841ad0f12d61bd4a71757f5399a14dbf3276457782dcf3234457446430035811",
-      "gitBlob": "8acc0cc1858e8d9c00870a825b7f426d9e840ce3",
-      "dimensions": [
-        1440,
-        1237
-      ]
+      "bytes": 152315,
+      "sha256": "3c861f155b0ad288fa1bab2f8b28da8e5528b3f027bd196cb4db327a60ec034b",
+      "gitBlob": "e30eefa01926d075c7aa8ece9e3434fb29388378"
     },
     {
       "path": "images/js-lab-mobile.jpg",
-      "bytes": 128358,
-      "sha256": "89b98ff073e23b0b385c9318d73b17459a107895a1434c44d9ee93996c367593",
-      "gitBlob": "bc307e71fde3eb0db4e85f040f87278fa9a3d59b",
-      "dimensions": [
-        390,
-        2128
-      ]
+      "bytes": 127707,
+      "sha256": "469d071a63f1f991826458d80ae209dc34949194fed39eb848cfefca5fda2957",
+      "gitBlob": "2fa0a8e0c62f80ad00911b53038a37e9f442ad40"
     },
     {
       "path": "images/lessons-glass-desktop.jpg",
-      "bytes": 356676,
-      "sha256": "2e52bf9ff27048acaf87ae5c3fa6d5137cd04f5743cb5f880ed0663d3e320d45",
-      "gitBlob": "72a063df34493e52b49a33198cd361facfdfd2d4",
-      "dimensions": [
-        1440,
-        3527
-      ]
+      "bytes": 356938,
+      "sha256": "707b450f95f710479df39d3b3218f1acfcc0518a502fc53a732ff902c9307f05",
+      "gitBlob": "de9750c2bf94547af28b34b132d6130ddaa99e7f"
     },
     {
       "path": "images/lessons-green-desktop.jpg",
-      "bytes": 345379,
-      "sha256": "9bd4ea0770784ae774b947f1395bb3a2a0374019003016a5b4ba02a553ea1a2e",
-      "gitBlob": "4ed1a219df1bea3d25cd83a5d0ccbf9c91bc00ea",
-      "dimensions": [
-        1440,
-        3527
-      ]
+      "bytes": 346522,
+      "sha256": "83b4a1d5ae5627648af9866357b3645c27255a253b192f778aa3d349a18e695f",
+      "gitBlob": "341fd257081ee450a7deb854b5fed0c3f4e36ca9"
     },
     {
       "path": "images/lessons-mobile.jpg",
-      "bytes": 158880,
-      "sha256": "e75dc730a5befd227bdb53e87c9bde80faea34fc49141498e1e6157d98a4a778",
-      "gitBlob": "967a4fd7e35c730ced09fb94b0c8edd32bd290cb",
-      "dimensions": [
-        390,
-        2855
-      ]
+      "bytes": 159729,
+      "sha256": "4df90486fba0b930542c6e2480de60db08c1511e05f2f011d0b1f009d4f5ddfb",
+      "gitBlob": "a021bc07997fe97bff72721a27a9589860b13e4d"
     },
     {
       "path": "images/live-preview-detail-glass.jpg",
       "bytes": 22716,
       "sha256": "cbc9e224c7877597ead347c93df56b8504a6c38eee3c4ae74fd137e9c8feb027",
-      "gitBlob": "26a418a9e81ccbfae67aefc38365a417ea312d23",
-      "dimensions": [
-        419,
-        499
-      ]
+      "gitBlob": "26a418a9e81ccbfae67aefc38365a417ea312d23"
     },
     {
       "path": "images/live-preview-detail-green.jpg",
-      "bytes": 22901,
-      "sha256": "ee19de72913db49d9a7f5004783b52ee467f1eb255051d32fe6f6fec0aec8384",
-      "gitBlob": "b9565d18ff3c72e08d4e1f346b1ad62ae9a06576",
-      "dimensions": [
-        419,
-        499
-      ]
+      "bytes": 22910,
+      "sha256": "b4fed124230b33fcb5ef32c6c03f19758ff98bc99da57768b7214f8978154771",
+      "gitBlob": "ccd5475ef1da9032879fd60e3006445469ec95f3"
     },
     {
       "path": "images/live-preview-glass-desktop.jpg",
-      "bytes": 207307,
-      "sha256": "82a307579d8e984b05096fb67c539421f5b388a4482140b08d9d302fbefea1fe",
-      "gitBlob": "f3c66773e7c0a0d9eea9a299f90ab4e04bb2e7b9",
-      "dimensions": [
-        1440,
-        1607
-      ]
+      "bytes": 208358,
+      "sha256": "c18de3e77483d72a8ebe10d771a5c865df82ce5e768e49c93d6fe85a0f3055db",
+      "gitBlob": "f3e1a6d28aec22d52364beaeabe8773b141f0a87"
     },
     {
       "path": "images/live-preview-green-desktop.jpg",
-      "bytes": 202676,
-      "sha256": "f429f64f098f82b82ac3a66f98bcc28b90d3dc96eba14beccbd08da8ed98be6d",
-      "gitBlob": "a9e275b98d3bb2e2684f184ab7996a8796ed9783",
-      "dimensions": [
-        1440,
-        1607
-      ]
+      "bytes": 204420,
+      "sha256": "6990995995eb89ac8bcacb3157af4ac434290e52f2be7be2c6811a95038cc4f6",
+      "gitBlob": "ee44114d9fa71ef6ae8b60aa146e9b7270117a09"
     },
     {
       "path": "images/live-preview-mobile.jpg",
-      "bytes": 122858,
-      "sha256": "a588428c06ee9a0abca7bf7e676581048c03364a23ae3c38f23fbd75929a4029",
-      "gitBlob": "9c24a45ba4544a5f09c9c5d3bf1ed4b956fcd354",
-      "dimensions": [
-        390,
-        2477
-      ]
+      "bytes": 123772,
+      "sha256": "529cb909a35ecaa44a6d089a194b9d8e0eeb5fd60293d4d69c3a8cac5f70cb55",
+      "gitBlob": "6cd5736880d9cd71207ffd8f57fb6e4af9ae810f"
     },
     {
       "path": "images/notes-glass-desktop.jpg",
-      "bytes": 77107,
-      "sha256": "b66e56065897032bd184b3015d7dba7564cd298a0d55db347b496823ec6b2a01",
-      "gitBlob": "1d4c391203b5d56d9a223b02ffd33ed979febe95",
-      "dimensions": [
-        1440,
-        1105
-      ]
+      "bytes": 77479,
+      "sha256": "428e313e6bd7e071628124056fa31b4ac19fe44679319f911bc53063777ba703",
+      "gitBlob": "95d0267544b91211f70055a042c88e739fcc9645"
     },
     {
       "path": "images/notes-green-desktop.jpg",
-      "bytes": 73941,
-      "sha256": "d106ac3c5c57c01ce8f9eff6e49b6b95959d93633ba8e6960cf022eee279ce58",
-      "gitBlob": "6ed07383b923b15ef6af9eaef2e0932a8737c993",
-      "dimensions": [
-        1440,
-        1105
-      ]
+      "bytes": 74737,
+      "sha256": "df65397ce08977dfd5ab2a6b6e8c9ed3d329e61d56a89c119df556b269197c54",
+      "gitBlob": "4a910acfa4243e25325ef2263c273e49c7563220"
     },
     {
       "path": "images/notes-mobile.jpg",
-      "bytes": 55185,
-      "sha256": "4b2f93a014f987d04b9cef7bb551a8109cea166a367dc3a23a5aedcdc6db97f3",
-      "gitBlob": "fe1b54f203076193c969b3b71254517c99ca244e",
-      "dimensions": [
-        390,
-        1376
-      ]
+      "bytes": 55977,
+      "sha256": "511bf59d8860935018c38d2a40aeb499d0f8e7e417a8f581414cc0e108d2c7de",
+      "gitBlob": "fd915d0652f308fe6e454abf37d959f66a66b6df"
     },
     {
       "path": "images/projects-glass-desktop.jpg",
-      "bytes": 111534,
-      "sha256": "688eaa10b23d771744725b0f4d2bda7c321990272baa1b7f068433f8426db236",
-      "gitBlob": "92f8d61ab26120114f50258f7de1ece119d8a73c",
-      "dimensions": [
-        1440,
-        1551
-      ]
+      "bytes": 111865,
+      "sha256": "735030704f463d4936c281aae29f5ba93b5a9edc1023e935552f53ef9b2cf7f7",
+      "gitBlob": "5721aa749452de8a2e42f60692bf41a1588e6ebf"
     },
     {
       "path": "images/projects-green-desktop.jpg",
-      "bytes": 108356,
-      "sha256": "678ce48aaf41f63c4b9ae7436296632fb2f077e877ba226c7615b3f85fa36324",
-      "gitBlob": "f50adb923c1a709390580d949294c064aa38a2c0",
-      "dimensions": [
-        1440,
-        1551
-      ]
+      "bytes": 109345,
+      "sha256": "34b8fac8facb17534d6c97a8fd658c640c75eb30f269f47c861ef941374b2a71",
+      "gitBlob": "7d42e8bac39929fe5f5e8de9ded639c80bc9a0e4"
     },
     {
       "path": "images/projects-mobile.jpg",
-      "bytes": 85145,
-      "sha256": "37ac5842f65be200816a832a581d8cf1cb8aaab369bdaaca1aeeac9bc599110a",
-      "gitBlob": "057060717d29a399b3ebb8497d256fe712b23fef",
-      "dimensions": [
-        390,
-        2232
-      ]
+      "bytes": 86111,
+      "sha256": "e670560be37bed94c712cf5008815cea4de0b49edf7807891ce721970fefd139",
+      "gitBlob": "5665b96b21a19e5050b6acf3531c3b3f875d15e5"
     },
     {
       "path": "images/reference-video-1s.png",
       "bytes": 161277,
       "sha256": "a4d912c76b0aaf9f24550194b4afbe156e4c4619c5b8b7789852caffd694079c",
-      "gitBlob": "d2a9e083a71c7dd81488ea69daebaca0a3035990",
-      "dimensions": [
-        384,
-        683
-      ]
+      "gitBlob": "d2a9e083a71c7dd81488ea69daebaca0a3035990"
     },
     {
       "path": "images/settings-glass-desktop.jpg",
       "bytes": 135113,
       "sha256": "fed1488734a26f2b8695bd7b56b9ad844f86ac3518dd39d678efe61678d25135",
-      "gitBlob": "89c2c742ff0453b9eb36610dd20cfadae5ca2362",
-      "dimensions": [
-        1440,
-        1446
-      ]
+      "gitBlob": "89c2c742ff0453b9eb36610dd20cfadae5ca2362"
     },
     {
       "path": "images/settings-green-desktop.jpg",
-      "bytes": 130546,
-      "sha256": "c30889ffd56b654f6f5234eb85d1d7d74154b7b85291be820a83f9fa32b53dbb",
-      "gitBlob": "627487a50b616361dc39bde1d5c1efd3fd76a300",
-      "dimensions": [
-        1440,
-        1446
-      ]
+      "bytes": 131134,
+      "sha256": "1e898bf705f9227327e1f11e8816b87e2e4cb8b5ecfda7803915ba0df7946947",
+      "gitBlob": "504723b9848ea71ded8b386bfb77807c70e5de8b"
     },
     {
       "path": "images/settings-mobile.jpg",
-      "bytes": 105522,
-      "sha256": "a8592258e6cc13e6968387add7f23667b1dad7273369fccd53a3c2defda959ef",
-      "gitBlob": "f89894e24b2bdc852895f7f4a4dc164722b8c34b",
-      "dimensions": [
-        390,
-        2376
-      ]
+      "bytes": 106151,
+      "sha256": "0114a4c8468d5396cd65c2fb47d3e733ffe0a0eff21c2fbc840f2cf011cc45ca",
+      "gitBlob": "8637e0db0a1929dfc8307af926724839386ef368"
     },
     {
       "path": "images/simulator-glass-desktop.jpg",
-      "bytes": 252084,
-      "sha256": "0a8d9d83d654071953f3c7ae4c9a2e48739049d298321218e90f82147e81f837",
-      "gitBlob": "00d1f38450f53cd5c2e2c28cca63babb3eec0294",
-      "dimensions": [
-        1440,
-        1223
-      ]
+      "bytes": 252134,
+      "sha256": "62bf68a6aa42a490768f59951c12409c4059e7ca7a8a7dc5fcfe12e7ef095fe2",
+      "gitBlob": "885f16d0b423627793f2384229bccaea32ae5569"
     },
     {
       "path": "images/simulator-green-desktop.jpg",
-      "bytes": 252087,
-      "sha256": "218433bee748d6e29b74ceaf5e5ec83166903cd592668d284f175e2c8422b13f",
-      "gitBlob": "bd2085476f33676d72bfb6cbce4c048ab8e01ac7",
-      "dimensions": [
-        1440,
-        1223
-      ]
+      "bytes": 252121,
+      "sha256": "ed07fb17b3e8f0ee7c2b8f378331202425e818160b5cfd97bdee0930ecfd57e0",
+      "gitBlob": "0bacab92ef6122039545e57d0cf6ce5634820ea6"
     },
     {
       "path": "images/simulator-mobile.jpg",
-      "bytes": 89007,
-      "sha256": "5082cb80ff4ac57ad95a649350251a25f405ddd08042cb5eb8cdf6c9210ebb86",
-      "gitBlob": "a1a19f82d8d7e03f9723086270642f43d29f4f2e",
-      "dimensions": [
-        390,
-        1279
-      ]
+      "bytes": 89056,
+      "sha256": "678b17139123c71f6ee9c07dd04bfe0c741e29c0dff8bb559cc26fd14f47d9c2",
+      "gitBlob": "7ab8c8d79df22249cdd5efd4692b0717dd019368"
     },
     {
       "path": "images/training-glass-desktop.jpg",
       "bytes": 134670,
       "sha256": "fdd1999ffa5d19addce92adc4eb44d1228a0a29007d71b00aee44ee023e8a7e9",
-      "gitBlob": "163d7eb6fe8df63e1659b63dbcef8c80fe05ca20",
-      "dimensions": [
-        1440,
-        1187
-      ]
+      "gitBlob": "163d7eb6fe8df63e1659b63dbcef8c80fe05ca20"
     },
     {
       "path": "images/training-green-desktop.jpg",
-      "bytes": 131439,
-      "sha256": "580b89932a5b3ba414831a92e671de94da56440422f3502151bdae4c57aa1cd0",
-      "gitBlob": "4848ead94f0dd8c9ba8f774b9b4ea13bb24fd582",
-      "dimensions": [
-        1440,
-        1187
-      ]
+      "bytes": 133006,
+      "sha256": "a400b1125e2176188cfff3578e3ca7668b902e10e0ec9e766957560713b04d00",
+      "gitBlob": "813b3f1b6de8e79cadb955c2ff3db9b865a51dd7"
     },
     {
       "path": "images/training-mobile.jpg",
-      "bytes": 112836,
-      "sha256": "c074e4e73a4a920ed0c83584e032b37fc913dc64aba4fe1678d46438df5c9fe3",
-      "gitBlob": "039b6833e0d3d154dac055ff6b44b04acf689f4e",
-      "dimensions": [
-        390,
-        2227
-      ]
+      "bytes": 114366,
+      "sha256": "9e32fd52f6edd028d80ca26bd6177a0c12f2929483bbf4edcdf171a32661afb0",
+      "gitBlob": "0c48c0f4bd1e9d138c59b6ab4681edf5b1fbb43e"
     },
     {
       "path": "images/video-contact.jpg",
-      "bytes": 104764,
-      "sha256": "1ae2358305cb72395ce73103713d96b4692dcc91b928bac783ff95d94a7d43d3",
-      "gitBlob": "1816fa68a61185b903690485c186ec9a447817fd",
-      "dimensions": [
-        1728,
-        900
-      ]
+      "bytes": 109802,
+      "sha256": "b33b8deb1c839ae56fe2f603942b05908bd6e4a34d65f5bc80ff54ae39327153",
+      "gitBlob": "ddc88f29b9e1f6421e63bd8a99e306d421aa0b8b"
     },
     {
       "path": "verification/audio-full-first.json",
@@ -758,6 +488,42 @@
       "gitBlob": "a32247ac2708bb9760f7103a1957a721a8d39cce"
     },
     {
+      "path": "verification/polish-css-isolated.log",
+      "bytes": 1383,
+      "sha256": "f808b84d9a5a5aa0c47f76662427d9e7037fd685506c892be11be31edc5980a3",
+      "gitBlob": "7ed580abd868e6fe94f3adefdd5a2b47b242d1dd"
+    },
+    {
+      "path": "verification/polish-navigation.json",
+      "bytes": 4783,
+      "sha256": "e3ad208f25c1eeb3623f4e2fd7e9c83b2c083390ab71ca8d8c86ed7a2e1b64bf",
+      "gitBlob": "99aeee95fc386d8ec6184b4ef24d90400fa81bbf"
+    },
+    {
+      "path": "verification/polish-pages.json",
+      "bytes": 10639,
+      "sha256": "6c4f2ef7895c062ca48e65a8ce5a4e0f49d4cf216308447b63cf57a0007d61bd",
+      "gitBlob": "a32247ac2708bb9760f7103a1957a721a8d39cce"
+    },
+    {
+      "path": "verification/polish-regression.json",
+      "bytes": 12804,
+      "sha256": "7d14ad3f25110f06412a1ea788b839a49e02931888e20d291aa253acd320cf62",
+      "gitBlob": "378a1983e277fe694eb7c4c9690fadffb929ca93"
+    },
+    {
+      "path": "verification/polish-simulator-first.json",
+      "bytes": 1089,
+      "sha256": "c99c4b255a7e67f412c5dcaaad99ba4107e054b8b2f129361c59393e1eeffb3c",
+      "gitBlob": "1b3ea827a89f6d09dee5fe7dc93924b6b9a9c19e"
+    },
+    {
+      "path": "verification/polish-simulator-isolated.json",
+      "bytes": 1088,
+      "sha256": "08e624d9a2509cd86b3b3d798433d74846c8dd7c931db95f42449bcc1d0deee8",
+      "gitBlob": "f960d4f046a7a6d0a3dced561dbbdea7060a90be"
+    },
+    {
       "path": "verification/regression-first-original.json",
       "bytes": 13013,
       "sha256": "4a026e36d3577b1b2825511212d4de9bd0eb9c4f2e339b063288c56511d057c6",
@@ -777,15 +543,15 @@
     },
     {
       "path": "verification/video-timeline.json",
-      "bytes": 1183,
-      "sha256": "bd16b8a9ce375efd0848e3e510418af3e7f1236e212db56ef016f8f5cc4280f5",
-      "gitBlob": "19691fdab1f5957be7df5370dc6cf2e4adcb6d95"
+      "bytes": 1179,
+      "sha256": "4193ce875873afc61ec38dc847e87b15eea9ddaf82885ac9fa82aa1ad1649c9d",
+      "gitBlob": "171ab5766dbb3aca843048f9c43a080af481c0a4"
     },
     {
       "path": "walkthrough.mp4",
-      "bytes": 7667630,
-      "sha256": "ca66c108918ba2a4addde0645684b22eb2842ed3bfbbbbbfd7b5c413bca544db",
-      "gitBlob": "686a3899d13db80ae87ecb797293f521b8df6816"
+      "bytes": 8411400,
+      "sha256": "8ca565e747543cca144146bdc27014e1a7a12124f0f3a26e2ce5910579c790ff",
+      "gitBlob": "af9880cebe77ed31ae0f16201eaa929d64245b99"
     }
   ]
 }

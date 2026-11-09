@@ -1,0 +1,34 @@
+{
+  "passed": 3,
+  "total": 4,
+  "results": [
+    {
+      "scene": "simulator-green-1440",
+      "passed": false,
+      "before": "1ecd1bcbb1c30f077c6d42bc8c162ba07bd32dae287a0156fb867465326ff028",
+      "after": "280213f31f1e76220fa8aa0d97fc61452f29f000384c88ea3450ee0ce605a58e",
+      "errors": []
+    },
+    {
+      "scene": "simulator-green-390",
+      "passed": true,
+      "before": "4a2bd7e3c24e2b3e6752e1ddd2cda4fc6ce652b37e02083e89d640d0971c6650",
+      "after": "4a2bd7e3c24e2b3e6752e1ddd2cda4fc6ce652b37e02083e89d640d0971c6650",
+      "errors": []
+    },
+    {
+      "scene": "simulator-glass-1440",
+      "passed": true,
+      "before": "1ecd1bcbb1c30f077c6d42bc8c162ba07bd32dae287a0156fb867465326ff028",
+      "after": "1ecd1bcbb1c30f077c6d42bc8c162ba07bd32dae287a0156fb867465326ff028",
+      "errors": []
+    },
+    {
+      "scene": "simulator-glass-390",
+      "passed": true,
+      "before": "4a2bd7e3c24e2b3e6752e1ddd2cda4fc6ce652b37e02083e89d640d0971c6650",
+      "after": "4a2bd7e3c24e2b3e6752e1ddd2cda4fc6ce652b37e02083e89d640d0971c6650",
+      "errors": []
+    }
+  ]
+}
