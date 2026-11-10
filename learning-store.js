@@ -2,9 +2,9 @@
 (function(root){
 'use strict';
 const KEY='vlex_personal_learning_v1',LIMIT=2*1024*1024;
-const sections=['tasks','events','notes','projects','course','preferences','cssLab','jsLab','explainer','guidedArrow'];
+const sections=['tasks','events','notes','projects','course','preferences','cssLab','jsLab','explainer','guidedArrow','navigation'];
 const clone=x=>JSON.parse(JSON.stringify(x));
-const fresh=()=>({version:1,tasks:[],events:[],notes:[],projects:[],course:{completed:[],answers:{},reviews:{},drafts:{}},preferences:{theme:'petroleum'},cssLab:{},jsLab:{},explainer:{},guidedArrow:{}});
+const fresh=()=>({version:1,tasks:[],events:[],notes:[],projects:[],course:{completed:[],answers:{},reviews:{},drafts:{}},preferences:{theme:'petroleum'},cssLab:{},jsLab:{},explainer:{},guidedArrow:{},navigation:{}});
 const record=v=>v!==null&&typeof v==='object'&&!Array.isArray(v)&&(Object.getPrototypeOf(v)===Object.prototype||Object.getPrototypeOf(v)===null);
 const own=(v,key)=>Object.hasOwn(v,key);
 function fail(label){throw new Error('بيانات '+label+' غير صالحة')}
@@ -30,6 +30,7 @@ function organizer(section,items){
 }
 function answer(v){if(!record(v)||!Number.isInteger(v.choice)||v.choice<0||v.choice>2||typeof v.correct!=='boolean'||!Number.isSafeInteger(v.attempts)||v.attempts<1||!timestamp(v.lastAt))fail('إجابة الدرس')}
 function course(v){
+ if(own(v,'ui')){const u=v.ui;if(!record(u)||Object.keys(u).some(k=>!['topic','level','mode'].includes(k))||!['all','html','css','js','vue'].includes(u.topic)||!['all','beginner','intermediate','advanced'].includes(u.level)||!['lessons','project','review'].includes(u.mode))fail('مرشحات الدروس');}
  if(own(v,'selected'))string(v.selected,'الدرس المختار',160,false);
  if(own(v,'completed'))list(v.completed,'الدروس المكتملة',2000,id=>string(id,'معرّف درس',160,false));
  if(own(v,'answers'))map(v.answers,'الإجابات',answer);
@@ -66,6 +67,7 @@ function validate(input){
  let nodes=0;function scan(v,depth){if(++nodes>60000||depth>25)throw new Error('بنية البيانات معقدة جدًا');if(typeof v==='number'&&!Number.isFinite(v))throw new Error('رقم غير صالح');if(v!==null&&!['string','boolean','number','object'].includes(typeof v))fail('نوع JSON');if(v&&typeof v==='object'){if(!Array.isArray(v)&&!record(v))fail('كائن JSON');for(const k of Object.keys(v)){if(['__proto__','prototype','constructor'].includes(k))throw new Error('مفتاح غير آمن');scan(v[k],depth+1)}}}scan(input,0);
  const text=JSON.stringify(input);if(new TextEncoder().encode(text).length>LIMIT)throw new Error('البيانات أكبر من 2 MiB؛ لم يُقص أي نص');
  const out=fresh();for(const s of sections)if(own(input,s)){const v=input[s];if(['tasks','events','notes','projects'].includes(s))organizer(s,v);else if(!record(v))fail('قسم '+s);out[s]=clone(v)}
+ const nav=out.navigation;if(Object.keys(nav).some(k=>!['workspace','section'].includes(k))||own(nav,'workspace')&&!['home','lexicon','course','arrow','cssLab','jsLab','explain','settings','foundation'].includes(nav.workspace)||own(nav,'section')&&!['projects','kanban','notes','calendar'].includes(nav.section))fail('موضع الاستكمال');
  guidedArrow(out.guidedArrow||{});
  course(out.course);out.course={...fresh().course,...out.course};
  if(own(out.preferences,'theme')&&!['petroleum','light','purple','green','glass'].includes(out.preferences.theme))throw new Error('الثيم غير معروف');
@@ -83,23 +85,23 @@ function validate(input){
  return out;
 }
 function createStore(storage){
- let state=fresh(),mode='ready',message='',unread=false,sequence=0;const listeners=new Set();
+ let state=fresh(),mode='ready',message='',unread=false,sequence=0,verified=false;const listeners=new Set();
  const notify=()=>{for(const fn of [...listeners]){try{fn(clone(state))}catch(_){}}};
  function backup(raw){if(raw===null)return true;let k;try{do{k='vlex_learning_recovery_'+Date.now()+'_'+(++sequence)}while(storage.getItem(k)!==null);storage.setItem(k,raw);return storage.getItem(k)===raw}catch(_){return false}}
- try{const raw=storage.getItem(KEY);if(raw!==null)try{state=validate(JSON.parse(raw))}catch(_){const saved=backup(raw);mode='protected';message=saved?'السجل غير متوافق؛ حُفظ أصله للاسترجاع. التعديلات مؤقتة حتى تستورد نسخة سليمة.':'تعذر حفظ نسخة استرجاع؛ الأصل محفوظ دون تغيير والتعديلات مؤقتة.'}}catch(_){mode='protected';unread=true;message='تعذرت قراءة التخزين؛ لن نستبدل السجل الأصلي. صدّر التعديلات ثم أعد فتح الصفحة.'}
+ try{const raw=storage.getItem(KEY);if(raw!==null)try{state=validate(JSON.parse(raw));verified=true}catch(_){const saved=backup(raw);mode='protected';message=saved?'السجل غير متوافق؛ حُفظ أصله للاسترجاع. التعديلات مؤقتة حتى تستورد نسخة سليمة.':'تعذر حفظ نسخة استرجاع؛ الأصل محفوظ دون تغيير والتعديلات مؤقتة.'}}catch(_){mode='protected';unread=true;message='تعذرت قراءة التخزين؛ لن نستبدل السجل الأصلي. صدّر التعديلات ثم أعد فتح الصفحة.'}
  function setSection(section,value){
-  if(!sections.includes(section))throw new Error('قسم غير معروف');let next,base=state,copy;
+  if(!sections.includes(section))throw new Error('قسم غير معروف');let next,base=state,copy,persistedRaw=null;
   // A rejected form/import payload is not evidence that durable storage is
   // corrupt. Keep the prior state and saving mode intact so a corrected edit
   // can be saved normally on the next attempt.
   try{copy=clone(value);validate({...state,[section]:copy})}catch(e){message='رُفض التغيير دون استبدال البيانات: '+e.message;notify();return false}
-  if(mode==='ready')try{const raw=storage.getItem(KEY);if(raw!==null)base=validate(JSON.parse(raw))}catch(e){mode='protected';message='تعذر قراءة السجل الأصلي: '+e.message;state=validate({...state,[section]:copy});notify();return false}
+  if(mode==='ready')try{const raw=storage.getItem(KEY);persistedRaw=raw;if(raw!==null)base=validate(JSON.parse(raw))}catch(e){mode='protected';message='تعذر قراءة السجل الأصلي: '+e.message;state=validate({...state,[section]:copy});notify();return false}
   try{next=validate({...base,[section]:copy})}catch(e){message='رُفض التغيير دون استبدال البيانات: '+e.message;notify();return false}
-  state=next;if(mode==='protected'){notify();return false}try{const text=JSON.stringify(state);storage.setItem(KEY,text);if(storage.getItem(KEY)!==text)throw new Error('فشل التحقق من الكتابة');mode='ready';message=''}catch(_){mode='memory';message='تعذر الحفظ الدائم؛ التعديلات في هذه الجلسة. صدّرها قبل الإغلاق.'}notify();return mode==='ready'
+  state=next;if(mode==='protected'){notify();return false}try{const text=JSON.stringify(state);if(mode!=='ready'||text!==persistedRaw)storage.setItem(KEY,text);if(storage.getItem(KEY)!==text)throw new Error('فشل التحقق من الكتابة');mode='ready';verified=true;message=''}catch(_){mode='memory';message='تعذر الحفظ الدائم؛ التعديلات في هذه الجلسة. صدّرها قبل الإغلاق.'}notify();return mode==='ready'
  }
  function parseBackup(text){if(typeof text!=='string'||new TextEncoder().encode(text).length>LIMIT)throw new Error('ملف غير صالح أو أكبر من 2 MiB');let data;try{data=JSON.parse(text)}catch(_){throw new Error('صيغة JSON غير صالحة')}if(data.app!=='V Lex Pro Learning'||data.version!==1||Object.keys(data).some(k=>!['app','version','exportedAt','state'].includes(k)))throw new Error('هذه ليست نسخة بيانات التعلّم');return validate(data.state)}
- function importData(text){const next=parseBackup(text);if(unread)throw new Error('أعد فتح الصفحة أولًا لاستعادة قراءة التخزين');let original;try{original=storage.getItem(KEY)}catch(_){unread=true;mode='protected';throw new Error('تعذرت قراءة الأصل؛ لم يتم الاستيراد')}if(!backup(original))throw new Error('تعذر حفظ الأصل قبل الاستيراد؛ لم تتغير البيانات');const serialized=JSON.stringify(next);try{storage.setItem(KEY,serialized);if(storage.getItem(KEY)!==serialized)throw new Error('فشل التحقق من الكتابة')}catch(e){try{if(original===null)storage.removeItem(KEY);else storage.setItem(KEY,original)}catch(_){}throw new Error('تعذر الحفظ؛ بقيت الحالة الحالية والأصل في نسخة الاسترجاع')}state=next;mode='ready';message='';notify();return true}
- return {key:KEY,read:()=>clone(state),getSection:(s,fallback)=>Object.hasOwn(state,s)?clone(state[s]):clone(fallback),setSection,subscribe:fn=>{listeners.add(fn);return()=>listeners.delete(fn)},status:()=>({mode,message,persistent:mode==='ready'}),exportData:()=>JSON.stringify({app:'V Lex Pro Learning',version:1,exportedAt:new Date().toISOString(),state}),parseBackup,importData,reload:()=>{if(mode!=='ready')return;try{const raw=storage.getItem(KEY);if(raw!==null){state=validate(JSON.parse(raw));notify()}}catch(_){mode='protected';message='تغير التخزين أو تعذرت قراءته؛ صدّر تعديلاتك قبل الإغلاق.';notify()}}};
+ function importData(text){const next=parseBackup(text);if(unread)throw new Error('أعد فتح الصفحة أولًا لاستعادة قراءة التخزين');let original;try{original=storage.getItem(KEY)}catch(_){unread=true;mode='protected';throw new Error('تعذرت قراءة الأصل؛ لم يتم الاستيراد')}if(!backup(original))throw new Error('تعذر حفظ الأصل قبل الاستيراد؛ لم تتغير البيانات');const serialized=JSON.stringify(next);try{storage.setItem(KEY,serialized);if(storage.getItem(KEY)!==serialized)throw new Error('فشل التحقق من الكتابة')}catch(e){try{if(original===null)storage.removeItem(KEY);else storage.setItem(KEY,original)}catch(_){}throw new Error('تعذر الحفظ؛ بقيت الحالة الحالية والأصل في نسخة الاسترجاع')}state=next;mode='ready';verified=true;message='';notify();return true}
+ return {key:KEY,read:()=>clone(state),getSection:(s,fallback)=>Object.hasOwn(state,s)?clone(state[s]):clone(fallback),setSection,subscribe:fn=>{listeners.add(fn);return()=>listeners.delete(fn)},status:()=>({mode,message,verified,persistent:mode==='ready'}),exportData:()=>JSON.stringify({app:'V Lex Pro Learning',version:1,exportedAt:new Date().toISOString(),state}),parseBackup,importData,reload:()=>{if(mode!=='ready')return;try{const raw=storage.getItem(KEY);if(raw!==null){state=validate(JSON.parse(raw));notify()}}catch(_){mode='protected';message='تغير التخزين أو تعذرت قراءته؛ صدّر تعديلاتك قبل الإغلاق.';notify()}}};
 }
 const api={KEY,validate,createStore};if(typeof module!=='undefined'&&module.exports)module.exports=api;
 if(root&&root.document){try{root.VLexLearningStore=createStore({getItem:k=>root.localStorage.getItem(k),setItem:(k,v)=>root.localStorage.setItem(k,v),removeItem:k=>root.localStorage.removeItem(k)})}catch(_){root.VLexLearningStore=createStore({getItem(){throw new Error('Storage unavailable')}})}root.addEventListener('storage',e=>{if(e.key===KEY)root.VLexLearningStore.reload()})}root.VLexLearning=api;

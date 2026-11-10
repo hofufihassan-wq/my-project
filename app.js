@@ -230,7 +230,8 @@ const app = createApp({
     // 2. Navigation & View State
     // ==========================================
     // Visible workspaces: 'lexicon' | 'practice' (the practical simulator)
-    const appMode = ref(window.location?.hash === '#arrow-functions' ? 'arrow' : 'home');
+    const savedNavigation = window.VLexLearningStore?.getSection('navigation', {}) || {};
+    const appMode = ref(window.location?.hash === '#arrow-functions' ? 'arrow' : savedNavigation.workspace || 'home');
     const learningReturnToArrow = ref(false);
     const practiceSurface = ref('simulator');
     // Theme selection is session-only in 5B; existing persisted records are untouched.
@@ -244,7 +245,8 @@ const app = createApp({
       root?.setAttribute('data-theme', appearance);
       root?.setAttribute('data-workspace', mode === 'practice' && surface === 'training' ? 'training' : mode);
     }, { immediate: true, flush: 'sync' });
-    const foundationSection = ref('projects');
+    const foundationSection = ref(savedNavigation.section || 'projects');
+    watch([appMode,foundationSection],([workspace,section])=>{if(workspace!=='practice')window.VLexLearningStore?.setSection('navigation',{workspace,section});},{flush:'sync'});
     const foundationSections = [
       { id: 'projects', title: 'المشاريع', icon: 'folder', description: 'مشاريعك المحلية ومهامها، مع مسار عملي لبناء مدير مهام.' },
       { id: 'kanban', title: 'لوحة المهام', icon: 'grid', description: 'رتب مهامك بين قيد الانتظار والعمل والمنجزة.' },

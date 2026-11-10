@@ -192,8 +192,8 @@
     "tool": "tailwindcss@3.4.17",
     "config_sha256": "765982df1d140dac3a1a429cd4525000989d37d92c329a0e0eee66dbf159a5c7",
     "inputs_sha256": {
-      "index.html": "4d1a7d85cd8d920b615040f393c0d597d2dcf932c26e2a78db573c17ce55ba04",
-      "app.js": "c586d517c8d8b64dab695df3db931d307db57567bf346dbdab403c6403477068",
+      "index.html": "e409bd738a7175763560327e9e531594df0d17ba93da06beaad83e592ef41250",
+      "app.js": "5c905e23b485f6832172dff155f67e58663800b54ceedd47df69aaa263d2df4b",
       "lexicon-data.js": "3d0e63c82e5cef4f2f4d269aaee039b82318b977f956325e80506d6b593db05a",
       "practice-curriculum.js": "41822064e89272698042e7e76a94b80519d6d5524a1c0e2259789e1ecf4af6f6",
       "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"

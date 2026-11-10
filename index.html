@@ -143,6 +143,7 @@
     <button @click="openFoundation('kanban')">مهامي</button>
     <button @click="openFoundation('calendar')">تقويمي</button>
   </nav>
+  <p v-if="appMode !== 'practice' && appMode !== 'home'" class="learning-page" style="font-size:12px;padding-block:4px" role="status" data-testid="learning-save-status">{{learningStatus.message || !learningStatus.persistent ? 'تعذر حفظ التغيير؛ راجع التنبيه وصدّر بياناتك' : learningStatus.verified ? 'تم الحفظ محليًا' : 'الحفظ التلقائي جاهز'}}</p>
   <aside v-if="appMode !== 'practice' && !learningStatus.persistent" class="learning-storage-warning" role="alert">{{ learningStatus.message }} <button @click="exportLearningData">تصدير تعديلات التعلّم الحالية</button></aside>
   <main v-if="appMode === 'explain'" class="learning-page"><vlex-explainer :key="explainKey" :terms="rawLexiconData" :initial-code="explainSource" @open-term="openLearningTerm" /></main>
   <aside v-if="learningReturnToArrow && appMode !== 'arrow'" class="learning-page arrow-return"><button @click="openLearning('arrow')" data-testid="arrow-return">العودة إلى درس الدوال السهمية</button></aside>
