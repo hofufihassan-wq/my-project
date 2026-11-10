@@ -74,6 +74,17 @@ async function main() {
       await page.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));
       return page.locator('iframe').contentFrame();
     }
+    const initialLearning = await page.evaluate(()=>window.VLexLearningStore.read());
+    // A1 deliberately persists the selected simulator lesson when opening a
+    // reference. Permit exactly that declared navigation write; retain exact
+    // checks for all other learning data, legacy drafts, nulls and recovery keys.
+    async function assertReferenceStorageUnchanged(before) {
+      const actual=await storage(), expected={...before}, key='vlex_personal_learning_v1';
+      const learning=expected[key]?JSON.parse(expected[key]):structuredClone(initialLearning);
+      learning.navigation={...learning.navigation,simulatorLesson:'VUE-101'};
+      assert.deepEqual(JSON.parse(actual[key]),learning);
+      delete actual[key];delete expected[key];assert.deepEqual(actual,expected);
+    }
     const pristine = await storage();
     await test('script setup, named imports, ref, computed, events, v-if/v-for and scoped CSS actually run', async()=>{
       const frame = await show(sfc);
@@ -95,7 +106,7 @@ async function main() {
       assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
       assert.equal(await frame.locator('body').evaluate(()=>{try{parent.localStorage.getItem('x');return false;}catch(_){return true;}}),true);
       assert.equal(await app(a=>a.simulatorReferenceCode),sfc);
-      assert.deepEqual(await storage(),pristine); // Includes original null drafts.
+      await assertReferenceStorageUnchanged(pristine); // Includes original null drafts.
     });
     await test('export default Options API, namespace/aliased imports and style v-bind',async()=>{
       let frame=await show(`<template><button @click="count++">{{count}}</button><span>{{then()}}</span></template><script>import * as V from 'vue'; import { ref as makeRef } from 'vue'; export const extra=7; export default {setup(){return {count:makeRef(3),then:()=> 'ordinary method' }}}</script>`);
@@ -179,7 +190,7 @@ async function main() {
         // escaped tag inside the template literal as the SFC closing tag.
         assert.equal(await frame.locator('#vuelexicon-example p').textContent(),'first\n</script>\nlast');
       }
-      assert.deepEqual(await storage(),before);
+      await assertReferenceStorageUnchanged(before);
       assert.equal(await app(a=>a.simulatorReferenceCode),code);
       assert(!await app(a=>a.practiceLogs.some(l=>l.msg==='MUST_NOT_EXECUTE')));
     });
@@ -215,7 +226,7 @@ async function main() {
       await page.waitForTimeout(400);
       assert.equal(await app(a=>a.activeRun.kind),'reference');
       assert(!await app(a=>a.practiceLogs.some(l=>l.msg==='IMPORTED_CODE_MUST_NOT_RUN')));
-      assert.deepEqual(await storage(),before);
+      await assertReferenceStorageUnchanged(before);
       await app(a=>{a.practiceAutoRun=false;a.selectLesson('JS-101');});
       assert.equal(await app(a=>a.practiceCode),draft);
       const download=page.waitForEvent('download');

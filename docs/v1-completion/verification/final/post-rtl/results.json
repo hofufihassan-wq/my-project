@@ -1,0 +1,52 @@
+{
+  "passed": 5,
+  "total": 5,
+  "results": [
+    {
+      "suite": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "seconds": 1.73
+    },
+    {
+      "suite": "project-ui",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/D/project-ui.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 34.62
+    },
+    {
+      "suite": "dashboard",
+      "command": [
+        "node",
+        "platform-tests/dashboard/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 5.5
+    },
+    {
+      "suite": "all-sections",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/E/site-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 9.55
+    },
+    {
+      "suite": "static",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/E/static-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.89
+    }
+  ]
+}

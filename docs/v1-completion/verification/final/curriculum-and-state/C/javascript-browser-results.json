@@ -1,0 +1,4632 @@
+{
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "id": "js-values",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2,3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0,0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3,1]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              },
+              {
+                "label": "مدخل [1.5,2.5]",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2,3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0,0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3,1]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              },
+              {
+                "label": "مدخل [1.5,2.5]",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 2,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2,3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0,0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3,1]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              },
+              {
+                "label": "مدخل [1.5,2.5]",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [4,2]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0,-2]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-1,-3]",
+                "expected": "-4",
+                "actual": "-4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [4,2]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0,-2]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-1,-3]",
+                "expected": "-4",
+                "actual": "-4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [5]",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3]",
+                "expected": "-4",
+                "actual": "-4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [5]",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3]",
+                "expected": "-4",
+                "actual": "-4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مثال",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              }
+            ],
+            "logs": [
+              "5"
+            ]
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-types",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"12\"]",
+                "expected": "12",
+                "actual": "12",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\" -3 \"]",
+                "expected": "-3",
+                "actual": "-3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"   \"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"abc\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"Infinity\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"12\"]",
+                "expected": "12",
+                "actual": "12",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\" -3 \"]",
+                "expected": "-3",
+                "actual": "-3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"   \"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"abc\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"Infinity\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"12\"]",
+                "expected": "12",
+                "actual": "12",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\" -3 \"]",
+                "expected": "-3",
+                "actual": "-3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"   \"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"abc\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"Infinity\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"12\"]",
+                "expected": "12",
+                "actual": "12",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\" -3 \"]",
+                "expected": "-3",
+                "actual": "-3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"   \"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"abc\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"Infinity\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "3",
+                "actual": "3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"-4\"]",
+                "expected": "-3",
+                "actual": "-3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "3",
+                "actual": "3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"-4\"]",
+                "expected": "-3",
+                "actual": "-3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\" 2 \"]",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-conditions",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0]",
+                "expected": "طفل",
+                "actual": "طفل",
+                "passed": true
+              },
+              {
+                "label": "مدخل [12]",
+                "expected": "طفل",
+                "actual": "طفل",
+                "passed": true
+              },
+              {
+                "label": "مدخل [13]",
+                "expected": "يافع",
+                "actual": "يافع",
+                "passed": true
+              },
+              {
+                "label": "مدخل [17]",
+                "expected": "يافع",
+                "actual": "يافع",
+                "passed": true
+              },
+              {
+                "label": "مدخل [18]",
+                "expected": "بالغ",
+                "actual": "بالغ",
+                "passed": true
+              },
+              {
+                "label": "مدخل [80]",
+                "expected": "بالغ",
+                "actual": "بالغ",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0]",
+                "expected": "طفل",
+                "actual": "طفل",
+                "passed": true
+              },
+              {
+                "label": "مدخل [12]",
+                "expected": "طفل",
+                "actual": "طفل",
+                "passed": true
+              },
+              {
+                "label": "مدخل [13]",
+                "expected": "يافع",
+                "actual": "يافع",
+                "passed": true
+              },
+              {
+                "label": "مدخل [17]",
+                "expected": "يافع",
+                "actual": "يافع",
+                "passed": true
+              },
+              {
+                "label": "مدخل [18]",
+                "expected": "بالغ",
+                "actual": "بالغ",
+                "passed": true
+              },
+              {
+                "label": "مدخل [80]",
+                "expected": "بالغ",
+                "actual": "بالغ",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0]",
+                "expected": "طفل",
+                "actual": "طفل",
+                "passed": true
+              },
+              {
+                "label": "مدخل [12]",
+                "expected": "طفل",
+                "actual": "طفل",
+                "passed": true
+              },
+              {
+                "label": "مدخل [13]",
+                "expected": "يافع",
+                "actual": "يافع",
+                "passed": true
+              },
+              {
+                "label": "مدخل [17]",
+                "expected": "يافع",
+                "actual": "يافع",
+                "passed": true
+              },
+              {
+                "label": "مدخل [18]",
+                "expected": "بالغ",
+                "actual": "بالغ",
+                "passed": true
+              },
+              {
+                "label": "مدخل [80]",
+                "expected": "بالغ",
+                "actual": "بالغ",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0]",
+                "expected": "طفل",
+                "actual": "طفل",
+                "passed": true
+              },
+              {
+                "label": "مدخل [12]",
+                "expected": "طفل",
+                "actual": "طفل",
+                "passed": true
+              },
+              {
+                "label": "مدخل [13]",
+                "expected": "يافع",
+                "actual": "يافع",
+                "passed": true
+              },
+              {
+                "label": "مدخل [17]",
+                "expected": "يافع",
+                "actual": "يافع",
+                "passed": true
+              },
+              {
+                "label": "مدخل [18]",
+                "expected": "بالغ",
+                "actual": "بالغ",
+                "passed": true
+              },
+              {
+                "label": "مدخل [80]",
+                "expected": "بالغ",
+                "actual": "بالغ",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0]",
+                "expected": "10",
+                "actual": "10",
+                "passed": true
+              },
+              {
+                "label": "مدخل [99]",
+                "expected": "10",
+                "actual": "10",
+                "passed": true
+              },
+              {
+                "label": "مدخل [100]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [101]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0]",
+                "expected": "10",
+                "actual": "10",
+                "passed": true
+              },
+              {
+                "label": "مدخل [99]",
+                "expected": "10",
+                "actual": "10",
+                "passed": true
+              },
+              {
+                "label": "مدخل [100]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [101]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [50]",
+                "expected": "ناجح",
+                "actual": "ناجح",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-loops",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 3]]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[-3, 0, 2]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 3]]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[-3, 0, 2]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 2,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 3]]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[-3, 0, 2]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 3]]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[-3, 0, 2]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 3]]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[-3, 0, 2]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[-1, 0, 2, 3]]",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[0, 0]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[-1, 0, 2, 3]]",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[0, 0]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[2, 3]]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-functions",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [5]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 3]",
+                "expected": "-6",
+                "actual": "-6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 8]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [5]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 3]",
+                "expected": "-6",
+                "actual": "-6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 8]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [5]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 3]",
+                "expected": "-6",
+                "actual": "-6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 8]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [5]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 3]",
+                "expected": "-6",
+                "actual": "-6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 8]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل []",
+                "expected": "مرحبًا متعلم",
+                "actual": "مرحبًا متعلم",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"سارة\"]",
+                "expected": "مرحبًا سارة",
+                "actual": "مرحبًا سارة",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "مرحبًا ",
+                "actual": "مرحبًا ",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل []",
+                "expected": "مرحبًا متعلم",
+                "actual": "مرحبًا متعلم",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"سارة\"]",
+                "expected": "مرحبًا سارة",
+                "actual": "مرحبًا سارة",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "مرحبًا ",
+                "actual": "مرحبًا ",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [4]",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-arrays",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1]]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[2, 5, 9]]",
+                "expected": "9",
+                "actual": "9",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1]]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[2, 5, 9]]",
+                "expected": "9",
+                "actual": "9",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1]]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[2, 5, 9]]",
+                "expected": "9",
+                "actual": "9",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1]]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[2, 5, 9]]",
+                "expected": "9",
+                "actual": "9",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[4]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 3]]",
+                "expected": "[2,3]",
+                "actual": "[2,3]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[4]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 3]]",
+                "expected": "[2,3]",
+                "actual": "[2,3]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[8, 9]]",
+                "expected": "8",
+                "actual": "8",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-objects",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [{\"name\": \"أ\", \"age\": 2}, \"ب\"]",
+                "expected": "{\"name\":\"ب\",\"age\":2}",
+                "actual": "{\"name\":\"ب\",\"age\":2}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [{}, \"س\"]",
+                "expected": "{\"name\":\"س\"}",
+                "actual": "{\"name\":\"س\"}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [{\"name\": \"أ\", \"age\": 2}, \"ب\"]",
+                "expected": "{\"name\":\"ب\",\"age\":2}",
+                "actual": "{\"name\":\"ب\",\"age\":2}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [{}, \"س\"]",
+                "expected": "{\"name\":\"س\"}",
+                "actual": "{\"name\":\"س\"}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [{\"name\": \"أ\", \"age\": 2}, \"ب\"]",
+                "expected": "{\"name\":\"ب\",\"age\":2}",
+                "actual": "{\"name\":\"ب\",\"age\":2}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [{}, \"س\"]",
+                "expected": "{\"name\":\"س\"}",
+                "actual": "{\"name\":\"س\"}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [{\"name\": \"أ\", \"age\": 2}, \"ب\"]",
+                "expected": "{\"name\":\"ب\",\"age\":2}",
+                "actual": "{\"name\":\"ب\",\"age\":2}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [{}, \"س\"]",
+                "expected": "{\"name\":\"س\"}",
+                "actual": "{\"name\":\"س\"}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [{\"title\": \"درس\", \"done\": false}]",
+                "expected": "{\"title\":\"درس\",\"done\":true}",
+                "actual": "{\"title\":\"درس\",\"done\":true}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [{\"id\": 3}]",
+                "expected": "{\"id\":3,\"done\":true}",
+                "actual": "{\"id\":3,\"done\":true}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [{\"title\": \"درس\", \"done\": false}]",
+                "expected": "{\"title\":\"درس\",\"done\":true}",
+                "actual": "{\"title\":\"درس\",\"done\":true}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [{\"id\": 3}]",
+                "expected": "{\"id\":3,\"done\":true}",
+                "actual": "{\"id\":3,\"done\":true}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [{\"name\": \"ليلى\"}]",
+                "expected": "ليلى",
+                "actual": "ليلى",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-map-filter",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 0, -4, 3]]",
+                "expected": "[2,0,-4]",
+                "actual": "[2,0,-4]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[5, 7]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 0, -4, 3]]",
+                "expected": "[2,0,-4]",
+                "actual": "[2,0,-4]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[5, 7]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 0, -4, 3]]",
+                "expected": "[2,0,-4]",
+                "actual": "[2,0,-4]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[5, 7]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[1, 2, 0, -4, 3]]",
+                "expected": "[2,0,-4]",
+                "actual": "[2,0,-4]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[5, 7]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"name\": \"أ\"}, {\"name\": \"ب\"}]]",
+                "expected": "[\"أ\",\"ب\"]",
+                "actual": "[\"أ\",\"ب\"]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"name\": \"أ\"}, {\"name\": \"ب\"}]]",
+                "expected": "[\"أ\",\"ب\"]",
+                "actual": "[\"أ\",\"ب\"]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[1, 3]]",
+                "expected": "[2,6]",
+                "actual": "[2,6]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-reduce",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"price\": 2}, {\"price\": 3}]]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"price\": 0}, {\"price\": -1}]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"price\": 2}, {\"price\": 3}]]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"price\": 0}, {\"price\": -1}]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"price\": 2}, {\"price\": 3}]]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"price\": 0}, {\"price\": -1}]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"price\": 2}, {\"price\": 3}]]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"price\": 0}, {\"price\": -1}]]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"qty\": 2}, {\"qty\": 0}, {\"qty\": 5}]]",
+                "expected": "7",
+                "actual": "7",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"qty\": 2}, {\"qty\": 0}, {\"qty\": 5}]]",
+                "expected": "7",
+                "actual": "7",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-closure",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0, 3]",
+                "expected": "[1,2,3]",
+                "actual": "[1,2,3]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, 0]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 3]",
+                "expected": "[-1,0,1]",
+                "actual": "[-1,0,1]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0, 3]",
+                "expected": "[1,2,3]",
+                "actual": "[1,2,3]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, 0]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 3]",
+                "expected": "[-1,0,1]",
+                "actual": "[-1,0,1]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0, 3]",
+                "expected": "[1,2,3]",
+                "actual": "[1,2,3]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, 0]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 3]",
+                "expected": "[-1,0,1]",
+                "actual": "[-1,0,1]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0, 3]",
+                "expected": "[1,2,3]",
+                "actual": "[1,2,3]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, 0]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 3]",
+                "expected": "[-1,0,1]",
+                "actual": "[-1,0,1]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0, [2, 3]]",
+                "expected": "[2,5]",
+                "actual": "[2,5]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, []]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [1, [-1, 4]]",
+                "expected": "[0,4]",
+                "actual": "[0,4]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0, [2, 3]]",
+                "expected": "[2,5]",
+                "actual": "[2,5]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [5, []]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [1, [-1, 4]]",
+                "expected": "[0,4]",
+                "actual": "[0,4]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [3, 2]",
+                "expected": "[4,5]",
+                "actual": "[4,5]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-promises",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 1]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 1]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 1]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2, 1]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [3]",
+                "expected": "9",
+                "actual": "9",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2]",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [3]",
+                "expected": "9",
+                "actual": "9",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2]",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [3]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-async-errors",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"{\\\"n\\\":2}\"]",
+                "expected": "{\"n\":2}",
+                "actual": "{\"n\":2}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"[1,2]\"]",
+                "expected": "[1,2]",
+                "actual": "[1,2]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"broken\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"{\\\"n\\\":2}\"]",
+                "expected": "{\"n\":2}",
+                "actual": "{\"n\":2}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"[1,2]\"]",
+                "expected": "[1,2]",
+                "actual": "[1,2]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"broken\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"{\\\"n\\\":2}\"]",
+                "expected": "{\"n\":2}",
+                "actual": "{\"n\":2}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"[1,2]\"]",
+                "expected": "[1,2]",
+                "actual": "[1,2]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"broken\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"{\\\"n\\\":2}\"]",
+                "expected": "{\"n\":2}",
+                "actual": "{\"n\":2}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"[1,2]\"]",
+                "expected": "[1,2]",
+                "actual": "[1,2]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"broken\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"نص\"]",
+                "expected": "نص",
+                "actual": "نص",
+                "passed": true
+              },
+              {
+                "label": "مدخل [{\"id\": 1}]",
+                "expected": "{\"id\":1}",
+                "actual": "{\"id\":1}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"نص\"]",
+                "expected": "نص",
+                "actual": "نص",
+                "passed": true
+              },
+              {
+                "label": "مدخل [{\"id\": 1}]",
+                "expected": "{\"id\":1}",
+                "actual": "{\"id\":1}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-modules",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3, 1]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3, 1]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3, 1]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0, 0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-3, 1]",
+                "expected": "-2",
+                "actual": "-2",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2]",
+                "expected": "-6",
+                "actual": "-6",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2]",
+                "expected": "6",
+                "actual": "6",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [-2]",
+                "expected": "-6",
+                "actual": "-6",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [2, 3]",
+                "expected": "5",
+                "actual": "5",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-debugging",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "3",
+                "actual": "3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"-1\"]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"Infinity\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "3",
+                "actual": "3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"-1\"]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"Infinity\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "3",
+                "actual": "3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"-1\"]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"Infinity\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "3",
+                "actual": "3",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"-1\"]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"Infinity\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"0\"]",
+                "expected": "-1",
+                "actual": "-1",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"bad\"]",
+                "expected": "null",
+                "actual": "null",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"2\"]",
+                "expected": "3",
+                "actual": "3",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-dom",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "إنشاء عنوان",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "نص العنوان",
+                "expected": "مهامي",
+                "actual": "مهامي",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><main id=\"app\"><h1>مهامي</h1></main></body></html>"
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "إنشاء عنوان",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "نص العنوان",
+                "expected": "مهامي",
+                "actual": "مهامي",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><main id=\"app\"><h1>مهامي</h1></main></body></html>"
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "إنشاء عنوان",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "نص العنوان",
+                "expected": "مهامي",
+                "actual": "مهامي",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><main id=\"app\"><h1>مهامي</h1></main></body></html>"
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "إنشاء عنوان",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              },
+              {
+                "label": "نص العنوان",
+                "expected": "مهامي",
+                "actual": "مهامي",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><main id=\"app\"><h1>مهامي</h1></main></body></html>"
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "عنصران",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "الأول",
+                "expected": "قراءة",
+                "actual": "قراءة",
+                "passed": true
+              },
+              {
+                "label": "الثاني",
+                "expected": "تطبيق",
+                "actual": "تطبيق",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><main id=\"app\"><ul><li>قراءة</li><li>تطبيق</li></ul></main></body></html>"
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "عنصران",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "الأول",
+                "expected": "قراءة",
+                "actual": "قراءة",
+                "passed": true
+              },
+              {
+                "label": "الثاني",
+                "expected": "تطبيق",
+                "actual": "تطبيق",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><main id=\"app\"><ul><li>قراءة</li><li>تطبيق</li></ul></main></body></html>"
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "النص الناتج",
+                "expected": "مرحبا",
+                "actual": "مرحبا",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><main id=\"app\"><p>مرحبا</p></main></body></html>"
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-events",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "بداية",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "نقرة",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "نقرتان",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><button>زد</button><output>4</output></body></html>"
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "بداية",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "نقرة",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "نقرتان",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><button>زد</button><output>4</output></body></html>"
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "بداية",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "نقرة",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "نقرتان",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><button>زد</button><output>4</output></body></html>"
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "بداية",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "نقرة",
+                "expected": "2",
+                "actual": "2",
+                "passed": true
+              },
+              {
+                "label": "نقرتان",
+                "expected": "4",
+                "actual": "4",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><button>زد</button><output>4</output></body></html>"
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "تنظيف النص",
+                "expected": "مرحبا",
+                "actual": "مرحبا",
+                "passed": true
+              },
+              {
+                "label": "الفراغ",
+                "expected": "",
+                "actual": "",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><input value=\"   \"><output></output></body></html>"
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "تنظيف النص",
+                "expected": "مرحبا",
+                "actual": "مرحبا",
+                "passed": true
+              },
+              {
+                "label": "الفراغ",
+                "expected": "",
+                "actual": "",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><input value=\"   \"><output></output></body></html>"
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "النقرة الأولى",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><button>زد</button><output>1</output></body></html>"
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-delegation",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "حذف من عنصر داخلي",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "عنصر أضيف لاحقًا",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><ul></ul></body></html>"
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "حذف من عنصر داخلي",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "عنصر أضيف لاحقًا",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><ul></ul></body></html>"
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "حذف من عنصر داخلي",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "عنصر أضيف لاحقًا",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><ul></ul></body></html>"
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "حذف من عنصر داخلي",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "عنصر أضيف لاحقًا",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><ul></ul></body></html>"
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "الزر الأول",
+                "expected": "تم",
+                "actual": "تم",
+                "passed": true
+              },
+              {
+                "label": "زر أضيف لاحقًا",
+                "expected": "تم",
+                "actual": "تم",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><section id=\"list\"><button>تم</button><button id=\"new\">تم</button></section></body></html>"
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "الزر الأول",
+                "expected": "تم",
+                "actual": "تم",
+                "passed": true
+              },
+              {
+                "label": "زر أضيف لاحقًا",
+                "expected": "تم",
+                "actual": "تم",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><section id=\"list\"><button>تم</button><button id=\"new\">تم</button></section></body></html>"
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "reference in native browser DOM",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "الحذف",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "preview": "<!DOCTYPE html><html><head></head><body><ul></ul></body></html>"
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-storage",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"درس\"]",
+                "expected": "درس",
+                "actual": "درس",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "",
+                "actual": "",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"درس\"]",
+                "expected": "درس",
+                "actual": "درس",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "",
+                "actual": "",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"درس\"]",
+                "expected": "درس",
+                "actual": "درس",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "",
+                "actual": "",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"درس\"]",
+                "expected": "درس",
+                "actual": "درس",
+                "passed": true
+              },
+              {
+                "label": "مدخل [0]",
+                "expected": "0",
+                "actual": "0",
+                "passed": true
+              },
+              {
+                "label": "مدخل [\"\"]",
+                "expected": "",
+                "actual": "",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "غياب",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "تالف",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "نوع خاطئ",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مصفوفة صالحة",
+                "expected": "[\"قراءة\"]",
+                "actual": "[\"قراءة\"]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "غياب",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "تالف",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "نوع خاطئ",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مصفوفة صالحة",
+                "expected": "[\"قراءة\"]",
+                "actual": "[\"قراءة\"]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [\"مسودتي\"]",
+                "expected": "مسودتي",
+                "actual": "مسودتي",
+                "passed": true
+              }
+            ],
+            "logs": [],
+            "storage": {
+              "note": "مسودتي"
+            }
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-fetch",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "بيانات",
+                "expected": "[\"أ\",\"ب\"]",
+                "actual": "[\"أ\",\"ب\"]",
+                "passed": true
+              },
+              {
+                "label": "فارغة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "HTTP فاشل",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "رفض شبكة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "JSON تالف",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "نوع غير مصفوفة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "بيانات",
+                "expected": "[\"أ\",\"ب\"]",
+                "actual": "[\"أ\",\"ب\"]",
+                "passed": true
+              },
+              {
+                "label": "فارغة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "HTTP فاشل",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "رفض شبكة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "JSON تالف",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "نوع غير مصفوفة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "بيانات",
+                "expected": "[\"أ\",\"ب\"]",
+                "actual": "[\"أ\",\"ب\"]",
+                "passed": true
+              },
+              {
+                "label": "فارغة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "HTTP فاشل",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "رفض شبكة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "JSON تالف",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "نوع غير مصفوفة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "بيانات",
+                "expected": "[\"أ\",\"ب\"]",
+                "actual": "[\"أ\",\"ب\"]",
+                "passed": true
+              },
+              {
+                "label": "فارغة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "HTTP فاشل",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "رفض شبكة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "JSON تالف",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "نوع غير مصفوفة",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "نجاح",
+                "expected": "مرحبا",
+                "actual": "مرحبا",
+                "passed": true
+              },
+              {
+                "label": "HTTP فاشل",
+                "expected": "غير متاح",
+                "actual": "غير متاح",
+                "passed": true
+              },
+              {
+                "label": "شبكة",
+                "expected": "غير متاح",
+                "actual": "غير متاح",
+                "passed": true
+              },
+              {
+                "label": "نوع خاطئ",
+                "expected": "غير متاح",
+                "actual": "غير متاح",
+                "passed": true
+              },
+              {
+                "label": "نص فارغ صالح",
+                "expected": "",
+                "actual": "",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "نجاح",
+                "expected": "مرحبا",
+                "actual": "مرحبا",
+                "passed": true
+              },
+              {
+                "label": "HTTP فاشل",
+                "expected": "غير متاح",
+                "actual": "غير متاح",
+                "passed": true
+              },
+              {
+                "label": "شبكة",
+                "expected": "غير متاح",
+                "actual": "غير متاح",
+                "passed": true
+              },
+              {
+                "label": "نوع خاطئ",
+                "expected": "غير متاح",
+                "actual": "غير متاح",
+                "passed": true
+              },
+              {
+                "label": "نص فارغ صالح",
+                "expected": "",
+                "actual": "",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "استجابة محلية",
+                "expected": "[\"قراءة\"]",
+                "actual": "[\"قراءة\"]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "js-project-organization",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "{\"total\":0,\"completed\":0}",
+                "actual": "{\"total\":0,\"completed\":0}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"title\": \"أ\", \"done\": true}, {\"title\": \"ب\", \"done\": false}]]",
+                "expected": "{\"total\":2,\"completed\":1}",
+                "actual": "{\"total\":2,\"completed\":1}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "{\"total\":0,\"completed\":0}",
+                "actual": "{\"total\":0,\"completed\":0}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"title\": \"أ\", \"done\": true}, {\"title\": \"ب\", \"done\": false}]]",
+                "expected": "{\"total\":2,\"completed\":1}",
+                "actual": "{\"total\":2,\"completed\":1}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "{\"total\":0,\"completed\":0}",
+                "actual": "{\"total\":0,\"completed\":0}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"title\": \"أ\", \"done\": true}, {\"title\": \"ب\", \"done\": false}]]",
+                "expected": "{\"total\":2,\"completed\":1}",
+                "actual": "{\"total\":2,\"completed\":1}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "{\"total\":0,\"completed\":0}",
+                "actual": "{\"total\":0,\"completed\":0}",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"title\": \"أ\", \"done\": true}, {\"title\": \"ب\", \"done\": false}]]",
+                "expected": "{\"total\":2,\"completed\":1}",
+                "actual": "{\"total\":2,\"completed\":1}",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"title\": \"أ\", \"done\": false}, {\"title\": \"ب\", \"done\": true}, {\"title\": \"ج\", \"done\": true}]]",
+                "expected": "[\"ب\",\"ج\"]",
+                "actual": "[\"ب\",\"ج\"]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[]]",
+                "expected": "[]",
+                "actual": "[]",
+                "passed": true
+              },
+              {
+                "label": "مدخل [[{\"title\": \"أ\", \"done\": false}, {\"title\": \"ب\", \"done\": true}, {\"title\": \"ج\", \"done\": true}]]",
+                "expected": "[\"ب\",\"ج\"]",
+                "actual": "[\"ب\",\"ج\"]",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "result": {
+            "kind": "result",
+            "checks": [
+              {
+                "label": "مدخل [[{\"done\": true}, {\"done\": false}]]",
+                "expected": "1",
+                "actual": "1",
+                "passed": true
+              }
+            ],
+            "logs": []
+          }
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "errors": []
+}

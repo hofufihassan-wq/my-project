@@ -1,0 +1,291 @@
+{
+  "passed": 39,
+  "total": 39,
+  "results": [
+    {
+      "name": "home 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "lexicon 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "course 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "arrow 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "guided 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "cssLab 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "jsLab 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "explain 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "projects 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "notes 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "calendar 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "kanban 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "settings 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "training 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "simulator 1440px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "home 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "lexicon 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "course 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "arrow 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "guided 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "cssLab 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "jsLab 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "explain 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "projects 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "notes 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "calendar 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "kanban 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "settings 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "training 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "simulator 390px opens without document overflow or parent failure",
+      "passed": true,
+      "detail": {
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "green remains selectable and preserves pending data",
+      "passed": true
+    },
+    {
+      "name": "glass remains selectable and preserves pending data",
+      "passed": true
+    },
+    {
+      "name": "purple remains selectable and preserves pending data",
+      "passed": true
+    },
+    {
+      "name": "light remains selectable and preserves pending data",
+      "passed": true
+    },
+    {
+      "name": "petroleum remains selectable and preserves pending data",
+      "passed": true
+    },
+    {
+      "name": "native pronunciation capability is reported honestly",
+      "passed": true,
+      "detail": {
+        "supported": true,
+        "voices": [],
+        "audibleEnglishVerified": false
+      }
+    },
+    {
+      "name": "simulator keeps blue/red identity and starts with optional sound muted",
+      "passed": true
+    },
+    {
+      "name": "no unhandled parent errors",
+      "passed": true
+    },
+    {
+      "name": "pronunciation mock verifies English term, completion and cancellation wiring",
+      "passed": true,
+      "detail": {
+        "method": "mock API wiring, not real audio"
+      }
+    }
+  ],
+  "errors": []
+}

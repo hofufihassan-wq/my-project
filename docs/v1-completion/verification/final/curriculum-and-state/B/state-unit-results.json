@@ -1,0 +1,26 @@
+{
+  "passed": 5,
+  "total": 5,
+  "results": [
+    {
+      "name": "each initial language has eight-stage data, distinct tasks, three hints and official references",
+      "passed": true
+    },
+    {
+      "name": "old state remains valid and defaults introduce no fake completion",
+      "passed": true
+    },
+    {
+      "name": "all drafts answers attempts mistakes hints reviews and completion survive the store schema",
+      "passed": true
+    },
+    {
+      "name": "a changed source never inherits success from the last tested source",
+      "passed": true
+    },
+    {
+      "name": "malformed guided data is rejected without mutating original state",
+      "passed": true
+    }
+  ]
+}

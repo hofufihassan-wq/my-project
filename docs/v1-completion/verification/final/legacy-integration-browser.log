@@ -1,0 +1,25 @@
+FAIL all platform components registered and mount no errors Expected values to be strictly deep-equal:
++ actual - expected
+... Skipped lines
+
+  [
+    'vlex-course',
+    'vlex-css-lab',
+    'vlex-dashboard',
+    'vlex-explainer',
+...
+    'vlex-js-lab',
++   'vlex-learning-projects',
+    'vlex-organizer'
+  ]
+
+PASS real navigation course
+PASS real navigation explain
+PASS real navigation cssLab
+PASS real navigation jsLab
+PASS organizer four modes real components
+PASS new themes persist reload and simulator palette stays independent
+PASS legacy dictionary search and favorites still work
+PASS responsive new tools at 390
+PASS responsive new tools at 768
+PASS parent and runtime assets have no unexpected errors

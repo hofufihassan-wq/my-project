@@ -1,0 +1,63 @@
+{
+  "passed": 14,
+  "total": 14,
+  "results": [
+    {
+      "name": "actual course navigation opens all eight stages with four independent languages",
+      "passed": true
+    },
+    {
+      "name": "line and token explanations respond without replacing explainer scratch",
+      "passed": true
+    },
+    {
+      "name": "wrong prediction and progressive hints survive reloading",
+      "passed": true
+    },
+    {
+      "name": "wrong HTML fails and semantically equivalent valid HTML passes",
+      "passed": true
+    },
+    {
+      "name": "fix and mastery require code results plus understanding and output answers",
+      "passed": true
+    },
+    {
+      "name": "changing a previously successful source invalidates current mastery",
+      "passed": true
+    },
+    {
+      "name": "simulator transfer and return retain exact source, step, hints and attempts",
+      "passed": true
+    },
+    {
+      "name": "CSS native colors accept equivalent notation",
+      "passed": true
+    },
+    {
+      "name": "JS evaluator gives reliable syntax line and retains original technical detail",
+      "passed": true
+    },
+    {
+      "name": "Vue code compiles and validates repeated rendered interactions",
+      "passed": true
+    },
+    {
+      "name": "all independent lesson drafts and current stage survive whole process restart",
+      "passed": true
+    },
+    {
+      "name": "mobile preserves readable width and native selection, copy and source do not change",
+      "passed": true
+    },
+    {
+      "name": "full backup includes guided drafts, results, reviews and old Arrow without loss",
+      "passed": true
+    },
+    {
+      "name": "no parent page errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

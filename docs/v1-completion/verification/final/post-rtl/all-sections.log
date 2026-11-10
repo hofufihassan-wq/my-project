@@ -1,0 +1,39 @@
+PASS home 1440px opens without document overflow or parent failure
+PASS lexicon 1440px opens without document overflow or parent failure
+PASS course 1440px opens without document overflow or parent failure
+PASS arrow 1440px opens without document overflow or parent failure
+PASS guided 1440px opens without document overflow or parent failure
+PASS cssLab 1440px opens without document overflow or parent failure
+PASS jsLab 1440px opens without document overflow or parent failure
+PASS explain 1440px opens without document overflow or parent failure
+PASS projects 1440px opens without document overflow or parent failure
+PASS notes 1440px opens without document overflow or parent failure
+PASS calendar 1440px opens without document overflow or parent failure
+PASS kanban 1440px opens without document overflow or parent failure
+PASS settings 1440px opens without document overflow or parent failure
+PASS training 1440px opens without document overflow or parent failure
+PASS simulator 1440px opens without document overflow or parent failure
+PASS home 390px opens without document overflow or parent failure
+PASS lexicon 390px opens without document overflow or parent failure
+PASS course 390px opens without document overflow or parent failure
+PASS arrow 390px opens without document overflow or parent failure
+PASS guided 390px opens without document overflow or parent failure
+PASS cssLab 390px opens without document overflow or parent failure
+PASS jsLab 390px opens without document overflow or parent failure
+PASS explain 390px opens without document overflow or parent failure
+PASS projects 390px opens without document overflow or parent failure
+PASS notes 390px opens without document overflow or parent failure
+PASS calendar 390px opens without document overflow or parent failure
+PASS kanban 390px opens without document overflow or parent failure
+PASS settings 390px opens without document overflow or parent failure
+PASS training 390px opens without document overflow or parent failure
+PASS simulator 390px opens without document overflow or parent failure
+PASS green remains selectable and preserves pending data
+PASS glass remains selectable and preserves pending data
+PASS purple remains selectable and preserves pending data
+PASS light remains selectable and preserves pending data
+PASS petroleum remains selectable and preserves pending data
+PASS native pronunciation capability is reported honestly
+PASS simulator keeps blue/red identity and starts with optional sound muted
+PASS no unhandled parent errors
+PASS pronunciation mock verifies English term, completion and cancellation wiring

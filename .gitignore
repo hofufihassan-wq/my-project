@@ -39,3 +39,7 @@ vuelexicon-recovery-*.json
 
 # Generated browser screenshots from dependency-loading checks
 /runtime-assets-artifacts/screenshots/
+
+# Generated static release output; only runtime is deployed later, never the checkout.
+/dist/
+/docs/v1-completion/preview/*.webm

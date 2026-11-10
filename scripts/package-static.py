@@ -93,9 +93,13 @@ def verify_runtime(files):
         raise RuntimeError('Empty runtime CSS must be investigated: ' + ', '.join(empty_css))
     lock = json.loads(files['assets/vendor/manifest.json'])
     locked = [entry for package in lock['packages'] for entry in package['files']]
-    locked += [lock[name] for name in ('generated_css', 'generated_compiler') if name in lock]
+    locked += [lock[name] for name in ('generated_css', 'generated_compiler', 'generated_dom') if name in lock]
     for entry in locked:
         name = entry['path']
+        # Pinned build-only vendored sources are checked by verify:assets,
+        # but must not be exposed by the public runtime allowlist.
+        if name.startswith('scripts/vendor/') and name not in files:
+            continue
         if name not in files or digest(files[name]) != entry['sha256']:
             raise RuntimeError('Vendored asset manifest mismatch: ' + name)
     css_refs = []

@@ -1,0 +1,11 @@
+PASS all six actual project cards coexist with unsubmitted organizer draft
+PASS trial controls execute actual task code, persist private data and never grant mastery
+PASS closing whole browser restores source, trial values and task state without autorun
+PASS expense values aggregate across separate runs and budget stays coherent
+PASS Vue project runtime state persists across reconstruction and whole browser restart
+PASS all six projects complete only through real graded tasks and questions
+PASS one full backup download and import preserve all six results, fields and separate organizer data
+PASS bad new project field in full import is rejected without mutating current data
+PASS changing a completed source invalidates project card and dashboard evidence
+PASS 390px projects catalogue and editor fit document width
+PASS no parent runtime errors
