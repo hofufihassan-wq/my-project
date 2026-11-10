@@ -5,7 +5,7 @@ function prepare(source,task,parser){
  if(typeof source!=='string'||!source.trim()||source.length>16000)throw Error('اكتب حلًا لا يتجاوز 16000 محرف.');
  let ast;try{ast=parser(source,{sourceType:'script'})}catch(e){throw Error('خطأ صياغة: '+String(e.message).slice(0,300))}
  const names=new Set(['undefined','NaN','Infinity','Math','Number']);let target=null;
- const walk=(n,fn,parent=null,key='')=>{if(!n||typeof n!=='object')return;fn(n,parent,key);for(const k of Object.keys(n)){if(['loc','tokens','comments','extra','errors'].includes(k))continue;const v=n[k];if(Array.isArray(v))v.forEach(x=>walk(x,fn,n,k));else if(v&&typeof v==='object')walk(v,fn,n,k)}};
+ const walk=(n,fn,parent=null,key='')=>{if(!n||typeof n!=='object')return;fn(n,parent,key);for(const k of Object.keys(n)){if(['loc','tokens','comments','leadingComments','trailingComments','innerComments','extra','errors'].includes(k))continue;const v=n[k];if(Array.isArray(v))v.forEach(x=>walk(x,fn,n,k));else if(v&&typeof v==='object')walk(v,fn,n,k)}};
  walk(ast.program,n=>{if(n.type==='VariableDeclarator'&&n.id.type==='Identifier'){names.add(n.id.name);if(n.id.name===task.name)target=n.init}if(['ArrowFunctionExpression','FunctionExpression','FunctionDeclaration'].includes(n.type)){if(n.id)names.add(n.id.name);for(const p of n.params){if(p.type!=='Identifier')throw Error('غير مدعوم هنا: استخدم معاملات بأسماء بسيطة.');names.add(p.name)}}});
  if(target?.type!=='ArrowFunctionExpression')throw Error('عرّف '+task.name+' بدالة سهمية. هذا شرط المهارة منفصل عن صحة الناتج.');
  if(ast.program.body.some(n=>!['VariableDeclaration','FunctionDeclaration','EmptyStatement'].includes(n.type)))throw Error('غير مدعوم: ضع الحسابات داخل الدالة واكتفِ بالتعريفات في المستوى الأعلى.');

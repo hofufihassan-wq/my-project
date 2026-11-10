@@ -1,6 +1,6 @@
 {
-  "passed": 8,
-  "total": 8,
+  "passed": 9,
+  "total": 9,
   "tests": [
     {
       "name": "old state gains defaults without losing legacy course data",
@@ -20,6 +20,10 @@
     },
     {
       "name": "multiple equivalent arrow forms and helper functions are accepted structurally",
+      "passed": true
+    },
+    {
+      "name": "learner comments remain valid around functions and inside their bodies",
       "passed": true
     },
     {

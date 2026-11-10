@@ -1,0 +1,38 @@
+{
+  "passed": 8,
+  "total": 8,
+  "tests": [
+    {
+      "name": "old state gains defaults without losing legacy course data",
+      "passed": true
+    },
+    {
+      "name": "full guided state roundtrips and independent sections preserve it",
+      "passed": true
+    },
+    {
+      "name": "malformed imports fail atomically including deeply unsafe keys",
+      "passed": true
+    },
+    {
+      "name": "mastery requires behavior of current source plus all three questions",
+      "passed": true
+    },
+    {
+      "name": "multiple equivalent arrow forms and helper functions are accepted structurally",
+      "passed": true
+    },
+    {
+      "name": "unsupported APIs, property escape and imports are rejected before evaluation",
+      "passed": true
+    },
+    {
+      "name": "envelope refuses other sessions, unbounded or malformed results",
+      "passed": true
+    },
+    {
+      "name": "HTML closure injection stays inside iframe config and simulator script text",
+      "passed": true
+    }
+  ]
+}
