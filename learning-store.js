@@ -2,9 +2,9 @@
 (function(root){
 'use strict';
 const KEY='vlex_personal_learning_v1',LIMIT=2*1024*1024;
-const sections=['tasks','events','notes','projects','course','preferences','cssLab','jsLab','explainer'];
+const sections=['tasks','events','notes','projects','course','preferences','cssLab','jsLab','explainer','guidedArrow'];
 const clone=x=>JSON.parse(JSON.stringify(x));
-const fresh=()=>({version:1,tasks:[],events:[],notes:[],projects:[],course:{completed:[],answers:{},reviews:{},drafts:{}},preferences:{theme:'petroleum'},cssLab:{},jsLab:{},explainer:{}});
+const fresh=()=>({version:1,tasks:[],events:[],notes:[],projects:[],course:{completed:[],answers:{},reviews:{},drafts:{}},preferences:{theme:'petroleum'},cssLab:{},jsLab:{},explainer:{},guidedArrow:{}});
 const record=v=>v!==null&&typeof v==='object'&&!Array.isArray(v)&&(Object.getPrototypeOf(v)===Object.prototype||Object.getPrototypeOf(v)===null);
 const own=(v,key)=>Object.hasOwn(v,key);
 function fail(label){throw new Error('بيانات '+label+' غير صالحة')}
@@ -47,12 +47,25 @@ function cssControls(v){
  for(const key of ['background','foreground'])if(own(v,key)&&(typeof v[key]!=='string'||!/^#[0-9a-f]{6}$/i.test(v[key])))fail('لون CSS');
  if(own(v,'columns')&&(!Number.isInteger(v.columns)||v.columns<1||v.columns>6))fail('أعمدة CSS');
 }
+function guidedArrow(v){
+ if(Object.keys(v).length===0)return;
+ const keys=['version','step','drafts','hints','answers','results','reviews'];
+ if(Object.keys(v).some(k=>!keys.includes(k))||v.version!==1||!Number.isInteger(v.step)||v.step<0||v.step>7)fail('الدرس الموجّه');
+ const tasks=['try','double','fix','mastery','filter'];
+ for(const k of ['drafts','hints','answers','results','reviews'])if(!record(v[k]))fail('الدرس الموجّه');
+ map(v.drafts,'مسودات النموذج',(code,key)=>{if(!tasks.includes(key))fail('معرّف تمرين');string(code,'كود التمرين',16000)});
+ map(v.hints,'تلميحات النموذج',(n,key)=>{if(!['prediction',...tasks].includes(key)||!Number.isInteger(n)||n<0||n>3)fail('تلميح')});
+ map(v.answers,'إجابات النموذج',(n,key)=>{if(!['prediction','understanding','output'].includes(key)||!Number.isInteger(n)||n<0||n>2)fail('إجابة')});
+ map(v.results,'نتائج النموذج',(r,key)=>{if(!tasks.filter(k=>k!=='try').includes(key)||!record(r)||Object.keys(r).some(k=>!['passed','source','at'].includes(k))||typeof r.passed!=='boolean'||!timestamp(r.at))fail('نتيجة تمرين');string(r.source,'نسخة الحل المفحوصة',16000)});
+ map(v.reviews,'مراجعة المهارات',(r,key)=>{if(!['syntax','return','application'].includes(key)||!record(r)||Object.keys(r).some(k=>!['due','status'].includes(k))||!timestamp(r.due)||!['review','passed'].includes(r.status))fail('مراجعة مهارة')});
+}
 function validate(input){
  if(!record(input)||input.version!==1)throw new Error('إصدار بيانات التعلّم غير مدعوم');
  if(Object.keys(input).some(k=>k!=='version'&&!sections.includes(k)))throw new Error('حقول بيانات غير معروفة');
  let nodes=0;function scan(v,depth){if(++nodes>60000||depth>25)throw new Error('بنية البيانات معقدة جدًا');if(typeof v==='number'&&!Number.isFinite(v))throw new Error('رقم غير صالح');if(v!==null&&!['string','boolean','number','object'].includes(typeof v))fail('نوع JSON');if(v&&typeof v==='object'){if(!Array.isArray(v)&&!record(v))fail('كائن JSON');for(const k of Object.keys(v)){if(['__proto__','prototype','constructor'].includes(k))throw new Error('مفتاح غير آمن');scan(v[k],depth+1)}}}scan(input,0);
  const text=JSON.stringify(input);if(new TextEncoder().encode(text).length>LIMIT)throw new Error('البيانات أكبر من 2 MiB؛ لم يُقص أي نص');
  const out=fresh();for(const s of sections)if(own(input,s)){const v=input[s];if(['tasks','events','notes','projects'].includes(s))organizer(s,v);else if(!record(v))fail('قسم '+s);out[s]=clone(v)}
+ guidedArrow(out.guidedArrow||{});
  course(out.course);out.course={...fresh().course,...out.course};
  if(own(out.preferences,'theme')&&!['petroleum','light','purple','green','glass'].includes(out.preferences.theme))throw new Error('الثيم غير معروف');
  out.preferences={...fresh().preferences,...out.preferences};
