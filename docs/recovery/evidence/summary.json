@@ -1,0 +1,279 @@
+{
+  "sourceHead": "a3a464b9f1002c603e968c58808b80e13e47c788",
+  "passedSuites": 27,
+  "totalSuites": 30,
+  "results": [
+    {
+      "suite": "legacy-protocol",
+      "command": [
+        "node",
+        "run_preview_protocol_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.04
+    },
+    {
+      "suite": "legacy-data",
+      "command": [
+        "node",
+        "run_data_safety_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.26
+    },
+    {
+      "suite": "legacy-json",
+      "command": [
+        "node",
+        "run_json_import_test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 2.86
+    },
+    {
+      "suite": "dictionary-preservation",
+      "command": [
+        "node",
+        "platform-tests/dictionary/check-ids.cjs"
+      ],
+      "exitCode": 1,
+      "seconds": 0.04
+    },
+    {
+      "suite": "store-unit",
+      "command": [
+        "node",
+        "platform-tests/store/run.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.05
+    },
+    {
+      "suite": "store-schema",
+      "command": [
+        "node",
+        "platform-tests/store/schema.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.13
+    },
+    {
+      "suite": "explainer-unit",
+      "command": [
+        "node",
+        "platform-tests/explainer/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.1
+    },
+    {
+      "suite": "course-unit",
+      "command": [
+        "node",
+        "platform-tests/course/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.03
+    },
+    {
+      "suite": "advanced-unit",
+      "command": [
+        "node",
+        "platform-tests/advanced/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.03
+    },
+    {
+      "suite": "css-lab-unit",
+      "command": [
+        "node",
+        "platform-tests/css-lab/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.03
+    },
+    {
+      "suite": "js-lab-unit",
+      "command": [
+        "node",
+        "platform-tests/js-lab/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.07
+    },
+    {
+      "suite": "dashboard-unit",
+      "command": [
+        "node",
+        "platform-tests/dashboard/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.03
+    },
+    {
+      "suite": "local-unit",
+      "command": [
+        "python3",
+        "platform-tests/local/test-local.py"
+      ],
+      "exitCode": 0,
+      "seconds": 0.11
+    },
+    {
+      "suite": "assets-integrity",
+      "command": [
+        "npm",
+        "run",
+        "verify:assets"
+      ],
+      "exitCode": 0,
+      "seconds": 0.15
+    },
+    {
+      "suite": "legacy-dictionary",
+      "command": [
+        "node",
+        "run_dictionary_preview_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 31.86
+    },
+    {
+      "suite": "store-browser",
+      "command": [
+        "node",
+        "platform-tests/store/schema-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.98
+    },
+    {
+      "suite": "explainer-browser",
+      "command": [
+        "node",
+        "platform-tests/explainer/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 7.46
+    },
+    {
+      "suite": "course-browser",
+      "command": [
+        "node",
+        "platform-tests/course/browser.cjs"
+      ],
+      "exitCode": 1,
+      "seconds": 1.07
+    },
+    {
+      "suite": "advanced-browser",
+      "command": [
+        "node",
+        "platform-tests/advanced/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 10.01
+    },
+    {
+      "suite": "css-lab-browser",
+      "command": [
+        "node",
+        "platform-tests/css-lab/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 21.64
+    },
+    {
+      "suite": "js-lab-browser",
+      "command": [
+        "node",
+        "platform-tests/js-lab/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 10.85
+    },
+    {
+      "suite": "js-lab-peer",
+      "command": [
+        "node",
+        "platform-tests/course/js-lab-peer-regression.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.16
+    },
+    {
+      "suite": "js-private-channel",
+      "command": [
+        "node",
+        "/tmp/vlex-verify/platform-tests/final-review/worker-channel-regression.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.1
+    },
+    {
+      "suite": "explainer-transfer",
+      "command": [
+        "node",
+        "/tmp/vlex-verify/platform-tests/final-review/explainer-transfer-regression.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.5
+    },
+    {
+      "suite": "dashboard-browser",
+      "command": [
+        "node",
+        "platform-tests/dashboard/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 8.12
+    },
+    {
+      "suite": "dictionary-browser",
+      "command": [
+        "node",
+        "platform-tests/dictionary/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 11.77
+    },
+    {
+      "suite": "dictionary-css-corrections",
+      "command": [
+        "node",
+        "platform-tests/dictionary-css-fixes/browser.cjs",
+        "--applied"
+      ],
+      "exitCode": 1,
+      "seconds": 1.3
+    },
+    {
+      "suite": "dictionary-vue-corrections",
+      "command": [
+        "node",
+        "platform-tests/dictionary-vue-fixes/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 29.98
+    },
+    {
+      "suite": "integration-browser",
+      "command": [
+        "node",
+        "platform-tests/integration-smoke.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 14.69
+    },
+    {
+      "suite": "root-backups-browser",
+      "command": [
+        "node",
+        "platform-tests/integration/backups.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 10.62
+    }
+  ]
+}

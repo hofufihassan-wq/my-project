@@ -1,0 +1,24 @@
+{
+  "base": {
+    "exitCode": 0,
+    "stdout": "a3a464b9f1002c603e968c58808b80e13e47c788\n",
+    "stderr": ""
+  },
+  "branches": {
+    "exitCode": 0,
+    "stdout": "* chore/vlex-recovery-review\n  feat/vlex-emerald-ui\n  main\n  remotes/origin/HEAD -> origin/main\n  remotes/origin/feat/dictionary-local-windows\n  remotes/origin/feat/phase5-foundation-plan\n  remotes/origin/feat/phase5b-visual-identity\n  remotes/origin/feat/phase5b1-visual-correction\n  remotes/origin/feat/phase5b2-simulator-reference\n  remotes/origin/feat/phase5c1-code-explainer\n  remotes/origin/feat/simulator-final-glass-workbench\n  remotes/origin/feat/vlex-emerald-ui\n  remotes/origin/feat/vlex-personal-learning-platform\n  remotes/origin/fix/imported-draft-editor-sync\n  remotes/origin/fix/local-runtime-assets\n  remotes/origin/fix/phase4-stability-review\n  remotes/origin/fix/simulator-ambient-no-hum\n  remotes/origin/fix/vue-sfc-preview\n  remotes/origin/main\n  remotes/origin/preview/design-screenshots\n  remotes/origin/review/simulator-final-glass-3d4575a\n",
+    "stderr": ""
+  },
+  "relationship": {
+    "exitCode": 0,
+    "stdout": "0\t11\n",
+    "stderr": ""
+  },
+  "runtimeChanges": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "missingCommit": "Not in local restored object database or reachable branch histories; GitHub fetch_commit returned 422 No commit found.",
+  "originalLearningBranch": "Not listed by remote branch discovery; commits API returned 404."
+}

@@ -1,0 +1,35 @@
+PASS entry is silent with both channels opt-in and no AudioContext or ambient preference write
+PASS ambient button creates a real bounded audio graph while alerts stay muted
+PASS ambient level zero really silences its output and restores without changing alert volume
+PASS alerts can be enabled and muted independently while ambient continues
+PASS actual runtime error has a real audible error cue when ambience is off
+PASS ambient enabled preference persists but a reload never autoplays either channel
+PASS leaving simulator disconnects all voices while returning offers explicit resume
+PASS hiding the browser page silences ambient and alerts without erasing preferences
+PASS rapid UI ambient toggles leave only the fixed four-source graph
+PASS native first click after forty freshly rendered frames changes the actual DOM every time
+PASS preview tabs support native keyboard navigation and keep the same isolated frame
+PASS path explanation distinguishes pending real readiness source changes errors and stop
+PASS Console preserves log warning error levels and treats markup as text
+PASS sandbox cannot access parent data or alter top-level application state
+PASS original teaching guide JS-101 agrees with actual isolated output
+PASS original teaching guide JS-102 agrees with actual isolated output
+PASS original teaching guide JS-103 agrees with actual isolated output
+PASS original teaching guide HTML-101 agrees with actual isolated output
+PASS original teaching guide HTML-102 agrees with actual isolated output
+PASS original teaching guide HTML-103 agrees with actual isolated output
+PASS original teaching guide CSS-101 agrees with actual isolated output
+PASS original teaching guide CSS-102 agrees with actual isolated output
+PASS original teaching guide CSS-103 agrees with actual isolated output
+PASS original teaching guide TS-101 agrees with actual isolated output
+PASS original teaching guide TS-102 agrees with actual isolated output
+PASS original teaching guide TS-103 agrees with actual isolated output
+PASS original teaching guide VUE-101 agrees with actual isolated output
+PASS original teaching guide VUE-102 agrees with actual isolated output
+PASS original teaching guide VUE-103 agrees with actual isolated output
+PASS 1440px clean responsive capture keeps controls usable and panels fully visible
+PASS 768px clean responsive capture keeps controls usable and panels fully visible
+PASS 390px clean responsive capture keeps controls usable and panels fully visible
+PASS all final source hashes are unchanged and only intentional child errors/resource probes occurred
+33/33
+
