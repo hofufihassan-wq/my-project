@@ -1,0 +1,1197 @@
+{
+  "passed": 15,
+  "total": 15,
+  "rows": [
+    {
+      "id": "project-tasks",
+      "part": "exercise",
+      "passed": true,
+      "checks": [
+        {
+          "label": "count .task",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "قراءة",
+          "expected": "قراءة",
+          "passed": true
+        },
+        {
+          "label": "value #new-task",
+          "actual": "",
+          "expected": "",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "text #remaining",
+          "actual": "2",
+          "expected": "2",
+          "passed": true
+        },
+        {
+          "label": "text #completed",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "text #remaining",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "مراجعة",
+          "expected": "مراجعة",
+          "passed": true
+        },
+        {
+          "label": "text #completed",
+          "actual": "0",
+          "expected": "0",
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [
+            {
+              "title": "مراجعة",
+              "done": false
+            }
+          ],
+          "expected": [
+            {
+              "title": "مراجعة",
+              "done": false
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-tasks",
+      "part": "fix",
+      "passed": true,
+      "checks": [
+        {
+          "label": "count .task",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "قراءة",
+          "expected": "قراءة",
+          "passed": true
+        },
+        {
+          "label": "value #new-task",
+          "actual": "",
+          "expected": "",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "text #remaining",
+          "actual": "2",
+          "expected": "2",
+          "passed": true
+        },
+        {
+          "label": "text #completed",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "text #remaining",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "مراجعة",
+          "expected": "مراجعة",
+          "passed": true
+        },
+        {
+          "label": "text #completed",
+          "actual": "0",
+          "expected": "0",
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [
+            {
+              "title": "مراجعة",
+              "done": false
+            }
+          ],
+          "expected": [
+            {
+              "title": "مراجعة",
+              "done": false
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-tasks",
+      "part": "mastery",
+      "passed": true,
+      "checks": [
+        {
+          "label": "count .task",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "محفوظة",
+          "expected": "محفوظة",
+          "passed": true
+        },
+        {
+          "label": "text #completed",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "text #completed",
+          "actual": "0",
+          "expected": "0",
+          "passed": true
+        },
+        {
+          "label": "text #remaining",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "count img",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [
+            {
+              "title": "محفوظة",
+              "done": false
+            },
+            {
+              "title": "<img src=x onerror=alert(1)>",
+              "done": false
+            }
+          ],
+          "expected": [
+            {
+              "title": "محفوظة",
+              "done": false
+            },
+            {
+              "title": "<img src=x onerror=alert(1)>",
+              "done": false
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-expenses",
+      "part": "exercise",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text #total",
+          "actual": "0.00",
+          "expected": "0.00",
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "text #total",
+          "actual": "5.50",
+          "expected": "5.50",
+          "passed": true
+        },
+        {
+          "label": "text .expense-title",
+          "actual": "قهوة",
+          "expected": "قهوة",
+          "passed": true
+        },
+        {
+          "label": "text #total",
+          "actual": "7.50",
+          "expected": "7.50",
+          "passed": true
+        },
+        {
+          "label": "text #count",
+          "actual": "2",
+          "expected": "2",
+          "passed": true
+        },
+        {
+          "label": "text #total",
+          "actual": "2.00",
+          "expected": "2.00",
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [
+            {
+              "title": "ماء",
+              "amount": 2
+            }
+          ],
+          "expected": [
+            {
+              "title": "ماء",
+              "amount": 2
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-expenses",
+      "part": "fix",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text #total",
+          "actual": "0.00",
+          "expected": "0.00",
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "count .expense",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "text #total",
+          "actual": "5.50",
+          "expected": "5.50",
+          "passed": true
+        },
+        {
+          "label": "text .expense-title",
+          "actual": "قهوة",
+          "expected": "قهوة",
+          "passed": true
+        },
+        {
+          "label": "text #total",
+          "actual": "7.50",
+          "expected": "7.50",
+          "passed": true
+        },
+        {
+          "label": "text #count",
+          "actual": "2",
+          "expected": "2",
+          "passed": true
+        },
+        {
+          "label": "text #total",
+          "actual": "2.00",
+          "expected": "2.00",
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [
+            {
+              "title": "ماء",
+              "amount": 2
+            }
+          ],
+          "expected": [
+            {
+              "title": "ماء",
+              "amount": 2
+            }
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-expenses",
+      "part": "mastery",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text #total",
+          "actual": "3.25",
+          "expected": "3.25",
+          "passed": true
+        },
+        {
+          "label": "text #count",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "text #remaining-budget",
+          "actual": "-1.25",
+          "expected": "-1.25",
+          "passed": true
+        },
+        {
+          "label": "text #total",
+          "actual": "0.00",
+          "expected": "0.00",
+          "passed": true
+        },
+        {
+          "label": "text #remaining-budget",
+          "actual": "2.00",
+          "expected": "2.00",
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [],
+          "expected": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-catalog",
+      "part": "exercise",
+      "passed": true,
+      "checks": [
+        {
+          "label": "count .product",
+          "actual": 4,
+          "expected": 4,
+          "passed": true
+        },
+        {
+          "label": "text #matches",
+          "actual": "4",
+          "expected": "4",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .product-name",
+          "actual": "قلم Pen",
+          "expected": "قلم Pen",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "text #catalog-empty",
+          "actual": "لا توجد نتائج",
+          "expected": "لا توجد نتائج",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .product-name",
+          "actual": "كتاب",
+          "expected": "كتاب",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-catalog",
+      "part": "fix",
+      "passed": true,
+      "checks": [
+        {
+          "label": "count .product",
+          "actual": 4,
+          "expected": 4,
+          "passed": true
+        },
+        {
+          "label": "text #matches",
+          "actual": "4",
+          "expected": "4",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .product-name",
+          "actual": "قلم Pen",
+          "expected": "قلم Pen",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "text #catalog-empty",
+          "actual": "لا توجد نتائج",
+          "expected": "لا توجد نتائج",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .product-name",
+          "actual": "كتاب",
+          "expected": "كتاب",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-catalog",
+      "part": "mastery",
+      "passed": true,
+      "checks": [
+        {
+          "label": "count .product",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "text .product-name",
+          "actual": "قلم Pen",
+          "expected": "قلم Pen",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .product-name",
+          "actual": "دفتر",
+          "expected": "دفتر",
+          "passed": true
+        },
+        {
+          "label": "text #matches",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "count .product",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .product-name",
+          "actual": "سماعة",
+          "expected": "سماعة",
+          "passed": true
+        },
+        {
+          "label": "text #products .product:nth-child(2) .product-name",
+          "actual": "كتاب",
+          "expected": "كتاب",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-dashboard",
+      "part": "exercise",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text #revenue",
+          "actual": "250.00",
+          "expected": "250.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "7",
+          "expected": "7",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "35.71",
+          "expected": "35.71",
+          "passed": true
+        },
+        {
+          "label": "count .chart-bar",
+          "actual": 3,
+          "expected": 3,
+          "passed": true
+        },
+        {
+          "label": "text #revenue",
+          "actual": "160.00",
+          "expected": "160.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "4",
+          "expected": "4",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "40.00",
+          "expected": "40.00",
+          "passed": true
+        },
+        {
+          "label": "count .chart-bar",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "text #revenue",
+          "actual": "90.00",
+          "expected": "90.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "3",
+          "expected": "3",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "30.00",
+          "expected": "30.00",
+          "passed": true
+        },
+        {
+          "label": "text #revenue",
+          "actual": "0.00",
+          "expected": "0.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "0",
+          "expected": "0",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "0.00",
+          "expected": "0.00",
+          "passed": true
+        },
+        {
+          "label": "count .chart-bar",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-dashboard",
+      "part": "fix",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text #revenue",
+          "actual": "250.00",
+          "expected": "250.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "7",
+          "expected": "7",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "35.71",
+          "expected": "35.71",
+          "passed": true
+        },
+        {
+          "label": "count .chart-bar",
+          "actual": 3,
+          "expected": 3,
+          "passed": true
+        },
+        {
+          "label": "text #revenue",
+          "actual": "160.00",
+          "expected": "160.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "4",
+          "expected": "4",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "40.00",
+          "expected": "40.00",
+          "passed": true
+        },
+        {
+          "label": "count .chart-bar",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "text #revenue",
+          "actual": "90.00",
+          "expected": "90.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "3",
+          "expected": "3",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "30.00",
+          "expected": "30.00",
+          "passed": true
+        },
+        {
+          "label": "text #revenue",
+          "actual": "0.00",
+          "expected": "0.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "0",
+          "expected": "0",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "0.00",
+          "expected": "0.00",
+          "passed": true
+        },
+        {
+          "label": "count .chart-bar",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-dashboard",
+      "part": "mastery",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text #revenue",
+          "actual": "120.00",
+          "expected": "120.00",
+          "passed": true
+        },
+        {
+          "label": "text #orders",
+          "actual": "3",
+          "expected": "3",
+          "passed": true
+        },
+        {
+          "label": "text #rows",
+          "actual": "1",
+          "expected": "1",
+          "passed": true
+        },
+        {
+          "label": "attr data-value",
+          "actual": "120",
+          "expected": "120",
+          "passed": true
+        },
+        {
+          "label": "text #rows",
+          "actual": "0",
+          "expected": "0",
+          "passed": true
+        },
+        {
+          "label": "text #average",
+          "actual": "0.00",
+          "expected": "0.00",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-vue-workspace",
+      "part": "exercise",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text #summary",
+          "actual": "0/0",
+          "expected": "0/0",
+          "passed": true
+        },
+        {
+          "label": "مكون ملخص فعلي",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "قراءة",
+          "expected": "قراءة",
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "0/1",
+          "expected": "0/1",
+          "passed": true
+        },
+        {
+          "label": "مكون صف فعلي",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "0/2",
+          "expected": "0/2",
+          "passed": true
+        },
+        {
+          "label": "صفان بمكونين فعليين",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "1/2",
+          "expected": "1/2",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "قراءة",
+          "expected": "قراءة",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "0/1",
+          "expected": "0/1",
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [
+            {
+              "title": "تطبيق",
+              "done": false
+            }
+          ],
+          "expected": [
+            {
+              "title": "تطبيق",
+              "done": false
+            }
+          ],
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "تطبيق",
+          "expected": "تطبيق",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-vue-workspace",
+      "part": "fix",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text #summary",
+          "actual": "0/0",
+          "expected": "0/0",
+          "passed": true
+        },
+        {
+          "label": "مكون ملخص فعلي",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "قراءة",
+          "expected": "قراءة",
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "0/1",
+          "expected": "0/1",
+          "passed": true
+        },
+        {
+          "label": "مكون صف فعلي",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "0/2",
+          "expected": "0/2",
+          "passed": true
+        },
+        {
+          "label": "صفان بمكونين فعليين",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "1/2",
+          "expected": "1/2",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 1,
+          "expected": 1,
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "قراءة",
+          "expected": "قراءة",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "0/1",
+          "expected": "0/1",
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [
+            {
+              "title": "تطبيق",
+              "done": false
+            }
+          ],
+          "expected": [
+            {
+              "title": "تطبيق",
+              "done": false
+            }
+          ],
+          "passed": true
+        },
+        {
+          "label": "text .task-title",
+          "actual": "تطبيق",
+          "expected": "تطبيق",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "project-vue-workspace",
+      "part": "mastery",
+      "passed": true,
+      "checks": [
+        {
+          "label": "text .task-title",
+          "actual": "محفوظة",
+          "expected": "محفوظة",
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "1/1",
+          "expected": "1/1",
+          "passed": true
+        },
+        {
+          "label": "count .task",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "count img",
+          "actual": 0,
+          "expected": 0,
+          "passed": true
+        },
+        {
+          "label": "مكونان فعليان",
+          "actual": 2,
+          "expected": 2,
+          "passed": true
+        },
+        {
+          "label": "text #summary",
+          "actual": "0/2",
+          "expected": "0/2",
+          "passed": true
+        },
+        {
+          "label": "البيانات المحفوظة الفعلية",
+          "actual": [
+            {
+              "title": "محفوظة",
+              "done": false
+            },
+            {
+              "title": "<img src=x>",
+              "done": false
+            }
+          ],
+          "expected": [
+            {
+              "title": "محفوظة",
+              "done": false
+            },
+            {
+              "title": "<img src=x>",
+              "done": false
+            }
+          ],
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+PASS real browser accepts actual component data and keeps imported source inert
+PASS all actual components mount after typed backup import with no runtime error
+PASS malformed imports refuse nested shapes without replacing state or durable bytes
+PASS invalid live payload does not lock future valid saves
+PASS reload restores real typed notes and editor text without executing it
+PASS malformed durable state starts protected and keeps exact original plus backup
+

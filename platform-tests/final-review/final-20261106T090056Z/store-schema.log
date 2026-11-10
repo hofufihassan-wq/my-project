@@ -1,0 +1,16 @@
+PASS actual component schemas survive backup roundtrip without dropping fields
+PASS older partial sections retain defaults and no feature requires new metadata
+PASS falsy and object organizer strings cannot bypass validation
+PASS organizer impossible dates times and typed timestamp fields are rejected
+PASS course maps refuse arrays null and primitive containers
+PASS course answer records are checked without assuming lesson ids
+PASS review entries check calendar timestamps and finite interval bounds
+PASS course drafts project checklists and history reject malformed entries
+PASS editor source fields are exact strings and flags are real booleans
+PASS CSS controls refuse invalid known property types and preserve optional controls
+PASS malformed backup rejection is atomic and creates no recovery side effects
+PASS invalid live edit cannot poison saving mode or erase the last valid draft
+PASS rejected payload keeps protected and memory sessions in their existing modes
+PASS invalid stored shapes protect and preserve exact original on load
+PASS harmless unknown optional metadata remains lossless while unsafe keys fail
+PASS near-limit saved data always fits its own importable backup envelope

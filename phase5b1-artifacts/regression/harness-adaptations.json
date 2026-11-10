@@ -1,0 +1,7 @@
+[
+  {
+    "file": "run_stability_browser_tests.js",
+    "reason": "The approved 5B.1 layout uses grid at tablet widths >=640px; update the prior flex threshold only. Keep exact layout assertions and every sandbox, overflow and interactive assertion.",
+    "diff": "--- run_stability_browser_tests.js\n+++ run_stability_browser_tests.js\n@@ -168,7 +168,8 @@\n         await app(a=>{a.openSimulator();a.backToTracks();});assert.equal(await page.locator('[data-track]').count(),5);\n         await page.locator('[data-track=\"vue\"]').click();await ready();\n         await app(a=>a.selectLesson('VUE-101'));await ready();\n-        assert.equal(await page.locator('textarea.editor-textarea').evaluate(e=>getComputedStyle(e.closest('.lesson-workspace-grid')).display),width<1024?'flex':'grid');\n+        // 5B.1 intentionally keeps editor and preview in two grid columns on tablets (>=640px).\n+        assert.equal(await page.locator('textarea.editor-textarea').evaluate(e=>getComputedStyle(e.closest('.lesson-workspace-grid')).display),width<640?'flex':'grid');\n         assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');\n         await page.getByTestId('simulator-reference-run').click();await ready();\n         const frame=page.locator('iframe').contentFrame();await frame.locator('.count-display').waitFor();\n"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "key": "vuelexicon_practice_progress",
+  "expected": "{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>ORIGINAL DRAFT</p>\"},\"JS-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>SECOND ORIGINAL</p>\"}}",
+  "actual": "{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>ORIGINAL DRAFT</p>\"},\"JS-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p>SECOND ORIGINAL</p>\"}}",
+  "toast": "تعذر الحفظ: احتفظنا بالسجل الأصلي. صدّر بيانات الاسترجاع أولاً؛ النسخة الحالية في الذاكرة فقط."
+}

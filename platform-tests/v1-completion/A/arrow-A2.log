@@ -1,0 +1,22 @@
+PASS direct pilot route mounts all eight stages without parent errors
+PASS line and token explanations respond to click and keyboard
+PASS prediction wrong/correct answers and progressive hints persist
+PASS playground executes actual example output
+PASS syntax errors and infinite loops do not freeze parent
+PASS unsupported simulator source gives precise refusal
+PASS alternative correct implementations and ordinary/edge cases pass
+PASS constant/wrong and missing return solutions fail actual cases
+PASS assessment infinite loop terminates and can run again
+PASS fix task accepts explicit or implicit returns
+PASS optional filter tests empty negative zero duplicate and nonmutation
+PASS selected exercise and its hints survive reload
+PASS untrusted global messages cannot forge a pass
+PASS mastery requires quizzes and novel code, then editing revokes proof
+PASS simulator receives exact supported source without auto-run and returns to saved stage
+PASS old course saves preserve guided state and prerequisite selection
+PASS backup roundtrip and rejected import preserve draft, hints and other data
+PASS XSS-like playground strings cannot escape parent
+PASS all themes and mobile maintain usable pilot layout
+PASS full browser process restart restores current step, drafts and mastery evidence
+PASS no unexpected parent errors
+

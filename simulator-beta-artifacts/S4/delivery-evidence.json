@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-10-31T05:18:23.257271+00:00",
+  "branch": "feat/simulator-beta-s1-s4",
+  "baseCommit": "1fdd35b",
+  "runtimeHashAgreement": true,
+  "testedRuntimeHashes": {
+    "app.js": "b1d42f0720b435e3779668e85d36790bd37c8fe8409036f2d3165e2f69ecba00",
+    "index.html": "8683b721a0349b23bea6adaee2db1d0bbf43c2c0659a0727a2e961c039f32864",
+    "simulator-beta.js": "0b6a0302efb4ad94ea45fbfb992f5d7a311b3684644f20738261431d7ba8ab1e",
+    "simulator-reference.css": "0d7c111ab21566d7cbd2507fa221fe6a617bab049be01ab3cf14f60b1ba043ee",
+    "assets/tailwind-3.4.17.min.css": "8685dc13ad7f371dc9d53b05f8ebf82cd832a928e21e16e86b1bdf325d3423c7",
+    "assets/vendor/manifest.json": "f26e6a14bda58625e00f0c08b043188bb2ffc1d59b21c9d771736f639f497421",
+    "tailwind.config.cjs": "7403886f28e77ad6be0b8e874413a2708e4aa179ae2fb413c7118534ab04871f"
+  },
+  "results": {
+    "unit": {
+      "passed": 27,
+      "total": 27
+    },
+    "browser": {
+      "passed": 30,
+      "total": 30
+    },
+    "supplemental": {
+      "passed": 7,
+      "total": 7
+    },
+    "priorRegressionCommands": {
+      "passed": 19,
+      "total": 19
+    },
+    "finalSyntax": {
+      "passed": 30,
+      "total": 30
+    }
+  },
+  "files": [
+    {
+      "path": "simulator-beta-artifacts/S4/beta/screenshots/simulator-1440.png",
+      "bytes": 683195,
+      "sha256": "cabfb4e3f0bc1dd7316aecbb0db2b985cbc47a854a82ba95007edc69bcd737a8"
+    },
+    {
+      "path": "simulator-beta-artifacts/S4/beta/screenshots/simulator-390.png",
+      "bytes": 163826,
+      "sha256": "94b0cf7a2680efd821e619b7a210d8c1819a1172ec22e62af7080584bfc10ea9"
+    },
+    {
+      "path": "simulator-beta-artifacts/S4/beta/screenshots/simulator-768.png",
+      "bytes": 332466,
+      "sha256": "516bfb5cddab425c8ce8ab41f84a648b112843ce106a92835772a4be903b29a5"
+    },
+    {
+      "path": "simulator-beta-artifacts/S4/beta/screenshots/simulator-console-390.png",
+      "bytes": 180477,
+      "sha256": "cbf7f6431a70253a66b98c0e8db12258ac8451746c076b62ad631f8072058a94"
+    },
+    {
+      "path": "simulator-beta-artifacts/S4/beta/screenshots/simulator-preview-390.png",
+      "bytes": 136683,
+      "sha256": "c3d68747ba8b95fb8c45ce79c5fabb770dbde477097fd0b68644869e5843478c"
+    },
+    {
+      "path": "simulator-beta-artifacts/S4/beta/supplemental/screenshots/simulator-1440-full.png",
+      "bytes": 1095498,
+      "sha256": "9793856ea26dd5929e28080420c968f78579322f3edc43ea607c58ae8e86a4db"
+    },
+    {
+      "path": "simulator-beta-artifacts/S4/beta/supplemental/screenshots/simulator-320-full.png",
+      "bytes": 568541,
+      "sha256": "b40be640155b097f475e1fe057b5cd6f41b61a70b5fe2a4a93461527e7e5678c"
+    },
+    {
+      "path": "simulator-beta-artifacts/S4/beta/supplemental/screenshots/simulator-320.png",
+      "bytes": 145235,
+      "sha256": "d4c55f40ebeb757a8ee7486bd60fef5555b035918eb36433c43f581f8a805251"
+    },
+    {
+      "path": "simulator-beta-artifacts/S4/demo/simulator-beta-demo.mp4",
+      "bytes": 967665,
+      "sha256": "187a8f4cd234de2eed0e3fd78be7acf99f66737eb2e913f2c15ed37a48c9f6f3"
+    }
+  ],
+  "audioPeak": 0.03495720773935318,
+  "noCodePush": true,
+  "noMerge": true,
+  "noDeployment": true,
+  "approval": "Functional beta within reported scope, visual approval pending owner review."
+}

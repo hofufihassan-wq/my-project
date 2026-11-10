@@ -1,0 +1,11 @@
+{
+  "terms": 180,
+  "sources": 360,
+  "counts": {
+    "يحتاج سياقًا": 220,
+    "يعمل": 86,
+    "غير مدعوم": 54
+  },
+  "mismatches": [],
+  "note": "Saved classifications verified against source fingerprints; examples not re-executed by this check."
+}

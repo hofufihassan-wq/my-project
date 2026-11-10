@@ -1,0 +1,8 @@
+PASS health identifies exact loopback origin and same-folder reuse
+FAIL runtime HTML and MIME headers load, source/private paths are denied Expected values to be strictly equal:
+
+200 !== 403
+
+PASS actual launcher serves dictionary and English/Arabic search
+PASS favorite survives full browser close and local server stop/restart
+PASS package contains runtime, originals and matching checksums without private source

@@ -1,0 +1,52 @@
+{
+  "base": "3d4575aeae16c22b6932a6bac5b18a7a4f9cca37",
+  "before": {
+    "consoleErrors": [
+      "Blocked form submission to '' because the form's frame is sandboxed and the 'allow-forms' permission is not set."
+    ],
+    "submit": {
+      "seen": true,
+      "defaultPrevented": false
+    },
+    "diagnostics": {
+      "valid": true,
+      "html": "<form onsubmit=\"event.preventDefault(); alert('تم استلام بياناتك بنجاح!');\">\n      <label for=\"full-name\">الاسم الكريم:</label>\n      <input id=\"full-name\" type=\"text\" placeholder=\"اكتب اسمك...\" required=\"\">\n\n      <label for=\"user-email\">البريد الإلكتروني:</label>\n      <input id=\"user-email\" type=\"email\" placeholder=\"name@example.com\" required=\"\">\n\n      <button type=\"submit\">تأكيد الاشتراك</button>\n    </form>",
+      "values": [
+        {
+          "value": "مراجعة حقيقية",
+          "valid": true
+        },
+        {
+          "value": "audit@example.test",
+          "valid": true
+        }
+      ]
+    },
+    "sandbox": "allow-scripts",
+    "statusCount": 0,
+    "bodyText": "انضم إلى النشرة البريدية 📬\nالاسم الكريم:\nالبريد الإلكتروني:\n تأكيد الاشتراك"
+  },
+  "after": {
+    "submit": {
+      "seen": true,
+      "defaultPrevented": true
+    },
+    "diagnostics": {
+      "valid": true,
+      "html": "<form>\n      <label for=\"full-name\">الاسم الكريم:</label>\n      <input id=\"full-name\" type=\"text\" placeholder=\"اكتب اسمك...\" required=\"\">\n\n      <label for=\"user-email\">البريد الإلكتروني:</label>\n      <input id=\"user-email\" type=\"email\" placeholder=\"name@example.com\" required=\"\">\n\n      <button type=\"submit\" onclick=\"event.preventDefault(); if (this.form.reportValidity()) document.getElementById('form-status').textContent = 'تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.';\">تأكيد الاشتراك</button>\n      <p id=\"form-status\" role=\"status\" aria-live=\"polite\">تم التحقق من النموذج محليًا؛ لم تُرسل البيانات.</p>\n    </form>",
+      "values": [
+        {
+          "value": "مراجعة حقيقية",
+          "valid": true
+        },
+        {
+          "value": "audit@example.test",
+          "valid": true
+        }
+      ]
+    },
+    "sandbox": "allow-scripts",
+    "statusCount": 1,
+    "bodyText": "انضم إلى النشرة البريدية 📬\nالاسم الكريم:\nالبريد الإلكتروني:\n تأكيد الاشتراك\n\nتم التحقق من النموذج محليًا؛ لم تُرسل البيانات."
+  }
+}

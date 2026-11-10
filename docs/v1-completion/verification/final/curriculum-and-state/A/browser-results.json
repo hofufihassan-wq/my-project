@@ -1,0 +1,22 @@
+{
+  "passed": 4,
+  "total": 4,
+  "results": [
+    {
+      "name": "native edits and course filters verified as saved",
+      "passed": true
+    },
+    {
+      "name": "whole browser restart restores page, level, track, draft and theme",
+      "passed": true
+    },
+    {
+      "name": "review tab survives reload",
+      "passed": true
+    },
+    {
+      "name": "new metadata roundtrips and invalid navigation import is atomic",
+      "passed": true
+    }
+  ]
+}

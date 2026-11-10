@@ -1,0 +1,271 @@
+{
+  "passed": 26,
+  "total": 26,
+  "results": [
+    {
+      "name": "dictionary green: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "dictionary green: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 7,
+        "value": 130,
+        "textMatches": true,
+        "font": true,
+        "height": 370,
+        "width": 433,
+        "paintWidth": 433,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "dictionary: mobile fits 390px",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "explainer green: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "explainer green: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 12,
+        "value": 116,
+        "textMatches": true,
+        "font": true,
+        "height": 260,
+        "width": 1342,
+        "paintWidth": 1342,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "explainer: mobile fits 390px",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "lessons green: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "lessons green: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 40,
+        "value": 255,
+        "textMatches": true,
+        "font": true,
+        "height": 260,
+        "width": 984,
+        "paintWidth": 984,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "lessons: mobile fits 390px",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "css-lab green: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "css-lab green: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 24,
+        "value": 166,
+        "textMatches": true,
+        "font": true,
+        "height": 260,
+        "width": 517,
+        "paintWidth": 517,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "css-lab: mobile fits 390px",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "js-lab green: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "js-lab green: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 15,
+        "value": 156,
+        "textMatches": true,
+        "font": true,
+        "height": 260,
+        "width": 648,
+        "paintWidth": 648,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "js-lab: mobile fits 390px",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "dictionary glass: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "dictionary glass: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 7,
+        "value": 130,
+        "textMatches": true,
+        "font": true,
+        "height": 370,
+        "width": 433,
+        "paintWidth": 433,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "explainer glass: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "explainer glass: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 12,
+        "value": 116,
+        "textMatches": true,
+        "font": true,
+        "height": 260,
+        "width": 1342,
+        "paintWidth": 1342,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "lessons glass: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "lessons glass: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 40,
+        "value": 255,
+        "textMatches": true,
+        "font": true,
+        "height": 260,
+        "width": 984,
+        "paintWidth": 984,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "css-lab glass: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "css-lab glass: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 24,
+        "value": 166,
+        "textMatches": true,
+        "font": true,
+        "height": 260,
+        "width": 517,
+        "paintWidth": 517,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "js-lab glass: actual page, no runtime error or horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "js-lab glass: genuine syntax spans and aligned native editor",
+      "passed": true,
+      "detail": {
+        "spans": 15,
+        "value": 156,
+        "textMatches": true,
+        "font": true,
+        "height": 260,
+        "width": 648,
+        "paintWidth": 648,
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    },
+    {
+      "name": "native editor preserves input, selection, literal HTML and reload",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,71 @@
+PASS chromium 360 header geometry keeps every quick action fully inside the viewport
+PASS chromium 360 bookmark UI list click stores a real ID without losing other favorites
+PASS chromium 360 bookmark UI header returns from simulator on mobile and desktop navigation
+PASS chromium 360 startup and navigation preserve saved null/missing drafts exactly
+PASS chromium 360 search suggestions remain selectable across category and alphabet filters
+PASS chromium 360 changing query resets stale keyboard suggestion selection
+PASS chromium 360 typing ? in the code editor does not invoke global shortcuts
+PASS chromium 360 global ? still works and Escape closes progress and shortcut dialogs
+PASS chromium 360 late completion of an older import cannot replace the newest selected file
+PASS chromium 360 bookmark mastery code explanation export reject-import and reload preserve data
+PASS chromium 360 RTL Arabic fonts dark theme and layouts remain usable at this width
+PASS chromium 360 no core external requests, failed resources or uncaught errors
+PASS chromium 390 header geometry keeps every quick action fully inside the viewport
+PASS chromium 390 bookmark UI list click stores a real ID without losing other favorites
+PASS chromium 390 bookmark UI header returns from simulator on mobile and desktop navigation
+PASS chromium 390 startup and navigation preserve saved null/missing drafts exactly
+PASS chromium 390 search suggestions remain selectable across category and alphabet filters
+PASS chromium 390 changing query resets stale keyboard suggestion selection
+PASS chromium 390 typing ? in the code editor does not invoke global shortcuts
+PASS chromium 390 global ? still works and Escape closes progress and shortcut dialogs
+PASS chromium 390 late completion of an older import cannot replace the newest selected file
+PASS chromium 390 bookmark mastery code explanation export reject-import and reload preserve data
+PASS chromium 390 RTL Arabic fonts dark theme and layouts remain usable at this width
+PASS chromium 390 no core external requests, failed resources or uncaught errors
+PASS chromium 768 header geometry keeps every quick action fully inside the viewport
+PASS chromium 768 bookmark UI list click stores a real ID without losing other favorites
+PASS chromium 768 bookmark UI header returns from simulator on mobile and desktop navigation
+PASS chromium 768 startup and navigation preserve saved null/missing drafts exactly
+PASS chromium 768 search suggestions remain selectable across category and alphabet filters
+PASS chromium 768 changing query resets stale keyboard suggestion selection
+PASS chromium 768 typing ? in the code editor does not invoke global shortcuts
+PASS chromium 768 global ? still works and Escape closes progress and shortcut dialogs
+PASS chromium 768 late completion of an older import cannot replace the newest selected file
+PASS chromium 768 bookmark mastery code explanation export reject-import and reload preserve data
+FAIL chromium 768 RTL Arabic fonts dark theme and layouts remain usable at this width Expected values to be strictly equal:
+
+'grid' !== 'flex'
+
+PASS chromium 768 no core external requests, failed resources or uncaught errors
+PASS chromium 1440 header geometry keeps every quick action fully inside the viewport
+PASS chromium 1440 bookmark UI list click stores a real ID without losing other favorites
+PASS chromium 1440 bookmark UI header returns from simulator on mobile and desktop navigation
+PASS chromium 1440 startup and navigation preserve saved null/missing drafts exactly
+PASS chromium 1440 search suggestions remain selectable across category and alphabet filters
+PASS chromium 1440 changing query resets stale keyboard suggestion selection
+PASS chromium 1440 typing ? in the code editor does not invoke global shortcuts
+PASS chromium 1440 global ? still works and Escape closes progress and shortcut dialogs
+PASS chromium 1440 late completion of an older import cannot replace the newest selected file
+PASS chromium 1440 bookmark mastery code explanation export reject-import and reload preserve data
+PASS chromium 1440 RTL Arabic fonts dark theme and layouts remain usable at this width
+PASS chromium 1440 no core external requests, failed resources or uncaught errors
+PASS chromium 1440 real reference execution and internal validator: JS-101
+PASS chromium 1440 real reference execution and internal validator: JS-102
+PASS chromium 1440 real reference execution and internal validator: JS-103
+PASS chromium 1440 real reference execution and internal validator: HTML-101
+PASS chromium 1440 real reference execution and internal validator: HTML-102
+PASS chromium 1440 real reference execution and internal validator: HTML-103
+PASS chromium 1440 real reference execution and internal validator: CSS-101
+PASS chromium 1440 real reference execution and internal validator: CSS-102
+PASS chromium 1440 real reference execution and internal validator: CSS-103
+PASS chromium 1440 real reference execution and internal validator: TS-101
+PASS chromium 1440 real reference execution and internal validator: TS-102
+PASS chromium 1440 real reference execution and internal validator: TS-103
+PASS chromium 1440 real reference execution and internal validator: VUE-101
+PASS chromium 1440 real reference execution and internal validator: VUE-102
+PASS chromium 1440 real reference execution and internal validator: VUE-103
+PASS chromium 1440 known false positives fail after actual isolated runs without output
+PASS chromium 1440 no uncaught exceptions after all fifteen real reference executions
+UNAVAILABLE firefox browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/firefox-1497/firefox/firefox
+UNAVAILABLE webkit browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh
+64/65 stability browser checks passed

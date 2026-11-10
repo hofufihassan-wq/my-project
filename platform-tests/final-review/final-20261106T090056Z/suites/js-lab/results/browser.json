@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-11-06T09:01:45.554Z",
+  "browser": "154.0.8037.57",
+  "passed": 18,
+  "total": 18,
+  "errors": [],
+  "results": [
+    {
+      "name": "opaque iframe Blob Worker is supported; native loop/function output and variable values",
+      "passed": true
+    },
+    {
+      "name": "step execution pauses before effects; variables reflect each actual completed top-level statement",
+      "passed": true
+    },
+    {
+      "name": "AST boundaries preserve strings, multiline arrays, destructuring and semicolons",
+      "passed": true
+    },
+    {
+      "name": "parser catches syntax failure and Worker reports real runtime ReferenceError",
+      "passed": true
+    },
+    {
+      "name": "infinite top-level loop is terminated within five seconds without freezing the page",
+      "passed": true
+    },
+    {
+      "name": "stop terminates actual timers and replacement runs discard old evidence",
+      "passed": true
+    },
+    {
+      "name": "delayed infinite callback is terminated by the post-completion timer window",
+      "passed": true
+    },
+    {
+      "name": "opaque Worker has no parent DOM/storage, network fetch blocked by inherited CSP",
+      "passed": true
+    },
+    {
+      "name": "forged parent/other-frame messages and direct Worker payload do not forge Console",
+      "passed": true
+    },
+    {
+      "name": "continuous execution preserves native synchronous/microtask order",
+      "passed": true
+    },
+    {
+      "name": "observing objects never invokes getters or Proxy property traps",
+      "passed": true
+    },
+    {
+      "name": "user arguments do not expose capture helpers and native formatting survives global String replacement",
+      "passed": true
+    },
+    {
+      "name": "Array prototype setters cannot alter snapshot records or crash parent rendering",
+      "passed": true
+    },
+    {
+      "name": "manual steps keep control messages private from user global message listeners",
+      "passed": true
+    },
+    {
+      "name": "manual async scheduling and lexical eval fail with supported-scope explanation",
+      "passed": true
+    },
+    {
+      "name": "pasted closing script and HTML remain source, not parent markup",
+      "passed": true
+    },
+    {
+      "name": "source edits do not autorun; source persists after page reload",
+      "passed": true
+    },
+    {
+      "name": "bridge emits real source to the existing simulator; mobile layout has no document overflow",
+      "passed": true
+    }
+  ]
+}

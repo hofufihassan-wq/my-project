@@ -1,0 +1,4739 @@
+{
+  "passed": 22,
+  "total": 22,
+  "results": [
+    {
+      "id": "html-structure",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عنوان واحد",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نص العنوان",
+              "expected": "\"أهدافي\"",
+              "actual": "\"أهدافي\"",
+              "passed": true
+            },
+            {
+              "label": "فقرتان",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عنوان واحد",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نص العنوان",
+              "expected": "\"أهدافي\"",
+              "actual": "\"أهدافي\"",
+              "passed": true
+            },
+            {
+              "label": "فقرتان",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 2,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عنوان واحد",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نص العنوان",
+              "expected": "\"أهدافي\"",
+              "actual": "\"أهدافي\"",
+              "passed": true
+            },
+            {
+              "label": "فقرتان",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عنوان رئيسي",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "المحتوى",
+              "expected": "\"أهدافي\"",
+              "actual": "\"أهدافي\"",
+              "passed": true
+            },
+            {
+              "label": "عدد الفقرات",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عنوان رئيسي",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "المحتوى",
+              "expected": "\"أهدافي\"",
+              "actual": "\"أهدافي\"",
+              "passed": true
+            },
+            {
+              "label": "عدد الفقرات",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عنوان واحد",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان المشروع",
+              "expected": "\"مشروعي\"",
+              "actual": "\"مشروعي\"",
+              "passed": true
+            },
+            {
+              "label": "فقرة واحدة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نص الفقرة",
+              "expected": "\"أبدأ اليوم\"",
+              "actual": "\"أبدأ اليوم\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عنوان واحد",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان المشروع",
+              "expected": "\"مشروعي\"",
+              "actual": "\"مشروعي\"",
+              "passed": true
+            },
+            {
+              "label": "فقرة واحدة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نص الفقرة",
+              "expected": "\"أبدأ اليوم\"",
+              "actual": "\"أبدأ اليوم\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-selectors",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "البطاقة حمراء",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "الفقرة زرقاء",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "البطاقة حمراء",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "الفقرة زرقاء",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 2,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "البطاقة حمراء",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "الفقرة زرقاء",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "لون النص",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "الفقرة الأخرى",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "لون النص",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "الفقرة الأخرى",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الخلفية",
+              "expected": "\"rgb(0, 0, 0)\"",
+              "actual": "\"rgb(0, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "النص",
+              "expected": "\"rgb(255, 255, 255)\"",
+              "actual": "\"rgb(255, 255, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الخلفية",
+              "expected": "\"rgb(0, 0, 0)\"",
+              "actual": "\"rgb(0, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "النص",
+              "expected": "\"rgb(255, 255, 255)\"",
+              "actual": "\"rgb(255, 255, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-attributes",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الوجهة",
+              "expected": "\"#plan\"",
+              "actual": "\"#plan\"",
+              "passed": true
+            },
+            {
+              "label": "وصف الرابط",
+              "expected": "\"خطتي\"",
+              "actual": "\"خطتي\"",
+              "passed": true
+            },
+            {
+              "label": "الهدف موجود",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الوجهة",
+              "expected": "\"#plan\"",
+              "actual": "\"#plan\"",
+              "passed": true
+            },
+            {
+              "label": "وصف الرابط",
+              "expected": "\"خطتي\"",
+              "actual": "\"خطتي\"",
+              "passed": true
+            },
+            {
+              "label": "الهدف موجود",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الوجهة",
+              "expected": "\"#plan\"",
+              "actual": "\"#plan\"",
+              "passed": true
+            },
+            {
+              "label": "وصف الرابط",
+              "expected": "\"خطتي\"",
+              "actual": "\"خطتي\"",
+              "passed": true
+            },
+            {
+              "label": "الهدف موجود",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الوجهة",
+              "expected": "\"#plan\"",
+              "actual": "\"#plan\"",
+              "passed": true
+            },
+            {
+              "label": "وصف الرابط",
+              "expected": "\"خطتي\"",
+              "actual": "\"خطتي\"",
+              "passed": true
+            },
+            {
+              "label": "الهدف موجود",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الوجهة الجديدة",
+              "expected": "\"#summary\"",
+              "actual": "\"#summary\"",
+              "passed": true
+            },
+            {
+              "label": "نص الرابط",
+              "expected": "\"الملخص\"",
+              "actual": "\"الملخص\"",
+              "passed": true
+            },
+            {
+              "label": "قسم الهدف",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الوجهة الجديدة",
+              "expected": "\"#summary\"",
+              "actual": "\"#summary\"",
+              "passed": true
+            },
+            {
+              "label": "نص الرابط",
+              "expected": "\"الملخص\"",
+              "actual": "\"الملخص\"",
+              "passed": true
+            },
+            {
+              "label": "قسم الهدف",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-images",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "صورة واحدة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "البديل",
+              "expected": "\"شعار مشروعي\"",
+              "actual": "\"شعار مشروعي\"",
+              "passed": true
+            },
+            {
+              "label": "مصدر محلي",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صورة قابلة للتحميل",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "صورة واحدة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "البديل",
+              "expected": "\"شعار مشروعي\"",
+              "actual": "\"شعار مشروعي\"",
+              "passed": true
+            },
+            {
+              "label": "مصدر محلي",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صورة قابلة للتحميل",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "صورة واحدة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "البديل",
+              "expected": "\"شعار مشروعي\"",
+              "actual": "\"شعار مشروعي\"",
+              "passed": true
+            },
+            {
+              "label": "مصدر محلي",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صورة قابلة للتحميل",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "صورة واحدة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "البديل",
+              "expected": "\"شعار مشروعي\"",
+              "actual": "\"شعار مشروعي\"",
+              "passed": true
+            },
+            {
+              "label": "مصدر محلي",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صورة قابلة للتحميل",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الصورة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "بديل زخرفي",
+              "expected": "\"\"",
+              "actual": "\"\"",
+              "passed": true
+            },
+            {
+              "label": "المصدر",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صورة قابلة للتحميل",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الصورة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "بديل زخرفي",
+              "expected": "\"\"",
+              "actual": "\"\"",
+              "passed": true
+            },
+            {
+              "label": "المصدر",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صورة قابلة للتحميل",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-lists",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "قائمة غير مرتبة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "ثلاثة عناصر",
+              "expected": "3",
+              "actual": "3",
+              "passed": true
+            },
+            {
+              "label": "بنود لها محتوى",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "قائمة غير مرتبة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "ثلاثة عناصر",
+              "expected": "3",
+              "actual": "3",
+              "passed": true
+            },
+            {
+              "label": "بنود لها محتوى",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "قائمة غير مرتبة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "ثلاثة عناصر",
+              "expected": "3",
+              "actual": "3",
+              "passed": true
+            },
+            {
+              "label": "بنود لها محتوى",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "قائمة غير مرتبة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "ثلاثة عناصر",
+              "expected": "3",
+              "actual": "3",
+              "passed": true
+            },
+            {
+              "label": "بنود لها محتوى",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "قائمة مرتبة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "خطوتان",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            },
+            {
+              "label": "بنود لها محتوى",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "قائمة مرتبة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "خطوتان",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            },
+            {
+              "label": "بنود لها محتوى",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-table",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "جدول",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان",
+              "expected": "\"نتائجي\"",
+              "actual": "\"نتائجي\"",
+              "passed": true
+            },
+            {
+              "label": "رأسا عمودين",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            },
+            {
+              "label": "خليتا بيانات",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "جدول",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان",
+              "expected": "\"نتائجي\"",
+              "actual": "\"نتائجي\"",
+              "passed": true
+            },
+            {
+              "label": "رأسا عمودين",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            },
+            {
+              "label": "خليتا بيانات",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "جدول",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان",
+              "expected": "\"نتائجي\"",
+              "actual": "\"نتائجي\"",
+              "passed": true
+            },
+            {
+              "label": "رأسا عمودين",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            },
+            {
+              "label": "خليتا بيانات",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "جدول",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان",
+              "expected": "\"نتائجي\"",
+              "actual": "\"نتائجي\"",
+              "passed": true
+            },
+            {
+              "label": "رأسا عمودين",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            },
+            {
+              "label": "خليتا بيانات",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "العنوان",
+              "expected": "\"أيامي\"",
+              "actual": "\"أيامي\"",
+              "passed": true
+            },
+            {
+              "label": "رأس عمود",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "بيانات اليومين",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            },
+            {
+              "label": "ثلاثة صفوف",
+              "expected": "3",
+              "actual": "3",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "العنوان",
+              "expected": "\"أيامي\"",
+              "actual": "\"أيامي\"",
+              "passed": true
+            },
+            {
+              "label": "رأس عمود",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "بيانات اليومين",
+              "expected": "2",
+              "actual": "2",
+              "passed": true
+            },
+            {
+              "label": "ثلاثة صفوف",
+              "expected": "3",
+              "actual": "3",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-form",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تسمية واضحة",
+              "expected": "\"بريدي\"",
+              "actual": "\"بريدي\"",
+              "passed": true
+            },
+            {
+              "label": "ربط التسمية",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "نوع المدخل",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "اسم القيمة",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تسمية واضحة",
+              "expected": "\"بريدي\"",
+              "actual": "\"بريدي\"",
+              "passed": true
+            },
+            {
+              "label": "ربط التسمية",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "نوع المدخل",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "اسم القيمة",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تسمية واضحة",
+              "expected": "\"بريدي\"",
+              "actual": "\"بريدي\"",
+              "passed": true
+            },
+            {
+              "label": "ربط التسمية",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "نوع المدخل",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "اسم القيمة",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تسمية واضحة",
+              "expected": "\"بريدي\"",
+              "actual": "\"بريدي\"",
+              "passed": true
+            },
+            {
+              "label": "ربط التسمية",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "نوع المدخل",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "اسم القيمة",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "التسمية",
+              "expected": "\"اسمي\"",
+              "actual": "\"اسمي\"",
+              "passed": true
+            },
+            {
+              "label": "الارتباط",
+              "expected": "\"user\"",
+              "actual": "\"user\"",
+              "passed": true
+            },
+            {
+              "label": "اسم القيمة",
+              "expected": "\"user\"",
+              "actual": "\"user\"",
+              "passed": true
+            },
+            {
+              "label": "حقل نصي",
+              "expected": "\"text\"",
+              "actual": "\"text\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "التسمية",
+              "expected": "\"اسمي\"",
+              "actual": "\"اسمي\"",
+              "passed": true
+            },
+            {
+              "label": "الارتباط",
+              "expected": "\"user\"",
+              "actual": "\"user\"",
+              "passed": true
+            },
+            {
+              "label": "اسم القيمة",
+              "expected": "\"user\"",
+              "actual": "\"user\"",
+              "passed": true
+            },
+            {
+              "label": "حقل نصي",
+              "expected": "\"text\"",
+              "actual": "\"text\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-semantics",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "منطقة رئيسية",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان داخل المحتوى",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "تسمية المنطقة",
+              "expected": "\"التنقل\"",
+              "actual": "\"التنقل\"",
+              "passed": true
+            },
+            {
+              "label": "رابط تنقل",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نوع الزر",
+              "expected": "\"button\"",
+              "actual": "\"button\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "منطقة رئيسية",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان داخل المحتوى",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "تسمية المنطقة",
+              "expected": "\"التنقل\"",
+              "actual": "\"التنقل\"",
+              "passed": true
+            },
+            {
+              "label": "رابط تنقل",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نوع الزر",
+              "expected": "\"button\"",
+              "actual": "\"button\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "منطقة رئيسية",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان داخل المحتوى",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "تسمية المنطقة",
+              "expected": "\"التنقل\"",
+              "actual": "\"التنقل\"",
+              "passed": true
+            },
+            {
+              "label": "رابط تنقل",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نوع الزر",
+              "expected": "\"button\"",
+              "actual": "\"button\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "منطقة رئيسية",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان داخل المحتوى",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "تسمية المنطقة",
+              "expected": "\"التنقل\"",
+              "actual": "\"التنقل\"",
+              "passed": true
+            },
+            {
+              "label": "رابط تنقل",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "نوع الزر",
+              "expected": "\"button\"",
+              "actual": "\"button\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "رئيسي",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان المقال",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "زر أصلي",
+              "expected": "\"اقرأ\"",
+              "actual": "\"اقرأ\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "رئيسي",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "عنوان المقال",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "زر أصلي",
+              "expected": "\"اقرأ\"",
+              "actual": "\"اقرأ\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-form-validation",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الفارغ غير صالح",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "نوع البريد",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "مطلوب",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صياغة غير صالحة",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "صياغة بريد صالحة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الفارغ غير صالح",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "نوع البريد",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "مطلوب",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صياغة غير صالحة",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "صياغة بريد صالحة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الفارغ غير صالح",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "نوع البريد",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "مطلوب",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صياغة غير صالحة",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "صياغة بريد صالحة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الفارغ غير صالح",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "نوع البريد",
+              "expected": "\"email\"",
+              "actual": "\"email\"",
+              "passed": true
+            },
+            {
+              "label": "مطلوب",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "صياغة غير صالحة",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "صياغة بريد صالحة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عددي",
+              "expected": "\"number\"",
+              "actual": "\"number\"",
+              "passed": true
+            },
+            {
+              "label": "الحد الأدنى",
+              "expected": "\"18\"",
+              "actual": "\"18\"",
+              "passed": true
+            },
+            {
+              "label": "الفراغ غير صالح",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "مطلوب",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "دون الحد",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "عند الحد",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عددي",
+              "expected": "\"number\"",
+              "actual": "\"number\"",
+              "passed": true
+            },
+            {
+              "label": "الحد الأدنى",
+              "expected": "\"18\"",
+              "actual": "\"18\"",
+              "passed": true
+            },
+            {
+              "label": "الفراغ غير صالح",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "مطلوب",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "دون الحد",
+              "expected": "false",
+              "actual": "false",
+              "passed": true
+            },
+            {
+              "label": "عند الحد",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-form-feedback",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم الحقل",
+              "expected": "\"name\"",
+              "actual": "\"name\"",
+              "passed": true
+            },
+            {
+              "label": "وصف مرتبط",
+              "expected": "\"help\"",
+              "actual": "\"help\"",
+              "passed": true
+            },
+            {
+              "label": "رسالة المساعدة",
+              "expected": "\"الاسم مطلوب\"",
+              "actual": "\"الاسم مطلوب\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم الحقل",
+              "expected": "\"name\"",
+              "actual": "\"name\"",
+              "passed": true
+            },
+            {
+              "label": "وصف مرتبط",
+              "expected": "\"help\"",
+              "actual": "\"help\"",
+              "passed": true
+            },
+            {
+              "label": "رسالة المساعدة",
+              "expected": "\"الاسم مطلوب\"",
+              "actual": "\"الاسم مطلوب\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم الحقل",
+              "expected": "\"name\"",
+              "actual": "\"name\"",
+              "passed": true
+            },
+            {
+              "label": "وصف مرتبط",
+              "expected": "\"help\"",
+              "actual": "\"help\"",
+              "passed": true
+            },
+            {
+              "label": "رسالة المساعدة",
+              "expected": "\"الاسم مطلوب\"",
+              "actual": "\"الاسم مطلوب\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم الحقل",
+              "expected": "\"name\"",
+              "actual": "\"name\"",
+              "passed": true
+            },
+            {
+              "label": "وصف مرتبط",
+              "expected": "\"help\"",
+              "actual": "\"help\"",
+              "passed": true
+            },
+            {
+              "label": "رسالة المساعدة",
+              "expected": "\"الاسم مطلوب\"",
+              "actual": "\"الاسم مطلوب\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تسمية الرمز",
+              "expected": "\"pin\"",
+              "actual": "\"pin\"",
+              "passed": true
+            },
+            {
+              "label": "مرجع الوصف",
+              "expected": "\"pin-help\"",
+              "actual": "\"pin-help\"",
+              "passed": true
+            },
+            {
+              "label": "وصف موجود",
+              "expected": "\"ستة أرقام\"",
+              "actual": "\"ستة أرقام\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تسمية الرمز",
+              "expected": "\"pin\"",
+              "actual": "\"pin\"",
+              "passed": true
+            },
+            {
+              "label": "مرجع الوصف",
+              "expected": "\"pin-help\"",
+              "actual": "\"pin-help\"",
+              "passed": true
+            },
+            {
+              "label": "وصف موجود",
+              "expected": "\"ستة أرقام\"",
+              "actual": "\"ستة أرقام\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "html-details",
+      "language": "html",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "مفتوح",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "تسمية",
+              "expected": "\"مساعدة\"",
+              "actual": "\"مساعدة\"",
+              "passed": true
+            },
+            {
+              "label": "شرح",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "الإغلاق بالنقر",
+              "expected": "0",
+              "actual": "0",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "مفتوح",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "تسمية",
+              "expected": "\"مساعدة\"",
+              "actual": "\"مساعدة\"",
+              "passed": true
+            },
+            {
+              "label": "شرح",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "الإغلاق بالنقر",
+              "expected": "0",
+              "actual": "0",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "مفتوح",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "تسمية",
+              "expected": "\"مساعدة\"",
+              "actual": "\"مساعدة\"",
+              "passed": true
+            },
+            {
+              "label": "شرح",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "الإغلاق بالنقر",
+              "expected": "0",
+              "actual": "0",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "مفتوح",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "تسمية",
+              "expected": "\"مساعدة\"",
+              "actual": "\"مساعدة\"",
+              "passed": true
+            },
+            {
+              "label": "شرح",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "الإغلاق بالنقر",
+              "expected": "0",
+              "actual": "0",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تفاصيل واحدة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "مغلق مبدئيًا",
+              "expected": "0",
+              "actual": "0",
+              "passed": true
+            },
+            {
+              "label": "التسمية",
+              "expected": "\"تلميح\"",
+              "actual": "\"تلميح\"",
+              "passed": true
+            },
+            {
+              "label": "المحتوى",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تفاصيل واحدة",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            },
+            {
+              "label": "مغلق مبدئيًا",
+              "expected": "0",
+              "actual": "0",
+              "passed": true
+            },
+            {
+              "label": "التسمية",
+              "expected": "\"تلميح\"",
+              "actual": "\"تلميح\"",
+              "passed": true
+            },
+            {
+              "label": "المحتوى",
+              "expected": "1",
+              "actual": "1",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-spacing",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "العرض الفعلي",
+              "expected": "240",
+              "actual": "240",
+              "passed": true
+            },
+            {
+              "label": "الحشو",
+              "expected": "\"16px\"",
+              "actual": "\"16px\"",
+              "passed": true
+            },
+            {
+              "label": "الحد",
+              "expected": "\"2px\"",
+              "actual": "\"2px\"",
+              "passed": true
+            },
+            {
+              "label": "نموذج الصندوق",
+              "expected": "\"border-box\"",
+              "actual": "\"border-box\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "العرض الفعلي",
+              "expected": "240",
+              "actual": "240",
+              "passed": true
+            },
+            {
+              "label": "الحشو",
+              "expected": "\"16px\"",
+              "actual": "\"16px\"",
+              "passed": true
+            },
+            {
+              "label": "الحد",
+              "expected": "\"2px\"",
+              "actual": "\"2px\"",
+              "passed": true
+            },
+            {
+              "label": "نموذج الصندوق",
+              "expected": "\"border-box\"",
+              "actual": "\"border-box\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "العرض الفعلي",
+              "expected": "240",
+              "actual": "240",
+              "passed": true
+            },
+            {
+              "label": "الحشو",
+              "expected": "\"16px\"",
+              "actual": "\"16px\"",
+              "passed": true
+            },
+            {
+              "label": "الحد",
+              "expected": "\"2px\"",
+              "actual": "\"2px\"",
+              "passed": true
+            },
+            {
+              "label": "نموذج الصندوق",
+              "expected": "\"border-box\"",
+              "actual": "\"border-box\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "العرض الفعلي",
+              "expected": "240",
+              "actual": "240",
+              "passed": true
+            },
+            {
+              "label": "الحشو",
+              "expected": "\"16px\"",
+              "actual": "\"16px\"",
+              "passed": true
+            },
+            {
+              "label": "الحد",
+              "expected": "\"2px\"",
+              "actual": "\"2px\"",
+              "passed": true
+            },
+            {
+              "label": "نموذج الصندوق",
+              "expected": "\"border-box\"",
+              "actual": "\"border-box\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عرض جديد",
+              "expected": "180",
+              "actual": "180",
+              "passed": true
+            },
+            {
+              "label": "حشو جديد",
+              "expected": "\"8px\"",
+              "actual": "\"8px\"",
+              "passed": true
+            },
+            {
+              "label": "الحد",
+              "expected": "\"2px\"",
+              "actual": "\"2px\"",
+              "passed": true
+            },
+            {
+              "label": "الصندوق",
+              "expected": "\"border-box\"",
+              "actual": "\"border-box\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عرض جديد",
+              "expected": "180",
+              "actual": "180",
+              "passed": true
+            },
+            {
+              "label": "حشو جديد",
+              "expected": "\"8px\"",
+              "actual": "\"8px\"",
+              "passed": true
+            },
+            {
+              "label": "الحد",
+              "expected": "\"2px\"",
+              "actual": "\"2px\"",
+              "passed": true
+            },
+            {
+              "label": "الصندوق",
+              "expected": "\"border-box\"",
+              "actual": "\"border-box\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-flex",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تفعيل التخطيط",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "اتجاه عمودي",
+              "expected": "\"column\"",
+              "actual": "\"column\"",
+              "passed": true
+            },
+            {
+              "label": "المسافة",
+              "expected": "\"12px\"",
+              "actual": "\"12px\"",
+              "passed": true
+            },
+            {
+              "label": "الالتفاف",
+              "expected": "\"wrap\"",
+              "actual": "\"wrap\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تفعيل التخطيط",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "اتجاه عمودي",
+              "expected": "\"column\"",
+              "actual": "\"column\"",
+              "passed": true
+            },
+            {
+              "label": "المسافة",
+              "expected": "\"12px\"",
+              "actual": "\"12px\"",
+              "passed": true
+            },
+            {
+              "label": "الالتفاف",
+              "expected": "\"wrap\"",
+              "actual": "\"wrap\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تفعيل التخطيط",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "اتجاه عمودي",
+              "expected": "\"column\"",
+              "actual": "\"column\"",
+              "passed": true
+            },
+            {
+              "label": "المسافة",
+              "expected": "\"12px\"",
+              "actual": "\"12px\"",
+              "passed": true
+            },
+            {
+              "label": "الالتفاف",
+              "expected": "\"wrap\"",
+              "actual": "\"wrap\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تفعيل التخطيط",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "اتجاه عمودي",
+              "expected": "\"column\"",
+              "actual": "\"column\"",
+              "passed": true
+            },
+            {
+              "label": "المسافة",
+              "expected": "\"12px\"",
+              "actual": "\"12px\"",
+              "passed": true
+            },
+            {
+              "label": "الالتفاف",
+              "expected": "\"wrap\"",
+              "actual": "\"wrap\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "flex",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "أفقي",
+              "expected": "\"row\"",
+              "actual": "\"row\"",
+              "passed": true
+            },
+            {
+              "label": "المسافة",
+              "expected": "\"8px\"",
+              "actual": "\"8px\"",
+              "passed": true
+            },
+            {
+              "label": "المحاذاة",
+              "expected": "\"center\"",
+              "actual": "\"center\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "flex",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "أفقي",
+              "expected": "\"row\"",
+              "actual": "\"row\"",
+              "passed": true
+            },
+            {
+              "label": "المسافة",
+              "expected": "\"8px\"",
+              "actual": "\"8px\"",
+              "passed": true
+            },
+            {
+              "label": "المحاذاة",
+              "expected": "\"center\"",
+              "actual": "\"center\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-grid",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "نصف العرض",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "نصف العرض",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "نصف العرض",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "نصف العرض",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تفعيل",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عمود ثابت",
+              "expected": "80",
+              "actual": "80",
+              "passed": true
+            },
+            {
+              "label": "المساحة المتبقية",
+              "expected": "160",
+              "actual": "160",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "تفعيل",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عمود ثابت",
+              "expected": "80",
+              "actual": "80",
+              "passed": true
+            },
+            {
+              "label": "المساحة المتبقية",
+              "expected": "160",
+              "actual": "160",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-responsive",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 800",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 390",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 600",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 800",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 390",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 600",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 800",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 390",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 600",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 800",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 390",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 600",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "280",
+              "actual": "280",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 800",
+              "expected": "140",
+              "actual": "140",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "280",
+              "actual": "280",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 390",
+              "expected": "280",
+              "actual": "280",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "280",
+              "actual": "280",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 700",
+              "expected": "140",
+              "actual": "140",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "280",
+              "actual": "280",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 800",
+              "expected": "140",
+              "actual": "140",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "280",
+              "actual": "280",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 390",
+              "expected": "280",
+              "actual": "280",
+              "passed": true
+            },
+            {
+              "label": "شبكة",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الحاوية",
+              "expected": "280",
+              "actual": "280",
+              "passed": true
+            },
+            {
+              "label": "عرض العنصر عند 700",
+              "expected": "140",
+              "actual": "140",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-position",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الأب المرجعي",
+              "expected": "\"relative\"",
+              "actual": "\"relative\"",
+              "passed": true
+            },
+            {
+              "label": "موضع الشارة",
+              "expected": "\"absolute\"",
+              "actual": "\"absolute\"",
+              "passed": true
+            },
+            {
+              "label": "من الأعلى",
+              "expected": "\"8px\"",
+              "actual": "\"8px\"",
+              "passed": true
+            },
+            {
+              "label": "من اليمين",
+              "expected": "\"12px\"",
+              "actual": "\"12px\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الأب المرجعي",
+              "expected": "\"relative\"",
+              "actual": "\"relative\"",
+              "passed": true
+            },
+            {
+              "label": "موضع الشارة",
+              "expected": "\"absolute\"",
+              "actual": "\"absolute\"",
+              "passed": true
+            },
+            {
+              "label": "من الأعلى",
+              "expected": "\"8px\"",
+              "actual": "\"8px\"",
+              "passed": true
+            },
+            {
+              "label": "من اليمين",
+              "expected": "\"12px\"",
+              "actual": "\"12px\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الأب المرجعي",
+              "expected": "\"relative\"",
+              "actual": "\"relative\"",
+              "passed": true
+            },
+            {
+              "label": "موضع الشارة",
+              "expected": "\"absolute\"",
+              "actual": "\"absolute\"",
+              "passed": true
+            },
+            {
+              "label": "من الأعلى",
+              "expected": "\"8px\"",
+              "actual": "\"8px\"",
+              "passed": true
+            },
+            {
+              "label": "من اليمين",
+              "expected": "\"12px\"",
+              "actual": "\"12px\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الأب المرجعي",
+              "expected": "\"relative\"",
+              "actual": "\"relative\"",
+              "passed": true
+            },
+            {
+              "label": "موضع الشارة",
+              "expected": "\"absolute\"",
+              "actual": "\"absolute\"",
+              "passed": true
+            },
+            {
+              "label": "من الأعلى",
+              "expected": "\"8px\"",
+              "actual": "\"8px\"",
+              "passed": true
+            },
+            {
+              "label": "من اليمين",
+              "expected": "\"12px\"",
+              "actual": "\"12px\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "المرجع",
+              "expected": "\"relative\"",
+              "actual": "\"relative\"",
+              "passed": true
+            },
+            {
+              "label": "النوع",
+              "expected": "\"absolute\"",
+              "actual": "\"absolute\"",
+              "passed": true
+            },
+            {
+              "label": "من الأسفل",
+              "expected": "\"4px\"",
+              "actual": "\"4px\"",
+              "passed": true
+            },
+            {
+              "label": "من اليسار",
+              "expected": "\"6px\"",
+              "actual": "\"6px\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "المرجع",
+              "expected": "\"relative\"",
+              "actual": "\"relative\"",
+              "passed": true
+            },
+            {
+              "label": "النوع",
+              "expected": "\"absolute\"",
+              "actual": "\"absolute\"",
+              "passed": true
+            },
+            {
+              "label": "من الأسفل",
+              "expected": "\"4px\"",
+              "actual": "\"4px\"",
+              "passed": true
+            },
+            {
+              "label": "من اليسار",
+              "expected": "\"6px\"",
+              "actual": "\"6px\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-themes",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "خاصية مخصصة معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "اللون الابتدائي",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            },
+            {
+              "label": "تتبع تغيير الخاصية الموروثة",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "خاصية مخصصة معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "اللون الابتدائي",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            },
+            {
+              "label": "تتبع تغيير الخاصية الموروثة",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "خاصية مخصصة معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "اللون الابتدائي",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            },
+            {
+              "label": "تتبع تغيير الخاصية الموروثة",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "خاصية مخصصة معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "اللون الابتدائي",
+              "expected": "\"rgb(0, 0, 255)\"",
+              "actual": "\"rgb(0, 0, 255)\"",
+              "passed": true
+            },
+            {
+              "label": "تتبع تغيير الخاصية الموروثة",
+              "expected": "\"rgb(255, 0, 0)\"",
+              "actual": "\"rgb(255, 0, 0)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "خاصية مخصصة معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "اللون الابتدائي",
+              "expected": "\"rgb(0, 0, 0)\"",
+              "actual": "\"rgb(0, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "تتبع تغيير الخاصية الموروثة",
+              "expected": "\"rgb(255, 255, 255)\"",
+              "actual": "\"rgb(255, 255, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "خاصية مخصصة معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "اللون الابتدائي",
+              "expected": "\"rgb(0, 0, 0)\"",
+              "actual": "\"rgb(0, 0, 0)\"",
+              "passed": true
+            },
+            {
+              "label": "تتبع تغيير الخاصية الموروثة",
+              "expected": "\"rgb(255, 255, 255)\"",
+              "actual": "\"rgb(255, 255, 255)\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-animations",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم الحركة",
+              "expected": "\"fade\"",
+              "actual": "\"fade\"",
+              "passed": true
+            },
+            {
+              "label": "المدة",
+              "expected": "\"2s\"",
+              "actual": "\"2s\"",
+              "passed": true
+            },
+            {
+              "label": "التكرار",
+              "expected": "\"1\"",
+              "actual": "\"1\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم الحركة",
+              "expected": "\"fade\"",
+              "actual": "\"fade\"",
+              "passed": true
+            },
+            {
+              "label": "المدة",
+              "expected": "\"2s\"",
+              "actual": "\"2s\"",
+              "passed": true
+            },
+            {
+              "label": "التكرار",
+              "expected": "\"1\"",
+              "actual": "\"1\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم الحركة",
+              "expected": "\"fade\"",
+              "actual": "\"fade\"",
+              "passed": true
+            },
+            {
+              "label": "المدة",
+              "expected": "\"2s\"",
+              "actual": "\"2s\"",
+              "passed": true
+            },
+            {
+              "label": "التكرار",
+              "expected": "\"1\"",
+              "actual": "\"1\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم الحركة",
+              "expected": "\"fade\"",
+              "actual": "\"fade\"",
+              "passed": true
+            },
+            {
+              "label": "المدة",
+              "expected": "\"2s\"",
+              "actual": "\"2s\"",
+              "passed": true
+            },
+            {
+              "label": "التكرار",
+              "expected": "\"1\"",
+              "actual": "\"1\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم جديد",
+              "expected": "\"slide\"",
+              "actual": "\"slide\"",
+              "passed": true
+            },
+            {
+              "label": "المدة",
+              "expected": "\"0.5s\"",
+              "actual": "\"0.5s\"",
+              "passed": true
+            },
+            {
+              "label": "الدورات",
+              "expected": "\"2\"",
+              "actual": "\"2\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "اسم جديد",
+              "expected": "\"slide\"",
+              "actual": "\"slide\"",
+              "passed": true
+            },
+            {
+              "label": "المدة",
+              "expected": "\"0.5s\"",
+              "actual": "\"0.5s\"",
+              "passed": true
+            },
+            {
+              "label": "الدورات",
+              "expected": "\"2\"",
+              "actual": "\"2\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات معرفة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-grid-minmax",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "Grid",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الشبكة",
+              "expected": "240",
+              "actual": "240",
+              "passed": true
+            },
+            {
+              "label": "انكماش المسار",
+              "expected": "120",
+              "actual": "120",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "Grid",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الشبكة",
+              "expected": "240",
+              "actual": "240",
+              "passed": true
+            },
+            {
+              "label": "انكماش المسار",
+              "expected": "120",
+              "actual": "120",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "Grid",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الشبكة",
+              "expected": "240",
+              "actual": "240",
+              "passed": true
+            },
+            {
+              "label": "انكماش المسار",
+              "expected": "120",
+              "actual": "120",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "Grid",
+              "expected": "\"grid\"",
+              "actual": "\"grid\"",
+              "passed": true
+            },
+            {
+              "label": "عرض الشبكة",
+              "expected": "240",
+              "actual": "240",
+              "passed": true
+            },
+            {
+              "label": "انكماش المسار",
+              "expected": "120",
+              "actual": "120",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عرض جديد",
+              "expected": "200",
+              "actual": "200",
+              "passed": true
+            },
+            {
+              "label": "مسار منكمش",
+              "expected": "100",
+              "actual": "100",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "عرض جديد",
+              "expected": "200",
+              "actual": "200",
+              "passed": true
+            },
+            {
+              "label": "مسار منكمش",
+              "expected": "100",
+              "actual": "100",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-flex-minwidth",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحاوية",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "الجزء الثابت",
+              "expected": "60",
+              "actual": "60",
+              "passed": true
+            },
+            {
+              "label": "الجزء المنكمش",
+              "expected": "180",
+              "actual": "180",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحاوية",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "الجزء الثابت",
+              "expected": "60",
+              "actual": "60",
+              "passed": true
+            },
+            {
+              "label": "الجزء المنكمش",
+              "expected": "180",
+              "actual": "180",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحاوية",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "الجزء الثابت",
+              "expected": "60",
+              "actual": "60",
+              "passed": true
+            },
+            {
+              "label": "الجزء المنكمش",
+              "expected": "180",
+              "actual": "180",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحاوية",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "الجزء الثابت",
+              "expected": "60",
+              "actual": "60",
+              "passed": true
+            },
+            {
+              "label": "الجزء المنكمش",
+              "expected": "180",
+              "actual": "180",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "حاوية flex",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "الثابت",
+              "expected": "50",
+              "actual": "50",
+              "passed": true
+            },
+            {
+              "label": "المحتوى",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "حاوية flex",
+              "expected": "\"flex\"",
+              "actual": "\"flex\"",
+              "passed": true
+            },
+            {
+              "label": "الثابت",
+              "expected": "50",
+              "actual": "50",
+              "passed": true
+            },
+            {
+              "label": "المحتوى",
+              "expected": "150",
+              "actual": "150",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-fluid-tokens",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "حد أعلى",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض متوسط",
+              "expected": "195",
+              "actual": "195",
+              "passed": true
+            },
+            {
+              "label": "حد أدنى",
+              "expected": "100",
+              "actual": "100",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "حد أعلى",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض متوسط",
+              "expected": "195",
+              "actual": "195",
+              "passed": true
+            },
+            {
+              "label": "حد أدنى",
+              "expected": "100",
+              "actual": "100",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "حد أعلى",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض متوسط",
+              "expected": "195",
+              "actual": "195",
+              "passed": true
+            },
+            {
+              "label": "حد أدنى",
+              "expected": "100",
+              "actual": "100",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "حد أعلى",
+              "expected": "300",
+              "actual": "300",
+              "passed": true
+            },
+            {
+              "label": "عرض متوسط",
+              "expected": "195",
+              "actual": "195",
+              "passed": true
+            },
+            {
+              "label": "حد أدنى",
+              "expected": "100",
+              "actual": "100",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "حد أعلى",
+              "expected": "200",
+              "actual": "200",
+              "passed": true
+            },
+            {
+              "label": "قيمة مفضلة",
+              "expected": "100",
+              "actual": "100",
+              "passed": true
+            },
+            {
+              "label": "حد أدنى",
+              "expected": "80",
+              "actual": "80",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "حد أعلى",
+              "expected": "200",
+              "actual": "200",
+              "passed": true
+            },
+            {
+              "label": "قيمة مفضلة",
+              "expected": "100",
+              "actual": "100",
+              "passed": true
+            },
+            {
+              "label": "حد أدنى",
+              "expected": "80",
+              "actual": "80",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "css-reduced-motion",
+      "language": "css",
+      "tests": [
+        {
+          "task": "exercise",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحالة العادية",
+              "expected": "\"2s\"",
+              "actual": "\"2s\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات موجودة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "تقليل الحركة",
+              "expected": "\"0s\"",
+              "actual": "\"0s\"",
+              "passed": true
+            },
+            {
+              "label": "المحتوى متاح",
+              "expected": "\"block\"",
+              "actual": "\"block\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحالة العادية",
+              "expected": "\"2s\"",
+              "actual": "\"2s\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات موجودة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "تقليل الحركة",
+              "expected": "\"0s\"",
+              "actual": "\"0s\"",
+              "passed": true
+            },
+            {
+              "label": "المحتوى متاح",
+              "expected": "\"block\"",
+              "actual": "\"block\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "exercise",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "fix",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحالة العادية",
+              "expected": "\"2s\"",
+              "actual": "\"2s\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات موجودة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "تقليل الحركة",
+              "expected": "\"0s\"",
+              "actual": "\"0s\"",
+              "passed": true
+            },
+            {
+              "label": "المحتوى متاح",
+              "expected": "\"block\"",
+              "actual": "\"block\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحالة العادية",
+              "expected": "\"2s\"",
+              "actual": "\"2s\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات موجودة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "تقليل الحركة",
+              "expected": "\"0s\"",
+              "actual": "\"0s\"",
+              "passed": true
+            },
+            {
+              "label": "المحتوى متاح",
+              "expected": "\"block\"",
+              "actual": "\"block\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "fix",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "mastery",
+          "variant": 0,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحالة العادية",
+              "expected": "\"1s\"",
+              "actual": "\"1s\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات موجودة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "تقليل الحركة",
+              "expected": "\"0s\"",
+              "actual": "\"0s\"",
+              "passed": true
+            },
+            {
+              "label": "المحتوى متاح",
+              "expected": "\"block\"",
+              "actual": "\"block\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": 1,
+          "kind": "result",
+          "passed": true,
+          "checks": [
+            {
+              "label": "الحالة العادية",
+              "expected": "\"1s\"",
+              "actual": "\"1s\"",
+              "passed": true
+            },
+            {
+              "label": "إطارات موجودة",
+              "expected": "true",
+              "actual": "true",
+              "passed": true
+            },
+            {
+              "label": "تقليل الحركة",
+              "expected": "\"0s\"",
+              "actual": "\"0s\"",
+              "passed": true
+            },
+            {
+              "label": "المحتوى متاح",
+              "expected": "\"block\"",
+              "actual": "\"block\"",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "task": "mastery",
+          "variant": "starter must fail",
+          "passed": true
+        },
+        {
+          "task": "example",
+          "passed": true,
+          "kind": "result"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,229 @@
+{
+  "sourceCommit": "0fc9bc811e47cd356a5ae84328e56d38ad99198b",
+  "browser": "Chromium on Linux",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "freshContext": true,
+  "userDataImported": false,
+  "syntheticDemoOnly": true,
+  "continuousRealBrowserRecording": true,
+  "audioRecorded": false,
+  "parentErrors": [],
+  "assertionsPassed": true,
+  "events": [
+    {
+      "seconds": 1.3,
+      "action": "fresh-browser-no-import"
+    },
+    {
+      "seconds": 1.5,
+      "action": "screenshot",
+      "file": "media/01-understand.jpg"
+    },
+    {
+      "seconds": 2.9,
+      "action": "open-stage",
+      "stage": 2
+    },
+    {
+      "seconds": 5,
+      "action": "screenshot",
+      "file": "media/02-code-explanation.jpg"
+    },
+    {
+      "seconds": 6.4,
+      "action": "open-stage",
+      "stage": 3
+    },
+    {
+      "seconds": 7.4,
+      "action": "wrong-prediction-6"
+    },
+    {
+      "seconds": 10,
+      "action": "two-progressive-hints"
+    },
+    {
+      "seconds": 10.1,
+      "action": "screenshot",
+      "file": "media/03-predict-wrong-hints.jpg"
+    },
+    {
+      "seconds": 11.6,
+      "action": "correct-prediction-undefined"
+    },
+    {
+      "seconds": 12.6,
+      "action": "open-stage",
+      "stage": 4
+    },
+    {
+      "seconds": 14,
+      "action": "real-worker-output-8"
+    },
+    {
+      "seconds": 14.2,
+      "action": "screenshot",
+      "file": "media/04-playground.jpg"
+    },
+    {
+      "seconds": 15.8,
+      "action": "simulator-received-without-auto-run"
+    },
+    {
+      "seconds": 17.6,
+      "action": "run-simulator-reference"
+    },
+    {
+      "seconds": 19.2,
+      "action": "screenshot",
+      "file": "media/04b-simulator.jpg"
+    },
+    {
+      "seconds": 20.7,
+      "action": "return-preserves-stage-and-source"
+    },
+    {
+      "seconds": 20.9,
+      "action": "screenshot",
+      "file": "media/04c-return.jpg"
+    },
+    {
+      "seconds": 22.3,
+      "action": "open-stage",
+      "stage": 5
+    },
+    {
+      "seconds": 23.4,
+      "action": "screenshot",
+      "file": "media/05-apply.jpg"
+    },
+    {
+      "seconds": 26.1,
+      "action": "open-assessment"
+    },
+    {
+      "seconds": 26.3,
+      "action": "actual-wrong-code-fails"
+    },
+    {
+      "seconds": 26.6,
+      "action": "screenshot",
+      "file": "media/06-check-failed-hint.jpg"
+    },
+    {
+      "seconds": 28.3,
+      "action": "alternative-correct-solution-passes-five-cases"
+    },
+    {
+      "seconds": 28.5,
+      "action": "screenshot",
+      "file": "media/06b-check-passed.jpg"
+    },
+    {
+      "seconds": 30.1,
+      "action": "missing-return-fixed"
+    },
+    {
+      "seconds": 31.1,
+      "action": "open-stage",
+      "stage": 7
+    },
+    {
+      "seconds": 33.5,
+      "action": "mastery-understanding-prediction-and-code-passed"
+    },
+    {
+      "seconds": 33.7,
+      "action": "screenshot",
+      "file": "media/07-mastery.jpg"
+    },
+    {
+      "seconds": 35.2,
+      "action": "open-stage",
+      "stage": 8
+    },
+    {
+      "seconds": 36.2,
+      "action": "mastery-backed-by-real-attempts"
+    },
+    {
+      "seconds": 36.3,
+      "action": "screenshot",
+      "file": "media/08-save-review.jpg"
+    },
+    {
+      "seconds": 38.6,
+      "action": "reload-restores-stage-hints-and-evidence"
+    },
+    {
+      "seconds": 38.7,
+      "action": "screenshot",
+      "file": "media/09-restored.jpg"
+    }
+  ],
+  "images": [
+    {
+      "file": "media/01-understand.jpg",
+      "bytes": 172386,
+      "sha256": "b526a5b7903321eae8a55804dcae01cdff4787fbdb7075e8122692e4cfa7e4a7"
+    },
+    {
+      "file": "media/02-code-explanation.jpg",
+      "bytes": 112213,
+      "sha256": "d3b074c747c8035f3ccb734ab65165748f1768b077ce41bfc45e88b534c1f3ee"
+    },
+    {
+      "file": "media/03-predict-wrong-hints.jpg",
+      "bytes": 102307,
+      "sha256": "a6fccff87da1f1a05c6d87cce8d690d1d29022c2859c54ac4ef94d38416d7033"
+    },
+    {
+      "file": "media/04-playground.jpg",
+      "bytes": 118601,
+      "sha256": "b4adab8fccdcda428f3a19e904853d2529cdf96fa7296e8e451709d53358f2f7"
+    },
+    {
+      "file": "media/04b-simulator.jpg",
+      "bytes": 252784,
+      "sha256": "8d9c7017cb689fa2ccdd13baadb2d6e193abecea351ad28689f42452913903a8"
+    },
+    {
+      "file": "media/04c-return.jpg",
+      "bytes": 105847,
+      "sha256": "7cd881214c4b53653f41c795855d27d38e616f1379c63e25f6658494adce9fc2"
+    },
+    {
+      "file": "media/05-apply.jpg",
+      "bytes": 126541,
+      "sha256": "0830f0423be08aed5fb0b43e426fdc7ae8e95a5b76e59de7c119123e75d69fc7"
+    },
+    {
+      "file": "media/06-check-failed-hint.jpg",
+      "bytes": 163343,
+      "sha256": "473d89f46dc88b3573f1924dd477d880e99822a789b4cb2a5d4446b8d1ec493b"
+    },
+    {
+      "file": "media/06b-check-passed.jpg",
+      "bytes": 159354,
+      "sha256": "d94ef5ccabbbff96c70b2bd991012277b88f8debeb9c173f9675185ddf776dc6"
+    },
+    {
+      "file": "media/07-mastery.jpg",
+      "bytes": 165982,
+      "sha256": "1de42443a592b0ceb5d25d2395d3d19c66eae6beb1a2826e71456e24973d85fc"
+    },
+    {
+      "file": "media/08-save-review.jpg",
+      "bytes": 138840,
+      "sha256": "d01dfaee2c53d7fe694f1a44c36db43f93e43cdfdf16e04df271b51200207b31"
+    },
+    {
+      "file": "media/09-restored.jpg",
+      "bytes": 138767,
+      "sha256": "3e7772538c901aa61b593b0cd8cc87c6f78707091c5d8c0a1fff7d7c81cb86a0"
+    }
+  ]
+}

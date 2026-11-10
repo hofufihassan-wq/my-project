@@ -1,0 +1,189 @@
+{
+  "vue-template": {
+    "exercise": [
+      "<script setup>\nconst props=defineProps({title:String,tip:String});\n</script>\n<template>\n<p id=\"title\" :title=\"props.tip\">{{props.title}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nconst props=defineProps({title:String,tip:String});\n</script>\n<template>\n<p id=\"title\" :title=\"props.tip\">{{props.title}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nconst props=defineProps({name:String,url:String});\n</script>\n<template>\n<a id=\"profile\" :href=\"props.url\">{{props.name}}</a>\n</template>"
+    ]
+  },
+  "vue-events": {
+    "exercise": [
+      "<script setup>\nimport{ref}from\"vue\";const total=ref(0);function add(){total.value+=2}function reset(){total.value=0}\n</script>\n<template>\n<button id=\"add\" @click=\"add\">إضافة</button><button id=\"reset\" @click=\"reset\">مسح</button><p id=\"total\">{{total}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref}from\"vue\";const total=ref(0);function add(){total.value+=2}function reset(){total.value=0}\n</script>\n<template>\n<button id=\"add\" @click=\"add\">إضافة</button><button id=\"reset\" @click=\"reset\">مسح</button><p id=\"total\">{{total}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref}from\"vue\";const balance=ref(5);function take(){balance.value-=2}\n</script>\n<template>\n<button id=\"take\" @click=\"take\">خصم</button><button id=\"restore\" @click=\"balance=5\">استعادة</button><p id=\"balance\">{{balance}}</p>\n</template>"
+    ]
+  },
+  "vue-reactive": {
+    "exercise": [
+      "<script setup>\nimport{reactive}from\"vue\";const box=reactive({qty:1,label:\"قلم\"});\n</script>\n<template>\n<p id=\"qty\">{{box.qty}}</p><p id=\"label\">{{box.label}}</p><button id=\"more\" @click=\"box.qty++\">زيادة</button><button id=\"rename\" @click=\"box.label='دفتر'\">اسم</button>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{reactive}from\"vue\";const box=reactive({qty:1,label:\"قلم\"});\n</script>\n<template>\n<p id=\"qty\">{{box.qty}}</p><p id=\"label\">{{box.label}}</p><button id=\"more\" @click=\"box.qty++\">زيادة</button><button id=\"rename\" @click=\"box.label='دفتر'\">اسم</button>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{reactive}from\"vue\";const member=reactive({score:2,active:false});function advance(){member.score+=3;member.active=!member.active}\n</script>\n<template>\n<p id=\"score\">{{member.score}}</p><p id=\"active\">{{member.active}}</p><button id=\"advance\" @click=\"advance\">تقدم</button>\n</template>"
+    ]
+  },
+  "vue-computed": {
+    "exercise": [
+      "<script setup>\nimport{ref,computed}from\"vue\";const qty=ref(1);const total=computed(()=>qty.value*7);\n</script>\n<template>\n<button id=\"increase\" @click=\"qty++\">زيادة</button><p id=\"total\">{{total}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref,computed}from\"vue\";const qty=ref(1);const total=computed(()=>qty.value*7);\n</script>\n<template>\n<button id=\"increase\" @click=\"qty++\">زيادة</button><p id=\"total\">{{total}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref,computed}from\"vue\";const qty=ref(2);const bill=computed(()=>qty.value*4+3);\n</script>\n<template>\n<button id=\"remove\" @click=\"qty--\">ناقص</button><p id=\"bill\">{{bill}}</p>\n</template>"
+    ]
+  },
+  "vue-conditional": {
+    "exercise": [
+      "<script setup>\nimport{ref}from\"vue\";const open=ref(true);\n</script>\n<template>\n<button id=\"toggle\" @click=\"open=!open\">تبديل</button><p v-if=\"open\" id=\"secret\">مفتوح</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref}from\"vue\";const open=ref(true);\n</script>\n<template>\n<button id=\"toggle\" @click=\"open=!open\">تبديل</button><p v-if=\"open\" id=\"secret\">مفتوح</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref}from\"vue\";const logged=ref(false);\n</script>\n<template>\n<button id=\"login\" @click=\"logged=!logged\">دخول</button><p v-if=\"logged\" id=\"member\">عضو</p><p v-else id=\"guest\">ضيف</p>\n</template>"
+    ]
+  },
+  "vue-list": {
+    "exercise": [
+      "<script setup>\nimport{ref}from\"vue\";const items=ref([{id:1},{id:2}]);\n</script>\n<template>\n<button id=\"add\" @click=\"items.push({id:3})\">أضف</button><button id=\"clear\" @click=\"items=[]\">مسح</button><ul><li class=\"row\" v-for=\"item in items\" :key=\"item.id\">{{item.id}}</li></ul>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref}from\"vue\";const items=ref([{id:1},{id:2}]);\n</script>\n<template>\n<button id=\"add\" @click=\"items.push({id:3})\">أضف</button><button id=\"clear\" @click=\"items=[]\">مسح</button><ul><li class=\"row\" v-for=\"item in items\" :key=\"item.id\">{{item.id}}</li></ul>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref}from\"vue\";const members=ref([{id:1,name:\"أ\"},{id:2,name:\"ب\"},{id:3,name:\"ج\"}]);\n</script>\n<template>\n<button id=\"remove\" @click=\"members.shift()\">احذف الأول</button><li class=\"member\" v-for=\"m in members\" :key=\"m.id\">{{m.name}}</li>\n</template>"
+    ]
+  },
+  "vue-model": {
+    "exercise": [
+      "<script setup>\nimport{ref}from\"vue\";const name=ref(\"\");\n</script>\n<template>\n<input id=\"name\" v-model=\"name\"><p id=\"echo\">{{name}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref}from\"vue\";const name=ref(\"\");\n</script>\n<template>\n<input id=\"name\" v-model=\"name\"><p id=\"echo\">{{name}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref}from\"vue\";const search=ref(\"Vue\");\n</script>\n<template>\n<input id=\"search\" v-model=\"search\"><button id=\"reset\" @click=\"search=''\">مسح</button><p id=\"summary\">بحث: {{search}}</p>\n</template>"
+    ]
+  },
+  "vue-watch": {
+    "exercise": [
+      "<script setup>\nimport{ref,watch}from\"vue\";const name=ref(\"\");const changes=ref(0);watch(name,()=>changes.value++);\n</script>\n<template>\n<input id=\"name\" v-model=\"name\"><p id=\"changes\">{{changes}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref,watch}from\"vue\";const name=ref(\"\");const changes=ref(0);watch(name,()=>changes.value++);\n</script>\n<template>\n<input id=\"name\" v-model=\"name\"><p id=\"changes\">{{changes}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref,watch}from\"vue\";const query=ref(\"\");const previous=ref(\"\");watch(query,(_,old)=>previous.value=old);\n</script>\n<template>\n<input id=\"query\" v-model=\"query\"><p id=\"previous\">{{previous}}</p>\n</template>"
+    ]
+  },
+  "vue-lifecycle": {
+    "exercise": [
+      "<script setup>\nimport{onMounted,onUnmounted}from\"vue\";const emit=defineEmits([\"ready\",\"cleanup\"]);onMounted(()=>emit(\"ready\"));onUnmounted(()=>emit(\"cleanup\"));\n</script>\n<template>\n<p id=\"view\">جاهز</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{onMounted,onUnmounted}from\"vue\";const emit=defineEmits([\"ready\",\"cleanup\"]);onMounted(()=>emit(\"ready\"));onUnmounted(()=>emit(\"cleanup\"));\n</script>\n<template>\n<p id=\"view\">جاهز</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{onMounted,onUnmounted}from\"vue\";const emit=defineEmits([\"start\",\"stop\"]);onMounted(()=>emit(\"start\",1));onUnmounted(()=>emit(\"stop\",0));\n</script>\n<template>\n<p id=\"live\">حي</p>\n</template>"
+    ]
+  },
+  "vue-props": {
+    "exercise": [
+      "<script setup>\nimport{computed}from\"vue\";const props=defineProps({price:Number,qty:Number});const total=computed(()=>props.price*props.qty);\n</script>\n<template>\n<p id=\"total\">{{total}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{computed}from\"vue\";const props=defineProps({price:Number,qty:Number});const total=computed(()=>props.price*props.qty);\n</script>\n<template>\n<p id=\"total\">{{total}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{computed}from\"vue\";const props=defineProps({first:String,last:String});const full=computed(()=>props.first+\" \"+props.last);\n</script>\n<template>\n<p id=\"full\">{{full}}</p>\n</template>"
+    ]
+  },
+  "vue-emits": {
+    "exercise": [
+      "<script setup>\nconst emit=defineEmits([\"save\"]);\n</script>\n<template>\n<button id=\"save\" @click=\"emit('save',7)\">احفظ</button>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nconst emit=defineEmits([\"save\"]);\n</script>\n<template>\n<button id=\"save\" @click=\"emit('save',7)\">احفظ</button>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref}from\"vue\";const count=ref(0);const emit=defineEmits([\"change\"]);function next(){count.value++;emit(\"change\",count.value)}\n</script>\n<template>\n<button id=\"next\" @click=\"next\">التالي</button>\n</template>"
+    ]
+  },
+  "vue-slots": {
+    "exercise": [
+      "<script setup>\nconst label=\"card\";\n</script>\n<template>\n<article id=\"card\"><slot name=\"heading\">عنوان بديل</slot><slot>جسم بديل</slot></article>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nconst label=\"card\";\n</script>\n<template>\n<article id=\"card\"><slot name=\"heading\">عنوان بديل</slot><slot>جسم بديل</slot></article>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nconst name=\"panel\";\n</script>\n<template>\n<section><slot><p id=\"fallback\">لا إجراءات</p></slot><footer id=\"actions\"><slot name=\"actions\"/></footer></section>\n</template>"
+    ]
+  },
+  "vue-composable": {
+    "exercise": [
+      "<script setup>\nimport{ref}from\"vue\";function useCounter(){const value=ref(0);return{value,increment:()=>value.value++}}const a=useCounter(),b=useCounter();\n</script>\n<template>\n<button id=\"a\" @click=\"a.increment\">أ</button><button id=\"b\" @click=\"b.increment\">ب</button><p id=\"av\">{{a.value.value}}</p><p id=\"bv\">{{b.value.value}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref}from\"vue\";function useCounter(){const value=ref(0);return{value,increment:()=>value.value++}}const a=useCounter(),b=useCounter();\n</script>\n<template>\n<button id=\"a\" @click=\"a.increment\">أ</button><button id=\"b\" @click=\"b.increment\">ب</button><p id=\"av\">{{a.value.value}}</p><p id=\"bv\">{{b.value.value}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref}from\"vue\";function useToggle(){const active=ref(false);return{active,toggle:()=>active.value=!active.value}}const left=useToggle(),right=useToggle();\n</script>\n<template>\n<button id=\"left\" @click=\"left.toggle\">يسار</button><button id=\"right\" @click=\"right.toggle\">يمين</button><p id=\"lv\">{{left.active.value}}</p><p id=\"rv\">{{right.active.value}}</p>\n</template>"
+    ]
+  },
+  "vue-component-model": {
+    "exercise": [
+      "<script setup>\nconst model=defineModel();\n</script>\n<template>\n<input id=\"name\" v-model=\"model\"><p id=\"value\">{{model}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nconst model=defineModel();\n</script>\n<template>\n<input id=\"name\" v-model=\"model\"><p id=\"value\">{{model}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nconst query=defineModel();\n</script>\n<template>\n<input id=\"query\" v-model=\"query\"><button id=\"clear\" @click=\"query=''\">مسح</button>\n</template>"
+    ]
+  },
+  "vue-async-state": {
+    "exercise": [
+      "<script setup>\nimport{ref}from\"vue\";const state=ref(\"جاهز\");async function load(){state.value=await Promise.resolve(\"تم\")}\n</script>\n<template>\n<button id=\"load\" @click=\"load\">تحميل محلي</button><p id=\"state\">{{state}}</p>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref}from\"vue\";const state=ref(\"جاهز\");async function load(){state.value=await Promise.resolve(\"تم\")}\n</script>\n<template>\n<button id=\"load\" @click=\"load\">تحميل محلي</button><p id=\"state\">{{state}}</p>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref}from\"vue\";const error=ref(\"\");async function load(){try{await Promise.reject(new Error(\"تعذر\"))}catch(e){error.value=e.message}}\n</script>\n<template>\n<button id=\"fail\" @click=\"load\">اختبر الفشل</button><p id=\"error\">{{error}}</p>\n</template>"
+    ]
+  },
+  "vue-router": {
+    "exercise": [
+      "<script setup>\nimport{RouterLink,RouterView,useRoute}from\"vue-router\";const route=useRoute();\n</script>\n<template>\n<RouterLink id=\"about\" to=\"/about\">حول</RouterLink><p id=\"path\">{{route.path}}</p><RouterView/>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{RouterLink,RouterView,useRoute}from\"vue-router\";const route=useRoute();\n</script>\n<template>\n<RouterLink id=\"about\" to=\"/about\">حول</RouterLink><p id=\"path\">{{route.path}}</p><RouterView/>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{RouterLink,RouterView,useRoute}from\"vue-router\";const route=useRoute();\n</script>\n<template>\n<RouterLink id=\"home\" to=\"/\">الرئيسية</RouterLink><RouterLink id=\"help\" to=\"/help\">مساعدة</RouterLink><p id=\"path\">{{route.path}}</p><RouterView/>\n</template>"
+    ]
+  },
+  "vue-composition-app": {
+    "exercise": [
+      "<script setup>\nimport{ref,computed,defineComponent,h}from\"vue\";const query=ref(\"\");const names=[\"تفاح\",\"موز\",\"عنب\"];const filtered=computed(()=>names.filter(n=>n.includes(query.value)));const Product=defineComponent({props:{name:String},setup:p=>()=>h(\"li\",{class:\"product\"},p.name)});\n</script>\n<template>\n<input id=\"query\" v-model=\"query\"><ul><Product v-for=\"name in filtered\" :key=\"name\" :name=\"name\"/></ul>\n</template>"
+    ],
+    "fix": [
+      "<script setup>\nimport{ref,computed,defineComponent,h}from\"vue\";const query=ref(\"\");const names=[\"تفاح\",\"موز\",\"عنب\"];const filtered=computed(()=>names.filter(n=>n.includes(query.value)));const Product=defineComponent({props:{name:String},setup:p=>()=>h(\"li\",{class:\"product\"},p.name)});\n</script>\n<template>\n<input id=\"query\" v-model=\"query\"><ul><Product v-for=\"name in filtered\" :key=\"name\" :name=\"name\"/></ul>\n</template>"
+    ],
+    "mastery": [
+      "<script setup>\nimport{ref,computed,defineComponent,h}from\"vue\";const query=ref(\"\");const names=[\"تفاح\",\"موز\",\"عنب\"];const filtered=computed(()=>names.filter(n=>n.includes(query.value)));const Product=defineComponent({props:{name:String},setup:p=>()=>h(\"li\",{class:\"product\"},p.name)});\n</script>\n<template>\n<input id=\"query\" v-model=\"query\"><p id=\"count\">{{filtered.length}}</p><Product v-for=\"name in filtered\" :key=\"name\" :name=\"name\"/>\n</template>"
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+PASS extract exact ZIP and verify every file hash
+PASS launch extracted folder with spaces and render dictionary

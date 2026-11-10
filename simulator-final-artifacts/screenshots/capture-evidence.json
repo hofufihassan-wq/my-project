@@ -1,0 +1,187 @@
+{
+  "runtimeHashes": {
+    "app.js": "5c5bc86889844feaf2f2c03d5718b44cd1b07c3b91dfbf41f85798f11d546e3a",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "8f34c8a724cf0872a9a73bffb1b05420066836759e5fc3cf00c926db47256e51"
+  },
+  "sessions": [
+    {
+      "width": 1440,
+      "ledger": [
+        {
+          "lesson": "JS-101",
+          "kind": "reference",
+          "result": "preview_ready"
+        },
+        {
+          "lesson": "JS-102",
+          "kind": "reference",
+          "result": "preview_ready"
+        },
+        {
+          "lesson": "CSS-102",
+          "kind": "reference",
+          "result": "preview_ready"
+        },
+        {
+          "kind": "draft",
+          "result": "execution_error",
+          "intentional": true
+        },
+        {
+          "lesson": "VUE-101",
+          "kind": "reference",
+          "result": "preview_ready"
+        },
+        {
+          "lesson": "HTML-101",
+          "kind": "reference",
+          "result": "preview_ready"
+        },
+        {
+          "kind": "draft",
+          "result": "ready_then_error",
+          "intentional": true
+        },
+        {
+          "lesson": "JS-102",
+          "kind": "reference",
+          "result": "preview_ready"
+        }
+      ],
+      "actual": {
+        "attempts": [
+          {
+            "id": "1793446128201-1-oqp2uf4i75",
+            "lessonId": "JS-101",
+            "at": "2026-10-31T11:28:48.201Z",
+            "ready": true,
+            "error": false,
+            "stopped": true,
+            "message": ""
+          },
+          {
+            "id": "1793446129336-2-8itmitxylf3",
+            "lessonId": "JS-102",
+            "at": "2026-10-31T11:28:49.336Z",
+            "ready": true,
+            "error": false,
+            "stopped": true,
+            "message": ""
+          },
+          {
+            "id": "1793446130834-3-zn4ny85w4t",
+            "lessonId": "CSS-102",
+            "at": "2026-10-31T11:28:50.834Z",
+            "ready": true,
+            "error": false,
+            "stopped": true,
+            "message": ""
+          },
+          {
+            "id": "1793446131713-4-eqn156e5k7a",
+            "lessonId": "CSS-102",
+            "at": "2026-10-31T11:28:51.713Z",
+            "ready": false,
+            "error": true,
+            "stopped": true,
+            "message": "Uncaught Error: FINAL_CAPTURE_ERROR"
+          },
+          {
+            "id": "1793446132615-5-enmnnthc8xl",
+            "lessonId": "VUE-101",
+            "at": "2026-10-31T11:28:52.616Z",
+            "ready": true,
+            "error": false,
+            "stopped": true,
+            "message": ""
+          },
+          {
+            "id": "1793446134191-6-lhz8bizgou8",
+            "lessonId": "HTML-101",
+            "at": "2026-10-31T11:28:54.192Z",
+            "ready": true,
+            "error": false,
+            "stopped": true,
+            "message": ""
+          },
+          {
+            "id": "1793446135024-7-zt07vt20d9",
+            "lessonId": "HTML-101",
+            "at": "2026-10-31T11:28:55.024Z",
+            "ready": true,
+            "error": true,
+            "stopped": true,
+            "message": "Uncaught Error: FINAL_CAPTURE_LATE_ERROR"
+          },
+          {
+            "id": "1793446138048-8-immsztzhxw",
+            "lessonId": "JS-102",
+            "at": "2026-10-31T11:28:58.048Z",
+            "ready": true,
+            "error": false,
+            "stopped": false,
+            "message": ""
+          }
+        ],
+        "activity": {
+          "total": 8,
+          "ready": 6,
+          "errors": 2,
+          "pending": 0
+        },
+        "events": 35
+      },
+      "errors": [
+        "FINAL_CAPTURE_ERROR",
+        "FINAL_CAPTURE_LATE_ERROR"
+      ]
+    },
+    {
+      "width": 768,
+      "errors": [],
+      "actual": {
+        "total": 1,
+        "ready": 1,
+        "errors": 0,
+        "pending": 0
+      }
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "actual": {
+        "total": 1,
+        "ready": 1,
+        "errors": 0,
+        "pending": 0
+      }
+    }
+  ],
+  "files": [
+    "desktop-empty-1440.png",
+    "desktop-error-graph.png",
+    "desktop-error-console.png",
+    "desktop-1440.png",
+    "editor-detail.png",
+    "preview-detail.png",
+    "graph-detail.png",
+    "console-detail.png",
+    "attempts-detail.png",
+    "session-detail.png",
+    "approved-sound-controls.png",
+    "editor-768.png",
+    "preview-768.png",
+    "preview-panel-768.png",
+    "graph-768.png",
+    "console-768.png",
+    "editor-390.png",
+    "preview-390.png",
+    "preview-panel-390.png",
+    "graph-390.png",
+    "console-390.png"
+  ]
+}

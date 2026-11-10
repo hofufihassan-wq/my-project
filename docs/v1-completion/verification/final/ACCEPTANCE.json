@@ -1,0 +1,188 @@
+{
+  "baselineCommit": "310e62f2baa707be45af2dd8cff02c7c83c93305",
+  "branch": "feat/vlex-v1-followup",
+  "initialMatrix": {
+    "passed": 57,
+    "total": 59,
+    "runtimeUnchangedDuringRun": true
+  },
+  "effectiveMatrix": {
+    "passed": 59,
+    "total": 59
+  },
+  "reconciliations": [
+    {
+      "suite": "legacy-legacy-dictionary",
+      "originalBaseline": "54/58, same four navigation-only mismatches as candidate",
+      "candidateAfterNarrowExpectationUpdate": "58/58",
+      "productChangesToFixThisSuite": false,
+      "assertion": "Permit only simulatorLesson=VUE-101; compare every other learning field and localStorage key exactly."
+    },
+    {
+      "suite": "legacy-integration-browser",
+      "reason": "Approved new vlex-learning-projects component added to exact registry expectation.",
+      "candidateAfterUpdate": "11/11"
+    }
+  ],
+  "runtimeChangedAfterInitialMatrix": [
+    "guided-learning.js",
+    "learning-dashboard.js"
+  ],
+  "changePurpose": "Explicit LTR numeric progress fractions inside RTL text only; no data or evaluator change.",
+  "postCorrection": {
+    "passed": 5,
+    "total": 5,
+    "results": [
+      {
+        "suite": "build",
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exitCode": 0,
+        "seconds": 1.73
+      },
+      {
+        "suite": "project-ui",
+        "command": [
+          "node",
+          "platform-tests/v1-completion/D/project-ui.cjs"
+        ],
+        "exitCode": 0,
+        "seconds": 34.62
+      },
+      {
+        "suite": "dashboard",
+        "command": [
+          "node",
+          "platform-tests/dashboard/browser.cjs"
+        ],
+        "exitCode": 0,
+        "seconds": 5.5
+      },
+      {
+        "suite": "all-sections",
+        "command": [
+          "node",
+          "platform-tests/v1-completion/E/site-browser.cjs"
+        ],
+        "exitCode": 0,
+        "seconds": 9.55
+      },
+      {
+        "suite": "static",
+        "command": [
+          "node",
+          "platform-tests/v1-completion/E/static-browser.cjs"
+        ],
+        "exitCode": 0,
+        "seconds": 3.89
+      }
+    ]
+  },
+  "finalRuntimeHashes": {
+    "legacy-validator-guards.js": "21a821036bcda8170f3294476d4417aa532cb1ef9c53c695a81928143e85b89c",
+    "learning-js-lab.js": "77d485622f3f3439880335a344b243e47da3d9afcb20514daaa68236075e0d43",
+    "learning-css-lab.css": "5606dbfb39f51947dd3cd6403c1a78c12b7e8c1b24d5d9c942747e92dfd2319d",
+    "learning-js-lab.css": "ad1e9592fb1cfbe8b25895bf39b8af504494f61502b72fecc9934ae3f5230a22",
+    "code-presentation.js": "a44decadb3dbf9490b8131855936acec80390ba031f2c6ab48ae1781b2038412",
+    "guided-learning.js": "004e762245fe01e0085b1e5fe7e148e55036f44572524e553126eeca8bfc2c34",
+    "guided-lessons.js": "299084ceef890af9382a640512ea38daedb8b4040f6bb6230cc2f39513f81ae7",
+    "learning-dashboard.js": "e8340e05bc4f1282a8ec9f23c944af0c502df5bc9928ff2938b593995f15a715",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "guided-arrow.js": "80ddeb7a724607258ca4feb3302388d3f34c11f9141abc28fa67e9f878a6190d",
+    "guided-lessons-markup.js": "54f520469e9838bd5c2e039ea6149d97e4c95acf3d45c74cc6f183ccf51fe488",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "guided-arrow-evaluator.js": "fc7f3ef6e16eaa994b970f7e0a483ce1c12c233e0541892c370231b079ff631c",
+    "learning-platform.css": "ab95731565bb6c185cbb1d742c5b57dc3bce5def51fbf660abed59618e4050d2",
+    "guided-lessons-javascript.js": "2e0ba6e8392832e75d1c24fec02875ad4f0dd9fad3539d07a79e860e9ee05ba3",
+    "guided-lessons-vue.js": "309cfd65fcf81150c17f97b26e9243d620f4a4914bcd9a7e3b683d2445b94318",
+    "guided-projects.js": "7fc7918351b72fec6cb1e4dbfcbeff5badc0fbd0622f31eddc623a9a3c8a1bb1",
+    "learning-refinement.css": "2659ab6b8fe2f71aa6f043aa170d4bc77d7814d542b15751691f726ef215d78c",
+    "lexicon-data.js": "3d0e63c82e5cef4f2f4d269aaee039b82318b977f956325e80506d6b593db05a",
+    "index.html": "7216d3cff4079faae0c31d773786daefbcaa001e397169d4e43972bd0706cc47",
+    "learning-course-advanced.js": "e6be6aa679c7282a922cb29747027f0533129e26627b2b5c12aad84c53a98596",
+    "simulator-beta.js": "1e15740d1576b79c262ff3ddbd3926c041c31967c282cd9ee2e1dbc38c4d0dec",
+    "learning-store.js": "78ca1076a7f16dde3feaed3be1bb75ddb41bcd64db22e0a115b838c1594d68bf",
+    "learning-css-lab.js": "6ebc2c5eb327a6b68f9bbb8bd679c1302094c1617e154824bac6aba1854558a8",
+    "guided-learning.css": "ed21ed3454a723f8e2a3567dfd8782c072eb730685f0826264863a4679a7ff43",
+    "learning-course.js": "1ffddfb0369d8847ea1bc596c298b635cb5f60b19a3623b7ae6d27f5b85808a4",
+    "emerald-dashboard.css": "2703afa042366eae226a61aecf004ee9a8cd03f0f5cde6e43da2870475882669",
+    "learning-course.css": "7307981d4a07302182e8f743d36251f0c9b5d9d07024de149ecf343c9ce1baa4",
+    "preview-runner.js": "810581922329cd8394248b941f0c1309b1c186c21f806855df71e9dceb10a09d",
+    "learning-projects.js": "cf11c40a40619796c3436cb5758b4cf18f5b3077b3f9d3351f5c03816f95d913",
+    "guided-arrow-content.js": "0324d8a9da6a84df878c7ecaae577551f0deab60cef4cef3c7e9cd321f9ccfca",
+    "progress-data.js": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+    "learning-explainer.js": "a8e0ccdc211e8949902b7077b419aa69fb7661921cff4cdaa485f255bddd9a7c",
+    "practice-curriculum.js": "41822064e89272698042e7e76a94b80519d6d5524a1c0e2259789e1ecf4af6f6",
+    "dictionary-preview.js": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+    "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+    "learning-dashboard.css": "e1fdb1b7b536ee79be8cd5f1253c0bea7a87c6a987ffaa0fdfaea716643af475",
+    "app.js": "c043aae89b4e7e1cdda39120c943264b6df29ef5c0ca2463123b5f9095bfe03e",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "full-backup.js": "39d53b03e9a62d67732e905165ab400afa06b147e01dce883d10f316c0c4e942",
+    "guided-arrow.css": "9c871a11abc88fdb43b0f4a9f91da59d28d0c3ead0814eb881bbe8b319ce2fde",
+    "simulator-correction.css": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681",
+    "identity.css": "467d75013e077e3044adda6eed83e1cb5af50f03f975b4ddae789aef081a2175",
+    "learning-explainer.css": "8575e602596bdb0c0712d5133298d5c62c07e55cc4d53837e8ac0c49fc6c42a8",
+    "guided-evaluator.js": "aacc850e89bbe647187c2deb27c96e62a755afa95f2fd88f6eef33e8f297c683",
+    "dictionary-correction.css": "dd797342dae2da394ebc09e7bd44ae747a72d1a8cfc5dc4d4dda91cc4a61cd54",
+    "learning-dictionary-status.js": "de7aeb8dbd7ae1a502e2a123944f300ff9b6480005d0defd8d516493c7b3840a",
+    "guided-arrow-feedback.js": "1993f78433cf81887ddc4b02e487c3e5e5b06f5f7cb2e8be9838d411b1e22085"
+  },
+  "protectedFiles": {
+    "simulator-beta.js": {
+      "sha256": "1e15740d1576b79c262ff3ddbd3926c041c31967c282cd9ee2e1dbc38c4d0dec",
+      "unchangedFrom310e62f": true
+    },
+    "simulator-reference.css": {
+      "sha256": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+      "unchangedFrom310e62f": true
+    },
+    "simulator-final.css": {
+      "sha256": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+      "unchangedFrom310e62f": true
+    },
+    "simulator-correction.css": {
+      "sha256": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681",
+      "unchangedFrom310e62f": true
+    },
+    "simulator-guides.js": {
+      "sha256": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910",
+      "unchangedFrom310e62f": true
+    },
+    "preview-runner.js": {
+      "sha256": "810581922329cd8394248b941f0c1309b1c186c21f806855df71e9dceb10a09d",
+      "unchangedFrom310e62f": true
+    },
+    "dictionary-preview.js": {
+      "sha256": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+      "unchangedFrom310e62f": true
+    },
+    "guided-arrow.js": {
+      "sha256": "80ddeb7a724607258ca4feb3302388d3f34c11f9141abc28fa67e9f878a6190d",
+      "unchangedFrom310e62f": true
+    },
+    "guided-arrow-content.js": {
+      "sha256": "0324d8a9da6a84df878c7ecaae577551f0deab60cef4cef3c7e9cd321f9ccfca",
+      "unchangedFrom310e62f": true
+    },
+    "guided-arrow-evaluator.js": {
+      "sha256": "fc7f3ef6e16eaa994b970f7e0a483ce1c12c233e0541892c370231b079ff631c",
+      "unchangedFrom310e62f": true
+    },
+    "guided-arrow-feedback.js": {
+      "sha256": "1993f78433cf81887ddc4b02e487c3e5e5b06f5f7cb2e8be9838d411b1e22085",
+      "unchangedFrom310e62f": true
+    },
+    "guided-arrow.css": {
+      "sha256": "9c871a11abc88fdb43b0f4a9f91da59d28d0c3ead0814eb881bbe8b319ce2fde",
+      "unchangedFrom310e62f": true
+    }
+  },
+  "deployPerformed": false,
+  "mainMerged": false,
+  "humanAudiblePronunciationVerified": false,
+  "githubUiMediaPlaybackVerified": false
+}

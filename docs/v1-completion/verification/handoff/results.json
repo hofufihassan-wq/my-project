@@ -1,0 +1,62 @@
+[
+  {
+    "suite": "assets",
+    "exitCode": 0,
+    "seconds": 0.27
+  },
+  {
+    "suite": "backup-unit",
+    "exitCode": 0,
+    "seconds": 0.11
+  },
+  {
+    "suite": "guided-state",
+    "exitCode": 0,
+    "seconds": 0.06
+  },
+  {
+    "suite": "A1-browser",
+    "exitCode": 0,
+    "seconds": 4.36
+  },
+  {
+    "suite": "full-backup-browser",
+    "exitCode": 0,
+    "seconds": 9.56
+  },
+  {
+    "suite": "recovery-browser",
+    "exitCode": 0,
+    "seconds": 3.3
+  },
+  {
+    "suite": "evaluator-browser",
+    "exitCode": 0,
+    "seconds": 6.59
+  },
+  {
+    "suite": "guided-browser",
+    "exitCode": 0,
+    "seconds": 8.65
+  },
+  {
+    "suite": "markup-browser",
+    "exitCode": 0,
+    "seconds": 5.11
+  },
+  {
+    "suite": "javascript-browser",
+    "exitCode": 0,
+    "seconds": 8.95
+  },
+  {
+    "suite": "extended-evaluator",
+    "exitCode": 0,
+    "seconds": 3.75
+  },
+  {
+    "suite": "environments-ui",
+    "exitCode": 0,
+    "seconds": 8.35
+  }
+]

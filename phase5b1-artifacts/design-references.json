@@ -1,0 +1,22 @@
+{
+  "archive": "VueLexicon_Design_References_Light.zip",
+  "archive_sha256": "7065c5f9eba7ef3477bc19eb7e84cbfaed567abbfeb22d477218e33922dcb28f",
+  "used_as_visual_sources": [
+    {
+      "name": "README_REFERENCES.txt",
+      "bytes": 1405,
+      "sha256": "a8fec1384dfc047123dfdf8867b579b8bfddcd1b7bdc14abfcafba1fc495fe08"
+    },
+    {
+      "name": "02_dictionary_version_one.jpg",
+      "bytes": 179196,
+      "sha256": "40b5a4374d4544d62644a0a878b4e78a29e57bd97dfa85066e801aade06138ad"
+    },
+    {
+      "name": "03_simulator_blue_tech.jpg",
+      "bytes": 193933,
+      "sha256": "4356ccb65005dc30ca3419d1aea408b5659187c08441c581860721174772d222"
+    }
+  ],
+  "homepage": "Existing accepted homepage retained; execution screenshots are validation artifacts, not design references."
+}

@@ -75,12 +75,35 @@
     addEventListener('unhandledrejection', event => {
       fail(event.reason);
     });
+    // A srcdoc document inherits the parent's base URL. Native #links would
+    // therefore replace this preview with the application URL, not its target.
+    // Keep self-targeted fragment clicks within the child; other links and
+    // user-cancelled events retain their existing behavior. This is scrolling,
+    // not a replacement for the History API or script-driven navigation.
+    addEventListener('click', event => {
+      if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+          event.metaKey || event.shiftKey || event.altKey) return;
+      const link = event.target?.closest?.('a[href], area[href]');
+      if (!link || link.hasAttribute('download')) return;
+      const href = link.getAttribute('href').trim();
+      const target = link.getAttribute('target') ||
+        document.querySelector('base[target]')?.getAttribute('target') || '_self';
+      if (!href.startsWith('#') || target.toLowerCase() !== '_self') return;
+      event.preventDefault();
+      let fragment = href.slice(1);
+      try { fragment = decodeURIComponent(fragment); } catch (_) {}
+      if (!fragment) { scrollTo(0, 0); return; }
+      const destination = document.getElementById(fragment) ||
+        Array.from(document.getElementsByName(fragment)).find(element => element.localName === 'a');
+      if (destination) destination.scrollIntoView();
+      else if (fragment.toLowerCase() === 'top') scrollTo(0, 0);
+    });
     function snapshot() {
       try {
         const text = id => (document.getElementById(id)?.innerText || '').slice(0, 16000);
         send('DOM_SNAPSHOT', {
           bodyText: (document.body?.innerText || '').slice(0, 16000),
-          cardText: text('card'), appViewText: text('app-view'),
+          cardText: text('card'), appViewText: text('app-view'), outputText: text('output'),
           cardsContainerCount: Math.min(document.getElementById('cards-container')?.children.length || 0, 10000),
           cardElementsCount: Math.min(document.querySelectorAll('.card').length, 10000)
         });
@@ -90,8 +113,8 @@
     function ready() {
       if (failed || observing) return;
       observing = true;
-      send('PREVIEW_READY', {});
       snapshot();
+      send('PREVIEW_READY', {});
       // Observe async DOM updates; readiness never claims all timers/events completed.
       let timer;
       new MutationObserver(() => {
@@ -184,10 +207,11 @@
         if (!exactKeys(p, ['msg', 'lineno']) || typeof p.msg !== 'string' || p.msg.length > MAX_TEXT ||
             !Number.isInteger(p.lineno) || p.lineno < 0 || p.lineno > 10000000) return null;
       } else if (data.type === 'DOM_SNAPSHOT') {
-        if (!exactKeys(p, ['bodyText', 'cardText', 'appViewText', 'cardsContainerCount', 'cardElementsCount'])) return null;
+        if (!exactKeys(p, ['bodyText', 'cardText', 'appViewText', 'outputText', 'cardsContainerCount', 'cardElementsCount'])) return null;
         for (const key of ['bodyText', 'cardText', 'appViewText']) {
           if (typeof p[key] !== 'string' || p[key].length > 16000) return null;
         }
+        if (Object.hasOwn(p, 'outputText') && (typeof p.outputText !== 'string' || p.outputText.length > 16000)) return null;
         for (const key of ['cardsContainerCount', 'cardElementsCount']) {
           if (!Number.isInteger(p[key]) || p[key] < 0 || p[key] > 10000) return null;
         }

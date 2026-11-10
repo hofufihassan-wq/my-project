@@ -59,6 +59,11 @@ elif mode == 'verify':
         for name, expected in manifest['generated_compiler']['inputs_sha256'].items():
             if digest((ROOT / name).read_bytes()) != expected:
                 raise ValueError('Compiler input changed; run npm run build:compiler: ' + name)
+    if 'generated_dom' in manifest:
+        files.append(manifest['generated_dom'])
+        for name, expected in manifest['generated_dom']['inputs_sha256'].items():
+            if digest((ROOT / name).read_bytes()) != expected:
+                raise ValueError('DOM build input changed; run npm run build:guided-dom: ' + name)
     for file in files:
         if digest((ROOT / file['path']).read_bytes()) != file['sha256']:
             raise ValueError('Asset checksum mismatch: ' + file['path'])

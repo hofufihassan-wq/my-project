@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-10-31T00:12:17.394Z",
+  "browser": "154.0.8037.57",
+  "intentionalChildErrors": [
+    "ACTUAL_S2_ERROR"
+  ],
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "name": "real submitted/ready/snapshot events and DOM fields from reference",
+      "passed": true
+    },
+    {
+      "name": "foreign sender cannot add events or error detail",
+      "passed": true
+    },
+    {
+      "name": "source revision invalidates DOM observations while preserving submitted source",
+      "passed": true
+    },
+    {
+      "name": "actual asynchronous output updates typed DOM fields",
+      "passed": true
+    },
+    {
+      "name": "actual runtime errors include qualified generated-document position",
+      "passed": true
+    },
+    {
+      "name": "editing after error marks error source stale without fabricating new trace",
+      "passed": true
+    },
+    {
+      "name": "stop clears current error and snapshot but leaves bounded receipt history",
+      "passed": true
+    },
+    {
+      "name": "receipt log is bounded without evaluating code in parent",
+      "passed": true
+    }
+  ]
+}

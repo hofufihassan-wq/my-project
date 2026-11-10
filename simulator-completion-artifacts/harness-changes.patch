@@ -1,0 +1,46 @@
+diff --git a/run_simulator_beta_browser_tests.js b/run_simulator_beta_browser_tests.js
+index 9e7ff61..83ba46d 100644
+--- a/run_simulator_beta_browser_tests.js
++++ b/run_simulator_beta_browser_tests.js
+@@ -41,7 +41,7 @@ async function context(origin,{width=1440,height=960,seeded=false,reducedMotion=
+  await p.goto(origin,{waitUntil:'networkidle'});await p.waitForFunction(()=>window.vueLexiconApp?.practiceLessons?.length===15);await p.evaluate(()=>document.fonts.ready);return{context:c,page:p,evidence};
+ }
+ async function enter(p){await p.locator('[data-testid="nav-simulator"]:visible').first().click();await settle(p);assert.equal(await app(p,a=>a.appMode),'practice');}
+-async function ready(p){await p.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));await settle(p);}
++async function ready(p){await p.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));await settle(p);await p.waitForTimeout(200);}
+ async function submit(p,code){await app(p,(a,code)=>{a.techEditorView='draft';a.practiceAutoRun=false;a.practiceCode=code;},code);await p.locator(select.run).click();await ready(p);}
+ async function shot(p,name){await settle(p);await p.screenshot({path:path.join(output,'screenshots',name),fullPage:false});screenshots.push('screenshots/'+name);}
+ async function geometry(p){const d=await p.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));assert(d.scroll<=d.width+1,JSON.stringify(d));}
+diff --git a/run_simulator_browser_tests.js b/run_simulator_browser_tests.js
+index f8ef505..bc65bdc 100644
+--- a/run_simulator_browser_tests.js
++++ b/run_simulator_browser_tests.js
+@@ -78,6 +78,7 @@ async function main() {
+   }
+   async function waitReady() {
+     await page.waitForFunction(() => ['preview_ready', 'error'].includes(window.vueLexiconApp.executionState));
++    await page.waitForTimeout(200); // Let Chromium publish the fresh opaque-frame hit-test surface.
+   }
+   async function select(id) {
+     await app((a, id) => { a.selectedTrack = a.practiceLessons.find(l => l.id === id).track; a.selectLesson(id); }, id);
+@@ -249,6 +250,7 @@ async function main() {
+     assert.equal(await page.evaluate(b => document.elementFromPoint(b.x+b.width/2,b.y+b.height/2)?.tagName, bounds), 'IFRAME');
+     // Wait for the button's own stable position and hit target after local CSS
+     // loads. Locator.click still sends a real pointer event, unlike DOM.click.
++    await page.waitForTimeout(200); // Repositioning also invalidates Chromium's compositor hit-test cache.
+     await frame.locator('#term-demo').click();
+     await page.waitForFunction(() => window.vueLexiconApp.simulatorObservation?.bodyText.includes('changed'));
+     assert.equal(await frame.locator('#term-demo').textContent(), 'changed');
+diff --git a/run_stability_browser_tests.js b/run_stability_browser_tests.js
+index 92bcf43..1e4e63d 100644
+--- a/run_stability_browser_tests.js
++++ b/run_stability_browser_tests.js
+@@ -55,7 +55,7 @@ async function main(){
+       const app=(fn,arg)=>page.evaluate(({s,arg})=>(new Function('a','arg',`return (${s})(a,arg)`))(window.vueLexiconApp,arg),{s:fn.toString(),arg});
+       const stored=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('vuelexicon_practice_progress')));
+       async function test(title,fn){if(process.env.PHASE4_FILTER&&!title.includes(process.env.PHASE4_FILTER))return;try{await fn();results.push({engine:name,width,title,passed:true});console.log('PASS',name,width,title);}catch(error){results.push({engine:name,width,title,passed:false,error:error.message});console.error('FAIL',name,width,title,error.message);}}
+-      async function ready(){await page.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));}
++      async function ready(){await page.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));await page.waitForTimeout(200);}
+       const search=page.locator('input[placeholder^="ابحث عن أي"]');
+       await test('header geometry keeps every quick action fully inside the viewport',async()=>{
+         const geometry=await page.locator('header').evaluate(header=>({width:innerWidth,

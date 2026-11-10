@@ -1,0 +1,14 @@
+[
+  {
+    "suite": "platform-integration",
+    "exitCode": 0
+  },
+  {
+    "suite": "existing-five-themes",
+    "exitCode": 0
+  },
+  {
+    "suite": "backup-interface",
+    "exitCode": 0
+  }
+]

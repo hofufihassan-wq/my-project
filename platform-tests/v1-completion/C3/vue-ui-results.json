@@ -1,0 +1,35 @@
+{
+  "passed": 7,
+  "total": 7,
+  "rows": [
+    {
+      "name": "all 18 Vue units visible in shared approved flow without altering Arrow",
+      "passed": true
+    },
+    {
+      "name": "props exercise, fix, mastery and all questions grant real completion",
+      "passed": true
+    },
+    {
+      "name": "real Router example uses same editor and safe snapshot with documented context",
+      "passed": true
+    },
+    {
+      "name": "unfinished new Vue draft and completed older unit survive actual browser shutdown",
+      "passed": true
+    },
+    {
+      "name": "full backup download and actual import retain new Vue drafts and mastery",
+      "passed": true
+    },
+    {
+      "name": "mobile Vue unit has no document overflow and retains keyboard editing",
+      "passed": true
+    },
+    {
+      "name": "no parent execution errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

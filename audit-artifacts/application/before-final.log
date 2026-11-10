@@ -1,0 +1,40 @@
+FAIL transient native Storage read failure preserves practice original Unread existing record must not be replaced by fallback state
++ actual - expected
+
++ '{"JS-101":{"status":"unlocked","codeDraft":"<p>SESSION EDIT</p>"},"HTML-101":{"status":"unlocked","codeDraft":null},"CSS-101":{"status":"unlocked","codeDraft":null},"TS-101":{"status":"unlocked","codeDraft":null},"VUE-101":{"status":"unlocked","codeDraft":null}}'
+- '{"JS-101":{"status":"unlocked","codeDraft":"<p>ORIGINAL DRAFT</p>"},"JS-102":{"status":"unlocked","codeDraft":"<p>SECOND ORIGINAL</p>"}}'
+
+FAIL transient native Storage read failure preserves bookmarks original Unread existing record must not be replaced by fallback state
++ actual - expected
+
++ '["js-let"]'
+- '["js-const"]'
+        ^
+
+FAIL transient native Storage read failure preserves mastery original Unread existing record must not be replaced by fallback state
++ actual - expected
+
++ '{"js-let":"learning"}'
+- '{"js-const":"mastered"}'
+        ^
+
+FAIL transient native Storage read failure preserves recent original Unread existing record must not be replaced by fallback state
++ actual - expected
+
++ '["js-let"]'
+- '["js-const"]'
+        ^
+
+FAIL transient read failure during import snapshot preserves existing draft Expected values to be strictly equal:
++ actual - expected
+
++ '{"JS-101":{"status":"unlocked","codeDraft":"<p>IMPORTED REPLACEMENT</p>"},"HTML-101":{"status":"unlocked","codeDraft":null},"CSS-101":{"status":"unlocked","codeDraft":null},"TS-101":{"status":"unlocked","codeDraft":null},"VUE-101":{"status":"unlocked","codeDraft":null}}'
+- '{"JS-101":{"status":"unlocked","codeDraft":"<p>IMPORT ORIGINAL</p>"},"HTML-101":{"status":"unlocked","codeDraft":null},"CSS-101":{"status":"unlocked","codeDraft":null},"TS-101":{"status":"unlocked","codeDraft":null},"VUE-101":{"status":"unlocked","codeDraft":null}}'
+
+FAIL IME composing Tab preserves CSS text Expected values to be strictly equal:
++ actual - expected
+
++ 'p{color:red}  '
+- 'p{color:red}'
+               ^
+

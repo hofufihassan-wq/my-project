@@ -1,0 +1,240 @@
+{
+  "timestamp": "2026-10-31T07:10:29.299Z",
+  "runtime": "Real Chromium, local Vue 3.4.21 and official compiler-sfc; root and nested/app; external requests blocked; no library substitutes",
+  "passed": 58,
+  "total": 58,
+  "results": [
+    {
+      "name": "/ script setup, named imports, ref, computed, events, v-if/v-for and scoped CSS actually run",
+      "passed": true
+    },
+    {
+      "name": "/ export default Options API, namespace/aliased imports and style v-bind",
+      "passed": true
+    },
+    {
+      "name": "/ selected HTML tab runs HTML and events instead of the term’s SFC",
+      "passed": true
+    },
+    {
+      "name": "/ CSS tab loads CSS on a clearly described sample",
+      "passed": true
+    },
+    {
+      "name": "/ JavaScript, Vue-only module import/export, circular and BigInt logging work",
+      "passed": true
+    },
+    {
+      "name": "/ script-tag text inside JavaScript remains text; an empty chosen tab has a clear message",
+      "passed": true
+    },
+    {
+      "name": "/ the unchanged real ref() term runs with its legacy escaped closing tag",
+      "passed": true
+    },
+    {
+      "name": "/ external module shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ relative file shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ dynamic import shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ TypeScript shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ external SFC block shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ custom block shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ CSS Modules shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ empty CSS Modules attribute shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ CSS preprocessor shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ top-level await shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ Options API async setup shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ setup returning a Promise shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ unknown Nuxt component shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ missing template data shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ malformed script shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ external CSS import shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ case-insensitive external CSS import shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/ escaped closer inside a JS string preserves the string when fixing only the real legacy closer",
+      "passed": true
+    },
+    {
+      "name": "/ runtime error stays an error after DOM readiness",
+      "passed": true
+    },
+    {
+      "name": "/ new reference clears evidence; stop destroys timers and rejects stale messages",
+      "passed": true
+    },
+    {
+      "name": "/ imported drafts never auto-run when opening a dictionary reference; export and saved nulls survive",
+      "passed": true
+    },
+    {
+      "name": "/ real core files work offline in this path, without request failures or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ script setup, named imports, ref, computed, events, v-if/v-for and scoped CSS actually run",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ export default Options API, namespace/aliased imports and style v-bind",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ selected HTML tab runs HTML and events instead of the term’s SFC",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ CSS tab loads CSS on a clearly described sample",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ JavaScript, Vue-only module import/export, circular and BigInt logging work",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ script-tag text inside JavaScript remains text; an empty chosen tab has a clear message",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ the unchanged real ref() term runs with its legacy escaped closing tag",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ external module shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ relative file shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ dynamic import shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ TypeScript shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ external SFC block shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ custom block shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ CSS Modules shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ empty CSS Modules attribute shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ CSS preprocessor shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ top-level await shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ Options API async setup shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ setup returning a Promise shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ unknown Nuxt component shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ missing template data shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ malformed script shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ external CSS import shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ case-insensitive external CSS import shows an Arabic diagnostic without running unsupported code",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ escaped closer inside a JS string preserves the string when fixing only the real legacy closer",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ runtime error stays an error after DOM readiness",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ new reference clears evidence; stop destroys timers and rejects stale messages",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ imported drafts never auto-run when opening a dictionary reference; export and saved nulls survive",
+      "passed": true
+    },
+    {
+      "name": "/nested/app/ real core files work offline in this path, without request failures or uncaught exceptions",
+      "passed": true
+    }
+  ]
+}

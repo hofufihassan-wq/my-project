@@ -167,7 +167,9 @@ async function main() {
   });
   await test('no application page errors during integration checks', async () => assert.deepEqual(pageErrors, []));
   const passed = results.filter(r=>r.passed).length;
-  fs.writeFileSync('phase0a_browser_report.json',JSON.stringify({runtime:'Chromium + Vue 3.4.21 test-only CDN fixture',date:new Date().toISOString(),passed,total:results.length,results},null,2)+'\n');
+  const outputFile = process.env.VLP_TEST_OUTPUT ? require('node:path').join(process.env.VLP_TEST_OUTPUT, 'phase0a_browser_report.json') : 'phase0a_browser_report.json';
+  if (process.env.VLP_TEST_OUTPUT) fs.mkdirSync(process.env.VLP_TEST_OUTPUT, {recursive:true});
+  fs.writeFileSync(outputFile,JSON.stringify({runtime:'Chromium + Vue 3.4.21 test-only CDN fixture',date:new Date().toISOString(),passed,total:results.length,results},null,2)+'\n');
   console.log(`${passed}/${results.length} browser integration checks passed`);
   if (passed !== results.length) process.exitCode=1;
 }

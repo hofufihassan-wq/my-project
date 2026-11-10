@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/mdn/content/main/files/en-us/web/javascript/reference/global_objects/intl/relativetimeformat/index.md",
+    "status": 200,
+    "bytes": 4149
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mdn/content/main/files/en-us/web/javascript/reference/global_objects/json/stringify/index.md",
+    "status": 200,
+    "bytes": 17165
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mdn/content/main/files/en-us/web/javascript/reference/global_objects/weakmap/index.md",
+    "status": 200,
+    "bytes": 13496
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mdn/content/main/files/en-us/web/css/reference/properties/justify-content/index.md",
+    "status": 200,
+    "bytes": 14677
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nuxt/nuxt/main/docs/3.api/2.composables/use-fetch.md",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

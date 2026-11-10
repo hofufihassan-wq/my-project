@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "page.waitForFunction: Timeout 30000ms exceeded.\n    at /workspace/my-progect/platform-tests/js-lab/integration.cjs:4:1113"
+}

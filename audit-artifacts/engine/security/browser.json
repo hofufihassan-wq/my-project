@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-31T13:12:15.909Z",
+  "browser": "154.0.8037.57",
+  "passed": 3,
+  "total": 3,
+  "results": [
+    {
+      "name": "Actual child cannot access parent DOM or localStorage; sandbox allow-scripts only",
+      "passed": true,
+      "logs": [
+        "storage_BLOCKED_SecurityError",
+        "parent_BLOCKED_SecurityError",
+        "أُرسلت نسخة مسودتك الحالية إلى إطار معزول جديد."
+      ]
+    },
+    {
+      "name": "Foreign frame and parent messages with correct tokens do not affect run",
+      "passed": true
+    },
+    {
+      "name": "Stop destroys actual interval frame; no later logs accepted",
+      "passed": true
+    }
+  ]
+}

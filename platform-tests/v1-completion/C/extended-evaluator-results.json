@@ -1,0 +1,34 @@
+{
+  "passed": 7,
+  "total": 7,
+  "tests": [
+    {
+      "name": "DOM runs isolated query/createElement/append/event delegation through LinkeDOM",
+      "passed": true
+    },
+    {
+      "name": "DOM loops are terminable and never access app storage",
+      "passed": true
+    },
+    {
+      "name": "native ES modules resolve a documented fixture and real named export",
+      "passed": true
+    },
+    {
+      "name": "module import outside the fixture is rejected before network access",
+      "passed": true
+    },
+    {
+      "name": "Fetch exercise uses actual Response/ok/json for 200/404/rejected scenarios without network",
+      "passed": true
+    },
+    {
+      "name": "storage isolated adapter follows WebStorage string/null semantics and can restore its own snapshot",
+      "passed": true
+    },
+    {
+      "name": "runtime throw criteria and no mutation criteria use actual behavior",
+      "passed": true
+    }
+  ]
+}

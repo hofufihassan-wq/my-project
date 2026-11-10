@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-10-31T07:07:39.891Z",
+  "runtimeHashes": {
+    "app.js": "adfa3823b2b322fc7b97b6cd644ad5f02124be1017bf04d9c30cbf1484bf435a",
+    "index.html": "51a26e1da89d774f8f19279c2125d4cee6c4380412079c1e65f513082628c7c9",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "assets/vendor/manifest.json": "30fa73ecb464ea9548f282815b06ed354cb2203111c1448db55355a6b1d70d15"
+  },
+  "errors": [
+    "COMPLETION_DEMO_ERROR"
+  ],
+  "failed": [],
+  "steps": [
+    {
+      "name": "enable quiet ambient audio; alerts remain muted",
+      "recordingSecond": 3.033
+    },
+    {
+      "name": "run the original reference with real stage and DOM signals",
+      "recordingSecond": 5.137
+    },
+    {
+      "name": "native preview interaction updates DOM and real Console",
+      "recordingSecond": 8.984
+    },
+    {
+      "name": "preview tab html",
+      "recordingSecond": 10.603
+    },
+    {
+      "name": "preview tab css",
+      "recordingSecond": 11.736
+    },
+    {
+      "name": "preview tab console",
+      "recordingSecond": 12.751
+    },
+    {
+      "name": "preview tab result",
+      "recordingSecond": 13.798
+    },
+    {
+      "name": "switch ambient off and error/notification channel on independently",
+      "recordingSecond": 15.025
+    },
+    {
+      "name": "genuine deliberate runtime error with actual audible error cue",
+      "recordingSecond": 16.408
+    },
+    {
+      "name": "stop replaces isolated frame and invalidates run",
+      "recordingSecond": 18.103
+    },
+    {
+      "name": "reset restores original lesson source and starts a fresh run",
+      "recordingSecond": 19.604
+    },
+    {
+      "name": "return to quiet ambient only",
+      "recordingSecond": 20.817
+    }
+  ],
+  "audio": "Actual simulator output; every native output bus is tapped into MediaStreamDestination in test instrumentation only.",
+  "ambientSamples": {
+    "rms": 0.005773489815531837,
+    "peak": 0.0109900813549757,
+    "n": 13
+  },
+  "errorSamples": {
+    "rms": 0.00563242027594577,
+    "peak": 0.0234843660145998,
+    "n": 4
+  },
+  "audioOffsetSeconds": 3.028,
+  "rawVideo": "/workspace/work/simulator-completion/demo-second/raw-video/1442043f9ee9a054db8ca008c77c1e73.webm",
+  "recordedAudioPeak": 0.03523097559809685,
+  "output": "/workspace/work/simulator-completion/demo-second/VueLexicon_Simulator_Completion_Demo.mp4"
+}

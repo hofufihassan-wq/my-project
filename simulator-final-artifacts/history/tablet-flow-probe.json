@@ -1,0 +1,395 @@
+{
+  "before": {
+    "panel": {
+      "height": 568,
+      "scroll": 568,
+      "css": "570px",
+      "rect": {
+        "x": 10,
+        "y": 690.78125,
+        "width": 748,
+        "height": 570,
+        "top": 690.78125,
+        "right": 758,
+        "bottom": 1260.78125,
+        "left": 10
+      }
+    },
+    "grid": {
+      "rows": "412px 162px 570px 267.578px 347.531px 116px",
+      "height": "1940.11px"
+    },
+    "children": [
+      {
+        "class": "tech-section-title",
+        "height": 44,
+        "css": "44px",
+        "margin": "0px",
+        "min": "36px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 691.78125,
+          "width": 722,
+          "height": 44,
+          "top": 691.78125,
+          "right": 745,
+          "bottom": 735.78125,
+          "left": 23
+        }
+      },
+      {
+        "class": "tech-flow-badge",
+        "height": 28.78125,
+        "css": "28.7812px",
+        "margin": "6px 0px 0px",
+        "min": "auto",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 741.78125,
+          "width": 722,
+          "height": 28.78125,
+          "top": 741.78125,
+          "right": 745,
+          "bottom": 770.5625,
+          "left": 23
+        }
+      },
+      {
+        "class": "tech-flow-art final-flow-wires",
+        "height": 350,
+        "css": "350px",
+        "margin": "0px",
+        "min": "0px",
+        "flex": "0 1 auto",
+        "rect": {
+          "x": 164,
+          "y": 771.78125,
+          "width": 440,
+          "height": 350,
+          "top": 771.78125,
+          "right": 604,
+          "bottom": 1121.78125,
+          "left": 164
+        }
+      },
+      {
+        "class": "tech-flow-nodes",
+        "height": 350,
+        "css": "350px",
+        "margin": "8px 0px 0px",
+        "min": "350px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 164,
+          "y": 778.5625,
+          "width": 440,
+          "height": 350,
+          "top": 778.5625,
+          "right": 604,
+          "bottom": 1128.5625,
+          "left": 164
+        }
+      },
+      {
+        "class": "final-stage-explanation",
+        "height": 79,
+        "css": "79px",
+        "margin": "0.21875px 0px 0px",
+        "min": "auto",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 1128.78125,
+          "width": 722,
+          "height": 79,
+          "top": 1128.78125,
+          "right": 745,
+          "bottom": 1207.78125,
+          "left": 23
+        }
+      },
+      {
+        "class": "beta-flow-summary",
+        "height": 36,
+        "css": "36px",
+        "margin": "6px 0px 0px",
+        "min": "36px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 1213.78125,
+          "width": 722,
+          "height": 36,
+          "top": 1213.78125,
+          "right": 745,
+          "bottom": 1249.78125,
+          "left": 23
+        }
+      }
+    ]
+  },
+  "maxcontent": {
+    "panel": {
+      "height": 568,
+      "scroll": 568,
+      "css": "570px",
+      "rect": {
+        "x": 10,
+        "y": 680.78125,
+        "width": 748,
+        "height": 570,
+        "top": 680.78125,
+        "right": 758,
+        "bottom": 1250.78125,
+        "left": 10
+      }
+    },
+    "grid": {
+      "rows": "412px 162px 570px 267.578px 347.531px 116px",
+      "height": "1940.11px"
+    },
+    "children": [
+      {
+        "class": "tech-section-title",
+        "height": 44,
+        "css": "44px",
+        "margin": "0px",
+        "min": "36px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 681.78125,
+          "width": 722,
+          "height": 44,
+          "top": 681.78125,
+          "right": 745,
+          "bottom": 725.78125,
+          "left": 23
+        }
+      },
+      {
+        "class": "tech-flow-badge",
+        "height": 28.78125,
+        "css": "28.7812px",
+        "margin": "6px 0px 0px",
+        "min": "auto",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 731.78125,
+          "width": 722,
+          "height": 28.78125,
+          "top": 731.78125,
+          "right": 745,
+          "bottom": 760.5625,
+          "left": 23
+        }
+      },
+      {
+        "class": "tech-flow-art final-flow-wires",
+        "height": 350,
+        "css": "350px",
+        "margin": "0px",
+        "min": "0px",
+        "flex": "0 1 auto",
+        "rect": {
+          "x": 164,
+          "y": 761.78125,
+          "width": 440,
+          "height": 350,
+          "top": 761.78125,
+          "right": 604,
+          "bottom": 1111.78125,
+          "left": 164
+        }
+      },
+      {
+        "class": "tech-flow-nodes",
+        "height": 350,
+        "css": "350px",
+        "margin": "8px 0px 0px",
+        "min": "350px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 164,
+          "y": 768.5625,
+          "width": 440,
+          "height": 350,
+          "top": 768.5625,
+          "right": 604,
+          "bottom": 1118.5625,
+          "left": 164
+        }
+      },
+      {
+        "class": "final-stage-explanation",
+        "height": 79,
+        "css": "79px",
+        "margin": "0.21875px 0px 0px",
+        "min": "auto",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 1118.78125,
+          "width": 722,
+          "height": 79,
+          "top": 1118.78125,
+          "right": 745,
+          "bottom": 1197.78125,
+          "left": 23
+        }
+      },
+      {
+        "class": "beta-flow-summary",
+        "height": 36,
+        "css": "36px",
+        "margin": "6px 0px 0px",
+        "min": "36px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 1203.78125,
+          "width": 722,
+          "height": 36,
+          "top": 1203.78125,
+          "right": 745,
+          "bottom": 1239.78125,
+          "left": 23
+        }
+      }
+    ]
+  },
+  "visible": {
+    "panel": {
+      "height": 568,
+      "scroll": 568,
+      "css": "570px",
+      "rect": {
+        "x": 10,
+        "y": 672.78125,
+        "width": 748,
+        "height": 570,
+        "top": 672.78125,
+        "right": 758,
+        "bottom": 1242.78125,
+        "left": 10
+      }
+    },
+    "grid": {
+      "rows": "412px 162px 570px 267.578px 347.531px 116px",
+      "height": "1940.11px"
+    },
+    "children": [
+      {
+        "class": "tech-section-title",
+        "height": 44,
+        "css": "44px",
+        "margin": "0px",
+        "min": "36px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 673.78125,
+          "width": 722,
+          "height": 44,
+          "top": 673.78125,
+          "right": 745,
+          "bottom": 717.78125,
+          "left": 23
+        }
+      },
+      {
+        "class": "tech-flow-badge",
+        "height": 28.78125,
+        "css": "28.7812px",
+        "margin": "6px 0px 0px",
+        "min": "auto",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 723.78125,
+          "width": 722,
+          "height": 28.78125,
+          "top": 723.78125,
+          "right": 745,
+          "bottom": 752.5625,
+          "left": 23
+        }
+      },
+      {
+        "class": "tech-flow-art final-flow-wires",
+        "height": 350,
+        "css": "350px",
+        "margin": "0px",
+        "min": "0px",
+        "flex": "0 1 auto",
+        "rect": {
+          "x": 164,
+          "y": 753.78125,
+          "width": 440,
+          "height": 350,
+          "top": 753.78125,
+          "right": 604,
+          "bottom": 1103.78125,
+          "left": 164
+        }
+      },
+      {
+        "class": "tech-flow-nodes",
+        "height": 350,
+        "css": "350px",
+        "margin": "8px 0px 0px",
+        "min": "350px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 164,
+          "y": 760.5625,
+          "width": 440,
+          "height": 350,
+          "top": 760.5625,
+          "right": 604,
+          "bottom": 1110.5625,
+          "left": 164
+        }
+      },
+      {
+        "class": "final-stage-explanation",
+        "height": 79,
+        "css": "79px",
+        "margin": "0.21875px 0px 0px",
+        "min": "auto",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 1110.78125,
+          "width": 722,
+          "height": 79,
+          "top": 1110.78125,
+          "right": 745,
+          "bottom": 1189.78125,
+          "left": 23
+        }
+      },
+      {
+        "class": "beta-flow-summary",
+        "height": 36,
+        "css": "36px",
+        "margin": "6px 0px 0px",
+        "min": "36px",
+        "flex": "0 0 auto",
+        "rect": {
+          "x": 23,
+          "y": 1195.78125,
+          "width": 722,
+          "height": 36,
+          "top": 1195.78125,
+          "right": 745,
+          "bottom": 1231.78125,
+          "left": 23
+        }
+      }
+    ]
+  }
+}

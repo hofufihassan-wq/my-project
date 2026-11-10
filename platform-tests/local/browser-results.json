@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-11-04T17:52:52.954Z",
+  "platform": "linux",
+  "windowsCmdAvailable": false,
+  "origin": "http://127.0.0.1:8091",
+  "passed": 5,
+  "total": 5,
+  "results": [
+    {
+      "name": "health identifies exact loopback origin and same-folder reuse",
+      "passed": true
+    },
+    {
+      "name": "runtime HTML and MIME headers load, source/private paths are denied",
+      "passed": true
+    },
+    {
+      "name": "actual launcher serves dictionary and English/Arabic search",
+      "passed": true
+    },
+    {
+      "name": "favorite survives full browser close and local server stop/restart",
+      "passed": true
+    },
+    {
+      "name": "package contains runtime, originals and matching checksums without private source",
+      "passed": true
+    }
+  ]
+}

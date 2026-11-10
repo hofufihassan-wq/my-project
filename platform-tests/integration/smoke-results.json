@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-11-06T08:42:47.739Z",
+  "passed": 11,
+  "total": 11,
+  "results": [
+    {
+      "name": "all platform components registered and mount no errors",
+      "passed": true
+    },
+    {
+      "name": "real navigation course",
+      "passed": true
+    },
+    {
+      "name": "real navigation explain",
+      "passed": true
+    },
+    {
+      "name": "real navigation cssLab",
+      "passed": true
+    },
+    {
+      "name": "real navigation jsLab",
+      "passed": true
+    },
+    {
+      "name": "organizer four modes real components",
+      "passed": true
+    },
+    {
+      "name": "new themes persist reload and simulator palette stays independent",
+      "passed": true
+    },
+    {
+      "name": "legacy dictionary search and favorites still work",
+      "passed": true
+    },
+    {
+      "name": "responsive new tools at 390",
+      "passed": true
+    },
+    {
+      "name": "responsive new tools at 768",
+      "passed": true
+    },
+    {
+      "name": "parent and runtime assets have no unexpected errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "failedResources": []
+}

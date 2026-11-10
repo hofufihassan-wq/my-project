@@ -1,0 +1,57 @@
+PASS 360 dashboard starts in RTL with actual dictionary and lesson counts
+FAIL 360 navigation and all three session themes preserve saved data and educational content visible UI navigation must exist: nav-training
+
+0 !== 1
+
+PASS 360 manual simulator reference preserves every null, absent and stored draft; theme CSS stays outside iframe
+PASS 360 foreign window and unknown-source messages cannot overwrite simulator state
+FAIL 360 returning to dashboard and reload retain bookmarks mastery history backups and all drafts visible UI navigation must exist: nav-home
+
+0 !== 1
+
+PASS 360 legacy Tailwind dimensions colors responsive typography and filters still render inside isolated iframe
+PASS 360 core application uses local assets without failed requests or uncaught exceptions
+PASS 390 dashboard starts in RTL with actual dictionary and lesson counts
+FAIL 390 navigation and all three session themes preserve saved data and educational content visible UI navigation must exist: nav-training
+
+0 !== 1
+
+PASS 390 manual simulator reference preserves every null, absent and stored draft; theme CSS stays outside iframe
+PASS 390 foreign window and unknown-source messages cannot overwrite simulator state
+FAIL 390 returning to dashboard and reload retain bookmarks mastery history backups and all drafts visible UI navigation must exist: nav-home
+
+0 !== 1
+
+PASS 390 legacy Tailwind dimensions colors responsive typography and filters still render inside isolated iframe
+PASS 390 core application uses local assets without failed requests or uncaught exceptions
+PASS 768 dashboard starts in RTL with actual dictionary and lesson counts
+FAIL 768 navigation and all three session themes preserve saved data and educational content visible UI navigation must exist: nav-training
+
+0 !== 1
+
+PASS 768 manual simulator reference preserves every null, absent and stored draft; theme CSS stays outside iframe
+PASS 768 foreign window and unknown-source messages cannot overwrite simulator state
+FAIL 768 returning to dashboard and reload retain bookmarks mastery history backups and all drafts visible UI navigation must exist: nav-home
+
+0 !== 1
+
+PASS 768 legacy Tailwind dimensions colors responsive typography and filters still render inside isolated iframe
+PASS 768 core application uses local assets without failed requests or uncaught exceptions
+PASS 1440 dashboard starts in RTL with actual dictionary and lesson counts
+FAIL 1440 navigation and all three session themes preserve saved data and educational content visible UI navigation must exist: nav-training
+
+0 !== 1
+
+PASS 1440 manual simulator reference preserves every null, absent and stored draft; theme CSS stays outside iframe
+PASS 1440 foreign window and unknown-source messages cannot overwrite simulator state
+FAIL 1440 returning to dashboard and reload retain bookmarks mastery history backups and all drafts visible UI navigation must exist: nav-home
+
+0 !== 1
+
+PASS 1440 legacy Tailwind dimensions colors responsive typography and filters still render inside isolated iframe
+PASS 1440 core application uses local assets without failed requests or uncaught exceptions
+PASS 1440 desktop clean-context dashboard dictionary and simulator screenshots
+PASS 390 mobile clean-context dashboard dictionary and simulator screenshots
+PASS 768 tablet clean-context dashboard dictionary and simulator screenshots
+PASS null educational sources execution modules and visual runtime remain unchanged during verification
+24/32 phase 5B browser checks passed

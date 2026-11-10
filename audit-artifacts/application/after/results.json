@@ -1,0 +1,28 @@
+{
+  "root": "/workspace/my-progect",
+  "timestamp": "2026-10-31T13:14:08.318Z",
+  "passed": 5,
+  "total": 5,
+  "results": [
+    {
+      "name": "transient native Storage read failure preserves practice original",
+      "passed": true
+    },
+    {
+      "name": "transient native Storage read failure preserves bookmarks original",
+      "passed": true
+    },
+    {
+      "name": "transient native Storage read failure preserves mastery original",
+      "passed": true
+    },
+    {
+      "name": "transient native Storage read failure preserves recent original",
+      "passed": true
+    },
+    {
+      "name": "IME composing Tab preserves CSS text",
+      "passed": true
+    }
+  ]
+}

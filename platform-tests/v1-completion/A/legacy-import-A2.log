@@ -1,0 +1,13 @@
+Running Strict JSON Import Unit Tests:
+✓ PASS [Valid payload with real IDs]: success -> تم استيراد البيانات المدعومة ودمجها بنجاح؛ النسخة السابقة محفوظة للاسترجاع ✓
+✓ PASS [Corrupted JSON syntax]: error -> تعذر الاستيراد: صيغة JSON غير صالحة
+✓ PASS [Root is array instead of object]: error -> تعذر الاستيراد: النسخة الاحتياطية: يجب أن يكون كائناً غير null
+✓ PASS [Unknown term ID in bookmarks]: error -> تعذر الاستيراد: معرف مصطلح غير معروف
+✓ PASS [Invalid mastery level value]: error -> تعذر الاستيراد: مستوى إتقان غير صالح
+✓ PASS [Unknown term in mastery]: error -> تعذر الاستيراد: معرف مصطلح غير معروف
+✓ PASS [Unknown lesson ID in practiceProgress]: error -> تعذر الاستيراد: معرف درس غير معروف
+✓ PASS [Invalid status in practiceProgress]: error -> تعذر الاستيراد: حالة درس غير صالحة
+✓ PASS [File size > 1MB]: error -> تعذر الاستيراد: حجم الملف يتجاوز 1 MiB. لم يتم تعديل أي بيانات.
+
+Result: 9/9 unit tests passed.
+

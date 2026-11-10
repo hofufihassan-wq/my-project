@@ -1,0 +1,17 @@
+{
+  "capturedDuringWideRun": true,
+  "commit": "1cf220c506a132ae1a43a78f3cb508ee394a48c6",
+  "note": "Parent reports app.js gained foundationSection return and generated CSS manifest input hash changed during/just before wide baseline; this is a working tree baseline with that one-line addition, not pristine HEAD. Lessons/runner/index/styles unchanged. Source frozen from this capture through end.",
+  "hashes": {
+    "app.js": "7da7f6983d3dc67036558be9e3ee1adc3ea3f963e4ff36994741b9663d80fecb",
+    "index.html": "cabe723b99459002a72fea4cc98b6a1f82c39e32b10ee34f361b56d299d07435",
+    "preview-runner.js": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+    "learning-course.js": "447623f75047150cc58b3255fd2a8001af13299d5603fd8cb70482ccde5b5b3e",
+    "learning-course-advanced.js": "e6be6aa679c7282a922cb29747027f0533129e26627b2b5c12aad84c53a98596",
+    "learning-store.js": "b5f0d5dbdfbc2f23b1fdb937beda4126c53b5d5f21102e323118a789adec3cb6",
+    "practice-curriculum.js": "41822064e89272698042e7e76a94b80519d6d5524a1c0e2259789e1ecf4af6f6",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "615269843f9a3d7663cd03dc7837e1116ee21664a564ac361833aff8aa36e6e1"
+  },
+  "diff": "diff --git a/app.js b/app.js\nindex ab62227..dbb266d 100644\n--- a/app.js\n+++ b/app.js\n@@ -2525,7 +2525,7 @@ const app = createApp({\n       techPreviewTab, techEditorView, techFocusPanel, techMotion, techSource, techEditorCode, techHighlightedCode, techSourceCSS, techStatusLabel, techRunReference, techRunDraft, techSyncEditorScroll, techJumpToScript, techToggleFocus, techPreviewKeydown,\n       simulatorReferenceReading, simulatorExpandedPanel, simulatorEditorShare, toggleSimulatorPanel, simulatorStages,\n       theme, setTheme, practiceSurface, openVisualSimulator, openTraining,\n-      foundationSections, activeFoundation, openFoundation,\n+      foundationSection, foundationSections, activeFoundation, openFoundation,\n       dashboardStats, dashboardMasteryPercent, dictionaryRelated, openDashboardTerm,\n       // Core Lexicon State\n       rawLexiconData,\ndiff --git a/assets/vendor/manifest.json b/assets/vendor/manifest.json\nindex 96a796b..98c6c60 100644\n--- a/assets/vendor/manifest.json\n+++ b/assets/vendor/manifest.json\n@@ -193,7 +193,7 @@\n     \"config_sha256\": \"765982df1d140dac3a1a429cd4525000989d37d92c329a0e0eee66dbf159a5c7\",\n     \"inputs_sha256\": {\n       \"index.html\": \"cabe723b99459002a72fea4cc98b6a1f82c39e32b10ee34f361b56d299d07435\",\n-      \"app.js\": \"f7c4617316ffc8da71c4d24ad2cee42b082f1283b084b83e908d09ea20efd3a8\",\n+      \"app.js\": \"7da7f6983d3dc67036558be9e3ee1adc3ea3f963e4ff36994741b9663d80fecb\",\n       \"lexicon-data.js\": \"89cfd0e1890de05b3398c4677f8591f8334431c9d4004300199af647ec98cf7f\",\n       \"practice-curriculum.js\": \"41822064e89272698042e7e76a94b80519d6d5524a1c0e2259789e1ecf4af6f6\",\n       \"simulator-guides.js\": \"ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910\"\n"
+}

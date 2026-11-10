@@ -1,0 +1,12 @@
+PASS 180terms all selectable and IDs unique
+PASS Arabic and English query return actual matching results
+PASS HTMLexample genuine DOM
+PASS CSSexample actual computed style
+PASS JavaScriptexample exact console output
+PASS Vueexample actual ref and event
+PASS Canvas corrected source paints nonzero pixel
+PASS legacy export-import restores valid bookmark without auto executing
+PASS learning code transfer never replaces lesson draft or auto-runs
+PASS Flex stretch changes both axes real child geometry
+PASS no parent errors
+

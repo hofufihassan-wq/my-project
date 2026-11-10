@@ -1,0 +1,63 @@
+{
+  "passed": 14,
+  "total": 14,
+  "results": [
+    {
+      "name": "JS accepts multiple correct implementations and checks zero/negative",
+      "passed": true
+    },
+    {
+      "name": "JS rejects hardcoded result and retains runtime errors",
+      "passed": true
+    },
+    {
+      "name": "syntax error provides reliable original parser line",
+      "passed": true
+    },
+    {
+      "name": "infinite loop times out while main application stays responsive",
+      "passed": true
+    },
+    {
+      "name": "network and parent access are unsupported before execution",
+      "passed": true
+    },
+    {
+      "name": "global postMessage cannot forge a private assessment result",
+      "passed": true
+    },
+    {
+      "name": "HTML uses real browser DOM and native form validation",
+      "passed": true
+    },
+    {
+      "name": "HTML script, event handler and frame injection never run",
+      "passed": true
+    },
+    {
+      "name": "CSS assesses computed styles across actual iframe widths",
+      "passed": true
+    },
+    {
+      "name": "Vue SFC executes actual Vue reactivity, rendering and event handlers",
+      "passed": true
+    },
+    {
+      "name": "Vue text v-model updates rendered output through directive input event",
+      "passed": true
+    },
+    {
+      "name": "Vue loops are terminable and wrong reactive output fails",
+      "passed": true
+    },
+    {
+      "name": "parallel sessions retain independent source and results",
+      "passed": true
+    },
+    {
+      "name": "no parent page errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

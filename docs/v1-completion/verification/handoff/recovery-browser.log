@@ -1,0 +1,10 @@
+[
+  {
+    name: 'real application boot recovers interrupted transaction before any hydration or writes',
+    passed: true
+  },
+  {
+    name: 'broken journal freezes writes, preserves originals and exports only app-owned recovery data',
+    passed: true
+  }
+]

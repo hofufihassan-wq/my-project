@@ -1,0 +1,6 @@
+{
+  "key": "vuelexicon_mastery_v3",
+  "expected": "{\"js-const\":\"mastered\"}",
+  "actual": "{\"js-const\":\"mastered\"}",
+  "toast": "تعذر الحفظ: احتفظنا بالسجل الأصلي. صدّر بيانات الاسترجاع أولاً؛ النسخة الحالية في الذاكرة فقط."
+}

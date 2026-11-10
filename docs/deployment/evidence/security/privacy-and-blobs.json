@@ -1,0 +1,38 @@
+{
+  "commit": "a97a5fb235c4fd8ec13fe65ab6c2a454abd56055",
+  "reachableCommits": 84,
+  "uniqueBlobs": 2754,
+  "textBlobsReadInFull": 1606,
+  "binaryBlobs": 1148,
+  "fullTextSecretScannerExitCode": 0,
+  "historicalArchiveSecretScannerExitCode": 0,
+  "uniqueHistoricalArchives": {
+    "c6138ed50329ed61deb457be1ec9d52574766c0f": "delivery/20261107-b717d9bd/VLex-Pro-Windows-b717d9bd.zip",
+    "7cedd2d660211d4eee16ad865200c4208a254520": "delivery/20261107-b717d9bd/VLex-Pro-static-b717d9bd.zip",
+    "2f47ca9113dc7185edaac2d7222635364380c7d1": "delivery/VLex-Pro-Windows.zip"
+  },
+  "personalAuthorEmailCount": 2,
+  "personalAuthorsNeedOwnerApprovalForPublicHistory": true,
+  "personalAuthorEmailsInTextBlobs": [],
+  "credentialAssignmentCandidates": [
+    {
+      "blob": "46a1bdddb494ea356e4a42f936926d241b005b8b",
+      "path": "assets/vendor/linkedom-0.18.12.global.min.js",
+      "line": 6,
+      "classification": "CSS input-type selector, not a credential",
+      "valueRedacted": true
+    },
+    {
+      "blob": "21ed3f9cf1d80eebb2d0448d95c0dd080a5fd9fe",
+      "path": "scripts/vendor/linkedom-0.18.12.worker.esm.js",
+      "line": 6303,
+      "classification": "CSS input-type selector, not a credential",
+      "valueRedacted": true
+    }
+  ],
+  "limitations": [
+    "Pattern-based secret scanning is not proof of absence.",
+    "Binary images/video are not OCR-scanned; tracked archives are scanned separately with Gitleaks.",
+    "Commit author identities are reviewed separately; values are never printed."
+  ]
+}

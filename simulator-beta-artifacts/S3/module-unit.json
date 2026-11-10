@@ -1,0 +1,107 @@
+{
+  "passed": 25,
+  "total": 25,
+  "limitation": "AudioContext test double validates gating and graph lifecycle only; audible browser verification belongs to S4.",
+  "results": [
+    {
+      "name": "first use is muted and performs no storage writes",
+      "passed": true
+    },
+    {
+      "name": "valid strict preferences round-trip including silent volume zero",
+      "passed": true
+    },
+    {
+      "name": "preferences reject extra fields bad versions and nonboolean flags",
+      "passed": true
+    },
+    {
+      "name": "corrupted text survives byte-for-byte before defaults are repaired",
+      "passed": true
+    },
+    {
+      "name": "backup refusal protects corrupted original even after preference edits",
+      "passed": true
+    },
+    {
+      "name": "unavailable localStorage degrades to session values without false persistence",
+      "passed": true
+    },
+    {
+      "name": "invalid interactive preference setters do not alter records",
+      "passed": true
+    },
+    {
+      "name": "layout visibility is session-only and resettable",
+      "passed": true
+    },
+    {
+      "name": "CSS source projection skips tag-like strings inside actual JavaScript",
+      "passed": true
+    },
+    {
+      "name": "script projection follows exact raw block boundaries",
+      "passed": true
+    },
+    {
+      "name": "projection replacement preserves every byte before and after its selected body",
+      "passed": true
+    },
+    {
+      "name": "stale section edits cannot overwrite a newer source",
+      "passed": true
+    },
+    {
+      "name": "comments textarea title and declarations do not masquerade as code blocks",
+      "passed": true
+    },
+    {
+      "name": "style raw text skips JavaScript-looking tags",
+      "passed": true
+    },
+    {
+      "name": "multiple blocks stay read-only instead of silently merging order",
+      "passed": true
+    },
+    {
+      "name": "external scripts unclosed tags and unsupported languages stay read-only",
+      "passed": true
+    },
+    {
+      "name": "missing blocks are not invented and full-source edit preserves literal text",
+      "passed": true
+    },
+    {
+      "name": "closing tag names require a boundary and support case-insensitive HTML",
+      "passed": true
+    },
+    {
+      "name": "Vue-style JavaScript and plain CSS sections need no source rewrite",
+      "passed": true
+    },
+    {
+      "name": "shortcuts preserve normal typing and composition",
+      "passed": true
+    },
+    {
+      "name": "muted first use never creates an audio context even from a trusted click",
+      "passed": true
+    },
+    {
+      "name": "saved unmuted preference still waits for a new browser user gesture",
+      "passed": true
+    },
+    {
+      "name": "explicit enabled sound can schedule a short tone but volume zero blocks every cue",
+      "passed": true
+    },
+    {
+      "name": "inactive simulator cannot create contexts or emit cues",
+      "passed": true
+    },
+    {
+      "name": "mute silences active tones and disposal closes audio resources",
+      "passed": true
+    }
+  ]
+}

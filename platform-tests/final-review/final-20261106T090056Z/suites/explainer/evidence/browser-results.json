@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-11-06T09:01:12.778Z",
+  "results": [
+    {
+      "name": "manual default does not analyze pasted code until explicit explain",
+      "passed": true
+    },
+    {
+      "name": "word selection gives actual explanation pronunciation and original dictionary navigation",
+      "passed": true
+    },
+    {
+      "name": "edits mark old explanation stale and do not auto update default",
+      "passed": true
+    },
+    {
+      "name": "automatic mode opt-in updates after typing debounce",
+      "passed": true
+    },
+    {
+      "name": "IME composition cancels pending automatic explanation until composition ends",
+      "passed": true
+    },
+    {
+      "name": "pasted active markup remains inert text in textarea and escaped explanation",
+      "passed": true
+    },
+    {
+      "name": "CSS and Vue real multiline input analyzed with visible limits and no execution",
+      "passed": true
+    },
+    {
+      "name": "draft persists on reload but automatic analysis stays disabled for imported or restored source",
+      "passed": true
+    },
+    {
+      "name": "empty and excessive source show errors without false output",
+      "passed": true
+    },
+    {
+      "name": "mobile 390px remains within viewport and keyboard can reach explain",
+      "passed": true
+    },
+    {
+      "name": "actual browser speech capability reports unavailable English voice honestly",
+      "passed": true
+    }
+  ],
+  "passed": 11,
+  "total": 11,
+  "errors": []
+}

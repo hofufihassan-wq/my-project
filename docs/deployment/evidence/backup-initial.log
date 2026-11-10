@@ -1,0 +1,22 @@
+PASS unsubmitted notes, projects, tasks and calendar forms survive navigation and reload
+PASS dictionary edits remain separate from original content and persist after reload
+PASS CSS, JS and explainer source persist without running or saving a lesson
+PASS simulator layout restores without starting code or changing its palette
+PASS whole browser restart preserves all in-progress organizer forms and code
+PASS one real download contains learning, legacy, organizer drafts and simulator settings
+PASS confirmed full file import restores every group and starts no user code
+FAIL invalid file and cancelled import keep current raw storage and state page.waitForFunction: TypeError: Cannot read properties of null (reading 'textContent')
+    at eval (eval at predicate (eval at evaluate (:290:30)), <anonymous>:1:66)
+    at predicate (eval at evaluate (:290:30), <anonymous>:7:23)
+    at next (eval at evaluate (:290:30), <anonymous>:29:29)
+    at eval (eval at evaluate (:290:30), <anonymous>:42:9)
+    at UtilityScript.evaluate (<anonymous>:292:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+PASS quota failure refuses full restore without replacing original data
+FAIL no parent errors Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   "Cannot read properties of null (reading 'textContent')"
++ ]
+- []

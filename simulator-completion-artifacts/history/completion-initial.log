@@ -1,0 +1,106 @@
+PASS entry is silent with both channels opt-in and no AudioContext or ambient preference write
+PASS ambient button creates a real bounded audio graph while alerts stay muted
+FAIL ambient level zero really silences its output and restores without changing alert volume page.waitForFunction: Timeout 30000ms exceeded.
+FAIL alerts can be enabled and muted independently while ambient continues Expected values to be strictly equal:
+
+false !== true
+
+FAIL actual runtime error has a real audible error cue when ambience is off {"rms":0,"peak":0,"n":7}
+FAIL ambient enabled preference persists but a reload never autoplays either channel locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('beta-ambient-resume')[22m
+
+FAIL leaving simulator disconnects all voices while returning offers explicit resume Expected values to be strictly equal:
+
+'silent' !== 'paused'
+
+FAIL hiding the browser page silences ambient and alerts without erasing preferences locator.click: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for getByTestId('beta-ambient-resume')[22m
+
+FAIL rapid UI ambient toggles leave only the fixed four-source graph locator.click: Target page, context or browser has been closed
+FAIL native first click after forty freshly rendered frames changes the actual DOM every time page.evaluate: Target page, context or browser has been closed
+FAIL preview tabs support native keyboard navigation and keep the same isolated frame page.evaluate: Target page, context or browser has been closed
+FAIL path explanation distinguishes pending real readiness source changes errors and stop page.evaluate: Target page, context or browser has been closed
+FAIL Console preserves log warning error levels and treats markup as text page.evaluate: Target page, context or browser has been closed
+FAIL sandbox cannot access parent data or alter top-level application state page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide JS-101 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide JS-102 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide JS-103 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide HTML-101 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide HTML-102 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide HTML-103 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide CSS-101 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide CSS-102 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide CSS-103 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide TS-101 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide TS-102 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide TS-103 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide VUE-101 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide VUE-102 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL original teaching guide VUE-103 agrees with actual isolated output page.evaluate: Target page, context or browser has been closed
+FAIL 1440px clean responsive capture keeps controls usable and panels fully visible browser.newContext: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-EjicZq --remote-debugging-pipe --no-startup-window
+<launched> pid=91933
+[pid=91933][err] [91933:91933:1031/070308.017294:ERROR:third_party/crashpad/crashpad/util/file/filesystem_posix.cc:63] mkdir : No such file or directory (2)
+[pid=91933][err] chrome_crashpad_handler: --database is required
+[pid=91933][err] Try 'chrome_crashpad_handler --help' for more information.
+[pid=91933][err] [91933:91957:1031/070308.066876:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=91933][err] [91933:91957:1031/070308.066900:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91957:1031/070308.069717:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=91933][err] [91933:91957:1031/070308.069741:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=91933][err] [91933:91957:1031/070308.069747:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91967:1031/070308.075757:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 91970: Read-only file system (30)
+[pid=91933][err] [91933:91957:1031/070308.114256:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91967:1031/070308.115286:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 91990: Read-only file system (30)
+[pid=91933][err] [91933:91933:1031/070308.130039:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] [91933:91957:1031/070308.130092:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91933:1031/070308.130170:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] [91933:91957:1031/070308.130193:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91933:1031/070308.134085:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] [91933:91957:1031/070308.135234:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91933:1031/070308.136910:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] [91933:91933:1031/070308.137615:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] [91933:91957:1031/070308.138470:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=91933][err] [91933:91957:1031/070308.138493:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=91933][err] [91933:91957:1031/070308.138498:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91933:1031/070308.138773:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] [91933:91933:1031/070308.140247:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+[pid=91933][err] [91933:91933:1031/070308.140257:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] [91933:91957:1031/070308.140330:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91933:1031/070308.141680:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] [91933:91957:1031/070308.141728:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=91933][err] [91933:91933:1031/070308.142025:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=91933][err] 
+[pid=91933][err] (process:91933): dconf-CRITICAL **: 07:03:08.155: unable to create file '/home/agent/.cache/dconf/user': Read-only file system.  dconf will not work properly.
+[pid=91933][err] 
+[pid=91933][err] (process:91933): dconf-CRITICAL **: 07:03:08.155: unable to create file '/home/agent/.cache/dconf/user': Read-only file system.  dconf will not work properly.
+[pid=91933][err] 
+[pid=91933][err] (process:91933): dconf-CRITICAL **: 07:03:08.155: unable to create file '/home/agent/.cache/dconf/user': Read-only file system.  dconf will not work properly.
+[pid=91933][err] [91933:91967:1031/070308.179795:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 92013: Read-only file system (30)
+[pid=91933][err] [91933:91967:1031/070308.200243:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 92022: Read-only file system (30)
+[pid=91933][err] [91933:91967:1031/070308.202654:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 92023: Read-only file system (30)
+[pid=91933][err] [91933:91967:1031/070309.364710:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 92050: Read-only file system (30)
+[pid=91933][err] Failed to create secure directory (/home/agent/.config/pulse): Read-only file system
+[pid=91933][err] [91933:91967:1031/070341.800020:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 92136: Read-only file system (30)
+[pid=91933][err] [91933:91967:1031/070343.095182:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 92150: Read-only file system (30)
+[pid=91933][err] [91933:91967:1031/070413.388954:ERROR:content/browser/zygote_host/zygote_host_impl_linux.cc:300] Failed to adjust OOM score of renderer with pid 92237: Read-only file system (30)
+[pid=91933] <gracefully close start>
+FAIL 768px clean responsive capture keeps controls usable and panels fully visible browser.newContext: Target page, context or browser has been closed
+FAIL 390px clean responsive capture keeps controls usable and panels fully visible browser.newContext: Target page, context or browser has been closed
+FAIL all final source hashes are unchanged and only intentional child errors/resource probes occurred Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
+    'app.js': 'adfa3823b2b322fc7b97b6cd644ad5f02124be1017bf04d9c30cbf1484bf435a',
+    'assets/vendor/manifest.json': '41620250a3be66a6dc648bd557b5fa81e0fc15a10066552946bebbcb7375aa0c',
++   'index.html': '7bfb8d9b2a460c41bff97b4a6b77c97f5047ff69ee8d011e9b7c9d0991dc2680',
+-   'index.html': '96f5dcf5e05a68a1436941961eef46a49ae376844279b1c1b0442bd07ace6a5b',
+    'simulator-beta.js': '63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa',
++   'simulator-reference.css': '808745080e891c557838aebfdda45c965c5f3812292cf1bb8dd63f45ac7a525d'
+-   'simulator-reference.css': '67afc168b00363650c0396ea634ba69ffafa9ea569ea43ec1486267fa4b45d31'
+  }
+
+2/33

@@ -1,0 +1,154 @@
+{
+  "timestamp": "2026-10-31T05:08:13.676Z",
+  "note": "Direct browser evidence of obsolete UI hooks. These legacy hook failures are expected after the approved beta redesign; this probe does not claim functional regression success.",
+  "sourceHashes": {
+    "app.js": "fee7a6cfedd8bd1637125d78b443d1f69ec03dab7c9dabcb6f84f72df6e4d2d0",
+    "index.html": "78c9bba72f7fbc52f08646b1f1884e7f5b0961dadc0ed03f019e141bf6d89306"
+  },
+  "results": [
+    {
+      "width": 390,
+      "legacySelector": "[data-testid=\"simulator-reference-run\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"tech-reference-run\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 390,
+      "legacySelector": ".lesson-workspace-grid",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": ".tech-main-grid",
+      "betaCount": 1
+    },
+    {
+      "width": 390,
+      "legacySelector": "[data-testid=\"sim-editor-panel\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"tech-editor-panel\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 390,
+      "legacySelector": "[data-testid=\"sim-console\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"tech-console\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 390,
+      "legacySelector": "[data-testid=\"sim-stages\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"tech-flow-canvas\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 390,
+      "legacySelector": "[data-testid=\"sim-preview-panel\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": ".tech-preview-panel",
+      "betaCount": 1
+    },
+    {
+      "width": 390,
+      "legacySelector": "[data-testid=\"sim-expand-editor\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "button[title=\"توسيع المحرر\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 390,
+      "legacySelector": "[data-testid=\"sim-expand-preview\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "button[title=\"توسيع المعاينة\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 390,
+      "legacySelector": "input[aria-label=\"حصة عرض محرر المحاكي\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"beta-resize-width\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": "[data-testid=\"simulator-reference-run\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"tech-reference-run\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": ".lesson-workspace-grid",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": ".tech-main-grid",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": "[data-testid=\"sim-editor-panel\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"tech-editor-panel\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": "[data-testid=\"sim-console\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"tech-console\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": "[data-testid=\"sim-stages\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"tech-flow-canvas\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": "[data-testid=\"sim-preview-panel\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": ".tech-preview-panel",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": "[data-testid=\"sim-expand-editor\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "button[title=\"توسيع المحرر\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": "[data-testid=\"sim-expand-preview\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "button[title=\"توسيع المعاينة\"]",
+      "betaCount": 1
+    },
+    {
+      "width": 1440,
+      "legacySelector": "input[aria-label=\"حصة عرض محرر المحاكي\"]",
+      "expectedLegacyCount": 1,
+      "actualLegacyCount": 0,
+      "betaSelector": "[data-testid=\"beta-resize-width\"]",
+      "betaCount": 1
+    }
+  ]
+}

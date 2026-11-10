@@ -1,0 +1,7 @@
+PASS 180 stable IDs, both 360 example sources and unrelated fields retained
+PASS structuredClone(function) rejects with DataCloneError; circular objects supported
+PASS JSON.stringify is not universal: BigInt and cycles throw
+PASS filter accepts truthy non-booleans and callback may mutate source objects
+PASS current Chromium WeakMap accepts a nonregistered Symbol key
+PASS relative date text is produced by Intl.RelativeTimeFormat
+PASS Vue 3.4.21 renders a valid v-for without key

@@ -1,0 +1,17 @@
+PASS Starter unlock/default normalization backs up a valid older record before writing
+PASS JSON null startup preserves exact raw recovery then initializes safely
+PASS Malformed local JSON, array, null item and draft object do not crash startup
+PASS Invalid import rejected before changing storage or any existing progress
+PASS Legacy, 3.5.0, 3.6.0 and 4.0.0 valid shapes import; empty draft retained
+PASS Status-only legacy import merges without erasing current draft
+PASS Failure to back up local data preserves original and blocks later writes
+PASS Partial storage write failure restores preceding keys and keeps reactive state
+PASS Oversized local draft is retained whole in recovery, valid sibling kept
+PASS UTF8 bytes measured consistently and JSON file max enforced
+PASS Quota warnings survive bookmark and mastery actions
+PASS Merged imported data cannot cross aggregate byte boundary; rejection is atomic
+PASS Normal export roundtrips; oversized current draft exports intact as warned raw recovery
+PASS Bookmark IDs, objects and legacy IDs resolve to one valid canonical record
+PASS Earlier null bookmark corruption retains valid siblings and an exact raw recovery copy
+Data safety: 15/15 tests passed.
+

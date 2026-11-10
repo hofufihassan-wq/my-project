@@ -6,6 +6,7 @@ const vm = require('node:vm');
 const http = require('node:http');
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || '/opt/codex/cua_node/lib/node_modules/playwright-core');
 const results = [];
+const output = process.env.VLP_TEST_OUTPUT || 'sfc-preview-artifacts';
 const data = {window:{}};
 vm.runInNewContext(fs.readFileSync('practice-curriculum.js', 'utf8'), data);
 const seed = Object.fromEntries(data.window.PRACTICE_CURRICULUM.lessons.map(l => [l.id, {
@@ -26,6 +27,7 @@ import { ref, computed } from 'vue';
 const count = ref(0); const visible = ref(true);
 const doubled = computed(() => count.value * 2); const items = ref(['أ','ب']);
 const literal = 'import { imaginary } from "missing"';
+globalThis.__vlxPreviewExecutionSentinel = 'opaque-preview-only';
 </script>
 <template><button id="increment" @click="count++">{{ count }} / {{ doubled }}</button>
 <button id="toggle" @click="visible=!visible">إظهار</button><ul v-if="visible"><li v-for="item in items" :key="item">{{item}}</li></ul>
@@ -72,6 +74,17 @@ async function main() {
       await page.waitForFunction(()=>['preview_ready','error'].includes(window.vueLexiconApp.executionState));
       return page.locator('iframe').contentFrame();
     }
+    const initialLearning = await page.evaluate(()=>window.VLexLearningStore.read());
+    // A1 deliberately persists the selected simulator lesson when opening a
+    // reference. Permit exactly that declared navigation write; retain exact
+    // checks for all other learning data, legacy drafts, nulls and recovery keys.
+    async function assertReferenceStorageUnchanged(before) {
+      const actual=await storage(), expected={...before}, key='vlex_personal_learning_v1';
+      const learning=expected[key]?JSON.parse(expected[key]):structuredClone(initialLearning);
+      learning.navigation={...learning.navigation,simulatorLesson:'VUE-101'};
+      assert.deepEqual(JSON.parse(actual[key]),learning);
+      delete actual[key];delete expected[key];assert.deepEqual(actual,expected);
+    }
     const pristine = await storage();
     await test('script setup, named imports, ref, computed, events, v-if/v-for and scoped CSS actually run', async()=>{
       const frame = await show(sfc);
@@ -85,11 +98,15 @@ async function main() {
       assert.equal(await frame.locator('.scoped-text').evaluate(el=>getComputedStyle(el).color),'rgb(255, 0, 0)');
       assert.equal(await frame.locator('.scoped-text').getAttribute('data-v-lexicon-preview'),'');
       assert.notEqual(await frame.locator('body').evaluate(()=>{const p=document.createElement('p');p.className='scoped-text';document.body.append(p);return getComputedStyle(p).color;}),'rgb(255, 0, 0)');
-      assert.equal(await page.evaluate(()=>typeof window.VueLexiconCompiler),'undefined');
+      // The learning lab loads this trusted parser for AST analysis in the parent.
+      // User SFC execution must still occur only in the opaque preview realm.
+      assert.equal(await page.evaluate(()=>typeof window.VueLexiconCompiler?.babelParse),'function');
+      assert.equal(await page.evaluate(()=>typeof window.__vlxPreviewExecutionSentinel),'undefined');
+      assert.equal(await frame.locator('body').evaluate(()=>globalThis.__vlxPreviewExecutionSentinel),'opaque-preview-only');
       assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
       assert.equal(await frame.locator('body').evaluate(()=>{try{parent.localStorage.getItem('x');return false;}catch(_){return true;}}),true);
       assert.equal(await app(a=>a.simulatorReferenceCode),sfc);
-      assert.deepEqual(await storage(),pristine); // Includes original null drafts.
+      await assertReferenceStorageUnchanged(pristine); // Includes original null drafts.
     });
     await test('export default Options API, namespace/aliased imports and style v-bind',async()=>{
       let frame=await show(`<template><button @click="count++">{{count}}</button><span>{{then()}}</span></template><script>import * as V from 'vue'; import { ref as makeRef } from 'vue'; export const extra=7; export default {setup(){return {count:makeRef(3),then:()=> 'ordinary method' }}}</script>`);
@@ -173,7 +190,7 @@ async function main() {
         // escaped tag inside the template literal as the SFC closing tag.
         assert.equal(await frame.locator('#vuelexicon-example p').textContent(),'first\n</script>\nlast');
       }
-      assert.deepEqual(await storage(),before);
+      await assertReferenceStorageUnchanged(before);
       assert.equal(await app(a=>a.simulatorReferenceCode),code);
       assert(!await app(a=>a.practiceLogs.some(l=>l.msg==='MUST_NOT_EXECUTE')));
     });
@@ -209,7 +226,7 @@ async function main() {
       await page.waitForTimeout(400);
       assert.equal(await app(a=>a.activeRun.kind),'reference');
       assert(!await app(a=>a.practiceLogs.some(l=>l.msg==='IMPORTED_CODE_MUST_NOT_RUN')));
-      assert.deepEqual(await storage(),before);
+      await assertReferenceStorageUnchanged(before);
       await app(a=>{a.practiceAutoRun=false;a.selectLesson('JS-101');});
       assert.equal(await app(a=>a.practiceCode),draft);
       const download=page.waitForEvent('download');
@@ -226,8 +243,8 @@ async function main() {
     await context.close();
   }
   const passed=results.filter(r=>r.passed).length;
-  fs.mkdirSync('sfc-preview-artifacts',{recursive:true});
-  fs.writeFileSync('sfc-preview-artifacts/browser-report.json',JSON.stringify({timestamp:new Date().toISOString(),runtime:'Real Chromium, local Vue 3.4.21 and official compiler-sfc; root and nested/app; external requests blocked; no library substitutes',passed,total:results.length,results},null,2)+'\n');
+  fs.mkdirSync(output,{recursive:true});
+  fs.writeFileSync(path.join(output, 'browser-report.json'),JSON.stringify({timestamp:new Date().toISOString(),runtime:'Real Chromium, local Vue 3.4.21 and official compiler-sfc; root and nested/app; external requests blocked; no library substitutes',passed,total:results.length,results},null,2)+'\n');
   console.log(`${passed}/${results.length} dictionary preview checks passed`);
   if(passed!==results.length)process.exitCode=1;
 }

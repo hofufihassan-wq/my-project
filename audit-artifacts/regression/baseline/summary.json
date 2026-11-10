@@ -1,0 +1,373 @@
+[
+  {
+    "command": [
+      "node",
+      "run_content_integrity_test.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.12,
+    "timestamp": "2026-10-31T13:10:26.487716+00:00",
+    "reported_ratios": [],
+    "pass_lines": 1,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_curriculum_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.07,
+    "timestamp": "2026-10-31T13:10:26.437734+00:00",
+    "reported_ratios": [
+      "15/15"
+    ],
+    "pass_lines": 0,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_data_safety_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.42,
+    "timestamp": "2026-10-31T13:10:26.854213+00:00",
+    "reported_ratios": [
+      "15/15"
+    ],
+    "pass_lines": 15,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_dictionary_inventory.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "timeout",
+    "exit_code": 1,
+    "seconds": 300.82,
+    "timestamp": "2026-10-31T13:15:27.311201+00:00",
+    "reported_ratios": [],
+    "pass_lines": 0,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_dictionary_preview_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 74.4,
+    "timestamp": "2026-10-31T13:11:41.257939+00:00",
+    "reported_ratios": [
+      "58/58"
+    ],
+    "pass_lines": 58,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_hands_on_verification.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 59.55,
+    "timestamp": "2026-10-31T13:12:40.810012+00:00",
+    "reported_ratios": [
+      "20/20"
+    ],
+    "pass_lines": 0,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_json_import_test.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 3.73,
+    "timestamp": "2026-10-31T13:12:44.556340+00:00",
+    "reported_ratios": [
+      "9/9"
+    ],
+    "pass_lines": 9,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_legacy_validator_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.29,
+    "timestamp": "2026-10-31T13:12:44.845671+00:00",
+    "reported_ratios": [
+      "10/10"
+    ],
+    "pass_lines": 10,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_phase0a_browser_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 18.21,
+    "timestamp": "2026-10-31T13:13:03.059415+00:00",
+    "reported_ratios": [
+      "14/14"
+    ],
+    "pass_lines": 14,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_phase5b1_browser_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "timeout",
+    "exit_code": 1,
+    "seconds": 180.93,
+    "timestamp": "2026-10-31T13:16:03.992051+00:00",
+    "reported_ratios": [
+      "33/34"
+    ],
+    "pass_lines": 33,
+    "fail_lines": 1
+  },
+  {
+    "command": [
+      "node",
+      "run_phase5b_browser_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "timeout",
+    "exit_code": 1,
+    "seconds": 181.57,
+    "timestamp": "2026-10-31T13:18:28.891657+00:00",
+    "reported_ratios": [
+      "1031/131530",
+      "1031/131530",
+      "1031/131530",
+      "1031/131530",
+      "1031/131530",
+      "1031/131530",
+      "1031/131530",
+      "1031/131735"
+    ],
+    "pass_lines": 23,
+    "fail_lines": 5
+  },
+  {
+    "command": [
+      "node",
+      "run_preview_protocol_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.27,
+    "timestamp": "2026-10-31T13:16:04.261627+00:00",
+    "reported_ratios": [
+      "19/19"
+    ],
+    "pass_lines": 19,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_runtime_assets_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 1,
+    "seconds": 112.25,
+    "timestamp": "2026-10-31T13:17:56.508199+00:00",
+    "reported_ratios": [
+      "17/18"
+    ],
+    "pass_lines": 17,
+    "fail_lines": 1
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_ambient_storage_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 25.14,
+    "timestamp": "2026-10-31T13:18:21.664970+00:00",
+    "reported_ratios": [
+      "3/3"
+    ],
+    "pass_lines": 3,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_beta_browser_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 98.4,
+    "timestamp": "2026-10-31T13:20:00.062428+00:00",
+    "reported_ratios": [
+      "30/30"
+    ],
+    "pass_lines": 30,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_beta_extra_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 39.21,
+    "timestamp": "2026-10-31T13:19:08.104041+00:00",
+    "reported_ratios": [
+      "7/7"
+    ],
+    "pass_lines": 7,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_beta_unit_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.2,
+    "timestamp": "2026-10-31T13:19:08.301575+00:00",
+    "reported_ratios": [
+      "27/27"
+    ],
+    "pass_lines": 27,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_browser_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 45.02,
+    "timestamp": "2026-10-31T13:19:53.322853+00:00",
+    "reported_ratios": [
+      "19/19"
+    ],
+    "pass_lines": 19,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_completion_browser_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 99.77,
+    "timestamp": "2026-10-31T13:21:33.097776+00:00",
+    "reported_ratios": [
+      "33/33"
+    ],
+    "pass_lines": 33,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_completion_unit_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.19,
+    "timestamp": "2026-10-31T13:20:00.251313+00:00",
+    "reported_ratios": [
+      "13/13"
+    ],
+    "pass_lines": 13,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_final_browser_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 104.9,
+    "timestamp": "2026-10-31T13:21:45.148607+00:00",
+    "reported_ratios": [
+      "43/43"
+    ],
+    "pass_lines": 43,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_simulator_reference_review.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 12.44,
+    "timestamp": "2026-10-31T13:21:45.542943+00:00",
+    "reported_ratios": [
+      "15/15"
+    ],
+    "pass_lines": 15,
+    "fail_lines": 0
+  },
+  {
+    "command": [
+      "node",
+      "run_stability_browser_tests.js"
+    ],
+    "cwd": "/tmp/vuelexicon-audit-base",
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 43.11,
+    "timestamp": "2026-10-31T13:22:28.265067+00:00",
+    "reported_ratios": [
+      "65/65"
+    ],
+    "pass_lines": 65,
+    "fail_lines": 0
+  }
+]

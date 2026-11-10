@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-11-06T09:01:58.708Z",
+  "passed": 11,
+  "total": 11,
+  "results": [
+    {
+      "name": "empty tasks are real empty state; no seeded records",
+      "passed": true
+    },
+    {
+      "name": "create daily task persists exact date title status",
+      "passed": true
+    },
+    {
+      "name": "edit and move task using native controls",
+      "passed": true
+    },
+    {
+      "name": "archive is reversible and keeps record bytes unrelated fields",
+      "passed": true
+    },
+    {
+      "name": "notes escape markup and retain exact multiline text",
+      "passed": true
+    },
+    {
+      "name": "project creation links task without losing existing task",
+      "passed": true
+    },
+    {
+      "name": "calendar monthly navigation selected day and local event add edit archive restore",
+      "passed": true
+    },
+    {
+      "name": "dashboard shows actual task stats and ticking clock",
+      "passed": true
+    },
+    {
+      "name": "close/reopen same browser profile retains tasks notes projects and calendar events",
+      "passed": true
+    },
+    {
+      "name": "desktop and390px viewport have no page horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "no uncaught browser errors",
+      "passed": true
+    }
+  ]
+}

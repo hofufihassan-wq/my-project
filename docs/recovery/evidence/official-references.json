@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions",
+    "status": 200,
+    "title": "Arrow function expressions - JavaScript | MDN"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "status": 200,
+    "title": "Array.prototype.filter() - JavaScript | MDN"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Worker/terminate",
+    "status": 200,
+    "title": "Worker: terminate() method - Web APIs | MDN"
+  },
+  {
+    "url": "https://vuejs.org/guide/essentials/event-handling.html",
+    "status": 200,
+    "title": "Event Handling | Vue.js"
+  }
+]

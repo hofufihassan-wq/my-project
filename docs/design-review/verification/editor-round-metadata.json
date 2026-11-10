@@ -1,0 +1,30 @@
+{
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "decorative CSS mark replaced by actual CSS metadata",
+      "passed": true
+    },
+    {
+      "name": "format toggle updates Vue language and filename",
+      "passed": true
+    },
+    {
+      "name": "course file bars preserve native editors",
+      "passed": true
+    },
+    {
+      "name": "cssLab file bars preserve native editors",
+      "passed": true
+    },
+    {
+      "name": "jsLab file bars preserve native editors",
+      "passed": true
+    },
+    {
+      "name": "explain file bars preserve native editors",
+      "passed": true
+    }
+  ]
+}

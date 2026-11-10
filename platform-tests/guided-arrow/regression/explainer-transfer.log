@@ -1,0 +1,2 @@
+[{"name":"manual explanation source transfer never overrides later saved draft on return","passed":true,"observed":{"editor":"const userDraft=2;","stored":"const userDraft=2;","automatic":false}}]
+

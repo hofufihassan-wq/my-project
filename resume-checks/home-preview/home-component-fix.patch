@@ -1,0 +1,6 @@
+*** Begin Patch
+*** Update File: /workspace/my-progect/index.html
+@@
+-      <vlex-dashboard @navigate="navigateLearningSection" @learn="openLearning('course')" />
++      <vlex-dashboard @navigate="navigateLearningSection" @learn="openLearning('course')"></vlex-dashboard>
+*** End Patch

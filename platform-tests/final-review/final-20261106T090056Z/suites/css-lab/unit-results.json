@@ -1,0 +1,190 @@
+{
+  "passed": 46,
+  "total": 46,
+  "results": [
+    {
+      "name": "managed block replacement preserves exact surrounding custom CSS and remains single",
+      "passed": true
+    },
+    {
+      "name": "margin px supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "margin px supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "margin rem supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "margin rem supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "margin % supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "margin % supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "padding px supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "padding px supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "padding rem supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "padding rem supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "padding % supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "padding % supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "fontSize px supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "fontSize px supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "fontSize rem supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "fontSize rem supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "fontSize % supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "fontSize % supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "width px supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "width px supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "width rem supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "width rem supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "width % supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "width % supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "height px supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "height px supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "height rem supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "height rem supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "height % supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "height % supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "gap px supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "gap px supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "gap rem supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "gap rem supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "gap % supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "gap % supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "radius px supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "radius px supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "radius rem supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "radius rem supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "radius % supports bound 0",
+      "passed": true
+    },
+    {
+      "name": "radius % supports bound 1",
+      "passed": true
+    },
+    {
+      "name": "invalid CSS control cannot inject code or produce NaN",
+      "passed": true
+    },
+    {
+      "name": "source bounds reject without silently truncating",
+      "passed": true
+    },
+    {
+      "name": "preview disables scripts and network and neutralizes style rawtext closer",
+      "passed": true
+    }
+  ]
+}

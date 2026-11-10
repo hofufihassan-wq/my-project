@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-10-30T03:43:30.549Z",
+  "availability": [
+    {
+      "engine": "chromium",
+      "available": true,
+      "version": "154.0.8037.57"
+    },
+    {
+      "engine": "firefox",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/firefox-1497/firefox/firefox\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    },
+    {
+      "engine": "webkit",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
+    }
+  ],
+  "filter": "bookmark UI",
+  "passed": 0,
+  "total": 8,
+  "networkEvidence": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "uncaughtErrors": [],
+      "externalRequests": [],
+      "failedRequests": []
+    }
+  ],
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "bookmark UI list click stores a real ID without losing other favorites",
+      "passed": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(ids.includes(target))\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "bookmark UI header returns from simulator on mobile and desktop navigation",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'practice'\n- 'lexicon'\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "bookmark UI list click stores a real ID without losing other favorites",
+      "passed": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(ids.includes(target))\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "bookmark UI header returns from simulator on mobile and desktop navigation",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'practice'\n- 'lexicon'\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "bookmark UI list click stores a real ID without losing other favorites",
+      "passed": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(ids.includes(target))\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "bookmark UI header returns from simulator on mobile and desktop navigation",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'practice'\n- 'lexicon'\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "bookmark UI list click stores a real ID without losing other favorites",
+      "passed": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(ids.includes(target))\n"
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "bookmark UI header returns from simulator on mobile and desktop navigation",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'practice'\n- 'lexicon'\n"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-10-30T08:12:05.435Z",
+  "guardsLoaded": true,
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "name": "JS-101 rejects the documented false positive without DOM",
+      "passed": true
+    },
+    {
+      "name": "JS-101 reference source alone cannot claim a rendered result",
+      "passed": true
+    },
+    {
+      "name": "JS-101 ignores unrelated body text and wrong target text",
+      "passed": true
+    },
+    {
+      "name": "JS-101 null/absent evidence is rejected without throwing",
+      "passed": true
+    },
+    {
+      "name": "JS-101 valid isolated target text still accepts the reference fixture",
+      "passed": true
+    },
+    {
+      "name": "TS-101 rejects the documented false positive without DOM",
+      "passed": true
+    },
+    {
+      "name": "TS-101 reference source alone cannot claim a rendered result",
+      "passed": true
+    },
+    {
+      "name": "TS-101 ignores unrelated body text and wrong target text",
+      "passed": true
+    },
+    {
+      "name": "TS-101 null/absent evidence is rejected without throwing",
+      "passed": true
+    },
+    {
+      "name": "TS-101 valid isolated target text still accepts the reference fixture",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "images": [
+    {
+      "path": "images/00-before-rtl.png",
+      "width": 1440,
+      "height": 1597,
+      "bytes": 662864,
+      "sha256": "579a4f2722d056ca49bb69afd041547dff7e1fdee62887e6d8271fc33400e116"
+    },
+    {
+      "path": "images/01-dashboard.png",
+      "width": 1440,
+      "height": 1597,
+      "bytes": 663492,
+      "sha256": "8a222676d0a2fdbcc3e23c41dc10aa0f680f7fef52d52d868935b10b48ff5425"
+    },
+    {
+      "path": "images/02-dictionary.png",
+      "width": 1440,
+      "height": 1645,
+      "bytes": 691422,
+      "sha256": "6840d25fe677872c7d5895b1489dde5eb6b96514666cdaf461f9937358726cbd"
+    },
+    {
+      "path": "images/03-explainer.png",
+      "width": 1440,
+      "height": 1934,
+      "bytes": 482478,
+      "sha256": "3591e1eafa8e28ed4711e4ab00aa6692386753e5f8e30116f9d497ab8bc5e33c"
+    },
+    {
+      "path": "images/04-lessons.png",
+      "width": 1440,
+      "height": 3822,
+      "bytes": 1264538,
+      "sha256": "8509c3ee0366a80e9a84ac826eec89bba9639e60b0dc5efb58cb2a7e0aaf4fef"
+    },
+    {
+      "path": "images/04-vue-curriculum.png",
+      "width": 1440,
+      "height": 1621,
+      "bytes": 507992,
+      "sha256": "41840ff60f594c17957a017cf7b05adba4222f200f0afb282b28a57bcd381ced"
+    },
+    {
+      "path": "images/04-vue-router.png",
+      "width": 1440,
+      "height": 2412,
+      "bytes": 559004,
+      "sha256": "670e819fc59f66f60193af47f7d7574d6af2e0f2dee38527def2384abff29470"
+    },
+    {
+      "path": "images/05-css-editor-detail.png",
+      "width": 519,
+      "height": 263,
+      "bytes": 15857,
+      "sha256": "ba798ea6112f6d21cacf4a91d56e177a6afb8a68abb0467c1fa4dd432b836c2c"
+    },
+    {
+      "path": "images/05-css-lab.png",
+      "width": 1440,
+      "height": 1700,
+      "bytes": 442385,
+      "sha256": "256636f3f029e61e19cfa67a778e3e857a8247f5683629f7e2c9049b9786a4ea"
+    },
+    {
+      "path": "images/05-live-preview.png",
+      "width": 1020,
+      "height": 421,
+      "bytes": 11676,
+      "sha256": "8308a33e9918feaa8320f20949e5ede45b067c7a4c22998aefd66723c05eb537"
+    },
+    {
+      "path": "images/06-javascript-lab.png",
+      "width": 1440,
+      "height": 1311,
+      "bytes": 407724,
+      "sha256": "afb7e2024dca1c3192812beb54a19d638d5098fbc5789fcd215c88e13da02d07"
+    },
+    {
+      "path": "images/07-training.png",
+      "width": 1440,
+      "height": 1187,
+      "bytes": 372656,
+      "sha256": "6d3d1584e5ec0bf41bb3fdcdfb7a8d27eda68b23248f9f0a098a493ea0ce60c1"
+    },
+    {
+      "path": "images/08-project-1.png",
+      "width": 1440,
+      "height": 2305,
+      "bytes": 504104,
+      "sha256": "834088f337d136c4fb2ca2914f7b6cfcb96e120814e09d6be9aa350dcbcdfb3e"
+    },
+    {
+      "path": "images/08-project-2.png",
+      "width": 1440,
+      "height": 2434,
+      "bytes": 602424,
+      "sha256": "b718c2a2d087a10682b00cf24bfe08ba4258febda795e3687e0b89cde85e5055"
+    },
+    {
+      "path": "images/08-project-3.png",
+      "width": 1440,
+      "height": 2506,
+      "bytes": 634813,
+      "sha256": "8a7c5b08dee57dd18334c7753b6fa12feef0c0d3390f2586cccf90c1d6e3b557"
+    },
+    {
+      "path": "images/08-project-4.png",
+      "width": 1440,
+      "height": 2434,
+      "bytes": 532408,
+      "sha256": "e7ce27c886f4d90697deacb9de8a352c7fca3452c082ac46375e596025626202"
+    },
+    {
+      "path": "images/08-project-5.png",
+      "width": 1440,
+      "height": 2434,
+      "bytes": 534260,
+      "sha256": "60cf2ca2d36c971b1f31733f1d5805f301905047294825875071e10188f4bc93"
+    },
+    {
+      "path": "images/08-project-6.png",
+      "width": 1440,
+      "height": 2476,
+      "bytes": 600018,
+      "sha256": "483bb0af14a6f1b204981194ba81e22a91fba889332ee160899c88bc50a296d3"
+    },
+    {
+      "path": "images/08-projects.png",
+      "width": 1440,
+      "height": 2319,
+      "bytes": 618275,
+      "sha256": "2390c5f5088d4fd06d358992e319923b902d5c84a161b82f797ad8cfbe89c950"
+    },
+    {
+      "path": "images/09-notes.png",
+      "width": 1440,
+      "height": 1167,
+      "bytes": 337837,
+      "sha256": "c4e5b7b3f40bd4e5ff92b50ac14cc5227d013aad3579abbfbff07cdafbfe03a1"
+    },
+    {
+      "path": "images/10-calendar.png",
+      "width": 1440,
+      "height": 1202,
+      "bytes": 429584,
+      "sha256": "c8daff55d9b407b829dad55a7b1bb130686c575b0c13886177fe96460899c1a8"
+    },
+    {
+      "path": "images/11-tasks.png",
+      "width": 1440,
+      "height": 1204,
+      "bytes": 340460,
+      "sha256": "742c9428a64bdf319886aa480ad35755eed343bec2c3c0eed93202669acc983a"
+    },
+    {
+      "path": "images/12-settings.png",
+      "width": 1440,
+      "height": 1720,
+      "bytes": 858915,
+      "sha256": "b0bc5a011c657bf8a3294a64edfb92924599fe92fdf543cc08409d4a5ae88c7e"
+    },
+    {
+      "path": "images/13-simulator.png",
+      "width": 1440,
+      "height": 1223,
+      "bytes": 1024653,
+      "sha256": "5023f6d5b66a5e01e91a6890458e5d8d03ec1ff9bf24d8566875453252a00acf"
+    },
+    {
+      "path": "images/mobile-dashboard.png",
+      "width": 390,
+      "height": 1279,
+      "bytes": 298379,
+      "sha256": "ee6bfc11c2509e76a0bf5f035e6396284bcff65d7843eb136b9c3c7641ecd8fb"
+    },
+    {
+      "path": "images/mobile-lessons.png",
+      "width": 390,
+      "height": 2991,
+      "bytes": 369301,
+      "sha256": "ef553aba00aeb3eb12b5f477959d2d8c3078a012aac7bade3f7ba961bcf4b7f9"
+    },
+    {
+      "path": "images/mobile-projects.png",
+      "width": 390,
+      "height": 4218,
+      "bytes": 447243,
+      "sha256": "44dc0a4a92013cecb3a2cbb8602d03c644ddef87f9769758e8d3a857264aed09"
+    },
+    {
+      "path": "images/theme-glass.png",
+      "width": 1440,
+      "height": 1223,
+      "bytes": 1024653,
+      "sha256": "5023f6d5b66a5e01e91a6890458e5d8d03ec1ff9bf24d8566875453252a00acf"
+    },
+    {
+      "path": "images/theme-light.png",
+      "width": 1440,
+      "height": 1223,
+      "bytes": 1024653,
+      "sha256": "5023f6d5b66a5e01e91a6890458e5d8d03ec1ff9bf24d8566875453252a00acf"
+    },
+    {
+      "path": "images/theme-petroleum.png",
+      "width": 1440,
+      "height": 1223,
+      "bytes": 1024653,
+      "sha256": "5023f6d5b66a5e01e91a6890458e5d8d03ec1ff9bf24d8566875453252a00acf"
+    },
+    {
+      "path": "images/theme-purple.png",
+      "width": 1440,
+      "height": 1223,
+      "bytes": 1024653,
+      "sha256": "5023f6d5b66a5e01e91a6890458e5d8d03ec1ff9bf24d8566875453252a00acf"
+    }
+  ],
+  "video": {
+    "path": "review.mp4",
+    "bytes": 8044504,
+    "sha256": "f648037c71f0aef9c26d0670ce54efad245e328ca59070554f4bce33308dd4bd",
+    "fullDecodeChecked": true,
+    "audioTrack": false
+  },
+  "githubUiPlaybackVerified": false
+}

@@ -1,0 +1,7 @@
+PASS DOM runs isolated query/createElement/append/event delegation through LinkeDOM
+PASS DOM loops are terminable and never access app storage
+PASS native ES modules resolve a documented fixture and real named export
+PASS module import outside the fixture is rejected before network access
+PASS Fetch exercise uses actual Response/ok/json for 200/404/rejected scenarios without network
+PASS storage isolated adapter follows WebStorage string/null semantics and can restore its own snapshot
+PASS runtime throw criteria and no mutation criteria use actual behavior

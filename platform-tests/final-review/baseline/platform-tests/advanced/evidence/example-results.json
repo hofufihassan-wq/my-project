@@ -1,0 +1,137 @@
+[
+  {
+    "id": "html-accessible-feedback",
+    "title": "رسائل مرتبطة بالحقل وتُقرأ عند التغيير",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "اكتب حرفين على الأقل.",
+    "interaction": true,
+    "sourceBytes": 991
+  },
+  {
+    "id": "html-native-validation",
+    "title": "تحقق المتصفح من نموذج محلي",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "",
+    "interaction": true,
+    "sourceBytes": 1032
+  },
+  {
+    "id": "html-details-disclosure",
+    "title": "إظهار التفاصيل بعنصر أصلي",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "وش أحتاج قبل Vue؟",
+    "interaction": true,
+    "sourceBytes": 776
+  },
+  {
+    "id": "html-table-relations",
+    "title": "جدول بيانات بعلاقات واضحة",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "مراجعة الأسبوع",
+    "interaction": true,
+    "sourceBytes": 739
+  },
+  {
+    "id": "css-grid-minmax",
+    "title": "Grid يتكيف حسب المساحة المتاحة",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "HTML",
+    "interaction": true,
+    "sourceBytes": 611
+  },
+  {
+    "id": "css-flex-min-width",
+    "title": "عنصر Flex طويل بدون كسر التخطيط",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "تطبيق مفاهيم JavaScript ومراجعة كل تجربة بالتفصيل",
+    "interaction": true,
+    "sourceBytes": 825
+  },
+  {
+    "id": "css-custom-properties-clamp",
+    "title": "قيم مشتركة وقياس مرن بحدود",
+    "level": "advanced",
+    "passed": true,
+    "observed": "تدريب يومي مرن",
+    "interaction": true,
+    "sourceBytes": 885
+  },
+  {
+    "id": "css-transition-reduced-motion",
+    "title": "تفاعل مرئي يحترم تقليل الحركة",
+    "level": "advanced",
+    "passed": true,
+    "observed": "بطاقتي",
+    "interaction": true,
+    "sourceBytes": 966
+  },
+  {
+    "id": "js-closure-counters",
+    "title": "Closure: كل عداد يحتفظ بقيمته",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "2",
+    "interaction": true,
+    "sourceBytes": 890
+  },
+  {
+    "id": "js-async-error-handling",
+    "title": "Promise وasync/await مع خطأ متوقع",
+    "level": "advanced",
+    "passed": true,
+    "observed": "خطأ معالج: تعذر تجهيز البيانات المحلية",
+    "interaction": true,
+    "sourceBytes": 1388
+  },
+  {
+    "id": "js-reduce-summary",
+    "title": "reduce: حول قائمة إلى ملخص",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "أنجزت 2 مهام في 35 دقيقة",
+    "interaction": true,
+    "sourceBytes": 900
+  },
+  {
+    "id": "js-event-delegation",
+    "title": "مستمع واحد لعناصر تُضاف لاحقًا",
+    "level": "advanced",
+    "passed": true,
+    "observed": "تجربة جديدة إزالة",
+    "interaction": true,
+    "sourceBytes": 1137
+  },
+  {
+    "id": "vue-computed-filter",
+    "title": "computed: نتيجة مشتقة بدون نسخ الحالة",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "HTML",
+    "interaction": true,
+    "sourceBytes": 989
+  },
+  {
+    "id": "vue-watch-side-effect",
+    "title": "watch لأثر جانبي واضح",
+    "level": "intermediate",
+    "passed": true,
+    "observed": "تغييرات المراقب: 1",
+    "interaction": true,
+    "sourceBytes": 999
+  },
+  {
+    "id": "vue-keyed-component-state",
+    "title": "key ثابت يحافظ على هوية المكون",
+    "level": "advanced",
+    "passed": true,
+    "observed": "CSS ",
+    "interaction": true,
+    "sourceBytes": 1094
+  }
+]

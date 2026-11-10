@@ -1,0 +1,21 @@
+PASS: valid ready/log/error/snapshot messages accepted
+PASS: null origin alone never grants sender identity
+PASS: old run/foreign lesson/source ignored
+PASS: non-record ready payloads are rejected
+PASS: bootstrap precedes all user scripts without matching literal head strings
+PASS: stopped/missing frame ignores every message
+PASS: null/arrays/scalars/unknown or missing envelope fields rejected
+PASS: malformed payloads rejected without throwing
+PASS: oversized text/snapshots/counts rejected at protocol boundary
+PASS: payload is copied rather than retained
+PASS: malicious getter is ignored without exception
+PASS: instrumented child console accepts circular, BigInt, deep and throwing objects
+PASS: child error reporter survives circular unhandled rejection
+PASS: local Vue resolver changes only actual known script src attributes
+PASS: local dependency resolution preserves scripts, comments and quoted content
+PASS: dictionary selection respects the active tab and its declared language
+PASS: dictionary source is JSON encoded instead of interpolated into a script or markup
+PASS: output target evidence is optional for compatibility, bounded and typed
+PASS: initial DOM snapshot arrives before readiness and captures the output target
+
+Preview protocol and child console: 19/19 passed.

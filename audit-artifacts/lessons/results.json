@@ -1,0 +1,814 @@
+{
+  "base": "3d4575aeae16c22b6932a6bac5b18a7a4f9cca37",
+  "started": "2026-10-31T13:10:31.606Z",
+  "results": [
+    {
+      "id": "JS-101",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "JS-101",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "JS-101",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "JS-101",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "JS-101",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "JS-101",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "JS-101",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "JS-101",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "JS-101",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "JS-102",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "JS-102",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "JS-102",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "JS-102",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "JS-102",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "JS-102",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "JS-102",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "JS-102",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "JS-102",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "JS-103",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "JS-103",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "JS-103",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "JS-103",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "JS-103",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "JS-103",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "JS-103",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "JS-103",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "JS-103",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "HTML-101",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "HTML-101",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "HTML-101",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "HTML-101",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "HTML-101",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "HTML-101",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "HTML-101",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "HTML-101",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "HTML-101",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "HTML-102",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "HTML-102",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "imageLoaded": false,
+      "networkDependent": true
+    },
+    {
+      "id": "HTML-102",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "imageLoaded": false,
+      "networkDependent": true
+    },
+    {
+      "id": "HTML-102",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "HTML-102",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "HTML-102",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "HTML-102",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "HTML-102",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "HTML-102",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "HTML-103",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "HTML-103",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "validFormSubmitted": true,
+      "successDOMText": "انضم إلى النشرة البريدية 📬\nالاسم الكريم:\nالبريد الإلكتروني:\n تأكيد الاشتراك",
+      "modalsAllowed": "allow-scripts"
+    },
+    {
+      "id": "HTML-103",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "validFormSubmitted": true,
+      "successDOMText": "انضم إلى النشرة البريدية 📬\nالاسم الكريم:\nالبريد الإلكتروني:\n تأكيد الاشتراك",
+      "modalsAllowed": "allow-scripts"
+    },
+    {
+      "id": "HTML-103",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "HTML-103",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "HTML-103",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "HTML-103",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "HTML-103",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "HTML-103",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "CSS-101",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "CSS-101",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "CSS-101",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "CSS-101",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "CSS-101",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "CSS-101",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "CSS-101",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "CSS-101",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "CSS-101",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "CSS-102",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "CSS-102",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "CSS-102",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "CSS-102",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "CSS-102",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "CSS-102",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "CSS-102",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "CSS-102",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "CSS-102",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "CSS-103",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "CSS-103",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "CSS-103",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "CSS-103",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "CSS-103",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "CSS-103",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "CSS-103",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "CSS-103",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "CSS-103",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "TS-101",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "TS-101",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "runtime": "JavaScript equivalent only"
+    },
+    {
+      "id": "TS-101",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "runtime": "JavaScript equivalent only"
+    },
+    {
+      "id": "TS-101",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "TS-101",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "TS-101",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "TS-101",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "TS-101",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "TS-101",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "TS-102",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "TS-102",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "runtime": "JavaScript equivalent only"
+    },
+    {
+      "id": "TS-102",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "runtime": "JavaScript equivalent only"
+    },
+    {
+      "id": "TS-102",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "TS-102",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "TS-102",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "TS-102",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "TS-102",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "TS-102",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "TS-103",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "TS-103",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "runtime": "JavaScript equivalent only"
+    },
+    {
+      "id": "TS-103",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "runtime": "JavaScript equivalent only"
+    },
+    {
+      "id": "TS-103",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "TS-103",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "TS-103",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "TS-103",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "TS-103",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "TS-103",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "VUE-101",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "VUE-101",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "VUE-101",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "VUE-101",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "VUE-101",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "VUE-101",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "VUE-101",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "VUE-101",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "VUE-101",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "VUE-102",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "VUE-102",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "VUE-102",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "VUE-102",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "VUE-102",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "VUE-102",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "VUE-102",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "VUE-102",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "VUE-102",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    },
+    {
+      "id": "VUE-103",
+      "name": "open/navigation/unlocked",
+      "passed": true,
+      "status": "locked"
+    },
+    {
+      "id": "VUE-103",
+      "name": "reference functional DOM/interactions",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "VUE-103",
+      "name": "alternate valid draft and behavior",
+      "passed": true,
+      "behaviorVerified": true
+    },
+    {
+      "id": "VUE-103",
+      "name": "draft save and navigation roundtrip",
+      "passed": true
+    },
+    {
+      "id": "VUE-103",
+      "name": "draft survives real reload",
+      "passed": true
+    },
+    {
+      "id": "VUE-103",
+      "name": "runtime error is shown",
+      "passed": true
+    },
+    {
+      "id": "VUE-103",
+      "name": "syntax error is shown",
+      "passed": true
+    },
+    {
+      "id": "VUE-103",
+      "name": "stop invalidates session and preserves draft",
+      "passed": true
+    },
+    {
+      "id": "VUE-103",
+      "name": "reset restores starter without grading",
+      "passed": true,
+      "status": "unlocked"
+    }
+  ],
+  "pageErrors": [
+    "AUDIT_RUNTIME_JS-101",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_JS-102",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_JS-103",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_HTML-101",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_HTML-102",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_HTML-103",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_CSS-101",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_CSS-102",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_CSS-103",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_TS-101",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_TS-102",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_TS-103",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_VUE-101",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_VUE-102",
+    "Unexpected token ';'",
+    "AUDIT_RUNTIME_VUE-103",
+    "Unexpected token ';'"
+  ],
+  "browserConsole": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Blocked form submission to '' because the form's frame is sandboxed and the 'allow-forms' permission is not set."
+    },
+    {
+      "type": "error",
+      "text": "Blocked form submission to '' because the form's frame is sandboxed and the 'allow-forms' permission is not set."
+    }
+  ],
+  "external": [],
+  "note": "Every response served from immutable git show at the pinned commit. No mocks/substitutes. JS equivalents in TS lessons are not TypeScript compilation.",
+  "finished": "2026-10-31T13:14:50.925Z",
+  "passed": 135,
+  "total": 135
+}

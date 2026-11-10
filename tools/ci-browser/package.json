@@ -1,0 +1,6 @@
+{
+  "name": "vlex-ci-browser",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": { "playwright": "1.57.0" }
+}

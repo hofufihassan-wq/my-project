@@ -1,0 +1,588 @@
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML",
+    "sha256": "d4d78098dfc96502d2f15dad07a895210aa6e0701effacad21878d150208ff29",
+    "title": "HTML: A good basis for accessibility - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-semantics"
+    ],
+    "evidence": [
+      "A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility. Not only do HTML <button> s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the Tab key"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox",
+    "sha256": "b47bb6c3896d41735719fb1e753378d55583bc20bc305cf127c84c26ab88d85d",
+    "title": "Flexbox - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-flex"
+    ],
+    "evidence": [
+      "Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals. Flexbox features may be the perfect solution for your one dimensional layout needs. Let's dig in and find out!"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids",
+    "sha256": "5d8e658f1e749b5282b30ef94e1e35f8dd8c3741298ad52e36a86e48b6219222",
+    "title": "CSS grid layout - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-grid"
+    ],
+    "evidence": [
+      "Similar to how you define flexbox, you define a grid layout by setting the value of the display property to grid . As in the case of flexbox, the display: grid property transforms all the direct children of the container into grid items. We have added the following CSS to the file: Unlike flexbox, the items will not immediately look any different. Declaring display: grid gives you a one column grid, so your items will continue to display one below"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries",
+    "sha256": "36ccc596391afd4afc19dfec3699745e138dfd8b28bfe8aef503eeb7ece3b8ee",
+    "title": "Media query fundamentals - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-responsive"
+    ],
+    "evidence": [
+      "The CSS Media Query gives you a way to apply CSS only when the browser and device environment matches a rule that you specify, for example \"viewport is wider than 480 pixels\". Media queries are a key part of responsive web design , as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling",
+    "sha256": "5a2d5e74163cf7c83e93531197f8f00bca49efd9a6ff7b630af9fc144489cf4d",
+    "title": "Event bubbling - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-delegation"
+    ],
+    "evidence": [
+      "We've seen that a web page is composed of elements — headings, paragraphs of text, images, buttons, and so on — and that you can listen for events that happen to these elements. For example, you could add a listener to a button, and it will run when the user clicks the button. We describe this by saying that the event bubbles up from the innermost element that was clicked."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong",
+    "sha256": "aac4bf1ef52df6701a09f64dbe0c6f2af637102c8cb50e35de6e538c2f15be88",
+    "title": "What went wrong? Troubleshooting JavaScript - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-debugging"
+    ],
+    "evidence": [
+      "To get started, let's return to our number-guessing game — except this time we'll explore a version with some deliberate errors. Go to GitHub and make yourself a local copy of number-game-errors.html (see it running live here ). Let's think about what the problem could be. Line 51 uses the document.querySelector() method to select an element reference with a CSS selector. Looking further up our file, we can find the paragraph in question:"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
+    "sha256": "a62deea164ba480fb284b29387e6c84f544d0ccc03501db824279d52f492fabb",
+    "title": "Basic HTML syntax - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-structure"
+    ],
+    "evidence": [
+      "We could specify that this text is a paragraph by enclosing it in paragraph ( <p> ) tags: In this code block, the text \"My cat is very grumpy.\" is all defined as a paragraph. The word \"very\" is additionally defined as having strong importance."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility",
+    "sha256": "11e7d4fd141741f2d368c2e70e4b029ea95dd2ddc0a345dda19cc92ece9a8bd0",
+    "title": "HTML table accessibility - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-table"
+    ],
+    "evidence": [
+      "In the previous article, we looked at one of the most important features for making HTML tables accessible to visually impaired users — the <th> element. In this article, we continue down this path, looking at more HTML table accessibility features such as captions/summaries, grouping your rows into table head, body and footer sections, and scoping columns and rows. You can give your table a caption by putting it inside a <caption> element and nesting that inside the <table> element."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors",
+    "sha256": "cee4a203955e4c93ca00474b5b63f2df334a9ff7a65c3a0db5d056a7e31db523",
+    "title": "Basic CSS selectors - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-selectors"
+    ],
+    "evidence": [
+      "The case-sensitive class selector starts with a dot ( . ) character. It will select everything in the document with that class applied to it. In the live example below, we have created a class called highlight and applied it to several places in the document. All elements with that class are highlighted. The case-sensitive ID selector begins with a # rather than a dot character, but is used in the same way as a class selector. The difference is"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model",
+    "sha256": "abb4b9d353be58ea0a7ddf35b21ba7d6b41486b9cd8f5ffe0f582c1821eea131",
+    "title": "The box model - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-spacing"
+    ],
+    "evidence": [
+      "You can change the inner display type by setting an inner display value, for example display: flex; . The element will still use the outer display type block but this changes the inner display type to flex . Any direct children of this box will become flex items and behave according to the Flexbox specification. When you move on to learn about CSS Layout in more detail, you will encounter flex , and various other inner values that your boxes"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation",
+    "sha256": "3fe25825f10dceb3ffd1a38e61ddd9b9211caed463a7dea6c3eba28650c10c62",
+    "title": "Client-side form validation - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-form-validation"
+    ],
+    "evidence": [
+      "It is important to ensure all required form controls are filled out, in the correct format, before submitting user entered form data to the server. This client-side form validation helps ensure data entered matches the requirements set forth in the various form controls. Let's start with a basic example: an input that allows you to choose whether you prefer a banana or a cherry. This example involves a text <input> with an associated <label> and a submit <button> ."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+    "sha256": "49a331f6e5bad3a9b339c0794795ffbc434e6540e5fefd435be7eb3b8f09af2f",
+    "title": "Document Object Model (DOM) - Web APIs | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-dom"
+    ],
+    "evidence": [
+      "For example, the DOM specifies that the querySelectorAll method in this code snippet must return a list of all the <p> elements in the document: The DOM is built using multiple APIs that work together. The core DOM defines the entities describing any document and the objects within it. This is expanded upon as needed by other APIs that add new features and capabilities to the DOM. For example, the HTML DOM API adds support for representing HTML documents to"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+    "sha256": "1ddbc9d9244491c7e570e5af32887e6f2d2ac743f946a590fb805dc2fe5aa909",
+    "title": "EventTarget: addEventListener() method - Web APIs | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-events"
+    ],
+    "evidence": [
+      "The callback function itself has the same parameters and return value as the handleEvent() method; that is, the callback accepts a single parameter: an object based on Event describing the event that has occurred, and it returns nothing. Event listeners only take one argument, an Event or a subclass of Event , which is automatically passed to the listener, and the return value is ignored. Therefore, to get data into and out of an event listener, instead of passing the"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+    "sha256": "b2cf091bbcb1a6d72f6a7f6961c8904e9a9e25dbb68dff4ef7c692872788c127",
+    "title": "Using the Fetch API - Web APIs | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-fetch"
+    ],
+    "evidence": [
+      "The fetch() function returns a Promise which is fulfilled with a Response object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response. Alternatively, you can construct a Headers object, add headers to that object using Headers.append() , then assign the Headers object to the headers option:"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API",
+    "sha256": "dee2eb99d71138766fdb433fda136de420715935d3e4c1c55f300c7a4ce61628",
+    "title": "Using the Web Storage API - Web APIs | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-storage"
+    ],
+    "evidence": [
+      "So, for example, initially calling localStorage on a document will return a Storage object; calling sessionStorage on a document will return a different Storage object. Both of these can be manipulated in the same way, but separately. As noted above, values can be retrieved from storage using Storage.getItem() . This takes the key of the data item as an argument, and returns the data value."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby",
+    "sha256": "b67ecc655f3420341d5f0c3c6ac73e68cee36f722e7696904157f8a963c79632",
+    "title": "ARIA: aria-describedby attribute - ARIA | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-form-feedback"
+    ],
+    "evidence": [
+      "The global aria-describedby attribute identifies the element (or elements) that describes the element on which the attribute is set. The aria-describedby attribute lists the id s of the elements that describe the object. It is used to establish a relationship between widgets or groups and the text that describes them."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+    "sha256": "6ea6d506aa4e2e1e2a5cf5493e0ce03db5b83b4cd3cd812d751a8c8aac4369ce",
+    "title": "prefers-reduced-motion CSS media feature - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-reduced-motion"
+    ],
+    "evidence": [
+      "This example uses a scaling animation to demonstrate prefers-reduced-motion . If you enable the setting for reducing motion in the accessibility preferences on your device, the prefers-reduced-motion media query will detect your preference and the CSS within the reduced motion rules, with the same specificity but coming later in the CSS source order , will take precedence. As a result, the animation on the box will tone down to the dissolve animation, which is a more muted animation that is"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using",
+    "sha256": "abc8350e17b49c37c9bffe361cb0fbf90c2d580a0b6dcabfc1bef4f1aa59dbf0",
+    "title": "Using CSS animations - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-animations"
+    ],
+    "evidence": [
+      "CSS animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components: a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints. To create a CSS animation sequence, you style the element you want to animate with the animation property or its sub-properties. This lets you configure the timing, duration, and other details of"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties",
+    "sha256": "c56e7cb894aa1038dc3eabe88422efc706f7f911c61bc79633b5ed5a4d6bbede",
+    "title": "Using CSS custom properties (variables) - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-themes"
+    ],
+    "evidence": [
+      "Custom properties (sometimes referred to as CSS variables or cascading variables ) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the @property at-rule or by custom property syntax (e.g., --primary-color: blue; ). Custom properties are accessed using the CSS var() function (e.g., color: var(--primary-color); ). Complex websites have very large amounts of CSS, and this often results in a lot of repeated CSS values. For example, it's common"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clamp",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp",
+    "sha256": "bffd4a98521f65866ac6530627d05b0c344553d13c98cda82ba18a0ae169b6a4",
+    "title": "clamp() CSS function - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-fluid-tokens"
+    ],
+    "evidence": [
+      "The clamp() CSS function clamps a value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value. Note that using clamp() for font sizes, as in these examples, allows you to set a font-size that grows with the size of the viewport, but doesn't go below a minimum font-size or above a maximum font-size. It has the same effect as"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color",
+    "sha256": "b8c53a3340fb2878dc7e7128aa5a39ecae764d21b279a8e22f1296f6aa861f8b",
+    "title": "color CSS property - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-selectors"
+    ],
+    "evidence": [
+      "Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current Web Content Accessibility Guidelines (WCAG) , a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and bold or larger, or 24px or larger."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/min-width",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/min-width",
+    "sha256": "5c5baf69a5bdd2e842c3e4c14b6df8be53b467989eb22637fd22505c69d9c1b3",
+    "title": "min-width CSS property - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-flex-minwidth"
+    ],
+    "evidence": [
+      "The min-width CSS property sets the minimum width of an element. It prevents the used value of the width property from becoming smaller than the value specified for min-width . For flex items and grid items, the minimum width value is either the specified suggested size, such as the value of the width property, the transferred size, calculated if the element has an aspect-ratio set and the height is a definite size, otherwise, the min-content size is used. If the"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/minmax",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/minmax",
+    "sha256": "a045d62bdf2a525e49c8655b741a9a1d4f3f28b461586fedfbd1bae1ae54fa29",
+    "title": "minmax() CSS function - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-grid-minmax"
+    ],
+    "evidence": [
+      "The second parameter max also accepts <flex> values. (this fr units can only be used for max , and are invalid for min .) A non-negative percentage relative to the inline size of the grid container in column grid tracks, and the block size of the grid container in row grid tracks. If the size of the grid container depends on the size of its tracks, then the <percentage> must be treated as auto . The user agent may adjust"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/position",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position",
+    "sha256": "f39fbe33f25fc44c48fee9eccbe3e303780233c3ad4b28285566e2f6cdf0d270",
+    "title": "position CSS property - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-position"
+    ],
+    "evidence": [
+      "The position CSS property sets how an element is positioned in a document. The top , right , bottom , and left physical properties and the inset-block-start , inset-block-end , inset-inline-start , and inset-inline-end flow-relative logical properties can be used to determine the final location of positioned elements. The element is positioned according to the Normal Flow of the document. The top , right , bottom , left , and z-index properties have no effect . This is the default"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a",
+    "sha256": "a6b73d605e3d4cbee2d7fdb8a5049e940b18851b053a1fb07d87b4520be511b9",
+    "title": "<a> HTML anchor element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-attributes"
+    ],
+    "evidence": [
+      "Was required to define a possible target location in a page. In HTML 4.01, id and name could both be used on <a> , as long as they had identical values. If an icon is used to signify link behavior, make sure it has an alt attribute to describe its purpose. In case the icon is missing, the alt attribute's content will still convey the link's behavior."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+    "sha256": "6a90fb28bdaa632a1bb54464986366550bb45ed0ac8c40b634d56c1215daf080",
+    "title": "<details> HTML details disclosure element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-details"
+    ],
+    "evidence": [
+      "The <details> HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an open state. A summary or label must be provided using the <summary> element. A disclosure widget is typically presented onscreen using a small triangle that rotates (or twists) to indicate open/closed state, with a label next to the triangle. The contents of the <summary> element are used as the label for the disclosure widget. The contents of the <details>"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img",
+    "sha256": "adb29b16462d6d2c909f259c1a2954e2dccbe1245b09d19b9b4a157682ca8370",
+    "title": "<img> HTML image embed element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-images"
+    ],
+    "evidence": [
+      "Indicates if the fetching of the image must be done using a CORS request. Image data from a CORS-enabled image returned from a CORS request can be reused in the <canvas> element without being marked \" tainted \". Lazy loading avoids the network and storage bandwidth required to handle the image until it's reasonably certain that it will be needed. This improves the performance in most typical use cases."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label",
+    "sha256": "d100f6cd29dbba6c05a615e434c726b502537b823bc3b3b7b8ca9efce25a10dd",
+    "title": "<label> HTML label element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-form"
+    ],
+    "evidence": [
+      "The <label> HTML element represents a caption for an item in a user interface. The value is the id of the labelable form control in the same document, associating the <label> with that form control . Note that its JavaScript reflection property is htmlFor ."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul",
+    "sha256": "72f3ab3a00b8c282c0002241d169c445d0f89d9f4d9f3ea288b0eef6dcb861d4",
+    "title": "<ul> HTML unordered list element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-lists"
+    ],
+    "evidence": [
+      "The <ul> HTML element represents an unordered list of items, typically rendered as a bulleted list."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures",
+    "sha256": "beae00be1cbb422844b95713a1e227692e91e562c2a978ef5c38f4d7c66a9497",
+    "title": "Closures - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-closure"
+    ],
+    "evidence": [
+      "If you run this code in your console, you can see that the console.log() statement within the displayName() function successfully displays the value of the name variable, which is declared in its parent function. This is an example of lexical scoping , which describes how a parser resolves variable names when functions are nested. The word lexical refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling",
+    "sha256": "75d3ead8404e32bc81fd49f14835a0ab2b5edc0f11891611c54f765ca8f9b85c",
+    "title": "Control flow and error handling - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-conditions"
+    ],
+    "evidence": [
+      "In the following example, the function checkData returns true if the number of characters in a Text object is three. Otherwise, it displays an alert and returns false . A switch statement allows a program to evaluate an expression and attempt to match the expression's value to a case label. If a match is found, the program executes the associated statement."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+    "sha256": "d836c3fa40b75590ddeae667d2630083e04c9c7ed361cad9959660e90bf27263",
+    "title": "Functions - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-values"
+    ],
+    "evidence": [
+      "Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it. The"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types",
+    "sha256": "fc5991aa861c8de60865fb35cd140e3957977aff3a2ac2fb839c0bded729942f",
+    "title": "Grammar and types - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-values"
+    ],
+    "evidence": [
+      "An alternative method of retrieving a number from a string is with the + (unary plus) operator. This implicitly performs number conversion , which is the same process as the Number() function. Literals represent values in JavaScript. These are fixed values—not variables—that you literally provide in your script. This section describes the following types of literals:"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections",
+    "sha256": "53462e09736b33e1312e4c50242db7864fb0066d7fb70ecbdd21d39e40fccd44",
+    "title": "Indexed collections - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-arrays"
+    ],
+    "evidence": [
+      "This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as Array objects and TypedArray objects. An array is an ordered list of values that you refer to with a name and an index."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+    "sha256": "5041447da066af9fa64e428fd5cc67bb2e9dc6d61a86c005faadd366e76bfbe1",
+    "title": "Loops and iteration - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-loops"
+    ],
+    "evidence": [
+      "The condition test occurs before statement in the loop is executed. If the condition returns true , statement is executed and the condition is tested again. If the condition returns false , execution stops, and control is passed to the statement following while . A label provides a statement with an identifier that lets you refer to it elsewhere in your program. For example, you can use a label to identify a loop, and then use the break or continue"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+    "sha256": "d3ec7a05308579985732083bce211980d860ac6f4e7ce6a603c6634703fa6c63",
+    "title": "JavaScript modules - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-modules",
+      "js-project-organization"
+    ],
+    "evidence": [
+      "If you really value the clarity of using .mjs for modules versus using .js for \"normal\" JavaScript files, but don't want to run into the problem described above, you could always use .mjs during development and convert them to .js during your build step. You can see the last version in our basic-modules square.js , which exports a function called randomSquare() that creates a square with a random color, size, and position. Note the lack of curly braces."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings",
+    "sha256": "d9276188fb58347e55815f1de907d83e2861575ec3c7e5cd1a718d1fe90de886",
+    "title": "Numbers and strings - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-types"
+    ],
+    "evidence": [
+      "The built-in Number object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows: JavaScript's String type is used to represent textual data. It is a set of \"elements\" of 16-bit unsigned integer values (UTF-16 code units). Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises",
+    "sha256": "b5ff7ebb708857d6a6bb35a3d5d69bf1778c95ee434275c46939f765d69628f0",
+    "title": "Using promises - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-promises"
+    ],
+    "evidence": [
+      "A Promise is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them. Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function. Imagine a function, createAudioFileAsync() , which asynchronously generates a sound file given a configuration record and two callback functions: one called if the audio"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects",
+    "sha256": "37da4da078a2308e14f3d82510772208eda10ae060f8163b7806bc86ae79b28b",
+    "title": "Working with objects - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-objects"
+    ],
+    "evidence": [
+      "In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, and methods, and how to create your own objects. You can create an object using an object initializer . Alternatively, you can first create a constructor function and then instantiate an object by invoking that function with the new operator."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters",
+    "sha256": "a74269a86b6ac08dad1e114d16b2cb70ae27ecf1131e4c34811142aa676e4c1d",
+    "title": "Default parameters - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-functions"
+    ],
+    "evidence": [
+      "In the following example, if no value is provided for b when multiply is called, b 's value would be undefined when evaluating a * b and multiply would return NaN ."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "sha256": "1f4253f79bc52ce4c79adf674400aff9475817cf6801cea48425269279145b8a",
+    "title": "Array.prototype.filter() - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-map-filter"
+    ],
+    "evidence": [
+      "A function to execute for each element in the array. It should return a truthy value to keep the element in the resulting array, and a falsy value otherwise. The function is called with the following arguments: A shallow copy of the given array containing just the elements that pass the test. If no elements pass the test, an empty array is returned."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce",
+    "sha256": "1c4869add58eb0911f82b01b06153ed988a79dffad3529f20cfd773b003f08f8",
+    "title": "Array.prototype.reduce() - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-reduce"
+    ],
+    "evidence": [
+      "The reduce() method of Array instances executes a user-supplied \"reducer\" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value. The first time that the callback is run there is no \"return value of the previous calculation\". If supplied, an initial value may be used in its place. Otherwise the array"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+    "sha256": "f3841a968aa299c2882c0cdced26d254c79a93ad1dc542d0edc7d7bb71d34f32",
+    "title": "async function - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-async-errors"
+    ],
+    "evidence": [
+      "An async function declaration creates an AsyncFunction object. Each time when an async function is called, it returns a new Promise which will be resolved with the value returned by the async function, or rejected with an exception uncaught within the async function. Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is"
+    ]
+  },
+  {
+    "url": "https://vuejs.org/api/sfc-script-setup.html",
+    "resolved": "https://vuejs.org/api/sfc-script-setup.html",
+    "sha256": "45c3929f57f3ff007ad56597c891fed7f2812e3647bfc68b13210335ae488b0a",
+    "title": "<script setup> | Vue.js",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "vue-ref"
+    ],
+    "evidence": [
+      "<script setup> is a compile-time syntactic sugar for using Composition API inside Single-File Components (SFCs). It is the recommended syntax if you are using both SFCs and Composition API. It provides a number of advantages over the normal <script> syntax: Reactive state needs to be explicitly created using Reactivity APIs . Similar to values returned from a setup() function, refs are automatically unwrapped when referenced in templates:"
+    ]
+  },
+  {
+    "url": "https://vuejs.org/guide/essentials/reactivity-fundamentals.html",
+    "resolved": "https://vuejs.org/guide/essentials/reactivity-fundamentals.html",
+    "sha256": "724fb2d51eb8f83855b785a84ac643c11a1e218f50789b18b4305c8d39ec5934",
+    "title": "Reactivity Fundamentals | Vue.js",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "vue-ref"
+    ],
+    "evidence": [
+      "This page and many other chapters later in the guide contain different content for the Options API and the Composition API. Your current preference is Options API Composition API . You can toggle between the API styles using the \"API Preference\" switches at the top of the left sidebar. With the Options API, we use the data option to declare reactive state of a component. The option value should be a function that returns an object. Vue will call the"
+    ]
+  }
+]

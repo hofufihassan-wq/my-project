@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-10-30T08:18:23.979Z",
+  "note": "Read-only diagnostic; unchanged html-audio vanilla source with external media blocked.",
+  "runs": [
+    {
+      "run": 1,
+      "states": [
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        },
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        },
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        }
+      ],
+      "blocked": [
+        "https://example.com/audio/pronunciation.mp3",
+        "https://example.com/audio/pronunciation.ogg"
+      ],
+      "uncaughtErrors": [],
+      "source": "<audio controls class=\"w-full max-w-md\">\n  <source src=\"https://example.com/audio/pronunciation.mp3\" type=\"audio/mpeg\">\n  <source src=\"https://example.com/audio/pronunciation.ogg\" type=\"audio/ogg\">\n  متصفحك لا يدعم مشغل الصوت المدمج.\n</audio>"
+    },
+    {
+      "run": 2,
+      "states": [
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        },
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        },
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        }
+      ],
+      "blocked": [
+        "https://example.com/audio/pronunciation.ogg"
+      ],
+      "uncaughtErrors": [],
+      "source": "<audio controls class=\"w-full max-w-md\">\n  <source src=\"https://example.com/audio/pronunciation.mp3\" type=\"audio/mpeg\">\n  <source src=\"https://example.com/audio/pronunciation.ogg\" type=\"audio/ogg\">\n  متصفحك لا يدعم مشغل الصوت المدمج.\n</audio>"
+    },
+    {
+      "run": 3,
+      "states": [
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        },
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        },
+        {
+          "state": "error",
+          "error": "تعذر تحميل مورد يحتاجه المثال؛ تحقق من توفر ملفاته محليًا."
+        }
+      ],
+      "blocked": [
+        "https://example.com/audio/pronunciation.ogg"
+      ],
+      "uncaughtErrors": [],
+      "source": "<audio controls class=\"w-full max-w-md\">\n  <source src=\"https://example.com/audio/pronunciation.mp3\" type=\"audio/mpeg\">\n  <source src=\"https://example.com/audio/pronunciation.ogg\" type=\"audio/ogg\">\n  متصفحك لا يدعم مشغل الصوت المدمج.\n</audio>"
+    }
+  ]
+}

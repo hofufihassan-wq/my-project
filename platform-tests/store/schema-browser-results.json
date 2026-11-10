@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-11-04T18:01:07.284Z",
+  "browser": "Chromium actual Vue components + shared store on 127.0.0.1",
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "real browser accepts actual component data and keeps imported source inert",
+      "passed": true
+    },
+    {
+      "name": "all actual components mount after typed backup import with no runtime error",
+      "passed": true
+    },
+    {
+      "name": "malformed imports refuse nested shapes without replacing state or durable bytes",
+      "passed": true
+    },
+    {
+      "name": "invalid live payload does not lock future valid saves",
+      "passed": true
+    },
+    {
+      "name": "reload restores real typed notes and editor text without executing it",
+      "passed": true
+    },
+    {
+      "name": "malformed durable state starts protected and keeps exact original plus backup",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

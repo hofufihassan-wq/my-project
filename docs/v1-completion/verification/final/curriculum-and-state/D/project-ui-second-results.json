@@ -1,0 +1,54 @@
+{
+  "passed": 5,
+  "total": 10,
+  "rows": [
+    {
+      "name": "all six actual project cards coexist with unsubmitted organizer draft",
+      "passed": true
+    },
+    {
+      "name": "trial controls execute actual task code, persist private data and never grant mastery",
+      "passed": true
+    },
+    {
+      "name": "closing whole browser restores source, trial values and task state without autorun",
+      "passed": true
+    },
+    {
+      "name": "expense values aggregate across separate runs and budget stays coherent",
+      "passed": true
+    },
+    {
+      "name": "all six projects complete only through real graded tasks and questions",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(summary.includes('6 / 6'))\n\n    at /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:10:1035\n    at async test (/workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:2:34)\n    at async /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:10:1"
+    },
+    {
+      "name": "one full backup download and import preserve all six results, fields and separate organizer data",
+      "passed": true
+    },
+    {
+      "name": "bad new project field in full import is rejected without mutating current data",
+      "passed": false,
+      "error": "page.waitForFunction: TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at predicate (eval at evaluate (:290:30)), <anonymous>:1:66)\n    at predicate (eval at evaluate (:290:30), <anonymous>:7:23)\n    at next (eval at evaluate (:290:30), <anonymous>:29:29)\n    at eval (eval at evaluate (:290:30), <anonymous>:42:9)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:13:446\n    at async test (/workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:2:34)\n    at async /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:13:1"
+    },
+    {
+      "name": "changing a completed source invalidates project card and dashboard evidence",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert((await p.getByTestId('guided-summary').innerText()).includes('5 / 6'))\n\n    at /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:14:317\n    at async test (/workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:2:34)\n    at async /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:14:1"
+    },
+    {
+      "name": "390px projects catalogue and editor fit document width",
+      "passed": false,
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('open-project-vue-workspace')\u001b[22m\n\n    at /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:15:332\n    at async test (/workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:2:34)\n    at async /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:15:1"
+    },
+    {
+      "name": "no parent runtime errors",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   \"Cannot read properties of null (reading 'textContent')\"\n+ ]\n- []\n\n    at /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:15:602\n    at test (/workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:2:40)\n    at /workspace/vlex-v1-followup/platform-tests/v1-completion/D/project-ui.cjs:15:554"
+    }
+  ],
+  "errors": [
+    "Cannot read properties of null (reading 'textContent')"
+  ]
+}

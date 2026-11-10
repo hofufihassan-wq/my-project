@@ -1,0 +1,22 @@
+{
+  "passed": 4,
+  "total": 4,
+  "tests": [
+    {
+      "name": "16 unique complete teaching entries,4 topics,4 progressive project stages",
+      "passed": true
+    },
+    {
+      "name": "review intervals use true timestamps and bounded1→2→4→30day progression",
+      "passed": true
+    },
+    {
+      "name": "malformed imported subfields do not crash course controls or invent progress",
+      "passed": true
+    },
+    {
+      "name": "existing selected lesson/drafts/checks survive normalization",
+      "passed": true
+    }
+  ]
+}

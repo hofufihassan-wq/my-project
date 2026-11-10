@@ -1,0 +1,21 @@
+{
+  "initial": {
+    "summary": {
+      "vue:preview_ready": 96,
+      "vue:error": 84,
+      "vanilla:error": 60,
+      "vanilla:preview_ready": 120
+    },
+    "invariantErrors": []
+  },
+  "final": {
+    "summary": {
+      "vue:preview_ready": 96,
+      "vue:error": 84,
+      "vanilla:error": 59,
+      "vanilla:preview_ready": 121
+    },
+    "invariantErrors": []
+  },
+  "note": "The first inventory observed one additional late external resource error (Vanilla <img>) relative to the final run. No source/storage invariants failed. Final detailed audit preserves all 360 rows; readiness is not semantic completeness or proof that all later resources/events succeed."
+}

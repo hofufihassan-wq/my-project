@@ -1,0 +1,18 @@
+Source-only legacy checks: JS-101/TS-101 must reject missing DOM; other reference expectations remain historical.
+[✓ PASS] JS-101 (js): requires actual rendered target evidence
+[✓ PASS] JS-102 (js): رائع! نجحت في تطبيق التفرع الشرطي if/else عملياً.
+[✓ PASS] JS-103 (js): إنجاز ممتاز! تم توليد البطاقات عبر دالة map() بنجاح.
+[✓ PASS] HTML-101 (html): أحسنت! أتقنت صياغة الهيكل الدلالي في HTML5.
+[✓ PASS] HTML-102 (html): عمل رائع! تم إتقان الروابط والصور وإمكانية الوصول.
+[✓ PASS] HTML-103 (html): تهانينا! أتقنت إنشاء النماذج وحقول الإدخال والتحقق.
+[✓ PASS] CSS-101 (css): رائع جداً! تم تطبيق مبادئ نموذج الصندوق (Box Model) بدقة.
+[✓ PASS] CSS-102 (css): ممتاز! أتقنت محاذاة العناصر بنظام Flexbox المرن.
+[✓ PASS] CSS-103 (css): أداء رائع! أصبحت شبكة CSS Grid جاهزة ومتجاوبة مع كافة الشاشات.
+[✓ PASS] TS-101 (ts): requires actual rendered target evidence
+[✓ PASS] TS-102 (ts): ممتاز! فهمت دور Interfaces في توثيق وضمان بنية البيانات.
+[✓ PASS] TS-103 (ts): رائع جداً! أتقنت تضييق الأنواع Type Narrowing في TypeScript.
+[✓ PASS] VUE-101 (vue): أحسنت! أتقنت أساسيات التفاعلية مع ref() في Vue 3.
+[✓ PASS] VUE-102 (vue): رائع جداً! أتقنت توجيهات الشروط والتكرار في Vue 3.
+[✓ PASS] VUE-103 (vue): إنجاز رائع! أتقنت بناء المكونات وتمرير الخصائص Props في Vue 3.
+
+Curriculum source-only expectations: 15/15 passed. Real reference execution is covered by run_stability_browser_tests.js.

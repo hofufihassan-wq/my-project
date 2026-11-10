@@ -1,0 +1,6 @@
+{
+  "key": "vuelexicon_bookmarks_v3",
+  "expected": "[\"js-const\"]",
+  "actual": "[\"js-let\"]",
+  "toast": "تم الحفظ في المفضلة ★"
+}

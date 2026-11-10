@@ -1,0 +1,36 @@
+{
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "packaged runtime boots without source checkout or external startup service",
+      "passed": true
+    },
+    {
+      "name": "packaged real Vue Router evaluator finds all local tools and passes its example",
+      "passed": true
+    },
+    {
+      "name": "catalogue, guided project and private persistence work from final dist",
+      "passed": true
+    },
+    {
+      "name": "deployment output contains no repository metadata, tests, node_modules or backups",
+      "passed": true,
+      "detail": {
+        "files": 94,
+        "bytes": 5436893
+      }
+    },
+    {
+      "name": "static MIME and cache headers support worker scripts and future updates",
+      "passed": true
+    },
+    {
+      "name": "no parent errors or external runtime requests",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "network": []
+}

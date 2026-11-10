@@ -1,0 +1,130 @@
+{
+  "suite": "VueLexicon Pro 4.0 — legacy Hands-on Practice Verification Suite",
+  "timestamp": "2026-10-31T11:34:19.796Z",
+  "totalTests": 20,
+  "passedCount": 20,
+  "failedCount": 0,
+  "allPassed": true,
+  "results": [
+    {
+      "id": "TEST-01",
+      "name": "Page loads without fatal JS errors & Vue mounts",
+      "passed": true,
+      "details": "Found 180 entries"
+    },
+    {
+      "id": "TEST-02",
+      "name": "Lexicon category counts preserved (180 total, 25 Nuxt)",
+      "passed": true,
+      "details": "{\"js\":54,\"vue\":30,\"nuxt\":25,\"html\":26,\"css\":25,\"ts\":20}"
+    },
+    {
+      "id": "TEST-03",
+      "name": "No mentions of \"مترجم\" (Translator) in UI or meta tags",
+      "passed": true,
+      "details": "0 occurrences"
+    },
+    {
+      "id": "TEST-04",
+      "name": "Standalone Nuxt Lab & Scratchpad removed from header/mobile nav",
+      "passed": true,
+      "details": "Nav buttons clean"
+    },
+    {
+      "id": "TEST-05",
+      "name": "Open Hands-on Practice Mode (\"وش تحب تتدرّب اليوم؟\")",
+      "passed": true,
+      "details": "Selection view rendered"
+    },
+    {
+      "id": "TEST-06",
+      "name": "5 Interactive Tracks rendered with correct names & badges",
+      "passed": true,
+      "details": "JavaScript, HTML5, CSS3, TypeScript, Vue 3"
+    },
+    {
+      "id": "TEST-07",
+      "name": "Select JavaScript Track opens JS-101 sequentially",
+      "passed": true,
+      "details": "JS-101 active"
+    },
+    {
+      "id": "TEST-08",
+      "name": "Desktop beta grid keeps code LTR and Arabic guidance RTL",
+      "passed": true,
+      "details": "{\"ok\":true,\"display\":\"grid\",\"editorDir\":\"ltr\",\"instructionsDir\":\"rtl\"}"
+    },
+    {
+      "id": "TEST-09",
+      "name": "Live Autocomplete / IntelliSense overlay shows map()",
+      "passed": true,
+      "details": "map() suggestion visible"
+    },
+    {
+      "id": "TEST-10",
+      "name": "Tab setting toggle switch is present and interactive",
+      "passed": true,
+      "details": "Initial: true"
+    },
+    {
+      "id": "TEST-11",
+      "name": "JS-101 Greeting Card: Check Solution passes with green verification",
+      "passed": true,
+      "details": "All criteria met"
+    },
+    {
+      "id": "TEST-12",
+      "name": "Sequential unlock: JS-101 unlocks JS-102 (if/else)",
+      "passed": true,
+      "details": "JS-102 loaded"
+    },
+    {
+      "id": "TEST-13",
+      "name": "JS-102 if/else Authentication Toggle passes verification",
+      "passed": true,
+      "details": "Condition checked"
+    },
+    {
+      "id": "TEST-14",
+      "name": "Sequential unlock: JS-102 unlocks JS-103 (Arrays & map)",
+      "passed": true,
+      "details": "JS-103 loaded"
+    },
+    {
+      "id": "TEST-15",
+      "name": "JS-103 Arrays & map() passes with 3 generated cards",
+      "passed": true,
+      "details": "3 cards rendered in preview"
+    },
+    {
+      "id": "TEST-16",
+      "name": "Educational Timeline Simulation modal launches with step trace & memory table",
+      "passed": true,
+      "details": "Modal visible"
+    },
+    {
+      "id": "TEST-17",
+      "name": "Stop Execution button resets sandbox iframe & sets status to متوقف",
+      "passed": true,
+      "details": "State stopped"
+    },
+    {
+      "id": "TEST-18",
+      "name": "Progressive hint 1 appears on demand",
+      "passed": true,
+      "details": "Hint 1 displayed"
+    },
+    {
+      "id": "TEST-19",
+      "name": "Responsive Mobile 360px has zero unintended horizontal overflow",
+      "passed": true,
+      "details": "scrollWidth: 360px"
+    },
+    {
+      "id": "TEST-20",
+      "name": "Lexicon Search & Relevance filtering regression test",
+      "passed": true,
+      "details": "Results returned for map: 6"
+    }
+  ]
+}

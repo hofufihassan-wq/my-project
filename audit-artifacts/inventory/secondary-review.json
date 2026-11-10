@@ -1,0 +1,873 @@
+{
+  "scope": "74 terms: JavaScript 1–54 and TypeScript 161–180",
+  "timestamp": "2026-10-31T13:20:12.042Z",
+  "method": "source-only manual review; runtime evidence remains in independent browser inventory",
+  "findings": [
+    {
+      "index": 1,
+      "term": "addEventListener()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "alert «تم النقر!» عند الضغط",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "#btn",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+      "contentNotes": []
+    },
+    {
+      "index": 2,
+      "term": "Arrow Function (=>)",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تعريف multiply وgreetUser فقط؛ لا ناتج حسابي معروض",
+      "vueContextOrDefect": "نجاح ثابت بعد تعريف دوال غير مستدعاة",
+      "vanillaContextOrEffect": "كود مكتمل يحسب doubled=[2,4,6] دون عرضه؛ function callback مقصود للمقارنة",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions",
+      "contentNotes": [
+        "التحذير عن استدعاء Arrow Function بعد null عام وغير متخصص؛ لا يوضح lexical this وعدم وجود arguments أو new."
+      ]
+    },
+    {
+      "index": 3,
+      "term": "async / await",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تعريف fetchUserData فقط؛ لا يرسل الطلب",
+      "vueContextOrDefect": "الدالة لا تستدعى وapi.example.com عنوان توضيحي",
+      "vanillaContextOrEffect": "خادم /api/user غير موجود",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+      "contentNotes": []
+    },
+    {
+      "index": 4,
+      "term": "bind() / call() / apply()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console: مرحباً الأستاذ طارق",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "this.handleClick وbutton وسياق this",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind",
+      "contentNotes": []
+    },
+    {
+      "index": 5,
+      "term": "Blob / FileReader",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تسجيل change على حقل ملف ثم قراءة Data URL",
+      "vueContextOrDefect": "input[type=file] غير موجود في القالب؛ null.addEventListener",
+      "vanillaContextOrEffect": "img وfile",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader",
+      "contentNotes": []
+    },
+    {
+      "index": 6,
+      "term": "class",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "إنشاء UserAccount محلي؛ لا عرض displayInfo",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "كود تعريف دالة وبروتوتايب دون استدعاء",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+      "contentNotes": []
+    },
+    {
+      "index": 7,
+      "term": "console.log",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console: النتيجة الحالية: 95، مع console.table في console الأصلي",
+      "vueContextOrDefect": "الجدول ليس مضمون النقل إلى Console الداخلي",
+      "vanillaContextOrEffect": "myVar",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/console/log",
+      "contentNotes": []
+    },
+    {
+      "index": 8,
+      "term": "const",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تعديل settings.theme إلى emerald؛ المرجع const لا يتغير",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "كود var للمقارنة؛ x=20 دون مخرجات",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const",
+      "contentNotes": []
+    },
+    {
+      "index": 9,
+      "term": "Destructuring",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "username=ahmed، role=admin، firstColor=#00DC82؛ لا عرض لها",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "user وuser.address",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment",
+      "contentNotes": []
+    },
+    {
+      "index": 10,
+      "term": "export / import",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "ملف helpers.js وتابع main.js منفصلان",
+      "vueContextOrDefect": "export/import داخل execute غير صالح نحويًا ثم يحتاج ملفات خارجية",
+      "vanillaContextOrEffect": "CommonJS require/module وutils/myFunction؛ لا يعمل في المتصفح",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+      "contentNotes": []
+    },
+    {
+      "index": 11,
+      "term": "fetch()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "طلب JSON ثم طباعة المنشور أو خطأ اتصال",
+      "vueContextOrDefect": "يحتاج شبكة jsonplaceholder.typicode.com، ونجاح الزر ثابت قبل اكتمال الطلب",
+      "vanillaContextOrEffect": "خادم /api/data وJSON صالح",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "contentNotes": []
+    },
+    {
+      "index": 12,
+      "term": "filter()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console مصفوفة منتجين متوفرين: لوحة مفاتيح وفأرة",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "users",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+      "contentNotes": [
+        "filter callback يكفي truthy ولا يلزم boolean؛ وقد تعدل callback الكائنات؛ نفس ملاحظة الآثار الجانبية تنطبق على map."
+      ]
+    },
+    {
+      "index": 13,
+      "term": "find()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console العضو u2 سارة",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "list وtargetId",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find",
+      "contentNotes": []
+    },
+    {
+      "index": 14,
+      "term": "for / for...of",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "عناصر li باسماء items",
+      "vueContextOrDefect": "items غير معرف",
+      "vanillaContextOrEffect": "items وrenderItem",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of",
+      "contentNotes": []
+    },
+    {
+      "index": 15,
+      "term": "forEach()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "3 رسائل Console للتقنيات Vue/Nuxt/JavaScript بفهارس 1..3",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "list وprocess",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+      "contentNotes": []
+    },
+    {
+      "index": 16,
+      "term": "function",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "finalPrice=170؛ لا يطبعها أو يعرضها",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "تعريف add فقط بلا استدعاء",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function",
+      "contentNotes": []
+    },
+    {
+      "index": 17,
+      "term": "getElementById()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "إظهار userAlertModal",
+      "vueContextOrDefect": "العنصر userAlertModal غير موجود؛ الكتلة لا تحدث أثرًا",
+      "vanillaContextOrEffect": "#myCard",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById",
+      "contentNotes": [
+        "وصف getElementById بأنها الأسرع حكم أداء مطلق لا يثبته معيار API."
+      ]
+    },
+    {
+      "index": 18,
+      "term": "if / else",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Dashboard أو LoginForm بحسب isLoggedIn",
+      "vueContextOrDefect": "isLoggedIn ومكونا Dashboard/LoginForm غير معرفين",
+      "vanillaContextOrEffect": "isLoggedIn وshowDashboard/showLoginForm",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
+      "contentNotes": []
+    },
+    {
+      "index": 19,
+      "term": "includes()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "hasAccess=true وisPdf=true؛ لا عرض لهما",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "str",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
+      "contentNotes": []
+    },
+    {
+      "index": 20,
+      "term": "JSON.stringify / parse",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console string ثم زيد",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "config وتخزين متاح",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+      "contentNotes": [
+        "stringify ليست لجميع القيم: دوائر وBigInt قد ترمي، وparse قد يعيد primitive لا كائنًا فقط."
+      ]
+    },
+    {
+      "index": 21,
+      "term": "let",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "counter=1؛ blockScoped محلي للشرط",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "تعريف var count فقط",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let",
+      "contentNotes": []
+    },
+    {
+      "index": 22,
+      "term": "localStorage",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "حفظ واسترجاع وحذف localStorage",
+      "vueContextOrDefect": "المعاينة ذات أصل opaque لا تتيح localStorage؛ لا تخفيف sandbox",
+      "vanillaContextOrEffect": "تخزين محلي متاح؛ sandbox لا يسمح به",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
+      "contentNotes": [
+        "لا توجد مدة انتهاء تلقائية، لكن المستخدم والخصوصية وسياسات التخزين قد تمحو البيانات؛ ليس ضمان دوام."
+      ]
+    },
+    {
+      "index": 23,
+      "term": "map()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console [37.5,93.75,187.5,375]",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "users",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+      "contentNotes": [
+        "map لا تعدل الأصل بنفسها؛ callback تستطيع التعديل، والمصفوفة الجديدة سطحية."
+      ]
+    },
+    {
+      "index": 24,
+      "term": "Nullish Coalescing (??)",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "wrongSize=20، correctSize=0؛ لا عرض للقيمتين",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "options",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing",
+      "contentNotes": [
+        "?? ليس أفضل دائمًا من ||؛ يختلف قصد fallback للقيم falsy حسب الحاجة."
+      ]
+    },
+    {
+      "index": 25,
+      "term": "Object.keys/entries",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console مفاتيح views/likes/shares ثم قيمها",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "obj؛ قد يكون hasOwnProperty محجوبًا في بيانات غير موثوقة",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries",
+      "contentNotes": []
+    },
+    {
+      "index": 26,
+      "term": "Optional Chaining (?.)",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "city=undefined؛ تجاهل order.onCancel الغائب",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "order",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining",
+      "contentNotes": []
+    },
+    {
+      "index": 27,
+      "term": "Promise",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "بعد ثانية Console الخادم يعمل بكفاءة 🟢",
+      "vueContextOrDefect": "النجاح الثابت يسبق استقرار Promise",
+      "vanillaContextOrEffect": "تعريف loadData فقط؛ oldAsyncCall عند استدعائها",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+      "contentNotes": []
+    },
+    {
+      "index": 28,
+      "term": "push() / splice()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console [مراجعة الكود،كتابة اختبارات E2E،نشر التحديث]",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "list وnewItem وindex",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice",
+      "contentNotes": []
+    },
+    {
+      "index": 29,
+      "term": "querySelector()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تعطيل زر checkout-card button.primary",
+      "vueContextOrDefect": "العنصر غير موجود؛ if يمنع الخطأ لكن لا أثر",
+      "vanillaContextOrEffect": ".btn-primary",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector",
+      "contentNotes": []
+    },
+    {
+      "index": 30,
+      "term": "reduce()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console إجمالي الفاتورة 210$",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "cart",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce",
+      "contentNotes": []
+    },
+    {
+      "index": 31,
+      "term": "return",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تعريف isStrongPassword فقط؛ لا استدعاء",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "تعريف getDiscount فقط",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return",
+      "contentNotes": []
+    },
+    {
+      "index": 32,
+      "term": "Set / Map",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console [1,2,3,4,5] وMap تربط adminObj بـSuperAdmin",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "arr",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+      "contentNotes": []
+    },
+    {
+      "index": 33,
+      "term": "setTimeout()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console بداية العملية ثم رسالة بعد 1500ms على الأقل",
+      "vueContextOrDefect": "setTimeout لا يضمن توقيتًا دقيقًا إذا انشغل الخيط",
+      "vanillaContextOrEffect": "hideToast بعد 3000ms (قد يلزم انتظار أطول من فحص سريع)",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/setTimeout",
+      "contentNotes": [
+        "المهلة حد أدنى/جدولة لا موعد تنفيذ دقيق؛ thread قد يؤخرها."
+      ]
+    },
+    {
+      "index": 34,
+      "term": "Spread (...)",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "fullStack وcustomSettings محليان؛ نسخ سطحي",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "arr1 وarr2 وoriginal",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
+      "contentNotes": [
+        "Spread نسخ سطحي، وليس immutability للكائنات المتداخلة."
+      ]
+    },
+    {
+      "index": 35,
+      "term": "switch",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console الحساب قيد المراجعة والتدقيق",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "tab وshowHome/showProfile/showDefault",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch",
+      "contentNotes": []
+    },
+    {
+      "index": 36,
+      "term": "Template Literals",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console المطور حيدر والمكتبة Nuxt 3 وخبير متقدم",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "user وbalance",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+      "contentNotes": []
+    },
+    {
+      "index": 37,
+      "term": "try / catch",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console خطأ JSON ملتقط ثم finally",
+      "vueContextOrDefect": "رسالة console.error هنا مقصودة وليست خطأ غير ملتقط",
+      "vanillaContextOrEffect": "riskyOperation غير موجود؛ ReferenceError يلتقطه catch ويعرض alert",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch",
+      "contentNotes": []
+    },
+    {
+      "index": 38,
+      "term": "typeof",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console string,number,boolean,function,undefined,object",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "callback اختياري؛ typeof على الاسم الغائب آمن",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof",
+      "contentNotes": [
+        "typeof عادة يقيم التعبير؛ الادعاء العام غير المقيم غير صحيح."
+      ]
+    },
+    {
+      "index": 39,
+      "term": "var",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console النص المعاد إسناده داخل if",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "var count=0 فقط؛ مثال إعلان بلا أثر",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var",
+      "contentNotes": []
+    },
+    {
+      "index": 40,
+      "term": "WeakMap / WeakSet",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تعريف Widget مع WeakMap؛ لا إنشاء Widget",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "تعليق فقط لا كود قابل للتنفيذ",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+      "contentNotes": [
+        "WeakMap/WeakSet الحديثة تقبل الرموز غير المسجلة عالميًا، لا الكائنات فقط."
+      ]
+    },
+    {
+      "index": 41,
+      "term": "XMLHttpRequest",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "طلب إلى api.example.com/data عند الضغط",
+      "vueContextOrDefect": "عنوان توضيحي، لا معالج لفشل الشبكة",
+      "vanillaContextOrEffect": "خادم /data",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest",
+      "contentNotes": []
+    },
+    {
+      "index": 42,
+      "term": "yield",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console ID_100 ثم ID_101",
+      "vueContextOrDefect": "while true آمنة هنا بسبب yield واستدعاء next مرتين فقط",
+      "vanillaContextOrEffect": "تعريف getNext فقط؛ counter عند استدعائها",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield",
+      "contentNotes": []
+    },
+    {
+      "index": 43,
+      "term": "Array.from() / Array.isArray()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "isList=true، numbers=[1,2,3,4,5]؛ cardsArray فارغة",
+      "vueContextOrDefect": "لا توجد .card؛ لا أثر مرئي على واجهة المثال",
+      "vanillaContextOrEffect": "val وnodeList",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from",
+      "contentNotes": [
+        "Set iterable وليس array-like؛ Array.from تدعم كليهما."
+      ]
+    },
+    {
+      "index": 44,
+      "term": "String.split() / join()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "شارات من inputTags.split",
+      "vueContextOrDefect": "inputTags غير معرف",
+      "vanillaContextOrEffect": "text",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split",
+      "contentNotes": []
+    },
+    {
+      "index": 45,
+      "term": "String.replace() / replaceAll()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console تعلم Nuxt مع NuxtLexicon واستمتع ببرمجة Nuxt 3",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "text",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll",
+      "contentNotes": []
+    },
+    {
+      "index": 46,
+      "term": "Math.random() / Math.floor()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "diceRoll بين1و6، randomColor أحد الألوان الأربعة؛ لا عرض",
+      "vueContextOrDefect": "Math.random ليست أمنية",
+      "vanillaContextOrEffect": "rand يحسب0..99 ولا يعرضه",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random",
+      "contentNotes": [
+        "توليد رقم سري بـMath.random ممارسة غير آمنة؛ يجب crypto للمعلومات الأمنية."
+      ]
+    },
+    {
+      "index": 47,
+      "term": "Date & Intl.DateTimeFormat",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console تاريخ منسق ar-SA حسب وقت التشغيل",
+      "vueContextOrDefect": "لا يختبر قيمة تاريخ ثابتة",
+      "vanillaContextOrEffect": "تعليق فقط، لا مثال تنفيذي",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat",
+      "contentNotes": [
+        "منذ5دقائق تحتاج Intl.RelativeTimeFormat مع فرق محسوب؛ DateTimeFormat لا تفعلها."
+      ]
+    },
+    {
+      "index": 48,
+      "term": "RegExp (test / match)",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console true مرتين",
+      "vueContextOrDefect": "فحص تعليمي مبسط للبريد وكلمة المرور، ليس تحقق إنتاج شامل",
+      "vanillaContextOrEffect": "inputVal",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+      "contentNotes": []
+    },
+    {
+      "index": 49,
+      "term": "Debounce & Throttle",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تعريف debounce وhandleSearch؛ لا طلب فعلي",
+      "vueContextOrDefect": "لا استدعاء handleSearch ولا ربط input؛ لا تنفيذ Throttle",
+      "vanillaContextOrEffect": "تعليق فقط، لا تنفيذ debounce/throttle",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/setTimeout",
+      "contentNotes": []
+    },
+    {
+      "index": 50,
+      "term": "IntersectionObserver",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "مراقبة .term-card عند وجودها",
+      "vueContextOrDefect": "لا توجد .term-card؛ لا عناصر للمراقبة",
+      "vanillaContextOrEffect": "تعليق فقط، لا تنفيذ Observer",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
+      "contentNotes": []
+    },
+    {
+      "index": 51,
+      "term": "AbortController",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "طلب مع signal ثم تعريف cancelRequest",
+      "vueContextOrDefect": "cancelRequest غير مربوط بزر ولا يستدعى؛ لا يحدث abort",
+      "vanillaContextOrEffect": "تعليق فقط، لا تنفيذ abort",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController",
+      "contentNotes": []
+    },
+    {
+      "index": 52,
+      "term": "structuredClone()",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console dark بعد تغيير النسخة إلى emerald",
+      "vueContextOrDefect": "",
+      "vanillaContextOrEffect": "obj",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/structuredClone",
+      "contentNotes": [
+        "structuredClone ليست لأي قيمة؛ الدوال وDOM وغير المدعوم ترمي DataCloneError."
+      ]
+    },
+    {
+      "index": 53,
+      "term": "URL & URLSearchParams",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Console about:srcdoc مع query في إطار المعاينة",
+      "vueContextOrDefect": "لا يعدل عنوان الأب الفعلي؛ URL كائن محلي",
+      "vanillaContextOrEffect": "تعليق فقط، لا كود",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams",
+      "contentNotes": []
+    },
+    {
+      "index": 54,
+      "term": "Clipboard API (navigator.clipboard)",
+      "category": "js",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "تعريف copySnippetToClipboard فقط",
+      "vueContextOrDefect": "لا استدعاء للدالة؛ نجاح ثابت لا يثبت نسخ الحافظة",
+      "vanillaContextOrEffect": "تعليق فقط، لا وصول للحافظة",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API",
+      "contentNotes": []
+    },
+    {
+      "index": 161,
+      "term": "Primitive Types",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "عرض حيدر،27،نشط",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "JS صحيح يعيد إسناد username لرقم دون مخرجات",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#the-primitives-string-number-and-boolean",
+      "contentNotes": [
+        "الأنواع البدائية في TS تشمل أيضًا null/undefined؛ المثال لا يثبت فحصًا وقت التشغيل."
+      ]
+    },
+    {
+      "index": 162,
+      "term": "Type Annotations",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "115 ر.س؛ قد يظهر تمثيل floating point",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "تعريف calculateTotal فقط؛ لا استدعاء",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-annotations-on-variables",
+      "contentNotes": []
+    },
+    {
+      "index": 163,
+      "term": "Type Inference",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "VueLexicon Pro،3.5؛ الإصدار التاريخي داخل المثال",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "count يصبح نصًا، لا مخرجات",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/type-inference.html",
+      "contentNotes": [
+        "عبارة JS لا يستنتج أنواعًا تبسط أكثر من اللازم: أدوات المحرر قد تستنتج وتفحص ملفات JS. لا يوجد فحص Runtime للأنواع في اللغتين."
+      ]
+    },
+    {
+      "index": 164,
+      "term": "interface",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "اسم سارة وبريدها ودور admin",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "كائن user فقط",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/objects.html#interfaces",
+      "contentNotes": [
+        "readonly قيد أثناء الفحص، لا يمنع تعديل كائن runtime من JavaScript ولا عبر alias قابل للتعديل."
+      ]
+    },
+    {
+      "index": 165,
+      "term": "type (Type Alias)",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "شارة success",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "تعريف STATUS فقط",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases",
+      "contentNotes": []
+    },
+    {
+      "index": 166,
+      "term": "Union Types (|)",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "ID-1024 وUSR_988",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "تعريف formatId فقط",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types",
+      "contentNotes": []
+    },
+    {
+      "index": 167,
+      "term": "Intersection Types (&)",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "أحمد الصالح،1،MANAGE_USERS/DEPLOY_PROD",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "person وadminStaff غير معرفين",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types",
+      "contentNotes": []
+    },
+    {
+      "index": 168,
+      "term": "Generics (<T>)",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "Vue و10",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "تعريف getFirstItem فقط",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/generics.html",
+      "contentNotes": []
+    },
+    {
+      "index": 169,
+      "term": "Type Narrowing & Guards",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "VUELEXICON و42.86",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "return خارج دالة: SyntaxError فضلًا عن val الغائب",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
+      "contentNotes": [
+        "مثال Vanilla يحتوي return خارج دالة؛ خطأ صياغة مستقل عن عدم وجود TS."
+      ]
+    },
+    {
+      "index": 170,
+      "term": "Utility Types: Partial<T> & Required<T>",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "يعرض الأصل سارة وبريدها القديم؛ updated غير معروض",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "تعريف updateUser فقط",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype",
+      "contentNotes": []
+    },
+    {
+      "index": 171,
+      "term": "Utility Types: Pick<T> & Omit<T>",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "مقدمة في Vue 3 ودليل TypeScript",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "fullUser غير معرف",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys",
+      "contentNotes": []
+    },
+    {
+      "index": 172,
+      "term": "Utility Types: Record<K, T>",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "3 أدوار مع شاراتها",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "تعريف configs فقط؛ لا schema",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type",
+      "contentNotes": []
+    },
+    {
+      "index": 173,
+      "term": "unknown vs any vs never",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "SAFE-DATA",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "str ثم data.fakeMethod غير موجودة",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/functions.html#never",
+      "contentNotes": [
+        "unknown لا يمنع أخطاء runtime تلقائيًا؛ يتطلب فحوصًا حقيقية. JS ليست نوع TS any حرفيًا."
+      ]
+    },
+    {
+      "index": 174,
+      "term": "Function Typing & Signatures",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "VUE ✓ - NUXT ✓ - TS ✓",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "تعريف applyTransform فقط",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/functions.html",
+      "contentNotes": []
+    },
+    {
+      "index": 175,
+      "term": "Tuples & Readonly Arrays",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "24.7136،46.6753،الرياض",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "coords.push ممكن في JS؛ لا readonly",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/2/objects.html#tuple-types",
+      "contentNotes": [
+        "as const على كائن يعطي خصائص readonly، وليس Tuple؛ readonly في TS لا يجمد الكائن عند runtime."
+      ]
+    },
+    {
+      "index": 176,
+      "term": "Enums (Numeric & String)",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "UP",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "Object.freeze لكائن Direction فقط",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/enums.html",
+      "contentNotes": [
+        "const enum قد يحتفظ بكائن runtime عند preserveConstEnums؛ الوصف المطلق يحتاج تقييدًا."
+      ]
+    },
+    {
+      "index": 177,
+      "term": "defineProps<Props>()",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "title مطلوب من المكون الأب، count=0",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "defineProps ماكرو غير متاح كدالة JavaScript خام",
+      "officialReference": "https://vuejs.org/guide/typescript/composition-api.html#typing-component-props",
+      "contentNotes": [
+        "استنتاج runtime validation من أنواع props له قيود ويختلف dev/prod؛ لا فاحص TS في هذا المشغل."
+      ]
+    },
+    {
+      "index": 178,
+      "term": "defineEmits<Emits>()",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "إطلاق update(42) وclose للمكون الأب",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "defineEmits ماكرو غير متاح كدالة JavaScript خام",
+      "officialReference": "https://vuejs.org/guide/typescript/composition-api.html#typing-component-emits",
+      "contentNotes": [
+        "defineEmits typing يتحقق وقت أدوات التطوير لا يمنع event خاطئ runtime تلقائيًا؛ يحتاج validator لتوثيق فحص runtime."
+      ]
+    },
+    {
+      "index": 179,
+      "term": "Ref<T> & reactive typing",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "من null إلى حيدر المعماري عند الضغط",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "ref غير مستورد في وحدة المثال",
+      "officialReference": "https://vuejs.org/guide/typescript/composition-api.html#typing-ref",
+      "contentNotes": [
+        "المحرر قد يستنتج أن ref(null) من Vue API؛ generic يجب لتمثيل User|null وليس لتعطيل كل inference."
+      ]
+    },
+    {
+      "index": 180,
+      "term": "tsconfig.json",
+      "category": "ts",
+      "review": "قراءة مستقلة للتعريف والشرح والمصادر؛ ليست نتيجة متصفح",
+      "vueExpected": "عرض نص tsconfig، لا فحص أنواع",
+      "vueContextOrDefect": "lang=ts غير مدعوم بالمشغل الحالي؛ يلزم TypeScript وVue tooling خارج هذا الإطار",
+      "vanillaContextOrEffect": "نص JSON غير ملف JavaScript؛ SyntaxError عند تشغيله كموديول",
+      "officialReference": "https://www.typescriptlang.org/docs/handbook/tsconfig-json.html",
+      "contentNotes": [
+        "tsconfig ليس JavaScript يُشغل؛ الحقل Vanilla ينبغي عرضه كملف إعدادات لا زر تنفيذ JS."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+PASS opaque iframe Blob Worker is supported; native loop/function output and variable values
+PASS step execution pauses before effects; variables reflect each actual completed top-level statement
+PASS AST boundaries preserve strings, multiline arrays, destructuring and semicolons
+PASS parser catches syntax failure and Worker reports real runtime ReferenceError
+PASS infinite top-level loop is terminated within five seconds without freezing the page
+PASS stop terminates actual timers and replacement runs discard old evidence
+PASS delayed infinite callback is terminated by the post-completion timer window
+PASS opaque Worker has no parent DOM/storage, network fetch blocked by inherited CSP
+PASS forged parent/other-frame messages and direct Worker payload do not forge Console
+PASS continuous execution preserves native synchronous/microtask order
+PASS observing objects never invokes getters or Proxy property traps
+PASS user arguments do not expose capture helpers and native formatting survives global String replacement
+PASS Array prototype setters cannot alter snapshot records or crash parent rendering
+PASS manual steps keep control messages private from user global message listeners
+PASS manual async scheduling and lexical eval fail with supported-scope explanation
+PASS pasted closing script and HTML remain source, not parent markup
+PASS source edits do not autorun; source persists after page reload
+PASS bridge emits real source to the existing simulator; mobile layout has no document overflow

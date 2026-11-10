@@ -1,0 +1,47 @@
+{
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "name": "unsubmitted notes, projects, tasks and calendar forms survive navigation and reload",
+      "passed": true
+    },
+    {
+      "name": "dictionary edits remain separate from original content and persist after reload",
+      "passed": true
+    },
+    {
+      "name": "CSS, JS and explainer source persist without running or saving a lesson",
+      "passed": true
+    },
+    {
+      "name": "simulator layout restores without starting code or changing its palette",
+      "passed": true
+    },
+    {
+      "name": "whole browser restart preserves all in-progress organizer forms and code",
+      "passed": true
+    },
+    {
+      "name": "one real download contains learning, legacy, organizer drafts and simulator settings",
+      "passed": true
+    },
+    {
+      "name": "confirmed full file import restores every group and starts no user code",
+      "passed": true
+    },
+    {
+      "name": "invalid file and cancelled import keep current raw storage and state",
+      "passed": true
+    },
+    {
+      "name": "quota failure refuses full restore without replacing original data",
+      "passed": true
+    },
+    {
+      "name": "no parent errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

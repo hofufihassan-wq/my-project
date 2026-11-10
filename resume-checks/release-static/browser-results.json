@@ -1,0 +1,42 @@
+{
+  "sourceCommit": "b717d9bda1e62a57f047a32fac0ca2148c76aa69",
+  "website": "/workspace/downloads/VLex-Pro-static-20261107-112525-171243-b717d9bd/website",
+  "transport": "local HTTP only",
+  "browser": "Chromium on Linux; Windows CMD not available",
+  "externalRequests": [],
+  "pageErrors": [],
+  "paths": [
+    {
+      "prefix": "/",
+      "englishMatches": 8,
+      "arabicMatches": 18,
+      "htmlAssetsFetched": 38,
+      "mounted": true,
+      "requestsWithErrors": [],
+      "screenshot": "static-root.png"
+    },
+    {
+      "prefix": "/review/",
+      "englishMatches": 8,
+      "arabicMatches": 18,
+      "htmlAssetsFetched": 38,
+      "mounted": true,
+      "requestsWithErrors": [],
+      "screenshot": "static-nested.png"
+    }
+  ],
+  "localLauncher": {
+    "status": "passed on Linux/Python",
+    "origin": "http://127.0.0.1:8091",
+    "blocked": {
+      ".git/config": 404,
+      ".env": 404,
+      "README.md": 404,
+      "_pristine_backup/index.html": 404,
+      "scripts/start-local.py": 404
+    },
+    "note": "Only this test-owned process was stopped with SIGINT. Windows BAT reviewed, not executed."
+  },
+  "status": "passed",
+  "finishedUtc": "2026-11-07T11:26:47.894Z"
+}

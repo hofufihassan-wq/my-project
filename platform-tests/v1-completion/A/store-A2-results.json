@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-11-10T12:10:35.885Z",
+  "passed": 13,
+  "total": 13,
+  "results": [
+    {
+      "name": "new store does not write until user changes",
+      "passed": true
+    },
+    {
+      "name": "save and recreate store preserves tasks and drafts",
+      "passed": true
+    },
+    {
+      "name": "read snapshots cannot mutate saved state",
+      "passed": true
+    },
+    {
+      "name": "corruption preserves exact original and recoverable backup",
+      "passed": true
+    },
+    {
+      "name": "unread original never replaced after storage works again",
+      "passed": true
+    },
+    {
+      "name": "late read failure refuses destructive overwrite",
+      "passed": true
+    },
+    {
+      "name": "quota gives session-only status and export of full edit",
+      "passed": true
+    },
+    {
+      "name": "valid backup roundtrip explicitly replaces and backs up prior state",
+      "passed": true
+    },
+    {
+      "name": "invalid import is atomic",
+      "passed": true
+    },
+    {
+      "name": "failed backup refuses import without state mutation",
+      "passed": true
+    },
+    {
+      "name": "prototype pollution and unsupported data rejected",
+      "passed": true
+    },
+    {
+      "name": "independent sections do not drop another tab changes",
+      "passed": true
+    },
+    {
+      "name": "legacy keys unchanged across saving and imports",
+      "passed": true
+    }
+  ]
+}

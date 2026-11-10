@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-11-10T12:21:49.314Z",
+  "passed": 16,
+  "total": 16,
+  "results": [
+    {
+      "name": "actual component schemas survive backup roundtrip without dropping fields",
+      "passed": true
+    },
+    {
+      "name": "older partial sections retain defaults and no feature requires new metadata",
+      "passed": true
+    },
+    {
+      "name": "falsy and object organizer strings cannot bypass validation",
+      "passed": true
+    },
+    {
+      "name": "organizer impossible dates times and typed timestamp fields are rejected",
+      "passed": true
+    },
+    {
+      "name": "course maps refuse arrays null and primitive containers",
+      "passed": true
+    },
+    {
+      "name": "course answer records are checked without assuming lesson ids",
+      "passed": true
+    },
+    {
+      "name": "review entries check calendar timestamps and finite interval bounds",
+      "passed": true
+    },
+    {
+      "name": "course drafts project checklists and history reject malformed entries",
+      "passed": true
+    },
+    {
+      "name": "editor source fields are exact strings and flags are real booleans",
+      "passed": true
+    },
+    {
+      "name": "CSS controls refuse invalid known property types and preserve optional controls",
+      "passed": true
+    },
+    {
+      "name": "malformed backup rejection is atomic and creates no recovery side effects",
+      "passed": true
+    },
+    {
+      "name": "invalid live edit cannot poison saving mode or erase the last valid draft",
+      "passed": true
+    },
+    {
+      "name": "rejected payload keeps protected and memory sessions in their existing modes",
+      "passed": true
+    },
+    {
+      "name": "invalid stored shapes protect and preserve exact original on load",
+      "passed": true
+    },
+    {
+      "name": "harmless unknown optional metadata remains lossless while unsafe keys fail",
+      "passed": true
+    },
+    {
+      "name": "near-limit saved data always fits its own importable backup envelope",
+      "passed": true
+    }
+  ]
+}

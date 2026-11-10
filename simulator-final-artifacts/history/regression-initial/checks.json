@@ -1,0 +1,277 @@
+{
+  "baseline": "5d05acf",
+  "sourceHashes": {
+    "app.js": "84559adad9e31a188dde948e7f807b89efb24066f55cf5dc90a7739413a994c5",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "501301f6092d71fe21d5b35762c806a258ec59c25a2cf1363ec9436adcc622ad",
+    "assets/vendor/manifest.json": "4c3497c3c472d668c8ac7da5571d4bb77e85edcd481c33b5945b2192c35d92a3"
+  },
+  "results": [
+    {
+      "label": "build_compiler",
+      "command": [
+        "npm",
+        "run",
+        "build:compiler"
+      ],
+      "exitCode": 0,
+      "seconds": 0.42,
+      "log": "build_compiler.log"
+    },
+    {
+      "label": "build_css",
+      "command": [
+        "npm",
+        "run",
+        "build:css"
+      ],
+      "exitCode": 0,
+      "seconds": 1.22,
+      "log": "build_css.log"
+    },
+    {
+      "label": "verify",
+      "command": [
+        "python3",
+        "scripts/assets.py",
+        "verify"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "verify.log"
+    },
+    {
+      "label": "run_preview_protocol_tests",
+      "command": [
+        "node",
+        "run_preview_protocol_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "run_preview_protocol_tests.log"
+    },
+    {
+      "label": "run_data_safety_tests",
+      "command": [
+        "node",
+        "run_data_safety_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.26,
+      "log": "run_data_safety_tests.log"
+    },
+    {
+      "label": "run_json_import_test",
+      "command": [
+        "node",
+        "run_json_import_test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 2.87,
+      "log": "run_json_import_test.log"
+    },
+    {
+      "label": "run_curriculum_tests",
+      "command": [
+        "node",
+        "run_curriculum_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "run_curriculum_tests.log"
+    },
+    {
+      "label": "run_content_integrity_test",
+      "command": [
+        "node",
+        "run_content_integrity_test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "run_content_integrity_test.log"
+    },
+    {
+      "label": "run_legacy_validator_tests",
+      "command": [
+        "node",
+        "run_legacy_validator_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.03,
+      "log": "run_legacy_validator_tests.log"
+    },
+    {
+      "label": "run_simulator_reference_review",
+      "command": [
+        "node",
+        "run_simulator_reference_review.js"
+      ],
+      "exitCode": 0,
+      "seconds": 7.99,
+      "log": "run_simulator_reference_review.log"
+    },
+    {
+      "label": "run_dictionary_preview_tests",
+      "command": [
+        "node",
+        "run_dictionary_preview_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 21.54,
+      "log": "run_dictionary_preview_tests.log"
+    },
+    {
+      "label": "run_phase0a_browser_tests",
+      "command": [
+        "node",
+        "run_phase0a_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 5.8,
+      "log": "run_phase0a_browser_tests.log"
+    },
+    {
+      "label": "run_dictionary_inventory",
+      "command": [
+        "node",
+        "run_dictionary_inventory.js"
+      ],
+      "exitCode": 0,
+      "seconds": 66.68,
+      "log": "run_dictionary_inventory.log"
+    },
+    {
+      "label": "run_simulator_browser_tests",
+      "command": [
+        "node",
+        "run_simulator_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 20.27,
+      "log": "run_simulator_browser_tests.log"
+    },
+    {
+      "label": "run_runtime_assets_tests",
+      "command": [
+        "node",
+        "run_runtime_assets_tests.js"
+      ],
+      "exitCode": 1,
+      "seconds": 102.35,
+      "log": "run_runtime_assets_tests.log"
+    },
+    {
+      "label": "run_stability_browser_tests",
+      "command": [
+        "node",
+        "run_stability_browser_tests.js"
+      ],
+      "exitCode": 1,
+      "seconds": 34.94,
+      "log": "run_stability_browser_tests.log"
+    },
+    {
+      "label": "run_phase5b_browser_tests",
+      "command": [
+        "node",
+        "run_phase5b_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 48.14,
+      "log": "run_phase5b_browser_tests.log"
+    },
+    {
+      "label": "run_phase5b1_browser_tests",
+      "command": [
+        "node",
+        "run_phase5b1_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 51.3,
+      "log": "run_phase5b1_browser_tests.log"
+    },
+    {
+      "label": "run_hands_on_verification",
+      "command": [
+        "node",
+        "run_hands_on_verification.js"
+      ],
+      "exitCode": 0,
+      "seconds": 21.96,
+      "log": "run_hands_on_verification.log"
+    },
+    {
+      "label": "run_simulator_beta_unit_tests",
+      "command": [
+        "node",
+        "run_simulator_beta_unit_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "run_simulator_beta_unit_tests.log"
+    },
+    {
+      "label": "run_simulator_beta_browser_tests",
+      "command": [
+        "node",
+        "run_simulator_beta_browser_tests.js"
+      ],
+      "exitCode": 1,
+      "seconds": 41.9,
+      "log": "run_simulator_beta_browser_tests.log"
+    },
+    {
+      "label": "run_simulator_beta_extra_tests",
+      "command": [
+        "node",
+        "run_simulator_beta_extra_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 8.63,
+      "log": "run_simulator_beta_extra_tests.log"
+    },
+    {
+      "label": "run_simulator_completion_unit_tests",
+      "command": [
+        "node",
+        "run_simulator_completion_unit_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06,
+      "log": "run_simulator_completion_unit_tests.log"
+    },
+    {
+      "label": "run_simulator_completion_browser_tests",
+      "command": [
+        "node",
+        "run_simulator_completion_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 52.58,
+      "log": "run_simulator_completion_browser_tests.log"
+    },
+    {
+      "label": "run_simulator_ambient_storage_tests",
+      "command": [
+        "node",
+        "run_simulator_ambient_storage_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 5.05,
+      "log": "run_simulator_ambient_storage_tests.log"
+    }
+  ],
+  "timestamp": "2026-10-31T08:11:38Z",
+  "finalSnapshotHashes": {
+    "app.js": "84559adad9e31a188dde948e7f807b89efb24066f55cf5dc90a7739413a994c5",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "501301f6092d71fe21d5b35762c806a258ec59c25a2cf1363ec9436adcc622ad",
+    "assets/vendor/manifest.json": "4c3497c3c472d668c8ac7da5571d4bb77e85edcd481c33b5945b2192c35d92a3"
+  },
+  "passedCommands": 22,
+  "totalCommands": 25
+}

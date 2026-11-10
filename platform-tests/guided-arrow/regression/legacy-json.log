@@ -1,0 +1,18 @@
+
+evalmachine.<anonymous>:233
+    const appMode = ref(window.location.hash === '#arrow-functions' ? 'arrow' : 'home');
+                                        ^
+
+TypeError: Cannot read properties of undefined (reading 'hash')
+    at Object.setup (evalmachine.<anonymous>:233:41)
+    at createApp (/tmp/vlex-arrow-final/run_json_import_test.js:38:32)
+    at evalmachine.<anonymous>:10:13
+    at Script.runInContext (node:vm:149:12)
+    at Object.runInContext (node:vm:301:6)
+    at Object.<anonymous> (/tmp/vlex-arrow-final/run_json_import_test.js:57:4)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+
+Node.js v24.22.1

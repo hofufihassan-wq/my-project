@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-11-04T17:52:03.924Z",
+  "platform": "linux",
+  "windowsCmdAvailable": false,
+  "origin": "http://127.0.0.1:8091",
+  "passed": 4,
+  "total": 5,
+  "results": [
+    {
+      "name": "health identifies exact loopback origin and same-folder reuse",
+      "passed": true
+    },
+    {
+      "name": "runtime HTML and MIME headers load, source/private paths are denied",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n200 !== 403\n\n    at /workspace/my-progect/platform-tests/local/browser.cjs:11:747\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async test (/workspace/my-progect/platform-tests/local/browser.cjs:5:34)\n    at async /workspace/my-progect/platform-tests/local/browser.cjs:11:1"
+    },
+    {
+      "name": "actual launcher serves dictionary and English/Arabic search",
+      "passed": true
+    },
+    {
+      "name": "favorite survives full browser close and local server stop/restart",
+      "passed": true
+    },
+    {
+      "name": "package contains runtime, originals and matching checksums without private source",
+      "passed": true
+    }
+  ]
+}

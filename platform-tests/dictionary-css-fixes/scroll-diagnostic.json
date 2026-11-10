@@ -1,0 +1,62 @@
+[
+  {
+    "id": "css-overflow_overflow-x_y",
+    "box": {
+      "x": 879,
+      "y": 513.28125,
+      "width": 240,
+      "height": 120
+    },
+    "parentHit": {
+      "tag": "IFRAME",
+      "cl": ""
+    },
+    "innerBefore": {
+      "top": 0,
+      "height": 120,
+      "scrollHeight": 304,
+      "overflow": "auto",
+      "body": "<div id=\"vuelexicon-example\" data-v-app=\"\"><section data-v-lexicon-preview=\"\" class=\"lesson\"><p data-v-lexicon-preview=\"\">اسحب شريط التمرير لرؤية بقية القائمة؛ العرض الأفقي مقصوص.</p><div data-v-lexicon-preview=\"\" class=\"terms-scroll-list\" tabindex=\"0\" aria-label=\"قائمة قابلة للتمرير\"><p data-v-lexicon-preview=\"\">HTML: هيكل الصفحة</p><p data-v-lexicon-preview=\"\">CSS: شكل الصفحة</p><p data-v-lexicon-preview=\"\">JavaScript: التفاعل</p><p data-v-lexicon-preview=\"\">Vue: بناء الواجهات</p><p data-v-lex"
+    },
+    "afterNative": {
+      "top": 184,
+      "click": true,
+      "active": "terms-scroll-list"
+    },
+    "direct": {
+      "top": 100,
+      "css": "auto"
+    },
+    "logs": []
+  },
+  {
+    "id": "css-scroll-behavior",
+    "box": {
+      "x": 976.28125,
+      "y": 525.84375,
+      "width": 142.71875,
+      "height": 43.59375
+    },
+    "parentHit": {
+      "tag": "IFRAME",
+      "cl": ""
+    },
+    "innerBefore": {
+      "top": 0,
+      "height": 158,
+      "scrollHeight": 640,
+      "overflow": "auto",
+      "body": "<div id=\"vuelexicon-example\" data-v-app=\"\"><section data-v-lexicon-preview=\"\" class=\"lesson\"><p data-v-lexicon-preview=\"\">اضغط الزر؛ حاوية الدروس تتحرك بسلاسة إلى القسم الثاني.</p><button data-v-lexicon-preview=\"\" type=\"button\" class=\"chapter-link\">انتقل للقسم الثاني</button><div data-v-lexicon-preview=\"\" class=\"lexicon-container\" tabindex=\"0\"><section data-v-lexicon-preview=\"\" class=\"chapter\"><h2 data-v-lexicon-preview=\"\">القسم الأول</h2><p data-v-lexicon-preview=\"\">هذه مساحة قابلة للتمرير داخل"
+    },
+    "afterNative": {
+      "top": 320,
+      "click": true,
+      "active": "chapter-link"
+    },
+    "direct": {
+      "top": 100,
+      "css": "smooth"
+    },
+    "logs": []
+  }
+]

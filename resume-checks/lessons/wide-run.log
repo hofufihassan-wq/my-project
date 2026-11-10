@@ -1,0 +1,88 @@
+PASS course filters beginner/intermediate/advanced and no disabled lessons
+PASS course html-structure view/question/feedback
+PASS course html-structure transfer without autorun + explicit reference + actual output
+PASS course html-attributes view/question/feedback
+FAIL course html-attributes transfer without autorun + explicit reference + actual output locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    25 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+PASS course html-form view/question/feedback
+FAIL course html-form transfer without autorun + explicit reference + actual output locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    25 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+PASS course html-semantics view/question/feedback
+FAIL course html-semantics transfer without autorun + explicit reference + actual output locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    25 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+PASS course css-selectors view/question/feedback
+FAIL course css-selectors transfer without autorun + explicit reference + actual output locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    25 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+PASS course css-spacing view/question/feedback
+FAIL course css-spacing transfer without autorun + explicit reference + actual output locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    25 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+PASS course css-flex view/question/feedback
+FAIL course css-flex transfer without autorun + explicit reference + actual output locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    25 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+PASS course css-responsive view/question/feedback
+FAIL course css-responsive transfer without autorun + explicit reference + actual output locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    25 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+PASS course js-values view/question/feedback
+FAIL course js-values transfer without autorun + explicit reference + actual output locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    25 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+PASS course js-conditions view/question/feedback
+FAIL course js-conditions transfer without autorun + explicit reference + actual output locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for getByTestId('tech-editor-panel') to be visible[22m
+[2m    9 × locator resolved to hidden <section data-testid="tech-editor-panel" class="tech-panel tech-editor-panel">…</section>[22m
+
+FAIL course js-arrays view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course js-events view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-ref view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-model view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-list view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-components view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course html-accessible-feedback view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course html-native-validation view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course html-details-disclosure view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course html-table-relations view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course css-grid-minmax view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course css-flex-min-width view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course css-custom-properties-clamp view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course css-transition-reduced-motion view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course js-closure-counters view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course js-async-error-handling view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course js-reduce-summary view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course js-event-delegation view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-computed-filter view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-watch-side-effect view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-props-emits view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-keyed-component-state view/question/feedback locator.isVisible: Target page, context or browser has been closed
+FAIL course html-structure own edited draft/navigation/explicit transfer locator.isVisible: Target page, context or browser has been closed
+FAIL course css-spacing own edited draft/navigation/explicit transfer locator.isVisible: Target page, context or browser has been closed
+FAIL course js-events own edited draft/navigation/explicit transfer locator.isVisible: Target page, context or browser has been closed
+FAIL course vue-ref own edited draft/navigation/explicit transfer locator.isVisible: Target page, context or browser has been closed
+FAIL course progress/mistake histories/drafts survive full reload page.reload: Target page, context or browser has been closed
+locator.click: Target page, context or browser has been closed
+    at enter (/workspace/my-progect/scripts/simulator-completion-test-helpers.cjs:6:90)
+    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:65:7)
+{"passed":12,"total":48,"fatal":"locator.click: Target page, context or browser has been closed\n    at enter (/workspace/my-progect/scripts/simulator-completion-test-helpers.cjs:6:90)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:65:7)","courses":32,"legacy":0}

@@ -1,0 +1,50 @@
+BEGIN applied css-animation_keyframes
+PASS css-animation_keyframes
+BEGIN applied css-aspect-ratio
+PASS css-aspect-ratio
+BEGIN applied css-background
+PASS css-background
+BEGIN applied css-border_border-radius
+PASS css-border_border-radius
+BEGIN applied css-box-shadow
+PASS css-box-shadow
+BEGIN applied css-color
+PASS css-color
+BEGIN applied css-cursor
+PASS css-cursor
+BEGIN applied css-display
+PASS css-display
+BEGIN applied css-filter_blur_drop-shadow
+PASS css-filter_blur_drop-shadow
+BEGIN applied css-flex_flexbox
+PASS css-flex_flexbox
+BEGIN applied css-gap
+PASS css-gap
+BEGIN applied css-grid_css_grid
+PASS css-grid_css_grid
+BEGIN applied css-hover_focus
+PASS css-hover_focus
+BEGIN applied css-justify-content_align-items
+PASS css-justify-content_align-items
+BEGIN applied css-linear-gradient
+PASS css-linear-gradient
+BEGIN applied css-margin_padding
+PASS css-margin_padding
+BEGIN applied css-media
+PASS css-media
+BEGIN applied css-opacity_backdrop-filter
+PASS css-opacity_backdrop-filter
+BEGIN applied css-overflow_overflow-x_y
+PASS css-overflow_overflow-x_y
+BEGIN applied css-position
+PASS css-position
+BEGIN applied css-scroll-behavior
+PASS css-scroll-behavior
+BEGIN applied css-transform_transition
+PASS css-transform_transition
+BEGIN applied css-user-select
+PASS css-user-select
+BEGIN applied css-width_height
+PASS css-width_height
+BEGIN applied css-z-index
+PASS css-z-index

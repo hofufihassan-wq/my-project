@@ -1,0 +1,13 @@
+PASS mouse fragment stays in srcdoc and scrolls actual target
+PASS Enter fragment stays in srcdoc and scrolls actual target
+PASS encoded Unicode id scrolls to real Arabic target
+PASS empty fragment returns to top without leaving child
+PASS missing fragment preserves document with no unhandled error
+PASS bad-encoding fragment preserves document with no unhandled error
+PASS legacy named anchor remains local and scrolls
+PASS user preventDefault is respected and listener runs once
+PASS nonfragment document links retain their existing behavior
+PASS sandbox stays opaque and user code never runs in parent
+PASS message sender identity, run and payload bounds still reject forged data
+PASS full simulator user editor fragment click keeps actual lesson preview
+{"passed":12,"total":12,"errors":[]}

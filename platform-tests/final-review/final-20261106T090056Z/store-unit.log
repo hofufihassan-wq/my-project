@@ -1,0 +1,13 @@
+PASS new store does not write until user changes
+PASS save and recreate store preserves tasks and drafts
+PASS read snapshots cannot mutate saved state
+PASS corruption preserves exact original and recoverable backup
+PASS unread original never replaced after storage works again
+PASS late read failure refuses destructive overwrite
+PASS quota gives session-only status and export of full edit
+PASS valid backup roundtrip explicitly replaces and backs up prior state
+PASS invalid import is atomic
+PASS failed backup refuses import without state mutation
+PASS prototype pollution and unsupported data rejected
+PASS independent sections do not drop another tab changes
+PASS legacy keys unchanged across saving and imports

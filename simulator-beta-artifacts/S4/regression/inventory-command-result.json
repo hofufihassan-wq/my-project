@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "run_dictionary_inventory.js"
+  ],
+  "label": "run_dictionary_inventory",
+  "exitCode": 0,
+  "seconds": 141.64,
+  "log": "run_dictionary_inventory.log",
+  "outputTail": "AUDITED 30 of 360\nAUDITED 60 of 360\nAUDITED 90 of 360\nAUDITED 120 of 360\nAUDITED 150 of 360\nAUDITED 180 of 360\nAUDITED 210 of 360\nAUDITED 240 of 360\nAUDITED 270 of 360\nAUDITED 300 of 360\nAUDITED 330 of 360\nAUDITED 360 of 360\n{\"summary\":{\"vue:preview_ready\":96,\"vue:error\":84,\"vanilla:error\":59,\"vanilla:preview_ready\":121},\"invariantErrors\":[]}\n"
+}

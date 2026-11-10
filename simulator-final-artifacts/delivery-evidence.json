@@ -1,0 +1,167 @@
+{
+  "timestamp": "2026-10-31T11:40:24.329388+00:00",
+  "branch": "feat/simulator-final-glass-workbench",
+  "base": "5d05acf",
+  "implementationCommits": [
+    "7ccd53c",
+    "480b318",
+    "dcf310f",
+    "219fbd9"
+  ],
+  "runtimeHashes": {
+    "app.js": "5c5bc86889844feaf2f2c03d5718b44cd1b07c3b91dfbf41f85798f11d546e3a",
+    "index.html": "16d3fcce59559630a3bbfa242ef8dbb1be4c323373d896731b1e9031a9d50b55",
+    "simulator-beta.js": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "assets/vendor/manifest.json": "8f34c8a724cf0872a9a73bffb1b05420066836759e5fc3cf00c926db47256e51"
+  },
+  "runtimeHashAgreement": true,
+  "results": {
+    "newBrowserAcceptance": 43,
+    "allPriorCommands": 25,
+    "syntaxJS": 38,
+    "protectedFiles": 47
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1440,
+        "height": 960
+      },
+      {
+        "codec_name": "aac"
+      }
+    ],
+    "format": {
+      "duration": "41.395333"
+    }
+  },
+  "audioModuleSha256": "63ab17ce257f17eb49e4db089f1e713f70d6582cbf0d5375561c17632dca4cfa",
+  "desktopCaptureActualAttempts": {
+    "total": 8,
+    "ready": 6,
+    "errors": 2,
+    "pending": 0
+  },
+  "files": [
+    {
+      "path": "simulator-final-artifacts/demo/VueLexicon_Simulator_Final_Demo.mp4",
+      "bytes": 3490665,
+      "sha256": "051e3e6639df9a7d38b73a0da0119b6861b866690870c74567ad608d423cfcba"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/approved-sound-controls.png",
+      "bytes": 24626,
+      "sha256": "7f5c03fa27aaeb8d32348868589bc74793a2b913fcfd57fd445ad746e64aee23"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/attempts-detail.png",
+      "bytes": 127372,
+      "sha256": "aa1b220ba51e17d8d1cab43b90eb7d514c4b759fc207cbab48215e645ce2f70c"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/console-390.png",
+      "bytes": 220711,
+      "sha256": "3b8680e235652b897a879a5470492f0d11a2103a11348b2582aa9f1b122613d7"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/console-768.png",
+      "bytes": 407088,
+      "sha256": "bece4c5d7857ef9162f9975b43fa9b5965fb82fbe8cabc0c40b5c555a5e99a5a"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/console-detail.png",
+      "bytes": 43512,
+      "sha256": "0b87b6c7de28dbb39e129e98fe0d33b7a84f481642ea98a39466e9af1cef1ea9"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/desktop-1440.png",
+      "bytes": 975675,
+      "sha256": "a05665cdc5844811d52dbc24b158eaba4559e6a827d00e5aaab83453e4bda6d5"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/desktop-empty-1440.png",
+      "bytes": 944338,
+      "sha256": "6a7381338a7932ec758aab8a2ad61f5e0c53c8006f56e85a8153e890e5fc2309"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/desktop-error-console.png",
+      "bytes": 46014,
+      "sha256": "c8ff89707836b3d04bf29de888b9d42425debffbce19d578e8b9de977c4d1f90"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/desktop-error-graph.png",
+      "bytes": 152871,
+      "sha256": "e380b5649ae05820aa2da22b4e62a52cab21182aaa538b75d7093663983f8200"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/editor-390.png",
+      "bytes": 205509,
+      "sha256": "fe43110ff7cbd8e081160a0573ed2f962e02af7ef720aa630a98d9dbc394d4cd"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/editor-768.png",
+      "bytes": 392058,
+      "sha256": "c8138675488fc03221963efffe9c6251e01e49f1d09f9ed258082504f86237a9"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/editor-detail.png",
+      "bytes": 73707,
+      "sha256": "984d37af0d6eb1bbc82d85350d7e295077eaf28edd2158d58ffc738aa70308a1"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/graph-390.png",
+      "bytes": 219768,
+      "sha256": "682756d6ba31a6a5ab3df7689e34cd7e31645e086b9db6b309f082e78ad5511d"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/graph-768.png",
+      "bytes": 360190,
+      "sha256": "22f154e10987576e7f8f9b75f9d7c8583e56950f3a7145291f9597cb3147f883"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/graph-detail.png",
+      "bytes": 151625,
+      "sha256": "d549808fecb5ab5d939fe6dbaab5cbbe4e8832a9cb8e505cb0f3095a2b79f41b"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-390.png",
+      "bytes": 147404,
+      "sha256": "b22dee40c0fc02ae3ef1079d418dd1e0dff07afba1cfd16083cb81587f8ab288"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-768.png",
+      "bytes": 296976,
+      "sha256": "0f858c8b2b35abf0d922a2a4fb8f5234b94b8d8592d92c21a912826012c998ac"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-detail.png",
+      "bytes": 89729,
+      "sha256": "ebb6f4ddfdd5fbc874a09da009fe8f1c7a2396d7ff887334d49f84d263aab64f"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-panel-390.png",
+      "bytes": 81762,
+      "sha256": "a91ce1d3445f5a8cf8a8bb743b986d59ed92787a7650bebf1e3634bc6ba05557"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/preview-panel-768.png",
+      "bytes": 115062,
+      "sha256": "5af9e710a2ab4d54d61545687414e49978eea18cfba70e7ed8bba4e9bde51d8c"
+    },
+    {
+      "path": "simulator-final-artifacts/screenshots/session-detail.png",
+      "bytes": 73614,
+      "sha256": "6d311261402730758ec2bf3c8f0e814aaa92b171290ef77fb774d9f40e581d82"
+    }
+  ],
+  "reference": "Latest image attached by the owner after explicitly canceling03_simulator_blue_tech.jpg. No pixel-match claim.",
+  "noPush": true,
+  "noMerge": true,
+  "noDeployment": true,
+  "regressionQualification": "All25 commands were executed against this runtime.24 passed in the final full invocation; the one failed geometry check was rechecked with its full33 tests after synchronizing the test measurements. Runtime files did not change. Initial failure is retained in history and initialAttempt."
+}

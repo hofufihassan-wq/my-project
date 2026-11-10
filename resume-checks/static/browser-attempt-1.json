@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "1cf220c506a132ae1a43a78f3cb508ee394a48c6",
+  "transport": "local HTTP only",
+  "browser": "Chromium on Linux; Windows CMD not available",
+  "externalRequests": [],
+  "pageErrors": [],
+  "paths": [],
+  "status": "failed",
+  "error": "locator.click: Error: strict mode violation: getByTestId('nav-lexicon') resolved to 2 elements:\n    1) <button data-testid=\"nav-lexicon\">…</button> aka getByRole('button', { name: 'القاموس المعجم' })\n    2) <button data-testid=\"nav-lexicon\">…</button> aka getByLabel('التنقل للجوال').getByTestId('nav-lexicon')\n\nCall log:\n\u001b[2m  - waiting for getByTestId('nav-lexicon')\u001b[22m\n\n    at /workspace/my-progect/resume-checks/static/browser-static.cjs:48:43"
+}

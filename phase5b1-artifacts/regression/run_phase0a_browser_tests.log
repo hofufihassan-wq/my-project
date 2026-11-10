@@ -1,0 +1,15 @@
+PASS JSON null local progress starts safely and keeps recoverable raw backup
+PASS codeDraft object import is rejected before any stored/user state changes
+PASS random JSON file rejected
+PASS supported legacy and versioned valid exports import
+PASS manual mode typing changes neither submitted code nor iframe document
+PASS auto mode debounces rapid edits and submits only latest source
+PASS circular object and BigInt console output does not stop user script
+PASS new run and stop discard snapshot and validation result
+PASS editing invalidates previous solution verification
+PASS foreign window messages and stale run IDs are ignored
+PASS late DOM readiness cannot turn thrown error into success
+PASS real interval stops after iframe reset; previous timer cannot contaminate new run
+PASS lesson change clears old verification and creates new lesson session
+PASS no application page errors during integration checks
+14/14 browser integration checks passed

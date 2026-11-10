@@ -1,0 +1,214 @@
+{
+  "method": "Continuous Playwright Chromium recording of the running local site, automated navigation, no cuts. No audio track.",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "errors": [],
+  "events": [
+    {
+      "screenshot": "01-dashboard",
+      "seconds": 1.9
+    },
+    {
+      "section": "lexicon",
+      "seconds": 3.6
+    },
+    {
+      "screenshot": "02-dictionary",
+      "seconds": 4.5
+    },
+    {
+      "section": "explain",
+      "seconds": 6.1
+    },
+    {
+      "screenshot": "03-explainer",
+      "seconds": 8
+    },
+    {
+      "section": "course",
+      "seconds": 9.5
+    },
+    {
+      "screenshot": "04-lessons",
+      "seconds": 10.2
+    },
+    {
+      "screenshot": "04-vue-curriculum",
+      "seconds": 12
+    },
+    {
+      "screenshot": "04-vue-router",
+      "seconds": 14.5
+    },
+    {
+      "section": "cssLab",
+      "seconds": 16
+    },
+    {
+      "screenshot": "05-css-lab",
+      "seconds": 17.8
+    },
+    {
+      "section": "jsLab",
+      "seconds": 19.5
+    },
+    {
+      "screenshot": "06-javascript-lab",
+      "seconds": 21.2
+    },
+    {
+      "section": "training",
+      "seconds": 22.6
+    },
+    {
+      "screenshot": "07-training",
+      "seconds": 23
+    },
+    {
+      "section": "projects",
+      "seconds": 24.3
+    },
+    {
+      "screenshot": "08-projects",
+      "seconds": 24.8
+    },
+    {
+      "screenshot": "08-project-1",
+      "seconds": 28.5
+    },
+    {
+      "section": "projects",
+      "seconds": 29.9
+    },
+    {
+      "screenshot": "08-project-2",
+      "seconds": 33
+    },
+    {
+      "section": "projects",
+      "seconds": 34.3
+    },
+    {
+      "screenshot": "08-project-3",
+      "seconds": 37.6
+    },
+    {
+      "section": "projects",
+      "seconds": 38.9
+    },
+    {
+      "screenshot": "08-project-4",
+      "seconds": 42.3
+    },
+    {
+      "section": "projects",
+      "seconds": 43.7
+    },
+    {
+      "screenshot": "08-project-5",
+      "seconds": 47.4
+    },
+    {
+      "section": "projects",
+      "seconds": 48.8
+    },
+    {
+      "screenshot": "08-project-6",
+      "seconds": 52.5
+    },
+    {
+      "section": "projects",
+      "seconds": 53.9
+    },
+    {
+      "section": "notes",
+      "seconds": 55.2
+    },
+    {
+      "screenshot": "09-notes",
+      "seconds": 55.4
+    },
+    {
+      "section": "calendar",
+      "seconds": 56.7
+    },
+    {
+      "screenshot": "10-calendar",
+      "seconds": 57
+    },
+    {
+      "section": "kanban",
+      "seconds": 58.3
+    },
+    {
+      "screenshot": "11-tasks",
+      "seconds": 58.6
+    },
+    {
+      "section": "settings",
+      "seconds": 59.9
+    },
+    {
+      "screenshot": "12-settings",
+      "seconds": 60.5
+    },
+    {
+      "section": "simulator",
+      "seconds": 61.9
+    },
+    {
+      "screenshot": "13-simulator",
+      "seconds": 62.7
+    },
+    {
+      "section": "home",
+      "seconds": 64
+    },
+    {
+      "screenshot": "theme-glass",
+      "seconds": 66.1
+    },
+    {
+      "screenshot": "theme-purple",
+      "seconds": 68.2
+    },
+    {
+      "screenshot": "theme-light",
+      "seconds": 70.3
+    },
+    {
+      "screenshot": "theme-petroleum",
+      "seconds": 72.4
+    },
+    {
+      "section": "home",
+      "seconds": 73.7
+    },
+    {
+      "screenshot": "mobile-dashboard",
+      "seconds": 73.9
+    },
+    {
+      "section": "projects",
+      "seconds": 75.3
+    },
+    {
+      "screenshot": "mobile-projects",
+      "seconds": 75.5
+    },
+    {
+      "section": "course",
+      "seconds": 76.9
+    },
+    {
+      "screenshot": "mobile-lessons",
+      "seconds": 77.1
+    },
+    {
+      "section": "home",
+      "seconds": 78.6
+    }
+  ]
+}

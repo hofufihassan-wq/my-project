@@ -1,0 +1,29 @@
+/* هذا قسمك الحر. غيّره وجرب النتيجة. */
+html { font-size: 16px; }
+html, body { margin: 0; min-height: 100%; }
+body { font-family: system-ui, sans-serif; background: #f6f8fb; padding: 12px; }
+.lab-item { padding: 14px; background: #d1fae5; border: 1px solid #6ee7b7; border-radius: 8px; }
+
+/* VLEX-LAB:START */
+#lab-target {
+  box-sizing: border-box;
+  margin: 20%;
+  padding: 24px;
+  font-size: 300%;
+  width: 444px;
+  height: 100%;
+  gap: 17px;
+  border-radius: 50%;
+  background-color: #112233;
+  color: #ddeeff;
+  display: grid;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-wrap: wrap-reverse;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+/* VLEX-LAB:END */
+
+/* USER SURVIVES */
+.lab-item { text-decoration: underline; }

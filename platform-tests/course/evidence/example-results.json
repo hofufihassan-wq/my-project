@@ -1,0 +1,146 @@
+[
+  {
+    "id": "html-structure",
+    "expected": {
+      "selector": "h1",
+      "text": "رحلتي"
+    },
+    "actual": "رحلتي في البرمجة",
+    "interaction": false
+  },
+  {
+    "id": "html-attributes",
+    "expected": {
+      "selector": "h2",
+      "text": "هدفي"
+    },
+    "actual": "هدفي",
+    "interaction": false
+  },
+  {
+    "id": "html-form",
+    "expected": {
+      "selector": "label",
+      "text": "اسم المهمة"
+    },
+    "actual": "اسم المهمة",
+    "interaction": false
+  },
+  {
+    "id": "html-semantics",
+    "expected": {
+      "selector": "main h1",
+      "text": "يومي"
+    },
+    "actual": "يومي",
+    "interaction": false
+  },
+  {
+    "id": "css-selectors",
+    "expected": {
+      "selector": ".card",
+      "text": "أتعلم"
+    },
+    "actual": "أتعلم كل يوم خطوة.",
+    "interaction": false
+  },
+  {
+    "id": "css-spacing",
+    "expected": {
+      "selector": ".card",
+      "text": "بطاقة"
+    },
+    "actual": "بطاقة مهمتي",
+    "interaction": false
+  },
+  {
+    "id": "css-flex",
+    "expected": {
+      "selector": ".tasks article",
+      "count": 3
+    },
+    "actual": "تعلم",
+    "interaction": false
+  },
+  {
+    "id": "css-responsive",
+    "expected": {
+      "selector": ".board article",
+      "count": 2
+    },
+    "actual": "قراءة",
+    "interaction": false
+  },
+  {
+    "id": "js-values",
+    "expected": {
+      "selector": "#greeting",
+      "text": "3 مهام"
+    },
+    "actual": "سارة أنجزت 3 مهام",
+    "interaction": false
+  },
+  {
+    "id": "js-conditions",
+    "expected": {
+      "selector": "#message",
+      "text": "ابدأ"
+    },
+    "actual": "ابدأ بمهمة صغيرة",
+    "interaction": false
+  },
+  {
+    "id": "js-arrays",
+    "expected": {
+      "selector": "#tasks li",
+      "count": 3
+    },
+    "actual": "قراءة",
+    "interaction": false
+  },
+  {
+    "id": "js-events",
+    "expected": {
+      "selector": "#count",
+      "text": "0"
+    },
+    "actual": "1",
+    "interaction": true
+  },
+  {
+    "id": "vue-ref",
+    "expected": {
+      "selector": "button",
+      "text": "0"
+    },
+    "actual": "أنجزت 1 مهام",
+    "interaction": true
+  },
+  {
+    "id": "vue-model",
+    "expected": {
+      "selector": "p",
+      "text": "كتبت:"
+    },
+    "actual": "كتبت: مهمتي",
+    "interaction": true
+  },
+  {
+    "id": "vue-list",
+    "expected": {
+      "selector": "li",
+      "count": 2
+    },
+    "actual": "أقرأ",
+    "interaction": false
+  },
+  {
+    "id": "vue-components",
+    "expected": {
+      "selector": "article",
+      "count": 2
+    },
+    "actual": "أقرأ مفهومًا",
+    "interaction": false
+  }
+]

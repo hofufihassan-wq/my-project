@@ -1,0 +1,16 @@
+PASS educational sources, engine modules, dictionary styles and all original backups match baseline
+PASS accepted homepage stays unchanged and submission/message handlers match reviewed S2 telemetry baseline
+PASS manual simulator entry preserves null, absent and stored drafts without running them
+PASS original reference actually runs in an opaque iframe while all drafts remain unchanged
+PASS preview HTML CSS and Console tools switch without recreating or rerunning the live frame
+PASS editor, organized Console, central decoration and live preview have the requested desktop geometry
+PASS syntax overlay preserves complete editor text and scroll alignment
+PASS manual edit saves only its selected lesson and does not silently execute the draft
+PASS forged and stale-source messages cannot change actual simulator evidence
+PASS stop invalidates the session and replaces its frame while retaining the saved draft
+PASS all seeded runtime checks use only local assets without failed requests or uncaught exceptions
+PASS approved homepage remains pixel-identical at 1440px
+PASS delivery screenshot is an actual 1440px browser page with a real running original reference and empty user storage
+PASS reduced-motion mode suppresses decorative animation without changing the running session
+PASS verification leaves source and protected files unchanged
+15/15 tech simulator checks passed

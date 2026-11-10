@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-31T13:17:32.111Z",
+  "results": [
+    {
+      "name": "180 stable IDs, both 360 example sources and unrelated fields retained",
+      "passed": true
+    },
+    {
+      "name": "structuredClone(function) rejects with DataCloneError; circular objects supported",
+      "passed": true
+    },
+    {
+      "name": "JSON.stringify is not universal: BigInt and cycles throw",
+      "passed": true
+    },
+    {
+      "name": "filter accepts truthy non-booleans and callback may mutate source objects",
+      "passed": true
+    },
+    {
+      "name": "current Chromium WeakMap accepts a nonregistered Symbol key",
+      "passed": true
+    },
+    {
+      "name": "relative date text is produced by Intl.RelativeTimeFormat",
+      "passed": true
+    },
+    {
+      "name": "Vue 3.4.21 renders a valid v-for without key",
+      "passed": true
+    }
+  ]
+}

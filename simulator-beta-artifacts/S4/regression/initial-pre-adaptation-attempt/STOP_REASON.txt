@@ -1,0 +1,1 @@
+Initial scripts ran on the pre-freeze S3 snapshot. Failures and partial logs are retained; source was then frozen with approved preference-read and focus fixes, so unfinished old UI runners were stopped for a fresh final-source run. No partial run is claimed as passing.

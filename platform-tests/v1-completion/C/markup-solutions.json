@@ -1,0 +1,222 @@
+{
+  "html-attributes": {
+    "exercise": [
+      "<a href=\"#plan\">خطتي</a><h2 id=\"plan\">خطتي التعليمية</h2>"
+    ],
+    "fix": [
+      "<a href=\"#plan\">خطتي</a><h2 id=\"plan\">خطتي التعليمية</h2>"
+    ],
+    "mastery": [
+      "<a href=\"#summary\">الملخص</a><section id=\"summary\"><p>ملخصي</p></section>"
+    ]
+  },
+  "html-images": {
+    "exercise": [
+      "<img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==\" alt=\"شعار مشروعي\">"
+    ],
+    "fix": [
+      "<img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==\" alt=\"شعار مشروعي\">"
+    ],
+    "mastery": [
+      "<img alt=\"\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==\">"
+    ]
+  },
+  "html-lists": {
+    "exercise": [
+      "<ul><li>قراءة</li><li>تطبيق</li><li>مراجعة</li></ul>"
+    ],
+    "fix": [
+      "<ul><li>قراءة</li><li>تطبيق</li><li>مراجعة</li></ul>"
+    ],
+    "mastery": [
+      "<ol><li>افهم</li><li>جرّب</li></ol>"
+    ]
+  },
+  "html-table": {
+    "exercise": [
+      "<table><caption>نتائجي</caption><tr><th scope=\"col\">مهارة</th><th scope=\"col\">حالة</th></tr><tr><td>HTML</td><td>جيد</td></tr></table>"
+    ],
+    "fix": [
+      "<table><caption>نتائجي</caption><tr><th scope=\"col\">مهارة</th><th scope=\"col\">حالة</th></tr><tr><td>HTML</td><td>جيد</td></tr></table>"
+    ],
+    "mastery": [
+      "<table><caption>أيامي</caption><tr><th scope=\"col\">اليوم</th></tr><tr><td>الأحد</td></tr><tr><td>الاثنين</td></tr></table>"
+    ]
+  },
+  "html-form": {
+    "exercise": [
+      "<label for=\"email\">بريدي</label><input id=\"email\" name=\"email\" type=\"email\">"
+    ],
+    "fix": [
+      "<label for=\"email\">بريدي</label><input id=\"email\" name=\"email\" type=\"email\">"
+    ],
+    "mastery": [
+      "<label for=\"user\">اسمي</label><input id=\"user\" name=\"user\" type=\"text\">"
+    ]
+  },
+  "html-semantics": {
+    "exercise": [
+      "<nav aria-label=\"التنقل\"><a href=\"#page\">الصفحة</a></nav><main id=\"page\"><h1>صفحتي</h1><button type=\"button\">إضافة</button></main>"
+    ],
+    "fix": [
+      "<nav aria-label=\"التنقل\"><a href=\"#page\">الصفحة</a></nav><main id=\"page\"><h1>صفحتي</h1><button type=\"button\">إضافة</button></main>"
+    ],
+    "mastery": [
+      "<main><article><h2>مقالتي</h2><button type=\"button\">اقرأ</button></article></main>"
+    ]
+  },
+  "html-form-validation": {
+    "exercise": [
+      "<input id=\"mail\" type=\"email\" required>"
+    ],
+    "fix": [
+      "<input id=\"mail\" type=\"email\" required>"
+    ],
+    "mastery": [
+      "<input id=\"age\" type=\"number\" min=\"18\" required>"
+    ]
+  },
+  "html-form-feedback": {
+    "exercise": [
+      "<label for=\"name\">الاسم</label><input id=\"name\" aria-describedby=\"help\"><p id=\"help\">الاسم مطلوب</p>"
+    ],
+    "fix": [
+      "<label for=\"name\">الاسم</label><input id=\"name\" aria-describedby=\"help\"><p id=\"help\">الاسم مطلوب</p>"
+    ],
+    "mastery": [
+      "<label for=\"pin\">الرمز</label><input id=\"pin\" aria-describedby=\"pin-help\"><p id=\"pin-help\">ستة أرقام</p>"
+    ]
+  },
+  "html-details": {
+    "exercise": [
+      "<details open><summary>مساعدة</summary><p>اقرأ المطلوب أولًا.</p></details>"
+    ],
+    "fix": [
+      "<details open><summary>مساعدة</summary><p>اقرأ المطلوب أولًا.</p></details>"
+    ],
+    "mastery": [
+      "<details><summary>تلميح</summary><p>راجع المثال.</p></details>"
+    ]
+  },
+  "css-spacing": {
+    "exercise": [
+      ".card{box-sizing:border-box;width:240px;padding:16px;border:2px solid}"
+    ],
+    "fix": [
+      ".card{box-sizing:border-box;width:240px;padding:16px;border:2px solid}"
+    ],
+    "mastery": [
+      ".card{box-sizing:border-box;width:180px;padding:8px;border:2px solid}"
+    ]
+  },
+  "css-flex": {
+    "exercise": [
+      ".row{display:flex;flex-direction:column;gap:12px;flex-wrap:wrap}"
+    ],
+    "fix": [
+      ".row{display:flex;flex-direction:column;gap:12px;flex-wrap:wrap}"
+    ],
+    "mastery": [
+      ".row{display:flex;flex-direction:row;gap:8px;align-items:center}"
+    ]
+  },
+  "css-grid": {
+    "exercise": [
+      ".board{display:grid;width:300px;grid-template-columns:repeat(2,1fr);gap:0}"
+    ],
+    "fix": [
+      ".board{display:grid;width:300px;grid-template-columns:repeat(2,1fr);gap:0}"
+    ],
+    "mastery": [
+      ".board{display:grid;width:240px;grid-template-columns:80px 1fr;gap:0}"
+    ]
+  },
+  "css-responsive": {
+    "exercise": [
+      ".board{display:grid;width:300px;grid-template-columns:1fr 1fr}@media(max-width:600px){.board{grid-template-columns:1fr}}"
+    ],
+    "fix": [
+      ".board{display:grid;width:300px;grid-template-columns:1fr 1fr}@media(max-width:600px){.board{grid-template-columns:1fr}}"
+    ],
+    "mastery": [
+      ".board{display:grid;width:280px;grid-template-columns:1fr}@media(min-width:700px){.board{grid-template-columns:1fr 1fr}}"
+    ]
+  },
+  "css-position": {
+    "exercise": [
+      ".card{position:relative}.badge{position:absolute;top:8px;right:12px}"
+    ],
+    "fix": [
+      ".card{position:relative}.badge{position:absolute;top:8px;right:12px}"
+    ],
+    "mastery": [
+      ".card{position:relative}.badge{position:absolute;bottom:4px;left:6px}"
+    ]
+  },
+  "css-themes": {
+    "exercise": [
+      ".theme{--accent:blue}.card{color:var(--accent)}"
+    ],
+    "fix": [
+      ".theme{--accent:blue}.card{color:var(--accent)}"
+    ],
+    "mastery": [
+      ".theme{--surface:black}.card{background-color:var(--surface)}"
+    ]
+  },
+  "css-animations": {
+    "exercise": [
+      "@keyframes fade{from{opacity:0}to{opacity:1}}.card{animation:fade 2s 1}"
+    ],
+    "fix": [
+      "@keyframes fade{from{opacity:0}to{opacity:1}}.card{animation:fade 2s 1}"
+    ],
+    "mastery": [
+      "@keyframes slide{from{transform:translateX(0)}to{transform:translateX(10px)}}.card{animation:slide .5s 2}"
+    ]
+  },
+  "css-grid-minmax": {
+    "exercise": [
+      ".board{display:grid;width:240px;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}article{overflow-wrap:anywhere}"
+    ],
+    "fix": [
+      ".board{display:grid;width:240px;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}article{overflow-wrap:anywhere}"
+    ],
+    "mastery": [
+      ".board{display:grid;width:200px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}article{overflow-wrap:anywhere}"
+    ]
+  },
+  "css-flex-minwidth": {
+    "exercise": [
+      ".row{display:flex;width:240px}aside{flex:0 0 60px}.content{flex:1;min-width:0;overflow-wrap:anywhere}"
+    ],
+    "fix": [
+      ".row{display:flex;width:240px}aside{flex:0 0 60px}.content{flex:1;min-width:0;overflow-wrap:anywhere}"
+    ],
+    "mastery": [
+      ".row{display:flex;width:200px}aside{flex:0 0 50px}.content{flex:1;min-width:0;overflow-wrap:anywhere}"
+    ]
+  },
+  "css-fluid-tokens": {
+    "exercise": [
+      ".card{width:clamp(100px,50vw,300px)}"
+    ],
+    "fix": [
+      ".card{width:clamp(100px,50vw,300px)}"
+    ],
+    "mastery": [
+      ".card{width:clamp(80px,25vw,200px)}"
+    ]
+  },
+  "css-reduced-motion": {
+    "exercise": [
+      "@keyframes fade{from{opacity:0}to{opacity:1}}.card{animation:fade 2s}@media(prefers-reduced-motion:reduce){.card{animation-duration:0s}}"
+    ],
+    "fix": [
+      "@keyframes fade{from{opacity:0}to{opacity:1}}.card{animation:fade 2s}@media(prefers-reduced-motion:reduce){.card{animation-duration:0s}}"
+    ],
+    "mastery": [
+      "@keyframes fade{from{opacity:0}to{opacity:1}}.card{animation:fade 1s}@media(prefers-reduced-motion:reduce){.card{animation-duration:0s}}"
+    ]
+  }
+}

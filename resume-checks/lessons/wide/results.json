@@ -1,0 +1,855 @@
+{
+  "started": "2026-11-07T11:14:28.075Z",
+  "commit": "1cf220c506a132ae1a43a78f3cb508ee394a48c6",
+  "method": "Fresh Playwright native Chromium UI clicks on complete unchanged current app; isolated new context, loopback ephemeral server, all nonlocal requests blocked. Test fixture expectations reused, observations and screenshots freshly generated. Not a human Windows run.",
+  "checks": [
+    {
+      "name": "course filters beginner/intermediate/advanced and no disabled lessons",
+      "passed": true,
+      "ms": 732,
+      "counts": {
+        "beginner": 16,
+        "intermediate": 10,
+        "advanced": 6
+      }
+    },
+    {
+      "name": "course html-structure view/question/feedback",
+      "passed": true,
+      "ms": 752,
+      "observedTitle": "أول صفحة: العنوان والفقرة",
+      "observedQuestion": "وش وظيفة الوسم p؟",
+      "observedInstructions": "غيّر العنوان إلى اسمك، وأضف فقرة ثانية عن هدفك. بعد التشغيل تأكد أنك تشوف عنوانًا وفقرتين.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course html-structure transfer without autorun + explicit reference + actual output",
+      "passed": true,
+      "ms": 1673,
+      "noAutoRun": true,
+      "legacyDraftUnchanged": true,
+      "sourceObservedExact": true,
+      "expectation": {
+        "selector": "h1",
+        "text": "رحلتي"
+      },
+      "initial": {
+        "text": "رحلتي في البرمجة\n\nاليوم أبني أول صفحة لي.",
+        "html": "<h1>رحلتي في البرمجة</h1>\n<p>اليوم أبني أول صفحة لي.</p>\n",
+        "frameWidth": 768,
+        "frameHeight": 435,
+        "overflow": false
+      },
+      "after": {
+        "text": "رحلتي في البرمجة\n\nاليوم أبني أول صفحة لي.",
+        "html": "<h1>رحلتي في البرمجة</h1>\n<p>اليوم أبني أول صفحة لي.</p>\n",
+        "frameWidth": 768,
+        "frameHeight": 435,
+        "overflow": false
+      },
+      "interaction": {},
+      "advancedInteractionRun": false,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "name": "course html-attributes view/question/feedback",
+      "passed": true,
+      "ms": 1204,
+      "observedTitle": "الخصائص والروابط",
+      "observedQuestion": "ليش لازم #goal يطابق id=\"goal\"؟",
+      "observedInstructions": "غيّر قيمة id إلى my-goal، وغيّر href إلى #my-goal. جرّب الرابط ولاحظ العلاقة بين الاسمين.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course html-attributes transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 10126,
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course html-form view/question/feedback",
+      "passed": true,
+      "ms": 1264,
+      "observedTitle": "مدخلات لها أسماء واضحة",
+      "observedQuestion": "وش يربط التسمية بحقلها؟",
+      "observedInstructions": "جرّب التحقق والحقل فارغ. اكتب مهمة ثم جرّب مرة ثانية. اضغط التسمية ولاحظ أنها تركز على الحقل.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course html-form transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 10197,
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course html-semantics view/question/feedback",
+      "passed": true,
+      "ms": 1107,
+      "observedTitle": "عناصر لها معنى",
+      "observedQuestion": "عندي فعل يضيف مهمة، وش العنصر الأنسب؟",
+      "observedInstructions": "أضف مهمة ثالثة داخل li، وافصل وصف اليوم في p. تأكد أنك ما حطيت عناصر خارج main بالغلط.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course html-semantics transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 10180,
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course css-selectors view/question/feedback",
+      "passed": true,
+      "ms": 1204,
+      "observedTitle": "من نختار ونلوّن؟",
+      "observedQuestion": "وش تختار .card؟",
+      "observedInstructions": "غيّر لون النص والخلفية. أضف p ثانية بلا class، ولاحظ أن القاعدة ما تطبق عليها.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course css-selectors transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 10212,
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course css-spacing view/question/feedback",
+      "passed": true,
+      "ms": 985,
+      "observedTitle": "الحشو والهامش والحجم",
+      "observedQuestion": "أبي أبعد النص عن حدود البطاقة من الداخل. أغيّر؟",
+      "observedInstructions": "غيّر padding من 20px إلى 40px، ثم غيّر margin. قارن المسافة داخل الحدود بالمسافة حول البطاقة.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course css-spacing transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 10176,
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course css-flex view/question/feedback",
+      "passed": true,
+      "ms": 1009,
+      "observedTitle": "رتّب المهام بـFlexbox",
+      "observedQuestion": "مين نكتب له display:flex؟",
+      "observedInstructions": "غيّر flex-direction إلى column، ثم أعده row وغيّر gap. جرّب تضييق المعاينة من أدوات المحاكي.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course css-flex transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 10208,
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course css-responsive view/question/feedback",
+      "passed": true,
+      "ms": 926,
+      "observedTitle": "خلّ الصفحة تناسب الجوال",
+      "observedQuestion": "وش تسوي @media هنا؟",
+      "observedInstructions": "بدّل عرض المعاينة بين 390 و768 بكسل. لاحظ عدد الأعمدة، ثم غيّر شرط 600 إلى 800.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course css-responsive transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 10229,
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course js-values view/question/feedback",
+      "passed": true,
+      "ms": 1121,
+      "observedTitle": "القيم والمتغيرات",
+      "observedQuestion": "بعد let count = 2; count = count + 3; وش القيمة؟",
+      "observedInstructions": "غيّر الاسم والعدد الابتدائي. توقع الناتج قبل التشغيل ثم قارنه بالعنوان.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Variables",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course js-values transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 10111,
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course js-conditions view/question/feedback",
+      "passed": true,
+      "ms": 1163,
+      "observedTitle": "قرار بـif وelse",
+      "observedQuestion": "أي فرع يعمل إذا taskCount يساوي0 كرقم؟",
+      "observedInstructions": "غيّر taskCount إلى3 وشغّل. بعدها جرّب النص '0' ولاحظ الفرق مع ===.",
+      "wrongThenRight": true,
+      "alternateExplanationSeen": true,
+      "referenceURL": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
+      "sourceObservedExact": true
+    },
+    {
+      "name": "course js-conditions transfer without autorun + explicit reference + actual output",
+      "passed": false,
+      "ms": 2388,
+      "error": "locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    9 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n\n    at runTransferred (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:14:121)\n    at async /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:120\n    at async check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:71)\n    at async main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:50:13)"
+    },
+    {
+      "name": "course js-arrays view/question/feedback",
+      "passed": false,
+      "ms": 3,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course js-events view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course vue-ref view/question/feedback",
+      "passed": false,
+      "ms": 2,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course vue-model view/question/feedback",
+      "passed": false,
+      "ms": 3,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course vue-list view/question/feedback",
+      "passed": false,
+      "ms": 4,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course vue-components view/question/feedback",
+      "passed": false,
+      "ms": 20,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course html-accessible-feedback view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course html-native-validation view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course html-details-disclosure view/question/feedback",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course html-table-relations view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course css-grid-minmax view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course css-flex-min-width view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course css-custom-properties-clamp view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course css-transition-reduced-motion view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course js-closure-counters view/question/feedback",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course js-async-error-handling view/question/feedback",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course js-reduce-summary view/question/feedback",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course js-event-delegation view/question/feedback",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course vue-computed-filter view/question/feedback",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course vue-watch-side-effect view/question/feedback",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course vue-props-emits view/question/feedback",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course vue-keyed-component-state view/question/feedback",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:84\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:49:16)"
+    },
+    {
+      "name": "course html-structure own edited draft/navigation/explicit transfer",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:55:53\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:54:8)"
+    },
+    {
+      "name": "course css-spacing own edited draft/navigation/explicit transfer",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:55:53\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:54:8)"
+    },
+    {
+      "name": "course js-events own edited draft/navigation/explicit transfer",
+      "passed": false,
+      "ms": 0,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:55:53\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:54:8)"
+    },
+    {
+      "name": "course vue-ref own edited draft/navigation/explicit transfer",
+      "passed": false,
+      "ms": 1,
+      "error": "locator.isVisible: Target page, context or browser has been closed\n    at goCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:12:66)\n    at selectCourse (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:13:39)\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:55:53\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:54:8)"
+    },
+    {
+      "name": "course progress/mistake histories/drafts survive full reload",
+      "passed": false,
+      "ms": 1,
+      "error": "page.reload: Target page, context or browser has been closed\n    at /workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:64:94\n    at check (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:11:77)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:64:7)"
+    }
+  ],
+  "courses": [
+    {
+      "id": "html-structure",
+      "topic": "html",
+      "level": "beginner",
+      "title": "أول صفحة: العنوان والفقرة",
+      "exampleSha256": "25afcdf0b53cdf0b10decc8e1ba3d2aebc415019224b7d16872b39d9a9da278b",
+      "ui": {
+        "observedTitle": "أول صفحة: العنوان والفقرة",
+        "observedQuestion": "وش وظيفة الوسم p؟",
+        "observedInstructions": "غيّر العنوان إلى اسمك، وأضف فقرة ثانية عن هدفك. بعد التشغيل تأكد أنك تشوف عنوانًا وفقرتين.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "noAutoRun": true,
+        "legacyDraftUnchanged": true,
+        "sourceObservedExact": true,
+        "expectation": {
+          "selector": "h1",
+          "text": "رحلتي"
+        },
+        "initial": {
+          "text": "رحلتي في البرمجة\n\nاليوم أبني أول صفحة لي.",
+          "html": "<h1>رحلتي في البرمجة</h1>\n<p>اليوم أبني أول صفحة لي.</p>\n",
+          "frameWidth": 768,
+          "frameHeight": 435,
+          "overflow": false
+        },
+        "after": {
+          "text": "رحلتي في البرمجة\n\nاليوم أبني أول صفحة لي.",
+          "html": "<h1>رحلتي في البرمجة</h1>\n<p>اليوم أبني أول صفحة لي.</p>\n",
+          "frameWidth": 768,
+          "frameHeight": 435,
+          "overflow": false
+        },
+        "interaction": {},
+        "advancedInteractionRun": false,
+        "sandbox": "allow-scripts"
+      }
+    },
+    {
+      "id": "html-attributes",
+      "topic": "html",
+      "level": "beginner",
+      "title": "الخصائص والروابط",
+      "exampleSha256": "e51c1916fdd25ac8427533b4e1e94748af3df963533a62347947435ec40b0d09",
+      "ui": {
+        "observedTitle": "الخصائص والروابط",
+        "observedQuestion": "ليش لازم #goal يطابق id=\"goal\"؟",
+        "observedInstructions": "غيّر قيمة id إلى my-goal، وغيّر href إلى #my-goal. جرّب الرابط ولاحظ العلاقة بين الاسمين.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-form",
+      "topic": "html",
+      "level": "beginner",
+      "title": "مدخلات لها أسماء واضحة",
+      "exampleSha256": "47c8feda80b1af96de50b9c23b15db2ee2e2755eec25ca6039b2372e54ff73c2",
+      "ui": {
+        "observedTitle": "مدخلات لها أسماء واضحة",
+        "observedQuestion": "وش يربط التسمية بحقلها؟",
+        "observedInstructions": "جرّب التحقق والحقل فارغ. اكتب مهمة ثم جرّب مرة ثانية. اضغط التسمية ولاحظ أنها تركز على الحقل.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "html-semantics",
+      "topic": "html",
+      "level": "beginner",
+      "title": "عناصر لها معنى",
+      "exampleSha256": "0a88db8936017d181cf03c279adb8235ee693485f164c8b53692e862caa334af",
+      "ui": {
+        "observedTitle": "عناصر لها معنى",
+        "observedQuestion": "عندي فعل يضيف مهمة، وش العنصر الأنسب؟",
+        "observedInstructions": "أضف مهمة ثالثة داخل li، وافصل وصف اليوم في p. تأكد أنك ما حطيت عناصر خارج main بالغلط.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-selectors",
+      "topic": "css",
+      "level": "beginner",
+      "title": "من نختار ونلوّن؟",
+      "exampleSha256": "4d685bf637014794249c8fa3c59e3b3f28b56597d696a0dac38e26b48926d9bc",
+      "ui": {
+        "observedTitle": "من نختار ونلوّن؟",
+        "observedQuestion": "وش تختار .card؟",
+        "observedInstructions": "غيّر لون النص والخلفية. أضف p ثانية بلا class، ولاحظ أن القاعدة ما تطبق عليها.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-spacing",
+      "topic": "css",
+      "level": "beginner",
+      "title": "الحشو والهامش والحجم",
+      "exampleSha256": "2033573008c7d7f8736aafeb2ec6c54017d90953f361babba5383587f60c2a5e",
+      "ui": {
+        "observedTitle": "الحشو والهامش والحجم",
+        "observedQuestion": "أبي أبعد النص عن حدود البطاقة من الداخل. أغيّر؟",
+        "observedInstructions": "غيّر padding من 20px إلى 40px، ثم غيّر margin. قارن المسافة داخل الحدود بالمسافة حول البطاقة.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-flex",
+      "topic": "css",
+      "level": "beginner",
+      "title": "رتّب المهام بـFlexbox",
+      "exampleSha256": "a4f1d4732b2c8bec66a2493bde475f35fb77cb6fee9f2a93992259cfc401022f",
+      "ui": {
+        "observedTitle": "رتّب المهام بـFlexbox",
+        "observedQuestion": "مين نكتب له display:flex؟",
+        "observedInstructions": "غيّر flex-direction إلى column، ثم أعده row وغيّر gap. جرّب تضييق المعاينة من أدوات المحاكي.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "css-responsive",
+      "topic": "css",
+      "level": "beginner",
+      "title": "خلّ الصفحة تناسب الجوال",
+      "exampleSha256": "f416203249f3702ff5f351e959aa45426942592a9bc67388b2213be35fcd20b4",
+      "ui": {
+        "observedTitle": "خلّ الصفحة تناسب الجوال",
+        "observedQuestion": "وش تسوي @media هنا؟",
+        "observedInstructions": "بدّل عرض المعاينة بين 390 و768 بكسل. لاحظ عدد الأعمدة، ثم غيّر شرط 600 إلى 800.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-values",
+      "topic": "js",
+      "level": "beginner",
+      "title": "القيم والمتغيرات",
+      "exampleSha256": "470f20c6dae719fc7461fada5bce5c2bfb7d6040a37e3a6b8e2ac01d70bb574a",
+      "ui": {
+        "observedTitle": "القيم والمتغيرات",
+        "observedQuestion": "بعد let count = 2; count = count + 3; وش القيمة؟",
+        "observedInstructions": "غيّر الاسم والعدد الابتدائي. توقع الناتج قبل التشغيل ثم قارنه بالعنوان.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Variables",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    25 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-conditions",
+      "topic": "js",
+      "level": "beginner",
+      "title": "قرار بـif وelse",
+      "exampleSha256": "187455e421be17f924f3d1aeef8420ac8b64804886386a1ebcfd0e4bc7940da7",
+      "ui": {
+        "observedTitle": "قرار بـif وelse",
+        "observedQuestion": "أي فرع يعمل إذا taskCount يساوي0 كرقم؟",
+        "observedInstructions": "غيّر taskCount إلى3 وشغّل. بعدها جرّب النص '0' ولاحظ الفرق مع ===.",
+        "wrongThenRight": true,
+        "alternateExplanationSeen": true,
+        "referenceURL": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
+        "sourceObservedExact": true
+      },
+      "preview": {
+        "failed": true,
+        "error": "locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByTestId('tech-editor-panel') to be visible\u001b[22m\n\u001b[2m    9 × locator resolved to hidden <section data-testid=\"tech-editor-panel\" class=\"tech-panel tech-editor-panel\">…</section>\u001b[22m\n"
+      }
+    },
+    {
+      "id": "js-arrays",
+      "topic": "js",
+      "level": "beginner",
+      "title": "المصفوفات والتكرار",
+      "exampleSha256": "eaf10070f975f389cc17e6fe7f341600bf5b97b9cb24a6d38793e1b05b791b7e",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "js-events",
+      "topic": "js",
+      "level": "beginner",
+      "title": "الدوال والأحداث",
+      "exampleSha256": "ed9f206e17228f2158625a25346b5ab4a534254af1401744b5ff70bc3ba2b2d1",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "vue-ref",
+      "topic": "vue",
+      "level": "beginner",
+      "title": "ref تربط القيمة بالواجهة",
+      "exampleSha256": "5ada6c48843da66ade790d4bfd930e9e4c2a2219ed983500f2d7bb54c0935191",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "vue-model",
+      "topic": "vue",
+      "level": "beginner",
+      "title": "v-model: الكتابة تصير بيانات",
+      "exampleSha256": "5c0f34859da05f7be4184601164683409b4966a978b6dbe620f37fa075f91e28",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "vue-list",
+      "topic": "vue",
+      "level": "beginner",
+      "title": "v-for وv-if وcomputed",
+      "exampleSha256": "2772473efa64471d1b4993819f6dde778adab346fc487b8a5d287b30afb2122e",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "vue-components",
+      "topic": "vue",
+      "level": "beginner",
+      "title": "المكونات والـprops",
+      "exampleSha256": "e4a481e30f17094d8cea0bd2069dabb090f850703ea954a29de6346b6d2df675",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "html-accessible-feedback",
+      "topic": "html",
+      "level": "intermediate",
+      "title": "رسائل مرتبطة بالحقل وتُقرأ عند التغيير",
+      "exampleSha256": "d23b3b31dfd11b312dfa7e7c113c84a8cf05569e657ebf3a7562af47a142e4c8",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "html-native-validation",
+      "topic": "html",
+      "level": "intermediate",
+      "title": "تحقق المتصفح من نموذج محلي",
+      "exampleSha256": "a0c2ed2db41c559cbeeddcd41dc91a4c7dab491900d24611e00befb362e10309",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "html-details-disclosure",
+      "topic": "html",
+      "level": "intermediate",
+      "title": "إظهار التفاصيل بعنصر أصلي",
+      "exampleSha256": "9389a9b63c388eb65ec075a0e6f191643f66e04fa876254f9a78a1063990e8c1",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "html-table-relations",
+      "topic": "html",
+      "level": "intermediate",
+      "title": "جدول بيانات بعلاقات واضحة",
+      "exampleSha256": "c1f82cc2996cdd98a6c92704b2b93c736343e3163c890c21cf378703b8d7ab34",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "css-grid-minmax",
+      "topic": "css",
+      "level": "intermediate",
+      "title": "Grid يتكيف حسب المساحة المتاحة",
+      "exampleSha256": "be084c7ca8edd0b3e0a84f084e87923e4698ae425238bf5a4e550186ee569f2d",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "css-flex-min-width",
+      "topic": "css",
+      "level": "intermediate",
+      "title": "عنصر Flex طويل بدون كسر التخطيط",
+      "exampleSha256": "83513c07287b4fbd4f93dc97576b28486f3bc6c8fe5e711a10a958256338c863",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "css-custom-properties-clamp",
+      "topic": "css",
+      "level": "advanced",
+      "title": "قيم مشتركة وقياس مرن بحدود",
+      "exampleSha256": "983818131130b31b9b04701091e416fa02fc50346cc625e325cf43b37f9053d6",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "css-transition-reduced-motion",
+      "topic": "css",
+      "level": "advanced",
+      "title": "تفاعل مرئي يحترم تقليل الحركة",
+      "exampleSha256": "ba0b6d2f524638c422e7203de5d499277d792fa75737eb0be5b7144072ba37e6",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "js-closure-counters",
+      "topic": "js",
+      "level": "intermediate",
+      "title": "Closure: كل عداد يحتفظ بقيمته",
+      "exampleSha256": "2afea3555cc86a9cb938c85215834fe9278cc852cff4e38aae5f60156f0f7847",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "js-async-error-handling",
+      "topic": "js",
+      "level": "advanced",
+      "title": "Promise وasync/await مع خطأ متوقع",
+      "exampleSha256": "8de3383fc76b7adf5644107ffcb1d4a5309b9da8d70e35aee15b3be22ecd1baa",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "js-reduce-summary",
+      "topic": "js",
+      "level": "intermediate",
+      "title": "reduce: حول قائمة إلى ملخص",
+      "exampleSha256": "64ad6b5dfc4d42a15f9ff404511006ef483f199b5beb9f67b9ac81cde475c9df",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "js-event-delegation",
+      "topic": "js",
+      "level": "advanced",
+      "title": "مستمع واحد لعناصر تُضاف لاحقًا",
+      "exampleSha256": "626d80e44c82db1209f8665b7629311f31f3576ecf1b7d592ac1db17bfb40896",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "vue-computed-filter",
+      "topic": "vue",
+      "level": "intermediate",
+      "title": "computed: نتيجة مشتقة بدون نسخ الحالة",
+      "exampleSha256": "bb9aaa086b718b41250aaae454a558542c1f2f8f9dce5580f1e1272fdba382db",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "vue-watch-side-effect",
+      "topic": "vue",
+      "level": "intermediate",
+      "title": "watch لأثر جانبي واضح",
+      "exampleSha256": "82dd7c49e25e47f82f8c953a82c2de2c3bcab91c41281c1df13710cbc651d734",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "vue-props-emits",
+      "topic": "vue",
+      "level": "advanced",
+      "title": "المكون يستقبل بيانات ويعلن حدثًا",
+      "exampleSha256": "af8109c4547bd951abf0c8e4c98633085f899beaa48f3fc7a32620e62ca61364",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    },
+    {
+      "id": "vue-keyed-component-state",
+      "topic": "vue",
+      "level": "advanced",
+      "title": "key ثابت يحافظ على هوية المكون",
+      "exampleSha256": "168d14bf44e12efe8d0dea7af80f5315f310b1df5c628f185bf7bb2a5c886b3f",
+      "ui": {
+        "failed": true,
+        "error": "locator.isVisible: Target page, context or browser has been closed"
+      }
+    }
+  ],
+  "legacy": [],
+  "pageErrors": [],
+  "externalRequests": [],
+  "legacySnapshotSha256": "68aeaa20b96109ae4752bb622ed9ab249829f84fde1a2aae807b5df0ec3be176",
+  "fatal": "locator.click: Target page, context or browser has been closed\n    at enter (/workspace/my-progect/scripts/simulator-completion-test-helpers.cjs:6:90)\n    at main (/workspace/my-progect/resume-checks/lessons/walkthrough-wide.cjs:65:7)",
+  "passed": 12,
+  "total": 48
+}

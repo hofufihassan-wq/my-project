@@ -1,0 +1,51 @@
+{
+  "continuous": true,
+  "audioTrack": false,
+  "errors": [],
+  "timeline": [
+    {
+      "section": "Dashboard / emerald",
+      "seconds": 1.205
+    },
+    {
+      "section": "Dictionary",
+      "seconds": 3.355
+    },
+    {
+      "section": "Language badge tracks Vue format",
+      "seconds": 7.925
+    },
+    {
+      "section": "Lessons",
+      "seconds": 9.898
+    },
+    {
+      "section": "CSS Lab",
+      "seconds": 13.995
+    },
+    {
+      "section": "JavaScript Lab",
+      "seconds": 18.349
+    },
+    {
+      "section": "Return home",
+      "seconds": 22.435
+    },
+    {
+      "section": "Projects",
+      "seconds": 23.893
+    },
+    {
+      "section": "Explain",
+      "seconds": 25.714
+    },
+    {
+      "section": "Dashboard / glass",
+      "seconds": 30.218
+    },
+    {
+      "section": "CSS Lab / glass",
+      "seconds": 32.034
+    }
+  ]
+}

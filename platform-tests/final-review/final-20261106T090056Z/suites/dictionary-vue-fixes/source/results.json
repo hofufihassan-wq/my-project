@@ -1,0 +1,277 @@
+{
+  "timestamp": "2026-11-06T09:02:20.520Z",
+  "mode": "source",
+  "browser": "system Chromium",
+  "sourcePatches": [
+    {
+      "id": "vue-computed",
+      "field": 5
+    },
+    {
+      "id": "vue-defineasynccomponent",
+      "field": 5
+    },
+    {
+      "id": "vue-defineexpose",
+      "field": 5
+    },
+    {
+      "id": "vue-nexttick",
+      "field": 5
+    },
+    {
+      "id": "vue-onmounted",
+      "field": 5
+    },
+    {
+      "id": "vue-onunmounted",
+      "field": 5
+    },
+    {
+      "id": "vue-provide_inject",
+      "field": 5
+    },
+    {
+      "id": "vue-reactive",
+      "field": 5
+    },
+    {
+      "id": "vue-shallowref_shallowreactive",
+      "field": 5
+    },
+    {
+      "id": "vue-toref_torefs",
+      "field": 5
+    },
+    {
+      "id": "vue-useslots_useattrs",
+      "field": 5
+    },
+    {
+      "id": "vue-watch_watcheffect",
+      "field": 5
+    },
+    {
+      "id": "vue-watchposteffect",
+      "field": 5
+    },
+    {
+      "id": "js-export_import",
+      "field": 5
+    },
+    {
+      "id": "ts-type_narrowing_guards",
+      "field": 11
+    }
+  ],
+  "passed": 17,
+  "total": 17,
+  "results": [
+    {
+      "name": "vue-computed:vue",
+      "passed": true,
+      "evidence": {
+        "count": 1,
+        "doubled": 2,
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-defineasynccomponent:vue",
+      "passed": true,
+      "evidence": {
+        "asyncComponentCounter": 1,
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-defineexpose:vue",
+      "passed": true,
+      "evidence": {
+        "resetWorked": true,
+        "focusWorked": true,
+        "parentAccess": "not verified: requires external parent context",
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-nexttick:vue",
+      "passed": true,
+      "evidence": {
+        "actualDOMBefore": "0",
+        "actualDOMAfter": "1",
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-onmounted:vue",
+      "passed": true,
+      "evidence": {
+        "actualDOMReadOnMount": "عنصر جاهز",
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-onunmounted:vue",
+      "passed": true,
+      "evidence": {
+        "timerStoppedAt": 1,
+        "waitedAfterRemovalMs": 350,
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-provide_inject:vue",
+      "passed": true,
+      "evidence": {
+        "injectedRefUpdated": "ليان",
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-reactive:vue",
+      "passed": true,
+      "evidence": {
+        "actualCount": 1,
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-shallowref_shallowreactive:vue",
+      "passed": true,
+      "evidence": {
+        "afterNestedMutationDOM": [
+          0,
+          0
+        ],
+        "afterRootReplacementDOM": [
+          2,
+          2
+        ],
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-toref_torefs:vue",
+      "passed": true,
+      "evidence": {
+        "originalStateAndRefs": "ليان: 1",
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-useslots_useattrs:vue",
+      "passed": true,
+      "evidence": {
+        "slotsRendered": [
+          "default",
+          "footer"
+        ],
+        "reactiveAttrsTitle": "عنوان جديد",
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-watch_watcheffect:vue",
+      "passed": true,
+      "evidence": {
+        "effectRunsImmediately": true,
+        "watchedTransition": [
+          0,
+          1
+        ],
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "vue-watchposteffect:vue",
+      "passed": true,
+      "evidence": {
+        "afterPatchDOMEqualsState": [
+          1,
+          1
+        ],
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "js-export_import:vue",
+      "passed": true,
+      "evidence": {
+        "topLevelImportExportCompiled": true,
+        "actualCount": 1,
+        "externalModulesSupported": false,
+        "state": "preview_ready",
+        "logs": []
+      }
+    },
+    {
+      "name": "ts-type_narrowing_guards:vanilla",
+      "passed": true,
+      "evidence": {
+        "actualConsole": [
+          {
+            "type": "log",
+            "msg": "42.86"
+          },
+          {
+            "type": "log",
+            "msg": "VUELEXICON"
+          }
+        ],
+        "state": "preview_ready",
+        "logs": [
+          {
+            "type": "log",
+            "msg": "42.86"
+          },
+          {
+            "type": "log",
+            "msg": "VUELEXICON"
+          }
+        ]
+      }
+    },
+    {
+      "name": "typeof guard: invalid type throws actual TypeError",
+      "passed": true,
+      "evidence": {
+        "logs": [
+          {
+            "type": "error",
+            "msg": "المطلوب نص أو رقم"
+          },
+          {
+            "type": "log",
+            "msg": "42.86"
+          },
+          {
+            "type": "log",
+            "msg": "VUELEXICON"
+          }
+        ]
+      }
+    },
+    {
+      "name": "parent application: no uncaught errors",
+      "passed": true,
+      "evidence": {
+        "errors": []
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,14 @@
+{
+  "passed": 2,
+  "total": 2,
+  "results": [
+    {
+      "name": "actual settings download and confirmed file import restores pilot without running source",
+      "passed": true
+    },
+    {
+      "name": "quota failure warns honestly and retains complete session draft for export",
+      "passed": true
+    }
+  ]
+}

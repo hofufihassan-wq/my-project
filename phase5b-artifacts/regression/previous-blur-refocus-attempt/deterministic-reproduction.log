@@ -1,0 +1,19 @@
+FAIL chromium 360 changing query resets stale keyboard suggestion selection Expected values to be strictly equal:
+
+'WeakMap' !== ''
+
+FAIL chromium 390 changing query resets stale keyboard suggestion selection Expected values to be strictly equal:
+
+'WeakMap' !== ''
+
+FAIL chromium 768 changing query resets stale keyboard suggestion selection Expected values to be strictly equal:
+
+'WeakMap' !== ''
+
+FAIL chromium 1440 changing query resets stale keyboard suggestion selection Expected values to be strictly equal:
+
+'WeakMap' !== ''
+
+UNAVAILABLE firefox browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/firefox-1497/firefox/firefox
+UNAVAILABLE webkit browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/webkit-2227/pw_run.sh
+0/4 stability browser checks passed

@@ -1,0 +1,175 @@
+{
+  "terms": 180,
+  "sources": 360,
+  "counts": {
+    "يحتاج سياقًا": 220,
+    "يعمل": 86,
+    "غير مدعوم": 54
+  },
+  "fingerprintsMatchAllSources": true,
+  "correctedSourceFields": 41,
+  "carriedFromPinnedAudit": 319,
+  "note": "319 source observations carried from actual pinned-source audit,40 corrected sources tested in dedicated suites plusCanvas pixel test. tsconfig reclassifiedunsupportedconfig withsource unchanged.",
+  "updated": [
+    {
+      "id": "css-animation_keyframes",
+      "format": "vue"
+    },
+    {
+      "id": "css-aspect-ratio",
+      "format": "vue"
+    },
+    {
+      "id": "css-background",
+      "format": "vue"
+    },
+    {
+      "id": "css-border_border-radius",
+      "format": "vue"
+    },
+    {
+      "id": "css-box-shadow",
+      "format": "vue"
+    },
+    {
+      "id": "css-color",
+      "format": "vue"
+    },
+    {
+      "id": "css-cursor",
+      "format": "vue"
+    },
+    {
+      "id": "css-display",
+      "format": "vue"
+    },
+    {
+      "id": "css-filter_blur_drop-shadow",
+      "format": "vue"
+    },
+    {
+      "id": "css-flex_flexbox",
+      "format": "vue"
+    },
+    {
+      "id": "css-gap",
+      "format": "vue"
+    },
+    {
+      "id": "css-grid_css_grid",
+      "format": "vue"
+    },
+    {
+      "id": "css-hover_focus",
+      "format": "vue"
+    },
+    {
+      "id": "css-justify-content_align-items",
+      "format": "vue"
+    },
+    {
+      "id": "css-linear-gradient",
+      "format": "vue"
+    },
+    {
+      "id": "css-margin_padding",
+      "format": "vue"
+    },
+    {
+      "id": "css-media",
+      "format": "vue"
+    },
+    {
+      "id": "css-opacity_backdrop-filter",
+      "format": "vue"
+    },
+    {
+      "id": "css-overflow_overflow-x_y",
+      "format": "vue"
+    },
+    {
+      "id": "css-position",
+      "format": "vue"
+    },
+    {
+      "id": "css-scroll-behavior",
+      "format": "vue"
+    },
+    {
+      "id": "css-transform_transition",
+      "format": "vue"
+    },
+    {
+      "id": "css-user-select",
+      "format": "vue"
+    },
+    {
+      "id": "css-width_height",
+      "format": "vue"
+    },
+    {
+      "id": "css-z-index",
+      "format": "vue"
+    },
+    {
+      "id": "vue-computed",
+      "format": "vue"
+    },
+    {
+      "id": "vue-defineasynccomponent",
+      "format": "vue"
+    },
+    {
+      "id": "vue-defineexpose",
+      "format": "vue"
+    },
+    {
+      "id": "vue-nexttick",
+      "format": "vue"
+    },
+    {
+      "id": "vue-onmounted",
+      "format": "vue"
+    },
+    {
+      "id": "vue-onunmounted",
+      "format": "vue"
+    },
+    {
+      "id": "vue-provide_inject",
+      "format": "vue"
+    },
+    {
+      "id": "vue-reactive",
+      "format": "vue"
+    },
+    {
+      "id": "vue-shallowref_shallowreactive",
+      "format": "vue"
+    },
+    {
+      "id": "vue-toref_torefs",
+      "format": "vue"
+    },
+    {
+      "id": "vue-useslots_useattrs",
+      "format": "vue"
+    },
+    {
+      "id": "vue-watch_watcheffect",
+      "format": "vue"
+    },
+    {
+      "id": "vue-watchposteffect",
+      "format": "vue"
+    },
+    {
+      "id": "js-export_import",
+      "format": "vue"
+    },
+    {
+      "id": "ts-type_narrowing_guards",
+      "format": "vanilla"
+    }
+  ]
+}

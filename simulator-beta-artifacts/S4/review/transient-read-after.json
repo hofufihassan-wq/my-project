@@ -1,0 +1,21 @@
+{
+  "initialStatus": "memory",
+  "finalStatus": "protected",
+  "rawIntact": true,
+  "writes": [],
+  "persistedResults": [
+    false,
+    false,
+    false
+  ],
+  "warnings": [
+    "تعذر قراءة إعدادات المحاكي؛ الصوت مكتوم افتراضيًا والتفضيلات لهذه الجلسة فقط.",
+    "لم تُستبدل إعدادات المحاكي الأصلية غير القابلة للاسترجاع؛ التفضيل مؤقت."
+  ],
+  "sessionPreferences": {
+    "version": 1,
+    "muted": false,
+    "volume": 0.5,
+    "animations": false
+  }
+}

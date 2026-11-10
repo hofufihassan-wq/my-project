@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert((await p.getByTestId('tech-editor').inputValue()).includes('INTEGRATED'))\n\n    at /workspace/my-progect/platform-tests/js-lab/integration.cjs:4:1105"
+}

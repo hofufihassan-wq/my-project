@@ -1,0 +1,22 @@
+{
+  "previewRoot": "/tmp/vlex-home-preview-SlA7kc",
+  "authoritativeSourceUnchanged": true,
+  "change": "Only explicit closing tag for already-existing vlex-dashboard component",
+  "restored": {
+    "welcome": 1,
+    "stats": 1,
+    "grid": 1
+  },
+  "headings": [
+    "خطتك اليوم",
+    "مهام اليوم وما تأخر",
+    "المواعيد القادمة",
+    "أهلًا بك في مساحتك ✧",
+    "مساراتك التعليمية",
+    "مساحة التطبيق",
+    "شاهدت مؤخرًا",
+    "صورة عن تعلّمك",
+    "نظّم رحلتك",
+    "خطوة صغيرة كل يوم"
+  ]
+}

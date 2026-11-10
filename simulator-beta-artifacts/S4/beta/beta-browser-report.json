@@ -1,0 +1,440 @@
+{
+  "timestamp": "2026-10-31T05:11:16.888Z",
+  "browser": "154.0.8037.57",
+  "baseline": "1fdd35b",
+  "runtimeHashes": {
+    "app.js": "b1d42f0720b435e3779668e85d36790bd37c8fe8409036f2d3165e2f69ecba00",
+    "index.html": "8683b721a0349b23bea6adaee2db1d0bbf43c2c0659a0727a2e961c039f32864",
+    "simulator-beta.js": "0b6a0302efb4ad94ea45fbfb992f5d7a311b3684644f20738261431d7ba8ab1e",
+    "assets/vendor/manifest.json": "f26e6a14bda58625e00f0c08b043188bb2ffc1d59b21c9d771736f639f497421",
+    "assets/fonts/alexandria/index.css": "eeb5f3219512085794a5ae501b78fc8dccd05e78849f284af18817677d2f42bb",
+    "assets/fonts/jetbrains-mono/index.css": "273f27b590784ce54baaac5975e287e9ccbb0ae7c74ebed1cdb06e3e78104580",
+    "assets/vendor/atom-one-dark-11.9.0.min.css": "4237ffca7ce6aadb438c457e0a675b125c534bbdda5b87f41f3a1495603bcc9b",
+    "assets/tailwind-3.4.17.min.css": "8685dc13ad7f371dc9d53b05f8ebf82cd832a928e21e16e86b1bdf325d3423c7",
+    "styles.css": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce",
+    "identity.css": "467d75013e077e3044adda6eed83e1cb5af50f03f975b4ddae789aef081a2175",
+    "dictionary-correction.css": "dd797342dae2da394ebc09e7bd44ae747a72d1a8cfc5dc4d4dda91cc4a61cd54",
+    "simulator-correction.css": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681",
+    "simulator-reference.css": "0d7c111ab21566d7cbd2507fa221fe6a617bab049be01ab3cf14f60b1ba043ee"
+  },
+  "passed": 30,
+  "total": 30,
+  "protectedFiles": [
+    {
+      "file": "lexicon-data.js",
+      "sha256": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba"
+    },
+    {
+      "file": "practice-curriculum.js",
+      "sha256": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab"
+    },
+    {
+      "file": "progress-data.js",
+      "sha256": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0"
+    },
+    {
+      "file": "preview-runner.js",
+      "sha256": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4"
+    },
+    {
+      "file": "dictionary-preview.js",
+      "sha256": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce"
+    },
+    {
+      "file": "simulator-guides.js",
+      "sha256": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"
+    },
+    {
+      "file": "styles.css",
+      "sha256": "5cf7359e924e4329eb05ce292cc1e264d9a05cb9639e51ada7f6aca2f4286cce"
+    },
+    {
+      "file": "identity.css",
+      "sha256": "467d75013e077e3044adda6eed83e1cb5af50f03f975b4ddae789aef081a2175"
+    },
+    {
+      "file": "dictionary-correction.css",
+      "sha256": "dd797342dae2da394ebc09e7bd44ae747a72d1a8cfc5dc4d4dda91cc4a61cd54"
+    },
+    {
+      "file": "simulator-correction.css",
+      "sha256": "ada8605582e42422bfa3a99dacbe74fd6436619d20fae771e93ce7ddbec55681"
+    },
+    {
+      "file": "package.json",
+      "sha256": "ea39c5a39c5817724f44b77d8f283f15f1ecfa79f40679af9ea534c0dc0dbe70"
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "c4343acf5d610b3e906a2477c4e416951a97f0e1af735f36355004da3f826388"
+    },
+    {
+      "file": "_pristine_backup/app.js",
+      "sha256": "dfdb234804cf580e812d74f1ab444a81c2340bae1c9fdf832a91a2814a58ff26"
+    },
+    {
+      "file": "_pristine_backup/build_full_spa.py",
+      "sha256": "3ad2f1518652ff42206237c5c86874b1d3dce588efd54b8091bc5cdb49c8e838"
+    },
+    {
+      "file": "_pristine_backup/build_full_spa_v2.py",
+      "sha256": "a1e22943e67a93778c57730419aa1c982f9b3529c63645bda09bb056982f04b4"
+    },
+    {
+      "file": "_pristine_backup/build_full_spa_v3.py",
+      "sha256": "52908fd4080dfcc0b2b4ceffeb76d1b9c524d0ae877dda49064fd5ea9b57607a"
+    },
+    {
+      "file": "_pristine_backup/compile_index_v3.py",
+      "sha256": "7f270de1d93142fba9e165a6c0896f661f06a40311cbb95985b00b2cae0f1186"
+    },
+    {
+      "file": "_pristine_backup/index.html",
+      "sha256": "e8f7e5983c8e5e60ee586e4e5cc331dd1883222eb50daf00246a26c299a5b83e"
+    },
+    {
+      "file": "_pristine_backup/lexicon-data.js",
+      "sha256": "853d9ad301b03c6bddcdddbcf7a9de4ab80015527fdfbb82fc814b8f46cb856a"
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_css.py",
+      "sha256": "ef84af16197aca24f305e36cf0e84ef3f3dd9d7cbffd01f1b8ee797a8182a7ad"
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_html.py",
+      "sha256": "103f5652b7b97ca81f06670efec98c81a16f6c446ba12cc4e0e12aac3e76ca9e"
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_js.py",
+      "sha256": "a0e238be90ec8bb4dc4fbe64db320423cf761d77685e2b6393ed5125afb02655"
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_nuxt.py",
+      "sha256": "542535fcfe11d235c995c0b2353ec1b962343fa39c030dc5b76905889045161f"
+    },
+    {
+      "file": "_pristine_backup/lexicon_data_vue.py",
+      "sha256": "b39b22581651b6166562ea972f1a696d75f586de992dc9154363b781233cfec3"
+    },
+    {
+      "file": "_pristine_backup/make_lexicon_data_js.py",
+      "sha256": "5f0d09018dde2d664f7f7d9a378c47358686a5c93fb64d86683d228c8c186947"
+    },
+    {
+      "file": "_pristine_backup/styles.css",
+      "sha256": "8760ace0d2d10a20b9d1aa7a56e6e5d255525e2b3bfa0be783d8dbbe1cd61397"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/10_quiz_and_footer.html",
+      "sha256": "32acb320ace2a21e590420232aafbe8390cfee77b842e4e5135da0d3d16282e0"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/11_app_script.js",
+      "sha256": "90e1342fe36355d51b3200446dc644de2822ea6fb41fdc450fbfcb47f9c921f1"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/1_head_and_styles.html",
+      "sha256": "40cfa43e3c777fccfea8ff480d41f4711b8a8dad6ab59b5c2f580e1ff94735e0"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/2_header_and_nav.html",
+      "sha256": "1505ce5e6d26e8490a3ce40aab709b60e9d5729e00c60a582eb88bed8bc2d440"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/3_search_and_filters.html",
+      "sha256": "070d989395a54300b65c9d1d2cc018f1a839fc78277478717e1a2446642e6376"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/4_master_detail_head.html",
+      "sha256": "f458584a8d11846760e003187fd84ce71f3dfec295ed87ed505ea4eaa3818be3"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/5_css_widgets.html",
+      "sha256": "ea6954cb215872da0e36b492f0e121e8d3d039b85685356b2c0cbc2ad7eb545d"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/6_html_widgets.html",
+      "sha256": "ba458dfe3f253a57dec676d90871cb864e620ed772f21d697fdd48d664d1a439"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/7_js_vue_nuxt_widgets.html",
+      "sha256": "2a51a2d37d35c35a2ae134a43a54cb331ec662c96cb56195d41add7c010fedca"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/8_nuxt_lab.html",
+      "sha256": "13e383b472bbe95b361c2f5719706d3dae8d708718c338472a10a28bd9e21219"
+    },
+    {
+      "file": "_pristine_backup/v3_parts/9_scratchpad_studio.html",
+      "sha256": "55862643472a411e2d46184ad8aad70e695f23131cdd59ea53cf1bd34f481f54"
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/CHANGELOG.md",
+      "sha256": "0e4393482fba97c809a2463f85e966150546dda9925c6bb71d9de544a2dd7b27"
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/README.md",
+      "sha256": "8cd8e50014ce435d63acb73855d830d8af5cdb3b7d6157ec6c97cd0c3d4860da"
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/TEST_REPORT.md",
+      "sha256": "a72b2d951122c3e0da1ec635a1a60d50673e7552c8077c33a59bfc929adcabd8"
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/app.js",
+      "sha256": "e2db26f464c9e7b6634aea3dcc028ee6570dc8edaf704cfa8f355ad97e74aca7"
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/index.html",
+      "sha256": "45d8e5cf26698a5df2669886fcff4897d6e40622cd70fec9be3e5b7a77760e75"
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/lexicon-data.js",
+      "sha256": "4779ccd3a89075a03d40f96d2f30a0818995973e080a454e43bb2d43bce75971"
+    },
+    {
+      "file": "_v3.5_pre_hands_on_backup/styles.css",
+      "sha256": "172b56e8d3e0ddcf59f4b0c727e148d3f26976945732e08893254abed75fef87"
+    }
+  ],
+  "homepageComparisons": [
+    {
+      "width": 1440,
+      "height": 960,
+      "changedPixels": 0
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "changedPixels": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "changedPixels": 0
+    }
+  ],
+  "screenshots": [
+    "screenshots/simulator-1440.png",
+    "screenshots/simulator-768.png",
+    "screenshots/simulator-390.png",
+    "screenshots/simulator-console-390.png",
+    "screenshots/simulator-preview-390.png"
+  ],
+  "network": [
+    {
+      "width": 1440,
+      "height": 960,
+      "seeded": true,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": [
+        "BETA_ACTUAL_ERROR"
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "seeded": true,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "seeded": true,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "seeded": true,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "seeded": false,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "seeded": false,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "seeded": false,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "seeded": false,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "seeded": false,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "seeded": false,
+      "reducedMotion": "reduce",
+      "external": [],
+      "failed": [],
+      "errors": []
+    }
+  ],
+  "results": [
+    {
+      "title": "original engine modules content identifiers storage schema and all backups remain byte-identical",
+      "passed": true
+    },
+    {
+      "title": "entry never runs or mutates a saved null absent or existing draft",
+      "passed": true
+    },
+    {
+      "title": "audio is muted by default and does not create AudioContext before an explicit gesture",
+      "passed": true
+    },
+    {
+      "title": "original reference runs without replacing saved draft and preserves opaque sandbox isolation",
+      "passed": true
+    },
+    {
+      "title": "HTML CSS Console and Result tabs retain the same actual iframe and run identity",
+      "passed": true
+    },
+    {
+      "title": "HTML CSS JavaScript and Vue 3 actually execute within the current supported runtime",
+      "passed": true
+    },
+    {
+      "title": "runtime events and DOM observations report real received signals and interactions",
+      "passed": true
+    },
+    {
+      "title": "actual errors remain errors with a generated-frame location when supplied",
+      "passed": true
+    },
+    {
+      "title": "foreign malformed and stale session messages cannot overwrite real execution evidence",
+      "passed": true
+    },
+    {
+      "title": "stop resets the actual frame and cancels old timer output",
+      "passed": true
+    },
+    {
+      "title": "CSS and JavaScript editor tabs alter only their own real source blocks",
+      "passed": true
+    },
+    {
+      "title": "ambiguous missing and unsupported language blocks remain read-only with an honest reason",
+      "passed": true
+    },
+    {
+      "title": "standalone Vue SFC uses the existing compiler adapter and unsupported TypeScript fails honestly",
+      "passed": true
+    },
+    {
+      "title": "panel hiding focus and keyboard resizing preserve the live iframe and submitted session",
+      "passed": true
+    },
+    {
+      "title": "preview device modes change the actual isolated viewport without remounting",
+      "passed": true
+    },
+    {
+      "title": "motion preference persists and prefers-reduced-motion disables every decorative animation",
+      "passed": true
+    },
+    {
+      "title": "explicit sound preference and volume zero persist while unrelated records remain untouched",
+      "passed": true
+    },
+    {
+      "title": "simulator shortcuts execute and stop without hijacking ordinary code typing",
+      "passed": true
+    },
+    {
+      "title": "audio cannot schedule cues in training or outside the simulator",
+      "passed": true
+    },
+    {
+      "title": "core beta has no external requests failed local assets or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "title": "malformed new preferences preserve original bytes in a separate recovery record",
+      "passed": true
+    },
+    {
+      "title": "unrecoverable malformed simulator preferences remain byte-for-byte intact and block replacement",
+      "passed": true
+    },
+    {
+      "title": "transient preference read failure cannot overwrite an unread original after storage becomes writable",
+      "passed": true
+    },
+    {
+      "title": "1440: accepted homepage is pixel-identical to the initial simulator baseline",
+      "passed": true
+    },
+    {
+      "title": "1440: actual beta screenshots and responsive geometry",
+      "passed": true
+    },
+    {
+      "title": "768: accepted homepage is pixel-identical to the initial simulator baseline",
+      "passed": true
+    },
+    {
+      "title": "768: actual beta screenshots and responsive geometry",
+      "passed": true
+    },
+    {
+      "title": "390: accepted homepage is pixel-identical to the initial simulator baseline",
+      "passed": true
+    },
+    {
+      "title": "390: actual beta screenshots and responsive geometry",
+      "passed": true
+    },
+    {
+      "title": "all runtime source hashes remain unchanged throughout acceptance",
+      "passed": true
+    }
+  ]
+}

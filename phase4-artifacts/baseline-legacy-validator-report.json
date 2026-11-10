@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-10-30T03:34:59.230Z",
+  "guardsLoaded": false,
+  "passed": 2,
+  "total": 10,
+  "results": [
+    {
+      "name": "JS-101 rejects the documented false positive without DOM",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "JS-101 reference source alone cannot claim a rendered result",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "JS-101 ignores unrelated body text and wrong target text",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "JS-101 null/absent evidence is rejected without throwing",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "JS-101 valid isolated target text still accepts the reference fixture",
+      "passed": true
+    },
+    {
+      "name": "TS-101 rejects the documented false positive without DOM",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "TS-101 reference source alone cannot claim a rendered result",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "TS-101 ignores unrelated body text and wrong target text",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "TS-101 null/absent evidence is rejected without throwing",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "TS-101 valid isolated target text still accepts the reference fixture",
+      "passed": true
+    }
+  ]
+}

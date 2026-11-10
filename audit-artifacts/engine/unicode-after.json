@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-31T13:10:37.967Z",
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "Unicode before script",
+      "passed": true
+    },
+    {
+      "name": "Unicode within script",
+      "passed": true
+    },
+    {
+      "name": "Unicode within CSS",
+      "passed": true
+    },
+    {
+      "name": "Repeated expansion and uppercase closing",
+      "passed": true
+    },
+    {
+      "name": "Raw closing boundary remains exact",
+      "passed": true
+    },
+    {
+      "name": "Trailing source is preserved",
+      "passed": true
+    }
+  ]
+}

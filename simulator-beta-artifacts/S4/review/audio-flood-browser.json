@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "browser": "154.0.8037.57",
+  "activation": "Playwright trusted click on a real Chromium document; native AudioContext, no AudioContext substitute.",
+  "burstAttempts": 1000,
+  "burst": {
+    "accepted": 1,
+    "sameKind": {
+      "contextState": "running",
+      "scheduledCues": 1,
+      "activeTones": 1
+    },
+    "mixed": {
+      "contextState": "running",
+      "scheduledCues": 4,
+      "activeTones": 4
+    }
+  },
+  "cleanup": {
+    "later": true,
+    "zero": {
+      "blocked": true,
+      "activeTones": 0
+    },
+    "muted": {
+      "blocked": true,
+      "activeTones": 0
+    },
+    "state": "closed"
+  },
+  "limit": "Browser graph lifecycle and scheduling assertions. No microphone/capture/upload was used; this is not an execution timing benchmark or an audible quality assessment."
+}

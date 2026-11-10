@@ -1,0 +1,92 @@
+PASS approved audio module engine protocol progress schema content and backups remain byte-identical
+PASS fresh activity is empty without fake attempts donut chart or execution duration
+PASS every graph node explains a real source frame ready DOM or error signal
+PASS drag editor height changes real geometry with glass feedback and keeps the running iframe
+PASS desktop column drag changes its share without editing or rerunning source
+PASS preview and Console drag plus accessible keyboard bounds change only panel sizes
+PASS resize buttons and ranges provide non-drag alternatives and preserve frame identity
+PASS custom viewport applies exact CSS dimensions and invalid input leaves them unchanged
+PASS zoom fit and reset alter only outer presentation never user CSS or viewport source
+PASS device controls produce real tablet and mobile widths without iframe remount
+FAIL hide expand restore and focus retain the same live session and expose useful controls Expected values to be strictly equal:
+
+true !== false
+
+FAIL only actual ready/error events change attempt counts and no variable paths are invented locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.final-error-node')[22m
+[2m    - locator resolved to <button data-stage="error" data-state="error" aria-pressed="false" class="tech-flow-node final-error-node">…</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+PASS late real errors reclassify a ready attempt without counting it twice
+PASS forged messages cannot alter either graph branch or statistics
+FAIL motion is tied to new actual signals and becomes static when effects are disabled locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.final-event-pulse').first() to be visible[22m
+[2m    64 × locator resolved to hidden <path class="tech-flow-spine-pulse final-event-pulse" d="M180 40V118M180 141H93Q67 141 67 180V235M67 262V287Q67 307 100 307H149Q180 307 180 331"></path>[22m
+
+FAIL lesson JS-101 native navigation hints draft reference and preview remain functional locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('beta-language-source')[22m
+[2m    - locator resolved to <button role="tab" aria-selected="true" data-testid="beta-language-source">HTML / المصدر</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+FAIL lesson JS-102 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for getByTestId('beta-language-source')[22m
+[2m    - locator resolved to <button role="tab" aria-selected="true" data-testid="beta-language-source">HTML / المصدر</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    50 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+FAIL lesson JS-103 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson HTML-101 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson HTML-102 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson HTML-103 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson CSS-101 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson CSS-102 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson CSS-103 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson TS-101 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson TS-102 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson TS-103 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson VUE-101 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson VUE-102 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL lesson VUE-103 native navigation hints draft reference and preview remain functional locator.click: Target page, context or browser has been closed
+FAIL all fifteen edited drafts survive reload without automatic execution page.reload: Target page, context or browser has been closed
+browser.newContext: Target page, context or browser has been closed
+    at async context (/workspace/my-progect/run_simulator_final_browser_tests.js:8:51)
+    at async main (/workspace/my-progect/run_simulator_final_browser_tests.js:33:46)

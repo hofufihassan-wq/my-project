@@ -1,0 +1,139 @@
+{
+  "generated_at_utc": "2026-11-07T10:48:59.752944+00:00",
+  "result": "No credential findings detected within the documented scope; no absolute absence guarantee.",
+  "upload_privacy_gate": "Not verified by this scan. Parent must verify repository Private before any upload.",
+  "repository": "/workspace/my-progect",
+  "branch": "feat/vlex-personal-learning-platform",
+  "commit": "1cf220c506a132ae1a43a78f3cb508ee394a48c6",
+  "git_status_before": "",
+  "git_status_after": "",
+  "checkout_unchanged": true,
+  "scanner": {
+    "name": "Gitleaks",
+    "version": "8.24.3",
+    "official_release_sha256_verified": true,
+    "official_release_archive_sha256": "9991e0b2903da4c8f6122b5c3186448b927a5da4deef1fe45271c3793f4ee29c",
+    "config": "Explicit useDefault=true, built-in rule set/allowlists, no project config/ignore files, ignore-gitleaks-allow=true, max-decode-depth=3, redact=100",
+    "results": {
+      "git_history": {
+        "exit_code": 0,
+        "seconds": 7.51,
+        "finding_count": 0
+      },
+      "all_unique_blobs": {
+        "exit_code": 0,
+        "seconds": 13.9,
+        "finding_count": 0
+      },
+      "all_archives": {
+        "exit_code": 0,
+        "seconds": 2.48,
+        "finding_count": 0
+      },
+      "commit_messages": {
+        "exit_code": 0,
+        "seconds": 0.97,
+        "finding_count": 0
+      }
+    },
+    "ocr_result": {
+      "gitleaks_exit_code": 0,
+      "gitleaks_finding_count": 0,
+      "gitleaks_findings": [],
+      "supplemental_finding_count": 0,
+      "supplemental_findings": [],
+      "ocr_bytes": 781865
+    }
+  },
+  "coverage": {
+    "local_refs": [
+      "refs/heads/audit/independent-3d4575a",
+      "refs/heads/feat/vlex-personal-learning-platform",
+      "refs/heads/work",
+      "refs/remotes/origin/main"
+    ],
+    "local_ref_count": 4,
+    "reachable_commits": 39,
+    "commits_with_scannable_default_diffs": 35,
+    "commits_without_default_diff": [
+      "ba5b9fd5b4c397d31f43f57f7d230b364215f44a",
+      "0cc50edd1c754b7fbafacfa5d1c82ef7928669d4",
+      "4a669de566447f3ef2742b2cf2f8dd80edf01510",
+      "7889340a960306c39e26b7359c7b2be2ad280c16"
+    ],
+    "commit_metadata_and_messages_scanned": 39,
+    "unique_git_blobs": 1659,
+    "unique_blob_bytes": 412797501,
+    "text_blobs": 1038,
+    "text_blob_bytes": 28507891,
+    "binary_blobs": 621,
+    "current_tracked_files": 2323,
+    "all_unique_blobs_supplied_to_scanner": true,
+    "all_current_files_regular_100644": true,
+    "zip_path": "delivery/VLex-Pro-Windows.zip",
+    "zip_sha256": "7b079cc65e22aeeff386ca69e1c25c3c5b88ca5e55e91eda553aca85de0b5e3d",
+    "zip_files": 121,
+    "zip_original_backup_entries": 32,
+    "archives_found_and_expanded": 1,
+    "archive_errors": [],
+    "source_commit_metadata_zip_supplemental_regex_sources": 1198,
+    "historical_commit_trees_checked": 39,
+    "historical_unique_paths": 2324,
+    "historical_paths_sensitive_filename_findings": [],
+    "gitlink_paths": 0,
+    "symlink_paths": 0
+  },
+  "supplemental_screening": {
+    "rules": [
+      "literal credential/password assignments, including low-entropy strings",
+      "HTTP basic-auth user-info URL",
+      "private key markers",
+      "JWT literals",
+      "cloud credential identifiers"
+    ],
+    "finding_count": 0,
+    "sensitive_filename_candidates": [],
+    "matches": []
+  },
+  "media_ocr": {
+    "ocr_engine": "tesseract 5.5.0",
+    "languages": [
+      "eng",
+      "osd"
+    ],
+    "language_used": "eng",
+    "parallel_workers": 4,
+    "per_pending_file_timeout_seconds": 30,
+    "png_count": 552,
+    "visual_video_count": 53,
+    "audio_only_count": 5,
+    "videos_count": 58,
+    "video_frame_count": 157,
+    "sampling": "3 frames (first/middle/near end) from52 videos; first frame from1 durationless video;5 audio-only files have no frames",
+    "success_count": 709,
+    "failure_count": 0,
+    "resume_seconds": 56.28
+  },
+  "false_positive_or_public_metadata_review": {
+    "credential_rule_findings": 0,
+    "example_test_email_occurrences": 89,
+    "public_vendor_attribution_email_occurrences": 2,
+    "public_vendor_paths": [
+      "assets/vendor/compiler-sfc-3.4.21.esm-browser.js",
+      "assets/vendor/compiler-sfc-3.4.21.global.min.js"
+    ],
+    "classification": "Public upstream @author attribution; not an authentication secret. Values intentionally omitted.",
+    "ordinary_git_author_committer_identity_count": 4,
+    "git_identity_handling": "Conventional Git authorship identities retained; values omitted from the report. No history edits."
+  },
+  "limitations": [
+    "Only local reachable refs and the upload branch ancestry were inspected. Remote branches not fetched locally, unreachable Git objects/reflogs, and remote release attachments were not inspected.",
+    "Credential rules and supplemental patterns do not prove absence of every possible secret or personal detail.",
+    "OCR used English (eng); Arabic personal text was not comprehensively recognized. OCR may miss small, obscured, wrapped, or imperfect text.",
+    "Video sampling: first/middle/near-end frames of52 visual videos and first frame of1 durationless visual video. Other frames were not inspected.",
+    "Five audio-only WEBM files were not transcribed; spoken sensitive information was not assessed.",
+    "Ten WOFF2 font binaries and binary semantic/steganographic content were not comprehensively inspected.",
+    "No actual external credential stores or environment values were read. The scan made no repository source, Git history, branch, or ZIP changes."
+  ],
+  "artifacts_policy": "Sanitized report only outside checkout. Raw temporary scan outputs remain restricted under /tmp/vlex-security-review; no credential values are emitted."
+}

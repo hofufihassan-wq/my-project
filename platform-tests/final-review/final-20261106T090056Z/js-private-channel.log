@@ -1,0 +1,2 @@
+PASS nested bootstrap clone cannot forge log or an existing declared variable
+PASS normal console and observation survive private telemetry; global spoof ignored

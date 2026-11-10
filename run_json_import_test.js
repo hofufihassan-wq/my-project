@@ -5,6 +5,7 @@ const lexiconCode = fs.readFileSync('lexicon-data.js', 'utf8');
 const curCode = fs.readFileSync('practice-curriculum.js', 'utf8');
 const progressDataCode = fs.readFileSync('progress-data.js', 'utf8');
 const previewRunnerCode = fs.readFileSync('preview-runner.js', 'utf8');
+const betaCode = fs.readFileSync('simulator-beta.js', 'utf8');
 const appCode = fs.readFileSync('app.js', 'utf8');
 
 const storage = {};
@@ -52,6 +53,7 @@ vm.runInContext(lexiconCode, context);
 vm.runInContext(curCode, context);
 vm.runInContext(progressDataCode, context);
 vm.runInContext(previewRunnerCode, context);
+vm.runInContext(betaCode, context);
 vm.runInContext(appCode, context);
 
 const setupScope = mockWindow.vueApp;

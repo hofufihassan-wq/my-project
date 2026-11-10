@@ -1,0 +1,20 @@
+PASS simulator entry exists and preserves 180 terms and 15 examples
+PASS all 15 examples open even with locked historical status; navigation changes no historical records
+PASS previous and next example navigation needs no success grade
+PASS reference display is read-only and does not replace editor or saved draft
+PASS running reference submits a separate session while retaining original draft and historical status
+PASS manual editing keeps reference preview unchanged until draft run; empty draft survives navigation
+PASS sandbox, debounce and old-session message rejection remain active in simulator
+PASS reference and snapshot evidence resets on changing example
+PASS Vue reference is interactive and observations follow real button events without replacing draft
+FAIL lexicon example runs separately and cannot overwrite any lesson draft or historical status page.waitForFunction: Timeout 30000ms exceeded.
+PASS export includes original historical statuses and independently edited drafts
+PASS reload preserves drafts and changing sections cannot fire pending automatic run
+PASS imported active draft replaces editor only after commit; edit save reopen and reload preserve every other draft
+PASS empty and null imported drafts synchronize without rewriting their stored representation
+PASS status-only and other-lesson imports leave the active editor and preview untouched
+PASS rejected import and failed persistence cannot alter editor or current session
+PASS import invalidates reference and pending auto run without executing imported source
+PASS async file completion respects lesson selected at completion time
+PASS no application page errors in simulator checks
+18/19 simulator browser checks passed

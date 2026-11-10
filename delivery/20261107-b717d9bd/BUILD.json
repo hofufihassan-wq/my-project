@@ -1,0 +1,18 @@
+{
+  "source_commit": "b717d9bda1e62a57f047a32fac0ca2148c76aa69",
+  "source_branch": "feat/vlex-personal-learning-platform",
+  "source_clean": true,
+  "uploaded": false,
+  "deployed": false,
+  "native_windows_cmd_tested": false,
+  "packages": {
+    "VLex-Pro-Windows-b717d9bd.zip": {
+      "sha256": "18d575831844d4a96681da2affb4ac3c3238fbc1b98bca4e534503074a423249",
+      "bytes": 1958447
+    },
+    "VLex-Pro-static-b717d9bd.zip": {
+      "sha256": "6ada1bc375230b13d9bce9e8e844cdda458e27c98d0f7a2a35c4503c9e8792c0",
+      "bytes": 1275999
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "base": "f1d42608165af70c0ffa3d5ec82338905de0b8fe",
+  "branch": "feat/vlex-emerald-ui",
+  "phase": 1,
+  "tests": {
+    "platform": [
+      30,
+      30
+    ],
+    "dashboard": [
+      29,
+      29
+    ],
+    "scope": [
+      10,
+      10
+    ]
+  },
+  "protected_files": {
+    "app.js": true,
+    "learning-store.js": true,
+    "lexicon-data.js": true,
+    "practice-curriculum.js": true,
+    "preview-runner.js": true,
+    "dictionary-preview.js": true,
+    "simulator-beta.js": true,
+    "simulator-final.css": true,
+    "simulator-reference.css": true,
+    "simulator-correction.css": true,
+    "learning-course.js": true,
+    "learning-course-advanced.js": true,
+    "learning-explainer.js": true,
+    "learning-css-lab.js": true,
+    "learning-js-lab.js": true
+  },
+  "source_boundaries": {
+    "reference_files_unchanged": true,
+    "organizer_section_unchanged": true,
+    "shared_storage_logic_unchanged": true
+  },
+  "baseline_notes": [
+    "Historical simulator hash assertion still targets 5d05acf; no changes to that test or simulator files.",
+    "Concurrent Grid fluctuation existed in baseline; current full regression passed 25/25 without retries.",
+    "Browserslist caniuse-lite warning unchanged."
+  ],
+  "screenshots_fixture": "Synthetic demonstration data in new isolated browser contexts only; no product or user data is seeded.",
+  "paid_services": false,
+  "published": false
+}

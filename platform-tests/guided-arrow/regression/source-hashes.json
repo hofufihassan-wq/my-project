@@ -1,0 +1,35 @@
+{
+  "app.js": {
+    "source": "c586d517c8d8b64dab695df3db931d307db57567bf346dbdab403c6403477068",
+    "snapshot": "c586d517c8d8b64dab695df3db931d307db57567bf346dbdab403c6403477068"
+  },
+  "index.html": {
+    "source": "06b449227c72e546c48411b36a2423a6228005fce894c51491058f41b9d7e930",
+    "snapshot": "06b449227c72e546c48411b36a2423a6228005fce894c51491058f41b9d7e930"
+  },
+  "guided-arrow.js": {
+    "source": "32d30c8a846acab3bca9e49e618938e06007f65aa442967fc6b5b8e3c7ece63e",
+    "snapshot": "32d30c8a846acab3bca9e49e618938e06007f65aa442967fc6b5b8e3c7ece63e"
+  },
+  "guided-arrow-content.js": {
+    "source": "0324d8a9da6a84df878c7ecaae577551f0deab60cef4cef3c7e9cd321f9ccfca",
+    "snapshot": "0324d8a9da6a84df878c7ecaae577551f0deab60cef4cef3c7e9cd321f9ccfca"
+  },
+  "guided-arrow-evaluator.js": {
+    "source": "9aa48d86a6d2782657104d0a2a86921527775ac17f956e380041a6a19b63f40a",
+    "snapshot": "9aa48d86a6d2782657104d0a2a86921527775ac17f956e380041a6a19b63f40a"
+  },
+  "guided-arrow.css": {
+    "source": "b78c01b46147a624584e9dab43b632d524b0bd10b84845ad754d964a22e3126a",
+    "snapshot": "b78c01b46147a624584e9dab43b632d524b0bd10b84845ad754d964a22e3126a"
+  },
+  "learning-store.js": {
+    "source": "9283883f1eb89ff3e205ed98f17567e44382e67b1887b1a9ce4b2e71f7a7b6a5",
+    "snapshot": "9283883f1eb89ff3e205ed98f17567e44382e67b1887b1a9ce4b2e71f7a7b6a5"
+  },
+  "lexicon-data.js": {
+    "source": "3d0e63c82e5cef4f2f4d269aaee039b82318b977f956325e80506d6b593db05a",
+    "snapshot": "3d0e63c82e5cef4f2f4d269aaee039b82318b977f956325e80506d6b593db05a"
+  },
+  "allMatch": true
+}

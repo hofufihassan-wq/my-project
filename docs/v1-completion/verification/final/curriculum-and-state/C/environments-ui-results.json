@@ -1,0 +1,35 @@
+{
+  "passed": 7,
+  "total": 7,
+  "tests": [
+    {
+      "name": "real lesson trial storage persists as isolated lesson data without modifying app preference keys",
+      "passed": true
+    },
+    {
+      "name": "whole browser restart retains source and private exercise storage",
+      "passed": true
+    },
+    {
+      "name": "module, Fetch and storage simulator limits explain missing context and do not transfer unsupported code",
+      "passed": true
+    },
+    {
+      "name": "DOM simulator transfer supplies its real fixture and setup call then returns without loss",
+      "passed": true
+    },
+    {
+      "name": "DOM edited script and external resource injection stay out of app and preview requests",
+      "passed": true
+    },
+    {
+      "name": "snapshot backup includes private lesson storage and the new data validates",
+      "passed": true
+    },
+    {
+      "name": "no parent errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,42 @@
+PASS educational sources, engine modules, dictionary styles and all original backups match baseline
+FAIL accepted homepage section and simulator submission/message handling remain unchanged     function submitSimulatorCode(
++ actual - expected
+... Skipped lines
+
+  '    function submitSimulatorCode(code, kind, example = null) {\n' +
+    '      cancelAutoRun();\n' +
+    '      clearRunEvidence();\n' +
++   "      if (activeRun.value) recordTechRunEvent('invalidated', activeRun.value, 'بدأ طلب تشغيل جديد؛ لن تُقبل رسائل الجلسة السابقة.');\n" +
++   '      techLatestError.value = null;\n' +
+    '      activeRun.value = null; // Invalidate the old session before replacing its frame.\n' +
+    '      practiceLogs.value = [];\n' +
+    "      if (!currentLesson.value || typeof code !== 'string') return;\n" +
+    '      if (window.VueLexiconData.bytes(code) > window.VueLexiconData.MAX_DRAFT_BYTES) {\n' +
+    '        stopPracticeExecution();\n' +
++   "        recordTechRunEvent('rejected', null, 'تجاوز النص حد التشغيل؛ لم يُرسل ولم يُقص.');\n" +
+    "        triggerToast('المسودة أكبر من حد التشغيل. لم تُقص؛ احتفظ بنسخة منها.', 'error');\n" +
+    '        return;\n' +
+    '      }\n' +
+    '      const session = {\n' +
+    "        runId: String(Date.now()) + '-' + (++runSequence) + '-' + Math.random().toString(36).slice(2),\n" +
+...
+    "      executionState.value = 'running';\n" +
++   "      recordTechRunEvent('submitted', session, kind === 'reference' ? 'أُرسل المثال المرجعي دون استبدال المسودة.' : 'أُرسلت نسخة المسودة الحالية؛ تشغيلها داخل الإطار فقط.');\n" +
+    "      addPracticeLog('info', kind === 'reference' ? 'تعمل معاينة المثال المرجعي؛ مسودتك لم تتغير.' : 'أُرسلت نسخة مسودتك الحالية إلى إطار معزول جديد.');\n" +
+    '    }\n' +
+    '\n'
+
+PASS manual simulator entry preserves null, absent and stored drafts without running them
+PASS original reference actually runs in an opaque iframe while all drafts remain unchanged
+PASS preview HTML CSS and Console tools switch without recreating or rerunning the live frame
+PASS editor, organized Console, central decoration and live preview have the requested desktop geometry
+PASS syntax overlay preserves complete editor text and scroll alignment
+PASS manual edit saves only its selected lesson and does not silently execute the draft
+PASS forged and stale-source messages cannot change actual simulator evidence
+PASS stop invalidates the session and replaces its frame while retaining the saved draft
+PASS all seeded runtime checks use only local assets without failed requests or uncaught exceptions
+PASS approved homepage remains pixel-identical at 1440px
+PASS delivery screenshot is an actual 1440px browser page with a real running original reference and empty user storage
+PASS reduced-motion mode suppresses decorative animation without changing the running session
+PASS verification leaves source and protected files unchanged
+14/15 tech simulator checks passed

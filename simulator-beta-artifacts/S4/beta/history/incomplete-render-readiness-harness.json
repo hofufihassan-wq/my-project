@@ -1,0 +1,25 @@
+{
+  "status": "Incomplete harness attempt; not accepted as a success report",
+  "sourceRuntimeEdits": false,
+  "failures": [
+    {
+      "test": "runtime events DOM click",
+      "observed": "outputText remained before after click in a run awaiting model state only; diagnostic state retained preview_ready, old snapshot and valid session",
+      "followUp": "A filtered real pointer click with one browser evaluation between readiness and click passed; readiness helper now waits two animation frames for parent Vue layout before pointer interactions."
+    },
+    {
+      "test": "standalone SFC click",
+      "observed": "button 0 to 1 wait timed out in the same model-only readiness run",
+      "followUp": "Repeat actual pointer click after rendered layout settles; no programmatic event replacement."
+    },
+    {
+      "test": "runtime hash final",
+      "observed": "runtimeHashes was not defined due a failed text insertion into work harness",
+      "followUp": "Added the actual runtimeHashes declaration before launching the final acceptance."
+    }
+  ],
+  "retainedEvidence": [
+    "beta-initial-expected-error-harness/beta-browser-report.json",
+    "dom-pointer-repro/beta-browser-report.json"
+  ]
+}

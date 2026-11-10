@@ -1,0 +1,288 @@
+{
+  "timestamp": "2026-10-30T10:39:51.614Z",
+  "browser": {
+    "engine": "chromium",
+    "version": "154.0.8037.57"
+  },
+  "otherBrowsers": "Not exercised by this runner; no Firefox, WebKit or Safari claim.",
+  "screenshotData": "Separate clean contexts; no seeded records or fictitious user statistics.",
+  "protectedHashes": {
+    "lexicon-data.js": "aa0e5a8cfb73e41887badf7f79cd2ab2c2641ec34bede05a4481278beaae60ba",
+    "practice-curriculum.js": "ab16ad9a3a033144ea174a1075f1f6d0167c306a758c15b02a14dc325fc403ab",
+    "progress-data.js": "5114f319eb632d233eab3f20b69b285b03b7a6c5696af3d462281e858cf00ee0",
+    "preview-runner.js": "52bd5f36cc9954d497e6bf97e7d9802641d7352ffb76ffcb191f696cf80113e4",
+    "dictionary-preview.js": "ff895464344239c0e298c25e1f1be178a897d38b64aa19780073884e5b0153ce",
+    "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"
+  },
+  "passed": 16,
+  "total": 28,
+  "screenshots": [
+    "screenshots/dashboard-desktop.png",
+    "screenshots/dictionary-desktop.png",
+    "screenshots/simulator-desktop.png",
+    "screenshots/dashboard-light-desktop.png",
+    "screenshots/dictionary-light-desktop.png",
+    "screenshots/dashboard-purple-desktop.png",
+    "screenshots/dictionary-purple-desktop.png",
+    "screenshots/dashboard-mobile.png",
+    "screenshots/dictionary-mobile.png",
+    "screenshots/simulator-mobile.png",
+    "screenshots/dashboard-tablet.png",
+    "screenshots/dictionary-tablet.png",
+    "screenshots/simulator-tablet.png"
+  ],
+  "networkEvidence": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 740
+      },
+      "seeded": true,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seeded": true,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "seeded": true,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "seeded": true,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "seeded": false,
+      "externalRequests": [],
+      "failedRequests": [],
+      "uncaughtErrors": []
+    }
+  ],
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "dashboard starts in RTL with actual dictionary and lesson counts",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    unrelated_application_sentinel: 'must remain byte-for-byte intact',\n    vuelexicon_bookmarks_v3: '[\"js-arrow_function\",\"js-bind_call_apply\"]',\n    vuelexicon_mastery_v3: '{\"js-arrow_function\":\"learning\",\"js-bind_call_apply\":\"mastered\"}',\n+   vuelexicon_practice_progress: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}',\n-   vuelexicon_practice_progress: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"locked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}',\n    vuelexicon_recent_v3: '[\"js-bind_call_apply\",\"js-arrow_function\"]',\n    vuelexicon_recovery_phase5b_sentinel: '{\"raw\":\"نسخة أصلية محفوظة؛ لا تُستبدل\"}',\n+   vuelexicon_recovery_vuelexicon_practice_progress_1793356775618_1: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"locked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}'\n  }\n\n    at /workspace/my-progect/run_phase5b_browser_tests.js:139:14\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:135:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "navigation and all three session themes preserve saved data and educational content",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'petroleum'\n\n    at /workspace/my-progect/run_phase5b_browser_tests.js:146:16\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:142:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "manual simulator reference preserves every null, absent and stored draft; theme CSS stays outside iframe",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"label\":\"2\",\"left\":-298.28125,\"right\":27}\n    at geometry (/workspace/my-progect/run_phase5b_browser_tests.js:74:41)\n    at async /workspace/my-progect/run_phase5b_browser_tests.js:182:7\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:160:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "foreign window and unknown-source messages cannot overwrite simulator state",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "returning to dashboard and reload retain bookmarks mastery history backups and all drafts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 360,
+      "title": "core application uses local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "dashboard starts in RTL with actual dictionary and lesson counts",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    unrelated_application_sentinel: 'must remain byte-for-byte intact',\n    vuelexicon_bookmarks_v3: '[\"js-arrow_function\",\"js-bind_call_apply\"]',\n    vuelexicon_mastery_v3: '{\"js-arrow_function\":\"learning\",\"js-bind_call_apply\":\"mastered\"}',\n+   vuelexicon_practice_progress: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}',\n-   vuelexicon_practice_progress: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"locked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}',\n    vuelexicon_recent_v3: '[\"js-bind_call_apply\",\"js-arrow_function\"]',\n    vuelexicon_recovery_phase5b_sentinel: '{\"raw\":\"نسخة أصلية محفوظة؛ لا تُستبدل\"}',\n+   vuelexicon_recovery_vuelexicon_practice_progress_1793356778049_1: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"locked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}'\n  }\n\n    at /workspace/my-progect/run_phase5b_browser_tests.js:139:14\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:135:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "navigation and all three session themes preserve saved data and educational content",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'petroleum'\n\n    at /workspace/my-progect/run_phase5b_browser_tests.js:146:16\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:142:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "manual simulator reference preserves every null, absent and stored draft; theme CSS stays outside iframe",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"label\":\"2\",\"left\":-268.28125,\"right\":57}\n    at geometry (/workspace/my-progect/run_phase5b_browser_tests.js:74:41)\n    at async /workspace/my-progect/run_phase5b_browser_tests.js:182:7\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:160:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "foreign window and unknown-source messages cannot overwrite simulator state",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "returning to dashboard and reload retain bookmarks mastery history backups and all drafts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "core application uses local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "dashboard starts in RTL with actual dictionary and lesson counts",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    unrelated_application_sentinel: 'must remain byte-for-byte intact',\n    vuelexicon_bookmarks_v3: '[\"js-arrow_function\",\"js-bind_call_apply\"]',\n    vuelexicon_mastery_v3: '{\"js-arrow_function\":\"learning\",\"js-bind_call_apply\":\"mastered\"}',\n+   vuelexicon_practice_progress: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}',\n-   vuelexicon_practice_progress: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"locked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}',\n    vuelexicon_recent_v3: '[\"js-bind_call_apply\",\"js-arrow_function\"]',\n    vuelexicon_recovery_phase5b_sentinel: '{\"raw\":\"نسخة أصلية محفوظة؛ لا تُستبدل\"}',\n+   vuelexicon_recovery_vuelexicon_practice_progress_1793356780334_1: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"locked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}'\n  }\n\n    at /workspace/my-progect/run_phase5b_browser_tests.js:139:14\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:135:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "navigation and all three session themes preserve saved data and educational content",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'petroleum'\n\n    at /workspace/my-progect/run_phase5b_browser_tests.js:146:16\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:142:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "manual simulator reference preserves every null, absent and stored draft; theme CSS stays outside iframe",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"label\":\"2\",\"left\":-78.90625,\"right\":252.96875}\n    at geometry (/workspace/my-progect/run_phase5b_browser_tests.js:74:41)\n    at async /workspace/my-progect/run_phase5b_browser_tests.js:182:7\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:160:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "foreign window and unknown-source messages cannot overwrite simulator state",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "returning to dashboard and reload retain bookmarks mastery history backups and all drafts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "core application uses local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "dashboard starts in RTL with actual dictionary and lesson counts",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    unrelated_application_sentinel: 'must remain byte-for-byte intact',\n    vuelexicon_bookmarks_v3: '[\"js-arrow_function\",\"js-bind_call_apply\"]',\n    vuelexicon_mastery_v3: '{\"js-arrow_function\":\"learning\",\"js-bind_call_apply\":\"mastered\"}',\n+   vuelexicon_practice_progress: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}',\n-   vuelexicon_practice_progress: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"locked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}',\n    vuelexicon_recent_v3: '[\"js-bind_call_apply\",\"js-arrow_function\"]',\n    vuelexicon_recovery_phase5b_sentinel: '{\"raw\":\"نسخة أصلية محفوظة؛ لا تُستبدل\"}',\n+   vuelexicon_recovery_vuelexicon_practice_progress_1793356782652_1: '{\"JS-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-JS-102\\\\\">مسودة محفوظة JS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"JS-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-101\":{\"status\":\"locked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-102\":{\"status\":\"unlocked\",\"codeDraft\":\"<p id=\\\\\"saved-HTML-102\\\\\">مسودة محفوظة HTML-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"HTML-103\":{\"status\":\"passed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-101\":{\"status\":\"solution_viewed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-102\":{\"status\":\"locked\",\"codeDraft\":\"<p id=\\\\\"saved-CSS-102\\\\\">مسودة محفوظة CSS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"CSS-103\":{\"status\":\"unlocked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-101\":{\"status\":\"passed\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-102\":{\"status\":\"solution_viewed\",\"codeDraft\":\"<p id=\\\\\"saved-TS-102\\\\\">مسودة محفوظة TS-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"TS-103\":{\"status\":\"locked\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-101\":{\"status\":\"unlocked\",\"codeDraft\":null,\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-102\":{\"status\":\"passed\",\"codeDraft\":\"<p id=\\\\\"saved-VUE-102\\\\\">مسودة محفوظة VUE-102</p>\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"},\"VUE-103\":{\"status\":\"solution_viewed\",\"updatedAt\":\"2026-10-29T06:00:00.000Z\"}}'\n  }\n\n    at /workspace/my-progect/run_phase5b_browser_tests.js:139:14\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:135:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "navigation and all three session themes preserve saved data and educational content",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'petroleum'\n\n    at /workspace/my-progect/run_phase5b_browser_tests.js:146:16\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:142:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "manual simulator reference preserves every null, absent and stored draft; theme CSS stays outside iframe",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"label\":\"تعلّمي والنسخ الاحتياطي\",\"left\":-246.90625,\"right\":73.09375}\n    at geometry (/workspace/my-progect/run_phase5b_browser_tests.js:74:41)\n    at async /workspace/my-progect/run_phase5b_browser_tests.js:182:7\n    at async test (/workspace/my-progect/run_phase5b_browser_tests.js:86:5)\n    at async main (/workspace/my-progect/run_phase5b_browser_tests.js:160:5)"
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "foreign window and unknown-source messages cannot overwrite simulator state",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "returning to dashboard and reload retain bookmarks mastery history backups and all drafts",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "core application uses local assets without failed requests or uncaught exceptions",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "title": "desktop clean-context dashboard dictionary and simulator screenshots",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "title": "mobile clean-context dashboard dictionary and simulator screenshots",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "title": "tablet clean-context dashboard dictionary and simulator screenshots",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": null,
+      "title": "educational sources and isolated execution modules remain unchanged during verification",
+      "passed": true
+    }
+  ]
+}

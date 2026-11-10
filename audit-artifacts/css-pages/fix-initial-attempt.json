@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-10-31T13:14:36.493Z",
+  "results": [
+    {
+      "name": "background palette changes actual background, color palette changes actual foreground",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'rgb(56, 189, 248)'\n- 'rgb(236, 72, 153)'\n       ^\n\n    at /workspace/my-progect/audit-artifacts/css-pages/verify-css-fixes.cjs:9:737\n    at async test (/workspace/my-progect/audit-artifacts/css-pages/verify-css-fixes.cjs:8:47)\n    at async main (/workspace/my-progect/audit-artifacts/css-pages/verify-css-fixes.cjs:9:1)"
+    },
+    {
+      "name": "all four aspect ratios determine rendered geometry",
+      "passed": true,
+      "detail": [
+        {
+          "ratio": "16 / 9",
+          "width": 256,
+          "height": 144
+        },
+        {
+          "ratio": "4 / 3",
+          "width": 256,
+          "height": 192
+        },
+        {
+          "ratio": "1 / 1",
+          "width": 256,
+          "height": 256
+        },
+        {
+          "ratio": "21 / 9",
+          "width": 256,
+          "height": 109.703125
+        }
+      ]
+    },
+    {
+      "name": "backdrop-filter label emits valid CSS and actual blur changes",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'blur(12px)'\n- 'blur(17px)'\n         ^\n\n    at /workspace/my-progect/audit-artifacts/css-pages/verify-css-fixes.cjs:11:597\n    at async test (/workspace/my-progect/audit-artifacts/css-pages/verify-css-fixes.cjs:8:47)\n    at async main (/workspace/my-progect/audit-artifacts/css-pages/verify-css-fixes.cjs:11:1)"
+    },
+    {
+      "name": "all 21 distinct native CSS controls have an accessible name",
+      "passed": true,
+      "detail": [
+        {
+          "type": "css_color",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "type": "color",
+              "name": "لون النص أو الخلفية"
+            }
+          ]
+        },
+        {
+          "type": "css_opacity_blur",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "نسبة الشفافية"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "ضبابية الخلفية بالبكسل"
+            }
+          ]
+        },
+        {
+          "type": "css_flexbox",
+          "controls": [
+            {
+              "tag": "SELECT",
+              "type": "select-one",
+              "name": "توزيع Flex على المحور الرئيسي"
+            },
+            {
+              "tag": "SELECT",
+              "type": "select-one",
+              "name": "محاذاة Flex على المحور المتقاطع"
+            }
+          ]
+        },
+        {
+          "type": "css_grid",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "فجوة Grid بالبكسل"
+            }
+          ]
+        },
+        {
+          "type": "css_box_model",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "الهامش الخارجي بالبكسل"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "الحشو الداخلي بالبكسل"
+            }
+          ]
+        },
+        {
+          "type": "css_border_radius",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "استدارة الحدود بالبكسل"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "عرض الحدود بالبكسل"
+            },
+            {
+              "tag": "SELECT",
+              "type": "select-one",
+              "name": "نمط الحدود"
+            }
+          ]
+        },
+        {
+          "type": "css_box_shadow",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "إزاحة الظل الأفقية بالبكسل"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "إزاحة الظل الرأسية بالبكسل"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "ضبابية الظل بالبكسل"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "انتشار الظل بالبكسل"
+            }
+          ]
+        },
+        {
+          "type": "css_transform",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "الدوران بالدرجات"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "مقياس التحويل"
+            }
+          ]
+        },
+        {
+          "type": "css_filter",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "ضبابية المرشح بالبكسل"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "سطوع المرشح بالمئة"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "تباين المرشح بالمئة"
+            },
+            {
+              "tag": "INPUT",
+              "type": "range",
+              "name": "الرمادي بالمئة"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "all animation choices change actual animation and reduced motion disables sustained motion",
+      "passed": true,
+      "detail": {
+        "got": [
+          {
+            "name": "pulse",
+            "duration": "2s",
+            "iterations": "infinite"
+          },
+          {
+            "name": "bounce",
+            "duration": "1s",
+            "iterations": "infinite"
+          },
+          {
+            "name": "spin",
+            "duration": "1s",
+            "iterations": "infinite"
+          },
+          {
+            "name": "ping",
+            "duration": "1s",
+            "iterations": "infinite"
+          }
+        ],
+        "reducedMotionDuration": 0.00001
+      }
+    },
+    {
+      "name": "all eight cursor targets expose the intended native cursor on hover",
+      "passed": true,
+      "detail": [
+        "pointer",
+        "grab",
+        "zoom-in",
+        "not-allowed",
+        "crosshair",
+        "wait",
+        "text",
+        "help"
+      ]
+    },
+    {
+      "name": "user-select demo exposes native all/none CSS",
+      "passed": true,
+      "detail": [
+        "all",
+        "none"
+      ]
+    }
+  ],
+  "passed": 5,
+  "total": 7
+}

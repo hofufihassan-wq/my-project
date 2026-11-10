@@ -1,0 +1,38 @@
+{
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "name": "reactive parent props update actual Vue child output",
+      "passed": true
+    },
+    {
+      "name": "emits are observed by actual parent listener with argument values",
+      "passed": true
+    },
+    {
+      "name": "default and named slots use real Vue rendering with fallback",
+      "passed": true
+    },
+    {
+      "name": "lifecycle mounted and unmounted hooks actually run",
+      "passed": true
+    },
+    {
+      "name": "defineModel synchronizes parent state and child input through real events",
+      "passed": true
+    },
+    {
+      "name": "real Vue Router memory history and RouterLink navigation",
+      "passed": true
+    },
+    {
+      "name": "router unavailable without explicit lesson context returns error honestly",
+      "passed": true
+    },
+    {
+      "name": "wrong emitted payload fails rather than receiving cosmetic success",
+      "passed": true
+    }
+  ]
+}

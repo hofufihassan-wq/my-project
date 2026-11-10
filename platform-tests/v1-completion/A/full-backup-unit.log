@@ -1,0 +1,10 @@
+PASS full snapshot roundtrips all supported sections and unfinished drafts
+PASS full backups accept multiple valid legacy drafts above the old single-file 1 MiB limit
+PASS unsafe, incomplete, unknown-version and oversized imports do not mutate any state
+PASS successful restore verifies all keys, retains exact prior originals and clears journal
+PASS backup/quota failure before transaction leaves every supported record intact
+PASS one failed write rolls back every changed key including originally absent keys
+PASS persistent write failure retains journal and restart restores exact old state
+PASS recovery refuses to overwrite a record changed since interruption
+PASS pending transaction prevents ordinary writers from touching supported data
+PASS malformed journal is retained without restoring arbitrary keys

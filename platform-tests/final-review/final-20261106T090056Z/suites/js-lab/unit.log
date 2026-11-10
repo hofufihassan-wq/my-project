@@ -1,0 +1,6 @@
+PASS AST gives statement ranges, preserving multiline/semicolon-containing source
+PASS destructured bindings are real names, not property keys or runtime guesses
+PASS source/directive/unsupported syntax limits are explicit
+PASS all observation envelopes are session-index-shape bounded
+PASS script closing text is encoded in frame configuration without escaping the iframe
+5/5 unit checks passed

@@ -1,0 +1,236 @@
+{
+  "phase": "baseline",
+  "time": "2026-11-06T08:47:57.907Z",
+  "passed": 25,
+  "total": 25,
+  "sourceHash": "df65a60a656f837338859d19d42a2cd164c2ce902e660d4775d4f4c1cc6a4b79",
+  "results": [
+    {
+      "id": "css-animation_keyframes",
+      "expected": "تتحرك البطاقة فعليًا بين scale(1) وscale(1.03) كل ثانيتين؛ تتوقف مع تفضيل تقليل الحركة.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-aspect-ratio",
+      "expected": "مستطيل 320×180 عند توفر العرض ومربع 64×64؛ تحافظ النسب عند تضييق الحاوية.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-background",
+      "expected": "خلفية radial-gradient بمركز علوي ولون احتياطي rgb(2,4,32) وحجم cover.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-border_border-radius",
+      "expected": "إطار أخضر solid بسماكة 2px وزوايا 16px حول محتوى فعلي.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-box-shadow",
+      "expected": "الظل 25px وانتشار -5px قبل التحويم، ثم 35px وانتشار 2px بعده.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-color",
+      "expected": "لون العنوان rgb(0,220,130)، والوصف rgb(148,163,184).",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/color",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-cursor",
+      "expected": "رابط cursor:pointer وزر disabled فعليًا مع cursor:not-allowed وشفافية .6.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/cursor",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-display",
+      "expected": "عنصران بمحاذاة أفقية وفاصل 16px؛ العنصر الثالث display:none ولا يملك صندوق عرض.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/display",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-filter_blur_drop-shadow",
+      "expected": "نص filter:blur(3px) وSVG نجمة فعلية بظل drop-shadow نصف قطره 12px.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/filter",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-flex_flexbox",
+      "expected": "ثلاثة عناصر في صف واحد، space-between على المحور الرئيسي وcenter على المتعامد وفاصل أدنى 24px.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-gap",
+      "expected": "Flex بفجوة هندسية 12px؛ شبكة 3 أعمدة بفواصل صفوف24px وأعمدة32px.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/gap",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-grid_css_grid",
+      "expected": "عرضا عمودين بنسبة1:2 بعد طرحgap24px؛ يصيران صفين في نافذة معاينة600px أو أقل.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-hover_focus",
+      "expected": "Hover يغيّر حد الزر إلى الأخضر؛ focus حقيقي علىinput يضيف الحد الأخضر وحلقة3px.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/:hover",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-justify-content_align-items",
+      "expected": "مركز صندوق العنصر يطابق مركز الحاوية ذات الارتفاع200px على المحورين.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-linear-gradient",
+      "expected": "background-image يحويlinear-gradient(135deg) منrgb(0,220,130) إلىrgb(6,78,59).",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-margin_padding",
+      "expected": "padding24px داخل البطاقة؛ margin-bottom16px يفصل فعليًا بين صندوقي البطاقتين.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-media",
+      "expected": "flex-direction:column عندعرض500px، وrow عند800px مع تغير تموضع العنصرين فعليًا.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-opacity_backdrop-filter",
+      "expected": "لوحة فوق خلفية مخططة حقيقية معbackdrop-filter blur16px وrgbaشفاف؛ نص مستقل opacity.5.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-overflow_overflow-x_y",
+      "expected": "قائمةscrollHeightأكبر منclientHeight؛ scrollTopيتغير معscroll-y، overflow-x:hidden يقص المحتوى العريض.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-position",
+      "expected": "relativeعلىالحاوية؛ absoluteعلىالأيقونة، يمين16px ووسط رأسي50% ناقصنصفارتفاعها.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/position",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-scroll-behavior",
+      "expected": "تقدّمscrollTopبين0و320أثناءحركةالقفز ثم يستقرعند320؛ reduce-motionيعيدالسلوكauto.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-transform_transition",
+      "expected": "بعدhover مصفوفةscale1.02وtranslateY-2px؛ أثناءactive scale.98، transitionمدته.2s.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/transform",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-user-select",
+      "expected": "noneعلىالزر، allعلىالكود، textعلىالنص؛ النقرعلىالكود يحددconst score = 100;كاملًا.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/user-select",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-width_height",
+      "expected": "الحاويةعرض320أوالمتاحالأصغروارتفاع120؛ المربع80×80؛ الحدالأقصىوالعرضالنسبييتجاوبان.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/width",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    },
+    {
+      "id": "css-z-index",
+      "expected": "فيمنطقةالتداخلتعيدelementFromPointالقائمةالأمامية؛ قيم40/50/10ضمنسياقاتصحيحة.",
+      "officialReference": "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index",
+      "state": "preview_ready",
+      "matchingConceptElements": 0,
+      "confirmedBroken": true,
+      "passed": true
+    }
+  ],
+  "parentErrors": [],
+  "externalRequests": []
+}

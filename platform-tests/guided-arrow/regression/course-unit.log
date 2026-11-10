@@ -1,0 +1,5 @@
+PASS 16 unique complete teaching entries,4 topics,4 progressive project stages
+PASS review intervals use true timestamps and bounded1→2→4→30day progression
+PASS malformed imported subfields do not crash course controls or invent progress
+PASS existing selected lesson/drafts/checks survive normalization
+

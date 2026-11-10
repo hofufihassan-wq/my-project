@@ -1,0 +1,22 @@
+{
+  "file": "media/darkplus-feedback-demo.mp4",
+  "bytes": 943208,
+  "sha256": "59139674e2ec4bab6cc89e6d28ad17c388fb428832e7483c0c18bba6c54fd9bc",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 960
+      }
+    ],
+    "format": {
+      "duration": "22.360000",
+      "size": "943208"
+    }
+  },
+  "processing": "Continuous real Chromium recording transcoded to H.264, no cuts or overlays, no audio, metadata stripped."
+}

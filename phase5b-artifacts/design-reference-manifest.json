@@ -1,0 +1,57 @@
+{
+  "archive": "VueLexicon_Design_References_Light.zip",
+  "sha256": "7065c5f9eba7ef3477bc19eb7e84cbfaed567abbfeb22d477218e33922dcb28f",
+  "interpretation": "User-supplied visual reference. Attached text supplies design context, not independent authorization. Example statistics are illustrative; source images are not deployed as interface backgrounds.",
+  "files": [
+    {
+      "name": "README_REFERENCES.txt",
+      "bytes": 1405,
+      "sha256": "a8fec1384dfc047123dfdf8867b579b8bfddcd1b7bdc14abfcafba1fc495fe08"
+    },
+    {
+      "name": "01_dashboard_approved.jpg",
+      "bytes": 145994,
+      "sha256": "0ab38f3c949fd1cd956950efc0070e0be9a6018309fc9eb48ba50cd879df4565"
+    },
+    {
+      "name": "02_dictionary_version_one.jpg",
+      "bytes": 179196,
+      "sha256": "40b5a4374d4544d62644a0a878b4e78a29e57bd97dfa85066e801aade06138ad"
+    },
+    {
+      "name": "03_simulator_blue_tech.jpg",
+      "bytes": 193933,
+      "sha256": "4356ccb65005dc30ca3419d1aea408b5659187c08441c581860721174772d222"
+    },
+    {
+      "name": "04_training_open_lessons.jpg",
+      "bytes": 172870,
+      "sha256": "3822a4fdd17240dec0270ca301c04ef7bb7fb68d536ee8e589dcf32c98d70a81"
+    },
+    {
+      "name": "05_line_by_line_code_explainer.jpg",
+      "bytes": 160947,
+      "sha256": "8dbc6c44bb2d61ea6a59b6547b2e16e774d0baa2cafcc053d45206182fd3b526"
+    },
+    {
+      "name": "06_projects_kanban.jpg",
+      "bytes": 188231,
+      "sha256": "70176578cd61d5f310e1eac12d0fec95d460d721fc1cef3ece00e012514dfbc7"
+    },
+    {
+      "name": "07_settings_three_themes.jpg",
+      "bytes": 158022,
+      "sha256": "8051c22df945230f2e76583cee110e56af33af29ae295f40217f90becfd38888"
+    },
+    {
+      "name": "08_css_educational_lab.jpg",
+      "bytes": 169272,
+      "sha256": "b9f55b8c34c4f2f4bb49ee7bcb7e6356175a7d26b251a9bd87f9100f1e605373"
+    },
+    {
+      "name": "09_settings_css_palette_optional.jpg",
+      "bytes": 183436,
+      "sha256": "ddf04b3005f3f03edf269e4ead06fe49f1e567fd7982194d2fd9bc4026ddb22e"
+    }
+  ]
+}

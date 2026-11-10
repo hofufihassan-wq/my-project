@@ -1,0 +1,8 @@
+PASS old state gains defaults without losing legacy course data
+PASS full guided state roundtrips and independent sections preserve it
+PASS malformed imports fail atomically including deeply unsafe keys
+PASS mastery requires behavior of current source plus all three questions
+PASS multiple equivalent arrow forms and helper functions are accepted structurally
+PASS unsupported APIs, property escape and imports are rejected before evaluation
+PASS envelope refuses other sessions, unbounded or malformed results
+PASS HTML closure injection stays inside iframe config and simulator script text

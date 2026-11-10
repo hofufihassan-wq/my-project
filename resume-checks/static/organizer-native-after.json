@@ -1,0 +1,124 @@
+{
+  "source": "/workspace/my-progect",
+  "phase": "after",
+  "startedUtc": "2026-11-07T11:15:32.202Z",
+  "steps": [
+    {
+      "name": "native route projects",
+      "status": "passed",
+      "evidence": {
+        "heading": "المشاريع",
+        "mode": "projects",
+        "field": true,
+        "kanbanVisible": false
+      }
+    },
+    {
+      "name": "native route kanban",
+      "status": "passed",
+      "evidence": {
+        "heading": "لوحة المهام",
+        "mode": "kanban",
+        "field": true,
+        "kanbanVisible": true
+      }
+    },
+    {
+      "name": "native route notes",
+      "status": "passed",
+      "evidence": {
+        "heading": "الملاحظات",
+        "mode": "notes",
+        "field": true,
+        "kanbanVisible": false
+      }
+    },
+    {
+      "name": "native route calendar",
+      "status": "passed",
+      "evidence": {
+        "heading": "التقويم",
+        "mode": "calendar",
+        "field": true,
+        "kanbanVisible": false
+      }
+    },
+    {
+      "name": "create project through full-app form",
+      "status": "passed",
+      "evidence": {
+        "title": "مشروع تحقق مستقل 1794050134414"
+      }
+    },
+    {
+      "name": "create task and move it to done through native select",
+      "status": "passed",
+      "evidence": {
+        "title": "مهمة تحقق 1794050134414",
+        "status": "done",
+        "projectLinked": true
+      }
+    },
+    {
+      "name": "create note through full-app form",
+      "status": "passed",
+      "evidence": {
+        "title": "ملاحظة تحقق 1794050134414"
+      }
+    },
+    {
+      "name": "create dated event and navigate calendar month",
+      "status": "passed",
+      "evidence": {
+        "title": "مراجعة تحقق 1794050134414",
+        "date": "2026-11-07",
+        "time": "14:30"
+      }
+    },
+    {
+      "name": "persist project after real page reload",
+      "status": "passed",
+      "evidence": {
+        "title": "مشروع تحقق مستقل 1794050134414",
+        "visible": true
+      }
+    },
+    {
+      "name": "persist task after real page reload",
+      "status": "passed",
+      "evidence": {
+        "title": "مهمة تحقق 1794050134414",
+        "visible": true
+      }
+    },
+    {
+      "name": "persist note after real page reload",
+      "status": "passed",
+      "evidence": {
+        "title": "ملاحظة تحقق 1794050134414",
+        "visible": true
+      }
+    },
+    {
+      "name": "persist event after real page reload",
+      "status": "passed",
+      "evidence": {
+        "title": "مراجعة تحقق 1794050134414",
+        "visible": true
+      }
+    },
+    {
+      "name": "no page errors or external runtime requests",
+      "status": "passed",
+      "evidence": {
+        "pageErrors": 0,
+        "externalRequests": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "scope": "Full app via native UI, fresh isolated browser context, create and reload; no source/storage injection",
+  "finishedUtc": "2026-11-07T11:15:36.892Z",
+  "status": "passed"
+}

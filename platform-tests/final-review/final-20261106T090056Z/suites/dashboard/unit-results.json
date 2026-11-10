@@ -1,0 +1,30 @@
+{
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "calendar accepts real leap date and rejects overflow",
+      "passed": true
+    },
+    {
+      "name": "calendar42 includes adjacent month and correct weekdays",
+      "passed": true
+    },
+    {
+      "name": "task validation rejects blank title bad status and impossible date",
+      "passed": true
+    },
+    {
+      "name": "event validation rejects bad local time and missing date",
+      "passed": true
+    },
+    {
+      "name": "oversized note is refused without truncation",
+      "passed": true
+    },
+    {
+      "name": "unknown imported course identifiers cannot inflate learning statistics",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "suite": "local-package-smoke",
+    "exitCode": 0
+  },
+  {
+    "suite": "five-themes",
+    "exitCode": 0
+  },
+  {
+    "suite": "simulator",
+    "exitCode": 0
+  }
+]

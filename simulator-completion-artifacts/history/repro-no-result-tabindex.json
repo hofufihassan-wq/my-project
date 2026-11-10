@@ -1,0 +1,845 @@
+{
+  "failures": 18,
+  "results": [
+    {
+      "i": 0,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 1,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 2,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 3,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "after",
+        "events": [
+          {
+            "type": "pointerdown",
+            "target": "<button id=\"change\" onclick=\"document.getElementById('output').textContent='after'\">change 3</button>",
+            "x": 43.40625,
+            "y": 18.5
+          },
+          {
+            "type": "pointerup",
+            "target": "<button id=\"change\" onclick=\"document.getElementById('output').textContent='after'\">change 3</button>",
+            "x": 43.40625,
+            "y": 18.5
+          },
+          {
+            "type": "click",
+            "target": "<button id=\"change\" onclick=\"document.getElementById('output').textContent='after'\">change 3</button>",
+            "x": 43,
+            "y": 18
+          }
+        ],
+        "parent": []
+      }
+    },
+    {
+      "i": 4,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040.0400390625,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1040,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 70.84375,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "after",
+        "events": [
+          {
+            "type": "pointerdown",
+            "target": "<button id=\"change\" onclick=\"document.getElementById('output').textContent='after'\">change 9</button>",
+            "x": 43.40625,
+            "y": 18.5
+          },
+          {
+            "type": "pointerup",
+            "target": "<button id=\"change\" onclick=\"document.getElementById('output').textContent='after'\">change 9</button>",
+            "x": 43.40625,
+            "y": 18.5
+          },
+          {
+            "type": "click",
+            "target": "<button id=\"change\" onclick=\"document.getElementById('output').textContent='after'\">change 9</button>",
+            "x": 43,
+            "y": 18
+          }
+        ],
+        "parent": []
+      }
+    },
+    {
+      "i": 10,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 77.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.25,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.25,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "before": {
+        "button": {
+          "x": 1004.625,
+          "y": 366.5,
+          "width": 78.265625,
+          "height": 21
+        },
+        "iframe": {
+          "x": 996.625,
+          "y": 358.5,
+          "width": 413.375,
+          "height": 411.5
+        },
+        "scroll": 0
+      },
+      "after": {
+        "text": "before",
+        "events": [],
+        "parent": [
+          {
+            "type": "pointerdown",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "pointerup",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043.75,
+            "y": 377
+          },
+          {
+            "type": "click",
+            "target": "<iframe data-testid=\"tech-live-preview\" srcdoc=\"&lt;script&gt;(function childBootstrap(session, options = {}) {\n    const stringify = value =&gt; {\n      const seen = new WeakSet();\n      let budget = 80;\n      function visit(item, depth) {\n        i",
+            "x": 1043,
+            "y": 377
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+PASS all32 lessons are open with unique IDs
+PASS level filters show actual beginner/intermediate/advanced entries without locking lessons
+PASS wrong answer gives alternate explanation without locking lesson
+PASS correct answer and completion retained, previous mistake remains
+PASS draft is stored and practice event exports exact text only on click
+PASS real page close/reopen preserves draft and mistake history on same origin
+PASS four project stages retain typed drafts/self-checks and never claim auto correctness
+PASS review list comes from actual mistake records with alternate explanation
+PASS all16 example sources render actual expected output offline in opaque iframe
+PASS no unexpected parent or child page errors
+PASS 390px layout has no document overflow and real controls remain usable
+

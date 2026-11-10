@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const http = require('node:http');
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || '/opt/codex/cua_node/lib/node_modules/playwright-core');
+const output = process.env.VLP_TEST_OUTPUT || 'runtime-assets-artifacts';
 const results = [];
 let browser;
 const server = http.createServer((req, res) => {
@@ -43,15 +44,20 @@ async function main() {
     const base = origin + (round===2?'/nested/app/':'/');
     const app = (fn,arg) => page.evaluate(({s,arg}) => (new Function('a','arg',`return (${s})(a,arg)`))(window.vueLexiconApp,arg), {s:fn.toString(),arg});
     async function clickInFrame(button) {
-      // This suite checks loading and Vue's native DOM event handling. Pointer
-      // interaction and frame positioning remain covered by the simulator suite.
+      // Use an actual pointer after positioning the newly composed opaque frame.
       await page.waitForFunction(()=>window.vueLexiconApp.simulatorObservation !== null);
-      await button.evaluate(button=>button.click());
+      await page.locator('iframe').evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
+      await button.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
+      await page.waitForTimeout(200);
+      await button.click();
     }
     for (let load=0;load<2;load++) {
       await test(`cold context ${round+1}, load ${load+1}: local assets mount with matching fonts/styles and no network`, async () => {
         if(load===0) await page.goto(base,{waitUntil:'networkidle'}); else await page.reload({waitUntil:'networkidle'});
         await page.waitForFunction(() => window.vueLexiconApp?.rawLexiconData.length===180);
+        // 5B opens the dashboard. Enter the dictionary explicitly for these legacy scenarios.
+        await page.evaluate(() => window.vueLexiconApp.setAppMode('lexicon'));
+        await page.waitForTimeout(100);
         await page.evaluate(() => document.fonts.ready);
         assert.equal(await page.evaluate(() => Vue.version),'3.4.21');
         assert.equal(await page.evaluate(() => hljs.versionString),'11.9.0');
@@ -64,7 +70,7 @@ async function main() {
           arabic:document.fonts.check('400 14px Alexandria','مرحبا'),
           mono:document.fonts.check('400 14px "JetBrains Mono"','const a = 1;')
         }));
-        assert.equal(style.body,'rgb(2, 4, 32)');assert.match(style.family,/Alexandria/);
+        assert.equal(style.body,'rgb(3, 12, 14)');assert.match(style.family,/Alexandria/);
         assert(style.logo>0 && style.logo<100);assert.equal(style.overflow,false);
         assert(style.arabic && style.mono);assert(fontRequests.length>=2);
         if(round===0 && load===0) coldStyles=style;
@@ -78,17 +84,20 @@ async function main() {
       await app(a => {a.searchQuery='';a.setCategory('css');});assert.equal(await app(a => a.filteredTermsList.length),25);
       await app(a => {a.openSimulator();a.backToTracks();});
       assert.equal(await page.locator('[data-track]').count(),5);
-      assert.equal(await page.locator('[data-track]').first().evaluate(el=>getComputedStyle(el).display),'flex');
+      if(round===1) { assert.equal(await page.locator('.beta-mobile-tracks option').count(),5); assert(await page.locator('.beta-mobile-tracks').isVisible()); }
+      else assert.equal(await page.locator('[data-track]').first().evaluate(el=>getComputedStyle(el).display),'flex');
       await app(a => a.selectTrack('js'));
       assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
-      assert.equal(await page.locator('.lesson-workspace-grid').evaluate(el=>getComputedStyle(el).display),round===1?'flex':'grid');
+      assert.equal(await page.locator('.tech-main-grid').evaluate(el=>getComputedStyle(el).display),round===1?'flex':'grid');
     });
     for (const id of ['VUE-101','VUE-102','VUE-103']) {
       await test(`context ${round+1}: ${id} loads local Vue and behaves correctly with Internet blocked`, async () => {
         await app((a,id)=>a.selectLesson(id),id);
         const draft=await app(a=>a.practiceCode);
-        await page.getByTestId('simulator-reference-run').click();
+        await page.getByTestId('tech-reference-run').click();
         await page.waitForFunction(id=>window.vueLexiconApp.activeRun?.lessonId===id && window.vueLexiconApp.activeRun?.kind==='reference' && window.vueLexiconApp.executionState==='preview_ready',id);
+        if(await page.getByTestId('final-panel-preview').isVisible())await page.getByTestId('final-panel-preview').click();
+        await page.waitForTimeout(200);
         const frame=page.locator('iframe').contentFrame();
         await frame.locator('#app').waitFor();
         assert.equal(await frame.locator('body').evaluate(()=>Vue.version),'3.4.21');
@@ -116,15 +125,15 @@ async function main() {
       });
     }
     if(round<2) {
-      fs.mkdirSync('runtime-assets-artifacts/screenshots',{recursive:true});
+      fs.mkdirSync(path.join(output, 'screenshots'),{recursive:true});
       await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
-      await page.screenshot({path:`runtime-assets-artifacts/screenshots/${round===0?'desktop':'mobile'}.png`});
+      await page.screenshot({path:path.join(output, 'screenshots', `${round===0?'desktop':'mobile'}.png`)});
     }
     await context.close();
   }
   const passed=results.filter(r=>r.passed).length;
-  fs.mkdirSync('runtime-assets-artifacts',{recursive:true});
-  fs.writeFileSync('runtime-assets-artifacts/browser-report.json',JSON.stringify({timestamp:new Date().toISOString(),runtime:'Real Chromium, actual local Vue/CSS/fonts/highlight; external requests blocked; no substitutes',passed,total:results.length,results},null,2)+'\n');
+  fs.mkdirSync(output,{recursive:true});
+  fs.writeFileSync(path.join(output, 'browser-report.json'),JSON.stringify({timestamp:new Date().toISOString(),runtime:'Real Chromium, actual local Vue/CSS/fonts/highlight; external requests blocked; no substitutes',passed,total:results.length,results},null,2)+'\n');
   console.log(`${passed}/${results.length} actual runtime checks passed`);
   if(passed!==results.length) process.exitCode=1;
 }

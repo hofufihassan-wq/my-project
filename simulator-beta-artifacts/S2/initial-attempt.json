@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-10-31T00:09:37.651Z",
+  "browser": "154.0.8037.57",
+  "passed": 6,
+  "total": 8,
+  "results": [
+    {
+      "name": "real submitted/ready/snapshot events and DOM fields from reference",
+      "passed": true
+    },
+    {
+      "name": "foreign sender cannot add events or error detail",
+      "passed": true
+    },
+    {
+      "name": "source revision invalidates DOM observations while preserving submitted source",
+      "passed": true
+    },
+    {
+      "name": "actual asynchronous output updates typed DOM fields",
+      "passed": true
+    },
+    {
+      "name": "actual runtime errors include qualified generated-document position",
+      "passed": true
+    },
+    {
+      "name": "editing after error marks error source stale without fabricating new trace",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at /workspace/work/sim-beta-s2/verify.js:16:145\n    at async test (/workspace/work/sim-beta-s2/verify.js:10:33)\n    at async main (/workspace/work/sim-beta-s2/verify.js:16:1)"
+    },
+    {
+      "name": "stop clears current error and snapshot but leaves bounded receipt history",
+      "passed": true
+    },
+    {
+      "name": "receipt log is bounded without evaluating code in parent",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'ACTUAL_S2_ERROR'\n+ ]\n- []\n\n    at /workspace/work/sim-beta-s2/verify.js:18:368\n    at async test (/workspace/work/sim-beta-s2/verify.js:10:33)\n    at async main (/workspace/work/sim-beta-s2/verify.js:18:1)"
+    }
+  ]
+}

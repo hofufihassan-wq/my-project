@@ -1,0 +1,11 @@
+PASS extract exact release ZIP, verify every hash and required files
+PASS start extracted folder with spaces on fixed loopback origin
+PASS Arabic and English search before shutdown
+PASS save a favorite through dictionary button
+PASS save CSS and JavaScript drafts through native editors
+PASS close full persistent browser, stop and restart own local server, reopen same profile
+PASS Arabic and English search after full browser/server restart
+PASS favorite persists after full browser/server restart
+PASS CSS HTML/CSS and JS source drafts persist after full browser/server restart
+PASS server denies private/project source files and browser stays offline
+{"status":"passed","passed":10,"total":10,"source":{"source_commit":"b717d9bda1e62a57f047a32fac0ca2148c76aa69","branch":"feat/vlex-personal-learning-platform","files":124,"clean_source":true}}

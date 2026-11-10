@@ -1,0 +1,713 @@
+{
+  "started": "2026-11-07T11:13:01.722Z",
+  "cases": [
+    {
+      "id": "html-attributes",
+      "settleMs": 1000,
+      "before": {
+        "url": {
+          "url": "about:srcdoc",
+          "base": "http://127.0.0.1:39341/",
+          "scroll": [
+            0,
+            0
+          ],
+          "active": "<body><a href=\"#goal\">اذهب إلى هدفي</a>\n<h2 id=\"goal\">هدفي</h2>\n<p>أتعلم كيف أبني موقعًا بنفسي.</p>\n</body>"
+        },
+        "child": {
+          "rect": {
+            "x": 249.34375,
+            "y": 38,
+            "w": 115.65625,
+            "h": 24
+          },
+          "hit": "<a href=\"#goal\">اذهب إلى هدفي</a>"
+        },
+        "parent": {
+          "scroll": [
+            0,
+            0
+          ],
+          "viewport": [
+            1600,
+            1080
+          ],
+          "trace": []
+        },
+        "box": {
+          "x": 1412.609375,
+          "y": 379,
+          "width": 115.65625,
+          "height": 24
+        },
+        "events": []
+      },
+      "beforeText": "هدفي",
+      "afterURL": "http://127.0.0.1:39341/#goal",
+      "topTrace": [],
+      "after": {
+        "url": "http://127.0.0.1:39341/#goal",
+        "base": "http://127.0.0.1:39341/#goal",
+        "text": "تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأو",
+        "html": "\n\n<div id=\"app\" class=\"min-h-screen flex flex-col relative overflow-x-hidden\" data-theme=\"petroleum\" data-workspace=\"home\" data-v-app=\"\"><div class=\"fixed bottom-6 left-6 z-50 flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#081022]/95 border shadow-2xl text-xs font-semibold backdrop-blur-2xl transition duration-300 ease-out transform translate-y-0 opacity-100 scale-100\"><span class=\"w-2.5 h-2.5 rounded-full animate-ping\"></span><span class=\"text-white\">تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.</span></div><aside role=\"alert\" class=\"p-4 bg-amber-950 text-amber-100\"><p>تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة",
+        "active": "<body class=\"bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased\">\n\n<div id=\"app\" class=\"min-h-screen flex flex-col relative overflow-x-hidden\" data-theme=\"petroleum\" data-workspace=\"home\" data-v-app=\"\"><div class=\"fixed bottom-6 left-6 z-50 flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#081022]/95 border shadow-2xl text-xs font-semibold backdrop-blur-2xl transition duration-300 ease-out transform translate-y-0 opacity-100 scale-100\"><span class=\"w-2.5 h-2.5 rounded-full animate-ping\"></span><span class=\"text-white\">تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.</span></div><aside role=\"alert\" class=\"p-4 bg-amber-950 text-amber-100\"><p>تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.</p><p>تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.</p><p>تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.</p><p>تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.</p><p>تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.</p><p>تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.</p><button class=\"underline p-2\">تنزيل بيانات الاسترجاع</button></aside><!----><svg class=\"icon-definitions\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" style=\"position: absolute; width: 0px; height: 0px; overflow: hidden;\"><defs><symbol id=\"i-home\" viewBox=\"0 0 24 24\"><path d=\"m3 10 9-7 9 7v10H3Z M9 20v-7h6v7\"></path></symbol><symbol id=\"i-book\" viewBox=\"0 0 24 24\"><path d=\"M12 5v16M12 5C9 2 4 3 2 4v15c4-1 7-1 10 2 3-3 6-3 10-2V4c-2-1-7-2-10 1Z\"></path></symbol><symbol id=\"i-code\" viewBox=\"0 0 24 24\"><path d=\"m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18\"></path></symbol><symbol id=\"i-monitor\" viewBox=\"0 0 24 24\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"></rect><path d=\"M8 21h8m-4-4v4m-5-12 3-3m-3 3 3 3m7-6-3 3 3 3\"></path></symbol><symbol id=\"i-folder\" viewBox=\"0 0 24 24\"><path d=\"M2 6a2 2 0 0 1 2-2h5l3 3h8a2 2 0 0 1 2 2v11H2Z\"></path></symbol><symbol id=\"i-grid\" viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"></rect><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"></rect><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"></rect><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"></rect></symbol><symbol id=\"i-note\" viewBox=\"0 0 24 24\"><path d=\"M5 3h14v14l-4 4H5ZM8 8h8M8 12h8m-8 4h4m3 5v-4h4\"></path></symbol><symbol id=\"i-calendar\" viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 2v6m10-6v6M3 11h18M7 15h2m3 0h2m3 0h1M7 18h2m3 0h2\"></path></symbol><symbol id=\"i-settings\" viewBox=\"0 0 24 24\"><path d=\"m9 3-1 3-3 1-2 3 2 2-1 4 3 2 3-1 2 4 3-1 1-3 4-1 1-4-3-2V6l-4-1-2-3Z\"></path><circle cx=\"12\" cy=\"12\" r=\"3\"></circle></symbol><symbol id=\"i-star\" viewBox=\"0 0 24 24\"><path d=\"m12 2 3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1Z\"></path></symbol><symbol id=\"i-sun\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><path d=\"M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2\"></path></symbol></defs></svg><header class=\"site-header sticky top-0 z-40 w-full\"><div class=\"site-header-inner\"><button class=\"brand select-none\" aria-label=\"VueLexicon — الرئيسية\"><span class=\"brand-mark\" aria-hidden=\"true\">V</span><span class=\"brand-copy\"><strong dir=\"ltr\">V Lex Pro</strong><small>مساحتك لتعلّم تطوير الويب</small></span></button><nav class=\"main-nav\" aria-label=\"التنقل الرئيسي\"><button data-testid=\"nav-home\" aria-current=\"page\">الرئيسية</button><button data-testid=\"nav-lexicon\">القاموس <span class=\"nav-legacy-label\">المعجم</span></button><button data-testid=\"nav-training\">التدريب العملي</button><button data-testid=\"nav-simulator\">المحاكي</button><button>المشاريع</button></nav><div class=\"header-actions\"><button title=\"تبديل الثيم\" aria-label=\"تبديل الثيم\"><svg><use href=\"#i-sun\"></use></svg></button><button title=\"عرض المفضلة\" class=\"bookmark-action\"><svg><use href=\"#i-star\"></use></svg><span>0</span></button><button title=\"سجل التعلّم، التقدم والنسخ الاحتياطي\" aria-label=\"تعلّمي والنسخ الاحتياطي\"><svg><use href=\"#i-note\"></use></svg></button><button title=\"اختصارات لوحة المفاتيح\" aria-label=\"اختصارات لوحة المفاتيح\">⌨</button><button data-testid=\"nav-settings\" title=\"الإعدادات\"><svg><use href=\"#i-settings\"></use></svg></button></div></div><nav class=\"mobile-nav\" aria-label=\"التنقل للجوال\"><button data-testid=\"nav-home\" aria-current=\"page\"><svg><use href=\"#i-home\"></use></svg>الرئيسية</button><button data-testid=\"nav-lexicon\"><svg><use href=\"#i-book\"></use></svg>المعجم</button><button data-testid=\"nav-training\"><svg><use href=\"#i-code\"></use></svg>التدريب</button><button data-testid=\"nav-simulator\"><svg><use href=\"#i-monitor\"></use></svg>المحاكي</button></nav></header><nav class=\"learning-launcher\" aria-label=\"أدوات التعلّم\"><button data-testid=\"nav-course\">تعلّم معي</button><button data-testid=\"nav-explain\">اشرح لي الكود</button><button data-testid=\"nav-css-lab\">مختبر CSS</button><button data-testid=\"nav-js-lab\">مختبر JavaScript</button><button>مهامي</button><button>تقويمي</button></nav><aside class=\"learning-storage-warning\" role=\"alert\">تعذرت قراءة التخزين؛ لن نستبدل السجل الأصلي. صدّر التعديلات ثم أعد فتح الصفحة. <button>تصدير تعديلات التعلّم الحالية</button></aside><!----><!----><!----><!----><main class=\"dashboard-shell\"><aside class=\"dashboard-sidebar\" aria-label=\"مساحات التعلم\"><p class=\"eyebrow\">مساحتك الشخصية</p><button class=\"active\"><svg><use href=\"#i-home\"></use></svg>الرئيسية</button><button><svg><use href=\"#i-book\"></use></svg>القاموس <span>180</span></button><button><svg><use href=\"#i-code\"></use></svg>التدريب العملي</button><button><svg><use href=\"#i-monitor\"></use></svg>المحاكي</button><div class=\"sidebar-divider\"></div><button><svg><use href=\"#i-folder\"></use></svg>المشاريع<small>محلي</small></button><button><svg><use href=\"#i-grid\"></use></svg>لوحة المهام<small>محلي</small></button><button><svg><use href=\"#i-note\"></use></svg>الملاحظات<small>محلي</small></button><button><svg><use href=\"#i-calendar\"></use></svg>التقويم<small>محلي</small></button><button><svg><use href=\"#i-code\"></use></svg>شرح الأكواد<small>محلي</small></button><button><svg><use href=\"#i-settings\"></use></svg>الإعدادات</button><div class=\"sidebar-note\"><span>✧</span><p>خطوة صغيرة كل يوم</p><small>تعلّم مفهومًا، جرّب كودًا، وابنِ فهمك على مهل.</small></div></aside><div class=\"dashboard-content\"><section class=\"vlp-organizer vlp-daily-dashboard\" aria-label=\"خطتك اليومية الحقيقية\" data-testid=\"learning-daily-dashboard\"><div class=\"vlp-day-heading\"><div><h2>خطتك اليوم</h2><p>السبت، ٧ نوفمبر ٢٠٢٦</p></div><time class=\"vlp-local-clock\" dir=\"ltr\" aria-label=\"الوقت المحلي\">١١:١٣:٠٧</time></div><p role=\"alert\" class=\"vlp-storage-warning\">توجد مشكلة في الحفظ الدائم. التغييرات قد تبقى في الجلسة فقط؛ راجع تنبيه البيانات وصدّر نسختك.</p><div class=\"vlp-mini-stats\" aria-label=\"إحصاءات فعلية من بياناتك\"><span><strong>0</strong> مهام مكتملة من 0</span><span><strong>0</strong> دروس راجعتها</span><span><strong>0</strong> مراجعات حان وقتها</span></div><div class=\"vlp-dashboard-columns\"><div><h3>مهام اليوم وما تأخر</h3><form class=\"vlp-inline-form\"><label class=\"vlp-field\">مهمة صغيرة لليوم<input data-testid=\"dashboard-task-title\" maxlength=\"180\" required=\"\" placeholder=\"مثلًا: أجرّب v-model\"></label><button type=\"submit\" data-testid=\"dashboard-task-add\">أضف المهمة</button></form><ul class=\"vlp-record-list\"></ul><p class=\"vlp-empty\">ما عندك مهام لليوم. أضف خطوة بسيطة تبدأ فيها.</p><button type=\"button\" class=\"vlp-link-button\">لوحة جميع المهام ←</button></div><div><h3>المواعيد القادمة</h3><ul class=\"vlp-record-list\"></ul><p class=\"vlp-empty\">لا توجد مواعيد محفوظة. أضف وقت مراجعتك من التقويم.</p><div class=\"vlp-action-row\"><button type=\"button\">افتح التقويم</button><button type=\"button\">درس ومراجعة</button></div></div></div><p role=\"status\" class=\"vlp-save-message\"></p><p class=\"vlp-local-note\">بيانات على هذا المتصفح فقط، بلا مزامنة أو تنبيه خارج الصفحة. صدّر نسخة من إعدادات البيانات.</p></section></div></main><!----><!----><!----><!----><!----><!----><!----><!----><!----><footer class=\"mt-auto border-t border-white/10 bg-[#020420]/80 py-6 relative z-10 text-xs text-slate-500 text-center\"><div class=\"max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3\"><div class=\"flex items-center gap-2\"><span class=\"text-white font-bold\">VueLexicon Pro</span><span>— معجم ومرجع برمجي ومسارات تدريب عملي تفاعلية</span></div><div class=\"flex items-center gap-3 font-mono text-[11px]\"><span>Nuxt UI v3</span><span>•</span><span>Vue 3.4</span><span>•</span><span>Tailwind CSS</span><span>•</span><span class=\"text-[#00DC82] font-bold\">180 عنصراً تعليمياً تفاعلياً</span></div></div></footer></div>\n\n<!-- Application Data & Logic Scripts -->\n<script src=\"lexicon-data.js\"></script>\n  <script src=\"practice-curriculum.js\"></script>\n<script src=\"legacy-validator-guards.js\"></script>\n<script src=\"simulator-guides.js\"></script>\n<script src=\"progress-data.js\"></script>\n<script src=\"preview-runner.js\"></script>\n<script src=\"simulator-beta.js\"></script>\n<script src=\"assets/vendor/compiler-sfc-3.4.21.global.min.js\"></script>\n<script src=\"learning-dictionary-status.js\"></script>\n<script src=\"learning-store.js\"></script>\n<script src=\"learning-explainer.js\"></script>\n<script src=\"learning-course.js\"></script>\n<script src=\"learning-course-advanced.js\"></script>\n<script src=\"learning-css-lab.js\"></script>\n<script src=\"learning-js-lab.js\"></script>\n<script src=\"learning-dashboard.js\"></script>\n<script src=\"app.js\"></script>\n\n\n</body>"
+      },
+      "resultCount": 0
+    },
+    {
+      "id": "html-form",
+      "settleMs": 1000,
+      "before": {
+        "url": {
+          "url": "about:srcdoc",
+          "base": "http://127.0.0.1:39341/",
+          "scroll": [
+            0,
+            0
+          ],
+          "active": "<body><label for=\"task-name\">اسم المهمة</label>\n<input id=\"task-name\" required=\"\">\n<button type=\"button\" onclick=\"document.getElementById('task-name').reportValidity()\">تحقق من الحقل</button>\n</body>"
+        },
+        "child": {
+          "rect": {
+            "x": 284.15625,
+            "y": 38,
+            "w": 80.84375,
+            "h": 24
+          },
+          "hit": "<label for=\"task-name\">اسم المهمة</label>"
+        },
+        "parent": {
+          "scroll": [
+            0,
+            0
+          ],
+          "viewport": [
+            1600,
+            1080
+          ],
+          "trace": []
+        },
+        "box": {
+          "x": 1447.421875,
+          "y": 379,
+          "width": 80.84375,
+          "height": 24
+        },
+        "events": []
+      },
+      "beforeText": "",
+      "afterURL": "",
+      "topTrace": [],
+      "after": {
+        "url": "about:srcdoc",
+        "base": "http://127.0.0.1:39341/",
+        "text": "اسم المهمة  تحقق من الحقل",
+        "html": "<label for=\"task-name\">اسم المهمة</label>\n<input id=\"task-name\" required=\"\">\n<button type=\"button\" onclick=\"document.getElementById('task-name').reportValidity()\">تحقق من الحقل</button>\n",
+        "events": [
+          {
+            "type": "pointerdown",
+            "target": "LABEL",
+            "id": "",
+            "x": 324.5625,
+            "y": 50,
+            "trusted": true,
+            "at": 2412.4000000003725
+          },
+          {
+            "type": "mousedown",
+            "target": "LABEL",
+            "id": "",
+            "x": 324,
+            "y": 50,
+            "trusted": true,
+            "at": 2412.5
+          },
+          {
+            "type": "mouseup",
+            "target": "LABEL",
+            "id": "",
+            "x": 324,
+            "y": 50,
+            "trusted": true,
+            "at": 2414
+          },
+          {
+            "type": "click",
+            "target": "LABEL",
+            "id": "",
+            "x": 324,
+            "y": 50,
+            "trusted": true,
+            "at": 2414
+          },
+          {
+            "type": "focusin",
+            "target": "INPUT",
+            "id": "task-name",
+            "trusted": true,
+            "at": 2415
+          },
+          {
+            "type": "click",
+            "target": "INPUT",
+            "id": "task-name",
+            "x": 324,
+            "y": 50,
+            "trusted": true,
+            "at": 2415.9000000003725
+          }
+        ],
+        "active": "<input id=\"task-name\" required=\"\">"
+      },
+      "resultCount": 1,
+      "resultText": "",
+      "inputFocused": true
+    },
+    {
+      "id": "js-events",
+      "settleMs": 1000,
+      "before": {
+        "url": {
+          "url": "about:srcdoc",
+          "base": "http://127.0.0.1:39341/",
+          "scroll": [
+            0,
+            0
+          ],
+          "active": "<body><button id=\"add\" type=\"button\">أضف إنجازًا</button><p id=\"count\">0</p>\n<script>\nlet count = 0;\nfunction addOne() {\n count += 1;\n document.getElementById('count').textContent = count;\n}\ndocument.getElementById('add').addEventListener('click', addOne);\n</script>\n</body>"
+        },
+        "child": {
+          "rect": {
+            "x": 263.796875,
+            "y": 32,
+            "w": 101.203125,
+            "h": 58
+          },
+          "hit": "<button id=\"add\" type=\"button\">أضف إنجازًا</button>"
+        },
+        "parent": {
+          "scroll": [
+            0,
+            0
+          ],
+          "viewport": [
+            1600,
+            1080
+          ],
+          "trace": []
+        },
+        "box": {
+          "x": 1427.0625,
+          "y": 373,
+          "width": 101.203125,
+          "height": 58
+        },
+        "events": []
+      },
+      "beforeText": "0",
+      "afterURL": "",
+      "topTrace": [],
+      "after": {
+        "url": "about:srcdoc",
+        "base": "http://127.0.0.1:39341/",
+        "text": "أضف إنجازًا\n\n1",
+        "html": "<button id=\"add\" type=\"button\">أضف إنجازًا</button><p id=\"count\">1</p>\n<script>\nlet count = 0;\nfunction addOne() {\n count += 1;\n document.getElementById('count').textContent = count;\n}\ndocument.getElementById('add').addEventListener('click', addOne);\n</script>\n",
+        "events": [
+          {
+            "type": "pointerdown",
+            "target": "BUTTON",
+            "id": "add",
+            "x": 314.390625,
+            "y": 61,
+            "trusted": true,
+            "at": 2179
+          },
+          {
+            "type": "mousedown",
+            "target": "BUTTON",
+            "id": "add",
+            "x": 314,
+            "y": 61,
+            "trusted": true,
+            "at": 2179
+          },
+          {
+            "type": "focusin",
+            "target": "BUTTON",
+            "id": "add",
+            "trusted": true,
+            "at": 2179.2999999998137
+          },
+          {
+            "type": "mouseup",
+            "target": "BUTTON",
+            "id": "add",
+            "x": 314,
+            "y": 61,
+            "trusted": true,
+            "at": 2180.7999999998137
+          },
+          {
+            "type": "click",
+            "target": "BUTTON",
+            "id": "add",
+            "x": 314,
+            "y": 61,
+            "trusted": true,
+            "at": 2180.7999999998137
+          }
+        ],
+        "active": "<button id=\"add\" type=\"button\">أضف إنجازًا</button>"
+      },
+      "resultCount": 1,
+      "resultText": "1"
+    },
+    {
+      "id": "vue-ref",
+      "settleMs": 1000,
+      "before": {
+        "url": {
+          "url": "about:srcdoc",
+          "base": "http://127.0.0.1:39341/",
+          "scroll": [
+            0,
+            0
+          ],
+          "active": "<body><div id=\"lesson-app\" data-v-app=\"\"><button>أنجزت 0 مهام</button></div>\n<script src=\"http://127.0.0.1:39341/assets/vendor/vue-3.4.21.global.prod.js\"></script>\n<script>\nconst {createApp,ref,computed}=Vue;\ncreateApp({setup(){\nconst count=ref(0);\nfunction increment(){count.value+=1;}\nreturn {count,increment};\n}}).mount(\"#lesson-app\");\n</script>\n</body>"
+        },
+        "child": {
+          "rect": {
+            "x": 247.25,
+            "y": 32,
+            "w": 117.75,
+            "h": 58
+          },
+          "hit": "<button>أنجزت 0 مهام</button>"
+        },
+        "parent": {
+          "scroll": [
+            0,
+            0
+          ],
+          "viewport": [
+            1600,
+            1080
+          ],
+          "trace": []
+        },
+        "box": {
+          "x": 1410.515625,
+          "y": 373,
+          "width": 117.75,
+          "height": 58
+        },
+        "events": []
+      },
+      "beforeText": "أنجزت 0 مهام",
+      "afterURL": "",
+      "topTrace": [],
+      "after": {
+        "url": "about:srcdoc",
+        "base": "http://127.0.0.1:39341/",
+        "text": "أنجزت 1 مهام",
+        "html": "<div id=\"lesson-app\" data-v-app=\"\"><button>أنجزت 1 مهام</button></div>\n<script src=\"http://127.0.0.1:39341/assets/vendor/vue-3.4.21.global.prod.js\"></script>\n<script>\nconst {createApp,ref,computed}=Vue;\ncreateApp({setup(){\nconst count=ref(0);\nfunction increment(){count.value+=1;}\nreturn {count,increment};\n}}).mount(\"#lesson-app\");\n</script>\n",
+        "events": [
+          {
+            "type": "pointerdown",
+            "target": "BUTTON",
+            "id": "",
+            "x": 306.109375,
+            "y": 61,
+            "trusted": true,
+            "at": 2212
+          },
+          {
+            "type": "mousedown",
+            "target": "BUTTON",
+            "id": "",
+            "x": 306,
+            "y": 61,
+            "trusted": true,
+            "at": 2212.100000000093
+          },
+          {
+            "type": "focusin",
+            "target": "BUTTON",
+            "id": "",
+            "trusted": true,
+            "at": 2212.399999999907
+          },
+          {
+            "type": "mouseup",
+            "target": "BUTTON",
+            "id": "",
+            "x": 306,
+            "y": 61,
+            "trusted": true,
+            "at": 2213
+          },
+          {
+            "type": "click",
+            "target": "BUTTON",
+            "id": "",
+            "x": 306,
+            "y": 61,
+            "trusted": true,
+            "at": 2213.100000000093
+          }
+        ],
+        "active": "<button>أنجزت 1 مهام</button>"
+      },
+      "resultCount": 1,
+      "resultText": "أنجزت 1 مهام",
+      "keyboardResult": "أنجزت 2 مهام"
+    },
+    {
+      "id": "html-details-disclosure",
+      "settleMs": 1000,
+      "before": {
+        "url": {
+          "url": "about:srcdoc",
+          "base": "http://127.0.0.1:39341/",
+          "scroll": [
+            0,
+            0
+          ],
+          "active": "<body><h1>خطة التدريب</h1>\n<details id=\"lesson-details\"><summary>وش أحتاج قبل Vue؟</summary><p>ابدأ بالمتغيرات والدوال والمصفوفات، ثم جرّب DOM.</p></details>\n<details><summary>هل الدروس مقفلة؟</summary><p>لا، اختر الدرس اللي تحتاجه وارجع للأساس وقت الحاجة.</p></details>\n</body>"
+        },
+        "child": {
+          "rect": {
+            "x": 37,
+            "y": 161.21875,
+            "w": 323,
+            "h": 38
+          },
+          "hit": "<summary>وش أحتاج قبل Vue؟</summary>"
+        },
+        "parent": {
+          "scroll": [
+            0,
+            0
+          ],
+          "viewport": [
+            1600,
+            1080
+          ],
+          "trace": []
+        },
+        "box": {
+          "x": 1200.265625,
+          "y": 502.21875,
+          "width": 323,
+          "height": 38
+        },
+        "events": []
+      },
+      "beforeText": "وش أحتاج قبل Vue؟",
+      "afterURL": "",
+      "topTrace": [],
+      "after": {
+        "url": "about:srcdoc",
+        "base": "http://127.0.0.1:39341/",
+        "text": "خطة التدريب\nوش أحتاج قبل Vue؟\n\nابدأ بالمتغيرات والدوال والمصفوفات، ثم جرّب DOM.\n\nهل الدروس مقفلة؟",
+        "html": "<h1>خطة التدريب</h1>\n<details id=\"lesson-details\" open=\"\"><summary>وش أحتاج قبل Vue؟</summary><p>ابدأ بالمتغيرات والدوال والمصفوفات، ثم جرّب DOM.</p></details>\n<details><summary>هل الدروس مقفلة؟</summary><p>لا، اختر الدرس اللي تحتاجه وارجع للأساس وقت الحاجة.</p></details>\n",
+        "events": [
+          {
+            "type": "pointerdown",
+            "target": "SUMMARY",
+            "id": "",
+            "x": 198.484375,
+            "y": 180.203125,
+            "trusted": true,
+            "at": 2270.2000000001863
+          },
+          {
+            "type": "mousedown",
+            "target": "SUMMARY",
+            "id": "",
+            "x": 198,
+            "y": 180,
+            "trusted": true,
+            "at": 2270.2000000001863
+          },
+          {
+            "type": "focusin",
+            "target": "SUMMARY",
+            "id": "",
+            "trusted": true,
+            "at": 2270.399999999907
+          },
+          {
+            "type": "mouseup",
+            "target": "SUMMARY",
+            "id": "",
+            "x": 198,
+            "y": 180,
+            "trusted": true,
+            "at": 2270.899999999907
+          },
+          {
+            "type": "click",
+            "target": "SUMMARY",
+            "id": "",
+            "x": 198,
+            "y": 180,
+            "trusted": true,
+            "at": 2270.899999999907
+          }
+        ],
+        "active": "<summary>وش أحتاج قبل Vue؟</summary>"
+      },
+      "resultCount": 1,
+      "resultText": "وش أحتاج قبل Vue؟\n\nابدأ بالمتغيرات والدوال والمصفوفات، ثم جرّب DOM.",
+      "detailsOpen": true
+    },
+    {
+      "id": "js-closure-counters",
+      "settleMs": 1000,
+      "before": {
+        "url": {
+          "url": "about:srcdoc",
+          "base": "http://127.0.0.1:39341/",
+          "scroll": [
+            0,
+            0
+          ],
+          "active": "<body><button id=\"counter-a\" type=\"button\">العداد أ</button><output id=\"value-a\">0</output> <button id=\"counter-b\" type=\"button\">العداد ب</button><output id=\"value-b\">0</output>\n<script>\nfunction makeCounter(){\n let count=0;\n return function(){count+=1;return count;};\n}\nconst nextA=makeCounter();\nconst nextB=makeCounter();\ndocument.getElementById('counter-a').addEventListener('click',()=>{document.getElementById('value-a').textContent=nextA();});\ndocument.getElementById('counter-b').addEventListener('click',()=>{document.getElementById('value-b').textContent=nextB();});\n</script>\n</body>"
+        },
+        "child": {
+          "rect": {
+            "x": 303.296875,
+            "y": 24,
+            "w": 69.703125,
+            "h": 58
+          },
+          "hit": "<button id=\"counter-a\" type=\"button\">العداد أ</button>"
+        },
+        "parent": {
+          "scroll": [
+            0,
+            0
+          ],
+          "viewport": [
+            1600,
+            1080
+          ],
+          "trace": []
+        },
+        "box": {
+          "x": 1466.5625,
+          "y": 365,
+          "width": 69.703125,
+          "height": 58
+        },
+        "events": []
+      },
+      "beforeText": "0",
+      "afterURL": "",
+      "topTrace": [],
+      "after": {
+        "url": "about:srcdoc",
+        "base": "http://127.0.0.1:39341/",
+        "text": "العداد أ1 العداد ب0",
+        "html": "<button id=\"counter-a\" type=\"button\">العداد أ</button><output id=\"value-a\">1</output> <button id=\"counter-b\" type=\"button\">العداد ب</button><output id=\"value-b\">0</output>\n<script>\nfunction makeCounter(){\n let count=0;\n return function(){count+=1;return count;};\n}\nconst nextA=makeCounter();\nconst nextB=makeCounter();\ndocument.getElementById('counter-a').addEventListener('click',()=>{document.getElementById('value-a').textContent=nextA();});\ndocument.getElementById('counter-b').addEventListener('click',()=>{document.getElementById('value-b').textContent=nextB();});\n</script>\n",
+        "events": [
+          {
+            "type": "pointerdown",
+            "target": "BUTTON",
+            "id": "counter-a",
+            "x": 338.140625,
+            "y": 53,
+            "trusted": true,
+            "at": 2298.8000000002794
+          },
+          {
+            "type": "mousedown",
+            "target": "BUTTON",
+            "id": "counter-a",
+            "x": 338,
+            "y": 53,
+            "trusted": true,
+            "at": 2298.9000000003725
+          },
+          {
+            "type": "focusin",
+            "target": "BUTTON",
+            "id": "counter-a",
+            "trusted": true,
+            "at": 2299.100000000093
+          },
+          {
+            "type": "mouseup",
+            "target": "BUTTON",
+            "id": "counter-a",
+            "x": 338,
+            "y": 53,
+            "trusted": true,
+            "at": 2300.100000000093
+          },
+          {
+            "type": "click",
+            "target": "BUTTON",
+            "id": "counter-a",
+            "x": 338,
+            "y": 53,
+            "trusted": true,
+            "at": 2300.3000000002794
+          }
+        ],
+        "active": "<button id=\"counter-a\" type=\"button\">العداد أ</button>"
+      },
+      "resultCount": 1,
+      "resultText": "1"
+    },
+    {
+      "id": "js-event-delegation",
+      "settleMs": 1000,
+      "before": {
+        "url": {
+          "url": "about:srcdoc",
+          "base": "http://127.0.0.1:39341/",
+          "scroll": [
+            0,
+            0
+          ],
+          "active": "<body><button id=\"add-task\" type=\"button\">أضف مهمة</button><ul id=\"delegated-tasks\"><li><span>قراءة</span> <button type=\"button\" data-action=\"remove\"><span>إزالة</span></button></li></ul>\n<script>\nconst list=document.getElementById('delegated-tasks');\nlist.addEventListener('click',event=>{\n const button=event.target.closest('button[data-action=\"remove\"]');\n if(!button||!list.contains(button))return;\n button.closest('li').remove();\n});\ndocument.getElementById('add-task').addEventListener('click',()=>{\n const item=document.createElement('li');\n const title=document.createElement('span');title.textContent='تجربة جديدة';\n const button=document.createElement('button');button.type='button';button.dataset.action='remove';button.textContent='إزالة';\n item.append(title,' ',button);list.append(item);\n});\n</script>\n</body>"
+        },
+        "child": {
+          "rect": {
+            "x": 270.34375,
+            "y": 24,
+            "w": 102.65625,
+            "h": 58
+          },
+          "hit": "<button id=\"add-task\" type=\"button\">أضف مهمة</button>"
+        },
+        "parent": {
+          "scroll": [
+            0,
+            0
+          ],
+          "viewport": [
+            1600,
+            1080
+          ],
+          "trace": []
+        },
+        "box": {
+          "x": 1433.609375,
+          "y": 365,
+          "width": 102.65625,
+          "height": 58
+        },
+        "events": []
+      },
+      "beforeText": "قراءة إزالة",
+      "afterURL": "",
+      "topTrace": [],
+      "after": {
+        "url": "about:srcdoc",
+        "base": "http://127.0.0.1:39341/",
+        "text": "أضف مهمة\nقراءة إزالة\nتجربة جديدة إزالة",
+        "html": "<button id=\"add-task\" type=\"button\">أضف مهمة</button><ul id=\"delegated-tasks\"><li><span>قراءة</span> <button type=\"button\" data-action=\"remove\"><span>إزالة</span></button></li><li><span>تجربة جديدة</span> <button type=\"button\" data-action=\"remove\">إزالة</button></li></ul>\n<script>\nconst list=document.getElementById('delegated-tasks');\nlist.addEventListener('click',event=>{\n const button=event.target.closest('button[data-action=\"remove\"]');\n if(!button||!list.contains(button))return;\n button.closest('li').remove();\n});\ndocument.getElementById('add-task').addEventListener('click',()=>{\n const item=document.createElement('li');\n const title=document.createElement('span');title.textContent='تجربة جديدة';\n const button=document.createElement('button');button.type='button';button.dataset.action='remove';button.textContent='إزالة';\n item.append(title,' ',button);list.append(item);\n});\n</script>\n",
+        "events": [
+          {
+            "type": "pointerdown",
+            "target": "BUTTON",
+            "id": "add-task",
+            "x": 321.65625,
+            "y": 53,
+            "trusted": true,
+            "at": 2259.7000000001863
+          },
+          {
+            "type": "mousedown",
+            "target": "BUTTON",
+            "id": "add-task",
+            "x": 321,
+            "y": 53,
+            "trusted": true,
+            "at": 2259.8000000002794
+          },
+          {
+            "type": "focusin",
+            "target": "BUTTON",
+            "id": "add-task",
+            "trusted": true,
+            "at": 2260
+          },
+          {
+            "type": "mouseup",
+            "target": "BUTTON",
+            "id": "add-task",
+            "x": 321,
+            "y": 53,
+            "trusted": true,
+            "at": 2260.7000000001863
+          },
+          {
+            "type": "click",
+            "target": "BUTTON",
+            "id": "add-task",
+            "x": 321,
+            "y": 53,
+            "trusted": true,
+            "at": 2260.8000000002794
+          }
+        ],
+        "active": "<button id=\"add-task\" type=\"button\">أضف مهمة</button>"
+      },
+      "resultCount": 1,
+      "resultText": "قراءة إزالة\nتجربة جديدة إزالة"
+    },
+    {
+      "id": "html-attributes",
+      "method": "native focus then Enter",
+      "before": {
+        "url": {
+          "url": "about:srcdoc",
+          "base": "http://127.0.0.1:39341/",
+          "scroll": [
+            0,
+            0
+          ],
+          "active": "<body><a href=\"#goal\">اذهب إلى هدفي</a>\n<h2 id=\"goal\">هدفي</h2>\n<p>أتعلم كيف أبني موقعًا بنفسي.</p>\n</body>"
+        },
+        "child": {
+          "rect": {
+            "x": 249.34375,
+            "y": 38,
+            "w": 115.65625,
+            "h": 24
+          },
+          "hit": "<a href=\"#goal\">اذهب إلى هدفي</a>"
+        },
+        "parent": {
+          "scroll": [
+            0,
+            0
+          ],
+          "viewport": [
+            1600,
+            1080
+          ],
+          "trace": []
+        },
+        "box": {
+          "x": 1412.609375,
+          "y": 379,
+          "width": 115.65625,
+          "height": 24
+        },
+        "events": []
+      },
+      "after": {
+        "url": "http://127.0.0.1:39341/#goal",
+        "base": "http://127.0.0.1:39341/#goal",
+        "text": "تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة. تعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتعذرت قراءة سجل محلي؛ أبقيناه دون استبدال وأوقفنا الكتابة عليه لهذه الجلسة. صدّر تعديلات الجلسة قبل الإغلاق، ثم أعد فتح الصفحة لاستعادة القراءة.\n\nتنزيل بيانات الاسترجاع\nV\nV Lex Pro\n0\n⌨\nالرئيسية\nالمعجم\nالتدريب\nالمحاكي\nتعلّم معي\nاشرح لي الكود\nمختبر CSS\nمختبر JavaScript\nمهامي\nتقويمي\nتعذرت قراءة التخزين؛ لن نستبدل السجل الأصلي. صدّر التعديلات ثم أعد فتح الصفحة. تصدير تعديلات التعلّم الحالية\nخطتك اليو"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "finished": "2026-11-07T11:13:39.380Z"
+}

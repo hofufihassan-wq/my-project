@@ -1,0 +1,70 @@
+{
+  "note": "Official documentation source copies from MDN/Vue/Nuxt GitHub repos. Direct sites rejected by proxy. URLs/statuses in reference-*-access.json. Sources consulted only for factual corrections, not all180 URLs.",
+  "files": [
+    {
+      "file": "audit-artifacts/inventory/official-source-0.md",
+      "sha256": "7dddb6baa9b735e56ebe5a60de88242a1174d13f36eff139d32aa539c9b6bc4c",
+      "bytes": 5995
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-1.md",
+      "sha256": "ccf39e31972127bf82e3473dc5a7b55c1f39cd3b15b44d5cc14d5c342881f87c",
+      "bytes": 3736
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-10.md",
+      "sha256": "d01ae3c4887466e02800eb0e8b02ccec4d563bbe5dd29d9f292e5275133d1d40",
+      "bytes": 11134
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-11.md",
+      "sha256": "35367627f343534972aec5d8be01996922e118ec32ed1885059b013815bf12f9",
+      "bytes": 4555
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-12.md",
+      "sha256": "0dbd02e1d01ccb2c75764cbcbb9f5e20a0dc4b1768e21556956b5c7ca28ae487",
+      "bytes": 11345
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-13.md",
+      "sha256": "757631bf0ed53aa0bbd16a1480513f65ff1bf371f2e0d11468e33649a4138c0d",
+      "bytes": 23777
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-2.md",
+      "sha256": "a6705b5569244e650fd208c2440bf80339b4027d718cc3a15e02ad36234faf99",
+      "bytes": 14653
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-3.md",
+      "sha256": "ae4fb3996a6de58a0b467e60ef2058b30a46fe00bcd3b354d7ab33aa0a4e6388",
+      "bytes": 8911
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-4.md",
+      "sha256": "99b3836a88c22971dde23fd0f5bc4e0325299b4a91feed77fdcb78e82031b9ed",
+      "bytes": 7470
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-5.md",
+      "sha256": "f1f09bb8e660318bf33b5724f78f797da6fc204d732a01b7dc6b7a71ecee839f",
+      "bytes": 4149
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-6.md",
+      "sha256": "90c245376b62b9306844de483d4267e9fed4f4d37e3cc636fb3c06c22d5c58a8",
+      "bytes": 17165
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-7.md",
+      "sha256": "d3cbac48d3781b71502e57d59d654fc2f7b3ed41e71b733debd7b2eee5667a4f",
+      "bytes": 13496
+    },
+    {
+      "file": "audit-artifacts/inventory/official-source-8.md",
+      "sha256": "7dd9a8360a657b434d1e84dff42d43b545fc0e2de684d7f392086a5be561a1a1",
+      "bytes": 14677
+    }
+  ]
+}
