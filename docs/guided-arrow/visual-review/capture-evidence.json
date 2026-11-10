@@ -1,0 +1,81 @@
+{
+  "sourceCommit": "3756b6218f82878dcce07ad16fbc71127356e7a4",
+  "browser": "Chromium on Linux",
+  "freshContext": true,
+  "userDataImported": false,
+  "viewport": {
+    "width": 1280,
+    "height": 960
+  },
+  "timezone": "Asia/Riyadh",
+  "continuousRecording": true,
+  "audioRecorded": false,
+  "assertionsPassed": true,
+  "parentErrors": [],
+  "events": [
+    {
+      "seconds": 1.5,
+      "action": "01-colored-explanation.jpg"
+    },
+    {
+      "seconds": 6.3,
+      "action": "02-colored-editor.jpg"
+    },
+    {
+      "seconds": 8.5,
+      "action": "03-syntax-error.jpg"
+    },
+    {
+      "seconds": 11.4,
+      "action": "trusted-parser-location-and-original-message"
+    },
+    {
+      "seconds": 12.2,
+      "action": "04-runtime-error.jpg"
+    },
+    {
+      "seconds": 14.5,
+      "action": "05-failed-cases.jpg"
+    },
+    {
+      "seconds": 18.3,
+      "action": "06-success.jpg"
+    },
+    {
+      "seconds": 22.5,
+      "action": "five-functional-cases-passed"
+    }
+  ],
+  "images": [
+    {
+      "file": "media/01-colored-explanation.jpg",
+      "bytes": 112033,
+      "sha256": "52680e26d0e2f0001b0c2d26de4c1b15f4921ed8d3d330f140cf068619d6c170"
+    },
+    {
+      "file": "media/02-colored-editor.jpg",
+      "bytes": 68308,
+      "sha256": "2e75847d07d9d5eb67693b6076ae21c3ad93b06d02145138e50ee2c869d4b9cf"
+    },
+    {
+      "file": "media/03-syntax-error.jpg",
+      "bytes": 77471,
+      "sha256": "0def6660f25cd1877c42a7aad6a991ea7216b329899ab1a8ed6f6ce2ac589564"
+    },
+    {
+      "file": "media/04-runtime-error.jpg",
+      "bytes": 72789,
+      "sha256": "2d84480de1535411602804e9fef6c0375e83a40b64a3a77bd46830e45e80011c"
+    },
+    {
+      "file": "media/05-failed-cases.jpg",
+      "bytes": 95259,
+      "sha256": "e168b221f525b77d906025c1c30fa92bf6de07f5a5f3968ed3329d71554b68e1"
+    },
+    {
+      "file": "media/06-success.jpg",
+      "bytes": 93875,
+      "sha256": "93593ea65fe069dc68c3d4815ac78fd7d054bbca0eacbd7e270890776a4374f4"
+    }
+  ]
+}

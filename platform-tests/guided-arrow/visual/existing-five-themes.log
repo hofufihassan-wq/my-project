@@ -13,4 +13,3 @@ PASS purple explain {"lowestToken":{"token":"hljs-keyword","color":"rgb(86, 156,
 PASS light jsLab {"lowestToken":{"token":"hljs-keyword","color":"rgb(86, 156, 214)","ratio":5.653968330608518},"codeMinimum":5.653968330608518,"tokens":16,"textEstimate":11.364931935198847,"textColor":"rgb(23, 51, 44)"}
 PASS light cssLab {"lowestToken":{"token":"hljs-name","color":"rgb(224, 108, 117)","ratio":5.216765659516284},"codeMinimum":5.216765659516284,"tokens":85,"textEstimate":11.364931935198847,"textColor":"rgb(23, 51, 44)"}
 PASS light explain {"lowestToken":{"token":"hljs-keyword","color":"rgb(86, 156, 214)","ratio":5.653968330608518},"codeMinimum":5.653968330608518,"tokens":13,"textEstimate":5.204350395811821,"textColor":"rgb(81, 107, 97)"}
-
