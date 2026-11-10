@@ -1,0 +1,353 @@
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML",
+    "sha256": "d4d78098dfc96502d2f15dad07a895210aa6e0701effacad21878d150208ff29",
+    "title": "HTML: A good basis for accessibility - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-semantics"
+    ],
+    "evidence": [
+      "A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility. Not only do HTML <button> s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the Tab key"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox",
+    "sha256": "b47bb6c3896d41735719fb1e753378d55583bc20bc305cf127c84c26ab88d85d",
+    "title": "Flexbox - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-flex"
+    ],
+    "evidence": [
+      "Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals. Flexbox features may be the perfect solution for your one dimensional layout needs. Let's dig in and find out!"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids",
+    "sha256": "5d8e658f1e749b5282b30ef94e1e35f8dd8c3741298ad52e36a86e48b6219222",
+    "title": "CSS grid layout - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-grid"
+    ],
+    "evidence": [
+      "Similar to how you define flexbox, you define a grid layout by setting the value of the display property to grid . As in the case of flexbox, the display: grid property transforms all the direct children of the container into grid items. We have added the following CSS to the file: Unlike flexbox, the items will not immediately look any different. Declaring display: grid gives you a one column grid, so your items will continue to display one below"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries",
+    "sha256": "36ccc596391afd4afc19dfec3699745e138dfd8b28bfe8aef503eeb7ece3b8ee",
+    "title": "Media query fundamentals - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-responsive"
+    ],
+    "evidence": [
+      "The CSS Media Query gives you a way to apply CSS only when the browser and device environment matches a rule that you specify, for example \"viewport is wider than 480 pixels\". Media queries are a key part of responsive web design , as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
+    "sha256": "a62deea164ba480fb284b29387e6c84f544d0ccc03501db824279d52f492fabb",
+    "title": "Basic HTML syntax - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-structure"
+    ],
+    "evidence": [
+      "We could specify that this text is a paragraph by enclosing it in paragraph ( <p> ) tags: In this code block, the text \"My cat is very grumpy.\" is all defined as a paragraph. The word \"very\" is additionally defined as having strong importance."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility",
+    "sha256": "11e7d4fd141741f2d368c2e70e4b029ea95dd2ddc0a345dda19cc92ece9a8bd0",
+    "title": "HTML table accessibility - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-table"
+    ],
+    "evidence": [
+      "In the previous article, we looked at one of the most important features for making HTML tables accessible to visually impaired users — the <th> element. In this article, we continue down this path, looking at more HTML table accessibility features such as captions/summaries, grouping your rows into table head, body and footer sections, and scoping columns and rows. You can give your table a caption by putting it inside a <caption> element and nesting that inside the <table> element."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors",
+    "sha256": "cee4a203955e4c93ca00474b5b63f2df334a9ff7a65c3a0db5d056a7e31db523",
+    "title": "Basic CSS selectors - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-selectors"
+    ],
+    "evidence": [
+      "The case-sensitive class selector starts with a dot ( . ) character. It will select everything in the document with that class applied to it. In the live example below, we have created a class called highlight and applied it to several places in the document. All elements with that class are highlighted. The case-sensitive ID selector begins with a # rather than a dot character, but is used in the same way as a class selector. The difference is"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model",
+    "sha256": "abb4b9d353be58ea0a7ddf35b21ba7d6b41486b9cd8f5ffe0f582c1821eea131",
+    "title": "The box model - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-spacing"
+    ],
+    "evidence": [
+      "You can change the inner display type by setting an inner display value, for example display: flex; . The element will still use the outer display type block but this changes the inner display type to flex . Any direct children of this box will become flex items and behave according to the Flexbox specification. When you move on to learn about CSS Layout in more detail, you will encounter flex , and various other inner values that your boxes"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation",
+    "sha256": "3fe25825f10dceb3ffd1a38e61ddd9b9211caed463a7dea6c3eba28650c10c62",
+    "title": "Client-side form validation - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-form-validation"
+    ],
+    "evidence": [
+      "It is important to ensure all required form controls are filled out, in the correct format, before submitting user entered form data to the server. This client-side form validation helps ensure data entered matches the requirements set forth in the various form controls. Let's start with a basic example: an input that allows you to choose whether you prefer a banana or a cherry. This example involves a text <input> with an associated <label> and a submit <button> ."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby",
+    "sha256": "b67ecc655f3420341d5f0c3c6ac73e68cee36f722e7696904157f8a963c79632",
+    "title": "ARIA: aria-describedby attribute - ARIA | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-form-feedback"
+    ],
+    "evidence": [
+      "The global aria-describedby attribute identifies the element (or elements) that describes the element on which the attribute is set. The aria-describedby attribute lists the id s of the elements that describe the object. It is used to establish a relationship between widgets or groups and the text that describes them."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+    "sha256": "6ea6d506aa4e2e1e2a5cf5493e0ce03db5b83b4cd3cd812d751a8c8aac4369ce",
+    "title": "prefers-reduced-motion CSS media feature - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-reduced-motion"
+    ],
+    "evidence": [
+      "This example uses a scaling animation to demonstrate prefers-reduced-motion . If you enable the setting for reducing motion in the accessibility preferences on your device, the prefers-reduced-motion media query will detect your preference and the CSS within the reduced motion rules, with the same specificity but coming later in the CSS source order , will take precedence. As a result, the animation on the box will tone down to the dissolve animation, which is a more muted animation that is"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using",
+    "sha256": "abc8350e17b49c37c9bffe361cb0fbf90c2d580a0b6dcabfc1bef4f1aa59dbf0",
+    "title": "Using CSS animations - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-animations"
+    ],
+    "evidence": [
+      "CSS animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components: a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints. To create a CSS animation sequence, you style the element you want to animate with the animation property or its sub-properties. This lets you configure the timing, duration, and other details of"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties",
+    "sha256": "c56e7cb894aa1038dc3eabe88422efc706f7f911c61bc79633b5ed5a4d6bbede",
+    "title": "Using CSS custom properties (variables) - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-themes"
+    ],
+    "evidence": [
+      "Custom properties (sometimes referred to as CSS variables or cascading variables ) are entities defined by CSS authors that represent specific values to be reused throughout a document. They are set using the @property at-rule or by custom property syntax (e.g., --primary-color: blue; ). Custom properties are accessed using the CSS var() function (e.g., color: var(--primary-color); ). Complex websites have very large amounts of CSS, and this often results in a lot of repeated CSS values. For example, it's common"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clamp",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp",
+    "sha256": "bffd4a98521f65866ac6530627d05b0c344553d13c98cda82ba18a0ae169b6a4",
+    "title": "clamp() CSS function - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-fluid-tokens"
+    ],
+    "evidence": [
+      "The clamp() CSS function clamps a value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value. Note that using clamp() for font sizes, as in these examples, allows you to set a font-size that grows with the size of the viewport, but doesn't go below a minimum font-size or above a maximum font-size. It has the same effect as"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color",
+    "sha256": "b8c53a3340fb2878dc7e7128aa5a39ecae764d21b279a8e22f1296f6aa861f8b",
+    "title": "color CSS property - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-selectors"
+    ],
+    "evidence": [
+      "Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current Web Content Accessibility Guidelines (WCAG) , a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and bold or larger, or 24px or larger."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/min-width",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/min-width",
+    "sha256": "5c5baf69a5bdd2e842c3e4c14b6df8be53b467989eb22637fd22505c69d9c1b3",
+    "title": "min-width CSS property - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-flex-minwidth"
+    ],
+    "evidence": [
+      "The min-width CSS property sets the minimum width of an element. It prevents the used value of the width property from becoming smaller than the value specified for min-width . For flex items and grid items, the minimum width value is either the specified suggested size, such as the value of the width property, the transferred size, calculated if the element has an aspect-ratio set and the height is a definite size, otherwise, the min-content size is used. If the"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/minmax",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/minmax",
+    "sha256": "a045d62bdf2a525e49c8655b741a9a1d4f3f28b461586fedfbd1bae1ae54fa29",
+    "title": "minmax() CSS function - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-grid-minmax"
+    ],
+    "evidence": [
+      "The second parameter max also accepts <flex> values. (this fr units can only be used for max , and are invalid for min .) A non-negative percentage relative to the inline size of the grid container in column grid tracks, and the block size of the grid container in row grid tracks. If the size of the grid container depends on the size of its tracks, then the <percentage> must be treated as auto . The user agent may adjust"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/position",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position",
+    "sha256": "f39fbe33f25fc44c48fee9eccbe3e303780233c3ad4b28285566e2f6cdf0d270",
+    "title": "position CSS property - CSS | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "css-position"
+    ],
+    "evidence": [
+      "The position CSS property sets how an element is positioned in a document. The top , right , bottom , and left physical properties and the inset-block-start , inset-block-end , inset-inline-start , and inset-inline-end flow-relative logical properties can be used to determine the final location of positioned elements. The element is positioned according to the Normal Flow of the document. The top , right , bottom , left , and z-index properties have no effect . This is the default"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a",
+    "sha256": "a6b73d605e3d4cbee2d7fdb8a5049e940b18851b053a1fb07d87b4520be511b9",
+    "title": "<a> HTML anchor element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-attributes"
+    ],
+    "evidence": [
+      "Was required to define a possible target location in a page. In HTML 4.01, id and name could both be used on <a> , as long as they had identical values. If an icon is used to signify link behavior, make sure it has an alt attribute to describe its purpose. In case the icon is missing, the alt attribute's content will still convey the link's behavior."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details",
+    "sha256": "6a90fb28bdaa632a1bb54464986366550bb45ed0ac8c40b634d56c1215daf080",
+    "title": "<details> HTML details disclosure element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-details"
+    ],
+    "evidence": [
+      "The <details> HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an open state. A summary or label must be provided using the <summary> element. A disclosure widget is typically presented onscreen using a small triangle that rotates (or twists) to indicate open/closed state, with a label next to the triangle. The contents of the <summary> element are used as the label for the disclosure widget. The contents of the <details>"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img",
+    "sha256": "adb29b16462d6d2c909f259c1a2954e2dccbe1245b09d19b9b4a157682ca8370",
+    "title": "<img> HTML image embed element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-images"
+    ],
+    "evidence": [
+      "Indicates if the fetching of the image must be done using a CORS request. Image data from a CORS-enabled image returned from a CORS request can be reused in the <canvas> element without being marked \" tainted \". Lazy loading avoids the network and storage bandwidth required to handle the image until it's reasonably certain that it will be needed. This improves the performance in most typical use cases."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label",
+    "sha256": "d100f6cd29dbba6c05a615e434c726b502537b823bc3b3b7b8ca9efce25a10dd",
+    "title": "<label> HTML label element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-form"
+    ],
+    "evidence": [
+      "The <label> HTML element represents a caption for an item in a user interface. The value is the id of the labelable form control in the same document, associating the <label> with that form control . Note that its JavaScript reflection property is htmlFor ."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul",
+    "sha256": "72f3ab3a00b8c282c0002241d169c445d0f89d9f4d9f3ea288b0eef6dcb861d4",
+    "title": "<ul> HTML unordered list element - HTML | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "html-lists"
+    ],
+    "evidence": [
+      "The <ul> HTML element represents an unordered list of items, typically rendered as a bulleted list."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+    "sha256": "d836c3fa40b75590ddeae667d2630083e04c9c7ed361cad9959660e90bf27263",
+    "title": "Functions - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-values"
+    ],
+    "evidence": [
+      "Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it. The"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types",
+    "sha256": "fc5991aa861c8de60865fb35cd140e3957977aff3a2ac2fb839c0bded729942f",
+    "title": "Grammar and types - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-values"
+    ],
+    "evidence": [
+      "An alternative method of retrieving a number from a string is with the + (unary plus) operator. This implicitly performs number conversion , which is the same process as the Number() function. Literals represent values in JavaScript. These are fixed values—not variables—that you literally provide in your script. This section describes the following types of literals:"
+    ]
+  },
+  {
+    "url": "https://vuejs.org/api/sfc-script-setup.html",
+    "resolved": "https://vuejs.org/api/sfc-script-setup.html",
+    "sha256": "45c3929f57f3ff007ad56597c891fed7f2812e3647bfc68b13210335ae488b0a",
+    "title": "<script setup> | Vue.js",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "vue-ref"
+    ],
+    "evidence": [
+      "<script setup> is a compile-time syntactic sugar for using Composition API inside Single-File Components (SFCs). It is the recommended syntax if you are using both SFCs and Composition API. It provides a number of advantages over the normal <script> syntax: Reactive state needs to be explicitly created using Reactivity APIs . Similar to values returned from a setup() function, refs are automatically unwrapped when referenced in templates:"
+    ]
+  },
+  {
+    "url": "https://vuejs.org/guide/essentials/reactivity-fundamentals.html",
+    "resolved": "https://vuejs.org/guide/essentials/reactivity-fundamentals.html",
+    "sha256": "724fb2d51eb8f83855b785a84ac643c11a1e218f50789b18b4305c8d39ec5934",
+    "title": "Reactivity Fundamentals | Vue.js",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "vue-ref"
+    ],
+    "evidence": [
+      "This page and many other chapters later in the guide contain different content for the Options API and the Composition API. Your current preference is Options API Composition API . You can toggle between the API styles using the \"API Preference\" switches at the top of the left sidebar. With the Options API, we use the data option to declare reactive state of a component. The option value should be a function that returns an object. Vue will call the"
+    ]
+  }
+]
