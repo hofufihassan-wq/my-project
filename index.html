@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="learning-explainer.css">
   <link rel="stylesheet" href="learning-course.css">
   <link rel="stylesheet" href="guided-arrow.css">
+  <link rel="stylesheet" href="guided-learning.css">
   <link rel="stylesheet" href="learning-css-lab.css">
   <link rel="stylesheet" href="learning-js-lab.css">
   <link rel="stylesheet" href="learning-dashboard.css">
@@ -148,8 +149,10 @@
   <aside v-if="appMode !== 'practice' && !learningStatus.persistent" class="learning-storage-warning" role="alert">{{ learningStatus.message }} <button @click="exportLearningData">تصدير تعديلات التعلّم الحالية</button></aside>
   <main v-if="appMode === 'explain'" class="learning-page"><vlex-explainer :key="explainKey" :terms="rawLexiconData" :initial-code="explainSource" @open-term="openLearningTerm" /></main>
   <aside v-if="learningReturnToArrow && appMode !== 'arrow'" class="learning-page arrow-return"><button @click="openLearning('arrow')" data-testid="arrow-return">العودة إلى درس الدوال السهمية</button></aside>
+  <aside v-if="learningReturnToGuided && appMode !== 'guided'" class="learning-page arrow-return"><button @click="openLearning('guided')" data-testid="guided-return">العودة إلى الدرس الموجّه</button></aside>
+  <main v-if="appMode === 'guided'" class="learning-page"><vlex-guided @practice="practiceFromLearning" @arrow="openLearning('arrow')" /></main>
   <main v-if="appMode === 'arrow'" class="learning-page"><vlex-guided-arrow @practice="practiceFromLearning" @open-term="openLearningTerm" @prerequisite="openArrowPrerequisite" /></main>
-  <main v-if="appMode === 'course'" class="learning-page"><div class="vlex-course"><button @click="openLearning('arrow')" data-testid="open-arrow">جرّب الدرس الموجّه: Arrow Functions — استكمال تقدّمك</button></div><vlex-course @practice="practiceFromLearning" /></main>
+  <main v-if="appMode === 'course'" class="learning-page"><div class="vlex-course"><button @click="openLearning('arrow')" data-testid="open-arrow">جرّب الدرس الموجّه: Arrow Functions — استكمال تقدّمك</button></div><div class="vlex-course"><button @click="openLearning('guided')" data-testid="open-guided">دروس HTML وCSS وJavaScript وVue الموجّهة</button></div><vlex-course @practice="practiceFromLearning" /></main>
   <main v-if="appMode === 'cssLab'" class="learning-page"><vlex-css-lab /></main>
   <main v-if="appMode === 'jsLab'" class="learning-page"><vlex-js-lab @practice="practiceFromLearning" /></main>
   <main v-if="appMode === 'home'" class="dashboard-shell emerald-dashboard">
@@ -2480,6 +2483,9 @@
 <script src="guided-arrow-evaluator.js"></script>
 <script src="guided-arrow-feedback.js"></script>
 <script src="guided-arrow.js"></script>
+<script src="guided-evaluator.js"></script>
+<script src="guided-lessons.js"></script>
+<script src="guided-learning.js"></script>
 <script src="learning-dashboard.js"></script>
 <script src="code-presentation.js"></script>
 <script src="app.js"></script>

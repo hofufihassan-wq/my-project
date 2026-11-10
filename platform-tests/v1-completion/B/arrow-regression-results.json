@@ -1,0 +1,92 @@
+{
+  "source": "feat/vlex-guided-arrow",
+  "passed": 21,
+  "total": 21,
+  "results": [
+    {
+      "name": "direct pilot route mounts all eight stages without parent errors",
+      "passed": true
+    },
+    {
+      "name": "line and token explanations respond to click and keyboard",
+      "passed": true
+    },
+    {
+      "name": "prediction wrong/correct answers and progressive hints persist",
+      "passed": true
+    },
+    {
+      "name": "playground executes actual example output",
+      "passed": true
+    },
+    {
+      "name": "syntax errors and infinite loops do not freeze parent",
+      "passed": true
+    },
+    {
+      "name": "unsupported simulator source gives precise refusal",
+      "passed": true
+    },
+    {
+      "name": "alternative correct implementations and ordinary/edge cases pass",
+      "passed": true
+    },
+    {
+      "name": "constant/wrong and missing return solutions fail actual cases",
+      "passed": true
+    },
+    {
+      "name": "assessment infinite loop terminates and can run again",
+      "passed": true
+    },
+    {
+      "name": "fix task accepts explicit or implicit returns",
+      "passed": true
+    },
+    {
+      "name": "optional filter tests empty negative zero duplicate and nonmutation",
+      "passed": true
+    },
+    {
+      "name": "selected exercise and its hints survive reload",
+      "passed": true
+    },
+    {
+      "name": "untrusted global messages cannot forge a pass",
+      "passed": true
+    },
+    {
+      "name": "mastery requires quizzes and novel code, then editing revokes proof",
+      "passed": true
+    },
+    {
+      "name": "simulator receives exact supported source without auto-run and returns to saved stage",
+      "passed": true
+    },
+    {
+      "name": "old course saves preserve guided state and prerequisite selection",
+      "passed": true
+    },
+    {
+      "name": "backup roundtrip and rejected import preserve draft, hints and other data",
+      "passed": true
+    },
+    {
+      "name": "XSS-like playground strings cannot escape parent",
+      "passed": true
+    },
+    {
+      "name": "all themes and mobile maintain usable pilot layout",
+      "passed": true
+    },
+    {
+      "name": "full browser process restart restores current step, drafts and mastery evidence",
+      "passed": true
+    },
+    {
+      "name": "no unexpected parent errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
