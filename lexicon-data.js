@@ -79,12 +79,12 @@ window.RAW_LEXICON_TUPLES = [
       "الاستخدام النموذجي: كتابة دوال رد الاتصال (Callbacks) الممررة لمصفوفات map و filter",
       "الصيغة العامة: (param1, param2) => expression | { statements }."
     ],
-    "⚠️ تعامل دائماً مع الحالات الخاصة (Edge Cases) مثل القيم الفارغة null أو undefined قبل استدعاء Arrow Function (=>).",
+    "الدالة السهمية لا تملك this أو arguments خاصين بها، ولا تصلح للاستدعاء باستخدام new. جسم الدالة بين {} يحتاج return لإرجاع قيمة؛ وإرجاع كائن مباشرة يكتب هكذا: () => ({ value: 1 }).",
     [
       {
-        "name": "arguments",
+        "name": "parameters",
         "type": "Params",
-        "desc": "(param1, param2) => expression | { statements }"
+        "desc": "المعاملات أسماء المدخلات بين القوسين؛ ليست كائن arguments. مثال: (a, b) => a + b"
       },
       {
         "name": "return",
