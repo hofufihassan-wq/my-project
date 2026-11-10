@@ -4,19 +4,20 @@
 const LIMIT=16000,TIMEOUT=2200;
 const fail=text=>{throw Error(text)};
 function walk(node,fn){if(!node||typeof node!=='object')return;fn(node);for(const[k,v]of Object.entries(node)){if(['loc','extra','comments','leadingComments','trailingComments','innerComments','tokens'].includes(k))continue;if(Array.isArray(v))v.forEach(n=>walk(n,fn));else if(v&&typeof v==='object')walk(v,fn)}}
-function compileVue(source,compiler){
+function compileVue(source,compiler,routerEnabled=false){
  const parsed=compiler.parse(source,{filename:'Lesson.vue'});if(parsed.errors.length)throw parsed.errors[0];
  const d=parsed.descriptor;if(!d.template||!d.scriptSetup||d.script)fail('النطاق المدعوم: مكوّن SFC بـ template وscript setup، دون script عادي.');
  if(d.scriptSetup.lang&&d.scriptSetup.lang!=='js')fail('TypeScript غير مدعوم في هذا التقييم.');
  if(d.template.src||d.scriptSetup.src||d.styles.some(s=>s.src)||d.customBlocks.length)fail('اكتب المكوّن في الملف نفسه؛ لا ملفات أو حزم خارجية.');
  const original=compiler.babelParse(d.scriptSetup.content,{sourceType:'module'});
- for(const n of original.program.body)if(n.type==='ImportDeclaration'&&(n.source.value!=='vue'||n.specifiers.some(s=>s.type!=='ImportSpecifier')))fail('تُدعم استيرادات Vue المسماة فقط.');
+ for(const n of original.program.body)if(n.type==='ImportDeclaration'&&n.source.value==='vue-router'&&!routerEnabled)fail('Vue Router متاح فقط في درس يعلن سياق Router ذاكرة معزولًا.');
+ for(const n of original.program.body)if(n.type==='ImportDeclaration'&&(!['vue','vue-router'].includes(n.source.value)||n.specifiers.some(s=>s.type!=='ImportSpecifier')))fail('تُدعم استيرادات Vue المسماة فقط.');
  // Compile only as data in parent; resulting code executes in a terminable Worker.
  const compiled=compiler.compileScript(d,{id:'vlex-guided',inlineTemplate:true,templateOptions:{compilerOptions:{hoistStatic:false}}}).content;
  const ast=compiler.babelParse(compiled,{sourceType:'module'});const edits=[];
  for(const n of ast.program.body){if(n.type==='ImportDeclaration'){
-  if(n.source.value!=='vue'||n.specifiers.some(s=>s.type!=='ImportSpecifier'))fail('الاستيراد خارج Vue غير مدعوم.');
-  edits.push({start:n.start,end:n.end,text:'const {'+n.specifiers.map(s=>s.imported.name+':'+s.local.name).join(',')+'}=Vue;'});
+  if(!['vue','vue-router'].includes(n.source.value)||n.specifiers.some(s=>s.type!=='ImportSpecifier'))fail('الاستيراد خارج Vue غير مدعوم.');
+  edits.push({start:n.start,end:n.end,text:'const {'+n.specifiers.map(s=>s.imported.name+':'+s.local.name).join(',')+'}='+(n.source.value==='vue'?'Vue':'VueRouter')+';'});
  }else if(n.type==='ExportDefaultDeclaration')edits.push({start:n.start,end:n.declaration.start,text:'return '});else if(n.type.startsWith('Export'))fail('لا تصدير إضافيًا في المكوّن.');}
  let code=compiled;for(const e of edits.sort((a,b)=>b.start-a.start))code=code.slice(0,e.start)+e.text+code.slice(e.end);
  return{code,styles:d.styles.map(s=>s.content).join('\n')};
@@ -29,7 +30,7 @@ function prepare(source,spec,compiler){
   const script=spec.language==='vue'?compiler.parse(source).descriptor.scriptSetup?.content:source;
   if(script){const ast=compiler.babelParse(script,{sourceType:spec.language==='vue'||spec.module?'module':'script'});walk(ast,n=>{if(n.type==='ImportExpression'||n.type==='Import'||n.type==='Identifier'&&(n.name==='document'&&spec.environment!=='dom'||n.name==='fetch'&&!spec.mockFetch||n.name==='localStorage'&&!spec.storage)||n.type==='Identifier'&&['self','globalThis','window','parent','top','XMLHttpRequest','WebSocket','EventSource','importScripts','Function','eval','constructor','prototype','__proto__'].includes(n.name)||n.type==='MemberExpression'&&n.computed&&n.property.type==='StringLiteral'&&['constructor','prototype','__proto__'].includes(n.property.value))fail('هذا التقييم لا يدعم الوصول إلى بيئة التطبيق أو الشبكة أو إنشاء كود ديناميكي.');});}
  }
- if(spec.language==='vue')Object.assign(out,compileVue(source,compiler));
+ if(spec.language==='vue')Object.assign(out,compileVue(source,compiler,!!spec.router));
  if(spec.language==='javascript'){
   try{const parsed=compiler.babelParse(source,{sourceType:spec.module?'module':'script'});if(spec.module){out.moduleImports=[];for(const n of parsed.program.body)if(n.type==='ImportDeclaration'||(n.type==='ExportNamedDeclaration'||n.type==='ExportAllDeclaration')&&n.source){if(!Object.hasOwn(spec.modules||{},n.source.value))fail('استيراد غير مدعوم: استخدم وحدة التمرين المحلية الموثقة.');out.moduleImports.push({start:n.source.start,end:n.source.end,name:n.source.value})}}}catch(e){e.phase='parse';throw e}
   if(!/^[A-Za-z_$][\w$]*$/.test(spec.entry||''))fail('لا يوجد مدخل موثوق للتمرين.');
@@ -40,19 +41,29 @@ function prepare(source,spec,compiler){
 function workerRuntime(){
  'use strict';
  const NativeFunction=Function,parse=JSON.parse,stringify=JSON.stringify,keys=Object.keys,entries=Object.entries,own=Object.hasOwn,isArray=Array.isArray,finite=Number.isFinite,apply=Reflect.apply;
- let port,send,config,tree,Vue,instance,DOM;
+ let port,send,config,tree,Vue,VueRouter,instance,DOM,app,router,rootProps;const emitted={};
  const text=v=>{try{return typeof v==='string'?v:stringify(v)??String(v)}catch(_){return '[قيمة غير قابلة للعرض]'}};
  const same=(a,b)=>{if(a===b)return true;if(typeof a!==typeof b||a===null||b===null||typeof a!=='object')return false;if(isArray(a)!==isArray(b))return false;const ak=keys(a),bk=keys(b);if(ak.length!==bk.length)return false;for(let i=0;i<ak.length;i++){const k=ak[i];if(!own(b,k)||!same(a[k],b[k]))return false}return true};
  function disableNetwork(){for(const key of ['Object','Array','Function','Number','String','Boolean','Promise','Map','Set','RegExp','JSON','Math','Reflect']){const value=self[key];try{if(value.prototype)Object.freeze(value.prototype);Object.freeze(value);Object.defineProperty(self,key,{value,writable:false,configurable:false})}catch(_){}}for(const k of ['fetch','XMLHttpRequest','WebSocket','EventSource','importScripts','Worker','SharedWorker','BroadcastChannel','indexedDB','caches'])try{Object.defineProperty(self,k,{value:undefined,writable:false,configurable:false})}catch(_){}}
  function describe(e){return{message:String(e?.message||e).slice(0,1600),name:String(e?.name||'Error'),stack:String(e?.stack||'').slice(0,5000)}}
- function node(tag,value=''){return{tag,text:value,children:[],parent:null,props:{},style:{display:''},value:'',listeners:{},addEventListener(type,fn){(this.listeners[type]??=[]).push(fn)},removeEventListener(type,fn){this.listeners[type]=(this.listeners[type]||[]).filter(f=>f!==fn)},getAttribute(key){return this.props[key]??null},setAttribute(key,value){this.props[key]=String(value)},removeAttribute(key){delete this.props[key]},dispatchEvent(event){event.target=this;for(const fn of this.listeners[event.type]||[])fn(event);const handler=this.props['on'+event.type[0].toUpperCase()+event.type.slice(1)];if(typeof handler==='function')handler(event);else if(isArray(handler))handler.forEach(fn=>fn(event));return true}}}
+ function node(tag,value=''){return{tag,text:value,children:[],parent:null,props:{},style:{display:''},value:'',listeners:{},addEventListener(type,fn){(this.listeners[type]??=[]).push(fn)},removeEventListener(type,fn){this.listeners[type]=(this.listeners[type]||[]).filter(f=>f!==fn)},getAttribute(key){return this.props[key]??null},setAttribute(key,value){this.props[key]=String(value)},removeAttribute(key){delete this.props[key]},dispatchEvent(event){event.target=this;event.currentTarget=this;event.preventDefault??=()=>{event.defaultPrevented=true};event.stopPropagation??=()=>{};for(const fn of this.listeners[event.type]||[])fn(event);const handler=this.props['on'+event.type[0].toUpperCase()+event.type.slice(1)];if(typeof handler==='function')handler(event);else if(isArray(handler))handler.forEach(fn=>fn(event));return true}}}
  function snapshot(n,depth=0){if(depth>30)throw Error('المخرجات متداخلة أكثر من الحد.');return{tag:n.tag,text:n.text,props:Object.fromEntries(entries(n.props).filter(([k,v])=>!k.startsWith('on')&&['string','number','boolean'].includes(typeof v))),children:n.children.map(c=>snapshot(c,depth+1))}}
  function all(n){return[n,...n.children.flatMap(all)]}
  function matches(n,selector){const match=/^([a-z][\w-]*)?(?:#([\w-]+))?(?:\.([\w-]+))?(?:\[([\w-]+)(?:="([^"]*)")?\])?$/i.exec(selector);if(!match)throw Error('محدد Vue المدعوم: اسم عنصر أو #id أو .class أو [خاصية="قيمة"].');return(!match[1]||n.tag===match[1])&&(!match[2]||n.props.id===match[2])&&(!match[3]||String(n.props.class||'').split(/\s+/).includes(match[3]))&&(!match[4]||own(n.props,match[4])&&(match[5]===undefined||String(n.props[match[4]])===match[5]))}
  function find(selector){return all(tree).filter(n=>matches(n,selector))}
  const content=n=>n.text+n.children.map(content).join('');
- function vueCheck(rule){const found=find(rule.selector),n=found[0];let actual;if(rule.kind==='count')actual=found.length;else if(!n)actual=null;else if(rule.kind==='text')actual=content(n);else if(rule.kind==='prop')actual=n.props[rule.property]??null;else if(rule.kind==='value')actual=n.value;else throw Error('قاعدة Vue غير معروفة');return{label:rule.label,expected:text(rule.expected),actual:text(actual),passed:same(actual,rule.expected)}}
- async function vueAction(action){if(action.kind==='tick'){await Vue.nextTick();return}const n=find(action.selector)[0];if(!n)throw Error('لم يُعثر على عنصر التفاعل: '+action.selector);if(action.kind==='input'){n.value=action.value;self.document.activeElement=n;n.dispatchEvent({type:'input'});self.document.activeElement=null}else if(action.kind==='append'){const holder=doc.createElement('div');holder.innerHTML=action.html;while(holder.firstChild)n.append(holder.firstChild)}else if(action.kind==='click')n.dispatchEvent({type:'click'});else if(action.kind==='submit')n.dispatchEvent({type:'submit',preventDefault(){},stopPropagation(){}});else throw Error('تفاعل غير مدعوم');await Vue.nextTick()}
+ function vueCheck(rule){const found=rule.kind==='event'?[]:find(rule.selector),n=found[0];let actual;if(rule.kind==='event')actual=emitted[rule.property]||[];else if(rule.kind==='style')actual=n?.style[rule.property]??null;else if(rule.kind==='count')actual=found.length;else if(!n)actual=null;else if(rule.kind==='text')actual=content(n);else if(rule.kind==='prop')actual=n.props[rule.property]??null;else if(rule.kind==='value')actual=n.value;else throw Error('قاعدة Vue غير معروفة');return{label:rule.label,expected:text(rule.expected),actual:text(actual),passed:same(actual,rule.expected)}}
+ async function vueAction(action){
+  if(action.kind==='setProps'){Object.assign(rootProps,action.value);await Vue.nextTick();return}
+  if(action.kind==='unmount'){app.unmount();await Vue.nextTick();return}
+  if(action.kind==='route'){if(!router)throw Error('لا يوجد Router في سياق هذا الدرس.');await router.push(action.path);await Vue.nextTick();return}
+  if(action.kind==='tick'){await Vue.nextTick();return}
+  const n=find(action.selector)[0];if(!n)throw Error('لم يُعثر على عنصر التفاعل: '+action.selector);
+  if(action.kind==='input'||action.kind==='change'){n.value=action.value;self.document.activeElement=n;n.dispatchEvent({type:action.kind});self.document.activeElement=null}
+  else if(action.kind==='click')n.dispatchEvent({type:'click',button:0});
+  else if(action.kind==='submit')n.dispatchEvent({type:'submit'});else throw Error('تفاعل غير مدعوم');
+  await new Promise(r=>setTimeout(r,0));await Vue.nextTick();
+ }
  async function runVue(){
   // Genuine Vue renderer/reactivity, with a bounded custom host rather than a browser DOM.
   self.document={activeElement:null};self.Event=class{constructor(type){this.type=type}};
@@ -65,7 +76,12 @@ function workerRuntime(){
    patchProp(n,key,old,value){n.props[key]=value;if(key==='value')n.value=value??'';if(key==='style'&&value&&typeof value==='object')Object.assign(n.style,value);if(key==='class')n.props.class=value||''},
    querySelector:()=>null,setScopeId(){},insertStaticContent(){throw Error('محتوى static المحسّن غير مدعوم في العارض؛ استخدم عنصرًا ديناميكيًا في هذا المثال.')}
   });
-  tree=node('root');const component=new NativeFunction('Vue','"use strict";\n'+config.code)(Vue);const app=renderer.createApp(component,config.props||{});app.config.errorHandler=e=>{throw e};instance=app.mount(tree);await Vue.nextTick();
+  tree=node('root');const component=new NativeFunction('Vue','VueRouter','"use strict";\n'+config.code)(Vue,VueRouter);rootProps=Vue.reactive({...config.props});
+  const slots={};for(const[name,value]of entries(config.slots||{}))slots[name]=()=>Vue.h(value.tag||'span',value.props||{},String(value.text||''));
+  const listeners={};for(const name of config.events||[])listeners['on'+name[0].toUpperCase()+name.slice(1)]=(...args)=>{(emitted[name]??=[]).push(args);if(config.model&&name==='update:modelValue')rootProps.modelValue=args[0]};
+  app=renderer.createApp({setup:()=>()=>Vue.h(component,{...rootProps,...listeners},slots)});app.config.errorHandler=e=>{throw e};
+  if(config.router){router=VueRouter.createRouter({history:VueRouter.createMemoryHistory(),routes:config.router.routes.map(r=>({path:r.path,component:{render:()=>Vue.h('p',{id:'route-view'},r.text)}}))});app.use(router);await router.push(config.router.initial||'/');await router.isReady()}
+  instance=app.mount(tree);await Vue.nextTick();
   const checks=[];for(const phase of config.phases||[]){for(const a of phase.actions||[])await vueAction(a);for(const rule of phase.rules||[])checks.push(vueCheck(rule))}
   send({kind:'result',checks,snapshot:snapshot(tree),logs:[]});
  }
@@ -91,28 +107,28 @@ function workerRuntime(){
   const preview=doc?doc.toString():undefined;if(preview&&preview.length>100000)throw Error('تجاوزت مخرجات DOM الحد المسموح.');send({kind:'result',checks,logs,...(preview?{preview}:{}),...(config.persistStorage?{storage:storageData}:{})});
  }
  function initialize(event){if(event.data?.type!=='VLEX_GUIDED_INIT'||!event.ports[0]||port)return;self.removeEventListener('message',initialize);port=event.ports[0];send=port.postMessage.bind(port);config=event.data.config;
-  try{if(config.language==='vue'){importScripts(config.vueURL);Vue=self.Vue}if(config.environment==='dom'){importScripts(config.domURL);DOM=self.VLexDOM}disableNetwork();Promise.resolve(config.language==='vue'?runVue():runJS()).catch(e=>send({kind:'error',error:describe(e)}))}catch(e){send({kind:'error',error:describe(e)})}
+  try{if(config.language==='vue'){importScripts(config.vueURL);Vue=self.Vue;if(config.router){importScripts(config.routerURL);VueRouter=self.VueRouter}}if(config.environment==='dom'){importScripts(config.domURL);DOM=self.VLexDOM}disableNetwork();Promise.resolve(config.language==='vue'?runVue():runJS()).catch(e=>send({kind:'error',error:describe(e)}))}catch(e){send({kind:'error',error:describe(e)})}
  }
  self.addEventListener('message',initialize);
 }
-function workerBroker(runtime,vueURL,domURL){
+function workerBroker(runtime,vueURL,domURL,routerURL){
  const script='const runtime='+JSON.stringify(runtime)+';const expectedParent=parent;let worker=null,port=null;addEventListener("message",function init(e){if(e.source!==expectedParent||!e.ports[0]||port)return;port=e.ports[0];removeEventListener("message",init);try{const url=URL.createObjectURL(new Blob([runtime],{type:"text/javascript"}));worker=new Worker(url);URL.revokeObjectURL(url);const channel=new MessageChannel();channel.port1.onmessage=e=>port.postMessage(e.data);worker.onerror=e=>{e.preventDefault();port.postMessage({kind:"error",error:{message:e.message,name:"WorkerError"}})};worker.postMessage({type:"VLEX_GUIDED_INIT",config:e.data},[channel.port2]);}catch(e){port.postMessage({kind:"error",error:{message:e.message,name:e.name}})}});';
- const policy="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' blob: "+vueURL+" "+domURL+"; worker-src blob:; connect-src 'none'; img-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'";
+ const policy="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' blob: "+vueURL+" "+domURL+" "+routerURL+"; worker-src blob:; connect-src 'none'; img-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'";
  return '<!doctype html><meta http-equiv="Content-Security-Policy" content="'+policy+'"><script>'+script.replace(/<\/script/gi,'<\\/script')+'<\/script>';
 }
 function runWorker(plan){
  let done=false,timer,frame,port;const cleanup=()=>{clearTimeout(timer);port?.close();frame?.remove()};let resolve;
  const promise=new Promise(r=>resolve=r);const finish=result=>{if(done)return;done=true;cleanup();resolve(result)};
  try{
-  const vueURL=new URL('assets/vendor/vue-3.4.21.global.prod.js',document.baseURI).href,domURL=new URL('assets/vendor/linkedom-0.18.12.global.min.js',document.baseURI).href;
+  const vueURL=new URL('assets/vendor/vue-3.4.21.global.prod.js',document.baseURI).href,domURL=new URL('assets/vendor/linkedom-0.18.12.global.min.js',document.baseURI).href,routerURL=new URL('assets/vendor/vue-router-4.5.1.global.prod.js',document.baseURI).href;
   frame=document.createElement('iframe');frame.setAttribute('sandbox','allow-scripts');frame.hidden=true;
   const channel=new MessageChannel();port=channel.port1;port.onmessage=event=>{const d=event.data;if(!d||!['result','error'].includes(d.kind))return;
    const expected=plan.language==='vue'||plan.environment==='dom'?(plan.phases||[]).reduce((n,p)=>n+(p.rules||[]).length,0):(plan.cases||[]).length;
    if(d.kind==='result'&&(!Array.isArray(d.checks)||d.checks.length!==expected||d.checks.some(c=>typeof c.passed!=='boolean'||typeof c.label!=='string'||typeof c.actual!=='string'||typeof c.expected!=='string')))return finish({kind:'error',error:{message:'نتيجة تقييم غير صالحة؛ لم يُحتسب نجاح.'}});
    finish(d);
   };
-  frame.onload=()=>{if(!done)try{frame.contentWindow.postMessage({...plan,vueURL,domURL},'*',[channel.port2])}catch(e){finish({kind:'error',error:{message:e.message,name:e.name,stack:e.stack}})}};
-  frame.srcdoc=workerBroker('('+workerRuntime.toString()+')()',vueURL,domURL);document.body.append(frame);
+  frame.onload=()=>{if(!done)try{frame.contentWindow.postMessage({...plan,vueURL,domURL,routerURL},'*',[channel.port2])}catch(e){finish({kind:'error',error:{message:e.message,name:e.name,stack:e.stack}})}};
+  frame.srcdoc=workerBroker('('+workerRuntime.toString()+')()',vueURL,domURL,routerURL);document.body.append(frame);
   timer=setTimeout(()=>finish({kind:'timeout',error:{message:'تجاوز التنفيذ المهلة وأُوقف العامل. لم يُحتسب نجاح.',name:'Timeout',stack:''}}),TIMEOUT);
  }catch(e){finish({kind:'error',error:{message:e.message,name:e.name,stack:e.stack}})}
  return{promise,stop:()=>finish({kind:'cancelled'})};
