@@ -1,0 +1,9 @@
+PASS AST gives statement ranges, preserving multiline/semicolon-containing source
+PASS destructured bindings are real names, not property keys or runtime guesses
+PASS source/directive/unsupported syntax limits are explicit
+PASS all observation envelopes are session-index-shape bounded
+PASS script closing text is encoded in frame configuration without escaping the iframe
+PASS continuous instrumentation never awaits between user statements; manual mode explicitly gates
+PASS private instrumentation names and lexical eval are unsupported; async examples require continuous mode
+7/7 unit checks passed
+

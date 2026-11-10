@@ -1,0 +1,13 @@
+PASS manual analyzer explains real statements and textual cross-line declaration references
+PASS no fabricated values for unknown functions
+PASS comments and string content cannot invent declaration references
+PASS comments preserve boundaries across lines
+PASS operators are not split and strings are never evaluated
+PASS CSS properties explain property rather than same-named keyword value
+PASS Vue script and style blocks recognized without executing source
+PASS known hydrated term references preserve original ID
+PASS empty and excessive sources fail explicitly rather than partial pretend success
+PASS unclosed quotes and TypeScript remain bounded explicit limitations
+PASS JS remainder is not parsed as percent unit and CSS colors/custom properties are explicit
+11/11 passed
+

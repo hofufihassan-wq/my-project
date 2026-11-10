@@ -1,0 +1,12 @@
+PASS manual default does not analyze pasted code until explicit explain
+PASS word selection gives actual explanation pronunciation and original dictionary navigation
+PASS edits mark old explanation stale and do not auto update default
+PASS automatic mode opt-in updates after typing debounce
+PASS IME composition cancels pending automatic explanation until composition ends
+PASS pasted active markup remains inert text in textarea and escaped explanation
+PASS CSS and Vue real multiline input analyzed with visible limits and no execution
+PASS draft persists on reload but automatic analysis stays disabled for imported or restored source
+PASS empty and excessive source show errors without false output
+PASS mobile 390px remains within viewport and keyboard can reach explain
+PASS actual browser speech capability reports unavailable English voice honestly
+

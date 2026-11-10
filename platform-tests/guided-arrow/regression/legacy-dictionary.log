@@ -1,0 +1,60 @@
+PASS / script setup, named imports, ref, computed, events, v-if/v-for and scoped CSS actually run
+PASS / export default Options API, namespace/aliased imports and style v-bind
+PASS / selected HTML tab runs HTML and events instead of the term’s SFC
+PASS / CSS tab loads CSS on a clearly described sample
+PASS / JavaScript, Vue-only module import/export, circular and BigInt logging work
+PASS / script-tag text inside JavaScript remains text; an empty chosen tab has a clear message
+PASS / the unchanged real ref() term runs with its legacy escaped closing tag
+PASS / external module shows an Arabic diagnostic without running unsupported code
+PASS / relative file shows an Arabic diagnostic without running unsupported code
+PASS / dynamic import shows an Arabic diagnostic without running unsupported code
+PASS / TypeScript shows an Arabic diagnostic without running unsupported code
+PASS / external SFC block shows an Arabic diagnostic without running unsupported code
+PASS / custom block shows an Arabic diagnostic without running unsupported code
+PASS / CSS Modules shows an Arabic diagnostic without running unsupported code
+PASS / empty CSS Modules attribute shows an Arabic diagnostic without running unsupported code
+PASS / CSS preprocessor shows an Arabic diagnostic without running unsupported code
+PASS / top-level await shows an Arabic diagnostic without running unsupported code
+PASS / Options API async setup shows an Arabic diagnostic without running unsupported code
+PASS / setup returning a Promise shows an Arabic diagnostic without running unsupported code
+PASS / unknown Nuxt component shows an Arabic diagnostic without running unsupported code
+PASS / missing template data shows an Arabic diagnostic without running unsupported code
+PASS / malformed script shows an Arabic diagnostic without running unsupported code
+PASS / external CSS import shows an Arabic diagnostic without running unsupported code
+PASS / case-insensitive external CSS import shows an Arabic diagnostic without running unsupported code
+PASS / escaped closer inside a JS string preserves the string when fixing only the real legacy closer
+PASS / runtime error stays an error after DOM readiness
+PASS / new reference clears evidence; stop destroys timers and rejects stale messages
+PASS / imported drafts never auto-run when opening a dictionary reference; export and saved nulls survive
+PASS / real core files work offline in this path, without request failures or uncaught exceptions
+PASS /nested/app/ script setup, named imports, ref, computed, events, v-if/v-for and scoped CSS actually run
+PASS /nested/app/ export default Options API, namespace/aliased imports and style v-bind
+PASS /nested/app/ selected HTML tab runs HTML and events instead of the term’s SFC
+PASS /nested/app/ CSS tab loads CSS on a clearly described sample
+PASS /nested/app/ JavaScript, Vue-only module import/export, circular and BigInt logging work
+PASS /nested/app/ script-tag text inside JavaScript remains text; an empty chosen tab has a clear message
+PASS /nested/app/ the unchanged real ref() term runs with its legacy escaped closing tag
+PASS /nested/app/ external module shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ relative file shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ dynamic import shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ TypeScript shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ external SFC block shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ custom block shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ CSS Modules shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ empty CSS Modules attribute shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ CSS preprocessor shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ top-level await shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ Options API async setup shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ setup returning a Promise shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ unknown Nuxt component shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ missing template data shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ malformed script shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ external CSS import shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ case-insensitive external CSS import shows an Arabic diagnostic without running unsupported code
+PASS /nested/app/ escaped closer inside a JS string preserves the string when fixing only the real legacy closer
+PASS /nested/app/ runtime error stays an error after DOM readiness
+PASS /nested/app/ new reference clears evidence; stop destroys timers and rejects stale messages
+PASS /nested/app/ imported drafts never auto-run when opening a dictionary reference; export and saved nulls survive
+PASS /nested/app/ real core files work offline in this path, without request failures or uncaught exceptions
+58/58 dictionary preview checks passed
+

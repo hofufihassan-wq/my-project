@@ -49,14 +49,15 @@ function cssControls(v){
 }
 function guidedArrow(v){
  if(Object.keys(v).length===0)return;
- const keys=['version','step','drafts','hints','answers','results','reviews'];
+ const keys=['version','step','activeTask','drafts','hints','answers','results','reviews'];
  if(Object.keys(v).some(k=>!keys.includes(k))||v.version!==1||!Number.isInteger(v.step)||v.step<0||v.step>7)fail('الدرس الموجّه');
  const tasks=['try','double','fix','mastery','filter'];
+ if(own(v,'activeTask')&&!['double','fix','filter'].includes(v.activeTask))fail('التمرين المختار');
  for(const k of ['drafts','hints','answers','results','reviews'])if(!record(v[k]))fail('الدرس الموجّه');
  map(v.drafts,'مسودات النموذج',(code,key)=>{if(!tasks.includes(key))fail('معرّف تمرين');string(code,'كود التمرين',16000)});
  map(v.hints,'تلميحات النموذج',(n,key)=>{if(!['prediction',...tasks].includes(key)||!Number.isInteger(n)||n<0||n>3)fail('تلميح')});
  map(v.answers,'إجابات النموذج',(n,key)=>{if(!['prediction','understanding','output'].includes(key)||!Number.isInteger(n)||n<0||n>2)fail('إجابة')});
- map(v.results,'نتائج النموذج',(r,key)=>{if(!tasks.filter(k=>k!=='try').includes(key)||!record(r)||Object.keys(r).some(k=>!['passed','source','at'].includes(k))||typeof r.passed!=='boolean'||!timestamp(r.at))fail('نتيجة تمرين');string(r.source,'نسخة الحل المفحوصة',16000)});
+ map(v.results,'نتائج النموذج',(r,key)=>{if(!tasks.filter(k=>k!=='try').includes(key)||!record(r)||Object.keys(r).some(k=>!['passed','source','at','attempts'].includes(k))||typeof r.passed!=='boolean'||!timestamp(r.at))fail('نتيجة تمرين');string(r.source,'نسخة الحل المفحوصة',16000);if(own(r,'attempts')&&(!Number.isInteger(r.attempts)||r.attempts<1||r.attempts>1000000))fail('عدد المحاولات')});
  map(v.reviews,'مراجعة المهارات',(r,key)=>{if(!['syntax','return','application'].includes(key)||!record(r)||Object.keys(r).some(k=>!['due','status'].includes(k))||!timestamp(r.due)||!['review','passed'].includes(r.status))fail('مراجعة مهارة')});
 }
 function validate(input){

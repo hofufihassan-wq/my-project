@@ -230,7 +230,8 @@ const app = createApp({
     // 2. Navigation & View State
     // ==========================================
     // Visible workspaces: 'lexicon' | 'practice' (the practical simulator)
-    const appMode = ref('home');
+    const appMode = ref(window.location?.hash === '#arrow-functions' ? 'arrow' : 'home');
+    const learningReturnToArrow = ref(false);
     const practiceSurface = ref('simulator');
     // Theme selection is session-only in 5B; existing persisted records are untouched.
     const theme = ref(window.VLexLearningStore?.getSection('preferences', {}).theme || 'petroleum');
@@ -767,13 +768,15 @@ const app = createApp({
     }
 
     function setAppMode(mode) {
-      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation', 'explain', 'course', 'cssLab', 'jsLab'].includes(mode)) return;
+      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation', 'explain', 'course', 'arrow', 'cssLab', 'jsLab'].includes(mode)) return;
       if (mode === 'training' || mode === 'practice' || mode === 'quiz') {
         const surface = mode === 'training' ? 'training' : 'simulator';
         if (practiceSurface.value !== surface) stopPracticeExecution();
         practiceSurface.value = surface;
       }
       appMode.value = ['quiz', 'training'].includes(mode) ? 'practice' : mode;
+      if (mode === 'arrow') window.history?.replaceState?.(null, '', '#arrow-functions');
+      else if (window.location?.hash === '#arrow-functions') window.history?.replaceState?.(null, '', window.location.pathname + window.location.search);
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
 
@@ -2398,7 +2401,7 @@ const app = createApp({
       } catch (_) { termSpeechStatus.value = 'تعذر تشغيل الصوت المحلي.'; }
     }
     function openLearning(mode, source) {
-      if (!['explain', 'course', 'cssLab', 'jsLab'].includes(mode)) return;
+      if (!['explain', 'course', 'arrow', 'cssLab', 'jsLab'].includes(mode)) return;
       if (mode === 'explain') { explainSource.value = typeof source === 'string' ? source : ''; explainKey.value++; }
       setAppMode(mode);
     }
@@ -2406,10 +2409,18 @@ const app = createApp({
       const term = rawLexiconData.value.find(item => item.id === id);
       if (term) { setAppMode('lexicon'); selectTerm(term); }
     }
+    function openArrowPrerequisite(id) {
+      const store = window.VLexLearningStore;
+      if (store && window.VLexCourse.lessons.some(l => l.id === id)) {
+        const course = store.getSection('course', {}); store.setSection('course', { ...course, selected: id });
+      }
+      learningReturnToArrow.value = true; openLearning('course');
+    }
     function practiceFromLearning(payload) {
       if (!payload || typeof payload.code !== 'string' || window.VueLexiconData.bytes(payload.code) > window.VueLexiconData.MAX_DRAFT_BYTES) {
         triggerToast('مصدر التجربة غير صالح أو كبير جدًا؛ لم تتغير مسوداتك.', 'error'); return;
       }
+      learningReturnToArrow.value = payload.returnTo === 'arrow';
       openSimulator(); stopPracticeExecution(); practiceAutoRun.value = false; selectTrack('js', true);
       simulatorExternalExample.value = { title: 'تجربة مسار التعلّم', code: payload.code, type: payload.type === 'vue' ? 'vue' : 'html', legacyClosers: false };
       simulatorReferenceVisible.value = true;
@@ -2515,7 +2526,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
-      termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
+      learningReturnToArrow, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
       techCustomWidth, techCustomHeight, techPreviewZoom, techDimensionDraft, techDimensionError, techConsoleHeight, techCompactPanel, techDragging,

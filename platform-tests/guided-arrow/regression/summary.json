@@ -1,0 +1,182 @@
+{
+  "source": "feat/vlex-guided-arrow",
+  "snapshot": "/tmp/vlex-arrow-final",
+  "build": [
+    {
+      "suite": "build-build:compiler",
+      "exitCode": 0,
+      "seconds": 0.71
+    },
+    {
+      "suite": "build-build:css",
+      "exitCode": 0,
+      "seconds": 2.15
+    },
+    {
+      "suite": "build-verify:assets",
+      "exitCode": 0,
+      "seconds": 0.18
+    }
+  ],
+  "passedSuites": 27,
+  "totalSuites": 30,
+  "results": [
+    {
+      "suite": "legacy-protocol",
+      "exitCode": 0,
+      "seconds": 0.04
+    },
+    {
+      "suite": "legacy-data",
+      "exitCode": 1,
+      "seconds": 0.05
+    },
+    {
+      "suite": "legacy-json",
+      "exitCode": 1,
+      "seconds": 0.04
+    },
+    {
+      "suite": "dictionary-preservation",
+      "exitCode": 0,
+      "seconds": 1.69
+    },
+    {
+      "suite": "store-unit",
+      "exitCode": 0,
+      "seconds": 0.04
+    },
+    {
+      "suite": "store-schema",
+      "exitCode": 0,
+      "seconds": 0.15
+    },
+    {
+      "suite": "explainer-unit",
+      "exitCode": 0,
+      "seconds": 0.09
+    },
+    {
+      "suite": "course-unit",
+      "exitCode": 0,
+      "seconds": 0.03
+    },
+    {
+      "suite": "advanced-unit",
+      "exitCode": 0,
+      "seconds": 0.03
+    },
+    {
+      "suite": "css-lab-unit",
+      "exitCode": 0,
+      "seconds": 0.03
+    },
+    {
+      "suite": "js-lab-unit",
+      "exitCode": 0,
+      "seconds": 0.08
+    },
+    {
+      "suite": "dashboard-unit",
+      "exitCode": 0,
+      "seconds": 0.03
+    },
+    {
+      "suite": "local-unit",
+      "exitCode": 0,
+      "seconds": 0.1
+    },
+    {
+      "suite": "assets-integrity",
+      "exitCode": 0,
+      "seconds": 0.21
+    },
+    {
+      "suite": "legacy-dictionary",
+      "exitCode": 0,
+      "seconds": 41.45
+    },
+    {
+      "suite": "store-browser",
+      "exitCode": 0,
+      "seconds": 6.39
+    },
+    {
+      "suite": "explainer-browser",
+      "exitCode": 0,
+      "seconds": 9.73
+    },
+    {
+      "suite": "course-browser",
+      "exitCode": 0,
+      "seconds": 12.56
+    },
+    {
+      "suite": "advanced-browser",
+      "exitCode": 0,
+      "seconds": 7.89
+    },
+    {
+      "suite": "css-lab-browser",
+      "exitCode": 0,
+      "seconds": 23.22
+    },
+    {
+      "suite": "js-lab-browser",
+      "exitCode": 0,
+      "seconds": 10.75
+    },
+    {
+      "suite": "js-lab-peer",
+      "exitCode": 0,
+      "seconds": 2.59
+    },
+    {
+      "suite": "js-private-channel",
+      "exitCode": 0,
+      "seconds": 3.85
+    },
+    {
+      "suite": "explainer-transfer",
+      "exitCode": 0,
+      "seconds": 2.9
+    },
+    {
+      "suite": "dashboard-browser",
+      "exitCode": 0,
+      "seconds": 8.89
+    },
+    {
+      "suite": "dictionary-browser",
+      "exitCode": 0,
+      "seconds": 12.65
+    },
+    {
+      "suite": "dictionary-css-corrections",
+      "exitCode": 1,
+      "seconds": 55.73
+    },
+    {
+      "suite": "dictionary-vue-corrections",
+      "exitCode": 0,
+      "seconds": 32.12
+    },
+    {
+      "suite": "integration-browser",
+      "exitCode": 0,
+      "seconds": 11.69
+    },
+    {
+      "suite": "root-backups-browser",
+      "exitCode": 0,
+      "seconds": 6.63
+    }
+  ],
+  "extra": [
+    {
+      "suite": "simulator-completion",
+      "exitCode": 0,
+      "seconds": 53.15
+    }
+  ]
+}

@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="simulator-final.css">
   <link rel="stylesheet" href="learning-explainer.css">
   <link rel="stylesheet" href="learning-course.css">
+  <link rel="stylesheet" href="guided-arrow.css">
   <link rel="stylesheet" href="learning-css-lab.css">
   <link rel="stylesheet" href="learning-js-lab.css">
   <link rel="stylesheet" href="learning-dashboard.css">
@@ -144,7 +145,9 @@
   </nav>
   <aside v-if="appMode !== 'practice' && !learningStatus.persistent" class="learning-storage-warning" role="alert">{{ learningStatus.message }} <button @click="exportLearningData">تصدير تعديلات التعلّم الحالية</button></aside>
   <main v-if="appMode === 'explain'" class="learning-page"><vlex-explainer :key="explainKey" :terms="rawLexiconData" :initial-code="explainSource" @open-term="openLearningTerm" /></main>
-  <main v-if="appMode === 'course'" class="learning-page"><vlex-course @practice="practiceFromLearning" /></main>
+  <aside v-if="learningReturnToArrow && appMode !== 'arrow'" class="learning-page arrow-return"><button @click="openLearning('arrow')" data-testid="arrow-return">العودة إلى درس الدوال السهمية</button></aside>
+  <main v-if="appMode === 'arrow'" class="learning-page"><vlex-guided-arrow @practice="practiceFromLearning" @open-term="openLearningTerm" @prerequisite="openArrowPrerequisite" /></main>
+  <main v-if="appMode === 'course'" class="learning-page"><div class="vlex-course"><button @click="openLearning('arrow')" data-testid="open-arrow">جرّب الدرس الموجّه: Arrow Functions — استكمال تقدّمك</button></div><vlex-course @practice="practiceFromLearning" /></main>
   <main v-if="appMode === 'cssLab'" class="learning-page"><vlex-css-lab /></main>
   <main v-if="appMode === 'jsLab'" class="learning-page"><vlex-js-lab @practice="practiceFromLearning" /></main>
   <main v-if="appMode === 'home'" class="dashboard-shell emerald-dashboard">
@@ -2469,6 +2472,9 @@
 <script src="learning-course-advanced.js"></script>
 <script src="learning-css-lab.js"></script>
 <script src="learning-js-lab.js"></script>
+<script src="guided-arrow-content.js"></script>
+<script src="guided-arrow-evaluator.js"></script>
+<script src="guided-arrow.js"></script>
 <script src="learning-dashboard.js"></script>
 <script src="code-presentation.js"></script>
 <script src="app.js"></script>

@@ -1,0 +1,7 @@
+PASS real settings export includes all new sections and preserves exact source
+PASS real file import restores with explicit confirmation and backs up prior original
+PASS malformed imported file rejects atomically
+PASS import cannot pollute prototypes or change legacy data
+PASS pronunciation has real local service or explicit availability feedback
+PASS imported code never auto executes after navigation or reopen
+
