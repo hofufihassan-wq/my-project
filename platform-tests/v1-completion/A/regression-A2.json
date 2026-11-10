@@ -1,0 +1,22 @@
+[
+  {
+    "suite": "legacy-data",
+    "exitCode": 0
+  },
+  {
+    "suite": "legacy-import",
+    "exitCode": 0
+  },
+  {
+    "suite": "integration",
+    "exitCode": 0
+  },
+  {
+    "suite": "arrow",
+    "exitCode": 0
+  },
+  {
+    "suite": "dashboard",
+    "exitCode": 0
+  }
+]

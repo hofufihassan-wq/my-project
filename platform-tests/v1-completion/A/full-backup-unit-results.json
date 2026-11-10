@@ -1,0 +1,46 @@
+{
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "name": "full snapshot roundtrips all supported sections and unfinished drafts",
+      "passed": true
+    },
+    {
+      "name": "full backups accept multiple valid legacy drafts above the old single-file 1 MiB limit",
+      "passed": true
+    },
+    {
+      "name": "unsafe, incomplete, unknown-version and oversized imports do not mutate any state",
+      "passed": true
+    },
+    {
+      "name": "successful restore verifies all keys, retains exact prior originals and clears journal",
+      "passed": true
+    },
+    {
+      "name": "backup/quota failure before transaction leaves every supported record intact",
+      "passed": true
+    },
+    {
+      "name": "one failed write rolls back every changed key including originally absent keys",
+      "passed": true
+    },
+    {
+      "name": "persistent write failure retains journal and restart restores exact old state",
+      "passed": true
+    },
+    {
+      "name": "recovery refuses to overwrite a record changed since interruption",
+      "passed": true
+    },
+    {
+      "name": "pending transaction prevents ordinary writers from touching supported data",
+      "passed": true
+    },
+    {
+      "name": "malformed journal is retained without restoring arbitrary keys",
+      "passed": true
+    }
+  ]
+}

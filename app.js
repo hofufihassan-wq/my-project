@@ -21,7 +21,7 @@ const app = createApp({
     const SafeStorage = {
       _mem: new Map(),
       getItem(key) {
-        try { return localStorage.getItem(key); } catch (_) {
+        try { if(window.VLexFullBackupRecovery?.blocked)throw Error('استرجاع معلق');return localStorage.getItem(key); } catch (_) {
           // A failed read is not evidence of an absent record. Never replace
           // an unread original with the empty in-memory fallback later on.
           if (!protectedStorageKeys.has(key)) {
@@ -33,6 +33,7 @@ const app = createApp({
       },
       writeDurably(key, val) {
         try {
+          window.VLexFullBackup?.assertWritable(localStorage,key);
           localStorage.setItem(key, val);
           return localStorage.getItem(key) === val;
         } catch (_) { return false; }
@@ -49,7 +50,7 @@ const app = createApp({
       },
       removeItem(key) {
         if (protectedStorageKeys.has(key)) return false;
-        try { localStorage.removeItem(key); this._mem.delete(key); return true; }
+        try { window.VLexFullBackup?.assertWritable(localStorage,key);localStorage.removeItem(key); this._mem.delete(key); return true; }
         catch (_) { triggerToast('تعذر حذف السجل من التخزين الدائم.', 'warning'); return false; }
       },
       commitBatch(entries) {
@@ -246,7 +247,7 @@ const app = createApp({
       root?.setAttribute('data-workspace', mode === 'practice' && surface === 'training' ? 'training' : mode);
     }, { immediate: true, flush: 'sync' });
     const foundationSection = ref(savedNavigation.section || 'projects');
-    watch([appMode,foundationSection],([workspace,section])=>{if(workspace!=='practice')window.VLexLearningStore?.setSection('navigation',{workspace,section});},{flush:'sync'});
+    watch([appMode,foundationSection],([workspace,section])=>{if(workspace!=='practice')window.VLexLearningStore?.setSection('navigation',{...window.VLexLearningStore.getSection('navigation',{}),workspace,section});},{flush:'sync'});
     const foundationSections = [
       { id: 'projects', title: 'المشاريع', icon: 'folder', description: 'مشاريعك المحلية ومهامها، مع مسار عملي لبناء مدير مهام.' },
       { id: 'kanban', title: 'لوحة المهام', icon: 'grid', description: 'رتب مهامك بين قيد الانتظار والعمل والمنجزة.' },
@@ -277,7 +278,8 @@ const app = createApp({
     }
     const activeCategory = ref('all');
     const selectedLetter = ref('ALL');
-    const selectedTerm = ref(rawLexiconData.value[0] || null);
+    const savedDictionary=window.VLexLearningStore?.getSection('dictionary',{})||{};
+    const selectedTerm = ref(rawLexiconData.value.find(t=>t.id===savedDictionary.selectedId)||rawLexiconData.value[0]||null);
     const searchQuery = ref('');
     const searchFocused = ref(false);
     const searchInputRef = ref(null);
@@ -285,7 +287,7 @@ const app = createApp({
     watch(searchQuery, () => { highlightedDropdownIndex.value = 0; }, { flush: 'sync' });
     const showShortcutsModal = ref(false);
     const showProgressModal = ref(false);
-    const activeCodeFormat = ref('vue'); // 'vue' | 'vanilla'
+    const activeCodeFormat = ref(savedDictionary.format||'vue'); // 'vue' | 'vanilla'
 
     function setCodeFormat(fmt) {
       activeCodeFormat.value = fmt;
@@ -326,9 +328,11 @@ const app = createApp({
       return 'javascript';
     });
 
-    // Dictionary exploration copies are session-only and never enter lesson storage.
+    // Separate local exploration drafts never replace audited sources or lesson drafts.
     const dictionaryTab = ref('meaning');
-    const dictionaryEdits = ref({});
+    const dictionaryEdits = ref(savedDictionary.drafts||{});
+    const dictionarySaveWarning=ref('');
+    watch([dictionaryEdits,selectedTerm,activeCodeFormat],()=>{if(window.VLexLearningStore){const ok=window.VLexLearningStore.setSection('dictionary',{drafts:dictionaryEdits.value,selectedId:selectedTerm.value?.id||'',format:activeCodeFormat.value});dictionarySaveWarning.value=ok?'':'تعذر حفظ مسودة القاموس؛ تبقى في هذه الجلسة. نزّل بيانات الاسترجاع قبل الإغلاق.'}},{deep:true,flush:'sync'});
     const dictionaryEditorKey = computed(() => (selectedTerm.value?.id || '') + ':' + activeCodeFormat.value);
     const dictionaryEditorCode = computed(() => Object.hasOwn(dictionaryEdits.value, dictionaryEditorKey.value)
       ? dictionaryEdits.value[dictionaryEditorKey.value] : currentCode.value);
@@ -1347,8 +1351,10 @@ const app = createApp({
     const practiceLessons = computed(() => practiceCurriculum.value.lessons || []);
 
     // Active practice track & lesson
-    const selectedTrack = ref(null); // null = Track Selection View ("وش تحب تتدرّب اليوم؟")
-    const selectedLessonId = ref('JS-101');
+    const savedSimulatorLesson=(window.PRACTICE_CURRICULUM?.lessons||[]).find(l=>l.id===savedNavigation.simulatorLesson);
+    const selectedTrack = ref(savedSimulatorLesson?.track||null); // null = Track Selection View ("وش تحب تتدرّب اليوم؟")
+    const selectedLessonId = ref(savedSimulatorLesson?.id||'JS-101');
+    watch(selectedLessonId,id=>{const store=window.VLexLearningStore;if(store)store.setSection('navigation',{...store.getSection('navigation',{}),simulatorLesson:id});},{flush:'sync'});
     const practiceCode = ref('');
     const practiceIframeKey = ref(1);
     const practiceIframeRef = ref(null);
@@ -1441,7 +1447,7 @@ const app = createApp({
 
     function savePracticeProgress() {
       try {
-        dataSchema.parseImport(JSON.stringify(userDataPayload()));
+        if(window.VLexFullBackup)window.VLexFullBackup.validateLegacy(userDataPayload(),dataSchema);else dataSchema.parseImport(JSON.stringify(userDataPayload()));
         return SafeStorage.setItem('vuelexicon_practice_progress', JSON.stringify(practiceProgress.value));
       } catch (err) {
         triggerToast('لم تُحفظ المسودة: ' + err.message + '. بقيت كاملة في المحرر؛ انسخها أو صدّرها قبل الإغلاق.', 'warning');
@@ -2132,7 +2138,7 @@ const app = createApp({
 
     // S3: session layout and strict, separate simulator preferences.
     const techBeta = window.VueLexiconSimulatorBeta.createController({
-      Vue, storage: { getItem: key => localStorage.getItem(key), setItem: (key, value) => localStorage.setItem(key, value) },
+      Vue, storage: { getItem: key => {if(window.VLexFullBackupRecovery?.blocked)throw Error('استرجاع معلق');return localStorage.getItem(key)}, setItem: (key, value) => {window.VLexFullBackup?.assertWritable(localStorage,key);localStorage.setItem(key, value)} },
       isActive: () => appMode.value === 'practice' && practiceSurface.value === 'simulator'
     });
     const betaMuted = techBeta.muted, betaVolume = techBeta.volume, betaAudioStatus = techBeta.audioStatus;
@@ -2149,6 +2155,9 @@ const app = createApp({
     const techCustomWidth = ref(1024), techCustomHeight = ref(640), techPreviewZoom = ref(1);
     const techDimensionDraft = ref({ width: 1024, height: 640 }), techDimensionError = ref('');
     const techConsoleHeight = ref(162), techCompactPanel = ref('editor');
+    const savedLayout=window.VLexLearningStore?.getSection('simulatorLayout',{})||{};
+    if(savedLayout.version===1){for(const[key,field]of Object.entries({editorHeight:techEditorHeight,previewHeight:techPreviewHeight,editorWidth:techEditorWidth,consoleHeight:techConsoleHeight,customWidth:techCustomWidth,customHeight:techCustomHeight,zoom:techPreviewZoom,language:techLanguage,viewport:techViewport,compactPanel:techCompactPanel,previewTab:techPreviewTab}))if(Object.hasOwn(savedLayout,key))field.value=savedLayout[key];for(const panel of savedLayout.hiddenPanels||[])techBeta.setPanelVisible(panel,false);techDimensionDraft.value={width:techCustomWidth.value,height:techCustomHeight.value};}
+    watch([techEditorHeight,techPreviewHeight,techEditorWidth,techConsoleHeight,techCustomWidth,techCustomHeight,techPreviewZoom,techLanguage,techViewport,techCompactPanel,techPreviewTab,techHiddenPanels],()=>{window.VLexLearningStore?.setSection('simulatorLayout',{version:1,editorHeight:techEditorHeight.value,previewHeight:techPreviewHeight.value,editorWidth:techEditorWidth.value,consoleHeight:techConsoleHeight.value,customWidth:techCustomWidth.value,customHeight:techCustomHeight.value,zoom:techPreviewZoom.value,language:techLanguage.value,viewport:techViewport.value,compactPanel:techCompactPanel.value,previewTab:techPreviewTab.value,hiddenPanels:techHiddenPanels.value});},{deep:true,flush:'sync'});
     const techDragging = ref('');
     const techPreviewWidth = computed(() => techViewport.value === 'custom' ? techCustomWidth.value + 'px'
       : ({ desktop: '100%', tablet: '768px', mobile: '390px' }[techViewport.value] || '100%'));
@@ -2442,6 +2451,26 @@ const app = createApp({
       setTimeout(() => URL.revokeObjectURL(url), 1000);
       triggerToast('نُزّلت بيانات التعلّم والتنظيم. بيانات القاموس والدروس القديمة لها زر تصدير مستقل.', 'success');
     }
+    const fullBackupMessage=ref(window.VLexFullBackupRecovery?.message||'');
+    const fullDependencies=()=>({learning:window.VLexLearning,legacy:dataSchema,simulator:window.VueLexiconSimulatorBeta});
+    function exportFullBackup(){try{
+      if(window.VLexLearningStore.status().mode==='protected'||protectedStorageKeys.size)throw Error('يوجد سجل محمي؛ نزّل بيانات الاسترجاع دون استبدال الأصل');
+      if(dictionarySaveWarning.value)throw Error('مسودة قاموس غير محفوظة؛ نزّل بيانات الاسترجاع أولًا');
+      if(window.VLexFullBackupRecovery?.blocked)throw Error('يوجد استرجاع معلق؛ لا نصدر حالة مؤقتة كنسخة سليمة. احتفظ بالأصل وبيانات الاسترجاع.');
+      const text=window.VLexFullBackup.serialize({app:window.VLexFullBackup.APP,version:1,createdAt:new Date().toISOString(),learning:window.VLexLearningStore.read(),legacy:userDataPayload(),preferences:{simulator:{version:1,muted:betaMuted.value,volume:betaVolume.value,animations:techBeta.animations.value},ambient:{version:1,enabled:betaAmbientEnabled.value,volume:betaAmbientVolume.value},tabAutocomplete:tabAcceptsAutocomplete.value,demoTheme:jsThemePref.value}},fullDependencies());
+      const url=URL.createObjectURL(new Blob([text],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='vlex-full-'+new Date().toISOString().slice(0,10)+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);fullBackupMessage.value='أُعد ملف النسخة الشاملة للتنزيل؛ تحقق من تنزيله.';
+    }catch(e){fullBackupMessage.value='تعذر تصدير نسخة قابلة للاستيراد دون قص البيانات: '+e.message}}
+    function exportFullRecovery(){try{const records={};for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(window.VLexFullBackup.KEYS.includes(key)||key===window.VLexFullBackup.PENDING||key?.startsWith('vlex_full_recovery_')||key?.startsWith('vlex_learning_recovery_')||key?.startsWith('vuelexicon_recovery_'))records[key]=localStorage.getItem(key)}const url=URL.createObjectURL(new Blob([JSON.stringify({app:'V Lex Pro Full Recovery',version:1,records,sessionDictionaryEdits:dictionaryEdits.value,sessionLearning:window.VLexLearningStore.read(),sessionLegacy:userDataPayload()})],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='vlex-full-recovery.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);fullBackupMessage.value='أُعد ملف الاسترجاع الخام؛ ليس ملفًا للاستيراد المباشر.'}catch(e){fullBackupMessage.value='تعذر تنزيل بيانات الاسترجاع: '+e.message}}
+    let fullImportSequence=0;
+    async function importFullBackup(event){const request=++fullImportSequence,file=event.target?.files?.[0];if(!file)return;try{
+      if(file.size>window.VLexFullBackup.LIMIT)throw Error('النسخة أكبر من 8 MiB');const text=await file.text();if(request!==fullImportSequence)return;
+      window.VLexFullBackup.parse(text,fullDependencies());
+      if(!window.confirm('استبدال جميع البيانات المدعومة بالنسخة الشاملة؟ سنحفظ الأصل أولًا، ولن يُشغّل أي كود مستورد.'))return;
+      stopPracticeExecution();stopDictionaryPreview();
+      const result=window.VLexFullBackup.restore(text,localStorage,fullDependencies());
+      fullBackupMessage.value='حُفظت النسخة كاملة وتحققنا منها؛ الأصل محفوظ في '+result.backupKey+' . جارٍ إعادة تحميل البيانات.';
+      window.location.reload();
+    }catch(e){fullBackupMessage.value='تعذر استيراد النسخة الشاملة: '+e.message;try{if(localStorage.getItem(window.VLexFullBackup.PENDING)!==null){window.VLexFullBackupRecovery={blocked:true,message:fullBackupMessage.value};window.VLexLearningStore.reload()}}catch(_){}}finally{event.target.value=''}}
     let learningImportSequence = 0;
     async function importLearningData(event) {
       const requestId = ++learningImportSequence;
@@ -2528,7 +2557,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
-      learningReturnToArrow, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
+      dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
       techCustomWidth, techCustomHeight, techPreviewZoom, techDimensionDraft, techDimensionError, techConsoleHeight, techCompactPanel, techDragging,

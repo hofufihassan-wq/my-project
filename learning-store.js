@@ -2,9 +2,9 @@
 (function(root){
 'use strict';
 const KEY='vlex_personal_learning_v1',LIMIT=2*1024*1024;
-const sections=['tasks','events','notes','projects','course','preferences','cssLab','jsLab','explainer','guidedArrow','navigation'];
+const sections=['tasks','events','notes','projects','course','preferences','cssLab','jsLab','explainer','guidedArrow','navigation','organizerDrafts','dictionary','simulatorLayout'];
 const clone=x=>JSON.parse(JSON.stringify(x));
-const fresh=()=>({version:1,tasks:[],events:[],notes:[],projects:[],course:{completed:[],answers:{},reviews:{},drafts:{}},preferences:{theme:'petroleum'},cssLab:{},jsLab:{},explainer:{},guidedArrow:{},navigation:{}});
+const fresh=()=>({version:1,tasks:[],events:[],notes:[],projects:[],course:{completed:[],answers:{},reviews:{},drafts:{}},preferences:{theme:'petroleum'},cssLab:{},jsLab:{},explainer:{},guidedArrow:{},navigation:{},organizerDrafts:{},dictionary:{},simulatorLayout:{}});
 const record=v=>v!==null&&typeof v==='object'&&!Array.isArray(v)&&(Object.getPrototypeOf(v)===Object.prototype||Object.getPrototypeOf(v)===null);
 const own=(v,key)=>Object.hasOwn(v,key);
 function fail(label){throw new Error('بيانات '+label+' غير صالحة')}
@@ -30,7 +30,7 @@ function organizer(section,items){
 }
 function answer(v){if(!record(v)||!Number.isInteger(v.choice)||v.choice<0||v.choice>2||typeof v.correct!=='boolean'||!Number.isSafeInteger(v.attempts)||v.attempts<1||!timestamp(v.lastAt))fail('إجابة الدرس')}
 function course(v){
- if(own(v,'ui')){const u=v.ui;if(!record(u)||Object.keys(u).some(k=>!['topic','level','mode'].includes(k))||!['all','html','css','js','vue'].includes(u.topic)||!['all','beginner','intermediate','advanced'].includes(u.level)||!['lessons','project','review'].includes(u.mode))fail('مرشحات الدروس');}
+ if(own(v,'ui')){const u=v.ui;if(!record(u)||Object.keys(u).some(k=>!['topic','level','mode','hintOpen','projectHint'].includes(k))||!['all','html','css','js','vue'].includes(u.topic)||!['all','beginner','intermediate','advanced'].includes(u.level)||!['lessons','project','review'].includes(u.mode))fail('مرشحات الدروس');for(const k of ['hintOpen','projectHint'])if(own(u,k)&&typeof u[k]!=='boolean')fail('حالة التلميح');}
  if(own(v,'selected'))string(v.selected,'الدرس المختار',160,false);
  if(own(v,'completed'))list(v.completed,'الدروس المكتملة',2000,id=>string(id,'معرّف درس',160,false));
  if(own(v,'answers'))map(v.answers,'الإجابات',answer);
@@ -67,7 +67,20 @@ function validate(input){
  let nodes=0;function scan(v,depth){if(++nodes>60000||depth>25)throw new Error('بنية البيانات معقدة جدًا');if(typeof v==='number'&&!Number.isFinite(v))throw new Error('رقم غير صالح');if(v!==null&&!['string','boolean','number','object'].includes(typeof v))fail('نوع JSON');if(v&&typeof v==='object'){if(!Array.isArray(v)&&!record(v))fail('كائن JSON');for(const k of Object.keys(v)){if(['__proto__','prototype','constructor'].includes(k))throw new Error('مفتاح غير آمن');scan(v[k],depth+1)}}}scan(input,0);
  const text=JSON.stringify(input);if(new TextEncoder().encode(text).length>LIMIT)throw new Error('البيانات أكبر من 2 MiB؛ لم يُقص أي نص');
  const out=fresh();for(const s of sections)if(own(input,s)){const v=input[s];if(['tasks','events','notes','projects'].includes(s))organizer(s,v);else if(!record(v))fail('قسم '+s);out[s]=clone(v)}
- const nav=out.navigation;if(Object.keys(nav).some(k=>!['workspace','section'].includes(k))||own(nav,'workspace')&&!['home','lexicon','course','arrow','cssLab','jsLab','explain','settings','foundation'].includes(nav.workspace)||own(nav,'section')&&!['projects','kanban','notes','calendar'].includes(nav.section))fail('موضع الاستكمال');
+ map(out.organizerDrafts,'مسودات النماذج',(draft,key)=>{
+  if(!['tasks','events','notes','projects'].includes(key)||!record(draft)||Object.keys(draft).some(k=>!['record','editingId'].includes(k))||!record(draft.record))fail('مسودة نموذج');
+  string(draft.editingId,'معرف التعديل',160);
+  const limits={id:160,title:180,body:12000,description:12000,notes:12000,due:40,date:40,time:40,status:20,projectId:160,createdAt:40,updatedAt:40};
+  for(const[k,v]of Object.entries(draft.record)){if(k==='archived'){if(typeof v!=='boolean')fail('أرشفة المسودة')}else{if(!own(limits,k))fail('حقل مسودة غير معروف');string(v,'حقل المسودة',limits[k])}}
+ });
+ const layout=out.simulatorLayout;if(Object.keys(layout).length){const limits={editorHeight:[340,650],previewHeight:[400,740],editorWidth:[29,44],consoleHeight:[100,360],customWidth:[240,1920],customHeight:[160,1200],zoom:[.1,1.5]},choices={language:['source','css','js'],viewport:['desktop','tablet','mobile','custom'],compactPanel:['all','editor','stages','preview','console'],previewTab:['result','html','css','console']};
+ if(layout.version!==1||Object.keys(layout).some(k=>!['version','hiddenPanels',...Object.keys(limits),...Object.keys(choices)].includes(k)))fail('تخطيط المحاكي');
+ for(const[k,range]of Object.entries(limits))if(own(layout,k)&&(typeof layout[k]!=='number'||!Number.isFinite(layout[k])||layout[k]<range[0]||layout[k]>range[1]||k!=='zoom'&&!Number.isInteger(layout[k])))fail('مقاس المحاكي');
+ for(const[k,allowed]of Object.entries(choices))if(own(layout,k)&&!allowed.includes(layout[k]))fail('خيار المحاكي');
+ if(own(layout,'hiddenPanels'))list(layout.hiddenPanels,'لوحات المحاكي',5,p=>{if(!['editor','preview','console','stages','notes'].includes(p))fail('لوحة المحاكي')});
+ }
+ const dict=out.dictionary;if(Object.keys(dict).some(k=>!['drafts','selectedId','format'].includes(k)))fail('مسودات القاموس');if(own(dict,'drafts'))map(dict.drafts,'أكواد القاموس',(code,key)=>{if(!/^(html|css|js|vue|nuxt|ts)-[a-z0-9_-]+:(vue|vanilla)$/.test(key))fail('معرف مثال');string(code,'كود القاموس',65536)});if(own(dict,'selectedId'))string(dict.selectedId,'المصطلح المختار',160);if(own(dict,'format')&&!['vue','vanilla'].includes(dict.format))fail('صيغة المثال');
+ const nav=out.navigation;if(Object.keys(nav).some(k=>!['workspace','section','simulatorLesson'].includes(k))||own(nav,'workspace')&&!['home','lexicon','course','arrow','cssLab','jsLab','explain','settings','foundation'].includes(nav.workspace)||own(nav,'section')&&!['projects','kanban','notes','calendar'].includes(nav.section))fail('موضع الاستكمال');if(own(nav,'simulatorLesson'))string(nav.simulatorLesson,'درس المحاكي',80,false);
  guidedArrow(out.guidedArrow||{});
  course(out.course);out.course={...fresh().course,...out.course};
  if(own(out.preferences,'theme')&&!['petroleum','light','purple','green','glass'].includes(out.preferences.theme))throw new Error('الثيم غير معروف');
@@ -104,5 +117,5 @@ function createStore(storage){
  return {key:KEY,read:()=>clone(state),getSection:(s,fallback)=>Object.hasOwn(state,s)?clone(state[s]):clone(fallback),setSection,subscribe:fn=>{listeners.add(fn);return()=>listeners.delete(fn)},status:()=>({mode,message,verified,persistent:mode==='ready'}),exportData:()=>JSON.stringify({app:'V Lex Pro Learning',version:1,exportedAt:new Date().toISOString(),state}),parseBackup,importData,reload:()=>{if(mode!=='ready')return;try{const raw=storage.getItem(KEY);if(raw!==null){state=validate(JSON.parse(raw));notify()}}catch(_){mode='protected';message='تغير التخزين أو تعذرت قراءته؛ صدّر تعديلاتك قبل الإغلاق.';notify()}}};
 }
 const api={KEY,validate,createStore};if(typeof module!=='undefined'&&module.exports)module.exports=api;
-if(root&&root.document){try{root.VLexLearningStore=createStore({getItem:k=>root.localStorage.getItem(k),setItem:(k,v)=>root.localStorage.setItem(k,v),removeItem:k=>root.localStorage.removeItem(k)})}catch(_){root.VLexLearningStore=createStore({getItem(){throw new Error('Storage unavailable')}})}root.addEventListener('storage',e=>{if(e.key===KEY)root.VLexLearningStore.reload()})}root.VLexLearning=api;
+if(root&&root.document){try{root.VLexLearningStore=createStore({getItem:k=>{if(root.VLexFullBackupRecovery?.blocked)throw Error('استرجاع معلق');return root.localStorage.getItem(k)},setItem:(k,v)=>{root.VLexFullBackup?.assertWritable(root.localStorage,k);root.localStorage.setItem(k,v)},removeItem:k=>{root.VLexFullBackup?.assertWritable(root.localStorage,k);root.localStorage.removeItem(k)}})}catch(_){root.VLexLearningStore=createStore({getItem(){throw new Error('Storage unavailable')}})}root.addEventListener('storage',e=>{if(e.key===KEY)root.VLexLearningStore.reload()})}root.VLexLearning=api;
 })(typeof window!=='undefined'?window:globalThis);

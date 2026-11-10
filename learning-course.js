@@ -30,7 +30,7 @@
   ];
   const topics=[{id:'all',name:'كل المسار'},{id:'html',name:'HTML — الهيكل'},{id:'css',name:'CSS — الشكل'},{id:'js',name:'JavaScript — السلوك'},{id:'vue',name:'Vue — الربط'}];
   const levels=[{id:'all',name:'كل المستويات'},{id:'beginner',name:'تأسيس'},{id:'intermediate',name:'متوسط'},{id:'advanced',name:'متقدم'}];
-  const initialState=()=>({selected:lessons[0].id,completed:[],answers:{},reviews:{},drafts:{},projectStage:0,projectChecks:{},history:[],ui:{topic:'all',level:'all',mode:'lessons'}});
+  const initialState=()=>({selected:lessons[0].id,completed:[],answers:{},reviews:{},drafts:{},projectStage:0,projectChecks:{},history:[],ui:{topic:'all',level:'all',mode:'lessons',hintOpen:false,projectHint:false}});
   function normalize(value){
     const d=initialState();if(!value||typeof value!=='object'||Array.isArray(value))return d;
     const byId=new Map(lessons.map(l=>[l.id,l])),stageIds=new Set(projectStages.map(s=>s.id));
@@ -44,6 +44,7 @@
     d.projectStage=Number.isInteger(value.projectStage)?Math.min(projectStages.length-1,Math.max(0,value.projectStage)):0;
     d.history=Array.isArray(value.history)?value.history.filter(h=>record(h)&&byId.has(h.id)&&typeof h.correct==='boolean'&&Number.isInteger(h.choice)&&h.choice>=0&&h.choice<3&&typeof h.at==='string').slice(-200):[];
     if(record(value.ui))for(const key of ['topic','level','mode'])if(typeof value.ui[key]==='string')d.ui[key]=value.ui[key];
+    if(record(value.ui))for(const key of ['hintOpen','projectHint'])if(typeof value.ui[key]==='boolean')d.ui[key]=value.ui[key];
     return d;
   }
   function nextReview(correct,previous,now=Date.now()){const days=correct?Math.min(30,Math.max(1,(previous?.intervalDays||0)*2)):0;return{due:new Date(now+(correct?days*86400000:10*60000)).toISOString(),intervalDays:days};}
@@ -51,11 +52,11 @@
   if(typeof module==='object'&&module.exports)module.exports=api;
   root.VLexCourse=api;
   if(root.Vue){const{ref,computed,onUnmounted,watch}=root.Vue;const component={name:'VLexCourse',emits:['practice'],setup(_,ctx){
-    const store=root.VLexLearningStore;const state=ref(normalize(store?.getSection('course',initialState()))),topic=ref(state.value.ui.topic),level=ref(state.value.ui.level),mode=ref(state.value.ui.mode),feedback=ref(null),hintOpen=ref(false),projectHint=ref(false),warning=ref('');
+    const store=root.VLexLearningStore;const state=ref(normalize(store?.getSection('course',initialState()))),topic=ref(state.value.ui.topic),level=ref(state.value.ui.level),mode=ref(state.value.ui.mode),feedback=ref(null),hintOpen=ref(state.value.ui.hintOpen),projectHint=ref(state.value.ui.projectHint),warning=ref('');
     const now=ref(Date.now());const ticker=setInterval(()=>{now.value=Date.now();},60000);onUnmounted(()=>clearInterval(ticker));
     const persist=()=>{if(!store){warning.value='التخزين المحلي غير متاح هنا؛ التعديلات في هذه الجلسة فقط.';return false;}const ok=store.setSection('course',JSON.parse(JSON.stringify(state.value)));warning.value=ok?'':'تعذر الحفظ الدائم؛ لا تغلق الصفحة قبل نسخ مسودتك أو تصدير بيانات التعلم.';return ok;};
     const unsubscribe=store?.subscribe?.(()=>{state.value=normalize(store.getSection('course',state.value));});if(typeof unsubscribe==='function')onUnmounted(unsubscribe);
-    watch([topic,level,mode],()=>{state.value.ui={topic:topic.value,level:level.value,mode:mode.value};persist();},{flush:'sync'});
+    watch([topic,level,mode,hintOpen,projectHint],()=>{state.value.ui={topic:topic.value,level:level.value,mode:mode.value,hintOpen:hintOpen.value,projectHint:projectHint.value};persist();},{flush:'sync'});
     const current=computed(()=>lessons.find(l=>l.id===state.value.selected)||lessons[0]);const shown=computed(()=>lessons.filter(l=>(topic.value==='all'||l.topic===topic.value)&&(level.value==='all'||l.level===level.value)));const stage=computed(()=>projectStages[state.value.projectStage]);
     const due=computed(()=>lessons.filter(l=>{const d=state.value.reviews[l.id]?.due;return d&&Number.isFinite(Date.parse(d))&&Date.parse(d)<=now.value;}));
     const mistakes=computed(()=>state.value.history.filter(h=>!h.correct).slice(-12).reverse());

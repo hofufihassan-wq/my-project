@@ -144,6 +144,7 @@
     <button @click="openFoundation('calendar')">تقويمي</button>
   </nav>
   <p v-if="appMode !== 'practice' && appMode !== 'home'" class="learning-page" style="font-size:12px;padding-block:4px" role="status" data-testid="learning-save-status">{{learningStatus.message || !learningStatus.persistent ? 'تعذر حفظ التغيير؛ راجع التنبيه وصدّر بياناتك' : learningStatus.verified ? 'تم الحفظ محليًا' : 'الحفظ التلقائي جاهز'}}</p>
+  <aside v-if="dictionarySaveWarning" class="learning-storage-warning" role="alert">{{dictionarySaveWarning}} <button @click="exportFullRecovery">تنزيل بيانات الاسترجاع</button></aside>
   <aside v-if="appMode !== 'practice' && !learningStatus.persistent" class="learning-storage-warning" role="alert">{{ learningStatus.message }} <button @click="exportLearningData">تصدير تعديلات التعلّم الحالية</button></aside>
   <main v-if="appMode === 'explain'" class="learning-page"><vlex-explainer :key="explainKey" :terms="rawLexiconData" :initial-code="explainSource" @open-term="openLearningTerm" /></main>
   <aside v-if="learningReturnToArrow && appMode !== 'arrow'" class="learning-page arrow-return"><button @click="openLearning('arrow')" data-testid="arrow-return">العودة إلى درس الدوال السهمية</button></aside>
@@ -212,6 +213,7 @@
       <p class="muted">يُحفظ اختيارك محليًا ضمن نسخة بيانات التعلّم. الثيمات السابقة محفوظة للاختيار أيضًا؛ المحاكي يحتفظ بالأزرق والأحمر المستقلين.</p>
     </section>
     <section class="dashboard-panel"><div class="panel-heading"><h3>بياناتك والنسخ الاحتياطي</h3></div><p>التقدم والمفضلة والمسودات عبر أدوات التصدير والاستيراد الحالية.</p><button class="primary-button" @click="showProgressModal = true">فتح أدوات بياناتي</button></section>
+    <section class="dashboard-panel"><h3>نسخة احتياطية شاملة</h3><p>ملف واحد للقاموس والتدريب والتعلم والمسودات والملاحظات والمشاريع والمهام والتقويم والثيم وإعدادات المحاكي. الاستيراد يستبدل البيانات بعد حفظ أصلها، ولا يشغّل أي كود. التخزين محلي لهذا المتصفح وليس مزامنة سحابية.</p><div class="learning-backup-actions"><button data-testid="export-full" @click="exportFullBackup">تصدير النسخة الشاملة</button><button data-testid="export-full-recovery" @click="exportFullRecovery">تنزيل بيانات استرجاع الاستيراد</button><label>استيراد النسخة الشاملة<input data-testid="import-full" type="file" accept="application/json,.json" @change="importFullBackup"></label></div><p v-if="fullBackupMessage" role="status" data-testid="full-backup-message">{{fullBackupMessage}}</p></section>
     <section class="dashboard-panel"><div class="panel-heading"><h3>نسخة التعلّم والتنظيم</h3></div><p>الدروس الجديدة والمراجعات والمهام والتقويم والملاحظات ومصادر المختبرات والثيم. لحفظ كل بياناتك صدّر هذا الملف وملف القاموس والدروس القديمة من الزر أعلاه.</p><div class="learning-backup-actions"><button class="primary-button" data-testid="export-learning" @click="exportLearningData">تصدير التعلّم والتنظيم</button><label>استيراد نسخة التعلّم<input data-testid="import-learning" aria-label="استيراد نسخة التعلّم والتنظيم" type="file" accept="application/json,.json" @change="importLearningData"></label></div></section>
   </main>
   <main v-if="appMode === 'foundation'" class="foundation-page">
@@ -476,7 +478,7 @@
             <details class="dictionary-meta-details"><summary>الصيغة، القيمة المرجعة وبيئة العمل</summary><dl class="dictionary-facts"><div><dt>الصيغة / التصريح</dt><dd dir="ltr">{{ selectedTerm.syntaxInfo }}</dd></div><div><dt>القيمة المرجعة / Props</dt><dd dir="ltr">{{ selectedTerm.returnProps }}</dd></div><div><dt>بيئة العمل</dt><dd>{{ selectedTerm.env }}</dd></div></dl></details>
           </section>
           <section v-show="dictionaryTab === 'example'" id="dictionary-panel-example" role="tabpanel" aria-labelledby="dictionary-tab-example" class="dictionary-copy-panel">
-            <h3>اقرأ المثال، ثم جرّب تغييره</h3><p>الكود الأصلي معروض في المحرر أدناه. التعديلات هنا مؤقتة لهذه الجلسة ولا تغيّر المثال أو مسودات التدريب.</p>
+            <h3>اقرأ المثال، ثم جرّب تغييره</h3><p>الكود الأصلي معروض في المحرر أدناه. تُحفظ تعديلاتك كمسودات محلية منفصلة، ولا تغيّر المثال الأصلي أو مسودات التدريب. الحد 65536 محرفًا لكل مسودة؛ راجع مؤشر الحفظ.</p>
             <details v-if="selectedTerm.codeBreakdown.length"><summary>تشريح وفهم الكود خطوة بخطوة</summary><ul><li v-for="(line, index) in selectedTerm.codeBreakdown" :key="index">{{ line }}</li></ul></details>
           </section>
           <section v-show="dictionaryTab === 'usage'" id="dictionary-panel-usage" role="tabpanel" aria-labelledby="dictionary-tab-usage" class="dictionary-copy-panel"><h3>متى نستخدمها في المشاريع؟</h3><ul><li v-for="(uc, index) in selectedTerm.useCases" :key="index">{{ uc }}</li></ul></section>
@@ -486,8 +488,8 @@
             <section class="dictionary-editor-panel" aria-label="محرر مثال القاموس">
               <div class="dictionary-panel-title"><strong><svg><use href="#i-code"/></svg>محرر المثال</strong><button @click="copyCode(dictionaryEditorCode)" title="نسخ كود المثال">نسخ الكود</button></div>
               <div class="dictionary-editor-formats"><div class="ios-segmented-control"><button @click="setCodeFormat('vue')" :class="{ active: activeCodeFormat === 'vue' }" class="ios-segment-btn">Vue 3 SFC</button><button @click="setCodeFormat('vanilla')" :class="{ active: activeCodeFormat === 'vanilla' }" class="ios-segment-btn">Vanilla JS</button></div><span dir="ltr">{{ activeCodeFormat === 'vue' ? 'Example.vue' : selectedTerm.category === 'css' ? 'styles.css' : selectedTerm.category === 'html' ? 'index.html' : 'script.js' }} <small class="vlex-language-badge">{{ activeCodeFormat === 'vue' ? 'Vue' : selectedTerm.category === 'css' ? 'CSS' : selectedTerm.category === 'html' ? 'HTML' : 'JavaScript' }}</small></span></div>
-              <div class="dictionary-editor-surface" dir="ltr"><pre class="dictionary-line-gutter" aria-hidden="true"><span v-for="(_, index) in dictionaryEditorCode.split('\n')" :key="index">{{ index + 1 }}</span></pre><div class="vlex-code-shell"><pre class="vlex-code-paint" aria-hidden="true"></pre><textarea v-code-editor="currentLang" data-testid="dictionary-editor" class="dictionary-code-editor" :value="dictionaryEditorCode" @input="updateDictionaryEditor" @scroll="$event.target.closest('.dictionary-editor-surface').querySelector('.dictionary-line-gutter').scrollTop = $event.target.scrollTop" aria-label="كود مثال المصطلح — تعديل مؤقت" spellcheck="false" dir="ltr"></textarea></div></div>
-              <div class="dictionary-editor-footer"><span>{{ dictionaryEditorChanged ? 'نسخة معدلة مؤقتة' : 'المثال الأصلي' }}</span><button v-if="dictionaryEditorChanged" @click="resetDictionaryEditor" data-testid="dictionary-reset">استعادة الأصل</button><button @click="sendTermToScratchpad(selectedTerm)">الأصل في المحاكي ↗</button></div>
+              <div class="dictionary-editor-surface" dir="ltr"><pre class="dictionary-line-gutter" aria-hidden="true"><span v-for="(_, index) in dictionaryEditorCode.split('\n')" :key="index">{{ index + 1 }}</span></pre><div class="vlex-code-shell"><pre class="vlex-code-paint" aria-hidden="true"></pre><textarea v-code-editor="currentLang" data-testid="dictionary-editor" maxlength="65536" class="dictionary-code-editor" :value="dictionaryEditorCode" @input="updateDictionaryEditor" @scroll="$event.target.closest('.dictionary-editor-surface').querySelector('.dictionary-line-gutter').scrollTop = $event.target.scrollTop" aria-label="كود مثال المصطلح — مسودة محلية" spellcheck="false" dir="ltr"></textarea></div></div>
+              <div class="dictionary-editor-footer"><span>{{ dictionaryEditorChanged ? 'مسودة محلية معدلة' : 'المثال الأصلي' }}</span><button v-if="dictionaryEditorChanged" @click="resetDictionaryEditor" data-testid="dictionary-reset">استعادة الأصل</button><button @click="sendTermToScratchpad(selectedTerm)">الأصل في المحاكي ↗</button></div>
             </section>
             <section class="dictionary-live-panel" aria-label="المعاينة المباشرة للمثال">
               <div class="dictionary-panel-title"><strong><svg><use href="#i-monitor"/></svg>معاينة مباشرة</strong><button @click="runDictionaryPreview" data-testid="dictionary-run" class="dictionary-run-example">▷ تشغيل المثال</button></div>
@@ -2467,6 +2469,7 @@
 <script src="simulator-beta.js"></script>
 <script src="assets/vendor/compiler-sfc-3.4.21.global.min.js"></script>
 <script src="learning-dictionary-status.js"></script>
+<script src="full-backup.js"></script>
 <script src="learning-store.js"></script>
 <script src="learning-explainer.js"></script>
 <script src="learning-course.js"></script>

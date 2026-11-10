@@ -173,12 +173,15 @@
     emits: ['learn'],
     setup(props, { emit }) {
       const { ref, computed, watch } = root.Vue;
-      const state = useOrganizer(), showArchived = ref(false), editingTask = ref(''), editingNote = ref(''), editingEvent = ref(''), editingProject = ref('');
-      const task = ref({ title: '', due: '', status: 'todo', projectId: '' });
-      const note = ref({ title: '', body: '' }), project = ref({ title: '', description: '' });
-      const selectedDate = ref(dateKey(new Date()));
-      const monthYear = ref({ year: new Date().getFullYear(), month: new Date().getMonth() });
-      const event = ref({ title: '', date: selectedDate.value, time: '', notes: '' });
+      const scratch=root.VLexLearningStore?.getSection('organizerDrafts',{})||{};
+      const state = useOrganizer(), showArchived = ref(false), editingTask = ref(scratch.tasks?.editingId||''), editingNote = ref(scratch.notes?.editingId||''), editingEvent = ref(scratch.events?.editingId||''), editingProject = ref(scratch.projects?.editingId||'');
+      const task = ref(scratch.tasks?.record||{ title: '', due: '', status: 'todo', projectId: '' });
+      const note = ref(scratch.notes?.record||{ title: '', body: '' }), project = ref(scratch.projects?.record||{ title: '', description: '' });
+      const selectedDate = ref(validDate(scratch.events?.record?.date)?scratch.events.record.date:dateKey(new Date()));
+      const [selectedYear,selectedMonth]=selectedDate.value.split('-').map(Number);
+      const monthYear = ref({ year: selectedYear, month: selectedMonth-1 });
+      const event = ref(scratch.events?.record||{ title: '', date: selectedDate.value, time: '', notes: '' });
+      watch([task,note,project,event,editingTask,editingNote,editingProject,editingEvent],()=>{const ok=root.VLexLearningStore?.setSection('organizerDrafts',{tasks:{record:task.value,editingId:editingTask.value},notes:{record:note.value,editingId:editingNote.value},projects:{record:project.value,editingId:editingProject.value},events:{record:event.value,editingId:editingEvent.value}});if(!ok)state.storageWarning.value='تعذر حفظ مسودة النموذج؛ صدّر بيانات التعلم قبل الإغلاق.'},{deep:true,flush:'sync'});
       const selectedProject = ref('');
       const labels = { tasks: 'مهامك اليومية', kanban: 'لوحة المهام', calendar: 'تقويم التعلم', notes: 'ملاحظاتك', projects: 'مشاريعك الشخصية' };
       const activeMode = computed(() => Object.hasOwn(labels, props.mode) ? props.mode : 'tasks');
