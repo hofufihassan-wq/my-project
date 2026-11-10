@@ -1,0 +1,23 @@
+{
+  "file": "media/arrow-functions-demo.mp4",
+  "bytes": 2096077,
+  "sha256": "3710a63c23a2edc0865c923e3dcdbb9a793fdb64accf021715dad1cd1cca173c",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 900,
+        "avg_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "40.000000",
+      "size": "2096077"
+    }
+  },
+  "processing": "Continuous browser recording transcoded to H.264 MP4, 25fps, no cuts, no audio, metadata stripped."
+}
