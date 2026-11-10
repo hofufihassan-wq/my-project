@@ -2417,6 +2417,15 @@ const app = createApp({
       if (mode === 'explain') { explainSource.value = typeof source === 'string' ? source : ''; explainKey.value++; }
       setAppMode(mode);
     }
+    function openGuidedUnit(id) {
+      const lesson = (window.VLexGuidedLessons?.units || window.VLexGuidedLessons?.lessons || []).find(item => item.id === id);
+      if (!lesson) return;
+      const store = window.VLexLearningStore, old = store.getSection('guided', {});
+      if (!store.setSection('guided', { version: 1, ...old, selected: id, topic: 'all', lessons: old.lessons || {} })) {
+        triggerToast('تعذر حفظ موضع المشروع؛ صدّر بياناتك قبل المتابعة.', 'error'); return;
+      }
+      openLearning('guided');
+    }
     function openLearningTerm(id) {
       const term = rawLexiconData.value.find(item => item.id === id);
       if (term) { setAppMode('lexicon'); selectTerm(term); }
@@ -2559,7 +2568,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
-      dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, learningReturnToGuided, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
+      dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, learningReturnToGuided, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openGuidedUnit, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
       techCustomWidth, techCustomHeight, techPreviewZoom, techDimensionDraft, techDimensionError, techConsoleHeight, techCompactPanel, techDragging,

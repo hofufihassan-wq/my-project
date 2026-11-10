@@ -1,0 +1,32 @@
+PASS all six actual project cards coexist with unsubmitted organizer draft
+PASS trial controls execute actual task code, persist private data and never grant mastery
+PASS closing whole browser restores source, trial values and task state without autorun
+PASS expense values aggregate across separate runs and budget stays coherent
+FAIL all six projects complete only through real graded tasks and questions The expression evaluated to a falsy value:
+
+  assert(summary.includes('6 / 6'))
+
+PASS one full backup download and import preserve all six results, fields and separate organizer data
+FAIL bad new project field in full import is rejected without mutating current data page.waitForFunction: TypeError: Cannot read properties of null (reading 'textContent')
+    at eval (eval at predicate (eval at evaluate (:290:30)), <anonymous>:1:66)
+    at predicate (eval at evaluate (:290:30), <anonymous>:7:23)
+    at next (eval at evaluate (:290:30), <anonymous>:29:29)
+    at eval (eval at evaluate (:290:30), <anonymous>:42:9)
+    at UtilityScript.evaluate (<anonymous>:292:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+FAIL changing a completed source invalidates project card and dashboard evidence The expression evaluated to a falsy value:
+
+  assert((await p.getByTestId('guided-summary').innerText()).includes('5 / 6'))
+
+FAIL 390px projects catalogue and editor fit document width locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('open-project-vue-workspace')[22m
+
+FAIL no parent runtime errors Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   "Cannot read properties of null (reading 'textContent')"
++ ]
+- []
+

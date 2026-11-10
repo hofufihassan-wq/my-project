@@ -178,7 +178,7 @@
         <div><div class="dashboard-breadcrumb"><span>مساحتك</span><span aria-hidden="true">/</span><span>لوحة التحكم</span></div><h1>كل يوم، خطوة أقرب<span aria-hidden="true">.</span></h1><p>مكان واحد لتعلّمك، وأفكارك، والخطوة الجاية.</p></div>
         <div class="dashboard-intro-actions"><div class="dashboard-theme-switch" role="group" aria-label="مظهر لوحة التحكم"><button data-testid="dashboard-theme-green" @click="setTheme('green')" :aria-pressed="theme === 'green'"><span class="theme-dot emerald-dot" aria-hidden="true"></span>زمردي</button><button data-testid="dashboard-theme-glass" @click="setTheme('glass')" :aria-pressed="theme === 'glass'"><span class="theme-dot glass-dot" aria-hidden="true"></span>زجاجي</button></div><button class="dashboard-start-button" @click="openLearning('course')"><svg><use href="#i-code"/></svg>تابع التعلّم<span aria-hidden="true">←</span></button></div>
       </header>
-      <vlex-dashboard @navigate="navigateLearningSection" @learn="openLearning('course')"></vlex-dashboard>
+      <vlex-dashboard @guided="openLearning('guided')" @navigate="navigateLearningSection" @learn="openLearning('course')"></vlex-dashboard>
       <details class="dashboard-library" data-testid="dashboard-library">
         <summary class="dashboard-section-heading"><div><span class="eyebrow">اكتشف وطبّق</span><h2>مرجعك، ومساحات التجربة</h2></div><span class="dashboard-library-hint">{{ rawLexiconData.length }} مصطلحًا · {{ practiceLessons.length }} تجربة <span aria-hidden="true">⌄</span></span></summary>
         <div class="dashboard-library-content">
@@ -222,6 +222,7 @@
   <main v-if="appMode === 'foundation'" class="foundation-page">
     <div class="page-heading"><span class="eyebrow">مساحتك المحلية</span><h2>{{ activeFoundation.title }}</h2><p>{{ activeFoundation.description }}</p></div>
     <nav class="foundation-tabs" aria-label="أقسام التنظيم"><button v-for="section in foundationSections" :key="section.id" @click="openFoundation(section.id)" :aria-current="activeFoundation.id === section.id ? 'page' : undefined"><svg><use :href="'#i-' + section.icon"/></svg>{{ section.title }}</button></nav>
+    <vlex-learning-projects v-if="foundationSection === 'projects'" @open="openGuidedUnit"></vlex-learning-projects>
     <vlex-organizer :mode="foundationSection === 'explain' ? 'notes' : foundationSection" @learn="openLearning('course')" />
   </main>
   <section v-if="appMode === 'lexicon'" class="lexicon-hero"><span class="eyebrow">تعلّم · استكشف · أتقن</span><h2><svg><use href="#i-book"/></svg>القاموس</h2><p>موسوعة مصطلحات وتقنيات تطوير الويب الحديثة</p><span class="hero-caption">كل مصطلح هنا، خطوة أقرب للفهم.</span></section>
@@ -2488,7 +2489,9 @@
 <script src="guided-lessons-markup.js"></script>
 <script src="guided-lessons-javascript.js"></script>
 <script src="guided-lessons-vue.js"></script>
+<script src="guided-projects.js"></script>
 <script src="guided-learning.js"></script>
+<script src="learning-projects.js"></script>
 <script src="learning-dashboard.js"></script>
 <script src="code-presentation.js"></script>
 <script src="app.js"></script>

@@ -1,0 +1,22 @@
+{
+  "passed": 4,
+  "total": 4,
+  "rows": [
+    {
+      "name": "six approved ordered projects coexist with all 60 lessons and known prerequisites",
+      "passed": true
+    },
+    {
+      "name": "project source fields actions storage and reviews fit same validated backup without fake completion",
+      "passed": true
+    },
+    {
+      "name": "older backups without project fields remain valid and bad new values are refused",
+      "passed": true
+    },
+    {
+      "name": "passing an exercise or trial alone cannot mark a project mastered",
+      "passed": true
+    }
+  ]
+}

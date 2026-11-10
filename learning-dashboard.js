@@ -64,6 +64,7 @@
           next[name] = Array.isArray(value) ? copy(value) : [];
         }
         next.course = copy(store.getSection('course', {}) || {});
+        next.guided = copy(store.getSection('guided', {}) || {});
         data.value = next;
         const status = typeof store.status === 'function' ? store.status() : null;
         if (status && (status === 'protected' || status === 'memory' || status.protected || status.persistent === false || status.writable === false)) storageWarning.value = 'توجد مشكلة في الحفظ الدائم. التغييرات قد تبقى في الجلسة فقط؛ راجع تنبيه البيانات وصدّر نسختك.';
@@ -119,7 +120,7 @@
     return { data, message, storageWarning, now, today, activeTasks, todayTasks, upcoming, completedLessons, dueReviews, refresh, save, patch, archive };
   }
   const dashboard = {
-    emits: ['navigate', 'learn'],
+    emits: ['navigate', 'learn', 'guided'],
     setup(_, { emit }) {
       const { ref, computed } = root.Vue;
       const state = useOrganizer(), taskTitle = ref('');
@@ -131,6 +132,13 @@
       // Read-only presentation metrics; existing persistence and organizer behavior are unchanged.
       const lessons = root.VLexCourse?.lessons || [];
       const lessonCount = lessons.length;
+      const guidedUnits = root.VLexGuidedLessons?.units || root.VLexGuidedLessons?.lessons || [];
+      const guidedLessonTotal = guidedUnits.filter(l => l.kind !== 'project').length;
+      const guidedProjectTotal = guidedUnits.filter(l => l.kind === 'project').length;
+      const assessed = computed(() => guidedUnits.filter(l => { const local = state.data.value.guided?.lessons?.[l.id]; return local && root.VLexGuided?.ready(l, local); }));
+      const assessedLessons = computed(() => assessed.value.filter(l => l.kind !== 'project').length);
+      const assessedProjects = computed(() => assessed.value.filter(l => l.kind === 'project').length);
+
       const learningTracks = computed(() => {
         const completed = new Set(state.data.value.course.completed || []);
         return [{ id: 'html', label: 'HTML', description: 'هيكل الصفحة' }, { id: 'css', label: 'CSS', description: 'الشكل والتنسيق' },
@@ -141,11 +149,12 @@
           });
       });
       const lessonPercent = computed(() => lessonCount ? Math.round(state.completedLessons.value / lessonCount * 100) : 0);
-      return { ...state, taskTitle, clock, dateLabel, addTask, statusNames, emit, lessonCount, learningTracks, lessonPercent };
+      return { ...state, guidedLessonTotal, guidedProjectTotal, assessedLessons, assessedProjects, taskTitle, clock, dateLabel, addTask, statusNames, emit, lessonCount, learningTracks, lessonPercent };
     },
     template: `<section class="vlp-organizer vlp-daily-dashboard" aria-label="خطتك اليومية الحقيقية" data-testid="learning-daily-dashboard">
       <div class="vlp-day-heading"><div><span class="vlp-section-kicker">لمحة عن يومك</span><h2>خطتك اليوم</h2><p>{{ dateLabel }}</p></div><div class="vlp-clock-block"><span class="vlp-clock-label"><i aria-hidden="true"></i>وقتك المحلي</span><time class="vlp-local-clock" dir="ltr" aria-label="الوقت المحلي">{{ clock }}</time></div></div>
       <p v-if="storageWarning" role="alert" class="vlp-storage-warning">{{ storageWarning }}</p>
+      <section v-if="guidedLessonTotal" class="vlp-record-card vlp-guided-summary" data-testid="guided-summary"><strong>نتائج تعلّمك الموجّه</strong><p>دروس اجتازت الفحوص والأسئلة: {{assessedLessons}} / {{guidedLessonTotal}} · مشاريع اجتازت الفحوص والأسئلة: {{assessedProjects}} / {{guidedProjectTotal}}</p><div class="vlp-action-row"><button type="button" @click="emit('guided')">استكمل دروس الإتقان</button><button type="button" @click="emit('navigate','projects')">المشاريع العملية</button></div><small>تُحتسب نتائج الكود الحالي والأسئلة؛ تبقى مراجعات المسار السابق وإحصاءاته منفصلة أدناه.</small></section>
       <div class="vlp-mini-stats" aria-label="إحصاءات فعلية من بياناتك">
         <article><span class="vlp-stat-icon"><svg><use href="#i-book"/></svg></span><span class="vlp-stat-label">رحلتك في التعلّم</span><strong>{{ completedLessons }}<em> / {{ lessonCount }}</em></strong><small>دروس راجعتها</small><span class="vlp-stat-line"><i :style="{width:lessonPercent+'%'}"></i></span></article>
         <article><span class="vlp-stat-icon"><svg><use href="#i-note"/></svg></span><span class="vlp-stat-label">خطوات أنجزتها</span><strong>{{ activeTasks.filter(t=>t.status==='done').length }}</strong><small>مهام مكتملة من {{ activeTasks.length }}</small><span class="vlp-stat-caption">من قائمة مهامك</span></article>
