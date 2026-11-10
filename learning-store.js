@@ -66,7 +66,7 @@ function guided(v){
  if(v.version!==1||Object.keys(v).some(k=>!['version','selected','topic','lessons'].includes(k))||!['all','html','css','javascript','vue'].includes(v.topic))fail('المحرك الموجّه');
  string(v.selected,'الدرس المختار',160,false);
  map(v.lessons,'دروس موجّهة',(s,id)=>{
-  if(!/^[a-z][a-z0-9-]{0,100}$/.test(id)||!record(s)||Object.keys(s).some(k=>!['step','drafts','answers','answerAttempts','mistakes','hints','results','reviews','completed'].includes(k))||!Number.isInteger(s.step)||s.step<0||s.step>7)fail('حالة الدرس');
+  if(!/^[a-z][a-z0-9-]{0,100}$/.test(id)||!record(s)||Object.keys(s).some(k=>!['step','drafts','answers','answerAttempts','mistakes','hints','results','reviews','completed','sandboxStorage'].includes(k))||!Number.isInteger(s.step)||s.step<0||s.step>7)fail('حالة الدرس');
   map(s.drafts,'مسودات الدرس',(code,k)=>{if(!['try','exercise','fix','mastery'].includes(k))fail('معرف مسودة');string(code,'كود الدرس',16000)});
   map(s.answers,'إجابات الدرس',(n,k)=>{if(!['prediction','understanding','output'].includes(k)||!Number.isInteger(n)||n<0||n>2)fail('اختيار الإجابة')});
   if(own(s,'answerAttempts'))map(s.answerAttempts,'محاولات الفهم',(n,k)=>{if(!['prediction','understanding','output'].includes(k)||!Number.isInteger(n)||n<1||n>1000000)fail('محاولات الإجابة')});
@@ -74,6 +74,7 @@ function guided(v){
   map(s.hints,'تلميحات الدرس',(n,k)=>{if(!['prediction','try','exercise','fix','mastery'].includes(k)||!Number.isInteger(n)||n<0||n>3)fail('تلميحات')});
   map(s.results,'نتائج الدرس',(r,k)=>{if(!['exercise','fix','mastery'].includes(k)||!record(r)||Object.keys(r).some(x=>!['passed','source','at','attempts'].includes(x))||typeof r.passed!=='boolean'||!timestamp(r.at)||!Number.isInteger(r.attempts)||r.attempts<1||r.attempts>1000000)fail('نتيجة');string(r.source,'الكود المفحوص',16000)});
   map(s.reviews,'مراجعات الدرس',(r,k)=>{if(!['prediction','understanding','output','exercise','fix','mastery','lesson'].includes(k)||!record(r)||Object.keys(r).some(x=>!['status','due','days'].includes(x))||!timestamp(r.due)||!['review','passed'].includes(r.status)||!Number.isInteger(r.days)||r.days<0||r.days>30)fail('مراجعة')});
+  if(own(s,'sandboxStorage')){if(Object.keys(s.sandboxStorage).length>100)fail('حجم مساحة التدريب');map(s.sandboxStorage,'تخزين التدريب',(value,key)=>{string(key,'مفتاح التدريب',512,false);string(value,'قيمة التدريب',16000)});if(JSON.stringify(s.sandboxStorage).length>65536)fail('حجم مساحة التدريب');}
   if(own(s,'completed')&&!timestamp(s.completed))fail('تاريخ الإتقان');
  });
 }

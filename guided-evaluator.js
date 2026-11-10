@@ -24,22 +24,23 @@ function compileVue(source,compiler){
 function prepare(source,spec,compiler){
  if(typeof source!=='string'||!source.trim()||source.length>LIMIT)fail('اكتب كودًا بين 1 و16000 محرف.');
  if(!['html','css','javascript','vue'].includes(spec.language))fail('لغة غير مدعومة.');
- const out={...spec,source};
+ const out={...JSON.parse(JSON.stringify(spec)),source};
  if(['javascript','vue'].includes(spec.language)){
   const script=spec.language==='vue'?compiler.parse(source).descriptor.scriptSetup?.content:source;
-  if(script){const ast=compiler.babelParse(script,{sourceType:spec.language==='vue'?'module':'script'});walk(ast,n=>{if(n.type==='ImportExpression'||n.type==='Import'||n.type==='Identifier'&&['self','globalThis','window','parent','top','document','fetch','XMLHttpRequest','WebSocket','EventSource','importScripts','Function','eval','constructor','prototype','__proto__'].includes(n.name)||n.type==='MemberExpression'&&n.computed&&n.property.type==='StringLiteral'&&['constructor','prototype','__proto__'].includes(n.property.value))fail('هذا التقييم لا يدعم الوصول إلى بيئة التطبيق أو الشبكة أو إنشاء كود ديناميكي.');});}
+  if(script){const ast=compiler.babelParse(script,{sourceType:spec.language==='vue'||spec.module?'module':'script'});walk(ast,n=>{if(n.type==='ImportExpression'||n.type==='Import'||n.type==='Identifier'&&(n.name==='document'&&spec.environment!=='dom'||n.name==='fetch'&&!spec.mockFetch||n.name==='localStorage'&&!spec.storage)||n.type==='Identifier'&&['self','globalThis','window','parent','top','XMLHttpRequest','WebSocket','EventSource','importScripts','Function','eval','constructor','prototype','__proto__'].includes(n.name)||n.type==='MemberExpression'&&n.computed&&n.property.type==='StringLiteral'&&['constructor','prototype','__proto__'].includes(n.property.value))fail('هذا التقييم لا يدعم الوصول إلى بيئة التطبيق أو الشبكة أو إنشاء كود ديناميكي.');});}
  }
  if(spec.language==='vue')Object.assign(out,compileVue(source,compiler));
  if(spec.language==='javascript'){
-  try{compiler.babelParse(source,{sourceType:'script'})}catch(e){e.phase='parse';throw e}
+  try{const parsed=compiler.babelParse(source,{sourceType:spec.module?'module':'script'});if(spec.module){out.moduleImports=[];for(const n of parsed.program.body)if(n.type==='ImportDeclaration'||(n.type==='ExportNamedDeclaration'||n.type==='ExportAllDeclaration')&&n.source){if(!Object.hasOwn(spec.modules||{},n.source.value))fail('استيراد غير مدعوم: استخدم وحدة التمرين المحلية الموثقة.');out.moduleImports.push({start:n.source.start,end:n.source.end,name:n.source.value})}}}catch(e){e.phase='parse';throw e}
   if(!/^[A-Za-z_$][\w$]*$/.test(spec.entry||''))fail('لا يوجد مدخل موثوق للتمرين.');
+  const syntax=compiler.babelParse(source,{sourceType:spec.module?'module':'script'}),types=new Set(),calls=new Set();walk(syntax,n=>{types.add(n.type);if(n.type==='CallExpression'&&n.callee.type==='MemberExpression')calls.add(n.callee.property.name||n.callee.property.value)});for(const name of spec.requiredCalls||[])if(!calls.has(name))fail('شرط المهارة: استعمل '+name+' في الحل.');for(const group of spec.requireNodes||[])if(!group.some(t=>types.has(t)))fail('شرط المهارة: استخدم '+group.join(' أو ')+'. صحة الناتج تُفحص بعد ذلك وظيفيًا.');if(spec.requiredImports?.some(name=>!out.moduleImports?.some(i=>i.name===name)))fail('شرط المهارة: استورد وحدة التمرين المطلوبة.');
  }
  return out;
 }
 function workerRuntime(){
  'use strict';
  const NativeFunction=Function,parse=JSON.parse,stringify=JSON.stringify,keys=Object.keys,entries=Object.entries,own=Object.hasOwn,isArray=Array.isArray,finite=Number.isFinite,apply=Reflect.apply;
- let port,send,config,tree,Vue,instance;
+ let port,send,config,tree,Vue,instance,DOM;
  const text=v=>{try{return typeof v==='string'?v:stringify(v)??String(v)}catch(_){return '[قيمة غير قابلة للعرض]'}};
  const same=(a,b)=>{if(a===b)return true;if(typeof a!==typeof b||a===null||b===null||typeof a!=='object')return false;if(isArray(a)!==isArray(b))return false;const ak=keys(a),bk=keys(b);if(ak.length!==bk.length)return false;for(let i=0;i<ak.length;i++){const k=ak[i];if(!own(b,k)||!same(a[k],b[k]))return false}return true};
  function disableNetwork(){for(const key of ['Object','Array','Function','Number','String','Boolean','Promise','Map','Set','RegExp','JSON','Math','Reflect']){const value=self[key];try{if(value.prototype)Object.freeze(value.prototype);Object.freeze(value);Object.defineProperty(self,key,{value,writable:false,configurable:false})}catch(_){}}for(const k of ['fetch','XMLHttpRequest','WebSocket','EventSource','importScripts','Worker','SharedWorker','BroadcastChannel','indexedDB','caches'])try{Object.defineProperty(self,k,{value:undefined,writable:false,configurable:false})}catch(_){}}
@@ -51,7 +52,7 @@ function workerRuntime(){
  function find(selector){return all(tree).filter(n=>matches(n,selector))}
  const content=n=>n.text+n.children.map(content).join('');
  function vueCheck(rule){const found=find(rule.selector),n=found[0];let actual;if(rule.kind==='count')actual=found.length;else if(!n)actual=null;else if(rule.kind==='text')actual=content(n);else if(rule.kind==='prop')actual=n.props[rule.property]??null;else if(rule.kind==='value')actual=n.value;else throw Error('قاعدة Vue غير معروفة');return{label:rule.label,expected:text(rule.expected),actual:text(actual),passed:same(actual,rule.expected)}}
- async function vueAction(action){if(action.kind==='tick'){await Vue.nextTick();return}const n=find(action.selector)[0];if(!n)throw Error('لم يُعثر على عنصر التفاعل: '+action.selector);if(action.kind==='input'){n.value=action.value;self.document.activeElement=n;n.dispatchEvent({type:'input'});self.document.activeElement=null}else if(action.kind==='click')n.dispatchEvent({type:'click'});else if(action.kind==='submit')n.dispatchEvent({type:'submit',preventDefault(){},stopPropagation(){}});else throw Error('تفاعل غير مدعوم');await Vue.nextTick()}
+ async function vueAction(action){if(action.kind==='tick'){await Vue.nextTick();return}const n=find(action.selector)[0];if(!n)throw Error('لم يُعثر على عنصر التفاعل: '+action.selector);if(action.kind==='input'){n.value=action.value;self.document.activeElement=n;n.dispatchEvent({type:'input'});self.document.activeElement=null}else if(action.kind==='append'){const holder=doc.createElement('div');holder.innerHTML=action.html;while(holder.firstChild)n.append(holder.firstChild)}else if(action.kind==='click')n.dispatchEvent({type:'click'});else if(action.kind==='submit')n.dispatchEvent({type:'submit',preventDefault(){},stopPropagation(){}});else throw Error('تفاعل غير مدعوم');await Vue.nextTick()}
  async function runVue(){
   // Genuine Vue renderer/reactivity, with a bounded custom host rather than a browser DOM.
   self.document={activeElement:null};self.Event=class{constructor(type){this.type=type}};
@@ -70,34 +71,48 @@ function workerRuntime(){
  }
  async function runJS(){
   const logs=[],console=Object.freeze({log:(...args)=>{if(logs.length<80)logs.push(args.map(text).join(' '))}});
-  const fn=new NativeFunction('console','"use strict";\n'+config.source+'\n;return '+config.entry+';')(console);
+  let storageData=parse(stringify(config.storageData||{})),activeCase={};
+  const storage=config.storage?Object.freeze({getItem:key=>own(storageData,String(key))?storageData[String(key)]:null,setItem(key,value){key=String(key);value=String(value);if(['__proto__','prototype','constructor'].includes(key)||key.length>512||value.length>16000)throw Error('مفتاح أو قيمة خارج حدود مساحة التدريب.');const next={...storageData,[key]:value};if(keys(next).length>100||stringify(next).length>65536)throw Error('امتلأت مساحة التخزين المعزولة.');storageData=next},removeItem(key){delete storageData[String(key)]},clear(){storageData={}},key:i=>keys(storageData)[i]??null,get length(){return keys(storageData).length}}):undefined;
+  const mockFetch=config.mockFetch?async(url,options)=>{const response=activeCase.response||config.response||{};if(config.requestURL&&String(url)!==config.requestURL)throw Error('عنوان الطلب خارج مورد التمرين.');if(response.reject)throw Error(response.reject);return new Response(typeof response.body==='string'?response.body:stringify(response.body??{}),{status:response.status||200,headers:{'Content-Type':'application/json'}})}:undefined;
+  let doc;if(config.environment==='dom')doc=DOM.parseHTML('<!doctype html><html><head></head><body>'+config.fixture+'</body></html>').document;
+  let fn;
+  if(config.module){
+   const urls={};for(const[key,value]of entries(config.modules||{}))urls[key]=URL.createObjectURL(new Blob([value],{type:'text/javascript'}));let source=config.source;for(const edit of [...config.moduleImports].sort((a,b)=>b.start-a.start))source=source.slice(0,edit.start)+stringify(urls[edit.name])+source.slice(edit.end);
+   const url=URL.createObjectURL(new Blob([source],{type:'text/javascript'}));try{fn=(await import(url))[config.entry]}finally{URL.revokeObjectURL(url);for(const url of Object.values(urls))URL.revokeObjectURL(url)}
+  }else fn=new NativeFunction('console','document','Event','CustomEvent','localStorage','fetch','"use strict";\n'+config.source+'\n;return '+config.entry+';')(console,doc,DOM?.Event,DOM?.CustomEvent,storage,mockFetch);
   if(typeof fn!=='function')throw Error('عرّف دالة باسم '+config.entry+'.');
-  const checks=[];for(const c of config.cases||[]){try{const input=parse(stringify(c.args)),before=c.preserveInputs?parse(stringify(input)):null,result=await apply(fn,undefined,input);checks[checks.length]={label:c.label||'حالة اختبار',expected:text(c.expected),actual:text(result),passed:same(result,c.expected)&&(!c.preserveInputs||same(input,before))}}catch(e){checks[checks.length]={label:c.label||'حالة اختبار',expected:text(c.expected),actual:String(e.message),passed:false}}}
-  send({kind:'result',checks,logs});
+  const checks=[];
+  if(doc){
+   await apply(fn,undefined,[]);
+   for(const phase of config.phases||[]){for(const action of phase.actions||[]){const n=doc.querySelector(action.selector);if(!n)throw Error('لم يُعثر على عنصر التفاعل: '+action.selector);if(action.kind==='input'||action.kind==='change'){n.value=action.value;n.dispatchEvent(new DOM.Event(action.kind,{bubbles:true}))}else if(action.kind==='append'){const holder=doc.createElement('div');holder.innerHTML=action.html;while(holder.firstChild)n.append(holder.firstChild)}else if(action.kind==='click')n.dispatchEvent(new DOM.Event('click',{bubbles:true,cancelable:true}));else if(action.kind==='submit')n.dispatchEvent(new DOM.Event('submit',{bubbles:true,cancelable:true}));else throw Error('تفاعل DOM غير مدعوم.');await new Promise(r=>setTimeout(r,0))}
+    for(const rule of phase.rules||[]){const nodes=[...doc.querySelectorAll(rule.selector)],n=nodes[0];let actual;if(rule.kind==='count')actual=nodes.length;else if(!n)actual=null;else if(rule.kind==='text')actual=n.textContent.trim();else if(rule.kind==='attr')actual=n.getAttribute(rule.property);else if(rule.kind==='value')actual=n.value;else throw Error('قاعدة DOM غير مدعومة.');checks[checks.length]={label:rule.label,expected:text(rule.expected),actual:text(actual),passed:same(actual,rule.expected)}}
+   }
+  }else for(const c of config.cases||[]){activeCase=c;if(c.storageData)storageData=parse(stringify(c.storageData));try{const input=parse(stringify(c.args)),before=c.preserveInputs?parse(stringify(input)):null,pending=apply(fn,undefined,input),isPromise=!!pending&&typeof pending.then==='function',result=await pending,storageOK=!config.expectStorage||entries(config.expectStorage).every(([key,value])=>storageData[key]===String(value==='$arg0'?input[0]:value));checks[checks.length]={label:c.label||'حالة اختبار',expected:c.throws||text(c.expected),actual:text(result)+(storageOK?'':' (لم تطابق البيانات المحفوظة)')+((config.requirePromise||c.requirePromise)&&!isPromise?' (قيمة متزامنة)':''),passed:storageOK&&!c.throws&&(!(config.requirePromise||c.requirePromise)||isPromise)&&same(result,c.expected)&&(!c.preserveInputs||same(input,before))}}catch(e){checks[checks.length]={label:c.label||'حالة اختبار',expected:c.throws||text(c.expected),actual:String(e.message),passed:typeof c.throws==='string'&&String(e.message).includes(c.throws)}}}
+  const preview=doc?doc.toString():undefined;if(preview&&preview.length>100000)throw Error('تجاوزت مخرجات DOM الحد المسموح.');send({kind:'result',checks,logs,...(preview?{preview}:{}),...(config.persistStorage?{storage:storageData}:{})});
  }
  function initialize(event){if(event.data?.type!=='VLEX_GUIDED_INIT'||!event.ports[0]||port)return;self.removeEventListener('message',initialize);port=event.ports[0];send=port.postMessage.bind(port);config=event.data.config;
-  try{if(config.language==='vue'){importScripts(config.vueURL);Vue=self.Vue}disableNetwork();Promise.resolve(config.language==='vue'?runVue():runJS()).catch(e=>send({kind:'error',error:describe(e)}))}catch(e){send({kind:'error',error:describe(e)})}
+  try{if(config.language==='vue'){importScripts(config.vueURL);Vue=self.Vue}if(config.environment==='dom'){importScripts(config.domURL);DOM=self.VLexDOM}disableNetwork();Promise.resolve(config.language==='vue'?runVue():runJS()).catch(e=>send({kind:'error',error:describe(e)}))}catch(e){send({kind:'error',error:describe(e)})}
  }
  self.addEventListener('message',initialize);
 }
-function workerBroker(runtime,vueURL){
+function workerBroker(runtime,vueURL,domURL){
  const script='const runtime='+JSON.stringify(runtime)+';const expectedParent=parent;let worker=null,port=null;addEventListener("message",function init(e){if(e.source!==expectedParent||!e.ports[0]||port)return;port=e.ports[0];removeEventListener("message",init);try{const url=URL.createObjectURL(new Blob([runtime],{type:"text/javascript"}));worker=new Worker(url);URL.revokeObjectURL(url);const channel=new MessageChannel();channel.port1.onmessage=e=>port.postMessage(e.data);worker.onerror=e=>{e.preventDefault();port.postMessage({kind:"error",error:{message:e.message,name:"WorkerError"}})};worker.postMessage({type:"VLEX_GUIDED_INIT",config:e.data},[channel.port2]);}catch(e){port.postMessage({kind:"error",error:{message:e.message,name:e.name}})}});';
- const policy="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' blob: "+vueURL+"; worker-src blob:; connect-src 'none'; img-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'";
+ const policy="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' blob: "+vueURL+" "+domURL+"; worker-src blob:; connect-src 'none'; img-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'";
  return '<!doctype html><meta http-equiv="Content-Security-Policy" content="'+policy+'"><script>'+script.replace(/<\/script/gi,'<\\/script')+'<\/script>';
 }
 function runWorker(plan){
  let done=false,timer,frame,port;const cleanup=()=>{clearTimeout(timer);port?.close();frame?.remove()};let resolve;
  const promise=new Promise(r=>resolve=r);const finish=result=>{if(done)return;done=true;cleanup();resolve(result)};
  try{
-  const vueURL=new URL('assets/vendor/vue-3.4.21.global.prod.js',document.baseURI).href;
+  const vueURL=new URL('assets/vendor/vue-3.4.21.global.prod.js',document.baseURI).href,domURL=new URL('assets/vendor/linkedom-0.18.12.global.min.js',document.baseURI).href;
   frame=document.createElement('iframe');frame.setAttribute('sandbox','allow-scripts');frame.hidden=true;
   const channel=new MessageChannel();port=channel.port1;port.onmessage=event=>{const d=event.data;if(!d||!['result','error'].includes(d.kind))return;
-   const expected=plan.language==='vue'?(plan.phases||[]).reduce((n,p)=>n+(p.rules||[]).length,0):(plan.cases||[]).length;
+   const expected=plan.language==='vue'||plan.environment==='dom'?(plan.phases||[]).reduce((n,p)=>n+(p.rules||[]).length,0):(plan.cases||[]).length;
    if(d.kind==='result'&&(!Array.isArray(d.checks)||d.checks.length!==expected||d.checks.some(c=>typeof c.passed!=='boolean'||typeof c.label!=='string'||typeof c.actual!=='string'||typeof c.expected!=='string')))return finish({kind:'error',error:{message:'نتيجة تقييم غير صالحة؛ لم يُحتسب نجاح.'}});
    finish(d);
   };
-  frame.onload=()=>{if(!done)frame.contentWindow.postMessage({...plan,vueURL},'*',[channel.port2])};
-  frame.srcdoc=workerBroker('('+workerRuntime.toString()+')()',vueURL);document.body.append(frame);
+  frame.onload=()=>{if(!done)try{frame.contentWindow.postMessage({...plan,vueURL,domURL},'*',[channel.port2])}catch(e){finish({kind:'error',error:{message:e.message,name:e.name,stack:e.stack}})}};
+  frame.srcdoc=workerBroker('('+workerRuntime.toString()+')()',vueURL,domURL);document.body.append(frame);
   timer=setTimeout(()=>finish({kind:'timeout',error:{message:'تجاوز التنفيذ المهلة وأُوقف العامل. لم يُحتسب نجاح.',name:'Timeout',stack:''}}),TIMEOUT);
  }catch(e){finish({kind:'error',error:{message:e.message,name:e.name,stack:e.stack}})}
  return{promise,stop:()=>finish({kind:'cancelled'})};

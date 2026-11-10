@@ -1,0 +1,212 @@
+{
+  "js-types": {
+    "exercise": [
+      "function toNumber(text){if(!text.trim())return null;const n=Number(text);return Number.isFinite(n)?n:null}"
+    ],
+    "fix": [
+      "function toNumber(text){if(!text.trim())return null;const n=Number(text);return Number.isFinite(n)?n:null}"
+    ],
+    "mastery": [
+      "function incrementText(text){if(!text.trim())return null;const n=Number(text);return Number.isFinite(n)?n+1:null}"
+    ]
+  },
+  "js-conditions": {
+    "exercise": [
+      "function category(age){if(age<13)return \"طفل\";if(age<18)return \"يافع\";return \"بالغ\"}"
+    ],
+    "fix": [
+      "function category(age){if(age<13)return \"طفل\";if(age<18)return \"يافع\";return \"بالغ\"}"
+    ],
+    "mastery": [
+      "function shipping(total){return total>=100?0:10}"
+    ]
+  },
+  "js-loops": {
+    "exercise": [
+      "function sumItems(values){let sum=0;for(const value of values)sum+=value;return sum}",
+      "function sumItems(values){let i=0,total=0;while(i<values.length){total+=values[i];i++}return total}"
+    ],
+    "fix": [
+      "function sumItems(values){let sum=0;for(const value of values)sum+=value;return sum}"
+    ],
+    "mastery": [
+      "function countPositive(values){let count=0;for(let i=0;i<values.length;i++){if(values[i]>0)count++}return count}"
+    ]
+  },
+  "js-functions": {
+    "exercise": [
+      "function multiply(a,b=1){return a*b}"
+    ],
+    "fix": [
+      "function multiply(a,b=1){return a*b}"
+    ],
+    "mastery": [
+      "function greet(name=\"متعلم\"){return \"مرحبًا \"+name}"
+    ]
+  },
+  "js-arrays": {
+    "exercise": [
+      "function last(values){return values.length?values[values.length-1]:null}"
+    ],
+    "fix": [
+      "function last(values){return values.length?values[values.length-1]:null}"
+    ],
+    "mastery": [
+      "function withoutFirst(values){return values.slice(1)}"
+    ]
+  },
+  "js-objects": {
+    "exercise": [
+      "function rename(user,name){return {...user,name}}"
+    ],
+    "fix": [
+      "function rename(user,name){return {...user,name}}"
+    ],
+    "mastery": [
+      "function doneTask(task){return {...task,done:true}}"
+    ]
+  },
+  "js-map-filter": {
+    "exercise": [
+      "function evenNumbers(values){return values.filter(n=>n%2===0)}"
+    ],
+    "fix": [
+      "function evenNumbers(values){return values.filter(n=>n%2===0)}"
+    ],
+    "mastery": [
+      "function names(users){return users.map(user=>user.name)}"
+    ]
+  },
+  "js-reduce": {
+    "exercise": [
+      "function totalPrices(items){return items.reduce((sum,item)=>sum+item.price,0)}"
+    ],
+    "fix": [
+      "function totalPrices(items){return items.reduce((sum,item)=>sum+item.price,0)}"
+    ],
+    "mastery": [
+      "function totalQuantity(items){return items.reduce((sum,item)=>sum+item.qty,0)}"
+    ]
+  },
+  "js-closure": {
+    "exercise": [
+      "function countFrom(start,count){let current=start;const next=()=>++current;const out=[];for(let i=0;i<count;i++)out.push(next());return out}"
+    ],
+    "fix": [
+      "function countFrom(start,count){let current=start;const next=()=>++current;const out=[];for(let i=0;i<count;i++)out.push(next());return out}"
+    ],
+    "mastery": [
+      "function accumulate(start,values){let current=start;const add=n=>current+=n;return values.map(add)}"
+    ]
+  },
+  "js-promises": {
+    "exercise": [
+      "function addLater(a,b){return Promise.resolve(a+b)}"
+    ],
+    "fix": [
+      "function addLater(a,b){return Promise.resolve(a+b)}"
+    ],
+    "mastery": [
+      "function squareLater(n){return Promise.resolve(n).then(value=>value*value)}"
+    ]
+  },
+  "js-async-errors": {
+    "exercise": [
+      "async function parseSafe(text){try{return JSON.parse(await Promise.resolve(text))}catch{return null}}"
+    ],
+    "fix": [
+      "async function parseSafe(text){try{return JSON.parse(await Promise.resolve(text))}catch{return null}}"
+    ],
+    "mastery": [
+      "async function waitValue(value){return await Promise.resolve(value)}"
+    ]
+  },
+  "js-modules": {
+    "exercise": [
+      "import {add as plus} from \"./math.js\";export function total(a,b){return plus(a,b)}"
+    ],
+    "fix": [
+      "import {add as plus} from \"./math.js\";export function total(a,b){return plus(a,b)}"
+    ],
+    "mastery": [
+      "import {triple} from \"./math.js\";export const scaled=n=>triple(n)"
+    ]
+  },
+  "js-debugging": {
+    "exercise": [
+      "function nextNumber(text){if(!text.trim())return null;const n=Number(text);return Number.isFinite(n)?n+1:null}"
+    ],
+    "fix": [
+      "function nextNumber(text){if(!text.trim())return null;const n=Number(text);return Number.isFinite(n)?n+1:null}"
+    ],
+    "mastery": [
+      "function previousNumber(text){if(!text.trim())return null;const n=Number(text);return Number.isFinite(n)?n-1:null}"
+    ]
+  },
+  "js-dom": {
+    "exercise": [
+      "function setup(){const heading=document.createElement(\"h1\");heading.textContent=\"مهامي\";document.querySelector(\"#app\").append(heading)}"
+    ],
+    "fix": [
+      "function setup(){const heading=document.createElement(\"h1\");heading.textContent=\"مهامي\";document.querySelector(\"#app\").append(heading)}"
+    ],
+    "mastery": [
+      "function setup(){const ul=document.createElement(\"ul\");for(const title of [\"قراءة\",\"تطبيق\"]){const li=document.createElement(\"li\");li.textContent=title;ul.append(li)}document.querySelector(\"#app\").append(ul)}"
+    ]
+  },
+  "js-events": {
+    "exercise": [
+      "function setup(){let count=0;document.querySelector(\"button\").addEventListener(\"click\",()=>{count+=2;document.querySelector(\"output\").textContent=String(count)})}"
+    ],
+    "fix": [
+      "function setup(){let count=0;document.querySelector(\"button\").addEventListener(\"click\",()=>{count+=2;document.querySelector(\"output\").textContent=String(count)})}"
+    ],
+    "mastery": [
+      "function setup(){document.querySelector(\"input\").addEventListener(\"input\",event=>{document.querySelector(\"output\").textContent=event.target.value.trim()})}"
+    ]
+  },
+  "js-delegation": {
+    "exercise": [
+      "function setup(){document.querySelector(\"ul\").addEventListener(\"click\",e=>{const button=e.target.closest(\"button\");if(button)button.closest(\"li\").remove()})}"
+    ],
+    "fix": [
+      "function setup(){document.querySelector(\"ul\").addEventListener(\"click\",e=>{const button=e.target.closest(\"button\");if(button)button.closest(\"li\").remove()})}"
+    ],
+    "mastery": [
+      "function setup(){document.querySelector(\"#list\").addEventListener(\"click\",e=>{const b=e.target.closest(\"button\");if(b)b.textContent=\"تم\"})}"
+    ]
+  },
+  "js-storage": {
+    "exercise": [
+      "function saveNote(value){localStorage.setItem(\"note\",value);return localStorage.getItem(\"note\")}"
+    ],
+    "fix": [
+      "function saveNote(value){localStorage.setItem(\"note\",value);return localStorage.getItem(\"note\")}"
+    ],
+    "mastery": [
+      "function loadTasks(){try{const value=JSON.parse(localStorage.getItem(\"tasks\")||\"[]\");return Array.isArray(value)?value:[]}catch{return []}}"
+    ]
+  },
+  "js-fetch": {
+    "exercise": [
+      "async function loadTasks(){try{const r=await fetch(\"/tasks\");if(!r.ok)return [];const data=await r.json();return Array.isArray(data)?data:[]}catch{return []}}"
+    ],
+    "fix": [
+      "async function loadTasks(){try{const r=await fetch(\"/tasks\");if(!r.ok)return [];const data=await r.json();return Array.isArray(data)?data:[]}catch{return []}}"
+    ],
+    "mastery": [
+      "async function loadTitle(){try{const r=await fetch(\"/tasks\");if(!r.ok)return \"غير متاح\";const data=await r.json();return typeof data.title===\"string\"?data.title:\"غير متاح\"}catch{return \"غير متاح\"}}"
+    ]
+  },
+  "js-project-organization": {
+    "exercise": [
+      "import {done} from \"./selectors.js\";export function summary(tasks){return {total:tasks.length,completed:done(tasks).length}}"
+    ],
+    "fix": [
+      "import {done} from \"./selectors.js\";export function summary(tasks){return {total:tasks.length,completed:done(tasks).length}}"
+    ],
+    "mastery": [
+      "import {done,names} from \"./selectors.js\";export const completedTitles=tasks=>names(done(tasks))"
+    ]
+  }
+}

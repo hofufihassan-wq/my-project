@@ -52,6 +52,32 @@
     ]
   },
   {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling",
+    "sha256": "5a2d5e74163cf7c83e93531197f8f00bca49efd9a6ff7b630af9fc144489cf4d",
+    "title": "Event bubbling - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-delegation"
+    ],
+    "evidence": [
+      "We've seen that a web page is composed of elements — headings, paragraphs of text, images, buttons, and so on — and that you can listen for events that happen to these elements. For example, you could add a listener to a button, and it will run when the user clicks the button. We describe this by saying that the event bubbles up from the innermost element that was clicked."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong",
+    "sha256": "aac4bf1ef52df6701a09f64dbe0c6f2af637102c8cb50e35de6e538c2f15be88",
+    "title": "What went wrong? Troubleshooting JavaScript - Learn web development | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-debugging"
+    ],
+    "evidence": [
+      "To get started, let's return to our number-guessing game — except this time we'll explore a version with some deliberate errors. Go to GitHub and make yourself a local copy of number-game-errors.html (see it running live here ). Let's think about what the problem could be. Line 51 uses the document.querySelector() method to select an element reference with a CSS selector. Looking further up our file, we can find the paragraph in question:"
+    ]
+  },
+  {
     "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
     "resolved": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
     "sha256": "a62deea164ba480fb284b29387e6c84f544d0ccc03501db824279d52f492fabb",
@@ -114,6 +140,58 @@
     ],
     "evidence": [
       "It is important to ensure all required form controls are filled out, in the correct format, before submitting user entered form data to the server. This client-side form validation helps ensure data entered matches the requirements set forth in the various form controls. Let's start with a basic example: an input that allows you to choose whether you prefer a banana or a cherry. This example involves a text <input> with an associated <label> and a submit <button> ."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+    "sha256": "49a331f6e5bad3a9b339c0794795ffbc434e6540e5fefd435be7eb3b8f09af2f",
+    "title": "Document Object Model (DOM) - Web APIs | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-dom"
+    ],
+    "evidence": [
+      "For example, the DOM specifies that the querySelectorAll method in this code snippet must return a list of all the <p> elements in the document: The DOM is built using multiple APIs that work together. The core DOM defines the entities describing any document and the objects within it. This is expanded upon as needed by other APIs that add new features and capabilities to the DOM. For example, the HTML DOM API adds support for representing HTML documents to"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+    "sha256": "1ddbc9d9244491c7e570e5af32887e6f2d2ac743f946a590fb805dc2fe5aa909",
+    "title": "EventTarget: addEventListener() method - Web APIs | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-events"
+    ],
+    "evidence": [
+      "The callback function itself has the same parameters and return value as the handleEvent() method; that is, the callback accepts a single parameter: an object based on Event describing the event that has occurred, and it returns nothing. Event listeners only take one argument, an Event or a subclass of Event , which is automatically passed to the listener, and the return value is ignored. Therefore, to get data into and out of an event listener, instead of passing the"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+    "sha256": "b2cf091bbcb1a6d72f6a7f6961c8904e9a9e25dbb68dff4ef7c692872788c127",
+    "title": "Using the Fetch API - Web APIs | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-fetch"
+    ],
+    "evidence": [
+      "The fetch() function returns a Promise which is fulfilled with a Response object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response. Alternatively, you can construct a Headers object, add headers to that object using Headers.append() , then assign the Headers object to the headers option:"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API",
+    "sha256": "dee2eb99d71138766fdb433fda136de420715935d3e4c1c55f300c7a4ce61628",
+    "title": "Using the Web Storage API - Web APIs | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-storage"
+    ],
+    "evidence": [
+      "So, for example, initially calling localStorage on a document will return a Storage object; calling sessionStorage on a document will return a different Storage object. Both of these can be manipulated in the same way, but separately. As noted above, values can be retrieved from storage using Storage.getItem() . This takes the key of the data item as an argument, and returns the data value."
     ]
   },
   {
@@ -299,6 +377,32 @@
     ]
   },
   {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures",
+    "sha256": "beae00be1cbb422844b95713a1e227692e91e562c2a978ef5c38f4d7c66a9497",
+    "title": "Closures - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-closure"
+    ],
+    "evidence": [
+      "If you run this code in your console, you can see that the console.log() statement within the displayName() function successfully displays the value of the name variable, which is declared in its parent function. This is an example of lexical scoping , which describes how a parser resolves variable names when functions are nested. The word lexical refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling",
+    "sha256": "75d3ead8404e32bc81fd49f14835a0ab2b5edc0f11891611c54f765ca8f9b85c",
+    "title": "Control flow and error handling - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-conditions"
+    ],
+    "evidence": [
+      "In the following example, the function checkData returns true if the number of characters in a Text object is three. Otherwise, it displays an alert and returns false . A switch statement allows a program to evaluate an expression and attempt to match the expression's value to a case label. If a match is found, the program executes the associated statement."
+    ]
+  },
+  {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
     "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
     "sha256": "d836c3fa40b75590ddeae667d2630083e04c9c7ed361cad9959660e90bf27263",
@@ -322,6 +426,137 @@
     ],
     "evidence": [
       "An alternative method of retrieving a number from a string is with the + (unary plus) operator. This implicitly performs number conversion , which is the same process as the Number() function. Literals represent values in JavaScript. These are fixed values—not variables—that you literally provide in your script. This section describes the following types of literals:"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections",
+    "sha256": "53462e09736b33e1312e4c50242db7864fb0066d7fb70ecbdd21d39e40fccd44",
+    "title": "Indexed collections - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-arrays"
+    ],
+    "evidence": [
+      "This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as Array objects and TypedArray objects. An array is an ordered list of values that you refer to with a name and an index."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+    "sha256": "5041447da066af9fa64e428fd5cc67bb2e9dc6d61a86c005faadd366e76bfbe1",
+    "title": "Loops and iteration - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-loops"
+    ],
+    "evidence": [
+      "The condition test occurs before statement in the loop is executed. If the condition returns true , statement is executed and the condition is tested again. If the condition returns false , execution stops, and control is passed to the statement following while . A label provides a statement with an identifier that lets you refer to it elsewhere in your program. For example, you can use a label to identify a loop, and then use the break or continue"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+    "sha256": "d3ec7a05308579985732083bce211980d860ac6f4e7ce6a603c6634703fa6c63",
+    "title": "JavaScript modules - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-modules",
+      "js-project-organization"
+    ],
+    "evidence": [
+      "If you really value the clarity of using .mjs for modules versus using .js for \"normal\" JavaScript files, but don't want to run into the problem described above, you could always use .mjs during development and convert them to .js during your build step. You can see the last version in our basic-modules square.js , which exports a function called randomSquare() that creates a square with a random color, size, and position. Note the lack of curly braces."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings",
+    "sha256": "d9276188fb58347e55815f1de907d83e2861575ec3c7e5cd1a718d1fe90de886",
+    "title": "Numbers and strings - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-types"
+    ],
+    "evidence": [
+      "The built-in Number object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows: JavaScript's String type is used to represent textual data. It is a set of \"elements\" of 16-bit unsigned integer values (UTF-16 code units). Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises",
+    "sha256": "b5ff7ebb708857d6a6bb35a3d5d69bf1778c95ee434275c46939f765d69628f0",
+    "title": "Using promises - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-promises"
+    ],
+    "evidence": [
+      "A Promise is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them. Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function. Imagine a function, createAudioFileAsync() , which asynchronously generates a sound file given a configuration record and two callback functions: one called if the audio"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects",
+    "sha256": "37da4da078a2308e14f3d82510772208eda10ae060f8163b7806bc86ae79b28b",
+    "title": "Working with objects - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-objects"
+    ],
+    "evidence": [
+      "In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, and methods, and how to create your own objects. You can create an object using an object initializer . Alternatively, you can first create a constructor function and then instantiate an object by invoking that function with the new operator."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters",
+    "sha256": "a74269a86b6ac08dad1e114d16b2cb70ae27ecf1131e4c34811142aa676e4c1d",
+    "title": "Default parameters - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-functions"
+    ],
+    "evidence": [
+      "In the following example, if no value is provided for b when multiply is called, b 's value would be undefined when evaluating a * b and multiply would return NaN ."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "sha256": "1f4253f79bc52ce4c79adf674400aff9475817cf6801cea48425269279145b8a",
+    "title": "Array.prototype.filter() - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-map-filter"
+    ],
+    "evidence": [
+      "A function to execute for each element in the array. It should return a truthy value to keep the element in the resulting array, and a falsy value otherwise. The function is called with the following arguments: A shallow copy of the given array containing just the elements that pass the test. If no elements pass the test, an empty array is returned."
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce",
+    "sha256": "1c4869add58eb0911f82b01b06153ed988a79dffad3529f20cfd773b003f08f8",
+    "title": "Array.prototype.reduce() - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-reduce"
+    ],
+    "evidence": [
+      "The reduce() method of Array instances executes a user-supplied \"reducer\" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value. The first time that the callback is run there is no \"return value of the previous calculation\". If supplied, an initial value may be used in its place. Otherwise the array"
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+    "resolved": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+    "sha256": "f3841a968aa299c2882c0cdced26d254c79a93ad1dc542d0edc7d7bb71d34f32",
+    "title": "async function - JavaScript | MDNMDNMDNMozilla",
+    "checkedAt": "2026-11-10",
+    "lessonIds": [
+      "js-async-errors"
+    ],
+    "evidence": [
+      "An async function declaration creates an AsyncFunction object. Each time when an async function is called, it returns a new Promise which will be resolved with the value returned by the async function, or rejected with an exception uncaught within the async function. Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is"
     ]
   },
   {
