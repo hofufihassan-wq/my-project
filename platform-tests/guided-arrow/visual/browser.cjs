@@ -1,4 +1,4 @@
-process.env.PLAYWRIGHT_BROWSERS_PATH='/workspace/.playwright-browsers';
+process.env.PLAYWRIGHT_BROWSERS_PATH=process.env.PLAYWRIGHT_BROWSERS_PATH||'/workspace/.playwright-browsers';
 const {fs,path,assert,chromium,server}=require('../../../scripts/simulator-completion-test-helpers.cjs');
 const out=__dirname,results=[],errors=[],h=server();let b,c,p;
 async function test(name,fn){try{await fn();results.push({name,passed:true});console.log('PASS',name)}catch(e){results.push({name,passed:false,error:e.stack});console.error('FAIL',name,e.message)}}

@@ -1,0 +1,29 @@
+{
+  "runtimeBaseCommit": "b07ddcfddfaaf4654a4f3e0b569c915c676ab86f",
+  "integrationCommit": "a97a5fb235c4fd8ec13fe65ab6c2a454abd56055",
+  "productionBranchUnchanged": "535b1ae008b50a623016da04601ee34e5af84ea2",
+  "initialPassed": 58,
+  "initialTotal": 59,
+  "backupRecheck": {
+    "passed": 10,
+    "total": 10,
+    "change": "Wait for real load after import; guard optional DOM message. No product change."
+  },
+  "effectivePassed": 59,
+  "effectiveTotal": 59,
+  "crossOriginLocalDrill": {
+    "passed": 13,
+    "total": 13,
+    "productionVerified": false
+  },
+  "runtimeHashesMatchAcceptance": true,
+  "runtimeFilesUnchangedFromB07ddcf": true,
+  "publicFiles": 94,
+  "publicBytes": 5436945,
+  "node": "24.19.0",
+  "pythonBuildOnly": "3.12.14",
+  "cloudflareConnected": false,
+  "productionUrl": null,
+  "mainMergeApproved": false,
+  "authorPrivacyDecisionPending": true
+}

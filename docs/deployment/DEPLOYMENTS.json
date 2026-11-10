@@ -1,0 +1,15 @@
+{
+  "product": "V Lex Pro",
+  "targetVersion": "1.0.0",
+  "canonicalRepository": "https://github.com/hofufihassan-wq/my-project",
+  "productionBranch": "main",
+  "candidateBranch": "chore/vlex-pages-readiness",
+  "runtimeBaseCommit": "b07ddcfddfaaf4654a4f3e0b569c915c676ab86f",
+  "cloudflareConnected": false,
+  "productionUrl": null,
+  "lastVerifiedStableDeployment": null,
+  "productionVerified": false,
+  "mainMergeApproved": false,
+  "publicAuthorHistoryApproved": false,
+  "deployments": []
+}

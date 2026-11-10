@@ -1,39 +1,74 @@
-name: Deploy website to GitHub Pages
-
+# Replaces the inherited, incomplete GitHub Pages deployment. Deployment belongs
+# to Cloudflare's Git integration after approval and a reviewed merge into main.
+name: V Lex Pro acceptance
 on:
-  push:
+  pull_request:
     branches: [main]
+  push:
+    branches: [main, 'chore/vlex-pages-readiness', 'feat/**', 'fix/**']
   workflow_dispatch:
-
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
 concurrency:
-  group: github-pages
-  cancel-in-progress: false
-
+  group: vlex-acceptance-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  acceptance:
+    name: acceptance
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/vlex-browsers
     steps:
-      - uses: actions/checkout@v4
-      - name: Verify local assets
-        run: python3 scripts/assets.py verify
-      - name: Prepare website
-        run: |
-          mkdir _site
-          cp index.html styles.css app.js lexicon-data.js practice-curriculum.js simulator-guides.js progress-data.js preview-runner.js dictionary-preview.js _site/
-          cp -R assets _site/assets
-          touch _site/.nojekyll
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
-          path: _site
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            tools/ci-browser/package-lock.json
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version-file: .python-version
+      - name: Install locked build and test dependencies
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm ci --ignore-scripts --no-audit --no-fund --prefix tools/ci-browser
+          npm audit --audit-level=high
+          npm audit --audit-level=high --prefix tools/ci-browser
+      - name: Install real Chromium and provide inherited test paths
+        run: |
+          node tools/ci-browser/node_modules/playwright/cli.js install --with-deps chromium
+          # Legacy tests use these exact two paths. These are aliases to the real
+          # locked Playwright and real downloaded Chromium, never test doubles.
+          sudo mkdir -p /opt/codex/cua_node/lib/node_modules
+          sudo ln -s "$GITHUB_WORKSPACE/tools/ci-browser/node_modules/playwright-core" /opt/codex/cua_node/lib/node_modules/playwright-core
+          if [ ! -e /usr/bin/chromium ]; then
+            browser_executable=$(node -e 'console.log(require("./tools/ci-browser/node_modules/playwright").chromium.executablePath())')
+            sudo ln -s "$browser_executable" /usr/bin/chromium
+          fi
+      - name: Scan Git history and tracked archives for secrets
+        run: bash scripts/ci-secrets.sh
+      - name: Run all acceptance groups, including isolated static distribution
+        run: python3 platform-tests/v1-completion/E/run-acceptance.py --output "$RUNNER_TEMP/vlex-acceptance"
+      - name: Check cross-origin backup migration against static output
+        run: |
+          npm run build
+          node platform-tests/deployment/hosted-acceptance.cjs --local --output "$RUNNER_TEMP/vlex-migration"
+      - name: Keep acceptance and redacted security logs
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: vlex-checks-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/vlex-acceptance/
+            ${{ runner.temp }}/vlex-migration/
+            ${{ runner.temp }}/vlex-security/*.json
+            ${{ runner.temp }}/vlex-security/*.log
+            ${{ runner.temp }}/vlex-security/blob-audit/*.json
+            ${{ runner.temp }}/vlex-security/blob-audit/*.log
+          retention-days: 14

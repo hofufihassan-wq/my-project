@@ -1,4 +1,4 @@
-process.env.PLAYWRIGHT_BROWSERS_PATH='/workspace/.playwright-browsers';
+process.env.PLAYWRIGHT_BROWSERS_PATH=process.env.PLAYWRIGHT_BROWSERS_PATH||'/workspace/.playwright-browsers';
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
 const {chromium}=require('/opt/codex/cua_node/lib/node_modules/playwright-core');const root=path.resolve(__dirname,'../..'),out=path.join(__dirname,'evidence');fs.mkdirSync(out,{recursive:true});const api=require(path.join(root,'learning-course.js')),results=[];let browser;
 const extended=fs.existsSync(path.join(root,'learning-course-advanced.js'));if(extended)require(path.join(root,'learning-course-advanced.js'));

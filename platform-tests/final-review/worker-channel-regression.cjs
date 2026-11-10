@@ -1,4 +1,4 @@
-process.env.PLAYWRIGHT_BROWSERS_PATH = '/workspace/.playwright-browsers';
+process.env.PLAYWRIGHT_BROWSERS_PATH=process.env.PLAYWRIGHT_BROWSERS_PATH||'/workspace/.playwright-browsers';
 const fs = require('node:fs');
 const path = require('node:path');
 const http = require('node:http');
