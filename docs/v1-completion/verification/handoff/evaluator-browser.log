@@ -1,0 +1,14 @@
+PASS JS accepts multiple correct implementations and checks zero/negative
+PASS JS rejects hardcoded result and retains runtime errors
+PASS syntax error provides reliable original parser line
+PASS infinite loop times out while main application stays responsive
+PASS network and parent access are unsupported before execution
+PASS global postMessage cannot forge a private assessment result
+PASS HTML uses real browser DOM and native form validation
+PASS HTML script, event handler and frame injection never run
+PASS CSS assesses computed styles across actual iframe widths
+PASS Vue SFC executes actual Vue reactivity, rendering and event handlers
+PASS Vue text v-model updates rendered output through directive input event
+PASS Vue loops are terminable and wrong reactive output fails
+PASS parallel sessions retain independent source and results
+PASS no parent page errors

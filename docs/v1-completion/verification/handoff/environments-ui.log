@@ -1,0 +1,7 @@
+PASS real lesson trial storage persists as isolated lesson data without modifying app preference keys
+PASS whole browser restart retains source and private exercise storage
+PASS module, Fetch and storage simulator limits explain missing context and do not transfer unsupported code
+PASS DOM simulator transfer supplies its real fixture and setup call then returns without loss
+PASS DOM edited script and external resource injection stay out of app and preview requests
+PASS snapshot backup includes private lesson storage and the new data validates
+PASS no parent errors

@@ -1,0 +1,14 @@
+PASS actual course navigation opens all eight stages with four independent languages
+PASS line and token explanations respond without replacing explainer scratch
+PASS wrong prediction and progressive hints survive reloading
+PASS wrong HTML fails and semantically equivalent valid HTML passes
+PASS fix and mastery require code results plus understanding and output answers
+PASS changing a previously successful source invalidates current mastery
+PASS simulator transfer and return retain exact source, step, hints and attempts
+PASS CSS native colors accept equivalent notation
+PASS JS evaluator gives reliable syntax line and retains original technical detail
+PASS Vue code compiles and validates repeated rendered interactions
+PASS all independent lesson drafts and current stage survive whole process restart
+PASS mobile preserves readable width and native selection, copy and source do not change
+PASS full backup includes guided drafts, results, reviews and old Arrow without loss
+PASS no parent page errors
