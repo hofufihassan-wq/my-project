@@ -1,0 +1,79 @@
+{
+  "passed": 18,
+  "total": 18,
+  "results": [
+    {
+      "name": "static lesson examples use real keyword, string, number and function token markup",
+      "passed": true
+    },
+    {
+      "name": "explanatory code keeps exact source, grammar colors and token/line keyboard interaction",
+      "passed": true
+    },
+    {
+      "name": "native editor accepts mixed Arabic/LTR typing without moving selected ranges",
+      "passed": true
+    },
+    {
+      "name": "native Ctrl+C copies selected text and Ctrl+V pastes exact source through v-model",
+      "passed": true
+    },
+    {
+      "name": "native undo and redo remain owned by textarea",
+      "passed": true
+    },
+    {
+      "name": "editor overlay matches font, padding and horizontal/vertical scroll",
+      "passed": true
+    },
+    {
+      "name": "composition/IME events do not rewrite value, selection or composition text",
+      "passed": true
+    },
+    {
+      "name": "syntax error shows trusted line/column and exact original parser diagnostic",
+      "passed": true
+    },
+    {
+      "name": "editing makes prior syntax location explicitly stale",
+      "passed": true
+    },
+    {
+      "name": "runtime error preserves actual message without inventing a student line",
+      "passed": true
+    },
+    {
+      "name": "Console keeps actual Arabic output as text and highlights do not enable XSS",
+      "passed": true
+    },
+    {
+      "name": "failed cases show icon, expected/actual and original inputs without changing grade",
+      "passed": true
+    },
+    {
+      "name": "correct alternative keeps success and current draft evidence intact",
+      "passed": true
+    },
+    {
+      "name": "shared existing editors highlight HTML, CSS, JavaScript and Vue SFC with local grammars",
+      "passed": true
+    },
+    {
+      "name": "readonly example selection copies original plain source",
+      "passed": true
+    },
+    {
+      "name": "five themes retain readable code and status colors with mobile layout",
+      "passed": true
+    },
+    {
+      "name": "forced color mode keeps actual editable text visible",
+      "passed": true
+    },
+    {
+      "name": "no parent errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

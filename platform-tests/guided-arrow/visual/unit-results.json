@@ -1,0 +1,22 @@
+{
+  "passed": 4,
+  "total": 4,
+  "results": [
+    {
+      "name": "syntax diagnostics retain original parser message and trusted 1-based location",
+      "passed": true
+    },
+    {
+      "name": "runtime messages and generated wrapper offsets are never student locations",
+      "passed": true
+    },
+    {
+      "name": "unsupported scope and assignment requirements have useful distinct guidance",
+      "passed": true
+    },
+    {
+      "name": "display keeps XSS-like original text as data, without altering source or result",
+      "passed": true
+    }
+  ]
+}

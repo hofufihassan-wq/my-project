@@ -39,5 +39,18 @@
     beforeUnmount(el){const s=states.get(el);if(!s)return;cancelAnimationFrame(s.frame);s.observer.disconnect();el.removeEventListener('input',s.refresh);el.removeEventListener('scroll',s.scroll);states.delete(el);}
   };
   function render(el,binding){const value=binding.value||{};el.classList.add('vlex-code-view');el.innerHTML=highlight(value.source||'',value.language);}
-  window.VLexCodePresentation=Object.freeze({editor,view:{mounted:render,updated:render}});
+  // Flatten the same grammar's output without losing source offsets. This lets
+  // explanatory buttons keep their native interaction and their real token colors.
+  function tokens(source, language) {
+    const template=document.createElement('template');
+    template.innerHTML=highlight(source,language);
+    const chunks=[];let offset=0;
+    function visit(node,classes) {
+      if(node.nodeType===3){const text=node.textContent;chunks.push({text,start:offset,end:offset+text.length,className:classes.join(' ')});offset+=text.length;return;}
+      const next=node.nodeType===1?[...classes,...node.classList]:classes;
+      for(const child of node.childNodes)visit(child,next);
+    }
+    visit(template.content,[]);return chunks;
+  }
+  window.VLexCodePresentation=Object.freeze({editor,view:{mounted:render,updated:render},highlight,tokens});
 }());
