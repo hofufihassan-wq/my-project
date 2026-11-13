@@ -1,0 +1,71 @@
+{
+  "rows": [
+    {
+      "mode": "home",
+      "visibleButtons": 37,
+      "visibleCharacters": 1841,
+      "overflow": false
+    },
+    {
+      "mode": "guided",
+      "visibleButtons": 89,
+      "visibleCharacters": 2885,
+      "overflow": false
+    },
+    {
+      "mode": "lexicon",
+      "visibleButtons": 243,
+      "visibleCharacters": 13980,
+      "overflow": false
+    },
+    {
+      "mode": "explain",
+      "visibleButtons": 19,
+      "visibleCharacters": 770,
+      "overflow": false
+    },
+    {
+      "mode": "cssLab",
+      "visibleButtons": 20,
+      "visibleCharacters": 2496,
+      "overflow": false
+    },
+    {
+      "mode": "jsLab",
+      "visibleButtons": 24,
+      "visibleCharacters": 1666,
+      "overflow": false
+    },
+    {
+      "mode": "course",
+      "visibleButtons": 60,
+      "visibleCharacters": 3269,
+      "overflow": false
+    },
+    {
+      "mode": "settings",
+      "visibleButtons": 26,
+      "visibleCharacters": 1492,
+      "overflow": false
+    },
+    {
+      "mode": "foundation",
+      "visibleButtons": 31,
+      "visibleCharacters": 2140,
+      "overflow": false
+    },
+    {
+      "mode": "practice",
+      "visibleButtons": 124,
+      "visibleCharacters": 4342,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "learning": {
+    "lessons": 60,
+    "projects": 6,
+    "steps": 8,
+    "terms": 180
+  }
+}
