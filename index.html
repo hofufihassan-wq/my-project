@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="learning-platform.css">
   <link rel="stylesheet" href="emerald-dashboard.css">
   <link rel="stylesheet" href="learning-refinement.css">
+  <link rel="stylesheet" href="learning-journey.css">
 </head>
 <body class="bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased">
 
@@ -150,6 +151,8 @@
   <main v-if="appMode === 'explain'" class="learning-page"><vlex-explainer :key="explainKey" :terms="rawLexiconData" :initial-code="explainSource" @open-term="openLearningTerm" /></main>
   <aside v-if="learningReturnToArrow && appMode !== 'arrow'" class="learning-page arrow-return"><button @click="openLearning('arrow')" data-testid="arrow-return">العودة إلى درس الدوال السهمية</button></aside>
   <aside v-if="learningReturnToGuided && appMode !== 'guided'" class="learning-page arrow-return"><button @click="openLearning('guided')" data-testid="guided-return">العودة إلى الدرس الموجّه</button></aside>
+  <aside v-if="learningReturnToJourney && appMode !== 'learn'" class="learning-page arrow-return"><button @click="openLearning('learn')" data-testid="journey-return">العودة إلى تجربتي التعليمية</button></aside>
+  <main v-if="appMode === 'learn'"><vlex-journey @home="setAppMode('home')" @legacy="openGuidedUnit" @practice="practiceFromLearning" @task="openFoundation('projects')" /></main>
   <main v-if="appMode === 'guided'" class="learning-page"><vlex-guided @practice="practiceFromLearning" @arrow="openLearning('arrow')" /></main>
   <main v-if="appMode === 'arrow'" class="learning-page"><vlex-guided-arrow @practice="practiceFromLearning" @open-term="openLearningTerm" @prerequisite="openArrowPrerequisite" /></main>
   <main v-if="appMode === 'course'" class="learning-page"><div class="vlex-course"><button @click="openLearning('arrow')" data-testid="open-arrow">جرّب الدرس الموجّه: Arrow Functions — استكمال تقدّمك</button></div><div class="vlex-course"><button @click="openLearning('guided')" data-testid="open-guided">دروس HTML وCSS وJavaScript وVue الموجّهة</button></div><vlex-course @practice="practiceFromLearning" /></main>
@@ -2492,6 +2495,8 @@
 <script src="guided-projects.js"></script>
 <script src="guided-learning.js"></script>
 <script src="learning-projects.js"></script>
+<script src="learning-journey-content.js"></script>
+<script src="learning-journey.js"></script>
 <script src="learning-dashboard.js"></script>
 <script src="code-presentation.js"></script>
 <script src="app.js"></script>

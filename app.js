@@ -235,6 +235,7 @@ const app = createApp({
     const appMode = ref(window.location?.hash === '#arrow-functions' ? 'arrow' : savedNavigation.workspace || 'home');
     const learningReturnToArrow = ref(false);
     const learningReturnToGuided = ref(false);
+    const learningReturnToJourney = ref(false);
     const practiceSurface = ref('simulator');
     // Theme selection is session-only in 5B; existing persisted records are untouched.
     const theme = ref(window.VLexLearningStore?.getSection('preferences', {}).theme || 'petroleum');
@@ -775,7 +776,7 @@ const app = createApp({
     }
 
     function setAppMode(mode) {
-      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation', 'explain', 'course', 'arrow', 'guided', 'cssLab', 'jsLab'].includes(mode)) return;
+      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation', 'explain', 'course', 'arrow', 'guided', 'learn', 'overview', 'taskJourney', 'cssLab', 'jsLab'].includes(mode)) return;
       if (mode === 'training' || mode === 'practice' || mode === 'quiz') {
         const surface = mode === 'training' ? 'training' : 'simulator';
         if (practiceSurface.value !== surface) stopPracticeExecution();
@@ -2413,7 +2414,7 @@ const app = createApp({
       } catch (_) { termSpeechStatus.value = 'تعذر تشغيل الصوت المحلي.'; }
     }
     function openLearning(mode, source) {
-      if (!['explain', 'course', 'arrow', 'guided', 'cssLab', 'jsLab'].includes(mode)) return;
+      if (!['explain', 'course', 'arrow', 'guided', 'learn', 'overview', 'taskJourney', 'cssLab', 'jsLab'].includes(mode)) return;
       if (mode === 'explain') { explainSource.value = typeof source === 'string' ? source : ''; explainKey.value++; }
       setAppMode(mode);
     }
@@ -2443,6 +2444,7 @@ const app = createApp({
       }
       learningReturnToArrow.value = payload.returnTo === 'arrow';
       learningReturnToGuided.value = payload.returnTo === 'guided';
+      learningReturnToJourney.value = payload.returnTo === 'learn';
       openSimulator(); stopPracticeExecution(); practiceAutoRun.value = false; selectTrack('js', true);
       simulatorExternalExample.value = { title: 'تجربة مسار التعلّم', code: payload.code, type: payload.type === 'vue' ? 'vue' : 'html', legacyClosers: false };
       simulatorReferenceVisible.value = true;
@@ -2568,7 +2570,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
-      dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, learningReturnToGuided, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openGuidedUnit, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
+      dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, learningReturnToGuided, learningReturnToJourney, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openGuidedUnit, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
       techCustomWidth, techCustomHeight, techPreviewZoom, techDimensionDraft, techDimensionError, techConsoleHeight, techCompactPanel, techDragging,
