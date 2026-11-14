@@ -1,0 +1,30 @@
+[
+  {
+    "topic": "filter",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "status": 200,
+    "reviewedAt": "2026-11-14T01:29:06.993387+00:00",
+    "excerpt": "een available across browsers since July 2015. See full compatibility Learn more The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. In this article Try it Syntax Description Examples Specifications Browser compatibility See also Try it const words = [\"spray\", \"elite\", \"exube"
+  },
+  {
+    "topic": "ref",
+    "url": "https://vuejs.org/guide/essentials/reactivity-fundamentals.html",
+    "status": 200,
+    "reviewedAt": "2026-11-14T01:29:07.478275+00:00",
+    "excerpt": "v >{{ count }}</ div > Notice that we did not need to append .value when using the ref in the template. For convenience, refs are automatically unwrapped when used inside templates (with a few caveats ). You can also mutate a ref directly in event handlers: template < button @ click = \" count ++ \" > {{ count }} </ button > For more complex logic, we can declare functions that mutate refs in the same scope and expose them as me"
+  },
+  {
+    "topic": "watch",
+    "url": "https://vuejs.org/guide/essentials/watchers.html",
+    "status": 200,
+    "reviewedAt": "2026-11-14T01:29:07.819132+00:00",
+    "excerpt": "watch is shallow by default: the callback will only trigger when the watched property has been assigned a new value - it won't trigger on nested property changes. If you want the callback to fire on all nested mutations, you need to use a deep watcher: js export default { watch: { someObject: { handler ( newValue , oldValue ) { // Note: `newValue` will be equal to `oldValue` here // on nested mutations as long as the object itself // hasn't been replaced. }, deep: true } } } When you call watch() directly on a reactive object, it will implicitly create a deep watcher - the callback will be triggered on all nested mutations: js const obj = rea"
+  },
+  {
+    "topic": "storage",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
+    "status": 200,
+    "reviewedAt": "2026-11-14T01:29:07.856789+00:00",
+    "excerpt": "only property of the window interface allows you to access a Storage object for the Document 's origin ; the stored data is saved across browser sessions. localStorage is similar to sessionStorage , except that while localStorage data has no expiration time, sessionStorage data gets cleared when the page session ends — that is, when the page is closed. ( localStorage data for a document loaded in a \"private browsing\" or \"incog"
+  }
+]

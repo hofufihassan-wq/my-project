@@ -1,5 +1,5 @@
-# Replaces the inherited, incomplete GitHub Pages deployment. Deployment belongs
-# to Cloudflare's Git integration after approval and a reviewed merge into main.
+# Acceptance only. The existing GitHub Pages legacy build deploys main at /.
+# Keep that hosting configuration; tests do not publish a separate artifact.
 name: V Lex Pro acceptance
 on:
   pull_request:
@@ -59,6 +59,7 @@ jobs:
         run: |
           npm run build
           node platform-tests/deployment/hosted-acceptance.cjs --local --output "$RUNNER_TEMP/vlex-migration"
+          node platform-tests/learning-refresh/pages-path-browser.cjs
       - name: Keep acceptance and redacted security logs
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6

@@ -235,6 +235,8 @@ const app = createApp({
     const appMode = ref(window.location?.hash === '#arrow-functions' ? 'arrow' : savedNavigation.workspace || 'home');
     const learningReturnToArrow = ref(false);
     const learningReturnToGuided = ref(false);
+    const learningReturnToJourney = ref(false), journeyKey=ref(0);
+    const simulatorBeginner = ref(window.VLexLearningStore?.getSection('preferences',{}).simulatorMode==='simple');
     const practiceSurface = ref('simulator');
     // Theme selection is session-only in 5B; existing persisted records are untouched.
     const theme = ref(window.VLexLearningStore?.getSection('preferences', {}).theme || 'petroleum');
@@ -750,6 +752,7 @@ const app = createApp({
 
     function selectTerm(item) {
       selectedTerm.value = item;
+      dictionaryExpanded.value=false;
       activeCodeFormat.value = 'vue';
       recordRecentView(item);
       nextTick(() => {
@@ -775,7 +778,7 @@ const app = createApp({
     }
 
     function setAppMode(mode) {
-      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation', 'explain', 'course', 'arrow', 'guided', 'cssLab', 'jsLab'].includes(mode)) return;
+      if (!['home', 'lexicon', 'practice', 'training', 'quiz', 'settings', 'foundation', 'explain', 'course', 'arrow', 'guided', 'learn', 'overview', 'taskJourney', 'cssLab', 'jsLab'].includes(mode)) return;
       if (mode === 'training' || mode === 'practice' || mode === 'quiz') {
         const surface = mode === 'training' ? 'training' : 'simulator';
         if (practiceSurface.value !== surface) stopPracticeExecution();
@@ -1368,6 +1371,9 @@ const app = createApp({
     const simulatorReferenceVisible = ref(false);
     const simulatorExternalExample = ref(null);
     const simulatorReferenceCode = computed(() => simulatorExternalExample.value?.code ?? currentLesson.value?.solution ?? '');
+    const incomingJourneyCode=ref(''),simulatorReferenceWarning=ref(''),journeyReferenceActive=ref(true);
+    const hasJourneySimulatorSource=computed(()=>learningReturnToJourney.value&&journeyReferenceActive.value&&!!simulatorExternalExample.value);
+    function updateJourneySimulatorSource(event){const code=event.target.value;if(code.length>16000){simulatorReferenceWarning.value='المصدر أكبر من حد هذه المسودة؛ انسخه قبل الإغلاق.';return}simulatorExternalExample.value={...simulatorExternalExample.value,code};sourceRevision++;techEvidenceRevision.value=sourceRevision;clearRunEvidence();cancelAutoRun();const data=window.VLexLearningStore.getSection('learningJourney',{}),id=data.selected,entry=data.lessons?.[id];if(entry){const ok=window.VLexLearningStore.setSection('learningJourney',{...data,lessons:{...data.lessons,[id]:{...entry,simulatorDraft:code,simulatorOrigin:incomingJourneyCode.value}}});simulatorReferenceWarning.value=ok?'':'تعذر حفظ مسودة المحاكي؛ انسخ الكود أو صدّر الاسترجاع قبل الإغلاق.'}}
     const simulatorReferenceTitle = computed(() => simulatorExternalExample.value?.title ?? 'المثال المرجعي للدرس');
     let sourceRevision = 0;
     // Receipt history in the parent: these events are not a line/variable trace.
@@ -2112,7 +2118,7 @@ const app = createApp({
       techPreviewTab.value = 'result';
       runSimulatorReference();
     }
-    function techRunDraft(event) { techPrepareRunSound(event); techEditorView.value = 'draft'; techPreviewTab.value = 'result'; runPracticeCode(); }
+    function techRunDraft(event) { if(hasJourneySimulatorSource.value){techRunReference(event);return}techPrepareRunSound(event); techEditorView.value = 'draft'; techPreviewTab.value = 'result'; runPracticeCode(); }
     function techSyncEditorScroll(event) {
       const surface = event.target.closest('.tech-code-surface');
       const mirror = surface?.querySelector('.tech-highlight');
@@ -2413,10 +2419,21 @@ const app = createApp({
       } catch (_) { termSpeechStatus.value = 'تعذر تشغيل الصوت المحلي.'; }
     }
     function openLearning(mode, source) {
-      if (!['explain', 'course', 'arrow', 'guided', 'cssLab', 'jsLab'].includes(mode)) return;
+      if (!['explain', 'course', 'arrow', 'guided', 'learn', 'overview', 'taskJourney', 'cssLab', 'jsLab'].includes(mode)) return;
       if (mode === 'explain') { explainSource.value = typeof source === 'string' ? source : ''; explainKey.value++; }
       setAppMode(mode);
     }
+    function setSimulatorMode(mode){simulatorBeginner.value=mode==='simple';if(simulatorBeginner.value){techPreviewTab.value='result';techFocusPanel.value='';}const prefs=window.VLexLearningStore.getSection('preferences',{});if(!window.VLexLearningStore.setSection('preferences',{...prefs,simulatorMode:mode}))triggerToast('تعذر حفظ وضع المحاكي؛ التغيير لهذه الجلسة.', 'error')}
+    const dictionaryLesson = computed(()=>{const term=String(selectedTerm.value?.term||'').replace(/[()\s]/g,'').toLowerCase().replace(/^array(?:\.prototype)?\./,'');const map={const:'js-values',let:'js-values',var:'js-values',filter:'js-map-filter',map:'js-map-filter',reduce:'js-reduce',ref:'vue-ref',reactive:'vue-reactive','v-model':'vue-model','v-for':'vue-list','v-if':'vue-conditional',computed:'vue-computed',watch:'vue-watch',addeventlistener:'js-events',return:'js-functions',promise:'js-promises',fetch:'js-fetch',localstorage:'js-storage'};return window.VLexJourneyContent.get(map[term]);});
+    function tryDictionaryConcept(){if(dictionaryLesson.value)openJourney({id:dictionaryLesson.value.id,phase:1});else{dictionaryExpanded.value=true;dictionaryTab.value='example';nextTick(()=>document.querySelector('.dictionary-example-grid')?.scrollIntoView({block:'start',behavior:'smooth'}))}}
+    const dictionaryExpanded=ref(false);
+    function openJourney(payload={}) {
+      const id=payload.id||window.VLexLearningStore.getSection('learningJourney',{}).selected||'js-values',def=window.VLexJourneyContent.get(id);if(!def)return;
+      const data=window.VLexLearningStore.getSection('learningJourney',{}),old=window.VLexLearningStore.getSection('guided',{}),entry=data.lessons?.[id]||window.VLexJourneyContent.initial(def,old.lessons?.[id]);
+      if(Number.isInteger(payload.phase)&&payload.phase>=0&&payload.phase<4)entry.phase=payload.phase;
+      window.VLexLearningStore.setSection('learningJourney',{version:1,...data,selected:id,track:def.language,...(def.isTask?{taskSelected:id}:{}),lessons:{...data.lessons,[id]:entry}});journeyKey.value++;setAppMode('learn');
+    }
+    function journeyNavigate(mode){if(mode==='simulator'){setSimulatorMode('simple');openVisualSimulator();}else if(['projects','notes','calendar'].includes(mode))openFoundation(mode);else if(['lexicon','settings','overview','taskJourney'].includes(mode))setAppMode(mode);else openLearning(mode)}
     function openGuidedUnit(id) {
       const lesson = (window.VLexGuidedLessons?.units || window.VLexGuidedLessons?.lessons || []).find(item => item.id === id);
       if (!lesson) return;
@@ -2443,8 +2460,11 @@ const app = createApp({
       }
       learningReturnToArrow.value = payload.returnTo === 'arrow';
       learningReturnToGuided.value = payload.returnTo === 'guided';
+      learningReturnToJourney.value = payload.returnTo === 'learn';
+      if(learningReturnToJourney.value)setSimulatorMode('simple');
       openSimulator(); stopPracticeExecution(); practiceAutoRun.value = false; selectTrack('js', true);
       simulatorExternalExample.value = { title: 'تجربة مسار التعلّم', code: payload.code, type: payload.type === 'vue' ? 'vue' : 'html', legacyClosers: false };
+      if(payload.returnTo==='learn'){journeyReferenceActive.value=true;incomingJourneyCode.value=payload.code;const data=window.VLexLearningStore.getSection('learningJourney',{}),entry=data.lessons?.[data.selected];if(entry?.simulatorDraft){let useSaved=true;if(entry.simulatorOrigin&&entry.simulatorOrigin!==payload.code)useSaved=!confirm('توجد مسودة محفوظة للمحاكي. استبدالها بكود الدرس الحالي؟ إلغاء يحتفظ بالمسودة المحفوظة.');if(useSaved)simulatorExternalExample.value={...simulatorExternalExample.value,code:entry.simulatorDraft}}}
       simulatorReferenceVisible.value = true;
       triggerToast('تجربتك محفوظة في المثال المرجعي؛ اقرأها ثم اضغط تشغيل المرجع لتجربتها. مسودة الدرس لم تتغير.', 'info');
     }
@@ -2465,13 +2485,14 @@ const app = createApp({
     const fullBackupMessage=ref(window.VLexFullBackupRecovery?.message||'');
     const fullDependencies=()=>({learning:window.VLexLearning,legacy:dataSchema,simulator:window.VueLexiconSimulatorBeta});
     function exportFullBackup(){try{
+      if(simulatorReferenceWarning.value)throw Error(simulatorReferenceWarning.value);
       if(window.VLexLearningStore.status().mode==='protected'||protectedStorageKeys.size)throw Error('يوجد سجل محمي؛ نزّل بيانات الاسترجاع دون استبدال الأصل');
       if(dictionarySaveWarning.value)throw Error('مسودة قاموس غير محفوظة؛ نزّل بيانات الاسترجاع أولًا');
       if(window.VLexFullBackupRecovery?.blocked)throw Error('يوجد استرجاع معلق؛ لا نصدر حالة مؤقتة كنسخة سليمة. احتفظ بالأصل وبيانات الاسترجاع.');
       const text=window.VLexFullBackup.serialize({app:window.VLexFullBackup.APP,version:1,createdAt:new Date().toISOString(),learning:window.VLexLearningStore.read(),legacy:userDataPayload(),preferences:{simulator:{version:1,muted:betaMuted.value,volume:betaVolume.value,animations:techBeta.animations.value},ambient:{version:1,enabled:betaAmbientEnabled.value,volume:betaAmbientVolume.value},tabAutocomplete:tabAcceptsAutocomplete.value,demoTheme:jsThemePref.value}},fullDependencies());
       const url=URL.createObjectURL(new Blob([text],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='vlex-full-'+new Date().toISOString().slice(0,10)+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);fullBackupMessage.value='أُعد ملف النسخة الشاملة للتنزيل؛ تحقق من تنزيله.';
     }catch(e){fullBackupMessage.value='تعذر تصدير نسخة قابلة للاستيراد دون قص البيانات: '+e.message}}
-    function exportFullRecovery(){try{const records={};for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(window.VLexFullBackup.KEYS.includes(key)||key===window.VLexFullBackup.PENDING||key?.startsWith('vlex_full_recovery_')||key?.startsWith('vlex_learning_recovery_')||key?.startsWith('vuelexicon_recovery_'))records[key]=localStorage.getItem(key)}const url=URL.createObjectURL(new Blob([JSON.stringify({app:'V Lex Pro Full Recovery',version:1,records,sessionDictionaryEdits:dictionaryEdits.value,sessionLearning:window.VLexLearningStore.read(),sessionLegacy:userDataPayload()})],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='vlex-full-recovery.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);fullBackupMessage.value='أُعد ملف الاسترجاع الخام؛ ليس ملفًا للاستيراد المباشر.'}catch(e){fullBackupMessage.value='تعذر تنزيل بيانات الاسترجاع: '+e.message}}
+    function exportFullRecovery(){try{const records={};for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(window.VLexFullBackup.KEYS.includes(key)||key===window.VLexFullBackup.PENDING||key?.startsWith('vlex_full_recovery_')||key?.startsWith('vlex_learning_recovery_')||key?.startsWith('vuelexicon_recovery_'))records[key]=localStorage.getItem(key)}const url=URL.createObjectURL(new Blob([JSON.stringify({app:'V Lex Pro Full Recovery',version:1,records,sessionSimulatorSource:simulatorExternalExample.value?.code||'',sessionDictionaryEdits:dictionaryEdits.value,sessionLearning:window.VLexLearningStore.read(),sessionLegacy:userDataPayload()})],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='vlex-full-recovery.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);fullBackupMessage.value='أُعد ملف الاسترجاع الخام؛ ليس ملفًا للاستيراد المباشر.'}catch(e){fullBackupMessage.value='تعذر تنزيل بيانات الاسترجاع: '+e.message}}
     let fullImportSequence=0;
     async function importFullBackup(event){const request=++fullImportSequence,file=event.target?.files?.[0];if(!file)return;try{
       if(file.size>window.VLexFullBackup.LIMIT)throw Error('النسخة أكبر من 8 MiB');const text=await file.text();if(request!==fullImportSequence)return;
@@ -2568,7 +2589,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
-      dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, learningReturnToGuided, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openGuidedUnit, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
+      dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, learningReturnToGuided, learningReturnToJourney, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openJourney, journeyKey, journeyNavigate, dictionaryLesson, dictionaryExpanded, tryDictionaryConcept, simulatorBeginner, setSimulatorMode, hasJourneySimulatorSource, journeyReferenceActive, updateJourneySimulatorSource, simulatorReferenceWarning, openGuidedUnit, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
       techCustomWidth, techCustomHeight, techPreviewZoom, techDimensionDraft, techDimensionError, techConsoleHeight, techCompactPanel, techDragging,

@@ -1,0 +1,270 @@
+{
+  "passed": 44,
+  "total": 44,
+  "rows": [
+    {
+      "id": "task-build-static",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-static",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-static",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-static",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-variables",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-variables",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-variables",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-variables",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-array",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-array",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-array",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-array",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-add",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-add",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-add",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-add",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-filter",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-filter",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-filter",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-filter",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-status",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-status",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-status",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-status",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-vfor",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-vfor",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-vfor",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-vfor",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-model",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-model",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-model",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-model",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-click",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-click",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-click",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-click",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-components",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-components",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-components",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-components",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-storage",
+      "key": "exercise",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-storage",
+      "key": "exercise",
+      "variant": "incomplete",
+      "passed": true
+    },
+    {
+      "id": "task-build-storage",
+      "key": "application",
+      "variant": "reference",
+      "passed": true
+    },
+    {
+      "id": "task-build-storage",
+      "key": "application",
+      "variant": "incomplete",
+      "passed": true
+    }
+  ]
+}

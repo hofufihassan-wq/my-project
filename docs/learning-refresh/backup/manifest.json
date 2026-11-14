@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "71578940f05f6e2a9bd67f1fbdab3acad74649da",
+  "archive": "site-before-7157894.zip",
+  "sha256": "a786c1093990d981a6cdd7499efe7c6e2a5edd213b002b73a6e594206744882d",
+  "bytes": 1494449,
+  "includes": "94 static runtime files and integrity manifest; no browser data, Git history, credentials, or tests",
+  "publishedIndexMatchesSource": true
+}

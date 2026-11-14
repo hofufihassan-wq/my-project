@@ -2,9 +2,9 @@
 (function(root){
 'use strict';
 const KEY='vlex_personal_learning_v1',LIMIT=2*1024*1024;
-const sections=['tasks','events','notes','projects','course','preferences','cssLab','jsLab','explainer','guidedArrow','navigation','organizerDrafts','dictionary','simulatorLayout','guided'];
+const sections=['tasks','events','notes','projects','course','preferences','cssLab','jsLab','explainer','guidedArrow','navigation','organizerDrafts','dictionary','simulatorLayout','guided','learningJourney'];
 const clone=x=>JSON.parse(JSON.stringify(x));
-const fresh=()=>({version:1,tasks:[],events:[],notes:[],projects:[],course:{completed:[],answers:{},reviews:{},drafts:{}},preferences:{theme:'petroleum'},cssLab:{},jsLab:{},explainer:{},guidedArrow:{},navigation:{},organizerDrafts:{},dictionary:{},simulatorLayout:{},guided:{}});
+const fresh=()=>({version:1,tasks:[],events:[],notes:[],projects:[],course:{completed:[],answers:{},reviews:{},drafts:{}},preferences:{theme:'petroleum'},cssLab:{},jsLab:{},explainer:{},guidedArrow:{},navigation:{},organizerDrafts:{},dictionary:{},simulatorLayout:{},guided:{},learningJourney:{}});
 const record=v=>v!==null&&typeof v==='object'&&!Array.isArray(v)&&(Object.getPrototypeOf(v)===Object.prototype||Object.getPrototypeOf(v)===null);
 const own=(v,key)=>Object.hasOwn(v,key);
 function fail(label){throw new Error('بيانات '+label+' غير صالحة')}
@@ -79,6 +79,27 @@ function guided(v){
   if(own(s,'completed')&&!timestamp(s.completed))fail('تاريخ الإتقان');
  });
 }
+function journey(v){
+ if(!Object.keys(v).length)return;
+ if(v.version!==1||Object.keys(v).some(k=>!['version','selected','track','lessons','taskSelected'].includes(k))||!['javascript','vue','html','css'].includes(v.track))fail('تجربة التعلم');string(v.selected,'الدرس الحالي',100,false);if(own(v,'taskSelected'))string(v.taskSelected,'محطة المشروع',100,false);
+ map(v.lessons,'تقدم التجربة',(s,id)=>{
+  if(!/^[a-z][a-z0-9-]{0,99}$/.test(id)||!record(s)||s.version!==1||Object.keys(s).some(k=>!['version','phase','writing','drafts','hints','answers','outcomes','mistakes','legacyAvailable','earned','review','baseline','helperOpen','helpLine','fixMode','answerAttempts','liveInput','sandboxStorage','simulatorDraft','simulatorOrigin'].includes(k))||!Number.isInteger(s.phase)||s.phase<0||s.phase>3||!Number.isInteger(s.writing)||s.writing<0||s.writing>5)fail('موضع تجربة التعلم');
+  map(s.drafts,'مسودات التجربة',(code,k)=>{if(!['try','gap','line','function','exercise','application','fix'].includes(k))fail('مسودة تجربة');string(code,'مصدر التجربة',16000)});
+  map(s.hints,'تلميحات التجربة',(n,k)=>{if(!Object.hasOwn(s.drafts,k)||!Number.isInteger(n)||n<0||n>3)fail('تلميح تجربة')});
+  if(own(s,'answerAttempts'))map(s.answerAttempts,'محاولات الفهم',(n,k)=>{if(!['prediction','understanding','output'].includes(k)||!Number.isInteger(n)||n<1||n>1000000)fail('محاولة فهم')});
+  map(s.answers,'إجابات التجربة',(n,k)=>{if(!['prediction','understanding','output'].includes(k)||!Number.isInteger(n)||n<0||n>2)fail('إجابة تجربة')});
+  map(s.outcomes,'نتائج التجربة',(r,k)=>{if(!Object.hasOwn(s.drafts,k)||!record(r)||Object.keys(r).some(x=>!['passed','source','at','attempts','checks','kind'].includes(x))||typeof r.passed!=='boolean'||!timestamp(r.at)||!Number.isInteger(r.attempts)||r.attempts<1||r.attempts>1000000||!['result','error','timeout'].includes(r.kind))fail('نتيجة تجربة');string(r.source,'الكود المختبر',16000);list(r.checks,'حالات التجربة',40,c=>{if(!record(c)||Object.keys(c).some(x=>!['label','expected','actual','passed'].includes(x))||typeof c.passed!=='boolean')fail('حالة تحقق');for(const field of ['label','expected','actual'])string(c[field],field,3000)})});
+  list(s.mistakes,'أخطاء التجربة',40,e=>{if(!record(e)||Object.keys(e).some(k=>!['at','kind','message'].includes(k))||!timestamp(e.at))fail('خطأ تجربة');string(e.kind,'نوع الخطأ',40);string(e.message,'وصف الخطأ',1600)});
+  for(const k of ['legacyAvailable','helperOpen','fixMode'])if(own(s,k)&&typeof s[k]!=='boolean')fail(k);
+  if(own(s,'helpLine')&&(!Number.isInteger(s.helpLine)||s.helpLine<1||s.helpLine>5000))fail('سطر المساعدة');
+  for(const field of ['simulatorDraft','simulatorOrigin'])if(own(s,field))string(s[field],'مسودة سياق المحاكي',16000);
+  if(own(s,'liveInput'))string(s.liveInput,'إدخال التجربة',1000);
+  if(own(s,'sandboxStorage')){if(!record(s.sandboxStorage)||Object.keys(s.sandboxStorage).length>100||JSON.stringify(s.sandboxStorage).length>65536)fail('مساحة المشروع');map(s.sandboxStorage,'مساحة المشروع',(value,key)=>{string(key,'مفتاح المشروع',512,false);string(value,'قيمة المشروع',16000)});}
+  if(own(s,'earned')){const e=s.earned;if(!record(e)||Object.keys(e).some(k=>!['at','source'].includes(k))||!timestamp(e.at))fail('دليل إنجاز سابق');string(e.source,'حل الإتقان السابق',16000)}
+  if(own(s,'review')){const r=s.review;if(!record(r)||Object.keys(r).some(k=>!['due','status','days'].includes(k))||!timestamp(r.due)||!['review','passed'].includes(r.status)||!Number.isInteger(r.days)||r.days<0||r.days>30)fail('مراجعة تجربة')}
+  if(own(s,'baseline')){const b=s.baseline;if(!record(b)||Object.keys(b).some(k=>!['source','at','values'].includes(k))||!timestamp(b.at))fail('نتيجة مقارنة');string(b.source,'المثال الأصلي',16000);list(b.values,'قيم المقارنة',10,value=>string(value,'ناتج المقارنة',3000))}
+ });
+}
 function validate(input){
  if(!record(input)||input.version!==1)throw new Error('إصدار بيانات التعلّم غير مدعوم');
  if(Object.keys(input).some(k=>k!=='version'&&!sections.includes(k)))throw new Error('حقول بيانات غير معروفة');
@@ -98,9 +119,10 @@ function validate(input){
  if(own(layout,'hiddenPanels'))list(layout.hiddenPanels,'لوحات المحاكي',5,p=>{if(!['editor','preview','console','stages','notes'].includes(p))fail('لوحة المحاكي')});
  }
  const dict=out.dictionary;if(Object.keys(dict).some(k=>!['drafts','selectedId','format'].includes(k)))fail('مسودات القاموس');if(own(dict,'drafts'))map(dict.drafts,'أكواد القاموس',(code,key)=>{if(!/^(html|css|js|vue|nuxt|ts)-[a-z0-9_-]+:(vue|vanilla)$/.test(key))fail('معرف مثال');string(code,'كود القاموس',65536)});if(own(dict,'selectedId'))string(dict.selectedId,'المصطلح المختار',160);if(own(dict,'format')&&!['vue','vanilla'].includes(dict.format))fail('صيغة المثال');
- const nav=out.navigation;if(Object.keys(nav).some(k=>!['workspace','section','simulatorLesson'].includes(k))||own(nav,'workspace')&&!['home','lexicon','course','arrow','guided','cssLab','jsLab','explain','settings','foundation'].includes(nav.workspace)||own(nav,'section')&&!['projects','kanban','notes','calendar'].includes(nav.section))fail('موضع الاستكمال');if(own(nav,'simulatorLesson'))string(nav.simulatorLesson,'درس المحاكي',80,false);
- guidedArrow(out.guidedArrow||{});guided(out.guided);
+ const nav=out.navigation;if(Object.keys(nav).some(k=>!['workspace','section','simulatorLesson'].includes(k))||own(nav,'workspace')&&!['home','lexicon','course','arrow','guided','learn','overview','taskJourney','cssLab','jsLab','explain','settings','foundation'].includes(nav.workspace)||own(nav,'section')&&!['projects','kanban','notes','calendar'].includes(nav.section))fail('موضع الاستكمال');if(own(nav,'simulatorLesson'))string(nav.simulatorLesson,'درس المحاكي',80,false);
+ guidedArrow(out.guidedArrow||{});guided(out.guided);journey(out.learningJourney);
  course(out.course);out.course={...fresh().course,...out.course};
+ if(own(out.preferences,'simulatorMode')&&!['simple','advanced'].includes(out.preferences.simulatorMode))fail('وضع المحاكي');
  if(own(out.preferences,'theme')&&!['petroleum','light','purple','green','glass'].includes(out.preferences.theme))throw new Error('الثيم غير معروف');
  out.preferences={...fresh().preferences,...out.preferences};
  for(const key of ['html','css','source'])optionalString(out.cssLab,key);
