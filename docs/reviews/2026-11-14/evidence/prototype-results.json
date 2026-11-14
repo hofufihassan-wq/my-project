@@ -1,0 +1,63 @@
+{
+  "passed": 14,
+  "total": 14,
+  "tests": [
+    {
+      "name": "old eight-stage source remains byte-for-byte in its own section while new UI has four phases",
+      "passed": true
+    },
+    {
+      "name": "real before/after data comes from code and a first small change displays a name card",
+      "passed": true
+    },
+    {
+      "name": "syntax error shows reliable line1 and retains original message without guessed runtime line",
+      "passed": true
+    },
+    {
+      "name": "progressive local help and selected-line explanations do not reveal full solutions",
+      "passed": true
+    },
+    {
+      "name": "missing value, whole line, application and mastery accept different valid forms",
+      "passed": true
+    },
+    {
+      "name": "retrying wrong application retains past achievement and does not count new code as passed",
+      "passed": true
+    },
+    {
+      "name": "restore requires confirmation; cancelling preserves source",
+      "passed": true
+    },
+    {
+      "name": "new state and legacy drafts survive complete browser process restart",
+      "passed": true
+    },
+    {
+      "name": "filter small experiment visibly selects a different actual task list",
+      "passed": true
+    },
+    {
+      "name": "filter accepts destructuring, arrow functions, boundary20 and empty arrays",
+      "passed": true
+    },
+    {
+      "name": "Vue ref experiment compiles real SFC and the counter control sends actual events",
+      "passed": true
+    },
+    {
+      "name": "mobile editor uses native selection and no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "new and older progress roundtrip in the same verified backup",
+      "passed": true
+    },
+    {
+      "name": "no unexpected parent errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

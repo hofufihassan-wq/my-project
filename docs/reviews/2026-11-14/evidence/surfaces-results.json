@@ -1,0 +1,47 @@
+{
+  "passed": 10,
+  "total": 10,
+  "rows": [
+    {
+      "name": "home makes resume and next lessons clear without showing old dashboard by default",
+      "passed": true
+    },
+    {
+      "name": "resume opens four phases and daily challenge opens writing directly",
+      "passed": true
+    },
+    {
+      "name": "dictionary quick reference links only a real existing concept and preserves original editor",
+      "passed": true
+    },
+    {
+      "name": "all eleven project checkpoints are reachable without losing the existing six projects",
+      "passed": true
+    },
+    {
+      "name": "private project runtime data persists after actual reactive toggle and reload",
+      "passed": true
+    },
+    {
+      "name": "lesson simulator opens simple mode with exact incoming code and preserves training draft",
+      "passed": true
+    },
+    {
+      "name": "real full download contains new drafts, achievements and private task data",
+      "passed": true
+    },
+    {
+      "name": "confirmed whole backup import restores the new section without executing saved code",
+      "passed": true
+    },
+    {
+      "name": "all themes, mobile and tablet keep the new home and lesson within viewport",
+      "passed": true
+    },
+    {
+      "name": "no unexpected parent errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,87 @@
+{
+  "auditedMainCommit": "d554fd14e5960c9b6a2c62155f6a7124735524c1",
+  "githubAcceptance": {
+    "runId": 43541982183,
+    "jobId": 132284386083,
+    "passedGroups": 65,
+    "totalGroups": 65,
+    "conclusion": "success"
+  },
+  "githubPagesDeployment": {
+    "runId": 43541981296,
+    "conclusion": "success",
+    "directSiteBrowserVerification": false
+  },
+  "targetedSuites": {
+    "passed": 6,
+    "total": 6,
+    "cases": [
+      6,
+      14,
+      30,
+      60,
+      44,
+      10
+    ]
+  },
+  "behaviorChecks": {
+    "initialPassed": 22,
+    "total": 23,
+    "focusedRecheckPassed": 1,
+    "effectivePassed": 23,
+    "correction": "Audit waited for ambient=ready; actual correct status is playing. No product change."
+  },
+  "findings": [
+    {
+      "id": "PROJECT-CUMULATIVE",
+      "priority": "P1",
+      "observation": "Stages 10 and 11 no longer expose stage 9 add controls or delete controls; final preview is two rows and toggles, not the accumulated task manager."
+    },
+    {
+      "id": "PROJECT-INERT-PREVIEW",
+      "priority": "P1",
+      "observation": "The stage 9 add button accepts a real click inside an inert snapshot but does not add; this stage has no external live input/action controls."
+    },
+    {
+      "id": "DICTIONARY-MAP",
+      "priority": "P1",
+      "observation": "Quick example for map() shows filter() from its related lesson instead of the term’s own map example."
+    },
+    {
+      "id": "EDITOR-LINE-NUMBERS",
+      "priority": "P2",
+      "observation": "Long source grows the line-number gutter beyond the editor or leaves numbers unsynchronized when scrolling.",
+      "evidence": {
+        "editorHeight": 260,
+        "editorScrollTop": 150,
+        "gutterHeight": 460,
+        "gutterScrollTop": 0,
+        "parentHeight": 460
+      }
+    },
+    {
+      "id": "SIMULATOR-DEFAULT",
+      "priority": "P2",
+      "observation": "Fresh top navigation opens advanced mode; lesson entry opens simple mode. Preserve saved preference but choose simple when none exists."
+    },
+    {
+      "id": "SIMULATOR-MUTE",
+      "priority": "P2",
+      "observation": "Ambient remains playing with four sources while the mute control is hidden in simple mode."
+    }
+  ],
+  "realWindowsTested": false,
+  "realPhoneTested": false,
+  "viewportWidths": [
+    360,
+    390,
+    412,
+    768,
+    1440
+  ],
+  "publicSite": "https://hofufihassan-wq.github.io/my-project/",
+  "publicSiteDirectAccess": "blocked by environment proxy, CONNECT 403",
+  "productFilesChanged": false,
+  "secretsOrSensitiveSettingsChanged": false,
+  "userScope": "User explicitly accepted available tests and requested unexecuted device tests be identified."
+}

@@ -1,0 +1,31 @@
+{
+  "commit": "d554fd14e5960c9b6a2c62155f6a7124735524c1",
+  "passed": 6,
+  "total": 6,
+  "rows": [
+    {
+      "suite": "state-unit",
+      "exitCode": 0
+    },
+    {
+      "suite": "prototype-browser",
+      "exitCode": 0
+    },
+    {
+      "suite": "pilot-grading",
+      "exitCode": 0
+    },
+    {
+      "suite": "catalogue-browser",
+      "exitCode": 0
+    },
+    {
+      "suite": "task-grading",
+      "exitCode": 0
+    },
+    {
+      "suite": "surfaces-browser",
+      "exitCode": 0
+    }
+  ]
+}

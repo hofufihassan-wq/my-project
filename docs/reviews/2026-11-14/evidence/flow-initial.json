@@ -1,0 +1,2066 @@
+{
+  "testedAt": "2026-11-14T02:11:13.378Z",
+  "url": "http://127.0.0.1:8091/",
+  "actualWindows": false,
+  "actualPhysicalPhone": false,
+  "passed": 22,
+  "total": 23,
+  "findings": [
+    {
+      "id": "PROJECT-CUMULATIVE",
+      "priority": "P1",
+      "observation": "Stages 10 and 11 no longer expose stage 9 add controls or delete controls; final preview is two rows and toggles, not the accumulated task manager."
+    },
+    {
+      "id": "PROJECT-INERT-PREVIEW",
+      "priority": "P1",
+      "observation": "The stage 9 add button accepts a real click inside an inert snapshot but does not add; this stage has no external live input/action controls."
+    },
+    {
+      "id": "DICTIONARY-MAP",
+      "priority": "P1",
+      "observation": "Quick example for map() shows filter() from its related lesson instead of the term’s own map example."
+    },
+    {
+      "id": "EDITOR-LINE-NUMBERS",
+      "priority": "P2",
+      "observation": "Long source grows the line-number gutter beyond the editor or leaves numbers unsynchronized when scrolling.",
+      "evidence": {
+        "editorHeight": 260,
+        "editorScrollTop": 150,
+        "gutterHeight": 460,
+        "gutterScrollTop": 0,
+        "parentHeight": 460
+      }
+    },
+    {
+      "id": "SIMULATOR-DEFAULT",
+      "priority": "P2",
+      "observation": "Fresh top navigation opens advanced mode; lesson entry opens simple mode. Preserve saved preference but choose simple when none exists."
+    }
+  ],
+  "metrics": {
+    "platform": "linux",
+    "osRelease": "6.18.57",
+    "browser": "154.0.8037.57",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "url": "http://127.0.0.1:8091/",
+    "httpStatus": 200,
+    "physicalWindows": false,
+    "physicalPhone": false,
+    "concepts": [
+      {
+        "id": "html-structure",
+        "title": "العنوان والفقرة وبنية الصفحة",
+        "briefLength": 82,
+        "tryCharacters": 41,
+        "maxSourceLine": 26
+      },
+      {
+        "id": "css-selectors",
+        "title": "المحددات والألوان",
+        "briefLength": 96,
+        "tryCharacters": 52,
+        "maxSourceLine": 52
+      },
+      {
+        "id": "js-values",
+        "title": "خلّ البيانات تتكلم عنك",
+        "briefLength": 118,
+        "tryCharacters": 45,
+        "maxSourceLine": 24
+      },
+      {
+        "id": "vue-ref",
+        "title": "زر يتذكر عدد نقراتك",
+        "briefLength": 140,
+        "tryCharacters": 155,
+        "maxSourceLine": 58
+      },
+      {
+        "id": "html-attributes",
+        "title": "الخصائص والروابط الداخلية",
+        "briefLength": 118,
+        "tryCharacters": 59,
+        "maxSourceLine": 35
+      },
+      {
+        "id": "html-images",
+        "title": "الصور والنص البديل",
+        "briefLength": 149,
+        "tryCharacters": 101,
+        "maxSourceLine": 101
+      },
+      {
+        "id": "html-lists",
+        "title": "القوائم المرتبة وغير المرتبة",
+        "briefLength": 107,
+        "tryCharacters": 55,
+        "maxSourceLine": 23
+      },
+      {
+        "id": "html-table",
+        "title": "الجداول ورؤوس الأعمدة",
+        "briefLength": 84,
+        "tryCharacters": 151,
+        "maxSourceLine": 65
+      },
+      {
+        "id": "html-form",
+        "title": "التسميات والمدخلات",
+        "briefLength": 110,
+        "tryCharacters": 78,
+        "maxSourceLine": 41
+      },
+      {
+        "id": "html-semantics",
+        "title": "العناصر الدلالية وإمكانية الوصول",
+        "briefLength": 112,
+        "tryCharacters": 140,
+        "maxSourceLine": 76
+      },
+      {
+        "id": "html-form-validation",
+        "title": "التحقق الأصلي من النماذج",
+        "briefLength": 105,
+        "tryCharacters": 72,
+        "maxSourceLine": 39
+      },
+      {
+        "id": "html-form-feedback",
+        "title": "وصف الحقل ورسائل المساعدة",
+        "briefLength": 87,
+        "tryCharacters": 111,
+        "maxSourceLine": 41
+      },
+      {
+        "id": "html-details",
+        "title": "تفاصيل قابلة للفتح دون JavaScript",
+        "briefLength": 171,
+        "tryCharacters": 85,
+        "maxSourceLine": 37
+      },
+      {
+        "id": "css-spacing",
+        "title": "Box Model والمسافات",
+        "briefLength": 85,
+        "tryCharacters": 81,
+        "maxSourceLine": 81
+      },
+      {
+        "id": "css-flex",
+        "title": "Flexbox والمحاور",
+        "briefLength": 157,
+        "tryCharacters": 51,
+        "maxSourceLine": 51
+      },
+      {
+        "id": "css-grid",
+        "title": "Grid والصفوف والأعمدة",
+        "briefLength": 154,
+        "tryCharacters": 68,
+        "maxSourceLine": 68
+      },
+      {
+        "id": "css-responsive",
+        "title": "التصميم المتجاوب واستعلامات الوسائط",
+        "briefLength": 127,
+        "tryCharacters": 109,
+        "maxSourceLine": 109
+      },
+      {
+        "id": "css-position",
+        "title": "Position والمرجع المكاني",
+        "briefLength": 178,
+        "tryCharacters": 67,
+        "maxSourceLine": 67
+      },
+      {
+        "id": "css-themes",
+        "title": "الخصائص المخصصة والثيمات",
+        "briefLength": 161,
+        "tryCharacters": 43,
+        "maxSourceLine": 43
+      },
+      {
+        "id": "css-animations",
+        "title": "الحركات ومدتها",
+        "briefLength": 155,
+        "tryCharacters": 77,
+        "maxSourceLine": 77
+      },
+      {
+        "id": "css-grid-minmax",
+        "title": "minmax ومنع تجاوز الشبكة",
+        "briefLength": 145,
+        "tryCharacters": 70,
+        "maxSourceLine": 70
+      },
+      {
+        "id": "css-flex-minwidth",
+        "title": "الانكماش داخل Flexbox",
+        "briefLength": 105,
+        "tryCharacters": 51,
+        "maxSourceLine": 51
+      },
+      {
+        "id": "css-fluid-tokens",
+        "title": "clamp والقياسات المرنة",
+        "briefLength": 154,
+        "tryCharacters": 36,
+        "maxSourceLine": 36
+      },
+      {
+        "id": "css-reduced-motion",
+        "title": "احترام تفضيل تقليل الحركة",
+        "briefLength": 146,
+        "tryCharacters": 136,
+        "maxSourceLine": 136
+      },
+      {
+        "id": "js-types",
+        "title": "الأنواع والتحويل العددي",
+        "briefLength": 103,
+        "tryCharacters": 143,
+        "maxSourceLine": 46
+      },
+      {
+        "id": "js-conditions",
+        "title": "الشروط والمقارنات والحدود",
+        "briefLength": 107,
+        "tryCharacters": 75,
+        "maxSourceLine": 32
+      },
+      {
+        "id": "js-loops",
+        "title": "الحلقات وتجميع النتائج",
+        "briefLength": 98,
+        "tryCharacters": 105,
+        "maxSourceLine": 45
+      },
+      {
+        "id": "js-functions",
+        "title": "الدوال والمعاملات والقيم الافتراضية",
+        "briefLength": 88,
+        "tryCharacters": 60,
+        "maxSourceLine": 34
+      },
+      {
+        "id": "js-arrays",
+        "title": "المصفوفات والفهارس والنسخ",
+        "briefLength": 70,
+        "tryCharacters": 68,
+        "maxSourceLine": 41
+      },
+      {
+        "id": "js-objects",
+        "title": "الكائنات والخصائص والنسخ",
+        "briefLength": 70,
+        "tryCharacters": 54,
+        "maxSourceLine": 28
+      },
+      {
+        "id": "js-map-filter",
+        "title": "اختر المهام التي تحتاج عملًا",
+        "briefLength": 135,
+        "tryCharacters": 74,
+        "maxSourceLine": 42
+      },
+      {
+        "id": "js-reduce",
+        "title": "reduce والقيمة الابتدائية",
+        "briefLength": 124,
+        "tryCharacters": 73,
+        "maxSourceLine": 46
+      },
+      {
+        "id": "js-closure",
+        "title": "Scope والإغلاق وحفظ الحالة",
+        "briefLength": 148,
+        "tryCharacters": 161,
+        "maxSourceLine": 46
+      },
+      {
+        "id": "js-promises",
+        "title": "Promises والنتيجة المؤجلة",
+        "briefLength": 144,
+        "tryCharacters": 80,
+        "maxSourceLine": 48
+      },
+      {
+        "id": "js-async-errors",
+        "title": "async/await ومعالجة الرفض",
+        "briefLength": 124,
+        "tryCharacters": 116,
+        "maxSourceLine": 56
+      },
+      {
+        "id": "js-modules",
+        "title": "ES Modules والاستيراد والتصدير",
+        "briefLength": 113,
+        "tryCharacters": 80,
+        "maxSourceLine": 47
+      },
+      {
+        "id": "js-debugging",
+        "title": "تحديد سبب الخطأ واختبار الحدود",
+        "briefLength": 114,
+        "tryCharacters": 71,
+        "maxSourceLine": 28
+      },
+      {
+        "id": "js-dom",
+        "title": "DOM وإنشاء العناصر",
+        "briefLength": 85,
+        "tryCharacters": 124,
+        "maxSourceLine": 42
+      },
+      {
+        "id": "js-events",
+        "title": "الأحداث والاستجابة للإدخال",
+        "briefLength": 115,
+        "tryCharacters": 167,
+        "maxSourceLine": 64
+      },
+      {
+        "id": "js-delegation",
+        "title": "تفويض الأحداث والعناصر المضافة لاحقًا",
+        "briefLength": 75,
+        "tryCharacters": 178,
+        "maxSourceLine": 63
+      },
+      {
+        "id": "js-storage",
+        "title": "Local Storage وJSON والاستعادة الآمنة",
+        "briefLength": 155,
+        "tryCharacters": 98,
+        "maxSourceLine": 37
+      },
+      {
+        "id": "js-fetch",
+        "title": "Fetch وفشل HTTP وفشل الشبكة",
+        "briefLength": 97,
+        "tryCharacters": 198,
+        "maxSourceLine": 39
+      },
+      {
+        "id": "js-project-organization",
+        "title": "تنظيم منطق المشروع في وحدات",
+        "briefLength": 126,
+        "tryCharacters": 106,
+        "maxSourceLine": 67
+      },
+      {
+        "id": "vue-template",
+        "title": "الاستيفاء وربط الخصائص",
+        "briefLength": 108,
+        "tryCharacters": 119,
+        "maxSourceLine": 48
+      },
+      {
+        "id": "vue-events",
+        "title": "الأحداث والدوال ومعاملاتها",
+        "briefLength": 120,
+        "tryCharacters": 195,
+        "maxSourceLine": 81
+      },
+      {
+        "id": "vue-reactive",
+        "title": "كائنات reactive وتحديث خصائصها",
+        "briefLength": 90,
+        "tryCharacters": 162,
+        "maxSourceLine": 67
+      },
+      {
+        "id": "vue-computed",
+        "title": "القيم المشتقة مع computed",
+        "briefLength": 148,
+        "tryCharacters": 163,
+        "maxSourceLine": 83
+      },
+      {
+        "id": "vue-conditional",
+        "title": "العرض الشرطي مع v-if وv-else",
+        "briefLength": 71,
+        "tryCharacters": 133,
+        "maxSourceLine": 63
+      },
+      {
+        "id": "vue-list",
+        "title": "القوائم وإضافة العناصر وحذفها",
+        "briefLength": 144,
+        "tryCharacters": 161,
+        "maxSourceLine": 66
+      },
+      {
+        "id": "vue-model",
+        "title": "المدخل النصي والمزامنة مع v-model",
+        "briefLength": 94,
+        "tryCharacters": 143,
+        "maxSourceLine": 50
+      },
+      {
+        "id": "vue-watch",
+        "title": "watch والقيمة السابقة والآثار الجانبية",
+        "briefLength": 148,
+        "tryCharacters": 191,
+        "maxSourceLine": 110
+      },
+      {
+        "id": "vue-lifecycle",
+        "title": "التركيب والإزالة وتنظيف الموارد",
+        "briefLength": 138,
+        "tryCharacters": 166,
+        "maxSourceLine": 88
+      },
+      {
+        "id": "vue-props",
+        "title": "خصائص المكونات وتدفق البيانات من الأب",
+        "briefLength": 93,
+        "tryCharacters": 147,
+        "maxSourceLine": 63
+      },
+      {
+        "id": "vue-emits",
+        "title": "الأحداث المخصصة والحمولات",
+        "briefLength": 138,
+        "tryCharacters": 140,
+        "maxSourceLine": 58
+      },
+      {
+        "id": "vue-slots",
+        "title": "Slots ومحتوى الأب والقيم البديلة",
+        "briefLength": 119,
+        "tryCharacters": 123,
+        "maxSourceLine": 56
+      },
+      {
+        "id": "vue-composable",
+        "title": "إعادة استخدام المنطق مع Composables",
+        "briefLength": 142,
+        "tryCharacters": 158,
+        "maxSourceLine": 80
+      },
+      {
+        "id": "vue-component-model",
+        "title": "v-model بين الأب والابن وdefineModel",
+        "briefLength": 133,
+        "tryCharacters": 121,
+        "maxSourceLine": 43
+      },
+      {
+        "id": "vue-async-state",
+        "title": "الحالة غير المتزامنة ومعالجة الفشل",
+        "briefLength": 117,
+        "tryCharacters": 125,
+        "maxSourceLine": 46
+      },
+      {
+        "id": "vue-router",
+        "title": "Vue Router والتنقل الذاكري المعزول",
+        "briefLength": 147,
+        "tryCharacters": 163,
+        "maxSourceLine": 67
+      },
+      {
+        "id": "vue-composition-app",
+        "title": "تجميع المكونات والحالة والتصفية",
+        "briefLength": 124,
+        "tryCharacters": 170,
+        "maxSourceLine": 111
+      }
+    ],
+    "projectStages": [
+      {
+        "id": "task-build-static",
+        "title": "1. مهمة ثابتة على الصفحة",
+        "tryCharacters": 45,
+        "maxSourceLine": 45
+      },
+      {
+        "id": "task-build-variables",
+        "title": "2. بيانات المهمة في متغيرات",
+        "tryCharacters": 37,
+        "maxSourceLine": 19
+      },
+      {
+        "id": "task-build-array",
+        "title": "3. مصفوفة تجمع المهام",
+        "tryCharacters": 46,
+        "maxSourceLine": 46
+      },
+      {
+        "id": "task-build-add",
+        "title": "4. دالة لإضافة مهمة",
+        "tryCharacters": 77,
+        "maxSourceLine": 41
+      },
+      {
+        "id": "task-build-filter",
+        "title": "5. حذف بالهوية باستخدام filter",
+        "tryCharacters": 70,
+        "maxSourceLine": 70
+      },
+      {
+        "id": "task-build-status",
+        "title": "6. حالة المهمة بشرط",
+        "tryCharacters": 63,
+        "maxSourceLine": 63
+      },
+      {
+        "id": "task-build-vfor",
+        "title": "7. Vue تعرض القائمة بـv-for",
+        "tryCharacters": 199,
+        "maxSourceLine": 81
+      },
+      {
+        "id": "task-build-model",
+        "title": "8. إدخال متصل بـv-model",
+        "tryCharacters": 152,
+        "maxSourceLine": 59
+      },
+      {
+        "id": "task-build-click",
+        "title": "9. زر إضافة بواسطة @click",
+        "tryCharacters": 401,
+        "maxSourceLine": 207
+      },
+      {
+        "id": "task-build-components",
+        "title": "10. مكوّن للمهمة وحدث للأب",
+        "tryCharacters": 655,
+        "maxSourceLine": 520
+      },
+      {
+        "id": "task-build-storage",
+        "title": "11. حفظ القائمة واستعادتها",
+        "tryCharacters": 833,
+        "maxSourceLine": 698
+      }
+    ],
+    "projectUi": [
+      {
+        "id": "task-build-static",
+        "externalInputs": 0,
+        "externalAction": 0,
+        "preview": {
+          "inputs": 0,
+          "buttons": 0,
+          "add": 0,
+          "remove": 0,
+          "tasks": 1,
+          "sandbox": ""
+        }
+      },
+      {
+        "id": "task-build-variables",
+        "externalInputs": 0,
+        "externalAction": 0
+      },
+      {
+        "id": "task-build-array",
+        "externalInputs": 0,
+        "externalAction": 0
+      },
+      {
+        "id": "task-build-add",
+        "externalInputs": 0,
+        "externalAction": 0
+      },
+      {
+        "id": "task-build-filter",
+        "externalInputs": 0,
+        "externalAction": 0
+      },
+      {
+        "id": "task-build-status",
+        "externalInputs": 0,
+        "externalAction": 0
+      },
+      {
+        "id": "task-build-vfor",
+        "externalInputs": 0,
+        "externalAction": 0,
+        "preview": {
+          "inputs": 0,
+          "buttons": 0,
+          "add": 0,
+          "remove": 0,
+          "tasks": 1,
+          "sandbox": ""
+        }
+      },
+      {
+        "id": "task-build-model",
+        "externalInputs": 1,
+        "externalAction": 0,
+        "preview": {
+          "inputs": 1,
+          "buttons": 0,
+          "add": 0,
+          "remove": 0,
+          "tasks": 0,
+          "sandbox": ""
+        }
+      },
+      {
+        "id": "task-build-click",
+        "externalInputs": 0,
+        "externalAction": 0,
+        "preview": {
+          "inputs": 1,
+          "buttons": 1,
+          "add": 1,
+          "remove": 0,
+          "tasks": 1,
+          "sandbox": "",
+          "tasksAfterActualPreviewClick": 1
+        }
+      },
+      {
+        "id": "task-build-components",
+        "externalInputs": 0,
+        "externalAction": 0,
+        "preview": {
+          "inputs": 0,
+          "buttons": 2,
+          "add": 0,
+          "remove": 0,
+          "tasks": 2,
+          "sandbox": ""
+        }
+      },
+      {
+        "id": "task-build-storage",
+        "externalInputs": 0,
+        "externalAction": 1,
+        "preview": {
+          "inputs": 0,
+          "buttons": 2,
+          "add": 0,
+          "remove": 0,
+          "tasks": 2,
+          "sandbox": ""
+        }
+      }
+    ],
+    "dictionary": [
+      {
+        "id": "js-addeventlistener",
+        "term": "addEventListener()",
+        "descriptionLength": 121,
+        "detailsClosed": true,
+        "example": 167
+      },
+      {
+        "id": "js-arrow_function",
+        "term": "Arrow Function (=>)",
+        "descriptionLength": 141,
+        "detailsClosed": true,
+        "example": 92
+      },
+      {
+        "id": "js-async_await",
+        "term": "async / await",
+        "descriptionLength": 135,
+        "detailsClosed": true,
+        "example": 117
+      },
+      {
+        "id": "js-bind_call_apply",
+        "term": "bind() / call() / apply()",
+        "descriptionLength": 165,
+        "detailsClosed": true,
+        "example": 87
+      },
+      {
+        "id": "js-blob_filereader",
+        "term": "Blob / FileReader",
+        "descriptionLength": 151,
+        "detailsClosed": true,
+        "example": 110
+      },
+      {
+        "id": "js-class",
+        "term": "class",
+        "descriptionLength": 150,
+        "detailsClosed": true,
+        "example": 98
+      },
+      {
+        "id": "js-console_log",
+        "term": "console.log",
+        "descriptionLength": 137,
+        "detailsClosed": true,
+        "example": 32
+      },
+      {
+        "id": "js-const",
+        "term": "const",
+        "descriptionLength": 147,
+        "detailsClosed": true,
+        "example": 45
+      },
+      {
+        "id": "js-destructuring",
+        "term": "Destructuring",
+        "descriptionLength": 134,
+        "detailsClosed": true,
+        "example": 77
+      },
+      {
+        "id": "js-export_import",
+        "term": "export / import",
+        "descriptionLength": 147,
+        "detailsClosed": true,
+        "example": 90
+      },
+      {
+        "id": "js-fetch",
+        "term": "fetch()",
+        "descriptionLength": 144,
+        "detailsClosed": true,
+        "example": 198
+      },
+      {
+        "id": "js-filter",
+        "term": "filter()",
+        "descriptionLength": 133,
+        "detailsClosed": true,
+        "example": 74
+      },
+      {
+        "id": "js-find",
+        "term": "find()",
+        "descriptionLength": 138,
+        "detailsClosed": true,
+        "example": 97
+      },
+      {
+        "id": "js-for_for_of",
+        "term": "for / for...of",
+        "descriptionLength": 158,
+        "detailsClosed": true,
+        "example": 66
+      },
+      {
+        "id": "js-foreach",
+        "term": "forEach()",
+        "descriptionLength": 150,
+        "detailsClosed": true,
+        "example": 61
+      },
+      {
+        "id": "js-function",
+        "term": "function",
+        "descriptionLength": 151,
+        "detailsClosed": true,
+        "example": 38
+      },
+      {
+        "id": "js-getelementbyid",
+        "term": "getElementById()",
+        "descriptionLength": 115,
+        "detailsClosed": true,
+        "example": 73
+      },
+      {
+        "id": "js-if_else",
+        "term": "if / else",
+        "descriptionLength": 153,
+        "detailsClosed": true,
+        "example": 66
+      },
+      {
+        "id": "js-includes",
+        "term": "includes()",
+        "descriptionLength": 161,
+        "detailsClosed": true,
+        "example": 50
+      },
+      {
+        "id": "js-json_stringify_parse",
+        "term": "JSON.stringify / parse",
+        "descriptionLength": 257,
+        "detailsClosed": true,
+        "example": 105
+      },
+      {
+        "id": "js-let",
+        "term": "let",
+        "descriptionLength": 150,
+        "detailsClosed": true,
+        "example": 45
+      },
+      {
+        "id": "js-localstorage",
+        "term": "localStorage",
+        "descriptionLength": 140,
+        "detailsClosed": true,
+        "example": 98
+      },
+      {
+        "id": "js-map",
+        "term": "map()",
+        "descriptionLength": 130,
+        "detailsClosed": true,
+        "example": 74
+      },
+      {
+        "id": "js-nullish_coalescing",
+        "term": "Nullish Coalescing (??)",
+        "descriptionLength": 144,
+        "detailsClosed": true,
+        "example": 91
+      },
+      {
+        "id": "js-object_keys_entries",
+        "term": "Object.keys/entries",
+        "descriptionLength": 161,
+        "detailsClosed": true,
+        "example": 93
+      },
+      {
+        "id": "js-optional_chaining",
+        "term": "Optional Chaining (?.)",
+        "descriptionLength": 148,
+        "detailsClosed": true,
+        "example": 105
+      },
+      {
+        "id": "js-promise",
+        "term": "Promise",
+        "descriptionLength": 160,
+        "detailsClosed": true,
+        "example": 80
+      },
+      {
+        "id": "js-push_splice",
+        "term": "push() / splice()",
+        "descriptionLength": 179,
+        "detailsClosed": true,
+        "example": 42
+      },
+      {
+        "id": "js-queryselector",
+        "term": "querySelector()",
+        "descriptionLength": 129,
+        "detailsClosed": true,
+        "example": 83
+      },
+      {
+        "id": "js-reduce",
+        "term": "reduce()",
+        "descriptionLength": 167,
+        "detailsClosed": true,
+        "example": 73
+      },
+      {
+        "id": "js-return",
+        "term": "return",
+        "descriptionLength": 138,
+        "detailsClosed": true,
+        "example": 60
+      },
+      {
+        "id": "js-set_map",
+        "term": "Set / Map",
+        "descriptionLength": 161,
+        "detailsClosed": true,
+        "example": 117
+      },
+      {
+        "id": "js-settimeout",
+        "term": "setTimeout()",
+        "descriptionLength": 124,
+        "detailsClosed": true,
+        "example": 48
+      },
+      {
+        "id": "js-spread",
+        "term": "Spread (...)",
+        "descriptionLength": 153,
+        "detailsClosed": true,
+        "example": 91
+      },
+      {
+        "id": "js-switch",
+        "term": "switch",
+        "descriptionLength": 143,
+        "detailsClosed": true,
+        "example": 94
+      },
+      {
+        "id": "js-template_literals",
+        "term": "Template Literals",
+        "descriptionLength": 160,
+        "detailsClosed": true,
+        "example": 71
+      },
+      {
+        "id": "js-try_catch",
+        "term": "try / catch",
+        "descriptionLength": 142,
+        "detailsClosed": true,
+        "example": 57
+      },
+      {
+        "id": "js-typeof",
+        "term": "typeof",
+        "descriptionLength": 223,
+        "detailsClosed": true,
+        "example": 51
+      },
+      {
+        "id": "js-var",
+        "term": "var",
+        "descriptionLength": 175,
+        "detailsClosed": true,
+        "example": 45
+      },
+      {
+        "id": "js-weakmap_weakset",
+        "term": "WeakMap / WeakSet",
+        "descriptionLength": 228,
+        "detailsClosed": true,
+        "example": 83
+      },
+      {
+        "id": "js-xmlhttprequest",
+        "term": "XMLHttpRequest",
+        "descriptionLength": 156,
+        "detailsClosed": true,
+        "example": 69
+      },
+      {
+        "id": "js-yield",
+        "term": "yield",
+        "descriptionLength": 152,
+        "detailsClosed": true,
+        "example": 40
+      },
+      {
+        "id": "js-array_from_array_isarray",
+        "term": "Array.from() / Array.isArray()",
+        "descriptionLength": 245,
+        "detailsClosed": true,
+        "example": 142
+      },
+      {
+        "id": "js-string_split_join",
+        "term": "String.split() / join()",
+        "descriptionLength": 186,
+        "detailsClosed": true,
+        "example": 60
+      },
+      {
+        "id": "js-string_replace_replaceall",
+        "term": "String.replace() / replaceAll()",
+        "descriptionLength": 205,
+        "detailsClosed": true,
+        "example": 84
+      },
+      {
+        "id": "js-math_random_math_floor",
+        "term": "Math.random() / Math.floor()",
+        "descriptionLength": 229,
+        "detailsClosed": true,
+        "example": 43
+      },
+      {
+        "id": "js-date_intl_datetimeformat",
+        "term": "Date & Intl.DateTimeFormat",
+        "descriptionLength": 229,
+        "detailsClosed": true,
+        "example": 80
+      },
+      {
+        "id": "js-regexp_test_match",
+        "term": "RegExp (test / match)",
+        "descriptionLength": 179,
+        "detailsClosed": true,
+        "example": 67
+      },
+      {
+        "id": "js-debounce_throttle",
+        "term": "Debounce & Throttle",
+        "descriptionLength": 224,
+        "detailsClosed": true,
+        "example": 64
+      },
+      {
+        "id": "js-intersectionobserver",
+        "term": "IntersectionObserver",
+        "descriptionLength": 184,
+        "detailsClosed": true,
+        "example": 91
+      },
+      {
+        "id": "js-abortcontroller",
+        "term": "AbortController",
+        "descriptionLength": 176,
+        "detailsClosed": true,
+        "example": 91
+      },
+      {
+        "id": "js-structuredclone",
+        "term": "structuredClone()",
+        "descriptionLength": 247,
+        "detailsClosed": true,
+        "example": 97
+      },
+      {
+        "id": "js-url_urlsearchparams",
+        "term": "URL & URLSearchParams",
+        "descriptionLength": 178,
+        "detailsClosed": true,
+        "example": 83
+      },
+      {
+        "id": "js-clipboard_api_navigator_clipboard",
+        "term": "Clipboard API (navigator.clipboard)",
+        "descriptionLength": 168,
+        "detailsClosed": true,
+        "example": 96
+      },
+      {
+        "id": "vue-key",
+        "term": ":key",
+        "descriptionLength": 216,
+        "detailsClosed": true,
+        "example": 127
+      },
+      {
+        "id": "vue-keepalive",
+        "term": "<KeepAlive>",
+        "descriptionLength": 161,
+        "detailsClosed": true,
+        "example": 89
+      },
+      {
+        "id": "vue-slot",
+        "term": "<slot>",
+        "descriptionLength": 176,
+        "detailsClosed": true,
+        "example": 95
+      },
+      {
+        "id": "vue-teleport",
+        "term": "<Teleport>",
+        "descriptionLength": 164,
+        "detailsClosed": true,
+        "example": 76
+      },
+      {
+        "id": "vue-transition",
+        "term": "<Transition>",
+        "descriptionLength": 160,
+        "detailsClosed": true,
+        "example": 79
+      },
+      {
+        "id": "vue-computed",
+        "term": "computed()",
+        "descriptionLength": 171,
+        "detailsClosed": true,
+        "example": 163
+      },
+      {
+        "id": "vue-defineasynccomponent",
+        "term": "defineAsyncComponent()",
+        "descriptionLength": 167,
+        "detailsClosed": true,
+        "example": 122
+      },
+      {
+        "id": "vue-defineemits",
+        "term": "defineEmits()",
+        "descriptionLength": 166,
+        "detailsClosed": true,
+        "example": 121
+      },
+      {
+        "id": "vue-defineexpose",
+        "term": "defineExpose()",
+        "descriptionLength": 179,
+        "detailsClosed": true,
+        "example": 68
+      },
+      {
+        "id": "vue-definemodel",
+        "term": "defineModel()",
+        "descriptionLength": 165,
+        "detailsClosed": true,
+        "example": 111
+      },
+      {
+        "id": "vue-defineprops",
+        "term": "defineProps()",
+        "descriptionLength": 149,
+        "detailsClosed": true,
+        "example": 104
+      },
+      {
+        "id": "vue-nexttick",
+        "term": "nextTick()",
+        "descriptionLength": 160,
+        "detailsClosed": true,
+        "example": 85
+      },
+      {
+        "id": "vue-onmounted",
+        "term": "onMounted()",
+        "descriptionLength": 168,
+        "detailsClosed": true,
+        "example": 76
+      },
+      {
+        "id": "vue-onunmounted",
+        "term": "onUnmounted()",
+        "descriptionLength": 168,
+        "detailsClosed": true,
+        "example": 72
+      },
+      {
+        "id": "vue-provide_inject",
+        "term": "provide() / inject()",
+        "descriptionLength": 185,
+        "detailsClosed": true,
+        "example": 68
+      },
+      {
+        "id": "vue-reactive",
+        "term": "reactive()",
+        "descriptionLength": 172,
+        "detailsClosed": true,
+        "example": 162
+      },
+      {
+        "id": "vue-ref",
+        "term": "ref()",
+        "descriptionLength": 179,
+        "detailsClosed": true,
+        "example": 155
+      },
+      {
+        "id": "vue-shallowref_shallowreactive",
+        "term": "shallowRef() / shallowReactive()",
+        "descriptionLength": 183,
+        "detailsClosed": true,
+        "example": 99
+      },
+      {
+        "id": "vue-toref_torefs",
+        "term": "toRef() / toRefs()",
+        "descriptionLength": 173,
+        "detailsClosed": true,
+        "example": 118
+      },
+      {
+        "id": "vue-usefetch",
+        "term": "useFetch()",
+        "descriptionLength": 263,
+        "detailsClosed": true,
+        "example": 78
+      },
+      {
+        "id": "vue-useslots_useattrs",
+        "term": "useSlots() / useAttrs()",
+        "descriptionLength": 180,
+        "detailsClosed": true,
+        "example": 59
+      },
+      {
+        "id": "vue-usestate",
+        "term": "useState()",
+        "descriptionLength": 175,
+        "detailsClosed": true,
+        "example": 83
+      },
+      {
+        "id": "vue-v-bind",
+        "term": "v-bind (:)",
+        "descriptionLength": 154,
+        "detailsClosed": true,
+        "example": 57
+      },
+      {
+        "id": "vue-v-for",
+        "term": "v-for",
+        "descriptionLength": 231,
+        "detailsClosed": true,
+        "example": 161
+      },
+      {
+        "id": "vue-v-if_v-else",
+        "term": "v-if / v-else",
+        "descriptionLength": 173,
+        "detailsClosed": true,
+        "example": 120
+      },
+      {
+        "id": "vue-v-model",
+        "term": "v-model",
+        "descriptionLength": 178,
+        "detailsClosed": true,
+        "example": 143
+      },
+      {
+        "id": "vue-v-on",
+        "term": "v-on (@)",
+        "descriptionLength": 132,
+        "detailsClosed": true,
+        "example": 80
+      },
+      {
+        "id": "vue-v-show",
+        "term": "v-show",
+        "descriptionLength": 182,
+        "detailsClosed": true,
+        "example": 51
+      },
+      {
+        "id": "vue-watch_watcheffect",
+        "term": "watch() / watchEffect()",
+        "descriptionLength": 202,
+        "detailsClosed": true,
+        "example": 60
+      },
+      {
+        "id": "vue-watchposteffect",
+        "term": "watchPostEffect()",
+        "descriptionLength": 183,
+        "detailsClosed": true,
+        "example": 45
+      },
+      {
+        "id": "nuxt-uaccordion",
+        "term": "<UAccordion>",
+        "descriptionLength": 172,
+        "detailsClosed": true,
+        "example": 89
+      },
+      {
+        "id": "nuxt-ualert",
+        "term": "<UAlert>",
+        "descriptionLength": 170,
+        "detailsClosed": true,
+        "example": 74
+      },
+      {
+        "id": "nuxt-uavatar",
+        "term": "<UAvatar>",
+        "descriptionLength": 178,
+        "detailsClosed": true,
+        "example": 68
+      },
+      {
+        "id": "nuxt-ubadge",
+        "term": "<UBadge>",
+        "descriptionLength": 159,
+        "detailsClosed": true,
+        "example": 60
+      },
+      {
+        "id": "nuxt-ubreadcrumb",
+        "term": "<UBreadcrumb>",
+        "descriptionLength": 156,
+        "detailsClosed": true,
+        "example": 56
+      },
+      {
+        "id": "nuxt-ubutton",
+        "term": "<UButton>",
+        "descriptionLength": 189,
+        "detailsClosed": true,
+        "example": 136
+      },
+      {
+        "id": "nuxt-ucard",
+        "term": "<UCard>",
+        "descriptionLength": 149,
+        "detailsClosed": true,
+        "example": 60
+      },
+      {
+        "id": "nuxt-ucheckbox",
+        "term": "<UCheckbox>",
+        "descriptionLength": 158,
+        "detailsClosed": true,
+        "example": 63
+      },
+      {
+        "id": "nuxt-ucommandpalette",
+        "term": "<UCommandPalette>",
+        "descriptionLength": 165,
+        "detailsClosed": true,
+        "example": 80
+      },
+      {
+        "id": "nuxt-udrawer",
+        "term": "<UDrawer>",
+        "descriptionLength": 160,
+        "detailsClosed": true,
+        "example": 77
+      },
+      {
+        "id": "nuxt-udropdownmenu",
+        "term": "<UDropdownMenu>",
+        "descriptionLength": 152,
+        "detailsClosed": true,
+        "example": 83
+      },
+      {
+        "id": "nuxt-uform",
+        "term": "<UForm>",
+        "descriptionLength": 158,
+        "detailsClosed": true,
+        "example": 64
+      },
+      {
+        "id": "nuxt-uformfield",
+        "term": "<UFormField>",
+        "descriptionLength": 165,
+        "detailsClosed": true,
+        "example": 73
+      },
+      {
+        "id": "nuxt-uinput",
+        "term": "<UInput>",
+        "descriptionLength": 158,
+        "detailsClosed": true,
+        "example": 65
+      },
+      {
+        "id": "nuxt-ukbd",
+        "term": "<UKbd>",
+        "descriptionLength": 143,
+        "detailsClosed": true,
+        "example": 71
+      },
+      {
+        "id": "nuxt-umodal",
+        "term": "<UModal>",
+        "descriptionLength": 156,
+        "detailsClosed": true,
+        "example": 82
+      },
+      {
+        "id": "nuxt-upagination",
+        "term": "<UPagination>",
+        "descriptionLength": 149,
+        "detailsClosed": true,
+        "example": 76
+      },
+      {
+        "id": "nuxt-uprogress",
+        "term": "<UProgress>",
+        "descriptionLength": 139,
+        "detailsClosed": true,
+        "example": 69
+      },
+      {
+        "id": "nuxt-uselect",
+        "term": "<USelect>",
+        "descriptionLength": 128,
+        "detailsClosed": true,
+        "example": 76
+      },
+      {
+        "id": "nuxt-uskeleton",
+        "term": "<USkeleton>",
+        "descriptionLength": 157,
+        "detailsClosed": true,
+        "example": 66
+      },
+      {
+        "id": "nuxt-uswitch",
+        "term": "<USwitch>",
+        "descriptionLength": 147,
+        "detailsClosed": true,
+        "example": 74
+      },
+      {
+        "id": "nuxt-utable",
+        "term": "<UTable>",
+        "descriptionLength": 152,
+        "detailsClosed": true,
+        "example": 78
+      },
+      {
+        "id": "nuxt-utabs",
+        "term": "<UTabs>",
+        "descriptionLength": 139,
+        "detailsClosed": true,
+        "example": 71
+      },
+      {
+        "id": "nuxt-utextarea",
+        "term": "<UTextarea>",
+        "descriptionLength": 142,
+        "detailsClosed": true,
+        "example": 82
+      },
+      {
+        "id": "nuxt-utooltip",
+        "term": "<UTooltip>",
+        "descriptionLength": 154,
+        "detailsClosed": true,
+        "example": 78
+      },
+      {
+        "id": "html-a",
+        "term": "<a>",
+        "descriptionLength": 165,
+        "detailsClosed": true,
+        "example": 233
+      },
+      {
+        "id": "html-audio",
+        "term": "<audio>",
+        "descriptionLength": 166,
+        "detailsClosed": true,
+        "example": 242
+      },
+      {
+        "id": "html-button",
+        "term": "<button>",
+        "descriptionLength": 172,
+        "detailsClosed": true,
+        "example": 237
+      },
+      {
+        "id": "html-canvas",
+        "term": "<canvas>",
+        "descriptionLength": 171,
+        "detailsClosed": true,
+        "example": 287
+      },
+      {
+        "id": "html-class",
+        "term": "class",
+        "descriptionLength": 176,
+        "detailsClosed": true,
+        "example": 203
+      },
+      {
+        "id": "html-details_summary",
+        "term": "<details> / <summary>",
+        "descriptionLength": 167,
+        "detailsClosed": true,
+        "example": 376
+      },
+      {
+        "id": "html-dialog",
+        "term": "<dialog>",
+        "descriptionLength": 167,
+        "detailsClosed": true,
+        "example": 507
+      },
+      {
+        "id": "html-div",
+        "term": "<div>",
+        "descriptionLength": 166,
+        "detailsClosed": true,
+        "example": 201
+      },
+      {
+        "id": "html-form",
+        "term": "<form>",
+        "descriptionLength": 161,
+        "detailsClosed": true,
+        "example": 310
+      },
+      {
+        "id": "html-h1_-_h6",
+        "term": "<h1>-<h6>",
+        "descriptionLength": 186,
+        "detailsClosed": true,
+        "example": 227
+      },
+      {
+        "id": "html-header_footer",
+        "term": "<header> / <footer>",
+        "descriptionLength": 170,
+        "detailsClosed": true,
+        "example": 415
+      },
+      {
+        "id": "html-iframe",
+        "term": "<iframe>",
+        "descriptionLength": 153,
+        "detailsClosed": true,
+        "example": 191
+      },
+      {
+        "id": "html-img",
+        "term": "<img>",
+        "descriptionLength": 154,
+        "detailsClosed": true,
+        "example": 214
+      },
+      {
+        "id": "html-input",
+        "term": "<input>",
+        "descriptionLength": 174,
+        "detailsClosed": true,
+        "example": 267
+      },
+      {
+        "id": "html-label",
+        "term": "<label>",
+        "descriptionLength": 160,
+        "detailsClosed": true,
+        "example": 327
+      },
+      {
+        "id": "html-main",
+        "term": "<main>",
+        "descriptionLength": 175,
+        "detailsClosed": true,
+        "example": 200
+      },
+      {
+        "id": "html-nav",
+        "term": "<nav>",
+        "descriptionLength": 126,
+        "detailsClosed": true,
+        "example": 252
+      },
+      {
+        "id": "html-option",
+        "term": "<option>",
+        "descriptionLength": 149,
+        "detailsClosed": true,
+        "example": 288
+      },
+      {
+        "id": "html-p",
+        "term": "<p>",
+        "descriptionLength": 148,
+        "detailsClosed": true,
+        "example": 152
+      },
+      {
+        "id": "html-section",
+        "term": "<section>",
+        "descriptionLength": 138,
+        "detailsClosed": true,
+        "example": 257
+      },
+      {
+        "id": "html-select",
+        "term": "<select>",
+        "descriptionLength": 147,
+        "detailsClosed": true,
+        "example": 228
+      },
+      {
+        "id": "html-span",
+        "term": "<span>",
+        "descriptionLength": 139,
+        "detailsClosed": true,
+        "example": 150
+      },
+      {
+        "id": "html-table",
+        "term": "<table>",
+        "descriptionLength": 145,
+        "detailsClosed": true,
+        "example": 392
+      },
+      {
+        "id": "html-template",
+        "term": "<template>",
+        "descriptionLength": 189,
+        "detailsClosed": true,
+        "example": 275
+      },
+      {
+        "id": "html-ul_li",
+        "term": "<ul> / <li>",
+        "descriptionLength": 176,
+        "detailsClosed": true,
+        "example": 286
+      },
+      {
+        "id": "html-video",
+        "term": "<video>",
+        "descriptionLength": 163,
+        "detailsClosed": true,
+        "example": 254
+      },
+      {
+        "id": "css-animation_keyframes",
+        "term": "animation & @keyframes",
+        "descriptionLength": 149,
+        "detailsClosed": true,
+        "example": 269
+      },
+      {
+        "id": "css-aspect-ratio",
+        "term": "aspect-ratio",
+        "descriptionLength": 171,
+        "detailsClosed": true,
+        "example": 167
+      },
+      {
+        "id": "css-background",
+        "term": "background",
+        "descriptionLength": 141,
+        "detailsClosed": true,
+        "example": 167
+      },
+      {
+        "id": "css-border_border-radius",
+        "term": "border & border-radius",
+        "descriptionLength": 164,
+        "detailsClosed": true,
+        "example": 137
+      },
+      {
+        "id": "css-box-shadow",
+        "term": "box-shadow",
+        "descriptionLength": 156,
+        "detailsClosed": true,
+        "example": 231
+      },
+      {
+        "id": "css-color",
+        "term": "color",
+        "descriptionLength": 149,
+        "detailsClosed": true,
+        "example": 154
+      },
+      {
+        "id": "css-cursor",
+        "term": "cursor",
+        "descriptionLength": 171,
+        "detailsClosed": true,
+        "example": 170
+      },
+      {
+        "id": "css-display",
+        "term": "display",
+        "descriptionLength": 172,
+        "detailsClosed": true,
+        "example": 152
+      },
+      {
+        "id": "css-filter_blur_drop-shadow",
+        "term": "filter (blur, drop-shadow)",
+        "descriptionLength": 165,
+        "detailsClosed": true,
+        "example": 169
+      },
+      {
+        "id": "css-flex_flexbox",
+        "term": "flex (Flexbox)",
+        "descriptionLength": 166,
+        "detailsClosed": true,
+        "example": 130
+      },
+      {
+        "id": "css-gap",
+        "term": "gap",
+        "descriptionLength": 147,
+        "detailsClosed": true,
+        "example": 221
+      },
+      {
+        "id": "css-grid_css_grid",
+        "term": "grid (CSS Grid)",
+        "descriptionLength": 156,
+        "detailsClosed": true,
+        "example": 247
+      },
+      {
+        "id": "css-hover_focus",
+        "term": ":hover & :focus",
+        "descriptionLength": 172,
+        "detailsClosed": true,
+        "example": 205
+      },
+      {
+        "id": "css-justify-content_align-items",
+        "term": "justify-content & align-items",
+        "descriptionLength": 243,
+        "detailsClosed": true,
+        "example": 188
+      },
+      {
+        "id": "css-linear-gradient",
+        "term": "linear-gradient",
+        "descriptionLength": 133,
+        "detailsClosed": true,
+        "example": 163
+      },
+      {
+        "id": "css-margin_padding",
+        "term": "margin & padding",
+        "descriptionLength": 173,
+        "detailsClosed": true,
+        "example": 177
+      },
+      {
+        "id": "css-media",
+        "term": "@media",
+        "descriptionLength": 156,
+        "detailsClosed": true,
+        "example": 222
+      },
+      {
+        "id": "css-opacity_backdrop-filter",
+        "term": "opacity & backdrop-filter",
+        "descriptionLength": 190,
+        "detailsClosed": true,
+        "example": 229
+      },
+      {
+        "id": "css-overflow_overflow-x_y",
+        "term": "overflow / overflow-x / y",
+        "descriptionLength": 173,
+        "detailsClosed": true,
+        "example": 209
+      },
+      {
+        "id": "css-position",
+        "term": "position",
+        "descriptionLength": 175,
+        "detailsClosed": true,
+        "example": 228
+      },
+      {
+        "id": "css-scroll-behavior",
+        "term": "scroll-behavior",
+        "descriptionLength": 152,
+        "detailsClosed": true,
+        "example": 128
+      },
+      {
+        "id": "css-transform_transition",
+        "term": "transform & transition",
+        "descriptionLength": 199,
+        "detailsClosed": true,
+        "example": 213
+      },
+      {
+        "id": "css-user-select",
+        "term": "user-select",
+        "descriptionLength": 159,
+        "detailsClosed": true,
+        "example": 204
+      },
+      {
+        "id": "css-width_height",
+        "term": "width & height",
+        "descriptionLength": 171,
+        "detailsClosed": true,
+        "example": 204
+      },
+      {
+        "id": "css-z-index",
+        "term": "z-index",
+        "descriptionLength": 157,
+        "detailsClosed": true,
+        "example": 346
+      },
+      {
+        "id": "ts-primitive_types",
+        "term": "Primitive Types",
+        "descriptionLength": 232,
+        "detailsClosed": true,
+        "example": 141
+      },
+      {
+        "id": "ts-type_annotations",
+        "term": "Type Annotations",
+        "descriptionLength": 187,
+        "detailsClosed": true,
+        "example": 122
+      },
+      {
+        "id": "ts-type_inference",
+        "term": "Type Inference",
+        "descriptionLength": 193,
+        "detailsClosed": true,
+        "example": 110
+      },
+      {
+        "id": "ts-interface",
+        "term": "interface",
+        "descriptionLength": 214,
+        "detailsClosed": true,
+        "example": 123
+      },
+      {
+        "id": "ts-type_type_alias",
+        "term": "type (Type Alias)",
+        "descriptionLength": 217,
+        "detailsClosed": true,
+        "example": 111
+      },
+      {
+        "id": "ts-union_types",
+        "term": "Union Types (|)",
+        "descriptionLength": 215,
+        "detailsClosed": true,
+        "example": 151
+      },
+      {
+        "id": "ts-intersection_types",
+        "term": "Intersection Types (&)",
+        "descriptionLength": 181,
+        "detailsClosed": true,
+        "example": 105
+      },
+      {
+        "id": "ts-generics_t",
+        "term": "Generics (<T>)",
+        "descriptionLength": 186,
+        "detailsClosed": true,
+        "example": 111
+      },
+      {
+        "id": "ts-type_narrowing_guards",
+        "term": "Type Narrowing & Guards",
+        "descriptionLength": 216,
+        "detailsClosed": true,
+        "example": 386
+      },
+      {
+        "id": "ts-utility_types_partial_t_required_t",
+        "term": "Utility Types: Partial<T> & Required<T>",
+        "descriptionLength": 199,
+        "detailsClosed": true,
+        "example": 128
+      },
+      {
+        "id": "ts-utility_types_pick_t_omit_t",
+        "term": "Utility Types: Pick<T> & Omit<T>",
+        "descriptionLength": 204,
+        "detailsClosed": true,
+        "example": 96
+      },
+      {
+        "id": "ts-utility_types_record_k_t",
+        "term": "Utility Types: Record<K, T>",
+        "descriptionLength": 188,
+        "detailsClosed": true,
+        "example": 154
+      },
+      {
+        "id": "ts-unknown_vs_any_vs_never",
+        "term": "unknown vs any vs never",
+        "descriptionLength": 235,
+        "detailsClosed": true,
+        "example": 139
+      },
+      {
+        "id": "ts-function_typing_signatures",
+        "term": "Function Typing & Signatures",
+        "descriptionLength": 195,
+        "detailsClosed": true,
+        "example": 96
+      },
+      {
+        "id": "ts-tuples_readonly_arrays",
+        "term": "Tuples & Readonly Arrays",
+        "descriptionLength": 209,
+        "detailsClosed": true,
+        "example": 167
+      },
+      {
+        "id": "ts-enums_numeric_string",
+        "term": "Enums (Numeric & String)",
+        "descriptionLength": 228,
+        "detailsClosed": true,
+        "example": 109
+      },
+      {
+        "id": "ts-defineprops_props",
+        "term": "defineProps<Props>()",
+        "descriptionLength": 215,
+        "detailsClosed": true,
+        "example": 177
+      },
+      {
+        "id": "ts-defineemits_emits",
+        "term": "defineEmits<Emits>()",
+        "descriptionLength": 189,
+        "detailsClosed": true,
+        "example": 106
+      },
+      {
+        "id": "ts-ref_t_reactive_typing",
+        "term": "Ref<T> & reactive typing",
+        "descriptionLength": 254,
+        "detailsClosed": true,
+        "example": 161
+      },
+      {
+        "id": "ts-tsconfig_json",
+        "term": "tsconfig.json",
+        "descriptionLength": 228,
+        "detailsClosed": true,
+        "example": 113
+      }
+    ],
+    "termExamples": [
+      {
+        "term": "map",
+        "id": "js-map",
+        "shown": "function selectTasks(tasks) {\n  return tasks.filter(task => !task.done);\n}"
+      },
+      {
+        "term": "filter",
+        "id": "js-filter",
+        "shown": "function selectTasks(tasks) {\n  return tasks.filter(task => !task.done);\n}"
+      },
+      {
+        "term": "let",
+        "id": "js-let",
+        "shown": "const name = \"سارة\";\nconst studyMinutes = 10;"
+      },
+      {
+        "term": "var",
+        "id": "js-var",
+        "shown": "const name = \"سارة\";\nconst studyMinutes = 10;"
+      }
+    ],
+    "editorLong": {
+      "editorHeight": 260,
+      "editorScrollTop": 150,
+      "gutterHeight": 460,
+      "gutterScrollTop": 0,
+      "parentHeight": 460
+    },
+    "simulatorDirect": {
+      "simple": "false",
+      "visibleButtons": 126
+    },
+    "viewportSweeps": [
+      {
+        "width": 360,
+        "passed": true,
+        "physicalDevice": false
+      },
+      {
+        "width": 390,
+        "passed": true,
+        "physicalDevice": false
+      },
+      {
+        "width": 412,
+        "passed": true,
+        "physicalDevice": false
+      },
+      {
+        "width": 768,
+        "passed": true,
+        "physicalDevice": false
+      },
+      {
+        "width": 1440,
+        "passed": true,
+        "physicalDevice": false
+      }
+    ]
+  },
+  "errors": [],
+  "results": [
+    {
+      "name": "current site boots the new four-phase experience",
+      "passed": true
+    },
+    {
+      "name": "pilot js-values completes all four phases through actual controls",
+      "passed": true
+    },
+    {
+      "name": "pilot js-map-filter completes all four phases through actual controls",
+      "passed": true
+    },
+    {
+      "name": "pilot vue-ref completes all four phases through actual controls",
+      "passed": true
+    },
+    {
+      "name": "task stage 1 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 2 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 3 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 4 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 5 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 6 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 7 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 8 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 9 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 10 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "task stage 11 completes understand/try/write/apply and leads to next",
+      "passed": true
+    },
+    {
+      "name": "all eleven accomplishments persist without removing the old six projects",
+      "passed": true
+    },
+    {
+      "name": "all 180 terms start with visible quick meaning and collapsed details",
+      "passed": true
+    },
+    {
+      "name": "dictionary details actually open on request",
+      "passed": true
+    },
+    {
+      "name": "whole-browser restart restores exact journey progress and source without autorun",
+      "passed": true
+    },
+    {
+      "name": "fresh simulator direct entry and lesson entry are recorded separately",
+      "passed": true
+    },
+    {
+      "name": "audio mute visibility is observed after switching to simple mode",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.\n    at /workspace/deliverables/VLex_Main_Review_20261114/review-flow.cjs:31:149\n    at async check (/workspace/deliverables/VLex_Main_Review_20261114/review-flow.cjs:8:48)\n    at async /workspace/deliverables/VLex_Main_Review_20261114/review-flow.cjs:31:1"
+    },
+    {
+      "name": "desktop and mobile-sized layouts fit without impersonating real devices",
+      "passed": true
+    },
+    {
+      "name": "no unhandled parent errors",
+      "passed": true
+    }
+  ]
+}

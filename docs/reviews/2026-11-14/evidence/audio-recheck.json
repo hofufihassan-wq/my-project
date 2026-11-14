@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "total": 1,
+  "expectationCorrection": "Ambient status is playing; ready is the alert-channel status.",
+  "ambientPressed": "true",
+  "muteVisible": false,
+  "diagnostics": {
+    "contextState": "running",
+    "scheduledCues": 0,
+    "activeTones": 0,
+    "ambientPlaying": true,
+    "ambientSources": 4
+  }
+}

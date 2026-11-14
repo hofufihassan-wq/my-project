@@ -1,0 +1,24 @@
+PASS current site boots the new four-phase experience
+PASS pilot js-values completes all four phases through actual controls
+PASS pilot js-map-filter completes all four phases through actual controls
+PASS pilot vue-ref completes all four phases through actual controls
+PASS task stage 1 completes understand/try/write/apply and leads to next
+PASS task stage 2 completes understand/try/write/apply and leads to next
+PASS task stage 3 completes understand/try/write/apply and leads to next
+PASS task stage 4 completes understand/try/write/apply and leads to next
+PASS task stage 5 completes understand/try/write/apply and leads to next
+PASS task stage 6 completes understand/try/write/apply and leads to next
+PASS task stage 7 completes understand/try/write/apply and leads to next
+PASS task stage 8 completes understand/try/write/apply and leads to next
+PASS task stage 9 completes understand/try/write/apply and leads to next
+PASS task stage 10 completes understand/try/write/apply and leads to next
+PASS task stage 11 completes understand/try/write/apply and leads to next
+PASS all eleven accomplishments persist without removing the old six projects
+PASS all 180 terms start with visible quick meaning and collapsed details
+PASS dictionary details actually open on request
+PASS whole-browser restart restores exact journey progress and source without autorun
+PASS fresh simulator direct entry and lesson entry are recorded separately
+FAIL audio mute visibility is observed after switching to simple mode page.waitForFunction: Timeout 30000ms exceeded.
+PASS desktop and mobile-sized layouts fit without impersonating real devices
+PASS no unhandled parent errors
+REPORT /workspace/deliverables/VLex_Main_Review_20261114/flow/review-results.json

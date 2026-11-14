@@ -1,0 +1,30 @@
+{
+  "passed": 6,
+  "total": 6,
+  "tests": [
+    {
+      "name": "old eight phases map intentionally to four without mutating old objects",
+      "passed": true
+    },
+    {
+      "name": "old backups need no new metadata and new state roundtrips losslessly",
+      "passed": true
+    },
+    {
+      "name": "unknown version, oversized code, invalid phases and forged result types are rejected atomically",
+      "passed": true
+    },
+    {
+      "name": "completion requires actual current writing and application sources plus understanding",
+      "passed": true
+    },
+    {
+      "name": "past achievement and source remain preserved when a retry fails",
+      "passed": true
+    },
+    {
+      "name": "syntax line offset is mapped only with reliable parser metadata",
+      "passed": true
+    }
+  ]
+}
