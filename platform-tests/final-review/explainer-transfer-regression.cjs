@@ -9,7 +9,7 @@ await page.evaluate(()=>vueLexiconApp.openLearning('explain','const transferred=
 await page.getByTestId('explain-source').fill('const userDraft=2;');
 await page.waitForFunction(()=>VLexLearningStore.getSection('explainer').source==='const userDraft=2;');
 await page.evaluate(()=>vueLexiconApp.setAppMode('home'));await page.getByTestId('explain-source').waitFor({state:'detached'});
-await page.getByTestId('nav-explain').click();
+await page.getByRole('button',{name:'اشرح لي الكود',exact:true}).click();
 const observed={editor:await page.getByTestId('explain-source').inputValue(),stored:await page.evaluate(()=>VLexLearningStore.getSection('explainer').source),automatic:await page.getByTestId('explain-auto').isChecked()};
 try{assert.equal(observed.editor,'const userDraft=2;');assert.equal(observed.stored,observed.editor);assert.equal(observed.automatic,false);results.push({name:'manual explanation source transfer never overrides later saved draft on return',passed:true,observed})}catch(e){results.push({name:'manual explanation source transfer never overrides later saved draft on return',passed:false,error:e.stack,observed});await page.getByTestId('explain-source').evaluate(e=>{e.style.outline='5px solid red';e.style.borderRadius='40%'});}
 await page.screenshot({path:out.replace(/\.json$/,'.png'),fullPage:true});

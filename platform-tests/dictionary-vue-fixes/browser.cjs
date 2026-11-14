@@ -31,6 +31,7 @@ async function run(patch, code) {
     const a = window.vueLexiconApp;
     a.setAppMode('lexicon');
     a.selectTerm(a.rawLexiconData.find(t => t.id === patch.id));
+    a.dictionaryExpanded=true;
     a.setCodeFormat(patch.field === 11 ? 'vanilla' : 'vue');
     if (editorMode || baselineMode || code !== null) {
       a.updateDictionaryEditor({ target: { value: code ?? (baselineMode ? patch.before : patch.after) } });

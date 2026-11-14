@@ -1,5 +1,5 @@
-# Replaces the inherited, incomplete GitHub Pages deployment. Deployment belongs
-# to Cloudflare's Git integration after approval and a reviewed merge into main.
+# Acceptance only. The existing GitHub Pages legacy build deploys main at /.
+# Keep that hosting configuration; tests do not publish a separate artifact.
 name: V Lex Pro acceptance
 on:
   pull_request:
