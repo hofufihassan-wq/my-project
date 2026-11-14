@@ -8,6 +8,8 @@
       "title": "العنوان والفقرة وبنية الصفحة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -16,6 +18,8 @@
       "title": "المحددات والألوان",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -24,6 +28,8 @@
       "title": "خلّ البيانات تتكلم عنك",
       "writes": 2,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -32,6 +38,8 @@
       "title": "زر يتذكر عدد نقراتك",
       "writes": 2,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -40,6 +48,8 @@
       "title": "الخصائص والروابط الداخلية",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -48,6 +58,8 @@
       "title": "الصور والنص البديل",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -56,6 +68,8 @@
       "title": "القوائم المرتبة وغير المرتبة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -64,6 +78,8 @@
       "title": "الجداول ورؤوس الأعمدة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -72,6 +88,8 @@
       "title": "التسميات والمدخلات",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -80,6 +98,8 @@
       "title": "العناصر الدلالية وإمكانية الوصول",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -88,6 +108,8 @@
       "title": "التحقق الأصلي من النماذج",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -96,6 +118,8 @@
       "title": "وصف الحقل ورسائل المساعدة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -104,6 +128,8 @@
       "title": "تفاصيل قابلة للفتح دون JavaScript",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -112,6 +138,8 @@
       "title": "Box Model والمسافات",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -120,6 +148,8 @@
       "title": "Flexbox والمحاور",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -128,6 +158,8 @@
       "title": "Grid والصفوف والأعمدة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -136,6 +168,8 @@
       "title": "التصميم المتجاوب واستعلامات الوسائط",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -144,6 +178,8 @@
       "title": "Position والمرجع المكاني",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -152,6 +188,8 @@
       "title": "الخصائص المخصصة والثيمات",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -160,6 +198,8 @@
       "title": "الحركات ومدتها",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -168,6 +208,8 @@
       "title": "minmax ومنع تجاوز الشبكة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -176,6 +218,8 @@
       "title": "الانكماش داخل Flexbox",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -184,6 +228,8 @@
       "title": "clamp والقياسات المرنة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -192,6 +238,8 @@
       "title": "احترام تفضيل تقليل الحركة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 0,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -200,6 +248,8 @@
       "title": "الأنواع والتحويل العددي",
       "writes": 1,
       "hasApplication": true,
+      "checks": 2,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -208,6 +258,8 @@
       "title": "الشروط والمقارنات والحدود",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -216,6 +268,8 @@
       "title": "الحلقات وتجميع النتائج",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -224,6 +278,8 @@
       "title": "الدوال والمعاملات والقيم الافتراضية",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -232,6 +288,8 @@
       "title": "المصفوفات والفهارس والنسخ",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -240,6 +298,8 @@
       "title": "الكائنات والخصائص والنسخ",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -248,6 +308,8 @@
       "title": "اختر المهام التي تحتاج عملًا",
       "writes": 3,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -256,6 +318,8 @@
       "title": "reduce والقيمة الابتدائية",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -264,6 +328,8 @@
       "title": "Scope والإغلاق وحفظ الحالة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -272,6 +338,8 @@
       "title": "Promises والنتيجة المؤجلة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -280,6 +348,8 @@
       "title": "async/await ومعالجة الرفض",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -288,6 +358,8 @@
       "title": "ES Modules والاستيراد والتصدير",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -296,6 +368,8 @@
       "title": "تحديد سبب الخطأ واختبار الحدود",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -304,6 +378,8 @@
       "title": "DOM وإنشاء العناصر",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -312,6 +388,8 @@
       "title": "الأحداث والاستجابة للإدخال",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -320,6 +398,8 @@
       "title": "تفويض الأحداث والعناصر المضافة لاحقًا",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -328,6 +408,8 @@
       "title": "Local Storage وJSON والاستعادة الآمنة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -336,6 +418,8 @@
       "title": "Fetch وفشل HTTP وفشل الشبكة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -344,6 +428,8 @@
       "title": "تنظيم منطق المشروع في وحدات",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -352,6 +438,8 @@
       "title": "الاستيفاء وربط الخصائص",
       "writes": 1,
       "hasApplication": true,
+      "checks": 2,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -360,6 +448,8 @@
       "title": "الأحداث والدوال ومعاملاتها",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -368,6 +458,8 @@
       "title": "كائنات reactive وتحديث خصائصها",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -376,6 +468,8 @@
       "title": "القيم المشتقة مع computed",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -384,6 +478,8 @@
       "title": "العرض الشرطي مع v-if وv-else",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -392,6 +488,8 @@
       "title": "القوائم وإضافة العناصر وحذفها",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -400,6 +498,8 @@
       "title": "المدخل النصي والمزامنة مع v-model",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -408,6 +508,8 @@
       "title": "watch والقيمة السابقة والآثار الجانبية",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -416,6 +518,8 @@
       "title": "التركيب والإزالة وتنظيف الموارد",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -424,6 +528,8 @@
       "title": "خصائص المكونات وتدفق البيانات من الأب",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -432,6 +538,8 @@
       "title": "الأحداث المخصصة والحمولات",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -440,6 +548,8 @@
       "title": "Slots ومحتوى الأب والقيم البديلة",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -448,6 +558,8 @@
       "title": "إعادة استخدام المنطق مع Composables",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -456,6 +568,8 @@
       "title": "v-model بين الأب والابن وdefineModel",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -464,6 +578,8 @@
       "title": "الحالة غير المتزامنة ومعالجة الفشل",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -472,6 +588,8 @@
       "title": "Vue Router والتنقل الذاكري المعزول",
       "writes": 1,
       "hasApplication": true,
+      "checks": 4,
+      "allChecksPassed": true,
       "passed": true
     },
     {
@@ -480,6 +598,8 @@
       "title": "تجميع المكونات والحالة والتصفية",
       "writes": 1,
       "hasApplication": true,
+      "checks": 1,
+      "allChecksPassed": true,
       "passed": true
     }
   ],
