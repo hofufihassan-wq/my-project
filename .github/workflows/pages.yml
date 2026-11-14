@@ -59,6 +59,7 @@ jobs:
         run: |
           npm run build
           node platform-tests/deployment/hosted-acceptance.cjs --local --output "$RUNNER_TEMP/vlex-migration"
+          node platform-tests/learning-refresh/pages-path-browser.cjs
       - name: Keep acceptance and redacted security logs
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6

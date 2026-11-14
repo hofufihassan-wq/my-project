@@ -1,0 +1,19 @@
+{
+  "passed": 3,
+  "total": 3,
+  "rows": [
+    {
+      "name": "isolated JavaScript and projection work at the Pages subpath",
+      "passed": true
+    },
+    {
+      "name": "real Vue worker compiler and events resolve nested local assets",
+      "passed": true
+    },
+    {
+      "name": "no missing assets or parent errors at Pages subpath",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

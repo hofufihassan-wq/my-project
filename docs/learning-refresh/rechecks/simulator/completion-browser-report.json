@@ -1,0 +1,449 @@
+{
+  "timestamp": "2026-11-14T01:26:47.168Z",
+  "browser": "156.0.8078.79",
+  "runtimeHashes": {
+    "app.js": "e96de02a13c79b4dfcd81ab74181d4b47c5ec4f3a58691c80c10f8e68bdd3961",
+    "index.html": "d7812ab8d2c38a7053dc0c69df0620f733c26871a450b155659160104d77e0ac",
+    "simulator-beta.js": "1e15740d1576b79c262ff3ddbd3926c041c31967c282cd9ee2e1dbc38c4d0dec",
+    "simulator-reference.css": "de5cc288b48b2c80f44680dc9ff516d9a37f24b9dfb02193c53035c4155d2b35",
+    "simulator-final.css": "b1d435c74bfe08196b64fa724ac5a2990b798801caec84ad4cbb7fca5bc45da4",
+    "assets/vendor/manifest.json": "c509395513cd21164b5275c1725c348811ae88a5b2e24f5199d2ef567360bd01"
+  },
+  "passed": 33,
+  "total": 33,
+  "audioEvidence": {
+    "ambient": {
+      "rms": 0.00568450313047252,
+      "peak": 0.011010091751813889,
+      "n": 12
+    },
+    "ambientZero": {
+      "rms": 0,
+      "peak": 0,
+      "n": 8
+    },
+    "error": {
+      "rms": 0.0021524909438781757,
+      "peak": 0.0234843660145998,
+      "n": 32
+    }
+  },
+  "responsive": [
+    {
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "width": 768,
+      "scroll": 768
+    },
+    {
+      "width": 390,
+      "scroll": 390
+    }
+  ],
+  "pointerEvidence": [
+    {
+      "i": 0,
+      "runId": "1794619560379-1-kuz2os0jg0p",
+      "nativeClick": true,
+      "output": "after 0"
+    },
+    {
+      "i": 1,
+      "runId": "1794619561009-2-s7e51t1wefo",
+      "nativeClick": true,
+      "output": "after 1"
+    },
+    {
+      "i": 2,
+      "runId": "1794619561580-3-dai2xelm0sp",
+      "nativeClick": true,
+      "output": "after 2"
+    },
+    {
+      "i": 3,
+      "runId": "1794619562154-4-q1vozt5fvkm",
+      "nativeClick": true,
+      "output": "after 3"
+    },
+    {
+      "i": 4,
+      "runId": "1794619562760-5-x0zjq41whu",
+      "nativeClick": true,
+      "output": "after 4"
+    },
+    {
+      "i": 5,
+      "runId": "1794619563360-6-yaonc8e4zh",
+      "nativeClick": true,
+      "output": "after 5"
+    },
+    {
+      "i": 6,
+      "runId": "1794619563907-7-9azga2hqmm9",
+      "nativeClick": true,
+      "output": "after 6"
+    },
+    {
+      "i": 7,
+      "runId": "1794619564473-8-dya2p0sua5g",
+      "nativeClick": true,
+      "output": "after 7"
+    },
+    {
+      "i": 8,
+      "runId": "1794619565007-9-86xd7bcn55b",
+      "nativeClick": true,
+      "output": "after 8"
+    },
+    {
+      "i": 9,
+      "runId": "1794619565617-10-bcc6m6ccrkn",
+      "nativeClick": true,
+      "output": "after 9"
+    },
+    {
+      "i": 10,
+      "runId": "1794619566204-11-l2jvbu8q0pn",
+      "nativeClick": true,
+      "output": "after 10"
+    },
+    {
+      "i": 11,
+      "runId": "1794619566788-12-y36k6n3uoa",
+      "nativeClick": true,
+      "output": "after 11"
+    },
+    {
+      "i": 12,
+      "runId": "1794619567433-13-iro5mecrd4r",
+      "nativeClick": true,
+      "output": "after 12"
+    },
+    {
+      "i": 13,
+      "runId": "1794619568012-14-i0g3bb62pe",
+      "nativeClick": true,
+      "output": "after 13"
+    },
+    {
+      "i": 14,
+      "runId": "1794619568703-15-3u0qpuftaal",
+      "nativeClick": true,
+      "output": "after 14"
+    },
+    {
+      "i": 15,
+      "runId": "1794619569308-16-5lq4wcn2266",
+      "nativeClick": true,
+      "output": "after 15"
+    },
+    {
+      "i": 16,
+      "runId": "1794619569962-17-0q2flj34sox",
+      "nativeClick": true,
+      "output": "after 16"
+    },
+    {
+      "i": 17,
+      "runId": "1794619570613-18-qappbns2lo",
+      "nativeClick": true,
+      "output": "after 17"
+    },
+    {
+      "i": 18,
+      "runId": "1794619571202-19-8b57wcsb7sv",
+      "nativeClick": true,
+      "output": "after 18"
+    },
+    {
+      "i": 19,
+      "runId": "1794619571828-20-194mnp2z22n",
+      "nativeClick": true,
+      "output": "after 19"
+    },
+    {
+      "i": 20,
+      "runId": "1794619572405-21-mzbog1r16vj",
+      "nativeClick": true,
+      "output": "after 20"
+    },
+    {
+      "i": 21,
+      "runId": "1794619573003-22-1ta2l1hxxdc",
+      "nativeClick": true,
+      "output": "after 21"
+    },
+    {
+      "i": 22,
+      "runId": "1794619573584-23-ror6r39r7hf",
+      "nativeClick": true,
+      "output": "after 22"
+    },
+    {
+      "i": 23,
+      "runId": "1794619574293-24-wque5s6sgjd",
+      "nativeClick": true,
+      "output": "after 23"
+    },
+    {
+      "i": 24,
+      "runId": "1794619574889-25-1xntjljljpn",
+      "nativeClick": true,
+      "output": "after 24"
+    },
+    {
+      "i": 25,
+      "runId": "1794619575449-26-zcha1hwdbmq",
+      "nativeClick": true,
+      "output": "after 25"
+    },
+    {
+      "i": 26,
+      "runId": "1794619576189-27-c55slzmpkdp",
+      "nativeClick": true,
+      "output": "after 26"
+    },
+    {
+      "i": 27,
+      "runId": "1794619576812-28-gnvz9l1bu4w",
+      "nativeClick": true,
+      "output": "after 27"
+    },
+    {
+      "i": 28,
+      "runId": "1794619577476-29-4h76c7mlddn",
+      "nativeClick": true,
+      "output": "after 28"
+    },
+    {
+      "i": 29,
+      "runId": "1794619578071-30-p88qvx9w6vm",
+      "nativeClick": true,
+      "output": "after 29"
+    },
+    {
+      "i": 30,
+      "runId": "1794619578662-31-4eikyysv68d",
+      "nativeClick": true,
+      "output": "after 30"
+    },
+    {
+      "i": 31,
+      "runId": "1794619579266-32-r3szuq5e1in",
+      "nativeClick": true,
+      "output": "after 31"
+    },
+    {
+      "i": 32,
+      "runId": "1794619579869-33-gas34ocwj2j",
+      "nativeClick": true,
+      "output": "after 32"
+    },
+    {
+      "i": 33,
+      "runId": "1794619580425-34-5fjyj96066c",
+      "nativeClick": true,
+      "output": "after 33"
+    },
+    {
+      "i": 34,
+      "runId": "1794619581025-35-9spre2wqc57",
+      "nativeClick": true,
+      "output": "after 34"
+    },
+    {
+      "i": 35,
+      "runId": "1794619581842-36-t0vv68yqwvn",
+      "nativeClick": true,
+      "output": "after 35"
+    },
+    {
+      "i": 36,
+      "runId": "1794619582769-37-jplq60foacg",
+      "nativeClick": true,
+      "output": "after 36"
+    },
+    {
+      "i": 37,
+      "runId": "1794619583762-38-nr4urbtgj6",
+      "nativeClick": true,
+      "output": "after 37"
+    },
+    {
+      "i": 38,
+      "runId": "1794619584680-39-rsplo965mg9",
+      "nativeClick": true,
+      "output": "after 38"
+    },
+    {
+      "i": 39,
+      "runId": "1794619585272-40-4o5s5pdi5gk",
+      "nativeClick": true,
+      "output": "after 39"
+    }
+  ],
+  "network": [
+    {
+      "width": 1440,
+      "external": [],
+      "failed": [],
+      "errors": [
+        "COMPLETION_ACTUAL_ERROR"
+      ]
+    },
+    {
+      "width": 1440,
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 768,
+      "external": [],
+      "failed": [],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "external": [],
+      "failed": [],
+      "errors": []
+    }
+  ],
+  "results": [
+    {
+      "title": "entry is silent with both channels opt-in and no AudioContext or ambient preference write",
+      "passed": true
+    },
+    {
+      "title": "ambient button creates a real bounded audio graph while alerts stay muted",
+      "passed": true
+    },
+    {
+      "title": "ambient level zero really silences its output and restores without changing alert volume",
+      "passed": true
+    },
+    {
+      "title": "alerts can be enabled and muted independently while ambient continues",
+      "passed": true
+    },
+    {
+      "title": "actual runtime error has a real audible error cue when ambience is off",
+      "passed": true
+    },
+    {
+      "title": "ambient enabled preference persists but a reload never autoplays either channel",
+      "passed": true
+    },
+    {
+      "title": "leaving simulator disconnects all voices while returning offers explicit resume",
+      "passed": true
+    },
+    {
+      "title": "hiding the browser page silences ambient and alerts without erasing preferences",
+      "passed": true
+    },
+    {
+      "title": "rapid UI ambient toggles leave only the fixed four-source graph",
+      "passed": true
+    },
+    {
+      "title": "native first click after forty freshly rendered frames changes the actual DOM every time",
+      "passed": true
+    },
+    {
+      "title": "preview tabs support native keyboard navigation and keep the same isolated frame",
+      "passed": true
+    },
+    {
+      "title": "path explanation distinguishes pending real readiness source changes errors and stop",
+      "passed": true
+    },
+    {
+      "title": "Console preserves log warning error levels and treats markup as text",
+      "passed": true
+    },
+    {
+      "title": "sandbox cannot access parent data or alter top-level application state",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide JS-101 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide JS-102 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide JS-103 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide HTML-101 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide HTML-102 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide HTML-103 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide CSS-101 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide CSS-102 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide CSS-103 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide TS-101 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide TS-102 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide TS-103 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide VUE-101 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide VUE-102 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "original teaching guide VUE-103 agrees with actual isolated output",
+      "passed": true
+    },
+    {
+      "title": "1440px clean responsive capture keeps controls usable and panels fully visible",
+      "passed": true
+    },
+    {
+      "title": "768px clean responsive capture keeps controls usable and panels fully visible",
+      "passed": true
+    },
+    {
+      "title": "390px clean responsive capture keeps controls usable and panels fully visible",
+      "passed": true
+    },
+    {
+      "title": "all final source hashes are unchanged and only intentional child errors/resource probes occurred",
+      "passed": true
+    }
+  ]
+}

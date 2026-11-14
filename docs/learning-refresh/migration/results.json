@@ -1,0 +1,70 @@
+{
+  "target": "http://127.0.0.1:35275",
+  "sourceOrigin": "http://127.0.0.1:35683",
+  "productionVerified": false,
+  "localDrill": true,
+  "passed": 13,
+  "total": 13,
+  "results": [
+    {
+      "name": "real destination responds and boots all local content",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:35275/",
+        "status": 200,
+        "localDrill": true,
+        "verifiedRuntimeHashes": 98
+      }
+    },
+    {
+      "name": "different origin does not silently inherit source progress",
+      "passed": true
+    },
+    {
+      "name": "full backup file imports into new origin with exact guided state and draft",
+      "passed": true
+    },
+    {
+      "name": "all principal sections open at destination without parent errors",
+      "passed": true
+    },
+    {
+      "name": "Vue Router runs with destination-hosted compiler and router",
+      "passed": true
+    },
+    {
+      "name": "CSS lab executes actual HTML/CSS at destination",
+      "passed": true
+    },
+    {
+      "name": "JavaScript lab runs real isolated code",
+      "passed": true
+    },
+    {
+      "name": "project trial restores imported private runtime data and executes an event",
+      "passed": true
+    },
+    {
+      "name": "simulator executes a real isolated output and keeps opt-in audio",
+      "passed": true
+    },
+    {
+      "name": "closing entire browser restores target drafts, theme and imported progress without autorun",
+      "passed": true
+    },
+    {
+      "name": "new destination backup exports exact current data and rejects malformed import safely",
+      "passed": true
+    },
+    {
+      "name": "mobile and all five themes remain usable on actual destination",
+      "passed": true
+    },
+    {
+      "name": "no missing runtime resources or unhandled parent errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failedResources": []
+}

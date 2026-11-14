@@ -1,0 +1,611 @@
+{
+  "method": "Snapshot acceptance with explicit targeted rechecks; original failed attempts remain preserved. GitHub CI runs all groups again on the final head.",
+  "sourceHead": "1f56a5ea32f53ebbf4c7aee00fc7979abdd52e96",
+  "passed": 65,
+  "total": 65,
+  "originalSnapshotPassed": 63,
+  "originalSnapshotTotal": 65,
+  "originalSnapshot": "acceptance-final/results.json",
+  "runtimeChangesAfterSnapshot": [
+    "learning-journey-home.js"
+  ],
+  "changeCoverage": "Home project path corrected and actual latest surfaces test passed 10/10, including project resume and all themes/viewports. Evaluator unchanged.",
+  "results": [
+    {
+      "suite": "legacy-legacy-protocol",
+      "command": [
+        "node",
+        "run_preview_protocol_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.07
+    },
+    {
+      "suite": "legacy-legacy-data",
+      "command": [
+        "node",
+        "run_data_safety_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.64
+    },
+    {
+      "suite": "legacy-legacy-json",
+      "command": [
+        "node",
+        "run_json_import_test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 2.95
+    },
+    {
+      "suite": "legacy-dictionary-preservation",
+      "command": [
+        "node",
+        "platform-tests/dictionary/check-ids.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 2.4
+    },
+    {
+      "suite": "legacy-store-unit",
+      "command": [
+        "node",
+        "platform-tests/store/run.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.13
+    },
+    {
+      "suite": "legacy-store-schema",
+      "command": [
+        "node",
+        "platform-tests/store/schema.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.27
+    },
+    {
+      "suite": "legacy-explainer-unit",
+      "command": [
+        "node",
+        "platform-tests/explainer/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.17
+    },
+    {
+      "suite": "legacy-course-unit",
+      "command": [
+        "node",
+        "platform-tests/course/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.12
+    },
+    {
+      "suite": "legacy-advanced-unit",
+      "command": [
+        "node",
+        "platform-tests/advanced/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.07
+    },
+    {
+      "suite": "legacy-css-lab-unit",
+      "command": [
+        "node",
+        "platform-tests/css-lab/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.12
+    },
+    {
+      "suite": "legacy-js-lab-unit",
+      "command": [
+        "node",
+        "platform-tests/js-lab/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.17
+    },
+    {
+      "suite": "legacy-dashboard-unit",
+      "command": [
+        "node",
+        "platform-tests/dashboard/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.04
+    },
+    {
+      "suite": "legacy-local-unit",
+      "command": [
+        "python3",
+        "platform-tests/local/test-local.py"
+      ],
+      "exitCode": 0,
+      "seconds": 0.11
+    },
+    {
+      "suite": "legacy-assets-integrity",
+      "command": [
+        "npm",
+        "run",
+        "verify:assets"
+      ],
+      "exitCode": 0,
+      "seconds": 0.22
+    },
+    {
+      "suite": "legacy-legacy-dictionary",
+      "command": [
+        "node",
+        "run_dictionary_preview_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 37.31
+    },
+    {
+      "suite": "legacy-store-browser",
+      "command": [
+        "node",
+        "platform-tests/store/schema-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.95
+    },
+    {
+      "suite": "legacy-explainer-browser",
+      "command": [
+        "node",
+        "platform-tests/explainer/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 8.99
+    },
+    {
+      "suite": "legacy-course-browser",
+      "command": [
+        "node",
+        "platform-tests/course/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 18.4
+    },
+    {
+      "suite": "legacy-advanced-browser",
+      "command": [
+        "node",
+        "platform-tests/advanced/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 11.79
+    },
+    {
+      "suite": "legacy-css-lab-browser",
+      "command": [
+        "node",
+        "platform-tests/css-lab/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 29.99
+    },
+    {
+      "suite": "legacy-js-lab-browser",
+      "command": [
+        "node",
+        "platform-tests/js-lab/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 15.05
+    },
+    {
+      "suite": "legacy-js-lab-peer",
+      "command": [
+        "node",
+        "platform-tests/course/js-lab-peer-regression.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.2
+    },
+    {
+      "suite": "legacy-js-private-channel",
+      "command": [
+        "node",
+        "platform-tests/final-review/worker-channel-regression.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.63
+    },
+    {
+      "suite": "legacy-explainer-transfer",
+      "command": [
+        "node",
+        "platform-tests/final-review/explainer-transfer-regression.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.11
+    },
+    {
+      "suite": "legacy-dashboard-browser",
+      "command": [
+        "node",
+        "platform-tests/dashboard/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 6.2
+    },
+    {
+      "suite": "legacy-dictionary-browser",
+      "command": [
+        "node",
+        "platform-tests/dictionary/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 8.57
+    },
+    {
+      "suite": "legacy-dictionary-css-corrections",
+      "command": [
+        "node",
+        "platform-tests/dictionary-css-fixes/browser.cjs",
+        "--applied"
+      ],
+      "exitCode": 0,
+      "seconds": 30.12,
+      "originalExitCode": 1,
+      "recheck": "rechecks/css-browser-results.json",
+      "recheckPassed": 25,
+      "recheckTotal": 25
+    },
+    {
+      "suite": "legacy-dictionary-vue-corrections",
+      "command": [
+        "node",
+        "platform-tests/dictionary-vue-fixes/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 18.98
+    },
+    {
+      "suite": "legacy-integration-browser",
+      "command": [
+        "node",
+        "platform-tests/integration-smoke.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 12.11
+    },
+    {
+      "suite": "legacy-root-backups-browser",
+      "command": [
+        "node",
+        "platform-tests/integration/backups.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 9.85
+    },
+    {
+      "suite": "full-backup-unit",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/A/full-backup-unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.33
+    },
+    {
+      "suite": "navigation-A1",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/A/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 14.05
+    },
+    {
+      "suite": "full-backup-browser",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/A/full-backup-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 40.3
+    },
+    {
+      "suite": "recovery-browser",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/A/recovery-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 15.24
+    },
+    {
+      "suite": "guided-state",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/B/state-unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.59
+    },
+    {
+      "suite": "guided-evaluator",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/B/evaluator-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 17.08
+    },
+    {
+      "suite": "guided-ui",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/B/guided-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 36.65
+    },
+    {
+      "suite": "html-css-curriculum",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/C/markup-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 19.55
+    },
+    {
+      "suite": "javascript-curriculum",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/C/javascript-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 22.09
+    },
+    {
+      "suite": "extended-tools",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/C/extended-evaluator-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 5.6
+    },
+    {
+      "suite": "environment-persistence",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/C/environments-ui.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 23.3
+    },
+    {
+      "suite": "vue-curriculum-unit",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/C3/curriculum-unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.26
+    },
+    {
+      "suite": "vue-tools",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/C3/vue-tools-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 6.4
+    },
+    {
+      "suite": "vue-curriculum",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/C3/vue-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 49.25
+    },
+    {
+      "suite": "vue-persistence",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/C3/vue-ui.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 11.57
+    },
+    {
+      "suite": "project-state",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/D/project-state.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06
+    },
+    {
+      "suite": "project-curriculum",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/D/project-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 7.76
+    },
+    {
+      "suite": "project-native-parity",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/D/native-parity.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 2.1
+    },
+    {
+      "suite": "project-persistence",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/D/project-ui.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 97.4,
+      "originalExitCode": 1,
+      "recheck": "rechecks/project-ui-results.json",
+      "recheckPassed": 11,
+      "recheckTotal": 11
+    },
+    {
+      "suite": "arrow-unit",
+      "command": [
+        "node",
+        "platform-tests/guided-arrow/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.11
+    },
+    {
+      "suite": "arrow-ui",
+      "command": [
+        "node",
+        "platform-tests/guided-arrow/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 24.16
+    },
+    {
+      "suite": "arrow-backup",
+      "command": [
+        "node",
+        "platform-tests/guided-arrow/backup-ui.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.11
+    },
+    {
+      "suite": "arrow-visual-unit",
+      "command": [
+        "node",
+        "platform-tests/guided-arrow/visual/unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06
+    },
+    {
+      "suite": "arrow-visual-ui",
+      "command": [
+        "node",
+        "platform-tests/guided-arrow/visual/browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 21.71
+    },
+    {
+      "suite": "simulator-completion",
+      "command": [
+        "node",
+        "run_simulator_completion_browser_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 53.1
+    },
+    {
+      "suite": "simulator-unit",
+      "command": [
+        "node",
+        "run_simulator_beta_unit_tests.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06
+    },
+    {
+      "suite": "release-build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "seconds": 1.73
+    },
+    {
+      "suite": "release-browser",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/E/static-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.9
+    },
+    {
+      "suite": "all-sections",
+      "command": [
+        "node",
+        "platform-tests/v1-completion/E/site-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 9.5
+    },
+    {
+      "suite": "journey-state",
+      "command": [
+        "node",
+        "platform-tests/learning-refresh/state-unit.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 0.06
+    },
+    {
+      "suite": "journey-pilot-grading",
+      "command": [
+        "node",
+        "platform-tests/learning-refresh/pilot-grading.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 2.85
+    },
+    {
+      "suite": "journey-prototypes",
+      "command": [
+        "node",
+        "platform-tests/learning-refresh/prototype-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 11.65
+    },
+    {
+      "suite": "journey-catalogue",
+      "command": [
+        "node",
+        "platform-tests/learning-refresh/catalogue-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.95
+    },
+    {
+      "suite": "journey-task-grading",
+      "command": [
+        "node",
+        "platform-tests/learning-refresh/task-grading.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 3.49
+    },
+    {
+      "suite": "journey-surfaces",
+      "command": [
+        "node",
+        "platform-tests/learning-refresh/surfaces-browser.cjs"
+      ],
+      "exitCode": 0,
+      "seconds": 16.34
+    }
+  ]
+}
