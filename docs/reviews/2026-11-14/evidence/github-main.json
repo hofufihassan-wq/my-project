@@ -1,0 +1,13 @@
+{
+  "main": "d554fd14e5960c9b6a2c62155f6a7124735524c1",
+  "acceptanceRunId": 43541982183,
+  "acceptanceJobId": 132284386083,
+  "status": "completed",
+  "conclusion": "success",
+  "parsedSuiteResults": 65,
+  "failedSuiteResults": 0,
+  "pagesRunId": 43541981296,
+  "pagesConclusion": "success",
+  "directPublishedSiteVerified": false,
+  "siteRequestFailure": "Environment proxy rejected CONNECT with 403; no site HTTP response obtained."
+}
