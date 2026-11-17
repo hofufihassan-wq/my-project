@@ -1,0 +1,87 @@
+{
+  "phase": "A audit and plan only",
+  "clientDate": "2026-11-17",
+  "baseCommit": "d554fd14e5960c9b6a2c62155f6a7124735524c1",
+  "publishedSourceEvidence": {
+    "buildJob": 132284386561,
+    "deployJob": 132284713944,
+    "run": 43541981296,
+    "branch": "main",
+    "commit": "d554fd14e5960c9b6a2c62155f6a7124735524c1",
+    "url": "https://hofufihassan-wq.github.io/my-project/",
+    "directSiteVerified": false
+  },
+  "githubCI": {
+    "run": 43541982183,
+    "groups": 65,
+    "passed": 65,
+    "sourceUnchangedSinceRun": true
+  },
+  "freshFlow": {
+    "passed": 23,
+    "total": 23
+  },
+  "navigationProbe": {
+    "initialPassed": 8,
+    "total": 9,
+    "focusedPassed": 1,
+    "effectivePassed": 9,
+    "productChangesToMakeTestsPass": false
+  },
+  "dataUnits": [
+    {
+      "suite": "store",
+      "passed": 13,
+      "total": 13
+    },
+    {
+      "suite": "schema",
+      "passed": 16,
+      "total": 16
+    },
+    {
+      "suite": "journey-state",
+      "passed": 6,
+      "total": 6
+    }
+  ],
+  "fullBackupUI": {
+    "passed": 5,
+    "total": 5
+  },
+  "lockedAssets": 45,
+  "viewportWidths": [
+    360,
+    390,
+    768,
+    1440
+  ],
+  "physicalWindows": false,
+  "physicalPhone": false,
+  "noviceHumanStudy": false,
+  "appFilesChanged": [],
+  "sourceSHA256": {
+    "index.html": "d7812ab8d2c38a7053dc0c69df0620f733c26871a450b155659160104d77e0ac",
+    "app.js": "e96de02a13c79b4dfcd81ab74181d4b47c5ec4f3a58691c80c10f8e68bdd3961",
+    "learning-journey-home.js": "2ceb7b3764bff90c1d228db1795ca205ab4a9d41c8711c4b0ca9292ae4114641",
+    "learning-journey.js": "b18c3b0ef7dceae10df3d705dc7554dbad049d18d1c8714e9659622d166a9d9d",
+    "learning-journey-content.js": "30bcde61e8c5c84517b301156a05aaa121cb19022a6a7c38a1dd521cf22972fa",
+    "learning-dashboard.js": "e8340e05bc4f1282a8ec9f23c944af0c502df5bc9928ff2938b593995f15a715",
+    "learning-course.js": "1ffddfb0369d8847ea1bc596c298b635cb5f60b19a3623b7ae6d27f5b85808a4",
+    "learning-course-advanced.js": "e6be6aa679c7282a922cb29747027f0533129e26627b2b5c12aad84c53a98596",
+    "guided-learning.js": "004e762245fe01e0085b1e5fe7e148e55036f44572524e553126eeca8bfc2c34",
+    "guided-lessons.js": "299084ceef890af9382a640512ea38daedb8b4040f6bb6230cc2f39513f81ae7",
+    "learning-css-lab.js": "6ebc2c5eb327a6b68f9bbb8bd679c1302094c1617e154824bac6aba1854558a8",
+    "learning-js-lab.js": "77d485622f3f3439880335a344b243e47da3d9afcb20514daaa68236075e0d43",
+    "learning-projects.js": "cf11c40a40619796c3436cb5758b4cf18f5b3077b3f9d3351f5c03816f95d913",
+    "task-journey.js": "769762d374484e469a938d06bdad06d595cacb338f56260f980678314f8e0125",
+    "learning-store.js": "634b2262ae9cd5b377d08c4472b14729ceefe5e3d4a4ccd962b7390188e1b189",
+    "learning-refinement.css": "2659ab6b8fe2f71aa6f043aa170d4bc77d7814d542b15751691f726ef215d78c",
+    "learning-journey.css": "49a5e5035fefda7a1d88e54f821721b2d6b88eb99863097c8a879822f7488503",
+    "full-backup.js": "39d53b03e9a62d67732e905165ab400afa06b147e01dce883d10f316c0c4e942",
+    "code-presentation.js": "a44decadb3dbf9490b8131855936acec80390ba031f2c6ab48ae1781b2038412"
+  },
+  "nextPhaseApproved": false,
+  "mainMergeApproved": false,
+  "deploymentPerformed": false
+}

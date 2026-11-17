@@ -1,0 +1,7 @@
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByTestId('arrow-root') to be visible[22m
+
+    at /workspace/deliverables/VLex_UX_PhaseA_20261117/secondary-recheck.cjs:3:1596 {
+  name: 'TimeoutError'
+}

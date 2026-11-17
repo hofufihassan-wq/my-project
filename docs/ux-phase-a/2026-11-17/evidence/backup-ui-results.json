@@ -1,0 +1,28 @@
+{
+  "passed": 5,
+  "total": 5,
+  "rows": [
+    {
+      "name": "existing training entry and real return remain accessible",
+      "passed": true
+    },
+    {
+      "name": "actual settings export includes saved draft, note, preference and bookmark",
+      "passed": true
+    },
+    {
+      "name": "import into a new empty test profile restores data without autorun",
+      "passed": true
+    },
+    {
+      "name": "invalid file and cancelled import preserve existing test data exactly",
+      "passed": true
+    },
+    {
+      "name": "no unhandled parent errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "dataScope": "Only fresh test profiles and synthetic data; no localStorage.clear or existing profile touched."
+}

@@ -1,0 +1,496 @@
+{
+  "passed": 1,
+  "total": 1,
+  "correction": "Use the actual simulator home button when its independent workspace hides the general site header.",
+  "data": {
+    "nativeSimulatorHomeWorks": true,
+    "projects": [
+      {
+        "id": "project-profile",
+        "title": "صفحة شخصية متجاوبة",
+        "level": "beginner",
+        "difficulty": null,
+        "prerequisites": [
+          "html-semantics",
+          "css-grid",
+          "css-responsive"
+        ],
+        "skills": [
+          "بنية دلالية وروابط صحيحة",
+          "CSS Grid متجاوب",
+          "منع تجاوز الشاشة"
+        ],
+        "writes": true,
+        "application": true
+      },
+      {
+        "id": "project-tasks",
+        "title": "قائمة مهام تفاعلية",
+        "level": "beginner",
+        "difficulty": null,
+        "prerequisites": [
+          "js-dom",
+          "js-events",
+          "js-storage"
+        ],
+        "skills": [
+          "إضافة/تبديل/حذف حقيقي",
+          "Web Storage معزول",
+          "معالجة نصوص المستخدم بأمان"
+        ],
+        "writes": true,
+        "application": true
+      },
+      {
+        "id": "project-expenses",
+        "title": "متتبع مصروفات محفوظ",
+        "level": "intermediate",
+        "difficulty": null,
+        "prerequisites": [
+          "js-storage",
+          "js-reduce",
+          "project-tasks"
+        ],
+        "skills": [
+          "إدخال عددي صالح وتجميع صحيح",
+          "تخزين واستعادة JSON",
+          "حذف وإعادة اشتقاق النتائج"
+        ],
+        "writes": true,
+        "application": true
+      },
+      {
+        "id": "project-catalog",
+        "title": "كتالوج ببحث وتصفية",
+        "level": "intermediate",
+        "difficulty": null,
+        "prerequisites": [
+          "js-map-filter",
+          "js-dom",
+          "js-events"
+        ],
+        "skills": [
+          "بحث وفئة يعملان معًا",
+          "عرض نتائج وحالة فارغة",
+          "فرز قائمة مشتقة"
+        ],
+        "writes": true,
+        "application": true
+      },
+      {
+        "id": "project-dashboard",
+        "title": "لوحة بيانات تفاعلية",
+        "level": "advanced",
+        "difficulty": null,
+        "prerequisites": [
+          "js-reduce",
+          "js-map-filter",
+          "project-catalog"
+        ],
+        "skills": [
+          "اشتقاق إحصائيات صحيحة",
+          "حالة فارغة دون NaN",
+          "تزامن العرض مع مرشحاته"
+        ],
+        "writes": true,
+        "application": true
+      },
+      {
+        "id": "project-vue-workspace",
+        "title": "تطبيق Vue للمكونات والحالة",
+        "level": "advanced",
+        "difficulty": null,
+        "prerequisites": [
+          "vue-composition-app",
+          "vue-emits",
+          "vue-composable",
+          "project-tasks"
+        ],
+        "skills": [
+          "مكونات مركبة وتفاعل فعلي",
+          "حالة مشتقة وأحداث أب/ابن",
+          "حفظ واستعادة مستقلان"
+        ],
+        "writes": true,
+        "application": true
+      }
+    ],
+    "secondary": [
+      {
+        "label": "لوحة المهام",
+        "nav": [
+          {
+            "label": "التنقل الرئيسي",
+            "items": [
+              {
+                "text": "الرئيسية",
+                "current": null
+              },
+              {
+                "text": "القاموس المعجم",
+                "current": null
+              },
+              {
+                "text": "التدريب العملي",
+                "current": null
+              },
+              {
+                "text": "المحاكي",
+                "current": null
+              },
+              {
+                "text": "المشاريع",
+                "current": "page"
+              }
+            ]
+          },
+          {
+            "label": "أدوات التعلّم",
+            "items": [
+              {
+                "text": "تعلّم معي",
+                "current": null
+              },
+              {
+                "text": "اشرح لي الكود",
+                "current": null
+              },
+              {
+                "text": "مختبر CSS",
+                "current": null
+              },
+              {
+                "text": "مختبر JavaScript",
+                "current": null
+              },
+              {
+                "text": "مهامي",
+                "current": null
+              },
+              {
+                "text": "تقويمي",
+                "current": null
+              }
+            ]
+          },
+          {
+            "label": "أقسام التنظيم",
+            "items": [
+              {
+                "text": "المشاريع",
+                "current": null
+              },
+              {
+                "text": "لوحة المهام",
+                "current": "page"
+              },
+              {
+                "text": "الملاحظات",
+                "current": null
+              },
+              {
+                "text": "التقويم",
+                "current": null
+              },
+              {
+                "text": "شرح الأكواد",
+                "current": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "الملاحظات",
+        "nav": [
+          {
+            "label": "التنقل الرئيسي",
+            "items": [
+              {
+                "text": "الرئيسية",
+                "current": null
+              },
+              {
+                "text": "القاموس المعجم",
+                "current": null
+              },
+              {
+                "text": "التدريب العملي",
+                "current": null
+              },
+              {
+                "text": "المحاكي",
+                "current": null
+              },
+              {
+                "text": "المشاريع",
+                "current": "page"
+              }
+            ]
+          },
+          {
+            "label": "أدوات التعلّم",
+            "items": [
+              {
+                "text": "تعلّم معي",
+                "current": null
+              },
+              {
+                "text": "اشرح لي الكود",
+                "current": null
+              },
+              {
+                "text": "مختبر CSS",
+                "current": null
+              },
+              {
+                "text": "مختبر JavaScript",
+                "current": null
+              },
+              {
+                "text": "مهامي",
+                "current": null
+              },
+              {
+                "text": "تقويمي",
+                "current": null
+              }
+            ]
+          },
+          {
+            "label": "أقسام التنظيم",
+            "items": [
+              {
+                "text": "المشاريع",
+                "current": null
+              },
+              {
+                "text": "لوحة المهام",
+                "current": null
+              },
+              {
+                "text": "الملاحظات",
+                "current": "page"
+              },
+              {
+                "text": "التقويم",
+                "current": null
+              },
+              {
+                "text": "شرح الأكواد",
+                "current": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "التقويم",
+        "nav": [
+          {
+            "label": "التنقل الرئيسي",
+            "items": [
+              {
+                "text": "الرئيسية",
+                "current": null
+              },
+              {
+                "text": "القاموس المعجم",
+                "current": null
+              },
+              {
+                "text": "التدريب العملي",
+                "current": null
+              },
+              {
+                "text": "المحاكي",
+                "current": null
+              },
+              {
+                "text": "المشاريع",
+                "current": "page"
+              }
+            ]
+          },
+          {
+            "label": "أدوات التعلّم",
+            "items": [
+              {
+                "text": "تعلّم معي",
+                "current": null
+              },
+              {
+                "text": "اشرح لي الكود",
+                "current": null
+              },
+              {
+                "text": "مختبر CSS",
+                "current": null
+              },
+              {
+                "text": "مختبر JavaScript",
+                "current": null
+              },
+              {
+                "text": "مهامي",
+                "current": null
+              },
+              {
+                "text": "تقويمي",
+                "current": null
+              }
+            ]
+          },
+          {
+            "label": "أقسام التنظيم",
+            "items": [
+              {
+                "text": "المشاريع",
+                "current": null
+              },
+              {
+                "text": "لوحة المهام",
+                "current": null
+              },
+              {
+                "text": "الملاحظات",
+                "current": null
+              },
+              {
+                "text": "التقويم",
+                "current": "page"
+              },
+              {
+                "text": "شرح الأكواد",
+                "current": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "overviewNav": [
+      {
+        "label": "التنقل الرئيسي",
+        "items": [
+          {
+            "text": "الرئيسية",
+            "current": null
+          },
+          {
+            "text": "القاموس المعجم",
+            "current": null
+          },
+          {
+            "text": "التدريب العملي",
+            "current": null
+          },
+          {
+            "text": "المحاكي",
+            "current": null
+          },
+          {
+            "text": "المشاريع",
+            "current": null
+          }
+        ]
+      },
+      {
+        "label": "أدوات التعلّم",
+        "items": [
+          {
+            "text": "تعلّم معي",
+            "current": null
+          },
+          {
+            "text": "اشرح لي الكود",
+            "current": null
+          },
+          {
+            "text": "مختبر CSS",
+            "current": null
+          },
+          {
+            "text": "مختبر JavaScript",
+            "current": null
+          },
+          {
+            "text": "مهامي",
+            "current": null
+          },
+          {
+            "text": "تقويمي",
+            "current": null
+          }
+        ]
+      },
+      {
+        "label": "مساحات التعلم والتنظيم",
+        "items": [
+          {
+            "text": "لوحة التحكم",
+            "current": "page"
+          },
+          {
+            "text": "تعلّم معي",
+            "current": null
+          },
+          {
+            "text": "القاموس البرمجي180",
+            "current": null
+          },
+          {
+            "text": "اشرح لي الكود",
+            "current": null
+          },
+          {
+            "text": "مختبر CSS",
+            "current": null
+          },
+          {
+            "text": "مختبر JavaScript",
+            "current": null
+          },
+          {
+            "text": "التدريب العملي",
+            "current": null
+          },
+          {
+            "text": "المحاكي التفاعلي",
+            "current": null
+          },
+          {
+            "text": "المشاريع",
+            "current": null
+          },
+          {
+            "text": "لوحة المهام",
+            "current": null
+          },
+          {
+            "text": "الملاحظات",
+            "current": null
+          },
+          {
+            "text": "التقويم",
+            "current": null
+          },
+          {
+            "text": "الإعدادات والمظهر",
+            "current": null
+          }
+        ]
+      }
+    ],
+    "legacyCourseVisible": true,
+    "arrowReachable": true,
+    "guidedReachable": true,
+    "counts": {
+      "terms": 180,
+      "lessons": 60,
+      "projects": 6,
+      "taskStations": 11,
+      "legacyLessons": 32
+    }
+  }
+}

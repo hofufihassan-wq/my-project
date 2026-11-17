@@ -1,0 +1,866 @@
+{
+  "date": "2026-11-16T23:50:45.496Z",
+  "passed": 8,
+  "total": 9,
+  "rows": [
+    {
+      "name": "fresh home has real zero progress but currently uses returning-user wording",
+      "passed": true
+    },
+    {
+      "name": "opening and running a lesson do not grant mastery; source survives dictionary excursion",
+      "passed": true
+    },
+    {
+      "name": "each supporting tool is reachable through actual home buttons",
+      "passed": true
+    },
+    {
+      "name": "secondary routes and six project definitions remain reachable and distinct",
+      "passed": false,
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.site-header .brand')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"brand select-none\" aria-label=\"VueLexicon — الرئيسية\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at home (/workspace/deliverables/VLex_UX_PhaseA_20261117/probe.cjs:5:62)\n    at /workspace/deliverables/VLex_UX_PhaseA_20261117/probe.cjs:10:105\n    at test (/workspace/deliverables/VLex_UX_PhaseA_20261117/probe.cjs:3:53)\n    at /workspace/deliverables/VLex_UX_PhaseA_20261117/probe.cjs:10:7"
+    },
+    {
+      "name": "foundation track return is measured without changing stored identifiers",
+      "passed": true
+    },
+    {
+      "name": "keyboard focus and route width work at all requested sizes",
+      "passed": true
+    },
+    {
+      "name": "representative color contrast tokens are measured without claiming full-page certification",
+      "passed": true
+    },
+    {
+      "name": "real incorrect source yields local help and original diagnostic without guessed line",
+      "passed": true
+    },
+    {
+      "name": "no unhandled parent errors",
+      "passed": true
+    }
+  ],
+  "data": {
+    "freshHome": {
+      "cta": "أكمل تعلّمي ←",
+      "progressValue": 0,
+      "progressMax": 20,
+      "hasJourneyRecords": 0,
+      "map": [
+        "القيم والمتغيرات والعمليات",
+        "الأنواع والتحويل العددي",
+        "الشروط والمقارنات والحدود"
+      ],
+      "nav": [
+        {
+          "label": "التنقل الرئيسي",
+          "items": [
+            {
+              "text": "الرئيسية",
+              "current": "page"
+            },
+            {
+              "text": "القاموس المعجم",
+              "current": null
+            },
+            {
+              "text": "التدريب العملي",
+              "current": null
+            },
+            {
+              "text": "المحاكي",
+              "current": null
+            },
+            {
+              "text": "المشاريع",
+              "current": null
+            }
+          ]
+        }
+      ]
+    },
+    "learnNavigation": [
+      {
+        "label": "التنقل الرئيسي",
+        "items": [
+          {
+            "text": "الرئيسية",
+            "current": null
+          },
+          {
+            "text": "القاموس المعجم",
+            "current": null
+          },
+          {
+            "text": "التدريب العملي",
+            "current": null
+          },
+          {
+            "text": "المحاكي",
+            "current": null
+          },
+          {
+            "text": "المشاريع",
+            "current": null
+          }
+        ]
+      },
+      {
+        "label": "مراحل التعلم",
+        "items": [
+          {
+            "text": "1افهم الفكرة",
+            "current": "step"
+          },
+          {
+            "text": "2جرّب بنفسك",
+            "current": null
+          },
+          {
+            "text": "3اكتب بنفسك",
+            "current": null
+          },
+          {
+            "text": "4استخدم ما تعلمته",
+            "current": null
+          }
+        ]
+      }
+    ],
+    "dictionaryNavigation": [
+      {
+        "label": "التنقل الرئيسي",
+        "items": [
+          {
+            "text": "الرئيسية",
+            "current": null
+          },
+          {
+            "text": "القاموس المعجم",
+            "current": "page"
+          },
+          {
+            "text": "التدريب العملي",
+            "current": null
+          },
+          {
+            "text": "المحاكي",
+            "current": null
+          },
+          {
+            "text": "المشاريع",
+            "current": null
+          }
+        ]
+      },
+      {
+        "label": "أدوات التعلّم",
+        "items": [
+          {
+            "text": "تعلّم معي",
+            "current": null
+          },
+          {
+            "text": "اشرح لي الكود",
+            "current": null
+          },
+          {
+            "text": "مختبر CSS",
+            "current": null
+          },
+          {
+            "text": "مختبر JavaScript",
+            "current": null
+          },
+          {
+            "text": "مهامي",
+            "current": null
+          },
+          {
+            "text": "تقويمي",
+            "current": null
+          }
+        ]
+      },
+      {
+        "label": "تصنيفات القاموس",
+        "items": [
+          {
+            "text": "🌐كل المصطلحات180",
+            "current": "true"
+          },
+          {
+            "text": "📄HTML526",
+            "current": null
+          },
+          {
+            "text": "🎨CSS325",
+            "current": null
+          },
+          {
+            "text": "⚡JavaScript54",
+            "current": null
+          },
+          {
+            "text": "🔷TypeScript20",
+            "current": null
+          },
+          {
+            "text": "💚Vue.js 330",
+            "current": null
+          },
+          {
+            "text": "🚀Nuxt UI25",
+            "current": null
+          },
+          {
+            "text": "★المفضلة0",
+            "current": null
+          }
+        ]
+      },
+      {
+        "label": "أقسام شرح المصطلح",
+        "items": [
+          {
+            "text": "المعنى",
+            "current": null
+          },
+          {
+            "text": "مثال",
+            "current": null
+          },
+          {
+            "text": "متى أستخدمه",
+            "current": null
+          },
+          {
+            "text": "مقارنة",
+            "current": null
+          },
+          {
+            "text": "أخطاء شائعة",
+            "current": null
+          }
+        ]
+      }
+    ],
+    "explicitReturnFromDictionary": 0,
+    "afterRunProgress": "0",
+    "tools": [
+      {
+        "label": "اشرح لي الكود",
+        "reachable": true,
+        "nav": [
+          {
+            "label": "التنقل الرئيسي",
+            "items": [
+              {
+                "text": "الرئيسية",
+                "current": null
+              },
+              {
+                "text": "القاموس المعجم",
+                "current": null
+              },
+              {
+                "text": "التدريب العملي",
+                "current": null
+              },
+              {
+                "text": "المحاكي",
+                "current": null
+              },
+              {
+                "text": "المشاريع",
+                "current": null
+              }
+            ]
+          },
+          {
+            "label": "أدوات التعلّم",
+            "items": [
+              {
+                "text": "تعلّم معي",
+                "current": null
+              },
+              {
+                "text": "اشرح لي الكود",
+                "current": "page"
+              },
+              {
+                "text": "مختبر CSS",
+                "current": null
+              },
+              {
+                "text": "مختبر JavaScript",
+                "current": null
+              },
+              {
+                "text": "مهامي",
+                "current": null
+              },
+              {
+                "text": "تقويمي",
+                "current": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "مختبر JavaScript",
+        "reachable": true,
+        "nav": [
+          {
+            "label": "التنقل الرئيسي",
+            "items": [
+              {
+                "text": "الرئيسية",
+                "current": null
+              },
+              {
+                "text": "القاموس المعجم",
+                "current": null
+              },
+              {
+                "text": "التدريب العملي",
+                "current": null
+              },
+              {
+                "text": "المحاكي",
+                "current": null
+              },
+              {
+                "text": "المشاريع",
+                "current": null
+              }
+            ]
+          },
+          {
+            "label": "أدوات التعلّم",
+            "items": [
+              {
+                "text": "تعلّم معي",
+                "current": null
+              },
+              {
+                "text": "اشرح لي الكود",
+                "current": null
+              },
+              {
+                "text": "مختبر CSS",
+                "current": null
+              },
+              {
+                "text": "مختبر JavaScript",
+                "current": "page"
+              },
+              {
+                "text": "مهامي",
+                "current": null
+              },
+              {
+                "text": "تقويمي",
+                "current": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "مختبر CSS",
+        "reachable": true,
+        "nav": [
+          {
+            "label": "التنقل الرئيسي",
+            "items": [
+              {
+                "text": "الرئيسية",
+                "current": null
+              },
+              {
+                "text": "القاموس المعجم",
+                "current": null
+              },
+              {
+                "text": "التدريب العملي",
+                "current": null
+              },
+              {
+                "text": "المحاكي",
+                "current": null
+              },
+              {
+                "text": "المشاريع",
+                "current": null
+              }
+            ]
+          },
+          {
+            "label": "أدوات التعلّم",
+            "items": [
+              {
+                "text": "تعلّم معي",
+                "current": null
+              },
+              {
+                "text": "اشرح لي الكود",
+                "current": null
+              },
+              {
+                "text": "مختبر CSS",
+                "current": "page"
+              },
+              {
+                "text": "مختبر JavaScript",
+                "current": null
+              },
+              {
+                "text": "مهامي",
+                "current": null
+              },
+              {
+                "text": "تقويمي",
+                "current": null
+              }
+            ]
+          },
+          {
+            "label": "أدوات تنسيق CSS",
+            "items": []
+          }
+        ]
+      },
+      {
+        "label": "المحاكي",
+        "reachable": true,
+        "nav": [
+          {
+            "label": "مساحات الموقع",
+            "items": [
+              {
+                "text": "الرئيسية",
+                "current": null
+              },
+              {
+                "text": "القاموسالمعجم",
+                "current": null
+              },
+              {
+                "text": "التدريب العملي",
+                "current": null
+              },
+              {
+                "text": "المحاكي",
+                "current": "page"
+              },
+              {
+                "text": "المشاريع",
+                "current": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "trackReturn": [
+      {
+        "id": "js-values",
+        "title": "خلّ البيانات تتكلم عنك",
+        "label": "JavaScript",
+        "max": 20,
+        "currentMap": [
+          "القيم والمتغيرات والعمليات"
+        ]
+      },
+      {
+        "id": "vue-ref",
+        "title": "زر يتذكر عدد نقراتك",
+        "label": "Vue 3",
+        "max": 18,
+        "currentMap": [
+          "الحالة التفاعلية مع ref"
+        ]
+      },
+      {
+        "id": "html-structure",
+        "title": "العنوان والفقرة وبنية الصفحة",
+        "label": "JavaScript",
+        "max": 20,
+        "currentMap": []
+      },
+      {
+        "id": "css-selectors",
+        "title": "المحددات والألوان",
+        "label": "JavaScript",
+        "max": 20,
+        "currentMap": []
+      }
+    ],
+    "widths": [
+      {
+        "width": 360,
+        "mode": "home",
+        "viewport": 360,
+        "document": 360
+      },
+      {
+        "width": 360,
+        "mode": "learn",
+        "viewport": 360,
+        "document": 360
+      },
+      {
+        "width": 360,
+        "mode": "lexicon",
+        "viewport": 360,
+        "document": 360
+      },
+      {
+        "width": 360,
+        "mode": "overview",
+        "viewport": 360,
+        "document": 360
+      },
+      {
+        "width": 390,
+        "mode": "home",
+        "viewport": 390,
+        "document": 390
+      },
+      {
+        "width": 390,
+        "mode": "learn",
+        "viewport": 390,
+        "document": 390
+      },
+      {
+        "width": 390,
+        "mode": "lexicon",
+        "viewport": 390,
+        "document": 390
+      },
+      {
+        "width": 390,
+        "mode": "overview",
+        "viewport": 390,
+        "document": 390
+      },
+      {
+        "width": 768,
+        "mode": "home",
+        "viewport": 768,
+        "document": 768
+      },
+      {
+        "width": 768,
+        "mode": "learn",
+        "viewport": 768,
+        "document": 768
+      },
+      {
+        "width": 768,
+        "mode": "lexicon",
+        "viewport": 768,
+        "document": 768
+      },
+      {
+        "width": 768,
+        "mode": "overview",
+        "viewport": 768,
+        "document": 768
+      },
+      {
+        "width": 1440,
+        "mode": "home",
+        "viewport": 1440,
+        "document": 1440
+      },
+      {
+        "width": 1440,
+        "mode": "learn",
+        "viewport": 1440,
+        "document": 1440
+      },
+      {
+        "width": 1440,
+        "mode": "lexicon",
+        "viewport": 1440,
+        "document": 1440
+      },
+      {
+        "width": 1440,
+        "mode": "overview",
+        "viewport": 1440,
+        "document": 1440
+      }
+    ],
+    "keyboard": [
+      {
+        "tab": 1,
+        "text": "أكمل تعلّمي ←",
+        "testId": "journey-resume",
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(212, 175, 102)"
+      }
+    ],
+    "contrast": [
+      {
+        "theme": "green",
+        "sample": [
+          {
+            "selector": ".journey-primary",
+            "color": "rgb(7, 35, 27)",
+            "background": [
+              139,
+              219,
+              182,
+              1
+            ],
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "ratio": 10.2,
+            "exactSolid": true,
+            "hasGradient": false
+          },
+          {
+            "selector": ".journey-muted",
+            "color": "rgb(189, 201, 193)",
+            "background": [
+              17,
+              27,
+              25,
+              1
+            ],
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "ratio": 10.29,
+            "exactSolid": false,
+            "hasGradient": true
+          },
+          {
+            "selector": ".journey-home h1",
+            "color": "rgb(238, 241, 236)",
+            "background": [
+              17,
+              27,
+              25,
+              1
+            ],
+            "fontSize": "38px",
+            "fontWeight": "750",
+            "ratio": 15.43,
+            "exactSolid": false,
+            "hasGradient": true
+          }
+        ]
+      },
+      {
+        "theme": "glass",
+        "sample": [
+          {
+            "selector": ".journey-primary",
+            "color": "rgb(7, 35, 27)",
+            "background": [
+              139,
+              219,
+              182,
+              1
+            ],
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "ratio": 10.2,
+            "exactSolid": true,
+            "hasGradient": false
+          },
+          {
+            "selector": ".journey-muted",
+            "color": "rgb(180, 205, 210)",
+            "background": [
+              7,
+              29,
+              41,
+              1
+            ],
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "ratio": 10.36,
+            "exactSolid": false,
+            "hasGradient": true
+          },
+          {
+            "selector": ".journey-home h1",
+            "color": "rgb(237, 247, 248)",
+            "background": [
+              7,
+              29,
+              41,
+              1
+            ],
+            "fontSize": "38px",
+            "fontWeight": "750",
+            "ratio": 15.83,
+            "exactSolid": false,
+            "hasGradient": true
+          }
+        ]
+      },
+      {
+        "theme": "purple",
+        "sample": [
+          {
+            "selector": ".journey-primary",
+            "color": "rgb(7, 35, 27)",
+            "background": [
+              153,
+              217,
+              223,
+              1
+            ],
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "ratio": 10.55,
+            "exactSolid": true,
+            "hasGradient": false
+          },
+          {
+            "selector": ".journey-muted",
+            "color": "rgb(183, 172, 203)",
+            "background": [
+              16,
+              14,
+              28,
+              1
+            ],
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "ratio": 8.87,
+            "exactSolid": false,
+            "hasGradient": true
+          },
+          {
+            "selector": ".journey-home h1",
+            "color": "rgb(241, 237, 249)",
+            "background": [
+              16,
+              14,
+              28,
+              1
+            ],
+            "fontSize": "38px",
+            "fontWeight": "750",
+            "ratio": 16.54,
+            "exactSolid": false,
+            "hasGradient": true
+          }
+        ]
+      },
+      {
+        "theme": "light",
+        "sample": [
+          {
+            "selector": ".journey-primary",
+            "color": "rgb(7, 35, 27)",
+            "background": [
+              153,
+              217,
+              223,
+              1
+            ],
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "ratio": 10.55,
+            "exactSolid": true,
+            "hasGradient": false
+          },
+          {
+            "selector": ".journey-muted",
+            "color": "rgb(81, 107, 97)",
+            "background": [
+              239,
+              244,
+              240,
+              1
+            ],
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "ratio": 5.2,
+            "exactSolid": false,
+            "hasGradient": true
+          },
+          {
+            "selector": ".journey-home h1",
+            "color": "rgb(23, 51, 44)",
+            "background": [
+              239,
+              244,
+              240,
+              1
+            ],
+            "fontSize": "38px",
+            "fontWeight": "750",
+            "ratio": 12.2,
+            "exactSolid": false,
+            "hasGradient": true
+          }
+        ]
+      },
+      {
+        "theme": "petroleum",
+        "sample": [
+          {
+            "selector": ".journey-primary",
+            "color": "rgb(7, 35, 27)",
+            "background": [
+              138,
+              203,
+              205,
+              1
+            ],
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "ratio": 9.09,
+            "exactSolid": true,
+            "hasGradient": false
+          },
+          {
+            "selector": ".journey-muted",
+            "color": "rgb(158, 181, 180)",
+            "background": [
+              3,
+              12,
+              14,
+              1
+            ],
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "ratio": 9.15,
+            "exactSolid": false,
+            "hasGradient": true
+          },
+          {
+            "selector": ".journey-home h1",
+            "color": "rgb(237, 244, 239)",
+            "background": [
+              3,
+              12,
+              14,
+              1
+            ],
+            "fontSize": "38px",
+            "fontWeight": "750",
+            "ratio": 17.68,
+            "exactSolid": false,
+            "hasGradient": true
+          }
+        ]
+      }
+    ],
+    "errorMessage": "صياغة الكود تحتاج تصحيحًا\n\nالسطر 1 · موضع حدده محلل الصياغة\n\nراجع الأقواس وعلامات الاقتباس وما قبل موضع الخطأ.\n\nأعطني تلميحًا\nرسالة الخطأ الأصلية"
+  },
+  "errors": []
+}
