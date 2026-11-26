@@ -305,3 +305,14 @@ body { background:#090a0e!important; }
 #app.vlex-obsidian[data-theme=light] .obsidian-welcome h1>span { background-image:linear-gradient(100deg,#315fc8,#7955b1); }
 #app.vlex-obsidian[data-theme=light] .dictionary-toolbar input[type=text] { background:var(--surface)!important; color:var(--ink)!important; }
 #app.vlex-obsidian .tech-topbar nav[aria-label="مساحات الموقع"] { display:none; }
+#app.vlex-obsidian .dictionary-preview-error { margin:12px; padding:15px; color:#f3b6bc; background:#b7526510; border:1px solid #b9666e; border-radius:10px; font:13px/1.9 var(--app-font); }
+#app.vlex-obsidian .dictionary-preview-error strong { font-weight:500; }
+#app.vlex-obsidian .dictionary-preview-error p { font-size:12px; margin:8px 0; }
+#app.vlex-obsidian .dictionary-preview-error summary { cursor:pointer; font-size:12px; padding:6px 0; }
+#app.vlex-obsidian .dictionary-preview-error pre { white-space:pre-wrap; overflow-wrap:anywhere; font:12px/1.9 'JetBrains Mono',monospace; padding-top:10px; }
+#app.vlex-obsidian[data-theme=light] .dictionary-preview-error { color:#922b43; background:#fff6f7; }
+#app.vlex-obsidian .dictionary-preview-messages { margin:12px; padding:13px 15px; background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:9px; max-height:190px; overflow:auto; }
+#app.vlex-obsidian .dictionary-console-heading { display:block; font:500 11px/1.8 var(--app-font); color:var(--muted); margin-bottom:8px; }
+#app.vlex-obsidian .dictionary-preview-messages p { font:12px/1.9 'JetBrains Mono',monospace; white-space:pre-wrap; overflow-wrap:anywhere; }
+#app.vlex-obsidian .dictionary-preview-messages [data-level=error] { color:#f6a6ae; }#app.vlex-obsidian .dictionary-preview-messages [data-level=warn] { color:#e5be7d; }
+#app.vlex-obsidian[data-theme=light] .dictionary-preview-messages [data-level=error] { color:#a12c45; }#app.vlex-obsidian[data-theme=light] .dictionary-preview-messages [data-level=warn] { color:#856022; }

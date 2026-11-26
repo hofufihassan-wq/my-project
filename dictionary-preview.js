@@ -15,9 +15,9 @@
     return value;
   }
 
-  function parseJS(C, code) {
+  function parseJS(C, code, reportOriginalLine = false) {
     try { return C.babelParse(code, { sourceType: 'module' }); }
-    catch (error) { problem('صيغة JavaScript غير صالحة. لا يدعم هذا المشغل TypeScript أو JSX: ' + details(error)); }
+    catch (error) { const wrapped = new SyntaxError('صيغة JavaScript غير صالحة. لا يدعم هذا المشغل TypeScript أو JSX: ' + details(error)); if (reportOriginalLine && Number.isInteger(error.loc?.line)) wrapped.previewLine = error.loc.line; throw wrapped; }
   }
 
   // Walk the official parser's AST, not regular expressions over JavaScript.
@@ -32,8 +32,8 @@
     }
   }
 
-  function validateJS(C, code, sfc) {
-    const ast = parseJS(C, code);
+  function validateJS(C, code, sfc, reportOriginalLine = false) {
+    const ast = parseJS(C, code, reportOriginalLine);
     walk(ast, (node, depth) => {
       if (node.type === 'ImportExpression' || (node.type === 'CallExpression' && node.callee.type === 'Import') ||
           (node.type === 'MetaProperty' && node.meta.name === 'import')) {
@@ -93,6 +93,18 @@
     return source;
   }
 
+  function compileCSS(C, source, id, scoped = false, filename = 'DictionaryExample.vue') {
+    const result = C.compileStyle({ source, filename, id, scoped });
+    checkErrors(result.errors, 'CSS');
+    result.rawResult.root.walkAtRules(rule => {
+      // Inspect parsed at-rules, not words inside comments or quoted values.
+      const name = rule.name.replace(/\\([0-9a-f]{1,6})(?:\r\n|[\t\n\f\r ])?|\\([^\r\n\f])/gi,
+        (_, hex, character) => hex ? String.fromCodePoint(Math.max(1, Math.min(0x10ffff, parseInt(hex, 16)))) : character);
+      if (name.toLowerCase() === 'import') problem('استيراد CSS خارجي غير مدعوم؛ يجب توفير التنسيق داخل المثال.');
+    });
+    return result.code;
+  }
+
   function compileSfc(C, example) {
     const source = normalizeLegacyClosers(C, example.code, example.legacyClosers === true);
     const parsed = C.parse(source, { filename: 'DictionaryExample.vue' });
@@ -113,14 +125,8 @@
     const template = C.compileTemplate({ source: d.template.content, filename: 'DictionaryExample.vue', id,
       scoped: d.styles.some(style => style.scoped), compilerOptions: { bindingMetadata: script.bindings } });
     checkErrors(template.errors, 'قالب Vue');
-    const styles = d.styles.map(style => {
-      const result = C.compileStyle({ source: style.content, filename: 'DictionaryExample.vue', id, scoped: !!style.scoped });
-      checkErrors(result.errors, 'CSS');
-      result.rawResult.root.walkAtRules(rule => {
-        if (rule.name.toLowerCase() === 'import') problem('استيراد CSS خارجي غير مدعوم؛ يجب توفير التنسيق داخل المثال.');
-      });
-      return result.code;
-    });
+    const styles = d.styles.map(style => compileCSS(C, style.content, id, !!style.scoped));
+
     // Validate generated modules too, before any example code is evaluated.
     validateJS(C, script.content, false);
     validateJS(C, template.code, false);
@@ -183,9 +189,9 @@
       if (!example || typeof example.code !== 'string' || !example.code.trim()) problem('لا يحتوي التبويب المختار على كود قابل للمعاينة.');
       const target = document.getElementById('vuelexicon-example');
       if (example.type === 'css') {
-        if (/@import\b/i.test(example.code)) problem('استيراد CSS خارجي غير مدعوم؛ يجب توفير التنسيق داخل المثال.');
+        const css = compileCSS(compiler(), example.code, 'data-v-lexicon-css', false, 'DictionaryExample.css');
         target.innerHTML = '<p>معاينة CSS على عناصر تجريبية؛ بعض المحددات تحتاج HTML مطابقًا من مشروعك.</p><div class="preview-sample"><p>عنصر تجريبي</p><button type="button">زر تجريبي</button></div>';
-        const style = addStyle(example.code);
+        const style = addStyle(css);
         if (!style.sheet?.cssRules.length) problem('لم يتعرف المتصفح على قواعد CSS صالحة في هذا المثال.');
         host.ready();
         return;
@@ -193,7 +199,7 @@
       if (!['vue', 'javascript'].includes(example.type)) problem('نوع هذا المثال غير مدعوم.');
       const C = compiler();
       const compiled = example.type === 'vue' ? compileSfc(C, example) : null;
-      if (!compiled) validateJS(C, example.code, false);
+      if (!compiled) validateJS(C, example.code, false, true);
       const bridge = moduleUrl(vueBridgeSource());
       if (!compiled) {
         target.textContent = 'مثال JavaScript: راقب رسائل Console. قد يحتاج هذا الجزء HTML أو بيانات من مشروعه الأصلي.';
@@ -228,7 +234,7 @@
       }
       host.ready(); // Mounted/loaded, never a claim that timers/events finished.
     } catch (error) {
-      host.fail(details(error));
+      host.fail(details(error), Number.isInteger(error.previewLine) ? error.previewLine : 0);
     } finally {
       for (const url of urls) URL.revokeObjectURL(url);
     }

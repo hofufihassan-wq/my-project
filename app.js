@@ -374,6 +374,7 @@ const app = createApp({
       nextTick(() => document.getElementById('dictionary-tab-' + tabs[index])?.focus());
     }
     function resetDictionaryEditor() {
+      if (dictionaryEditorChanged.value && !confirm('استعادة المثال الأصلي؟ ستُستبدل مسودة هذا التبويب فقط. إلغاء يحتفظ بكودك كما هو.')) return;
       const next = { ...dictionaryEdits.value };
       delete next[dictionaryEditorKey.value];
       dictionaryEdits.value = next;
@@ -1925,6 +1926,7 @@ const app = createApp({
     const dictionaryPreviewRef = ref(null);
     const dictionaryPreviewKey = ref(0);
     const dictionaryPreviewState = ref('ready');
+    const dictionaryPreviewError = ref(null);
     const dictionaryPreviewLogs = ref([]);
     const dictionaryPreviewDoc = ref('<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><body style="background:#071416;color:#cbd5e1;font-family:system-ui;padding:24px">شغّل المثال لعرضه هنا. الكود الناقص أو غير المدعوم سيظهر بتشخيصه الأصلي.</body></html>');
     const dictionaryPreviewSession = ref(null);
@@ -1937,12 +1939,14 @@ const app = createApp({
     function stopDictionaryPreview() {
       dictionaryPreviewSession.value = null;
       dictionaryPreviewState.value = 'stopped';
+      dictionaryPreviewError.value = null;
       dictionaryPreviewLogs.value = [];
       dictionaryPreviewDoc.value = '<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><body style="background:#071416;color:#cbd5e1;font-family:system-ui;padding:24px">المعاينة متوقفة. اضغط تشغيل المثال لفتح جلسة معزولة جديدة.</body></html>';
       dictionaryPreviewKey.value++;
     }
     function runDictionaryPreview() {
       if (!selectedTerm.value || appMode.value !== 'lexicon') return;
+      dictionaryExpanded.value = true;
       stopDictionaryPreview();
       const code = dictionaryEditorCode.value;
       if (window.VueLexiconData.bytes(code) > window.VueLexiconData.MAX_DRAFT_BYTES) {
@@ -1954,7 +1958,7 @@ const app = createApp({
       if (!selected) { dictionaryPreviewState.value = 'error'; addDictionaryLog('error', 'لا يوجد مثال مدعوم في هذا التبويب.'); return; }
       const session = {
         runId: 'dictionary-' + Date.now() + '-' + (++dictionaryRunSequence) + '-' + Math.random().toString(36).slice(2),
-        lessonId: selectedTerm.value.id, code, received: 0, previewReady: false
+        lessonId: selectedTerm.value.id, code, exampleType: selected.type, received: 0, previewReady: false
       };
       dictionaryPreviewSession.value = session;
       const localAsset = path => new URL(path, document.baseURI).href;
@@ -1973,6 +1977,7 @@ const app = createApp({
         addDictionaryLog('error', String(error.message || error));
       }
     }
+    function openDictionaryPreview() { dictionaryExpanded.value = true; nextTick(() => { runDictionaryPreview(); document.querySelector('.dictionary-original-editor')?.scrollIntoView({ block:'start', behavior:'smooth' }); }); }
     function handleDictionaryMessage(event) {
       const session = dictionaryPreviewSession.value;
       const message = window.VueLexiconRunner.validateMessage(event, dictionaryPreviewRef.value?.contentWindow, session);
@@ -1981,6 +1986,9 @@ const app = createApp({
       if (message.type === 'CONSOLE_LOG') addDictionaryLog(message.payload.level, message.payload.msg);
       else if (message.type === 'EXECUTION_ERROR') {
         dictionaryPreviewState.value = 'error';
+        const syntax = session.exampleType === 'javascript' && message.payload.msg.startsWith('صيغة JavaScript غير صالحة');
+        dictionaryPreviewError.value = { message: message.payload.msg, line: syntax ? message.payload.lineno : 0,
+          title: syntax ? 'صياغة JavaScript تحتاج مراجعة' : /غير مدعوم|غير متوفر|تحتاج|يحتاج/.test(message.payload.msg) ? 'المثال يحتاج سياقًا أو أداة إضافية' : 'توقف المثال أثناء التشغيل' };
         addDictionaryLog('error', message.payload.msg);
       } else if (message.type === 'PREVIEW_READY') {
         session.previewReady = true;
@@ -2660,7 +2668,7 @@ const app = createApp({
       exportRecoveryData,
       storageWarnings,
 
-      dictionaryPreviewRef, dictionaryPreviewKey, dictionaryPreviewState, dictionaryPreviewLogs, dictionaryPreviewDoc,
+      dictionaryPreviewRef, dictionaryPreviewKey, dictionaryPreviewState, dictionaryPreviewLogs, dictionaryPreviewError, openDictionaryPreview, dictionaryPreviewDoc,
       dictionaryPreviewSession, dictionaryPreviewStale, runDictionaryPreview, stopDictionaryPreview,
       handleDictionaryTabKeydown, dictionaryTab, dictionaryAudit, dictionaryEditorCode, dictionaryEditorChanged, updateDictionaryEditor, resetDictionaryEditor,
       // Code Formatting & Highlight

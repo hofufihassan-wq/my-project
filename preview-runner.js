@@ -185,7 +185,7 @@
     // Classic local scripts work in an opaque sandbox without CORS or same-origin.
     return '<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">' + interceptor + css + style +
       '</head><body><div id="vuelexicon-example"></div>' +
-      (example.type === 'vue' || example.type === 'javascript' ? script(assets.vueRuntimeUrl) + script(assets.vueCompilerUrl) : '') +
+      (['vue', 'javascript', 'css'].includes(example.type) ? script(assets.vueRuntimeUrl) + script(assets.vueCompilerUrl) : '') +
       script(assets.dictionaryAdapterUrl) + '<script>if(window.VueLexiconDictionaryPreview){window.VueLexiconDictionaryPreview.run(' + json(example) +
       ')}else{window.VueLexiconPreviewHost.fail("تعذر تحميل مشغل الأمثلة المحلي. تحقق من ملفات النسخة.")}<\/script></body></html>';
   }
