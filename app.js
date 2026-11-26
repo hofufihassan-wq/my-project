@@ -1736,7 +1736,7 @@ const app = createApp({
         vueRuntimeUrl: localAsset('assets/vendor/vue-3.4.21.global.prod.js'),
         vueCompilerUrl: localAsset('assets/vendor/compiler-sfc-3.4.21.global.min.js'),
         previewCssUrl: localAsset('assets/tailwind-3.4.17.min.css'),
-        dictionaryAdapterUrl: localAsset('dictionary-preview.js')
+        dictionaryAdapterUrl: localAsset('dictionary-preview.js?v=obsidian-20261126')
       };
       practiceIframeDoc.value = example
         ? window.VueLexiconRunner.buildDictionaryDocument(example, session, assets)
@@ -1967,7 +1967,7 @@ const app = createApp({
           vueRuntimeUrl: localAsset('assets/vendor/vue-3.4.21.global.prod.js'),
           vueCompilerUrl: localAsset('assets/vendor/compiler-sfc-3.4.21.global.min.js'),
           previewCssUrl: localAsset('assets/tailwind-3.4.17.min.css'),
-          dictionaryAdapterUrl: localAsset('dictionary-preview.js')
+          dictionaryAdapterUrl: localAsset('dictionary-preview.js?v=obsidian-20261126')
         });
         dictionaryPreviewKey.value++;
         dictionaryPreviewState.value = 'running';
