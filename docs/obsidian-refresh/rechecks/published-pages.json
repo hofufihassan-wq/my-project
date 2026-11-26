@@ -1,0 +1,51 @@
+{
+  "target": "https://hofufihassan-wq.github.io/my-project/",
+  "release": "a1038640bcab99700153fe0c1aa667757b4b6392",
+  "passed": 9,
+  "total": 9,
+  "rows": [
+    {
+      "name": "published Pages runtime hashes match every deployed source asset",
+      "passed": true,
+      "evidence": {
+        "files": 119,
+        "hosting": "GitHub Pages main/root; custom _headers and dist release-manifest are not required",
+        "cacheControl": "max-age=600"
+      }
+    },
+    {
+      "name": "redesigned published home and local font are available",
+      "passed": true
+    },
+    {
+      "name": "CSS comment mentioning import previews and applies actual computed color",
+      "passed": true
+    },
+    {
+      "name": "published syntax diagnostic preserves original source line and cancellation protects draft",
+      "passed": true
+    },
+    {
+      "name": "native typing and Ctrl+Enter produce real Console output",
+      "passed": true
+    },
+    {
+      "name": "published Vue uses real ref and native pointer events in isolated frame",
+      "passed": true
+    },
+    {
+      "name": "real full download includes exact dictionary draft and reload does not autorun it",
+      "passed": true
+    },
+    {
+      "name": "mobile library drawer works with keyboard and no document overflow",
+      "passed": true
+    },
+    {
+      "name": "no missing resources or unhandled parent errors on published site",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "missing": []
+}
