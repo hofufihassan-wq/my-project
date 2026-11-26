@@ -1,0 +1,23 @@
+[
+  {
+    "issue": "valid CSS comment is mistaken for an actual external import",
+    "nativeRules": 1,
+    "state": "error",
+    "logs": [
+      {
+        "type": "error",
+        "msg": "استيراد CSS خارجي غير مدعوم؛ يجب توفير التنسيق داخل المثال."
+      }
+    ]
+  },
+  {
+    "issue": "restore original removes edited draft without allowing cancellation",
+    "dialogShown": false,
+    "retained": false
+  },
+  {
+    "issue": "preview can run while its editor and frame remain hidden",
+    "state": "preview_ready",
+    "visible": false
+  }
+]

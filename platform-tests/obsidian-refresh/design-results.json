@@ -1,0 +1,106 @@
+{
+  "passed": 14,
+  "total": 14,
+  "rows": [
+    {
+      "mode": "home",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
+      "title": "مساحتك / الرئيسية",
+      "passed": true
+    },
+    {
+      "mode": "lexicon",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
+      "title": "مساحتك / القاموس",
+      "passed": true
+    },
+    {
+      "mode": "learn",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
+      "title": "مساحتك / تعلّم معي",
+      "passed": true
+    },
+    {
+      "mode": "jsLab",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
+      "title": "مساحتك / مختبر JavaScript",
+      "passed": true
+    },
+    {
+      "mode": "cssLab",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
+      "title": "مساحتك / مختبر CSS",
+      "passed": true
+    },
+    {
+      "mode": "projects",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
+      "title": "مساحتك / المشاريع",
+      "passed": true
+    },
+    {
+      "mode": "settings",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
+      "title": "مساحتك / الإعدادات",
+      "passed": true
+    },
+    {
+      "mode": "simulator",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
+      "title": "مساحتك / المحاكي",
+      "passed": true,
+      "diagram": {
+        "width": 294.40625,
+        "height": 350
+      }
+    },
+    {
+      "mode": "home",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "mode": "lexicon",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "mode": "learn",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "mode": "projects",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "mode": "settings",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "mode": "simulator",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "resources": []
+}

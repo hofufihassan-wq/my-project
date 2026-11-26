@@ -233,6 +233,14 @@ const app = createApp({
     // Visible workspaces: 'lexicon' | 'practice' (the practical simulator)
     const savedNavigation = window.VLexLearningStore?.getSection('navigation', {}) || {};
     const appMode = ref(window.location?.hash === '#arrow-functions' ? 'arrow' : savedNavigation.workspace || 'home');
+    const workspaceNavOpen=ref(false);
+    const workspaceTitle=computed(()=>({home:'الرئيسية',learn:'تعلّم معي',lexicon:'القاموس',taskJourney:'مدير المهام',explain:'شرح الكود',jsLab:'مختبر JavaScript',cssLab:'مختبر CSS',settings:'الإعدادات',guided:'مسارات التعلم',course:'المسار التعليمي',arrow:'Arrow Functions',overview:'لوحة التنظيم',foundation:foundationSection.value==='projects'?'المشاريع':foundationSection.value==='notes'?'الملاحظات':foundationSection.value==='calendar'?'التقويم':'المهام',practice:practiceSurface.value==='training'?'التدريب العملي':'المحاكي'}[appMode.value]||'مساحتي'));
+    function workspaceNavigate(mode){workspaceNavOpen.value=false;if(['projects','notes','calendar'].includes(mode))openFoundation(mode);else if(mode==='simulator')openVisualSimulator();else if(mode==='training')openTraining();else if(mode==='learn')openJourney();else if(['explain','jsLab','cssLab'].includes(mode))openLearning(mode);else setAppMode(mode)}
+    function workspaceSelectTerm(item){selectTerm(item);workspaceNavOpen.value=false}
+    watch(appMode,()=>{workspaceNavOpen.value=false});
+    watch(workspaceNavOpen,open=>{nextTick(()=>{const panel=document.getElementById('workspace-navigation');if(open)panel?.querySelector('button,select,a')?.focus({preventScroll:true});else document.querySelector('.workspace-menu')?.focus({preventScroll:true})})});
+    function workspaceTrapFocus(event){if(!workspaceNavOpen.value)return;const panel=event.currentTarget,items=[...panel.querySelectorAll('button:not([disabled]),a[href],input,select,summary,[tabindex="0"]')].filter(e=>e.getClientRects().length),first=items[0],last=items.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus()}}
+
     const learningReturnToArrow = ref(false);
     const learningReturnToGuided = ref(false);
     const learningReturnToJourney = ref(false), journeyKey=ref(0);
@@ -366,6 +374,7 @@ const app = createApp({
       nextTick(() => document.getElementById('dictionary-tab-' + tabs[index])?.focus());
     }
     function resetDictionaryEditor() {
+      if (dictionaryEditorChanged.value && !confirm('استعادة المثال الأصلي؟ ستُستبدل مسودة هذا التبويب فقط. إلغاء يحتفظ بكودك كما هو.')) return;
       const next = { ...dictionaryEdits.value };
       delete next[dictionaryEditorKey.value];
       dictionaryEdits.value = next;
@@ -1727,7 +1736,7 @@ const app = createApp({
         vueRuntimeUrl: localAsset('assets/vendor/vue-3.4.21.global.prod.js'),
         vueCompilerUrl: localAsset('assets/vendor/compiler-sfc-3.4.21.global.min.js'),
         previewCssUrl: localAsset('assets/tailwind-3.4.17.min.css'),
-        dictionaryAdapterUrl: localAsset('dictionary-preview.js')
+        dictionaryAdapterUrl: localAsset('dictionary-preview.js?v=obsidian-20261126')
       };
       practiceIframeDoc.value = example
         ? window.VueLexiconRunner.buildDictionaryDocument(example, session, assets)
@@ -1917,6 +1926,7 @@ const app = createApp({
     const dictionaryPreviewRef = ref(null);
     const dictionaryPreviewKey = ref(0);
     const dictionaryPreviewState = ref('ready');
+    const dictionaryPreviewError = ref(null);
     const dictionaryPreviewLogs = ref([]);
     const dictionaryPreviewDoc = ref('<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><body style="background:#071416;color:#cbd5e1;font-family:system-ui;padding:24px">شغّل المثال لعرضه هنا. الكود الناقص أو غير المدعوم سيظهر بتشخيصه الأصلي.</body></html>');
     const dictionaryPreviewSession = ref(null);
@@ -1929,12 +1939,14 @@ const app = createApp({
     function stopDictionaryPreview() {
       dictionaryPreviewSession.value = null;
       dictionaryPreviewState.value = 'stopped';
+      dictionaryPreviewError.value = null;
       dictionaryPreviewLogs.value = [];
       dictionaryPreviewDoc.value = '<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><body style="background:#071416;color:#cbd5e1;font-family:system-ui;padding:24px">المعاينة متوقفة. اضغط تشغيل المثال لفتح جلسة معزولة جديدة.</body></html>';
       dictionaryPreviewKey.value++;
     }
     function runDictionaryPreview() {
       if (!selectedTerm.value || appMode.value !== 'lexicon') return;
+      dictionaryExpanded.value = true;
       stopDictionaryPreview();
       const code = dictionaryEditorCode.value;
       if (window.VueLexiconData.bytes(code) > window.VueLexiconData.MAX_DRAFT_BYTES) {
@@ -1946,7 +1958,7 @@ const app = createApp({
       if (!selected) { dictionaryPreviewState.value = 'error'; addDictionaryLog('error', 'لا يوجد مثال مدعوم في هذا التبويب.'); return; }
       const session = {
         runId: 'dictionary-' + Date.now() + '-' + (++dictionaryRunSequence) + '-' + Math.random().toString(36).slice(2),
-        lessonId: selectedTerm.value.id, code, received: 0, previewReady: false
+        lessonId: selectedTerm.value.id, code, exampleType: selected.type, received: 0, previewReady: false
       };
       dictionaryPreviewSession.value = session;
       const localAsset = path => new URL(path, document.baseURI).href;
@@ -1955,7 +1967,7 @@ const app = createApp({
           vueRuntimeUrl: localAsset('assets/vendor/vue-3.4.21.global.prod.js'),
           vueCompilerUrl: localAsset('assets/vendor/compiler-sfc-3.4.21.global.min.js'),
           previewCssUrl: localAsset('assets/tailwind-3.4.17.min.css'),
-          dictionaryAdapterUrl: localAsset('dictionary-preview.js')
+          dictionaryAdapterUrl: localAsset('dictionary-preview.js?v=obsidian-20261126')
         });
         dictionaryPreviewKey.value++;
         dictionaryPreviewState.value = 'running';
@@ -1965,6 +1977,7 @@ const app = createApp({
         addDictionaryLog('error', String(error.message || error));
       }
     }
+    function openDictionaryPreview() { dictionaryExpanded.value = true; nextTick(() => { runDictionaryPreview(); document.querySelector('.dictionary-original-editor')?.scrollIntoView({ block:'start', behavior:'smooth' }); }); }
     function handleDictionaryMessage(event) {
       const session = dictionaryPreviewSession.value;
       const message = window.VueLexiconRunner.validateMessage(event, dictionaryPreviewRef.value?.contentWindow, session);
@@ -1973,6 +1986,9 @@ const app = createApp({
       if (message.type === 'CONSOLE_LOG') addDictionaryLog(message.payload.level, message.payload.msg);
       else if (message.type === 'EXECUTION_ERROR') {
         dictionaryPreviewState.value = 'error';
+        const syntax = session.exampleType === 'javascript' && message.payload.msg.startsWith('صيغة JavaScript غير صالحة');
+        dictionaryPreviewError.value = { message: message.payload.msg, line: syntax ? message.payload.lineno : 0,
+          title: syntax ? 'صياغة JavaScript تحتاج مراجعة' : /غير مدعوم|غير متوفر|تحتاج|يحتاج/.test(message.payload.msg) ? 'المثال يحتاج سياقًا أو أداة إضافية' : 'توقف المثال أثناء التشغيل' };
         addDictionaryLog('error', message.payload.msg);
       } else if (message.type === 'PREVIEW_READY') {
         session.previewReady = true;
@@ -2544,6 +2560,7 @@ const app = createApp({
         } else if (e.key === '?' && !editing && !e.ctrlKey && !e.metaKey && !e.altKey) {
           showShortcutsModal.value = !showShortcutsModal.value;
         } else if (e.key === 'Escape') {
+          workspaceNavOpen.value = false;
           document.querySelectorAll('.tech-simulator .beta-layout-menu[open], .tech-simulator .final-custom-dimensions[open], .tech-simulator .beta-shortcuts[open]').forEach(detail => { detail.open = false; });
           showShortcutsModal.value = false;
           showProgressModal.value = false;
@@ -2589,6 +2606,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
+      workspaceNavOpen, workspaceTitle, workspaceNavigate, workspaceSelectTerm, workspaceTrapFocus,
       dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, learningReturnToGuided, learningReturnToJourney, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openJourney, journeyKey, journeyNavigate, dictionaryLesson, dictionaryExpanded, tryDictionaryConcept, simulatorBeginner, setSimulatorMode, hasJourneySimulatorSource, journeyReferenceActive, updateJourneySimulatorSource, simulatorReferenceWarning, openGuidedUnit, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
@@ -2650,7 +2668,7 @@ const app = createApp({
       exportRecoveryData,
       storageWarnings,
 
-      dictionaryPreviewRef, dictionaryPreviewKey, dictionaryPreviewState, dictionaryPreviewLogs, dictionaryPreviewDoc,
+      dictionaryPreviewRef, dictionaryPreviewKey, dictionaryPreviewState, dictionaryPreviewLogs, dictionaryPreviewError, openDictionaryPreview, dictionaryPreviewDoc,
       dictionaryPreviewSession, dictionaryPreviewStale, runDictionaryPreview, stopDictionaryPreview,
       handleDictionaryTabKeydown, dictionaryTab, dictionaryAudit, dictionaryEditorCode, dictionaryEditorChanged, updateDictionaryEditor, resetDictionaryEditor,
       // Code Formatting & Highlight

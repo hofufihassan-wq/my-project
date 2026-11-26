@@ -411,8 +411,8 @@
     "tool": "tailwindcss@3.4.17",
     "config_sha256": "765982df1d140dac3a1a429cd4525000989d37d92c329a0e0eee66dbf159a5c7",
     "inputs_sha256": {
-      "index.html": "d7812ab8d2c38a7053dc0c69df0620f733c26871a450b155659160104d77e0ac",
-      "app.js": "e96de02a13c79b4dfcd81ab74181d4b47c5ec4f3a58691c80c10f8e68bdd3961",
+      "index.html": "a996018c759e9569fc2e33df90fb1e2465db1e805ca9f229411dc46a97990f79",
+      "app.js": "ae35954af2566cf3ef11de829f81d4458391eeeb427c63a0454b98a6cd36283f",
       "lexicon-data.js": "3d0e63c82e5cef4f2f4d269aaee039b82318b977f956325e80506d6b593db05a",
       "practice-curriculum.js": "41822064e89272698042e7e76a94b80519d6d5524a1c0e2259789e1ecf4af6f6",
       "simulator-guides.js": "ae917713782bce02cd50147c504827db87fe7a555b2523fd8064d3905ab08910"
@@ -435,5 +435,87 @@
       "scripts/vendor/linkedom-0.18.12.worker.esm.js": "196efeb17c260e001979dbc54a3c30e701a881c6e8a3eedaddc5ad83c99ee5ff",
       "scripts/build-guided-dom.cjs": "477f4ddb58c51f0b157a50337bc3723021c8339a9e699a0fe70375cd4e8f1f19"
     }
-  }
+  },
+  "additional_assets": [
+    {
+      "path": "assets/fonts/ibm-plex-arabic/OFL.txt",
+      "sha256": "d741e57d5f865e294df801f96b7b5161a88b211df65887e4358d271c9fc5fb4f"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/index.css",
+      "sha256": "70629ec6e4c0be478177eb34ba4160ed2eca02bf028415d85c6dc6bc7c2aee4d"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-0.woff2",
+      "sha256": "6010e7fd0dce5d527583951750728cbe3c895efbd16aa0f809ab8c824878c9d8"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-1.woff2",
+      "sha256": "1144843a05a0eaef92032c0406ee3f001804f2caddba9522e8a265e0a79d46ea"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-10.woff2",
+      "sha256": "0f7c03bb523b8084a84c4b7d95a5c7b294b7318f88b2e51829d5fe7aaef0d0bb"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-11.woff2",
+      "sha256": "63f4757271e403f7baec0862f284ffaa4560ea6096ba9fe8bc6e585ca656e724"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-12.woff2",
+      "sha256": "04c730b4292731ccedadd5bd80756124364ae4923895145d9cd7b1f28e443de1"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-13.woff2",
+      "sha256": "0c4e072fcf4f07a388448ae321d51fd3915797371a7378270e5630c6d023ea6b"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-14.woff2",
+      "sha256": "ab0b9584271f492336d9eadcef96f99b0da07e8e7046220aea5084f1644a9c9d"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-15.woff2",
+      "sha256": "ae2d59f91ecf9f7ed279e4a1fc1a9da8170fb0ce5b9152917a8f759033f5777c"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-2.woff2",
+      "sha256": "1935fa1a3326fcd48e20abe864bb30ace43fe58bd572f354c24271ea66208e04"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-3.woff2",
+      "sha256": "9ed8dcb02e6c7246de4c120295fafa39a7bb73085f4951a4524a07dc911069f2"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-4.woff2",
+      "sha256": "90aef64fea9794f232332e907d45810ab268d1a11721340025eba2a2cdb36d5c"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-5.woff2",
+      "sha256": "93ae908392a01f9af1f73e86e99f1665f899a5b58fe9e56517abd199e47dcd01"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-6.woff2",
+      "sha256": "ae5c1a58c18d253e20691f00e401319f01fc568d24d0e50165f276d1a99035b5"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-7.woff2",
+      "sha256": "be6a3b2e37f3ad67aa822a55ce356d28c416331c97530a1ec076c2118240ca2d"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-8.woff2",
+      "sha256": "16734a5adb27b0f363e566cbbeacec480da0dc0baa19c8f0053251c2e2bc0eac"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/plex-arabic-9.woff2",
+      "sha256": "95875e4fa8928fa68e01e53e0b2cdb0f6dbec1ac61d9af493bb05d2ed230f350"
+    },
+    {
+      "path": "assets/fonts/ibm-plex-arabic/sources.json",
+      "sha256": "7216641ab414a7a10032d504ccd6e5fabf36b398d5232e118fd8d11b83b5c6f2"
+    },
+    {
+      "path": "assets/brand/vlex-mark.svg",
+      "sha256": "6503ea6d6fdedab9c9ddae0126d5f44f7dbb9a31e1a9957b9c1ae5936c9c833a"
+    }
+  ]
 }

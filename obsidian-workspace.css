@@ -1,0 +1,318 @@
+/* V Lex Pro — Obsidian workspace. Application chrome only; never enters user frames. */
+:root { color-scheme: dark; }
+body { background:#090a0e!important; }
+#app.vlex-obsidian[data-theme][data-workspace] {
+  --app-font:'IBM Plex Sans Arabic','Alexandria',sans-serif;
+  --canvas:#101116; --surface:#181a22; --surface-raised:#20232e; --glass:#181a22;
+  --ink:#eceef5; --muted:#a0a6b7; --line:#2b2e3b; --line-strong:#454b60;
+  --accent:#8cadff; --accent-solid:#456fd2; --accent-soft:#8cadff14;
+  --gold:#c6cde2; --gold-soft:#b7c6ed10; --code:#15171e;
+  --dash-card:var(--surface); --dash-card-soft:var(--surface-raised); --dash-ink:var(--ink);
+  --dash-muted:var(--muted); --dash-border:var(--line); --dash-accent:var(--accent);
+  --dash-bar:var(--accent-solid); --dash-track:#8cadff18; --dash-input:var(--canvas);
+  --rail-width:72px; --aside-width:244px;
+  font:400 16px/1.8 var(--app-font); color:var(--ink); background:var(--canvas);
+  background-image:none; margin:14px; min-height:calc(100vh - 28px); border:1px solid var(--line);
+  border-radius:24px; padding-inline-start:calc(var(--rail-width) + var(--aside-width) + 28px);
+  padding-inline-end:28px; overflow:clip;
+}
+#app.vlex-obsidian[data-theme="green"][data-workspace] { --accent:#85d9bb; --accent-solid:#34836f; --accent-soft:#85d9bb14; --dash-bar:#62b99d; }
+#app.vlex-obsidian[data-theme="purple"][data-workspace] { --accent:#bda9fa; --accent-solid:#805fd0; --accent-soft:#bda9fa14; --dash-bar:#a48bdf; }
+#app.vlex-obsidian[data-theme="glass"][data-workspace] { --surface:#19212aeb; --surface-raised:#232d39e8; --accent:#97d6e7; --accent-solid:#347e96; --accent-soft:#97d6e714; }
+#app.vlex-obsidian[data-theme="light"][data-workspace] { --canvas:#f6f7fb; --surface:#fff; --surface-raised:#edf0f7; --glass:#fff; --ink:#232838; --muted:#596276; --line:#dce0eb; --line-strong:#a9b2c7; --accent:#315fc8; --accent-solid:#315fc8; --accent-soft:#315fc80d; --gold:#4c5b7e; --gold-soft:#315fc808; --code:#f0f2f8; color-scheme:light; }
+#app.vlex-obsidian button,#app.vlex-obsidian input,#app.vlex-obsidian select,#app.vlex-obsidian summary { font-family:var(--app-font); }
+#app.vlex-obsidian :is(h1,h2,h3,h4) { letter-spacing:0; font-weight:600; color:var(--ink); }
+#app.vlex-obsidian :is(button,a,input,textarea,select,summary):focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+#app.vlex-obsidian svg:has(>use), #app.vlex-obsidian :is(.workspace-rail,.workspace-aside,.workspace-topbar,.dictionary-toolbar) svg { width:20px; height:20px; flex-shrink:0; fill:none; stroke:currentColor; stroke-width:1.65; stroke-linecap:round; stroke-linejoin:round; }
+#app.vlex-obsidian .icon-definitions { width:0; height:0; }
+#app.vlex-obsidian .learning-launcher { display:none; }
+#app.vlex-obsidian :is(.text-white,.text-slate-100,.text-slate-200):not(.dictionary-studio *,.tech-simulator *,.vlex-code-shell *,.vlex-code-view *) { color:var(--ink); }
+#app.vlex-obsidian :is(.text-gray-400,.text-slate-400,.text-gray-500):not(.dictionary-studio *,.tech-simulator *) { color:var(--muted); }
+#app.vlex-obsidian :is(.ios-glass-panel,.dashboard-panel,.stat-card) { background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:16px; box-shadow:none; backdrop-filter:none; }
+#app.vlex-obsidian :is(.page-heading,.settings-page,.foundation-page,.learning-page) { width:100%; max-width:100%; margin-inline:auto; }
+#app.vlex-obsidian .learning-page { padding-inline:0; }
+#app.vlex-obsidian .settings-page,#app.vlex-obsidian .foundation-page { padding:32px 0; }
+#app.vlex-obsidian .settings-page>.dashboard-panel { margin-block:20px; padding:28px; }
+#app.vlex-obsidian .page-heading h2 { font-size:30px; }
+#app.vlex-obsidian .page-heading p { color:var(--muted); font-size:15px; }
+#app.vlex-obsidian .eyebrow { color:var(--accent); font:500 12px/1.8 var(--app-font); letter-spacing:0; }
+#app.vlex-obsidian :is(.primary-button,.journey-primary,.dictionary-run-example) { background:var(--accent-solid); color:#fff; border:1px solid var(--accent-solid); border-radius:11px; box-shadow:none; font-weight:500; min-height:44px; }
+#app.vlex-obsidian :is(.primary-button,.journey-primary,.dictionary-run-example):hover { filter:brightness(1.1); }
+#app.vlex-obsidian .muted { color:var(--muted); }
+#app.vlex-obsidian footer { background:transparent; color:var(--muted); border-color:var(--line); padding:24px 0 18px; font:12px/1.8 var(--app-font); }
+#app.vlex-obsidian footer>div { padding-inline:0; gap:14px; }
+#app.vlex-obsidian .theme-option { background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:14px; box-shadow:none; }
+#app.vlex-obsidian .theme-option[aria-pressed=true] { border-color:var(--accent); background:var(--accent-soft); }
+/* Slim app rail and contextual workspace library. */
+.workspace-rail { position:fixed; z-index:60; inset-inline-start:15px; top:15px; bottom:15px; width:72px; display:flex; align-items:center; flex-direction:column; padding:18px 8px; gap:24px; border-inline-end:1px solid var(--line); background:var(--canvas); border-radius:23px 0 0 23px; }
+.workspace-logo { display:grid; place-items:center; width:44px; height:44px; border-radius:14px; background:var(--surface-raised); border:1px solid var(--line); }
+.workspace-logo span { font:700 28px/1 'IBM Plex Sans Arabic',sans-serif; background:linear-gradient(130deg,#91b5ff,#ccbcfb 60%,#e7c981); background-clip:text; -webkit-background-clip:text; color:transparent; }
+.workspace-rail-links { display:flex; flex-direction:column; gap:10px; width:100%; }
+.workspace-rail-links>button { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:6px; color:var(--muted); min-height:60px; width:100%; padding:8px 1px; border:1px solid transparent; border-radius:15px; background:transparent; }
+.workspace-rail-links>button span { font-size:10px; line-height:1.4; }
+.workspace-rail-links>button:hover { color:var(--ink); background:var(--surface); }
+.workspace-rail-links>button[aria-current=page] { background:var(--accent-soft); color:var(--accent); border-color:var(--line-strong); }
+.workspace-rail-bottom { margin-top:auto; display:grid; gap:12px; width:100%; }
+.workspace-rail-bottom>button { min-height:40px; display:grid; place-items:center; color:var(--muted); font-size:20px; }
+.workspace-aside { position:fixed; z-index:55; top:27px; bottom:27px; inset-inline-start:calc(15px + var(--rail-width) + 12px); width:calc(var(--aside-width) - 16px); display:flex; flex-direction:column; padding:22px 16px 14px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(155deg,var(--surface-raised),var(--surface) 26%); }
+.workspace-aside-heading { display:flex; gap:8px; align-items:center; justify-content:space-between; margin-bottom:23px; }
+.workspace-aside-heading strong { display:flex; align-items:center; gap:10px; font-size:20px; line-height:1.4; font-weight:600; }
+.workspace-aside-heading p { color:var(--muted); font-size:12px; margin-top:7px; }
+.workspace-version { color:var(--muted); padding:3px 6px; font:11px/1.4 var(--app-font); border:1px solid var(--line); border-radius:6px; }
+.workspace-create { display:flex; align-items:center; gap:10px; color:var(--ink); border:1px solid var(--line-strong); border-radius:25px; min-height:46px; padding:9px 13px; background:var(--canvas); box-shadow:inset 0 -1px 0 #5484f04a; font-size:14px; margin-bottom:25px; }
+.workspace-create>span:last-child { margin-inline-start:auto; color:var(--accent); }
+.workspace-nav-label { color:var(--muted); font-size:11px; margin:8px 8px 10px; }
+.workspace-tool-nav { display:grid; gap:5px; margin-bottom:22px; }
+.workspace-tool-nav>button { display:flex; align-items:center; gap:11px; min-height:43px; padding:9px 10px; border:1px solid transparent; border-radius:11px; color:var(--muted); text-align:start; font-size:13px; background:transparent; }
+.workspace-tool-nav>button:hover { color:var(--ink); background:var(--surface-raised); }
+.workspace-tool-nav>button[aria-current=page] { color:var(--ink); background:var(--accent-soft); border-color:var(--line-strong); }
+.workspace-tool-nav small { margin-inline-start:auto; color:var(--accent); font:12px/1.5 'JetBrains Mono',monospace; }
+.workspace-language-icon { display:grid; place-items:center; width:20px; height:20px; font:500 12px/1 'JetBrains Mono',monospace; color:var(--accent); }
+.workspace-aside-footer { margin-top:auto; padding-top:12px; }
+.workspace-backup { width:100%; display:flex; align-items:center; gap:9px; color:var(--muted); text-align:start; padding:12px 3px; font-size:12px; }
+.workspace-local { display:flex; gap:10px; align-items:center; padding:12px; border-radius:13px; background:var(--canvas); border:1px solid var(--line); }
+.workspace-local strong { font-size:12px; font-weight:500; display:block; }
+.workspace-local small { font-size:10px; display:block; color:var(--muted); }
+.workspace-local-icon { color:var(--accent); }
+.workspace-status-dot { width:6px; height:6px; background:#7fbba7; border-radius:50%; margin-inline-start:auto; }
+.workspace-status-dot.is-warning { background:#e7b96e; }
+.workspace-palette { display:flex; gap:9px; align-items:center; padding:9px 4px; }
+.workspace-palette button { display:grid; place-items:center; width:29px; height:29px; border:1px solid transparent; border-radius:50%; }
+.workspace-palette button[aria-pressed=true] { border-color:var(--accent); }
+.workspace-palette button span { width:15px; height:15px; border-radius:50%; border:1px solid #ffffff35; background:#749aea; }
+.workspace-palette [data-palette=green] span { background:#6db399; }.workspace-palette [data-palette=purple] span { background:#9c81cb; }.workspace-palette [data-palette=glass] span { background:linear-gradient(130deg,#45889a,#aec3cb); }.workspace-palette [data-palette=light] span { background:#e4e8f4; }
+.workspace-close,.workspace-backdrop { display:none; }
+/* Quiet workspace tabs — actual app routes, no decorative controls. */
+#app.vlex-obsidian .workspace-topbar { position:relative; top:auto; z-index:40; min-height:86px; display:flex; align-items:center; justify-content:space-between; gap:18px; padding:18px 0; background:var(--canvas); border-bottom:1px solid var(--line); box-shadow:none; backdrop-filter:none; }
+.workspace-topbar-title,.workspace-topbar-actions { display:flex; align-items:center; gap:12px; }
+.workspace-breadcrumb { color:var(--muted); font-size:12px; white-space:nowrap; }
+.workspace-breadcrumb>span { padding-inline:9px; opacity:.5; }.workspace-breadcrumb strong { font-weight:500; color:var(--ink); }
+.workspace-tabs { display:flex; gap:8px; }
+.workspace-tabs>button { display:flex; align-items:center; justify-content:center; gap:9px; min-height:39px; padding:7px 16px; border:1px solid var(--line); border-radius:24px; color:var(--muted); font-size:12px; background:var(--surface); }
+.workspace-tabs>button svg { width:15px!important; height:15px!important; }
+.workspace-tabs>button[aria-current=page] { color:var(--ink); border-color:var(--line-strong); background:var(--surface-raised); }
+.workspace-topbar-actions>button { width:34px; height:34px; display:grid; place-items:center; color:var(--muted); border-radius:10px; }
+.workspace-topbar-actions>button:hover { background:var(--surface); }
+.workspace-avatar { width:31px; height:31px; display:grid; place-items:center; color:var(--ink); background:var(--surface-raised); border:1px solid var(--line-strong); border-radius:50%; font:600 16px/1 var(--app-font); }
+.workspace-menu { display:none; }
+/* Dictionary: library in the sidebar, generous reading space and a deliberate code area. */
+.workspace-library-heading { display:flex; align-items:center; justify-content:space-between; padding:0 4px; margin:0 0 14px; }
+.workspace-library-heading h2 { font-size:14px; }.workspace-library-heading>span { color:var(--muted); border:1px solid var(--line); padding:1px 7px; border-radius:6px; font:11px/1.8 'JetBrains Mono',monospace; }
+.workspace-category-label { display:grid; gap:7px; color:var(--muted); font-size:11px; }
+.workspace-category-label select { background:var(--canvas); color:var(--ink); border:1px solid var(--line); border-radius:9px; width:100%; padding:9px; font-size:12px; }
+.workspace-term-index { min-height:80px; flex:1; overflow:auto; margin-top:14px; padding-inline-end:4px; scrollbar-width:thin; scrollbar-color:var(--line-strong) transparent; }
+.workspace-term-index>button { display:flex; width:100%; gap:8px; text-align:start; padding:11px 10px; border-radius:10px; margin-bottom:4px; border:1px solid transparent; align-items:center; }
+.workspace-term-index>button:hover { background:var(--surface-raised); }.workspace-term-index>button[aria-current=page] { background:var(--accent-soft); border-color:var(--line-strong); }
+.workspace-term-index strong { display:block; font:500 13px/1.7 'JetBrains Mono',monospace; color:var(--ink); overflow-wrap:anywhere; }
+.workspace-term-index small { display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; font-size:11px; color:var(--muted); line-height:1.8; }
+.workspace-term-state { color:var(--accent); margin-inline-start:auto; font-size:13px; flex-shrink:0; }
+.workspace-index-empty { color:var(--muted); font-size:12px; padding:14px 8px; }.workspace-index-empty button { color:var(--accent); }
+#app.vlex-obsidian[data-workspace="lexicon"] .lexicon-hero { min-height:0; padding:34px 0 14px; background:none; border:0; position:relative; }
+#app.vlex-obsidian[data-workspace="lexicon"] .lexicon-hero::before,#app.vlex-obsidian[data-workspace="lexicon"] .lexicon-hero::after { display:none; }
+#app.vlex-obsidian[data-workspace="lexicon"] .lexicon-hero h2 { color:var(--ink); font-size:32px; gap:12px; margin:5px 0; }
+#app.vlex-obsidian[data-workspace="lexicon"] .lexicon-hero h2 svg { width:26px; height:26px; color:var(--accent); }
+#app.vlex-obsidian[data-workspace="lexicon"] .lexicon-hero p { font-size:14px; color:var(--muted); margin-top:7px; }
+#app.vlex-obsidian[data-workspace="lexicon"] .dictionary-toolbar { max-width:none; padding:12px 0 20px; }
+#app.vlex-obsidian .dictionary-toolbar>.relative { max-width:none; }
+#app.vlex-obsidian .dictionary-toolbar input[type=text] { font:14px/1.8 var(--app-font); background:var(--surface); border:1px solid var(--line); box-shadow:none; padding-block:14px; color:var(--ink); border-radius:12px; }
+#app.vlex-obsidian .dictionary-toolbar input::placeholder { color:var(--muted); }
+#app.vlex-obsidian .dictionary-toolbar input:focus { border-color:var(--accent); }
+#app.vlex-obsidian .dictionary-toolbar>.mt-6 { display:none; }
+#app.vlex-obsidian .dictionary-alphabet { max-width:none; text-align:start; padding-top:10px; }
+#app.vlex-obsidian .dictionary-alphabet summary { text-align:start; font-size:12px; }
+#app.vlex-obsidian .dictionary-workspace { max-width:none; padding:0 0 32px; }
+#app.vlex-obsidian[data-workspace="lexicon"] .dictionary-workspace>.grid { display:grid; grid-template-columns:minmax(0,1fr); gap:24px; direction:rtl; }
+#app.vlex-obsidian .term-directory { display:none; }
+#app.vlex-obsidian .dictionary-term-card { padding:28px 30px; border-radius:18px; background:var(--surface); box-shadow:none; }
+#app.vlex-obsidian .dictionary-breadcrumb { font-size:11px; margin-bottom:18px; }
+#app.vlex-obsidian .dictionary-title-row h2 { font:500 clamp(26px,3vw,38px)/1.4 'JetBrains Mono',monospace; }
+#app.vlex-obsidian .dictionary-title-row>div>p { font-size:16px; color:var(--muted); margin-top:7px; }
+#app.vlex-obsidian .dictionary-term-dot { color:var(--accent); font-size:9px; }
+#app.vlex-obsidian .dictionary-title-actions { gap:9px; padding-block:19px; margin-top:8px; border-bottom:1px solid var(--line); }
+#app.vlex-obsidian .dictionary-title-actions>:is(button,a),#app.vlex-obsidian .dictionary-mastery { font-size:11px; padding:7px 10px; border:1px solid var(--line); border-radius:8px; background:transparent; color:var(--muted); }
+#app.vlex-obsidian .dictionary-mastery { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+#app.vlex-obsidian .dictionary-mastery>button[aria-pressed=true] { color:var(--accent); }
+#app.vlex-obsidian .dictionary-quick { padding:8px 0 24px; border:0; background:none; margin-top:16px; }
+#app.vlex-obsidian .dictionary-quick h3 { color:var(--ink); font-size:18px; margin:24px 0 12px; }
+#app.vlex-obsidian .dictionary-quick p { font-size:16px; line-height:2; color:var(--muted); max-width:78ch; }
+#app.vlex-obsidian .dictionary-quick pre { margin:20px 0; padding:24px; border:1px solid var(--line); border-radius:13px; max-height:340px; background:#15171e; }
+#app.vlex-obsidian .dictionary-quick>div { display:flex; gap:12px; flex-wrap:wrap; }
+#app.vlex-obsidian .dictionary-quick>div button { padding:9px 18px; font-size:14px; }
+#app.vlex-obsidian .dictionary-quick>div button:not(.dictionary-run-example) { border:1px solid var(--line); border-radius:10px; color:var(--ink); }
+#app.vlex-obsidian :is(.dictionary-extended,.dictionary-original-editor,.dictionary-studio)>summary { font-size:14px; padding:17px 0; color:var(--muted); }
+#app.vlex-obsidian .dictionary-example-grid { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; margin:18px 0; }
+#app.vlex-obsidian :is(.dictionary-editor-panel,.dictionary-live-panel) { background:var(--canvas); border:1px solid var(--line); border-radius:12px; box-shadow:none; overflow:hidden; min-width:0; }
+#app.vlex-obsidian .dictionary-panel-title { background:var(--surface-raised); padding:13px 15px; border-bottom:1px solid var(--line); font-size:12px; color:var(--ink); }
+#app.vlex-obsidian .dictionary-code-editor { font-size:12px; line-height:1.9; min-height:390px; }
+#app.vlex-obsidian .dictionary-editor-surface { background:#15171e; }
+#app.vlex-obsidian .dictionary-live-panel iframe { min-height:390px; height:420px; background:#fff; border:0; width:100%; }
+#app.vlex-obsidian .dictionary-preview-status { padding:10px 14px; border-color:var(--line); color:var(--muted); font-size:12px; }
+#app.vlex-obsidian .dictionary-preview-help { font-size:12px; line-height:1.8; color:var(--muted); padding:14px; }
+#app.vlex-obsidian .dictionary-audit-note { margin:12px; font-size:11px; background:var(--surface); border-color:var(--line); }
+#app.vlex-obsidian .dictionary-content-tabs { border-color:var(--line); font-size:13px; }
+#app.vlex-obsidian[data-workspace="lexicon"] .dictionary-related { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; }
+#app.vlex-obsidian .dictionary-related>.dashboard-panel { padding:20px; margin:0; }.dictionary-related>.daily-panel { display:none; }
+#app.vlex-obsidian .dictionary-related h3 { font-size:14px; }
+#app.vlex-obsidian .dictionary-related .recent-row { font-size:13px; padding:12px 0; border-color:var(--line); }
+#app.vlex-obsidian .dictionary-related .recent-row>span { font-size:12px; }
+#app.vlex-obsidian .dictionary-related .subtle-button { font-size:12px; min-height:40px; }
+.workspace-browse-terms { display:none; }
+/* Guided lessons and tools share the same type, surfaces and action hierarchy. */
+#app.vlex-obsidian .journey { width:100%; max-width:none; margin:30px 0 44px; font-family:var(--app-font); }
+#app.vlex-obsidian .journey h1 { font-size:clamp(27px,3.2vw,40px); line-height:1.5; }
+#app.vlex-obsidian .journey .journey-lead { font-size:19px; line-height:1.95; color:var(--ink); }
+#app.vlex-obsidian .journey-phases { gap:10px; margin:28px 0; }
+#app.vlex-obsidian .journey-phases button { background:var(--surface); border-color:var(--line); color:var(--muted); padding:13px; border-radius:11px; font-size:13px; }
+#app.vlex-obsidian .journey-phases button[aria-current=step] { background:var(--accent-soft); border-color:var(--accent); color:var(--ink); }
+#app.vlex-obsidian .journey-output { background:var(--surface); border:1px solid var(--line); padding:22px; border-radius:14px; }
+#app.vlex-obsidian .journey-concept pre,#app.vlex-obsidian .journey-editor { border:1px solid var(--line); border-radius:13px; }
+#app.vlex-obsidian .journey-editor-heading { background:#242732; border-color:#343849; color:#bfc6d6; }
+#app.vlex-obsidian .journey-editor textarea { font-family:'JetBrains Mono',monospace; }
+#app.vlex-obsidian .journey-workspace { gap:20px; }
+#app.vlex-obsidian :is(.journey-callout,.journey-coach) { background:var(--accent-soft); border-color:var(--accent); }
+#app.vlex-obsidian .journey-error { background:#e78b8b0a; border:1px solid #b9666e; color:#f3b6bc; border-radius:10px; }
+#app.vlex-obsidian[data-theme=light] .journey-error { color:#9c293d; }
+#app.vlex-obsidian .vlex-course,#app.vlex-obsidian .vlex-guided,#app.vlex-obsidian .vlex-explainer { border-color:var(--line); border-radius:16px; background:var(--surface); }
+#app.vlex-obsidian .foundation-tabs button { border-radius:10px; font-size:13px; color:var(--muted); background:var(--surface); border-color:var(--line); }
+#app.vlex-obsidian .foundation-tabs button[aria-current=page] { color:var(--accent); background:var(--accent-soft); border-color:var(--accent); }
+#app.vlex-obsidian .vlp-organizer input,#app.vlex-obsidian .vlp-organizer textarea,#app.vlex-obsidian .vlp-organizer select { border-color:var(--line-strong); background:var(--canvas); color:var(--ink); border-radius:9px; }
+#app.vlex-obsidian .learning-storage-warning { font-size:13px; border-radius:10px; margin-inline:0; }
+/* Preserve the simulator's recognisable blue/red signals and all advanced controls. */
+#app.vlex-obsidian[data-workspace=practice] { --aside-width:0px; }
+#app.vlex-obsidian[data-workspace=practice] .workspace-aside { display:none; }
+#app.vlex-obsidian .tech-simulator { --ink:#e5edfa; --muted:#9fb0cc; border:1px solid #34415c; border-radius:18px; margin:24px 0; overflow:clip; background:#111622; font-family:var(--app-font); }
+#app.vlex-obsidian .tech-topbar { background:#171f2d; border-color:#34415c; box-shadow:none; }
+#app.vlex-obsidian .tech-panel { background:#151d2b; border-color:#34415c; border-radius:12px; box-shadow:none; }
+#app.vlex-obsidian .tech-simulator :is(h2,h3,h4) { color:#e5edfa; }
+#app.vlex-obsidian .simulator-mode-bar { margin:22px 0 0; background:#182336; border-color:#344966; border-radius:13px; }
+#app.vlex-obsidian .tech-simulator button { font-family:var(--app-font); }
+@media(min-width:1181px) and (max-height:820px) { .workspace-aside { padding-top:16px; }.workspace-aside-heading { margin-bottom:16px; }.workspace-create { margin-bottom:16px; }.workspace-tool-nav { margin-bottom:13px; gap:1px; }.workspace-tool-nav>button { min-height:36px; padding-block:6px; }.workspace-aside-footer { padding-top:4px; }.workspace-local { padding:9px; } }
+@media(max-width:1180px) {
+  #app.vlex-obsidian[data-theme][data-workspace] { --aside-width:0px; padding-inline-start:calc(var(--rail-width) + 24px); padding-inline-end:24px; }
+  .workspace-menu { display:grid; place-items:center; width:36px; height:36px; border:1px solid var(--line); border-radius:10px; color:var(--muted); }
+  .workspace-aside { display:none; inset-inline-start:calc(var(--rail-width) + 27px); width:270px; top:90px; bottom:35px; box-shadow:0 20px 70px #0006; z-index:85; }
+  #app.vlex-obsidian .workspace-aside[data-open=true] { display:flex; }
+  .workspace-close { display:block; color:var(--muted); font-size:23px; width:30px; height:30px; }
+  .workspace-backdrop { display:block; position:fixed; inset:0; z-index:75; background:#05070c99; }
+  .workspace-browse-terms { display:flex; gap:9px; align-items:center; border:1px solid var(--line); background:var(--surface); border-radius:9px; padding:8px 13px; color:var(--ink); margin-top:18px; font-size:12px; }
+  .workspace-browse-terms>span { color:var(--muted); font-family:'JetBrains Mono',monospace; }
+  .workspace-tabs>button { padding-inline:12px; font-size:11px; }
+}
+@media(max-width:760px) {
+  #app.vlex-obsidian[data-theme][data-workspace] { --rail-width:0px; padding-inline:20px; margin:0; border:0; border-radius:0; min-height:100vh; padding-bottom:82px; }
+  #app.vlex-obsidian .workspace-topbar { min-height:70px; padding:13px 0; }
+  .workspace-rail { inset-inline:0; top:auto; bottom:0; width:auto; height:72px; border:0; border-top:1px solid var(--line); border-radius:0; padding:5px 12px; background:var(--surface); }
+  .workspace-logo,.workspace-rail-bottom { display:none; }.workspace-rail-links { flex-direction:row; width:100%; gap:4px; }.workspace-rail-links>button { min-height:57px; padding:7px 2px; gap:5px; flex:1; }.workspace-rail-links>button span { font-size:9px; }
+  .workspace-breadcrumb { font-size:11px; }.workspace-breadcrumb>span { padding-inline:4px; }.workspace-topbar-title { gap:8px; }.workspace-tabs { display:none; }.workspace-topbar-actions { gap:7px; }.workspace-avatar { width:28px; height:28px; font-size:14px; }
+  .workspace-topbar-actions>button { width:30px; height:30px; }.workspace-topbar-actions svg { width:18px!important; height:18px!important; }
+  .workspace-aside { inset-inline-start:14px; width:min(290px,calc(100vw - 28px)); top:80px; bottom:86px; padding:18px 16px 12px; }
+  .workspace-aside-heading { margin-bottom:12px; }.workspace-create { margin-bottom:16px; }.workspace-nav-label { margin-block:5px 7px; }.workspace-tool-nav { margin-bottom:15px; gap:2px; }.workspace-tool-nav>button { min-height:36px; padding-block:5px; }
+  .workspace-aside-footer { padding-top:5px; }.workspace-local { padding:9px 11px; }.workspace-local strong { font-size:11px; }.workspace-backup { font-size:11px; padding-block:9px; }.workspace-palette { padding-block:5px; }
+  #app.vlex-obsidian[data-workspace=lexicon] .lexicon-hero { padding-top:27px; }#app.vlex-obsidian[data-workspace=lexicon] .lexicon-hero h2 { font-size:28px; }
+  #app.vlex-obsidian .dictionary-term-card { padding:22px 19px; border-radius:14px; }#app.vlex-obsidian .dictionary-title-row h2 { font-size:27px; }.dictionary-title-actions { flex-wrap:wrap; }
+  #app.vlex-obsidian .dictionary-quick p { font-size:15px; }#app.vlex-obsidian .dictionary-quick pre { padding:17px; font-size:12px; }
+  #app.vlex-obsidian .dictionary-example-grid { grid-template-columns:minmax(0,1fr); }#app.vlex-obsidian[data-workspace=lexicon] .dictionary-related { grid-template-columns:minmax(0,1fr); }
+  #app.vlex-obsidian .journey { margin-top:25px; }#app.vlex-obsidian .journey h1 { font-size:28px; }#app.vlex-obsidian .journey .journey-lead { font-size:17px; }
+  #app.vlex-obsidian .journey-workspace { grid-template-columns:minmax(0,1fr); }#app.vlex-obsidian .journey-output { padding:19px; }
+  #app.vlex-obsidian .settings-page>.dashboard-panel { padding:22px 18px; }.settings-page .theme-options { grid-template-columns:minmax(0,1fr); }
+  #app.vlex-obsidian footer>div { display:grid; justify-content:start; text-align:start; }#app.vlex-obsidian footer>div>div:last-child { flex-wrap:wrap; font-size:10px; gap:8px; }
+}
+@media(prefers-reduced-motion:reduce) { #app.vlex-obsidian * { scroll-behavior:auto!important; transition:none!important; animation:none!important; } }
+/* Learning home — spacious hero, one real next action and small, useful cards. */
+#app.vlex-obsidian .obsidian-home { width:100%; max-width:1140px; margin:0 auto 42px; font-family:var(--app-font); }
+.obsidian-welcome { text-align:center; padding:44px 20px 36px; }
+.obsidian-emblem { position:relative; display:grid; place-items:center; margin:0 auto 22px; width:64px; height:64px; border-radius:20px; background:var(--surface-raised); border:1px solid var(--line-strong); transform:rotate(-8deg); }
+.obsidian-emblem>span { font:600 43px/1 var(--app-font); transform:rotate(8deg); background:linear-gradient(140deg,#8cadff 10%,#d2c6fb 65%,#e2c48d); background-clip:text; -webkit-background-clip:text; color:transparent; }
+.obsidian-emblem>i { position:absolute; width:6px; height:6px; background:var(--accent); border-radius:50%; top:9px; inset-inline-end:-13px; }
+.obsidian-welcome-label { color:var(--accent); font-size:12px; margin-bottom:10px; }
+#app.vlex-obsidian .obsidian-welcome h1 { font-size:clamp(30px,3.1vw,45px); font-weight:600; line-height:1.5; margin:0 0 14px; color:var(--ink); }
+.obsidian-welcome h1>span { background:linear-gradient(100deg,var(--accent),#cfb7ec 80%); background-clip:text; -webkit-background-clip:text; color:transparent; }
+.obsidian-welcome>p:last-child { color:var(--muted); font-size:14px; line-height:1.95; margin:0; }
+.obsidian-resume { display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:35px; align-items:center; padding:26px 30px; border:1px solid var(--line-strong); border-radius:17px; background:linear-gradient(125deg,var(--accent-soft),transparent 70%),var(--surface); }
+.obsidian-section-label { display:inline-flex; align-items:center; gap:8px; color:var(--muted); font-size:12px; }
+.obsidian-live-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); }
+#app.vlex-obsidian .obsidian-resume h2 { margin:10px 0 8px; font-size:24px; font-weight:500; }
+.obsidian-resume-main>p { font-size:12px; color:var(--muted); margin:0; }.obsidian-resume-main>p>span { margin-inline:8px; opacity:.5; }
+.obsidian-resume-actions { display:flex; align-items:center; gap:12px; margin-top:21px; }
+#app.vlex-obsidian .obsidian-resume-actions>.journey-primary { display:flex; justify-content:space-between; gap:32px; padding:10px 19px; min-width:175px; font-size:14px; }
+#app.vlex-obsidian .obsidian-track-select select { padding:10px 13px; border:1px solid var(--line); background:transparent; font-size:12px; border-radius:10px; min-height:44px; color:var(--muted); }
+#app.vlex-obsidian .obsidian-home .journey-progress { padding-inline-start:30px; border-inline-start:1px solid var(--line); }
+.obsidian-home .journey-progress>div { display:flex; align-items:center; justify-content:space-between; gap:20px; }.obsidian-home .journey-progress>div>span { color:var(--muted); font-size:12px; }
+.obsidian-home .journey-progress strong { font:500 31px/1.4 'JetBrains Mono',monospace; color:var(--accent); }.obsidian-home .journey-progress strong>small { font-size:15px; margin-inline-start:3px; }
+#app.vlex-obsidian .obsidian-home progress { height:5px; background:var(--line); border:0; border-radius:10px; overflow:hidden; margin:18px 0 10px; accent-color:var(--accent); }
+.obsidian-home progress::-webkit-progress-bar { background:var(--line); border-radius:10px; }.obsidian-home progress::-webkit-progress-value { background:var(--accent); border-radius:10px; }
+.obsidian-home .journey-progress p { font-size:11px; line-height:1.8; margin:0; }
+.obsidian-section-heading { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:18px; }
+#app.vlex-obsidian .obsidian-section-heading h2 { font-size:20px; margin:5px 0 0; font-weight:500; }
+.obsidian-small-pill { color:var(--muted); padding:4px 11px; border:1px solid var(--line); border-radius:8px; font:11px/1.7 'JetBrains Mono',monospace; }
+#app.vlex-obsidian .obsidian-map { padding:32px 0 24px; }
+#app.vlex-obsidian .obsidian-map ol { gap:14px; margin:0; }
+#app.vlex-obsidian .obsidian-map li { position:relative; border:1px solid var(--line); border-radius:14px; background:var(--surface); padding:20px; overflow:hidden; min-height:162px; }
+#app.vlex-obsidian .obsidian-map li.is-current { border-color:var(--line-strong); background:linear-gradient(140deg,var(--accent-soft),transparent 70%),var(--surface); }
+.obsidian-map-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:19px; color:var(--muted); font-size:10px; gap:9px; }
+.obsidian-lesson-symbol { color:var(--accent); display:grid; place-items:center; width:31px; height:31px; border:1px solid var(--line); border-radius:9px; background:var(--canvas); }
+#app.vlex-obsidian .obsidian-map li>button { display:flex; align-items:center; justify-content:space-between; gap:10px; width:100%; text-align:start; font:500 15px/1.8 var(--app-font); padding:0; min-height:32px; color:var(--ink); }
+.obsidian-map li>button>span { color:var(--muted); font-weight:400; }.obsidian-map li>p { color:var(--muted); margin-top:8px; font-size:11px; line-height:1.8; }
+#app.vlex-obsidian .obsidian-map li>.obsidian-map-number { position:absolute; inset-inline-end:16px; bottom:11px; color:var(--line-strong); font:11px/1.5 'JetBrains Mono',monospace; }
+#app.vlex-obsidian .obsidian-tools { padding:7px 0 25px; }.obsidian-muted { color:var(--muted); font-size:12px; }
+#app.vlex-obsidian .obsidian-tools>div:last-child { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+#app.vlex-obsidian .obsidian-tools button { display:flex; gap:12px; align-items:center; text-align:start; background:var(--surface); padding:17px; border:1px solid var(--line); border-radius:12px; min-height:76px; color:var(--ink); font-size:13px; }
+.obsidian-tools button>svg,.obsidian-tool-letter { color:var(--accent); }.obsidian-tools button>span:last-child { margin-inline-start:auto; color:var(--muted); font-size:13px; }.obsidian-tools button small { display:block; margin-top:4px; color:var(--muted); font-size:10px; }
+.obsidian-tool-letter { font:500 16px/1 'JetBrains Mono',monospace; width:20px; }
+.obsidian-practice-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; margin:5px 0 28px; }
+#app.vlex-obsidian .obsidian-project,#app.vlex-obsidian .obsidian-daily { display:block; padding:25px; border:1px solid var(--line); border-radius:15px; background:var(--surface); margin:0; }
+#app.vlex-obsidian .obsidian-practice-grid h2 { font-size:22px; font-weight:500; margin:13px 0 10px; }
+.obsidian-practice-grid p { font-size:13px; color:var(--muted); line-height:1.95; }
+#app.vlex-obsidian .obsidian-practice-grid button { width:auto; padding:9px 14px; border:1px solid var(--line-strong); border-radius:9px; font-size:12px; margin-top:20px; background:transparent; color:var(--ink); display:flex; align-items:center; gap:22px; }
+.obsidian-project-steps { display:flex; align-items:center; gap:10px; margin-top:24px; padding-top:18px; border-top:1px solid var(--line); font:10px/1.6 'JetBrains Mono',monospace; color:var(--muted); direction:ltr; }.obsidian-project-steps i { height:1px; flex:1; background:var(--line); }
+#app.vlex-obsidian .obsidian-secondary { border:1px solid var(--line); border-radius:12px; background:var(--surface); padding:14px 20px; color:var(--muted); font-size:13px; }
+.obsidian-secondary>summary { display:flex; align-items:center; gap:10px; list-style:none; }.obsidian-secondary>summary>span { margin-inline-start:auto; color:var(--muted); font-size:18px; }.obsidian-secondary[open]>summary>span { transform:rotate(45deg); }
+.obsidian-secondary .journey-secondary-links { gap:10px; }.obsidian-secondary button { background:var(--canvas); border-color:var(--line); font-size:12px; border-radius:9px; }
+@media(max-width:760px) {
+  .obsidian-welcome { padding:35px 0 28px; }.obsidian-emblem { width:52px; height:52px; border-radius:16px; margin-bottom:18px; }.obsidian-emblem>span { font-size:35px; }
+  #app.vlex-obsidian .obsidian-welcome h1 { font-size:29px; }.obsidian-welcome h1>span { display:block; }.obsidian-welcome>p:last-child { font-size:13px; }.obsidian-welcome-label { font-size:11px; }
+  .obsidian-resume { grid-template-columns:minmax(0,1fr); padding:23px 20px; gap:22px; border-radius:14px; }#app.vlex-obsidian .obsidian-resume h2 { font-size:21px; }
+  .obsidian-resume-actions { flex-wrap:wrap; gap:10px; }#app.vlex-obsidian .obsidian-resume-actions>.journey-primary { min-width:0; flex:1; gap:17px; padding:9px 14px; width:auto; font-size:13px; }#app.vlex-obsidian .obsidian-track-select { flex:1; min-width:0; }#app.vlex-obsidian .obsidian-track-select select { width:100%; font-size:11px; }
+  #app.vlex-obsidian .obsidian-home .journey-progress { padding-inline-start:0; border-inline-start:0; padding-top:19px; border-top:1px solid var(--line); }.obsidian-home .journey-progress strong { font-size:23px; }.obsidian-home .journey-progress p br { display:none; }
+  #app.vlex-obsidian .obsidian-map li { display:block; padding:17px 19px; min-height:146px; }.obsidian-map-top { margin-bottom:11px; }.obsidian-section-label { font-size:11px; }#app.vlex-obsidian .obsidian-section-heading h2 { font-size:20px; }
+  #app.vlex-obsidian .obsidian-tools>div:last-child { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:10px; }#app.vlex-obsidian .obsidian-tools button { padding:14px 12px; gap:9px; font-size:12px; }#app.vlex-obsidian .obsidian-tools button>span:last-child { display:none; }.obsidian-tools button small { font-size:9px; }
+  .obsidian-tools .obsidian-section-heading>.obsidian-muted { display:none; }.obsidian-practice-grid { grid-template-columns:minmax(0,1fr); gap:15px; }#app.vlex-obsidian .obsidian-project,#app.vlex-obsidian .obsidian-daily { padding:23px 21px; }.obsidian-practice-grid p { font-size:14px; }
+  #app.vlex-obsidian .obsidian-practice-grid button { width:100%; justify-content:space-between; padding:11px 14px; }.obsidian-secondary>summary { font-size:12px; }
+}
+#app.vlex-obsidian .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+#app.vlex-obsidian :is(.vlex-css-lab,.vlx-js-lab,.vlex-explainer,.vlex-course) { font-family:var(--app-font); padding-inline:0; }
+#app.vlex-obsidian :is(.vlx-js-toolbar,.vlex-css-notice,.vlex-explain-limits,.vlex-explain-toolbar) { background:var(--surface); border-color:var(--line); border-radius:12px; }
+#app.vlex-obsidian :is(.vlx-js-editor,.vlx-js-observation,.vlx-js-console,.vlex-css-controls,.vlex-css-stage,.vlex-explain-line,.vlex-token-detail) { border:1px solid var(--line); border-radius:13px; background:var(--surface); }
+#app.vlex-obsidian :is(.vlx-js-limits,.vlx-js-warning) { padding:17px 21px; border-radius:10px; background:var(--accent-soft); border-color:var(--accent); color:var(--muted); line-height:1.95; }
+#app.vlex-obsidian .vlx-js-grid { gap:20px; }
+#app.vlex-obsidian .vlx-js-editor textarea { border-color:#373e4d; }
+#app.vlex-obsidian :is(.vlex-css-lab,.vlx-js-lab,.vlex-explainer) h2 { font-size:28px; font-weight:500; }
+#app.vlex-obsidian :is(.vlex-css-lab,.vlx-js-lab,.vlex-explainer) h3 { font-weight:500; font-size:16px; }
+#app.vlex-obsidian .vlx-js-toolbar { display:flex; gap:9px; padding:14px; border:1px solid var(--line); }
+#app.vlex-obsidian :is(.vlx-js-toolbar,.vlex-css-actions) button { font-size:12px; border-radius:9px; }
+#app.vlex-obsidian .vlex-explainer .vlex-explain-primary { color:#fff; background:var(--accent-solid); border-color:var(--accent-solid); font-weight:500; }
+@media(max-width:1100px) {
+  #app.vlex-obsidian :is(.journey-workspace,.vlx-js-grid,.vlex-explain-workspace,.vlex-css-grid) { grid-template-columns:minmax(0,1fr); }
+  #app.vlex-obsidian .vlex-css-controls { position:static; }
+}
+#app.vlex-obsidian[data-theme][data-workspace=practice] { --aside-width:0px; }
+#app.vlex-obsidian .tech-simulator .tech-topbar { background:#171f2d; box-shadow:none; border-color:#34415c; }
+#app.vlex-obsidian .tech-simulator .tech-logo { min-width:180px; }
+#app.vlex-obsidian .tech-simulator .tech-logo strong { font-size:23px; font-weight:500; text-shadow:none; }
+#app.vlex-obsidian .tech-simulator .tech-node { box-shadow:none; border-radius:12px; }
+
+#app.vlex-obsidian>main { animation:none; }
+#app.vlex-obsidian[data-theme=light] .obsidian-welcome h1>span { background-image:linear-gradient(100deg,#315fc8,#7955b1); }
+#app.vlex-obsidian[data-theme=light] .dictionary-toolbar input[type=text] { background:var(--surface)!important; color:var(--ink)!important; }
+#app.vlex-obsidian .tech-topbar nav[aria-label="مساحات الموقع"] { display:none; }
+#app.vlex-obsidian .dictionary-preview-error { margin:12px; padding:15px; color:#f3b6bc; background:#b7526510; border:1px solid #b9666e; border-radius:10px; font:13px/1.9 var(--app-font); }
+#app.vlex-obsidian .dictionary-preview-error strong { font-weight:500; }
+#app.vlex-obsidian .dictionary-preview-error p { font-size:12px; margin:8px 0; }
+#app.vlex-obsidian .dictionary-preview-error summary { cursor:pointer; font-size:12px; padding:6px 0; }
+#app.vlex-obsidian .dictionary-preview-error pre { white-space:pre-wrap; overflow-wrap:anywhere; font:12px/1.9 'JetBrains Mono',monospace; padding-top:10px; }
+#app.vlex-obsidian[data-theme=light] .dictionary-preview-error { color:#922b43; background:#fff6f7; }
+#app.vlex-obsidian .dictionary-preview-messages { margin:12px; padding:13px 15px; background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:9px; max-height:190px; overflow:auto; }
+#app.vlex-obsidian .dictionary-console-heading { display:block; font:500 11px/1.8 var(--app-font); color:var(--muted); margin-bottom:8px; }
+#app.vlex-obsidian .dictionary-preview-messages p { font:12px/1.9 'JetBrains Mono',monospace; white-space:pre-wrap; overflow-wrap:anywhere; }
+#app.vlex-obsidian .dictionary-preview-messages [data-level=error] { color:#f6a6ae; }#app.vlex-obsidian .dictionary-preview-messages [data-level=warn] { color:#e5be7d; }
+#app.vlex-obsidian[data-theme=light] .dictionary-preview-messages [data-level=error] { color:#a12c45; }#app.vlex-obsidian[data-theme=light] .dictionary-preview-messages [data-level=warn] { color:#856022; }

@@ -1,0 +1,68 @@
+{
+  "passed": 15,
+  "total": 15,
+  "rows": [
+    {
+      "name": "plain CSS comment mentioning @import is valid and changes actual color",
+      "passed": true
+    },
+    {
+      "name": "quoted @import text in CSS content is not an import rule",
+      "passed": true
+    },
+    {
+      "name": "actual and escaped external imports are rejected before any network request",
+      "passed": true
+    },
+    {
+      "name": "Vue scoped style uses the same safe parsed import check without rejecting comments",
+      "passed": true
+    },
+    {
+      "name": "visible preview entry opens the collapsed editor and actually renders HTML",
+      "passed": true
+    },
+    {
+      "name": "native typing remains LTR and Ctrl+Enter executes the edited JavaScript",
+      "passed": true
+    },
+    {
+      "name": "JavaScript syntax errors show the reliable original line and preserve original message",
+      "passed": true
+    },
+    {
+      "name": "runtime errors keep the real reason without inventing a source line",
+      "passed": true
+    },
+    {
+      "name": "Vue ref and pointer events run in the real isolated component",
+      "passed": true
+    },
+    {
+      "name": "editing marks previous result stale until a fresh real run",
+      "passed": true
+    },
+    {
+      "name": "cancelling restore preserves exact edited source",
+      "passed": true
+    },
+    {
+      "name": "confirmed restore resets this format only without modifying audited source or other drafts",
+      "passed": true
+    },
+    {
+      "name": "selection stops the old session and clears its error status",
+      "passed": true
+    },
+    {
+      "name": "reload restores dictionary draft and format without automatically running it",
+      "passed": true
+    },
+    {
+      "name": "parent remains isolated and code-looking console strings remain text",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "external": []
+}
