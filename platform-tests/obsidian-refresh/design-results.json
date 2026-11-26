@@ -64,7 +64,11 @@
       "scroll": 1440,
       "font": "\"IBM Plex Sans Arabic\", Alexandria, sans-serif",
       "title": "مساحتك / المحاكي",
-      "passed": true
+      "passed": true,
+      "diagram": {
+        "width": 294.40625,
+        "height": 350
+      }
     },
     {
       "mode": "home",

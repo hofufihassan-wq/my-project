@@ -23,7 +23,7 @@ body { background:#090a0e!important; }
 #app.vlex-obsidian button,#app.vlex-obsidian input,#app.vlex-obsidian select,#app.vlex-obsidian summary { font-family:var(--app-font); }
 #app.vlex-obsidian :is(h1,h2,h3,h4) { letter-spacing:0; font-weight:600; color:var(--ink); }
 #app.vlex-obsidian :is(button,a,input,textarea,select,summary):focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
-#app.vlex-obsidian svg { width:20px; height:20px; flex-shrink:0; fill:none; stroke:currentColor; stroke-width:1.65; stroke-linecap:round; stroke-linejoin:round; }
+#app.vlex-obsidian svg:has(>use), #app.vlex-obsidian :is(.workspace-rail,.workspace-aside,.workspace-topbar,.dictionary-toolbar) svg { width:20px; height:20px; flex-shrink:0; fill:none; stroke:currentColor; stroke-width:1.65; stroke-linecap:round; stroke-linejoin:round; }
 #app.vlex-obsidian .icon-definitions { width:0; height:0; }
 #app.vlex-obsidian .learning-launcher { display:none; }
 #app.vlex-obsidian :is(.text-white,.text-slate-100,.text-slate-200):not(.dictionary-studio *,.tech-simulator *,.vlex-code-shell *,.vlex-code-view *) { color:var(--ink); }
