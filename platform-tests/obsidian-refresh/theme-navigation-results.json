@@ -1,0 +1,36 @@
+{
+  "passed": 7,
+  "total": 7,
+  "combinations": 240,
+  "rows": [
+    {
+      "name": "new font loads locally and is actually available after WOFF2 conversion",
+      "passed": true
+    },
+    {
+      "name": "all 5 themes and 3 viewport sizes fit all 16 primary and advanced workspaces",
+      "passed": true
+    },
+    {
+      "name": "primary action text maintains at least 4.5:1 contrast in all five themes",
+      "passed": true
+    },
+    {
+      "name": "keyboard can use and leave the mobile drawer without focus falling behind it",
+      "passed": true
+    },
+    {
+      "name": "dictionary category and actual term buttons select content and close drawer on mobile",
+      "passed": true
+    },
+    {
+      "name": "theme and active lesson drafts keep their prior storage format and restore after reload",
+      "passed": true
+    },
+    {
+      "name": "no parent exceptions during route or theme changes",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

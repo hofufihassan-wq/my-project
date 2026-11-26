@@ -53,6 +53,7 @@ elif mode == 'lock-css':
     print('Recorded CSS build hash.')
 elif mode == 'verify':
     files = [file for package in manifest['packages'] for file in package['files']]
+    files.extend(manifest.get('additional_assets', []))
     files.append(manifest['generated_css'])
     if 'generated_compiler' in manifest:
         files.append(manifest['generated_compiler'])

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>V Lex Pro — مساحتك الشخصية لتعلّم تطوير الويب</title>
   <meta name="description" content="منصة محلية لتعلّم HTML وCSS وJavaScript وVue 3، مع قاموس برمجي وشروح محلية ومختبرات ومشاريع عملية وحفظ ونسخ احتياطي للتقدم.">
-  <meta name="theme-color" content="#020420">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300DC82'><path d='M12 2L2 19.5h5l5-9 5 9h5z'/></svg>">
+  <meta name="theme-color" content="#101116">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/vlex-mark.svg">
 
   <!-- Pinned local runtime assets; no CDN requests during application startup. -->
   <link rel="stylesheet" href="assets/fonts/alexandria/index.css">
@@ -37,10 +37,12 @@
   <link rel="stylesheet" href="emerald-dashboard.css">
   <link rel="stylesheet" href="learning-refinement.css">
   <link rel="stylesheet" href="learning-journey.css">
+  <link rel="stylesheet" href="assets/fonts/ibm-plex-arabic/index.css">
+  <link rel="stylesheet" href="obsidian-workspace.css">
 </head>
 <body class="bg-[#020420] text-slate-100 min-h-screen selection:bg-[#00DC82]/30 selection:text-emerald-300 antialiased">
 
-<div id="app" v-cloak class="min-h-screen flex flex-col relative overflow-x-hidden">
+<div id="app" v-cloak class="vlex-obsidian min-h-screen flex flex-col relative overflow-x-hidden">
 
   <!-- Toast Notification System -->
   <transition
@@ -109,33 +111,38 @@
     <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1Z"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></symbol>
   </defs></svg>
-  <header class="site-header sticky top-0 z-40 w-full">
-    <div class="site-header-inner">
-      <button class="brand select-none" @click="setAppMode('home')" aria-label="VueLexicon — الرئيسية">
-        <span class="brand-mark" aria-hidden="true">V</span>
-        <span class="brand-copy"><strong dir="ltr">V Lex Pro</strong><small>مساحتك لتعلّم تطوير الويب</small></span>
-      </button>
-      <nav class="main-nav" aria-label="التنقل الرئيسي">
-        <button data-testid="nav-home" @click="setAppMode('home')" :aria-current="appMode === 'home' ? 'page' : undefined">الرئيسية</button>
-        <button data-testid="nav-lexicon" @click="setAppMode('lexicon')" :aria-current="appMode === 'lexicon' ? 'page' : undefined">القاموس <span class="nav-legacy-label">المعجم</span></button>
-        <button data-testid="nav-training" @click="openTraining" :aria-current="appMode === 'practice' && practiceSurface === 'training' ? 'page' : undefined">التدريب العملي</button>
-        <button data-testid="nav-simulator" @click="openVisualSimulator" :aria-current="appMode === 'practice' && practiceSurface === 'simulator' ? 'page' : undefined">المحاكي</button>
-        <button @click="openFoundation('projects')" :aria-current="appMode === 'foundation' ? 'page' : undefined">المشاريع</button>
-      </nav>
-      <div class="header-actions">
-        <button @click="setTheme(theme === 'green' ? 'glass' : 'green')" title="تبديل الثيم" aria-label="تبديل الثيم"><svg><use href="#i-sun"/></svg></button>
-        <button @click="setCategory('bookmarks'); setAppMode('lexicon')" title="عرض المفضلة" class="bookmark-action"><svg><use href="#i-star"/></svg><span>{{ bookmarkedIds.size }}</span></button>
-        <button @click="showProgressModal = true" title="سجل التعلّم، التقدم والنسخ الاحتياطي" aria-label="تعلّمي والنسخ الاحتياطي"><svg><use href="#i-note"/></svg></button>
-        <button @click="showShortcutsModal = true" title="اختصارات لوحة المفاتيح" aria-label="اختصارات لوحة المفاتيح">⌨</button>
-        <button data-testid="nav-settings" @click="setAppMode('settings')" title="الإعدادات" :aria-current="appMode === 'settings' ? 'page' : undefined"><svg><use href="#i-settings"/></svg></button>
-      </div>
+  <nav class="workspace-rail" aria-label="التنقل الرئيسي">
+    <button class="workspace-logo" @click="workspaceNavigate('home')" aria-label="V Lex Pro — الرئيسية"><span>V</span></button>
+    <div class="workspace-rail-links">
+      <button data-testid="nav-home" @click="workspaceNavigate('home')" :aria-current="appMode==='home'?'page':undefined" aria-label="الرئيسية"><svg><use href="#i-home"/></svg><span>الرئيسية</span></button>
+      <button data-testid="nav-course-rail" @click="workspaceNavigate('learn')" :aria-current="['learn','guided','arrow','course'].includes(appMode)?'page':undefined" aria-label="تعلّم معي"><svg><use href="#i-book"/></svg><span>تعلّم</span></button>
+      <button data-testid="nav-lexicon" @click="workspaceNavigate('lexicon')" :aria-current="appMode==='lexicon'?'page':undefined" aria-label="القاموس"><svg><use href="#i-grid"/></svg><span>القاموس</span></button>
+      <button data-testid="nav-simulator" @click="workspaceNavigate('simulator')" :aria-current="appMode==='practice'&&practiceSurface==='simulator'?'page':undefined" aria-label="المحاكي"><svg><use href="#i-monitor"/></svg><span>المحاكي</span></button>
+      <button data-testid="nav-training" @click="workspaceNavigate('training')" :aria-current="appMode==='practice'&&practiceSurface==='training'?'page':undefined" aria-label="التدريب العملي"><svg><use href="#i-code"/></svg><span>التدريب</span></button>
+      <button data-testid="nav-projects" @click="workspaceNavigate('projects')" :aria-current="appMode==='foundation'&&foundationSection==='projects'?'page':undefined" aria-label="المشاريع"><svg><use href="#i-folder"/></svg><span>المشاريع</span></button>
     </div>
-    <nav class="mobile-nav" aria-label="التنقل للجوال">
-      <button data-testid="nav-home" @click="setAppMode('home')" :aria-current="appMode === 'home' ? 'page' : undefined"><svg><use href="#i-home"/></svg>الرئيسية</button>
-      <button data-testid="nav-lexicon" @click="setAppMode('lexicon')" :aria-current="appMode === 'lexicon' ? 'page' : undefined"><svg><use href="#i-book"/></svg>المعجم</button>
-      <button data-testid="nav-training" @click="openTraining" :aria-current="appMode === 'practice' && practiceSurface === 'training' ? 'page' : undefined"><svg><use href="#i-code"/></svg>التدريب</button>
-      <button data-testid="nav-simulator" @click="openVisualSimulator" :aria-current="appMode === 'practice' && practiceSurface === 'simulator' ? 'page' : undefined"><svg><use href="#i-monitor"/></svg>المحاكي</button>
-    </nav>
+    <div class="workspace-rail-bottom"><button @click="showShortcutsModal=true" aria-label="اختصارات لوحة المفاتيح" title="اختصارات لوحة المفاتيح">⌘</button><button data-testid="nav-settings" @click="workspaceNavigate('settings')" aria-label="الإعدادات" title="الإعدادات"><svg><use href="#i-settings"/></svg></button></div>
+  </nav>
+  <button v-if="workspaceNavOpen" class="workspace-backdrop" @click="workspaceNavOpen=false" aria-label="إغلاق قائمة المساحة"></button>
+  <aside class="workspace-aside" id="workspace-navigation" :data-open="workspaceNavOpen" :role="workspaceNavOpen?'dialog':undefined" :aria-modal="workspaceNavOpen?'true':undefined" @keydown.tab="workspaceTrapFocus" @keydown.esc.stop.prevent="workspaceNavOpen=false" aria-label="مساحتك التعليمية">
+    <div class="workspace-aside-heading"><div><strong dir="ltr">V Lex Pro<span class="workspace-version">مساحتك</span></strong><p>مساحة صغيرة. معرفة أوسع.</p></div><button class="workspace-close" @click="workspaceNavOpen=false" aria-label="إغلاق القائمة">×</button></div>
+    <button class="workspace-create" @click="workspaceNavigate('learn')"><svg><use href="#i-code"/></svg><span>أكمل تعلّمي</span><span>↗</span></button>
+    <template v-if="appMode==='lexicon'">
+      <div class="workspace-library-heading"><h2>مكتبة المفاهيم</h2><span>{{filteredTermsList.length}}</span></div>
+      <label class="workspace-category-label">تصفح القسم<select :value="activeCategory" @change="setCategory($event.target.value)" data-testid="workspace-dictionary-category"><option v-for="cat in categoriesList" :key="cat.id" :value="cat.id">{{cat.label}} · {{getCategoryCount(cat.id)}}</option></select></label>
+      <nav class="workspace-term-index" aria-label="فهرس مصطلحات القاموس"><button v-for="item in filteredTermsList" :key="item.id" :aria-current="selectedTerm?.id===item.id?'page':undefined" @click="workspaceSelectTerm(item)" :data-term="item.id"><span><strong dir="ltr">{{item.term}}</strong><small>{{item.arabicTitle}}</small></span><span class="workspace-term-state">{{isBookmarked(item.id)?'★':'↗'}}</span></button><div v-if="!filteredTermsList.length" class="workspace-index-empty"><p>لم نجد مصطلحًا مطابقًا.</p><button @click="resetFilters">مسح الفلاتر</button></div></nav>
+    </template>
+    <template v-else>
+      <p class="workspace-nav-label">مساحتك التعليمية</p>
+      <nav class="workspace-tool-nav" aria-label="أدوات التعلم"><button data-testid="nav-course" @click="workspaceNavigate('learn')" :aria-current="appMode==='learn'?'page':undefined"><svg><use href="#i-book"/></svg><span>تعلّم خطوة بخطوة</span><small>←</small></button><button @click="workspaceNavigate('taskJourney')" :aria-current="appMode==='taskJourney'?'page':undefined"><svg><use href="#i-folder"/></svg><span>مدير المهام التفاعلي</span></button><button data-testid="nav-explain" @click="workspaceNavigate('explain')" :aria-current="appMode==='explain'?'page':undefined"><svg><use href="#i-code"/></svg><span>اشرح لي الكود</span></button><button data-testid="nav-js-lab" @click="workspaceNavigate('jsLab')" :aria-current="appMode==='jsLab'?'page':undefined"><span class="workspace-language-icon">JS</span><span>مختبر JavaScript</span></button><button data-testid="nav-css-lab" @click="workspaceNavigate('cssLab')" :aria-current="appMode==='cssLab'?'page':undefined"><span class="workspace-language-icon">#</span><span>مختبر CSS</span></button></nav>
+      <p class="workspace-nav-label">تنظيمك الشخصي</p><nav class="workspace-tool-nav" aria-label="أدوات التنظيم"><button @click="workspaceNavigate('notes')"><svg><use href="#i-note"/></svg><span>ملاحظاتي</span></button><button @click="workspaceNavigate('calendar')"><svg><use href="#i-calendar"/></svg><span>تقويمي</span></button><button @click="setCategory('bookmarks');workspaceNavigate('lexicon')"><svg><use href="#i-star"/></svg><span>المصطلحات المحفوظة</span><small>{{bookmarkedIds.size}}</small></button></nav>
+    </template>
+    <div class="workspace-aside-footer"><div class="workspace-palette" role="group" aria-label="الثيمات"><button v-for="option in [{id:'petroleum',name:'الليلي الأزرق'},{id:'green',name:'الأخضر'},{id:'purple',name:'البنفسجي'},{id:'glass',name:'الزجاجي'},{id:'light',name:'الفاتح'}]" :key="option.id" :data-palette="option.id" :aria-label="option.name" :aria-pressed="theme===option.id" @click="setTheme(option.id)"><span></span></button></div><button class="workspace-backup" @click="workspaceNavigate('settings')"><svg><use href="#i-settings"/></svg><span>الإعدادات والنسخ الاحتياطية</span></button><div class="workspace-local"><span class="workspace-local-icon"><svg><use href="#i-folder"/></svg></span><div><strong>مساحتك الشخصية</strong><small>{{learningStatus.persistent?'حفظ محلي على هذا المتصفح':'راجع تنبيه الحفظ'}}</small></div><span :class="{'is-warning':!learningStatus.persistent}" class="workspace-status-dot"></span></div></div>
+  </aside>
+  <header class="workspace-topbar site-header">
+    <div class="workspace-topbar-title"><button class="workspace-menu" @click="workspaceNavOpen=!workspaceNavOpen" :aria-expanded="workspaceNavOpen" aria-controls="workspace-navigation" aria-label="فتح قائمة المساحة" data-testid="workspace-menu"><svg><use href="#i-grid"/></svg></button><span class="workspace-breadcrumb">مساحتك <span>/</span> <strong>{{workspaceTitle}}</strong></span></div>
+    <nav class="workspace-tabs" aria-label="مساحات سريعة"><button @click="workspaceNavigate('learn')" :aria-current="['learn','home'].includes(appMode)?'page':undefined"><svg><use href="#i-book"/></svg>تعلّم معي</button><button @click="workspaceNavigate('lexicon')" :aria-current="appMode==='lexicon'?'page':undefined"><svg><use href="#i-grid"/></svg>القاموس</button><button @click="workspaceNavigate('simulator')" :aria-current="appMode==='practice'?'page':undefined"><svg><use href="#i-code"/></svg>جرّب كودك</button></nav>
+    <div class="workspace-topbar-actions"><button @click="workspaceNavigate('lexicon');$nextTick(()=>searchInputRef?.focus())" aria-label="البحث في القاموس" title="البحث في القاموس"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button><button @click="workspaceNavigate('settings')" aria-label="الإعدادات والمظهر"><svg><use href="#i-settings"/></svg></button><span class="workspace-avatar" aria-hidden="true">V</span></div>
   </header>
   <nav v-if="appMode !== 'practice' && appMode !== 'home' && appMode !== 'learn'" class="learning-launcher" aria-label="أدوات التعلّم">
     <button data-testid="nav-course" @click="openLearning('learn')" :aria-current="appMode === 'learn' ? 'page' : undefined">تعلّم معي</button>
@@ -230,7 +237,7 @@
     <vlex-learning-projects v-if="foundationSection === 'projects'" @open="openGuidedUnit"></vlex-learning-projects>
     <vlex-organizer :mode="foundationSection === 'explain' ? 'notes' : foundationSection" @learn="openLearning('course')" />
   </main>
-  <section v-if="appMode === 'lexicon'" class="lexicon-hero"><span class="eyebrow">تعلّم · استكشف · أتقن</span><h2><svg><use href="#i-book"/></svg>القاموس</h2><p>موسوعة مصطلحات وتقنيات تطوير الويب الحديثة</p><span class="hero-caption">كل مصطلح هنا، خطوة أقرب للفهم.</span></section>
+  <section v-if="appMode === 'lexicon'" class="lexicon-hero"><span class="eyebrow">مرجعك، حين تحتاجه</span><h2><svg><use href="#i-book"/></svg>القاموس</h2><p>افهم المصطلح، اقرأ مثاله، ثم جرّبه بنفسك.</p><button class="workspace-browse-terms" @click="workspaceNavOpen=true"><svg><use href="#i-book"/></svg>تصفح المصطلحات <span>{{filteredTermsList.length}}</span></button></section>
   <!-- ==================================================== -->
   <!-- 2. SEARCH & DIRECTORY TOOLBAR (البحث والفهرس الأبجدي) -->
   <!-- ==================================================== -->
@@ -241,12 +248,14 @@
       <div class="relative flex items-center">
         <!-- Emerald Magnifying Glass (Right Icon) -->
         <span class="absolute right-4 text-[#00DC82] text-lg pointer-events-none select-none">
-          🔍
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
         </span>
 
         <!-- Input Field with Natural Mixed Arabic/English Direction and clean parentheses -->
         <input
           ref="searchInputRef"
+          aria-label="ابحث في القاموس"
+          data-testid="dictionary-search"
           type="text"
           v-model="searchQuery"
           @focus="searchFocused = true"
@@ -1764,7 +1773,7 @@
   <!-- ==================================================== -->
   <main v-if="appMode === 'practice' && practiceSurface === 'simulator'" class="tech-simulator" :data-simple="simulatorBeginner" :data-lesson-source="hasJourneySimulatorSource" :data-motion="techMotion ? 'on' : 'off'" :data-focus="techFocusPanel" :data-custom-layout="techAnyHidden" :data-compact-panel="techCompactPanel" :data-dragging="techDragging" :data-state="executionState" :style="{ '--beta-editor-height': techEditorHeight + 'px', '--beta-preview-height': techPreviewHeight + 'px', '--final-console-height': techConsoleHeight + 'px', '--beta-editor-width': techEditorWidth + 'fr', '--beta-preview-width': (70 - techEditorWidth) + 'fr' }">
     <header class="tech-topbar" dir="ltr">
-      <button class="tech-logo" @click="setAppMode('home')" aria-label="VueLexicon — الرئيسية"><svg class="tech-v-mark" viewBox="0 0 48 42" aria-hidden="true"><path d="M1 2h11l12 21L36 2h11L24 42Z" fill="#26dff0"/><path d="M12 2h9l3 6 3-6h9L24 23Z" fill="#0478a0"/></svg><strong>VueLexicon</strong></button>
+      <button class="tech-logo" @click="setAppMode('home')" aria-label="VueLexicon — الرئيسية"><svg class="tech-v-mark" viewBox="0 0 48 42" aria-hidden="true"><path d="M1 2h11l12 21L36 2h11L24 42Z" fill="#26dff0"/><path d="M12 2h9l3 6 3-6h9L24 23Z" fill="#0478a0"/></svg><strong>V Lex Pro</strong></button>
       <nav aria-label="مساحات الموقع"><button @click="setAppMode('home')">الرئيسية</button><button @click="setAppMode('lexicon')">القاموس<span class="nav-legacy-label">المعجم</span></button><button @click="openTraining">التدريب العملي</button><button class="is-active" aria-current="page">المحاكي</button><button @click="openFoundation('projects')">المشاريع</button></nav>
       <button class="tech-search" @click="setAppMode('lexicon')"><svg><use href="#i-book"/></svg><span>ابحث عن مفهوم في القاموس...</span><kbd>⌘ K</kbd></button>
       <div class="tech-top-tools"><button @click="techToggleMotion" :aria-pressed="techMotion" title="تفعيل أو إيقاف الحركة الزخرفية">✧</button><button @click="showProgressModal = true" title="سجل التعلّم، التقدم والنسخ الاحتياطي"><svg><use href="#i-note"/></svg></button><button @click="setAppMode('settings')" title="الإعدادات"><svg><use href="#i-settings"/></svg></button><button @click="setCategory('bookmarks'); setAppMode('lexicon')" title="عرض المفضلة"><svg><use href="#i-star"/></svg></button><button @click="showShortcutsModal = true" title="اختصارات لوحة المفاتيح">⌨</button><span class="tech-avatar" aria-label="مساحة تعلم محلية">V</span></div>
@@ -2458,7 +2467,7 @@
   <footer class="mt-auto border-t border-white/10 bg-[#020420]/80 py-6 relative z-10 text-xs text-slate-500 text-center">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="text-white font-bold">VueLexicon Pro</span>
+        <span class="text-white font-bold">V Lex Pro</span>
         <span>— معجم ومرجع برمجي ومسارات تدريب عملي تفاعلية</span>
       </div>
       <div class="flex items-center gap-3 font-mono text-[11px]">

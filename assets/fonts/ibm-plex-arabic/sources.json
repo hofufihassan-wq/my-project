@@ -1,0 +1,32 @@
+{
+  "family": "IBM Plex Sans Arabic",
+  "stylesheet": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap",
+  "license": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansarabic/OFL.txt",
+  "files": [
+    {
+      "file": "plex-arabic-0.woff2",
+      "source": "https://fonts.gstatic.com/s/ibmplexsansarabic/v15/Qw3CZRtWPQCuHme67tEYUIx3Kh0PHR9N6bs6.ttf",
+      "sha256": "a81a4394a460342918c2c92a6ab5e3b63a7b02f3882a3669c43ab45ca311657e",
+      "upstreamSha256": "02609c5ef845ef511676c8badb24d1fc8b4aed3dc3b9d8bbdab22c14431b7c16"
+    },
+    {
+      "file": "plex-arabic-1.woff2",
+      "source": "https://fonts.gstatic.com/s/ibmplexsansarabic/v15/Qw3NZRtWPQCuHme67tEYUIx3Kh0PHR9N6YPO_9CT.ttf",
+      "sha256": "b813098f852b367a89dab90565844b4d2a0ff571211e9beffae4b23c88aa00fd",
+      "upstreamSha256": "1fe214ca7ff822ff8b73e5bb9584414bfc6c845e7ddab41f24ac4fce8e55a860"
+    },
+    {
+      "file": "plex-arabic-2.woff2",
+      "source": "https://fonts.gstatic.com/s/ibmplexsansarabic/v15/Qw3NZRtWPQCuHme67tEYUIx3Kh0PHR9N6YPi-NCT.ttf",
+      "sha256": "8b9637a1500e83c93eea9e2bf7508bdc822fc06d9146c37248d96a1045a6997e",
+      "upstreamSha256": "9e8b030f3326946e481c874a2f751c1321cb0708cba81b79e6c3f9ffacc931df"
+    },
+    {
+      "file": "plex-arabic-3.woff2",
+      "source": "https://fonts.gstatic.com/s/ibmplexsansarabic/v15/Qw3NZRtWPQCuHme67tEYUIx3Kh0PHR9N6YOG-dCT.ttf",
+      "sha256": "c392cb42793ee53bf9856eb482011f0ef32eb1513bdf87d572c5349d981c9e7d",
+      "upstreamSha256": "05616a64c5dca137a327b30b1fe7f4fcd1e16892a332e1665b49d52038858044"
+    }
+  ],
+  "encoding": "lossless WOFF2 encoding of upstream TrueType, using fontTools"
+}

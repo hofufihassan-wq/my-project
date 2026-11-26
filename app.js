@@ -233,6 +233,14 @@ const app = createApp({
     // Visible workspaces: 'lexicon' | 'practice' (the practical simulator)
     const savedNavigation = window.VLexLearningStore?.getSection('navigation', {}) || {};
     const appMode = ref(window.location?.hash === '#arrow-functions' ? 'arrow' : savedNavigation.workspace || 'home');
+    const workspaceNavOpen=ref(false);
+    const workspaceTitle=computed(()=>({home:'الرئيسية',learn:'تعلّم معي',lexicon:'القاموس',taskJourney:'مدير المهام',explain:'شرح الكود',jsLab:'مختبر JavaScript',cssLab:'مختبر CSS',settings:'الإعدادات',guided:'مسارات التعلم',course:'المسار التعليمي',arrow:'Arrow Functions',overview:'لوحة التنظيم',foundation:foundationSection.value==='projects'?'المشاريع':foundationSection.value==='notes'?'الملاحظات':foundationSection.value==='calendar'?'التقويم':'المهام',practice:practiceSurface.value==='training'?'التدريب العملي':'المحاكي'}[appMode.value]||'مساحتي'));
+    function workspaceNavigate(mode){workspaceNavOpen.value=false;if(['projects','notes','calendar'].includes(mode))openFoundation(mode);else if(mode==='simulator')openVisualSimulator();else if(mode==='training')openTraining();else if(mode==='learn')openJourney();else if(['explain','jsLab','cssLab'].includes(mode))openLearning(mode);else setAppMode(mode)}
+    function workspaceSelectTerm(item){selectTerm(item);workspaceNavOpen.value=false}
+    watch(appMode,()=>{workspaceNavOpen.value=false});
+    watch(workspaceNavOpen,open=>{nextTick(()=>{const panel=document.getElementById('workspace-navigation');if(open)panel?.querySelector('button,select,a')?.focus({preventScroll:true});else document.querySelector('.workspace-menu')?.focus({preventScroll:true})})});
+    function workspaceTrapFocus(event){if(!workspaceNavOpen.value)return;const panel=event.currentTarget,items=[...panel.querySelectorAll('button:not([disabled]),a[href],input,select,summary,[tabindex="0"]')].filter(e=>e.getClientRects().length),first=items[0],last=items.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus()}}
+
     const learningReturnToArrow = ref(false);
     const learningReturnToGuided = ref(false);
     const learningReturnToJourney = ref(false), journeyKey=ref(0);
@@ -2544,6 +2552,7 @@ const app = createApp({
         } else if (e.key === '?' && !editing && !e.ctrlKey && !e.metaKey && !e.altKey) {
           showShortcutsModal.value = !showShortcutsModal.value;
         } else if (e.key === 'Escape') {
+          workspaceNavOpen.value = false;
           document.querySelectorAll('.tech-simulator .beta-layout-menu[open], .tech-simulator .final-custom-dimensions[open], .tech-simulator .beta-shortcuts[open]').forEach(detail => { detail.open = false; });
           showShortcutsModal.value = false;
           showProgressModal.value = false;
@@ -2589,6 +2598,7 @@ const app = createApp({
     // 18. Returned Setup Scope (Complete Expose)
     // ==========================================
     return {
+      workspaceNavOpen, workspaceTitle, workspaceNavigate, workspaceSelectTerm, workspaceTrapFocus,
       dictionarySaveWarning, exportFullBackup, exportFullRecovery, importFullBackup, fullBackupMessage, learningReturnToArrow, learningReturnToGuided, learningReturnToJourney, openArrowPrerequisite, termSpeechStatus, speakTerm, learningStatus, explainSource, explainKey, openLearning, openJourney, journeyKey, journeyNavigate, dictionaryLesson, dictionaryExpanded, tryDictionaryConcept, simulatorBeginner, setSimulatorMode, hasJourneySimulatorSource, journeyReferenceActive, updateJourneySimulatorSource, simulatorReferenceWarning, openGuidedUnit, openLearningTerm, practiceFromLearning, navigateLearningSection, exportLearningData, importLearningData,
       techBeta, betaMuted, betaVolume, betaAudioStatus, betaAmbientEnabled, betaAmbientVolume, betaAmbientStatus, betaAmbientLabel, techToggleAmbient, betaWarnings, betaStorageStatus, techLanguage, techViewport, techEditorHeight, techPreviewHeight, techEditorWidth, techHiddenPanels, techAnyHidden, techPreviewWidth, techPanelVisible, techSetPanel, techResetLayout, techSetLanguage, techUpdateEditor, techEditorKeydown, techEditorReadonly, techBlockView, techToggleMotion, techToggleSound, techStopManual, techResetManual,
       techRunEvents, techCurrentRunEvents, techLatestError, techErrorIsCurrent, techDOMFields, techStageSignals, techTraceLimitation, techFlowSummary,
