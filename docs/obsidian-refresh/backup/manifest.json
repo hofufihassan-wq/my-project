@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "d554fd14e5960c9b6a2c62155f6a7124735524c1",
+  "archive": "site-before-d554fd1.zip",
+  "sha256": "7850746118f980e32c49f23a05469a76ed1b21f06015ef4372dd37a4b30b359c",
+  "bytes": 1530797,
+  "files": 100,
+  "includes": "static site only; no user data or credentials"
+}
